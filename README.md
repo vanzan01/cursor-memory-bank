@@ -1,3 +1,7 @@
+# PLEASE ENABLE ISSUES!!!
+
+Hi **vanzan01**, thanks for your work! But there are some problems and errors, please enable Issues in this repository to discuss it together and see the responses to your post in the comments https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab
+
 # Memory Bank System v0.6-beta
 
 A modular, graph-based task management system that integrates with Cursor custom modes for efficient development workflows.
