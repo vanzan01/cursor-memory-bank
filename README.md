@@ -153,12 +153,12 @@ For each mode, configure as follows:
 5. **REFLECT MODE** (Review)
    - **Name**: 🔍 REFLECT
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/reflect_instructions.md`
+   - **Advanced options**: Paste from **`custom_modes/reflect_instructions.md`**
 
 6. **ARCHIVE MODE** (Documentation)
    - **Name**: 📚 ARCHIVE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
-   - **Advanced options**: Paste from `custom_modes/archive_instructions.md`
+   - **Advanced options**: Paste from **`custom_modes/archive_instructions.md`**
 
 For additional help on setting up custom modes in Cursor, refer to the [official Cursor documentation on custom modes](https://docs.cursor.com/chat/custom-modes).
 
