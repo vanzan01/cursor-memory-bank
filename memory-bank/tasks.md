@@ -2,9 +2,320 @@
 
 ## PROJECT STATUS: 96% COMPLETE - ARCHIVE MODE COMPLETED
 
-### CURRENT PHASE: Phase 3.5 - Advanced Rules Management (100% Complete) ✅
+### CURRENT PHASE: Phase 3.6 - Critical Task Management Fix (0% Complete) 🔄
 ### REFLECTION: ✅ COMPLETED
 ### ARCHIVING: ✅ COMPLETED
+
+## 🚨 CRITICAL ISSUE IDENTIFIED: TASK MANAGEMENT FLAW
+
+### Issue Description:
+Серьезный недостаток в процессе управления задачами:
+- При завершении задач и переходе в REFLECT/ARCHIVE незавершенные задачи могут быть потеряны
+- Новый VAN режим может удалить уже спланированные задачи
+- Отсутствует механизм преемственности задач между циклами разработки
+
+## 📋 ПЛАН РАБОТ ПО ИСПРАВЛЕНИЮ ПРАВИЛ
+
+### PHASE 1: PREPARATION & ANALYSIS (Day 1) 🔄
+
+#### 1.1 Pre-Modification Analysis
+- [ ] **Analyze Current Rule Issues** (30 min)
+  - Scan .cursor/rules/ for task management related issues
+  - Identify files requiring modification
+  - Document current state of rules
+
+- [ ] **Git Status Verification** (10 min)
+  - Verify clean git state
+  - Create backup branch: `git checkout -b task-management-fix`
+  - Ensure no uncommitted changes
+
+- [ ] **Plan All Changes** (45 min)
+  - Document all required modifications
+  - Create modification checklist
+  - Identify dependencies between changes
+
+#### 1.2 Issue Categorization
+Based on research findings, categorize issues:
+
+**A. VAN Mode Rules Issues:**
+- [ ] `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc`
+  - Missing task continuity check
+  - No migration process for unfinished tasks
+
+**B. REFLECT Mode Rules Issues:**
+- [ ] `.cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc`
+  - No analysis of unfinished tasks for migration
+  - Missing task categorization process
+
+**C. ARCHIVE Mode Rules Issues:**
+- [ ] `.cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc`
+  - No preservation of unfinished tasks
+  - Missing migration document creation
+
+**D. Custom Modes Issues:**
+- [ ] `custom_modes/van_instructions.md` - Missing task continuity
+- [ ] `custom_modes/reflect_archive_instructions.md` - Incomplete task handling
+- [ ] `custom_modes/creative_instructions.md` - No task migration awareness
+- [ ] `custom_modes/plan_instructions.md` - No task migration awareness
+- [ ] `custom_modes/implement_instructions.md` - No task migration awareness
+
+### PHASE 2: CURSOR WORKAROUND IMPLEMENTATION (Day 1) 🔄
+
+#### 2.1 Apply Cursor Workaround (Following changing_the_rules.md)
+
+**Step 1: Rename Directory**
+- [ ] Execute: `mv .cursor _cursor`
+- [ ] Verify directory renamed successfully
+
+**Step 2: Rename .mdc Files for Editing**
+- [ ] Execute: `find _cursor -name "*.mdc" -exec sh -c 'mv "$1" "$1.md"' _ {} \;`
+- [ ] Verify all .mdc files now have .mdc.md extension
+- [ ] Count files to ensure none were missed
+
+**Step 3: Apply All Rule Corrections**
+- [ ] **VAN Mode Map Updates** (45 min)
+  - Add task continuity check process
+  - Add migration process for unfinished tasks
+  - Add task categorization logic
+
+- [ ] **REFLECT Mode Map Updates** (30 min)
+  - Add unfinished task analysis
+  - Add migration plan creation
+  - Add task status categorization
+
+- [ ] **ARCHIVE Mode Map Updates** (30 min)
+  - Add task preservation process
+  - Add migration document creation
+  - Add unfinished task handling
+
+**Step 4: Verify Changes Applied**
+- [ ] Check all modifications were applied correctly
+- [ ] Verify syntax and structure of modified files
+- [ ] Test file references and links
+
+**Step 5: Restore File Extensions**
+- [ ] Execute: `find _cursor -name "*.mdc.md" -exec sh -c 'mv "$1" "${1%.md}"' _ {} \;`
+- [ ] Verify all files restored to .mdc extension
+
+**Step 6: Restore Directory Name**
+- [ ] Execute: `mv _cursor .cursor`
+- [ ] Verify directory structure restored
+
+### PHASE 3: CUSTOM MODES UPDATES (Day 1-2) 🔄
+
+#### 3.1 Update Custom Modes Files
+
+**A. VAN Instructions Update**
+- [ ] **File**: `custom_modes/van_instructions.md`
+- [ ] **Changes**:
+  - Add task continuity check in lines 27-33
+  - Update "Source of Truth" concept (line 126)
+  - Add migration.md processing logic
+  - Add task integration process
+
+**B. Reflect+Archive Instructions Update**
+- [ ] **File**: `custom_modes/reflect_archive_instructions.md`
+- [ ] **Changes**:
+  - Modify line 38: UpdateTasksArchive process
+  - Modify line 40: UpdateActiveContext preservation
+  - Modify line 44: SuggestNext with continuity check
+  - Add unfinished task analysis process
+
+**C. Creative Instructions Update**
+- [ ] **File**: `custom_modes/creative_instructions.md`
+- [ ] **Changes**:
+  - Add task migration awareness in task updates
+  - Preserve unfinished creative tasks
+  - Add migration context to creative decisions
+
+**D. Plan Instructions Update**
+- [ ] **File**: `custom_modes/plan_instructions.md`
+- [ ] **Changes**:
+  - Add check for migrated tasks in planning
+  - Integrate unfinished tasks into new plans
+  - Preserve task context across cycles
+
+**E. Implement Instructions Update**
+- [ ] **File**: `custom_modes/implement_instructions.md`
+- [ ] **Changes**:
+  - Add awareness of migrated tasks
+  - Preserve implementation context
+  - Handle partially completed tasks
+
+### PHASE 4: MIGRATION SYSTEM CREATION (Day 2) 🔄
+
+#### 4.1 Create Migration Infrastructure
+
+**A. Migration Document Template**
+- [ ] **Create**: `memory-bank/migration.md`
+- [ ] **Content**:
+  - Task migration structure
+  - Status categorization system
+  - Integration instructions
+  - Dependency tracking
+
+**B. Enhanced Tasks Structure**
+- [ ] **Update**: `memory-bank/tasks.md` structure
+- [ ] **Add**:
+  - Task status categories (COMPLETED, IN_PROGRESS, PLANNED, BLOCKED, MIGRATED)
+  - Migration history section
+  - Task metrics tracking
+
+**C. System Patterns Update**
+- [ ] **Update**: `memory-bank/systemPatterns.md`
+- [ ] **Add**:
+  - Task migration patterns
+  - Continuity verification patterns
+  - Status management patterns
+
+### PHASE 5: VERIFICATION & TESTING (Day 2-3) 🔄
+
+#### 5.1 Rule Verification (Following changing_the_rules.md)
+
+**A. Automated Checks**
+- [ ] **Case Sensitivity Check**:
+  ```bash
+  grep -r "level[1-4]" .cursor/rules/ --include="*.mdc"
+  # Should return no matches
+  ```
+
+- [ ] **File Reference Check**:
+  ```bash
+  grep -r "\.md[^c]" .cursor/rules/ --include="*.mdc"
+  # Should only show Memory Bank references
+  ```
+
+- [ ] **Header Verification**:
+  ```bash
+  find .cursor/rules/ -name "*.mdc" -exec head -5 {} \; | grep -c "^---"
+  # Should match number of .mdc files
+  ```
+
+**B. Functional Testing**
+- [ ] **VAN Mode Test**:
+  - Test task continuity check
+  - Test migration.md processing
+  - Test unfinished task integration
+
+- [ ] **REFLECT Mode Test**:
+  - Test unfinished task analysis
+  - Test migration plan creation
+  - Test task categorization
+
+- [ ] **ARCHIVE Mode Test**:
+  - Test task preservation
+  - Test migration document creation
+  - Test context preservation
+
+**C. Integration Testing**
+- [ ] **Complete Cycle Test**:
+  - VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE → VAN
+  - Verify task continuity throughout cycle
+  - Test with multiple unfinished tasks
+  - Validate migration data integrity
+
+#### 5.2 System Validation
+
+**A. Memory Bank Integrity**
+- [ ] Verify all Memory Bank files intact
+- [ ] Test file structure consistency
+- [ ] Validate cross-references
+
+**B. Performance Testing**
+- [ ] Test rule loading performance
+- [ ] Verify no degradation in system speed
+- [ ] Check memory usage impact
+
+### PHASE 6: DOCUMENTATION & FINALIZATION (Day 3) 🔄
+
+#### 6.1 Documentation Updates
+
+**A. Update Guides**
+- [ ] Update `rules/changing_the_rules.md` with new patterns
+- [ ] Document task management fixes
+- [ ] Create troubleshooting section
+
+**B. Create User Documentation**
+- [ ] Create task migration user guide
+- [ ] Document new workflow patterns
+- [ ] Update best practices
+
+#### 6.2 Final Verification Checklist
+
+```
+✓ FINAL VERIFICATION CHECKLIST
+- [ ] All .cursor rules updated and functional
+- [ ] All custom_modes files updated
+- [ ] Migration system created and tested
+- [ ] Task continuity verified across full cycle
+- [ ] No data loss in task transitions
+- [ ] Performance impact acceptable
+- [ ] Documentation updated
+- [ ] Git commits organized and descriptive
+```
+
+### PHASE 7: DEPLOYMENT & MONITORING (Day 3) 🔄
+
+#### 7.1 Deployment
+
+**A. Git Management**
+- [ ] Review all changes with `git diff`
+- [ ] Create logical commit groups
+- [ ] Write descriptive commit messages
+- [ ] Merge to main branch
+
+**B. System Activation**
+- [ ] Activate new task management system
+- [ ] Monitor first cycle transition
+- [ ] Validate real-world performance
+
+#### 7.2 Success Metrics Validation
+
+**Technical Metrics:**
+- [ ] ✅ Zero task loss during cycle transitions
+- [ ] ✅ 100% task continuity preservation
+- [ ] ✅ Automated migration process functional
+- [ ] ✅ Clear task status categorization working
+
+**Process Metrics:**
+- [ ] ✅ Smooth transitions between development cycles
+- [ ] ✅ Preserved development context
+- [ ] ✅ Reduced planning overhead for new cycles
+- [ ] ✅ Better project continuity
+
+## 🎯 CRITICAL SUCCESS FACTORS
+
+### 1. **Systematic Approach**
+- Follow changing_the_rules.md procedure exactly
+- Work through issues category by category
+- Verify each change before proceeding
+
+### 2. **Safety First**
+- Always check git status before starting
+- Use Cursor workaround properly
+- Test changes thoroughly
+
+### 3. **Comprehensive Testing**
+- Test all mode transitions
+- Verify task continuity
+- Validate data integrity
+
+### 4. **Documentation**
+- Document all changes made
+- Update guides and procedures
+- Share learnings and patterns
+
+## ⏰ ESTIMATED TIMELINE
+
+- **Day 1**: Phases 1-2 (Analysis, Preparation, Cursor Workaround)
+- **Day 2**: Phases 3-4 (Custom Modes Updates, Migration System)
+- **Day 3**: Phases 5-7 (Testing, Documentation, Deployment)
+
+**Total Estimated Time**: 3 days
+**Critical Path**: Cursor workaround → Rule updates → Testing
+**Risk Factors**: Cursor IDE limitations, complex rule dependencies
+
+This plan ensures systematic and safe implementation of the critical task management fixes while following established procedures for rule modification.
 
 ## COMPLETED PHASES ✅
 

@@ -168,3 +168,132 @@ Phase 3.5 успешно завершена и заархивирована. Mem
 - **Target Release**: Начало января 2025
 
 **Current Status**: ✅ PHASE 3.5 ARCHIVED - Memory Bank ready for next task
+
+## CURRENT PHASE: Phase 3.6 - Critical Task Management Fix 🚨
+
+### PHASE STATUS: 0% Complete - Planning Stage
+### PRIORITY: CRITICAL
+### ESTIMATED DURATION: 3 days
+
+## 🎯 CURRENT OBJECTIVE
+
+**Fix critical task management flaw** that causes loss of unfinished tasks during development cycle transitions (REFLECT/ARCHIVE → VAN).
+
+### Problem Summary:
+- Unfinished tasks are lost when transitioning between development cycles
+- VAN mode doesn't check for existing unfinished tasks
+- REFLECT/ARCHIVE modes don't preserve unfinished tasks for next cycle
+- No mechanism for task continuity across cycles
+
+## 📋 IMMEDIATE NEXT STEPS
+
+### TODAY (Day 1): Preparation & Cursor Workaround
+1. **Phase 1.1: Pre-Modification Analysis** (85 min)
+   - [ ] Analyze current rule issues (30 min)
+   - [ ] Verify git status and create backup branch (10 min)
+   - [ ] Plan all changes and document modifications (45 min)
+
+2. **Phase 1.2: Issue Categorization**
+   - [ ] Categorize VAN mode rules issues
+   - [ ] Categorize REFLECT mode rules issues
+   - [ ] Categorize ARCHIVE mode rules issues
+   - [ ] Categorize custom_modes issues
+
+3. **Phase 2: Cursor Workaround Implementation** (2 hours)
+   - [ ] Apply 6-step Cursor workaround from changing_the_rules.md
+   - [ ] Update .cursor rules with task management fixes
+   - [ ] Verify all changes applied correctly
+
+## 🔧 TECHNICAL APPROACH
+
+### Following changing_the_rules.md Procedure:
+1. **Rename Directory**: `.cursor` → `_cursor`
+2. **Rename Files**: `.mdc` → `.mdc.md` for editing
+3. **Apply Corrections**: Update all rule files
+4. **Verify Changes**: Check modifications applied
+5. **Restore Extensions**: `.mdc.md` → `.mdc`
+6. **Restore Directory**: `_cursor` → `.cursor`
+
+### Key Files to Modify:
+- `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc`
+- `.cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc`
+- `.cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc`
+- `custom_modes/van_instructions.md`
+- `custom_modes/reflect_archive_instructions.md`
+- All other custom_modes files
+
+## 🎯 SUCCESS CRITERIA
+
+### Technical Requirements:
+- ✅ Zero task loss during cycle transitions
+- ✅ 100% task continuity preservation
+- ✅ Automated migration process
+- ✅ Clear task status categorization
+
+### Process Requirements:
+- ✅ Smooth transitions between development cycles
+- ✅ Preserved development context
+- ✅ Reduced planning overhead for new cycles
+- ✅ Better project continuity
+
+## ⚠️ CRITICAL CONSIDERATIONS
+
+### Safety Measures:
+- Always verify git status before starting
+- Use Cursor workaround procedure exactly as documented
+- Test changes thoroughly before finalizing
+- Maintain backup branch throughout process
+
+### Risk Factors:
+- Cursor IDE limitations with .mdc file editing
+- Complex rule dependencies
+- Potential system disruption during modification
+- Need for comprehensive testing
+
+## 📊 PROGRESS TRACKING
+
+### Phase 1: Preparation & Analysis (Day 1)
+- **Status**: 🔄 Not Started
+- **Estimated Time**: 3 hours
+- **Dependencies**: Clean git state, changing_the_rules.md procedure
+
+### Phase 2: Cursor Workaround (Day 1)
+- **Status**: ⏳ Waiting for Phase 1
+- **Estimated Time**: 2 hours
+- **Dependencies**: Phase 1 completion, rule modification plan
+
+### Phase 3: Custom Modes Updates (Day 1-2)
+- **Status**: ⏳ Waiting for Phase 2
+- **Estimated Time**: 4 hours
+- **Dependencies**: Phase 2 completion, .cursor rules updated
+
+## 🔄 WORKFLOW CONTEXT
+
+### Previous Phase Completed:
+- ✅ Phase 3.5: Advanced Rules Management (100% Complete)
+- ✅ Research and analysis of task management flaw
+- ✅ Comprehensive plan created
+
+### Current Focus:
+- 🔄 Implementing systematic fix for task management
+- 🔄 Following established rule modification procedures
+- 🔄 Ensuring system integrity throughout process
+
+### Next Phase Preview:
+- ⏳ Phase 4: Migration System Creation
+- ⏳ Phase 5: Verification & Testing
+- ⏳ Phase 6: Documentation & Finalization
+
+## 📚 REFERENCE DOCUMENTS
+
+### Primary References:
+- `rules/changing_the_rules.md` - Rule modification procedure
+- `memory-bank/rules-modification-plan.md` - Detailed fix plan
+- `memory-bank/systemPatterns.md` - Task management patterns
+
+### Supporting Documents:
+- `memory-bank/progress.md` - Issue analysis and findings
+- `memory-bank/tasks.md` - Current task plan
+- All custom_modes files - Implementation targets
+
+This critical phase will establish the foundation for reliable task management across development cycles, ensuring no loss of development progress or context.
