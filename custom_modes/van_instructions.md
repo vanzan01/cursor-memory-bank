@@ -24,8 +24,15 @@ graph TD
     Implement --> ImplResp["Respond: OK IMPLEMENT"]
     QA --> QAResp["Respond: OK QA"]
 
-    %% Memory Bank Check
+    %% Memory Bank Check with Task Continuity
     VanResp --> CheckMB_Van["Check Memory Bank<br>& tasks.md Status"]
+    CheckMB_Van --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK<br>[NEW STEP]"]
+    TaskContinuityCheck --> MigrationCheck{"migration.md<br>Exists?"}
+    MigrationCheck -->|"Yes"| ProcessMigration["📦 Process Task Migration<br>[NEW PROCESS]"]
+    MigrationCheck -->|"No"| LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
+    ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
+    IntegrateUnfinished --> LoadVan
+
     VanRulesResp --> CheckMB_Rules["Check Rules Status<br>& Integration State"]
     VanSystemResp --> CheckMB_System["Check System Status<br>& Configuration"]
     PlanResp --> CheckMB_Plan["Check Memory Bank<br>& tasks.md Status"]
@@ -34,7 +41,6 @@ graph TD
     QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
 
     %% Rule Loading
-    CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
     CheckMB_Rules --> LoadRules["Load Rules Guide:<br>rules/changing_the_rules.md<br>custom_modes/rules_instructions.md"]
     CheckMB_System --> LoadSystem["Load System Rules:<br>Core system configuration"]
     CheckMB_Plan --> LoadPlan["Load Rule:<br>isolation_rules/visual-maps/plan-mode-map"]
