@@ -4,6 +4,8 @@
 
 A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, and persistent context across development sessions.
 
+**📖 [Русская документация / Russian Documentation](README_ru.md)**
+
 ## 🚀 Quick Start
 
 Get up and running in under 5 minutes:
