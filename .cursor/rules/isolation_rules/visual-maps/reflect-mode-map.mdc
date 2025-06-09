@@ -47,9 +47,17 @@ graph TD
     L34ImproveProcess --> L34Update["Update<br>tasks.md"]
 
     %% Completion & Transition
-    L1Update & L2Update & L34Update --> CreateReflection["Create<br>reflection.md"]
+    L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
+    AnalyzeUnfinished --> CategorizeUnfinished["📊 Categorize Unfinished Tasks<br>by Status & Priority"]
+    CategorizeUnfinished --> CreateMigration["📦 Create migration.md<br>for Next Cycle"]
+    CreateMigration --> CreateReflection["Create<br>reflection.md"]
     CreateReflection --> UpdateSystem["Update System<br>Documentation"]
     UpdateSystem --> Transition["NEXT MODE:<br>ARCHIVE MODE"]
+
+    %% Task Continuity Styling
+    style AnalyzeUnfinished fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style CategorizeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
+    style CreateMigration fill:#b3ffb3,stroke:#80ff80,color:black
 ```
 
 ## 📋 REFLECTION STRUCTURE

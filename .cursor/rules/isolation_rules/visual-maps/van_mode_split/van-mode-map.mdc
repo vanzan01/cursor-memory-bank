@@ -19,33 +19,41 @@ graph TD
     DetectOS --> CheckPath["Check Path Separator Format"]
     CheckPath --> AdaptCmds["Adapt Commands if Needed"]
     AdaptCmds --> PlatformCP["⛔ PLATFORM CHECKPOINT"]
-    
+
     %% Add Critical Memory Bank Checkpoint
     PlatformCP --> MemoryBankCheck{"Memory Bank<br>Exists?"}
     MemoryBankCheck -->|"No"| CreateMemoryBank["CREATE MEMORY BANK<br>[CRITICAL STEP]"]
-    MemoryBankCheck -->|"Yes"| BasicFileVerify["BASIC FILE VERIFICATION"]
+    MemoryBankCheck -->|"Yes"| TaskContinuityCheck["🔄 TASK CONTINUITY CHECK<br>[UNIFIED FEATURE]"]
     CreateMemoryBank --> MemoryBankCP["⛔ MEMORY BANK VERIFICATION [REQUIRED]"]
-    MemoryBankCP --> BasicFileVerify
-    
+    MemoryBankCP --> TaskContinuityCheck
+
+    %% Task Continuity Processing
+    TaskContinuityCheck --> MigrationCheck{"migration.md<br>Exists?"}
+    MigrationCheck -->|"Yes"| ProcessMigration["📦 Process Task Migration<br>[UNIFIED PROCESS]"]
+    MigrationCheck -->|"No"| BasicFileVerify["BASIC FILE VERIFICATION"]
+    ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
+    IntegrateUnfinished --> ArchiveMigration["📁 Archive migration.md<br>to archive/"]
+    ArchiveMigration --> BasicFileVerify
+
     %% Basic File Verification with checkpoint
     BasicFileVerify --> BatchCheck["Batch Check Essential Components"]
     BatchCheck --> BatchCreate["Batch Create Essential Structure"]
     BatchCreate --> BasicFileCP["⛔ BASIC FILE CHECKPOINT"]
-    
+
     %% Early Complexity Determination
     BasicFileCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
     EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
-    
+
     %% Level handling paths
     EarlyLevelCheck -->|"Level 1"| ComplexityCP["⛔ COMPLEXITY CHECKPOINT"]
     EarlyLevelCheck -->|"Level 2-4"| CRITICALGATE["🚫 CRITICAL GATE: FORCE MODE SWITCH"]
     CRITICALGATE --> ForceExit["Exit to PLAN mode"]
-    
+
     %% Level 1 continues normally
     ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK"]
     InitSystem --> Complete1["LEVEL 1 INITIALIZATION COMPLETE"]
-    
+
     %% For Level 2+ tasks after PLAN and CREATIVE modes
     ForceExit -.-> OtherModes["PLAN → CREATIVE modes"]
     OtherModes -.-> VANQA["VAN QA MODE"]
@@ -54,12 +62,17 @@ graph TD
     QACheck -->|"Yes"| BUILD["To BUILD MODE"]
     QACheck -->|"No"| FixIssues["Fix Technical Issues"]
     FixIssues --> QAProcess
-    
+
     %% Style nodes
     style PlatformCP fill:#f55,stroke:#d44,color:white
     style MemoryBankCP fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style MemoryBankCheck fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style CreateMemoryBank fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
+    style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:3px
+    style MigrationCheck fill:#b3ffb3,stroke:#80ff80,color:black
+    style ProcessMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style IntegrateUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
+    style ArchiveMigration fill:#b3ffb3,stroke:#80ff80,color:black
     style BasicFileCP fill:#f55,stroke:#d44,color:white
     style ComplexityCP fill:#f55,stroke:#d44,color:white
     style CRITICALGATE fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
@@ -78,22 +91,22 @@ graph TD
     CheckOS --> Win["Windows"]
     CheckOS --> Mac["macOS"]
     CheckOS --> Lin["Linux"]
-    
+
     Win & Mac & Lin --> Adapt["Adapt Commands<br>for Platform"]
-    
+
     Win --> WinPath["Path: Backslash (\\)"]
     Mac --> MacPath["Path: Forward Slash (/)"]
     Lin --> LinPath["Path: Forward Slash (/)"]
-    
+
     Win --> WinCmd["Command Adaptations:<br>dir, icacls, etc."]
     Mac --> MacCmd["Command Adaptations:<br>ls, chmod, etc."]
     Lin --> LinCmd["Command Adaptations:<br>ls, chmod, etc."]
-    
+
     WinPath & MacPath & LinPath --> PathCP["Path Separator<br>Checkpoint"]
     WinCmd & MacCmd & LinCmd --> CmdCP["Command<br>Checkpoint"]
-    
+
     PathCP & CmdCP --> PlatformComplete["Platform Detection<br>Complete"]
-    
+
     style PD fill:#4da6ff,stroke:#0066cc,color:white
     style PlatformComplete fill:#10b981,stroke:#059669,color:white
 ```
@@ -105,21 +118,21 @@ graph TD
     FV["File Verification"] --> CheckFiles["Check Essential Files"]
     CheckFiles --> CheckMB["Check Memory Bank<br>Structure"]
     CheckMB --> MBExists{"Memory Bank<br>Exists?"}
-    
+
     MBExists -->|"Yes"| VerifyMB["Verify Memory Bank<br>Contents"]
     MBExists -->|"No"| CreateMB["Create Memory Bank<br>Structure"]
-    
+
     CheckFiles --> CheckDocs["Check Documentation<br>Files"]
     CheckDocs --> DocsExist{"Docs<br>Exist?"}
-    
+
     DocsExist -->|"Yes"| VerifyDocs["Verify Documentation<br>Structure"]
     DocsExist -->|"No"| CreateDocs["Create Documentation<br>Structure"]
-    
+
     VerifyMB & CreateMB --> MBCP["Memory Bank<br>Checkpoint"]
     VerifyDocs & CreateDocs --> DocsCP["Documentation<br>Checkpoint"]
-    
+
     MBCP & DocsCP --> FileComplete["File Verification<br>Complete"]
-    
+
     style FV fill:#4da6ff,stroke:#0066cc,color:white
     style FileComplete fill:#10b981,stroke:#059669,color:white
     style MBCP fill:#f6546a,stroke:#c30052,color:white
@@ -131,21 +144,21 @@ graph TD
 ```mermaid
 graph TD
     CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements"]
-    
+
     AnalyzeTask --> CheckKeywords["Check Task<br>Keywords"]
     CheckKeywords --> ScopeCheck["Assess<br>Scope Impact"]
     ScopeCheck --> RiskCheck["Evaluate<br>Risk Level"]
     RiskCheck --> EffortCheck["Estimate<br>Implementation Effort"]
-    
+
     EffortCheck --> DetermineLevel{"Determine<br>Complexity Level"}
     DetermineLevel -->|"Level 1"| L1["Level 1:<br>Quick Bug Fix"]
     DetermineLevel -->|"Level 2"| L2["Level 2:<br>Simple Enhancement"]
     DetermineLevel -->|"Level 3"| L3["Level 3:<br>Intermediate Feature"]
     DetermineLevel -->|"Level 4"| L4["Level 4:<br>Complex System"]
-    
+
     L1 --> CDComplete["Complexity Determination<br>Complete"]
     L2 & L3 & L4 --> ModeSwitch["Force Mode Switch<br>to PLAN"]
-    
+
     style CD fill:#4da6ff,stroke:#0066cc,color:white
     style CDComplete fill:#10b981,stroke:#059669,color:white
     style ModeSwitch fill:#ff0000,stroke:#990000,color:white
@@ -158,13 +171,13 @@ The full workflow includes technical validation before implementation:
 
 ```mermaid
 flowchart LR
-    VAN1["VAN MODE 
+    VAN1["VAN MODE
     (Initial Analysis)"] --> PLAN["PLAN MODE
     (Task Planning)"]
     PLAN --> CREATIVE["CREATIVE MODE
     (Design Decisions)"]
     CREATIVE --> VANQA["VAN QA MODE
-    (Technical Validation)"] 
+    (Technical Validation)"]
     VANQA --> BUILD["BUILD MODE
     (Implementation)"]
 ```
@@ -176,21 +189,21 @@ The VAN QA technical validation process consists of four key validation points:
 ```mermaid
 graph TD
     VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
-    
+
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION<br>Check all required packages"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION<br>Verify format & compatibility"]
     ConfigCheck --> EnvCheck["3️⃣ ENVIRONMENT VALIDATION<br>Check build environment"]
     EnvCheck --> MinBuildCheck["4️⃣ MINIMAL BUILD TEST<br>Test core functionality"]
-    
+
     MinBuildCheck --> ValidationResults{"All Checks<br>Passed?"}
     ValidationResults -->|"Yes"| SuccessReport["GENERATE SUCCESS REPORT"]
     ValidationResults -->|"No"| FailureReport["GENERATE FAILURE REPORT"]
-    
+
     SuccessReport --> BUILD["Proceed to BUILD MODE"]
     FailureReport --> FixIssues["Fix Technical Issues"]
     FixIssues --> ReValidate["Re-validate"]
     ReValidate --> ValidationResults
-    
+
     style VANQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
@@ -251,7 +264,7 @@ graph TD
     CheckQA -->|"No or Failed"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
     Message --> ReturnToVANQA["Prompt: Type VAN QA"]
-    
+
     style CheckQA fill:#f6546a,stroke:#c30052,color:white
     style BlockBuild fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style Message fill:#ff5555,stroke:#dd3333,color:white
@@ -269,12 +282,12 @@ graph TD
     CurrentTask --> LoadQA["Load QA Mode Map"]
     LoadQA --> RunQA["Execute QA Validation Process"]
     RunQA --> QAResults{"QA Results"}
-    
+
     QAResults -->|"PASS"| ResumeFlow["Resume Prior Process Flow"]
     QAResults -->|"FAIL"| FixIssues["Fix Identified Issues"]
     FixIssues --> ReRunQA["Re-run QA Validation"]
     ReRunQA --> QAResults
-    
+
     style UserQA fill:#f8d486,stroke:#e8b84d,color:black
     style HighPriority fill:#ff0000,stroke:#cc0000,color:white,stroke-width:3px
     style LoadQA fill:#4da6ff,stroke:#0066cc,color:white
@@ -335,7 +348,7 @@ User: VAN QA
 Response: OK VAN QA - Beginning Technical Validation
 ```
 
-This ensures clear communication about which phase of VAN mode is active. 
+This ensures clear communication about which phase of VAN mode is active.
 
 ## 🔍 DETAILED QA VALIDATION PROCESS
 
@@ -348,17 +361,17 @@ graph TD
     Start["Dependency Verification"] --> ReadDeps["Read Required Dependencies<br>from Creative Phase"]
     ReadDeps --> CheckInstalled["Check if Dependencies<br>are Installed"]
     CheckInstalled --> DepStatus{"All Dependencies<br>Installed?"}
-    
+
     DepStatus -->|"Yes"| VerifyVersions["Verify Versions<br>and Compatibility"]
     DepStatus -->|"No"| InstallMissing["Install Missing<br>Dependencies"]
     InstallMissing --> VerifyVersions
-    
+
     VerifyVersions --> VersionStatus{"Versions<br>Compatible?"}
     VersionStatus -->|"Yes"| DepSuccess["Dependencies Verified<br>✅ PASS"]
     VersionStatus -->|"No"| UpgradeVersions["Upgrade/Downgrade<br>as Needed"]
     UpgradeVersions --> RetryVerify["Retry Verification"]
     RetryVerify --> VersionStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style DepSuccess fill:#10b981,stroke:#059669,color:white
     style DepStatus fill:#f6546a,stroke:#c30052,color:white
@@ -373,10 +386,10 @@ function Verify-Dependencies {
         "node" = ">=14.0.0"
         "npm" = ">=6.0.0"
     }
-    
+
     $missingDeps = @()
     $incompatibleDeps = @()
-    
+
     # Check Node.js version
     $nodeVersion = $null
     try {
@@ -390,7 +403,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "node"
     }
-    
+
     # Check npm version
     $npmVersion = $null
     try {
@@ -404,7 +417,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "npm"
     }
-    
+
     # Display results
     if ($missingDeps.Count -eq 0 -and $incompatibleDeps.Count -eq 0) {
         Write-Output "✅ All dependencies verified and compatible"
@@ -429,7 +442,7 @@ function Verify-Dependencies {
 verify_dependencies() {
     local missing_deps=()
     local incompatible_deps=()
-    
+
     # Check Node.js version
     if command -v node &> /dev/null; then
         local node_version=$(node -v)
@@ -442,7 +455,7 @@ verify_dependencies() {
     else
         missing_deps+=("node")
     fi
-    
+
     # Check npm version
     if command -v npm &> /dev/null; then
         local npm_version=$(npm -v)
@@ -455,7 +468,7 @@ verify_dependencies() {
     else
         missing_deps+=("npm")
     fi
-    
+
     # Display results
     if [ ${#missing_deps[@]} -eq 0 ] && [ ${#incompatible_deps[@]} -eq 0 ]; then
         echo "✅ All dependencies verified and compatible"
@@ -482,23 +495,23 @@ graph TD
     IdentifyConfigs --> ReadConfigs["Read Configuration<br>Files"]
     ReadConfigs --> ValidateSyntax["Validate Syntax<br>and Format"]
     ValidateSyntax --> SyntaxStatus{"Syntax<br>Valid?"}
-    
+
     SyntaxStatus -->|"Yes"| CheckCompatibility["Check Compatibility<br>with Platform"]
     SyntaxStatus -->|"No"| FixSyntax["Fix Syntax<br>Errors"]
     FixSyntax --> RetryValidate["Retry Validation"]
     RetryValidate --> SyntaxStatus
-    
+
     CheckCompatibility --> CompatStatus{"Compatible with<br>Platform?"}
     CompatStatus -->|"Yes"| ConfigSuccess["Configurations Validated<br>✅ PASS"]
     CompatStatus -->|"No"| AdaptConfigs["Adapt Configurations<br>for Platform"]
     AdaptConfigs --> RetryCompat["Retry Compatibility<br>Check"]
     RetryCompat --> CompatStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ConfigSuccess fill:#10b981,stroke:#059669,color:white
     style SyntaxStatus fill:#f6546a,stroke:#c30052,color:white
     style CompatStatus fill:#f6546a,stroke:#c30052,color:white
-``` 
+```
 
 #### Configuration Validation Implementation:
 ```powershell
@@ -509,10 +522,10 @@ function Validate-Configurations {
         "tsconfig.json",
         "vite.config.js"
     )
-    
+
     $invalidConfigs = @()
     $incompatibleConfigs = @()
-    
+
     foreach ($configFile in $configFiles) {
         if (Test-Path $configFile) {
             # Check JSON syntax for JSON files
@@ -524,7 +537,7 @@ function Validate-Configurations {
                     continue
                 }
             }
-            
+
             # Specific configuration compatibility checks
             if ($configFile -eq "vite.config.js") {
                 $content = Get-Content $configFile -Raw
@@ -537,7 +550,7 @@ function Validate-Configurations {
             $invalidConfigs += "$configFile (file not found)"
         }
     }
-    
+
     # Display results
     if ($invalidConfigs.Count -eq 0 -and $incompatibleConfigs.Count -eq 0) {
         Write-Output "✅ All configurations validated and compatible"
@@ -563,18 +576,18 @@ graph TD
     Start["Environment Validation"] --> CheckEnv["Check Build Environment"]
     CheckEnv --> VerifyBuildTools["Verify Build Tools"]
     VerifyBuildTools --> ToolsStatus{"Build Tools<br>Available?"}
-    
+
     ToolsStatus -->|"Yes"| CheckPerms["Check Permissions<br>and Access"]
     ToolsStatus -->|"No"| InstallTools["Install Required<br>Build Tools"]
     InstallTools --> RetryTools["Retry Verification"]
     RetryTools --> ToolsStatus
-    
+
     CheckPerms --> PermsStatus{"Permissions<br>Sufficient?"}
     PermsStatus -->|"Yes"| EnvSuccess["Environment Validated<br>✅ PASS"]
     PermsStatus -->|"No"| FixPerms["Fix Permission<br>Issues"]
     FixPerms --> RetryPerms["Retry Permission<br>Check"]
     RetryPerms --> PermsStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style EnvSuccess fill:#10b981,stroke:#059669,color:white
     style ToolsStatus fill:#f6546a,stroke:#c30052,color:white
@@ -590,10 +603,10 @@ function Validate-Environment {
         @{Name = "node"; Command = "node --version"},
         @{Name = "npm"; Command = "npm --version"}
     )
-    
+
     $missingTools = @()
     $permissionIssues = @()
-    
+
     # Check build tools
     foreach ($tool in $requiredTools) {
         try {
@@ -602,7 +615,7 @@ function Validate-Environment {
             $missingTools += $tool.Name
         }
     }
-    
+
     # Check write permissions in project directory
     try {
         $testFile = ".__permission_test"
@@ -611,7 +624,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Current directory (write permission denied)"
     }
-    
+
     # Check if port 3000 is available (commonly used for dev servers)
     try {
         $listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Loopback, 3000)
@@ -620,7 +633,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Port 3000 (already in use or access denied)"
     }
-    
+
     # Display results
     if ($missingTools.Count -eq 0 -and $permissionIssues.Count -eq 0) {
         Write-Output "✅ Environment validated successfully"
@@ -646,18 +659,18 @@ graph TD
     Start["Minimal Build Test"] --> CreateTest["Create Minimal<br>Test Project"]
     CreateTest --> BuildTest["Attempt<br>Build"]
     BuildTest --> BuildStatus{"Build<br>Successful?"}
-    
+
     BuildStatus -->|"Yes"| RunTest["Run Basic<br>Functionality Test"]
     BuildStatus -->|"No"| FixBuild["Fix Build<br>Issues"]
     FixBuild --> RetryBuild["Retry Build"]
     RetryBuild --> BuildStatus
-    
+
     RunTest --> TestStatus{"Test<br>Passed?"}
     TestStatus -->|"Yes"| TestSuccess["Minimal Build Test<br>✅ PASS"]
     TestStatus -->|"No"| FixTest["Fix Test<br>Issues"]
     FixTest --> RetryTest["Retry Test"]
     RetryTest --> TestStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style TestSuccess fill:#10b981,stroke:#059669,color:white
     style BuildStatus fill:#f6546a,stroke:#c30052,color:white
@@ -670,18 +683,18 @@ graph TD
 function Perform-MinimalBuildTest {
     $buildSuccess = $false
     $testSuccess = $false
-    
+
     # Create minimal test project
     $testDir = ".__build_test"
     if (Test-Path $testDir) {
         Remove-Item -Path $testDir -Recurse -Force
     }
-    
+
     try {
         # Create minimal test directory
         New-Item -Path $testDir -ItemType Directory | Out-Null
         Push-Location $testDir
-        
+
         # Initialize minimal package.json
         @"
 {
@@ -694,20 +707,20 @@ function Perform-MinimalBuildTest {
   }
 }
 "@ | Set-Content -Path "package.json"
-        
+
         # Attempt build
         npm run build | Out-Null
         $buildSuccess = $true
-        
+
         # Create minimal test file
         @"
 console.log('Test successful');
 "@ | Set-Content -Path "index.js"
-        
+
         # Run basic test
         node index.js | Out-Null
         $testSuccess = $true
-        
+
     } catch {
         Write-Output "❌ Build test failed: $($_.Exception.Message)"
     } finally {
@@ -716,7 +729,7 @@ console.log('Test successful');
             Remove-Item -Path $testDir -Recurse -Force
         }
     }
-    
+
     # Display results
     if ($buildSuccess -and $testSuccess) {
         Write-Output "✅ Minimal build test passed successfully"
@@ -808,7 +821,7 @@ graph TD
     ExtractTech --> ExtractDeps["Extract Required<br>Dependencies"]
     ExtractDeps --> BuildValidationPlan["Build Validation<br>Plan"]
     BuildValidationPlan --> StartValidation["Start Four-Point<br>Validation Process"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ExtractTech fill:#f6546a,stroke:#c30052,color:white
     style BuildValidationPlan fill:#10b981,stroke:#059669,color:white
@@ -820,27 +833,27 @@ graph TD
 # Example: Extract technology choices from creative phase documentation
 function Extract-TechnologyChoices {
     $techChoices = @{}
-    
+
     # Read from systemPatterns.md
     if (Test-Path "memory-bank\systemPatterns.md") {
         $content = Get-Content "memory-bank\systemPatterns.md" -Raw
-        
+
         # Extract framework choice
         if ($content -match "Framework:\s*(\w+)") {
             $techChoices["framework"] = $Matches[1]
         }
-        
+
         # Extract UI library choice
         if ($content -match "UI Library:\s*(\w+)") {
             $techChoices["ui_library"] = $Matches[1]
         }
-        
+
         # Extract state management choice
         if ($content -match "State Management:\s*([^\\n]+)") {
             $techChoices["state_management"] = $Matches[1].Trim()
         }
     }
-    
+
     return $techChoices
 }
 ```
@@ -853,14 +866,14 @@ If QA validation fails, the system prevents moving to BUILD mode:
 # Example: Enforce QA validation before allowing BUILD mode
 function Check-QAValidationStatus {
     $qaStatusFile = "memory-bank\.qa_validation_status"
-    
+
     if (Test-Path $qaStatusFile) {
         $status = Get-Content $qaStatusFile -Raw
         if ($status -match "PASS") {
             return $true
         }
     }
-    
+
     # Display block message
     Write-Output "`n`n"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
@@ -871,7 +884,7 @@ function Check-QAValidationStatus {
     Write-Output "`n"
     Write-Output "🚫 NO IMPLEMENTATION CAN PROCEED WITHOUT VALIDATION 🚫"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
-    
+
     return $false
 }
 ```
@@ -911,4 +924,4 @@ Here are common fixes for issues encountered during QA validation:
 
 → If all YES: Ready for BUILD mode
 → If any NO: Fix identified issues before proceeding
-``` 
+```
