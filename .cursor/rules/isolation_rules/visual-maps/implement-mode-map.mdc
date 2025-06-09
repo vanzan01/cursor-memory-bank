@@ -12,53 +12,60 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.md"]
-    
+    Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.mdc"]
+
     %% Initialization
     ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from tasks.md"}
-    
-    %% Level 1 Implementation
-    CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/quick-bug-workflow.md"]
-    L1Process --> L1Review["Review Bug<br>Report"]
-    L1Review --> L1Examine["Examine<br>Relevant Code"]
-    L1Examine --> L1Fix["Implement<br>Targeted Fix"]
-    L1Fix --> L1Test["Test<br>Fix"]
-    L1Test --> L1Update["Update<br>tasks.md"]
-    
-    %% Level 2 Implementation
-    CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/enhancement-workflow.md"]
-    L2Process --> L2Review["Review Build<br>Plan"]
-    L2Review --> L2Examine["Examine Relevant<br>Code Areas"]
-    L2Examine --> L2Implement["Implement Changes<br>Sequentially"]
-    L2Implement --> L2Test["Test<br>Changes"]
-    L2Test --> L2Update["Update<br>tasks.md"]
-    
-    %% Level 3-4 Implementation
-    CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/feature-workflow.md<br>Level4/system-workflow.md"]
-    L34Process --> L34Review["Review Plan &<br>Creative Decisions"]
+
+    %% Level 1 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/workflow-level1.mdc"]
+    L1Process --> L1Review["Review Bug<br>Report + Rule #3 Priority"]
+    L1Review --> L1Trace["Debug Trace<br>Collection (Rule #21)"]
+    L1Trace --> L1Examine["Examine<br>Relevant Code"]
+    L1Examine --> L1Fix["Implement<br>Targeted Fix + Rule #2 ✅/❌"]
+    L1Fix --> L1Test["Test Fix<br>(Rules #8-10)"]
+    L1Test --> L1Validate["Validate No<br>Regression (Rule #11)"]
+    L1Validate --> L1Update["Update tasks.md<br>+ Debug Traces"]
+
+    %% Level 2 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/workflow-level2.mdc"]
+    L2Process --> L2Review["Review Build<br>Plan + Phase Tracking"]
+    L2Review --> L2Phase["Execute Phase<br>(Rule #1 Phased Approach)"]
+    L2Phase --> L2Examine["Examine Relevant<br>Code Areas"]
+    L2Examine --> L2Implement["Implement Changes<br>+ Rule #2 ✅/❌ Tracking"]
+    L2Implement --> L2Test["Test Changes<br>(Rules #8-12)"]
+    L2Test --> L2Coverage["Check Coverage<br>(Rule #11)"]
+    L2Coverage --> L2Update["Update tasks.md<br>+ Test Reports"]
+
+    %% Level 3-4 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/workflow-level3.mdc<br>Level4/workflow-level4.mdc"]
+    L34Process --> L34Review["Review Plan &<br>Creative Decisions + Rule #17"]
     L34Review --> L34Phase{"Creative Phase<br>Documents<br>Complete?"}
-    
+
     L34Phase -->|"No"| L34Error["ERROR:<br>Return to CREATIVE Mode"]
-    L34Phase -->|"Yes"| L34DirSetup["Create Directory<br>Structure"]
+    L34Phase -->|"Yes"| L34PhaseStart["Start Phase<br>(Rule #1 Phased Approach)"]
+    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure"]
     L34DirSetup --> L34VerifyDirs["VERIFY Directories<br>Created Successfully"]
     L34VerifyDirs --> L34Implementation["Build<br>Phase"]
-    
-    %% Implementation Phases
-    L34Implementation --> L34Phase1["Phase 1<br>Build"]
+
+    %% Implementation Phases (Enhanced)
+    L34Implementation --> L34Phase1["Phase 1 Build<br>+ Rule #2 ✅/❌ Tracking"]
     L34Phase1 --> L34VerifyFiles["VERIFY Files<br>Created Successfully"]
-    L34VerifyFiles --> L34Test1["Test<br>Phase 1"]
-    L34Test1 --> L34Document1["Document<br>Phase 1"]
+    L34VerifyFiles --> L34Test1["Test Phase 1<br>(Rules #8-16)"]
+    L34Test1 --> L34Coverage1["Check Coverage<br>& Performance (Rules #11,13)"]
+    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24)"]
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
-    
-    L34Next1 -->|"No"| L34Integration["Integration<br>Testing"]
-    L34Integration --> L34Document["Document<br>Integration Points"]
-    L34Document --> L34Update["Update<br>tasks.md"]
-    
+
+    L34Next1 -->|"No"| L34Integration["Integration Testing<br>(Rules #17-20)"]
+    L34Integration --> L34Performance["Performance Testing<br>(Rule #13)"]
+    L34Performance --> L34Document["Document Integration<br>Points (Rule #20)"]
+    L34Document --> L34Update["Update tasks.md<br>+ All Reports"]
+
     %% Command Execution
-    L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.md"]
+    L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
     CommandExec --> DocCommands["Document Commands<br>& Results"]
-    
+
     %% Completion & Transition
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
     VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
@@ -72,19 +79,19 @@ Before implementation can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>planning complete?"}
-    
+
     CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
     CheckTasks -->|"Yes"| CheckLevel{"Task<br>Complexity?"}
-    
+
     CheckLevel -->|"Level 1"| L1Ready["Ready for<br>Implementation"]
-    
+
     CheckLevel -->|"Level 2"| L2Ready["Ready for<br>Implementation"]
-    
+
     CheckLevel -->|"Level 3-4"| CheckCreative{"Creative phases<br>required?"}
-    
+
     CheckCreative -->|"No"| L34Ready["Ready for<br>Implementation"]
     CheckCreative -->|"Yes"| VerifyCreative{"Creative phases<br>completed?"}
-    
+
     VerifyCreative -->|"No"| ErrorCreative["ERROR:<br>Return to CREATIVE Mode"]
     VerifyCreative -->|"Yes"| L34Ready
 ```
@@ -95,17 +102,17 @@ graph TD
 graph TD
     Start["Start File<br>Verification"] --> CheckDir["Check Directory<br>Structure"]
     CheckDir --> DirResult{"Directories<br>Exist?"}
-    
+
     DirResult -->|"No"| ErrorDir["❌ ERROR:<br>Missing Directories"]
     DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File"]
-    
+
     ErrorDir --> FixDir["Fix Directory<br>Structure"]
     FixDir --> CheckDir
-    
+
     CheckFiles --> FileResult{"All Files<br>Exist?"}
     FileResult -->|"No"| ErrorFile["❌ ERROR:<br>Missing/Wrong Path Files"]
     FileResult -->|"Yes"| Complete["✅ Verification<br>Complete"]
-    
+
     ErrorFile --> FixFile["Fix File Paths<br>or Recreate Files"]
     FixFile --> CheckFiles
 ```
@@ -134,7 +141,7 @@ After creating files:
 1. Use ABSOLUTE paths for all file operations: /full/path/to/file.ext
 2. Verify each file creation was successful:
    ls -la /full/path/to/file.ext     # Linux/Mac
-   dir "C:\full\path\to\file.ext"    # Windows 
+   dir "C:\full\path\to\file.ext"    # Windows
 3. If verification fails:
    a. Check for path resolution issues
    b. Verify directory exists
@@ -149,11 +156,11 @@ After creating files:
 graph TD
     Start["Command<br>Execution"] --> Analyze["Analyze Command<br>Requirements"]
     Analyze --> Complexity{"Command<br>Complexity?"}
-    
+
     Complexity -->|"Simple"| Simple["Execute<br>Single Command"]
     Complexity -->|"Moderate"| Chain["Use Efficient<br>Command Chaining"]
     Complexity -->|"Complex"| Break["Break Into<br>Logical Steps"]
-    
+
     Simple & Chain & Break --> Verify["Verify<br>Results"]
     Verify --> Document["Document<br>Command & Result"]
     Document --> Next["Next<br>Command"]
@@ -169,14 +176,14 @@ graph TD
         L1C["Direct<br>Fix"]
         L1D["Verify<br>Fix"]
     end
-    
+
     subgraph "Level 2: Enhancement"
         L2A["Sequential<br>Build"]
         L2B["Contained<br>Changes"]
         L2C["Standard<br>Testing"]
         L2D["Component<br>Documentation"]
     end
-    
+
     subgraph "Level 3-4: Feature/System"
         L3A["Directory<br>Structure First"]
         L3B["Verify Dirs<br>Before Files"]
@@ -185,7 +192,7 @@ graph TD
         L3E["Integration<br>Testing"]
         L3F["Detailed<br>Documentation"]
     end
-    
+
     L1A --> L1B --> L1C --> L1D
     L2A --> L2B --> L2C --> L2D
     L3A --> L3B --> L3C --> L3D --> L3E --> L3F
@@ -274,10 +281,10 @@ Update progress.md with:
 - [/absolute/path/to/dir2/]: Created and verified
 
 ## [Date]: [Component/Feature] Built
-- **Files Created**: 
+- **Files Created**:
   - [/absolute/path/to/file1.ext]: Verified
   - [/absolute/path/to/file2.ext]: Verified
-- **Key Changes**: 
+- **Key Changes**:
   - [Change 1]
   - [Change 2]
 - **Testing**: [Test results]
@@ -318,4 +325,4 @@ When the build is complete, notify user with:
 ✅ progress.md updated with details
 
 → NEXT RECOMMENDED MODE: REFLECT MODE
-``` 
+```

@@ -8,14 +8,14 @@ graph TD
     Main --> Rules["Hierarchical Rule Loading"]
     Main --> Visual["Visual Process Maps"]
     Main --> Token["Token Optimization"]
-    
+
     Modes --> VAN["VAN: Initialization"]
     Modes --> PLAN["PLAN: Task Planning"]
     Modes --> CREATIVE["CREATIVE: Design"]
     Modes --> IMPLEMENT["IMPLEMENT: Building"]
     Modes --> REFLECT["REFLECT: Review"]
     Modes --> ARCHIVE["ARCHIVE: Documentation"]
-    
+
     style Main fill:#4da6ff,stroke:#0066cc,color:white
     style Modes fill:#f8d486,stroke:#e8b84d,color:black
     style Rules fill:#80ffaa,stroke:#4dbb5f,color:black
@@ -71,6 +71,8 @@ For a detailed explanation of how Memory Bank implements these principles, see t
 - **Mode-Specific Visual Maps**: Clear visual representations for each development phase
 - **Level-Specific Workflows**: Adapted processes based on complexity (Levels 1-4)
 - **Platform-Aware Commands**: Automatically adapts commands to your operating system
+- **Enhanced VAN Mode**: Includes VAN.RULES and VAN.SYSTEM submodes for rules management and system administration
+- **Integrated Rules Management**: Full integration with .cursor rules through specialized submodes
 
 ## Installation Instructions
 
@@ -120,17 +122,18 @@ Note: other documents are not necessary for memory bank operation, they are expl
 
 For each mode, configure as follows (If MCPs are showing, you can keep them on, they probably won't work):
 
-1. **VAN MODE** (Initialization)
+1. **VAN MODE** (Initialization and System Administration)
    - **Name**: 🔍 VAN
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
+   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
    - **Advanced options**: Paste from `custom_modes/van_instructions.md`
+   - **Submodes**: VAN.RULES (rules management), VAN.SYSTEM (system administration)
 
 
 <img src="assets/van_mode_1.png" height="300" style="display: inline-block;"/> <img src="assets/van_mode_2.png" height="300" style="display: inline-block;"/>
 
 2. **PLAN MODE** (Task Planning)
    - **Name**: 📋 PLAN
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
+   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
    - **Advanced options**: Paste from `custom_modes/plan_instructions.md`
 
 <img src="assets/plan_mode_1.png" height="300"/> <img src="assets/plan_mode_2.png" height="300" style="display: inline-block;"/>
@@ -151,11 +154,11 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
 
 5. **REFLECT & ARHIVE MODE** (Review)
    - **Name**: 🔍 REFLECT or ARCHIVE
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
+   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
    - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md`
 
 <img src="assets/reflect_mode_1.png" height="300"/> <img src="assets/reflect_mode_2.png" height="300" style="display: inline-block;"/>
-   
+
 
 > **Note**: REFLECT and ARCHIVE instructions are combined in a single file and mode to optimize for Cursor's character and custom mode limits  while maintaining functionality. Thanks to GitHub user @joshmac007 for implementing this optimization.
 
@@ -164,6 +167,25 @@ For additional help on setting up custom modes in Cursor, refer to the [official
 ### QA Functionality
 
 QA is not a separate custom mode but rather a set of validation functions that can be called from any mode. You can invoke QA capabilities by typing "QA" in any mode when you need to perform technical validation. This approach provides flexibility to conduct verification at any point in the development process.
+
+### Enhanced VAN Mode
+
+VAN mode now includes powerful submodes for system administration:
+
+#### VAN.RULES - Rules Management
+- **VAN.RULES.INTEGRATE** - Integrate .cursor rules with Memory Bank
+- **VAN.RULES.MODIFY** - Modify existing rules using Cursor workaround
+- **VAN.RULES.CREATE** - Create new custom rules
+- **VAN.RULES.VALIDATE** - Validate all rules for correctness
+- **VAN.RULES.STATUS** - Check rules integration status
+
+#### VAN.SYSTEM - System Administration
+- **VAN.SYSTEM.OPTIMIZE** - Optimize Memory Bank performance
+- **VAN.SYSTEM.BACKUP** - Backup Memory Bank state
+- **VAN.SYSTEM.RESTORE** - Restore Memory Bank from backup
+- **VAN.SYSTEM.HEALTH** - Check system health and diagnostics
+
+These submodes allow complete management of the Memory Bank system, including integration with .cursor rules, without requiring additional custom modes.
 
 ## Basic Usage
 
@@ -184,6 +206,8 @@ QA is not a separate custom mode but rather a set of validation functions that c
 3. **Mode-Specific Commands**:
    ```
    VAN - Initialize project and determine complexity
+   VAN.RULES - Memory Bank rules management (integration, validation, modification)
+   VAN.SYSTEM - System administration (optimization, backup, diagnostics)
    PLAN - Create detailed implementation plan
    CREATIVE - Explore design options for complex components
    IMPLEMENT - Systematically build planned components
@@ -192,8 +216,17 @@ QA is not a separate custom mode but rather a set of validation functions that c
    QA - Validate technical implementation (can be called from any mode)
    ```
 
-4. **Starting to work with your project**:
-   
+4. **Using Enhanced VAN Mode**:
+   ```
+   VAN.RULES.STATUS - Check rules integration status
+   VAN.RULES.INTEGRATE - Integrate .cursor rules with Memory Bank
+   VAN.RULES.VALIDATE - Validate all rules for correctness
+   VAN.SYSTEM.HEALTH - Check Memory Bank system health
+   VAN.SYSTEM.OPTIMIZE - Optimize system performance
+   ```
+
+5. **Starting to work with your project**:
+
 After successfully installing Memory Bank...
 
 ## Core Files and Their Purposes
@@ -207,7 +240,7 @@ graph LR
         Creative["creative-*.md<br>Design Decisions"]
         Reflect["reflect-*.md<br>Review Documents"]
     end
-    
+
     style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px
     style Active fill:#a8d5ff,stroke:#88b5e0
     style Progress fill:#c5e8b7,stroke:#a5c897
@@ -259,6 +292,9 @@ The Memory Bank system is actively being developed and improved. Key points to u
 - [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
 - [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md)
 - [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
+- [Rules Modification Guide](rules/changing_the_rules.md) - Process for modifying .cursor rules
+- [VAN Mode Integration](custom_modes/van_enhanced.md) - Enhanced VAN mode documentation
+- [Integration Guide](custom_modes/integration_guide.md) - Quick start for rules integration
 - Mode-specific instruction files in the `custom_modes/` directory
 
 ---

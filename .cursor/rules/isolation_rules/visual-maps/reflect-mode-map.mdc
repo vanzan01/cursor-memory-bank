@@ -13,30 +13,30 @@ alwaysApply: false
 ```mermaid
 graph TD
     Start["START REFLECT MODE"] --> ReadTasks["Read tasks.md<br>and progress.md"]
-    
+
     %% Initial Assessment
     ReadTasks --> VerifyImplement{"Implementation<br>Complete?"}
     VerifyImplement -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
     VerifyImplement -->|"Yes"| AssessLevel{"Determine<br>Complexity Level"}
-    
+
     %% Level-Based Reflection
-    AssessLevel -->|"Level 1"| L1Reflect["LEVEL 1 REFLECTION<br>Level1/reflection-basic.md"]
-    AssessLevel -->|"Level 2"| L2Reflect["LEVEL 2 REFLECTION<br>Level2/reflection-standard.md"]
-    AssessLevel -->|"Level 3"| L3Reflect["LEVEL 3 REFLECTION<br>Level3/reflection-comprehensive.md"]
-    AssessLevel -->|"Level 4"| L4Reflect["LEVEL 4 REFLECTION<br>Level4/reflection-advanced.md"]
-    
+    AssessLevel -->|"Level 1"| L1Reflect["LEVEL 1 REFLECTION<br>Level1/optimized-workflow-level1.mdc"]
+    AssessLevel -->|"Level 2"| L2Reflect["LEVEL 2 REFLECTION<br>Level2/reflection-basic.mdc"]
+    AssessLevel -->|"Level 3"| L3Reflect["LEVEL 3 REFLECTION<br>Level3/workflow-level3.mdc"]
+    AssessLevel -->|"Level 4"| L4Reflect["LEVEL 4 REFLECTION<br>Level4/reflection-comprehensive.mdc"]
+
     %% Level 1 Reflection (Quick)
     L1Reflect --> L1Review["Review<br>Bug Fix"]
     L1Review --> L1Document["Document<br>Solution"]
     L1Document --> L1Update["Update<br>tasks.md"]
-    
+
     %% Level 2 Reflection (Standard)
     L2Reflect --> L2Review["Review<br>Enhancement"]
     L2Review --> L2WWW["Document<br>What Went Well"]
     L2WWW --> L2Challenges["Document<br>Challenges"]
     L2Challenges --> L2Lessons["Document<br>Lessons Learned"]
     L2Lessons --> L2Update["Update<br>tasks.md"]
-    
+
     %% Level 3-4 Reflection (Comprehensive)
     L3Reflect & L4Reflect --> L34Review["Review Implementation<br>& Creative Phases"]
     L34Review --> L34Plan["Compare Against<br>Original Plan"]
@@ -45,7 +45,7 @@ graph TD
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
     L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
     L34ImproveProcess --> L34Update["Update<br>tasks.md"]
-    
+
     %% Completion & Transition
     L1Update & L2Update & L34Update --> CreateReflection["Create<br>reflection.md"]
     CreateReflection --> UpdateSystem["Update System<br>Documentation"]
@@ -68,7 +68,7 @@ graph TD
         TechImp["## TECHNICAL IMPROVEMENTS<br>Better approaches for similar tasks"]
         NextSteps["## NEXT STEPS<br>Follow-up actions or future work"]
     end
-    
+
     Header --> Summary --> WWW --> Challenges --> Lessons --> ProcessImp --> TechImp --> NextSteps
 ```
 
@@ -79,10 +79,10 @@ Before reflection can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>implementation<br>complete?"}
-    
+
     CheckTasks -->|"No"| ErrorImplement["ERROR:<br>Return to IMPLEMENT Mode"]
     CheckTasks -->|"Yes"| CheckProgress{"progress.md<br>has implementation<br>details?"}
-    
+
     CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
     CheckProgress -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
 ```
@@ -99,7 +99,7 @@ graph TD
         Changes["Identify Deviations<br>from Plan"]
         Results["Evaluate<br>Results"]
     end
-    
+
     Original --> Plan --> Actual
     Plan --> Creative --> Changes
     Actual --> Results
@@ -226,4 +226,4 @@ When reflection is complete, notify user with:
 ✅ tasks.md updated with reflection status
 
 → NEXT RECOMMENDED MODE: ARCHIVE MODE
-``` 
+```

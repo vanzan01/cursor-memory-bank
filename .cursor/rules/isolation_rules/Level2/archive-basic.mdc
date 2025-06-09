@@ -1,9 +1,8 @@
 ---
 description: Basic archiving approach for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/archive/**", "**/completion/**"
+globs: "**/Level2/**", "**/archive/**", "**/completion/**"
 alwaysApply: false
 ---
-
 # BASIC ARCHIVING FOR LEVEL 2 TASKS
 
 > **TL;DR:** This document outlines a basic archiving approach for Level 2 (Simple Enhancement) tasks, ensuring that completed work is properly documented and knowledge is preserved with minimal overhead.
@@ -106,20 +105,20 @@ When creating cross-references:
 1. **In tasks.md**:
    ```markdown
    ## Completed Enhancements
-   - [X] [Feature Name] (YYYY-MM-DD) - [Archive Link](../docs/archive/enhancements/YYYY-MM/feature-name.md)
+   - [X] [Feature Name] (YYYY-MM-DD) - [Archive Link](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md)
    ```
 
 2. **In progress.md**:
    ```markdown
    ## Completed Milestones
-   - [Feature Name] enhancement completed on YYYY-MM-DD. See [archive entry](../docs/archive/enhancements/YYYY-MM/feature-name.md).
+   - [Feature Name] enhancement completed on YYYY-MM-DD. See [archive entry](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md).
    ```
 
 3. **In activeContext.md**:
    ```markdown
    ## Recently Completed
-   - [Feature Name] enhancement is now complete. Archive: [link](../docs/archive/enhancements/YYYY-MM/feature-name.md)
-   
+   - [Feature Name] enhancement is now complete. Archive: [link](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md)
+
    ## Current Focus
    - Moving to [Next Task Name]
    ```
@@ -161,7 +160,7 @@ graph TD
     Archive["Enhancement<br>Archive"] --> TasksUpdate["Update<br>tasks.md"]
     Archive --> ProgressUpdate["Update<br>progress.md"]
     Archive --> ContextUpdate["Update<br>activeContext.md"]
-    
+
     TasksUpdate & ProgressUpdate & ContextUpdate --> CrossLinks["Create<br>Cross-Links"]
     CrossLinks --> Verify["Verify<br>References"]
 ```
@@ -178,4 +177,4 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that knowledge is preserved and can be referenced in the future. 
+This ensures that knowledge is preserved and can be referenced in the future.

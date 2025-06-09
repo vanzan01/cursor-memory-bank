@@ -13,13 +13,13 @@ alwaysApply: false
 ```mermaid
 graph TD
     Start["START PLANNING"] --> ReadTasks["Read tasks.md<br>Core/task-tracking.md"]
-    
+
     %% Complexity Level Determination
     ReadTasks --> CheckLevel{"Determine<br>Complexity Level"}
-    CheckLevel -->|"Level 2"| Level2["LEVEL 2 PLANNING<br>Level2/enhancement-planning.md"]
-    CheckLevel -->|"Level 3"| Level3["LEVEL 3 PLANNING<br>Level3/feature-planning.md"]
-    CheckLevel -->|"Level 4"| Level4["LEVEL 4 PLANNING<br>Level4/system-planning.md"]
-    
+    CheckLevel -->|"Level 2"| Level2["LEVEL 2 PLANNING<br>Level2/workflow-level2.mdc"]
+    CheckLevel -->|"Level 3"| Level3["LEVEL 3 PLANNING<br>Level3/workflow-level3.mdc"]
+    CheckLevel -->|"Level 4"| Level4["LEVEL 4 PLANNING<br>Level4/workflow-level4.mdc"]
+
     %% Level 2 Planning
     Level2 --> L2Review["Review Code<br>Structure"]
     L2Review --> L2Document["Document<br>Planned Changes"]
@@ -28,7 +28,7 @@ graph TD
     L2Checklist --> L2Update["Update tasks.md<br>with Plan"]
     L2Update --> L2Tech["TECHNOLOGY<br>VALIDATION"]
     L2Tech --> L2Verify["Verify Plan<br>Completeness"]
-    
+
     %% Level 3 Planning
     Level3 --> L3Review["Review Codebase<br>Structure"]
     L3Review --> L3Requirements["Document Detailed<br>Requirements"]
@@ -39,7 +39,7 @@ graph TD
     L3Update --> L3Tech["TECHNOLOGY<br>VALIDATION"]
     L3Tech --> L3Flag["Flag Components<br>Requiring Creative"]
     L3Flag --> L3Verify["Verify Plan<br>Completeness"]
-    
+
     %% Level 4 Planning
     Level4 --> L4Analysis["Codebase Structure<br>Analysis"]
     L4Analysis --> L4Requirements["Document Comprehensive<br>Requirements"]
@@ -51,7 +51,7 @@ graph TD
     L4Update --> L4Tech["TECHNOLOGY<br>VALIDATION"]
     L4Tech --> L4Flag["Flag Components<br>Requiring Creative"]
     L4Flag --> L4Verify["Verify Plan<br>Completeness"]
-    
+
     %% Technology Validation Gate - NEW
     L2Tech & L3Tech & L4Tech --> TechGate["⛔ TECHNOLOGY<br>VALIDATION GATE"]
     TechGate --> TechSelection["Document Technology<br>Stack Selection"]
@@ -60,14 +60,14 @@ graph TD
     TechDependencies --> TechConfig["Validate Build<br>Configuration"]
     TechConfig --> TechBuild["Complete Test<br>Build"]
     TechBuild --> TechVerify["⛔ TECHNOLOGY<br>CHECKPOINT"]
-    
+
     %% Verification & Completion
     L2Verify & L3Verify & L4Verify & TechVerify --> CheckCreative{"Creative<br>Phases<br>Required?"}
-    
+
     %% Mode Transition
     CheckCreative -->|"Yes"| RecCreative["NEXT MODE:<br>CREATIVE MODE"]
     CheckCreative -->|"No"| RecImplement["NEXT MODE:<br>IMPLEMENT MODE"]
-    
+
     %% Style for Technology Gate
     style TechGate fill:#ff5555,stroke:#dd3333,color:white,stroke-width:3px
     style TechVerify fill:#ff5555,stroke:#dd3333,color:white,stroke-width:3px
@@ -78,37 +78,42 @@ graph TD
     style TechBuild fill:#4da6ff,stroke:#0066cc,color:white
 ```
 
-## 📋 LEVEL-SPECIFIC PLANNING APPROACHES
+## 📋 LEVEL-SPECIFIC PLANNING APPROACHES (ENHANCED WITH DEVELOPMENT RULES)
 
 ```mermaid
 graph TD
     subgraph "Level 2: Enhancement"
-        L2A["Basic Requirements<br>Analysis"]
+        L2A["Basic Requirements<br>Analysis + Rule #3 Priority"]
         L2B["Simple Component<br>Identification"]
-        L2C["Linear Implementation<br>Plan"]
-        L2D["Basic Checklist<br>Creation"]
+        L2C["Linear Implementation<br>Plan + Rule #1 Phases"]
+        L2D["Basic Checklist<br>Creation + Rule #2 ✅/❌"]
+        L2E["Test Strategy<br>Planning (Rules #8-16)"]
     end
-    
+
     subgraph "Level 3: Feature"
-        L3A["Detailed Requirements<br>Analysis"]
+        L3A["Detailed Requirements<br>Analysis + Rule #3 Priority"]
         L3B["Component Mapping<br>with Dependencies"]
-        L3C["Multi-Phase<br>Implementation Plan"]
-        L3D["Comprehensive<br>Checklist"]
-        L3E["Creative Phase<br>Identification"]
+        L3C["Multi-Phase<br>Implementation Plan + Rule #1"]
+        L3D["Comprehensive<br>Checklist + Rule #2 ✅/❌"]
+        L3E["Creative Phase<br>Identification + Rule #17"]
+        L3F["Integration Planning<br>(Rules #17-20)"]
+        L3G["Test Strategy<br>Planning (Rules #8-16)"]
     end
-    
+
     subgraph "Level 4: System"
-        L4A["Architectural<br>Requirements Analysis"]
+        L4A["Architectural<br>Requirements Analysis + Rule #3"]
         L4B["System Component<br>Mapping"]
-        L4C["Subsystem<br>Integration Plan"]
-        L4D["Phased Implementation<br>Strategy"]
+        L4C["Subsystem<br>Integration Plan + Rules #17-20"]
+        L4D["Phased Implementation<br>Strategy + Rule #1"]
         L4E["Risk Assessment<br>& Mitigation"]
-        L4F["Multiple Creative<br>Phase Requirements"]
+        L4F["Multiple Creative<br>Phase Requirements + Rule #17"]
+        L4G["Comprehensive Test<br>Strategy (Rules #8-16)"]
+        L4H["Debug Strategy<br>Planning (Rules #21-23)"]
     end
-    
-    L2A --> L2B --> L2C --> L2D
-    L3A --> L3B --> L3C --> L3D --> L3E
-    L4A --> L4B --> L4C --> L4D --> L4E --> L4F
+
+    L2A --> L2B --> L2C --> L2D --> L2E
+    L3A --> L3B --> L3C --> L3D --> L3E --> L3F --> L3G
+    L4A --> L4B --> L4C --> L4D --> L4E --> L4F --> L4G --> L4H
 ```
 
 ## 🔧 TECHNOLOGY VALIDATION WORKFLOW
@@ -123,11 +128,11 @@ graph TD
     Dependencies --> Config["Confirm Configuration<br>Files Are Correct"]
     Config --> Test["Complete Test<br>Build/Run"]
     Test --> Success{"All Checks<br>Pass?"}
-    
+
     Success -->|"Yes"| Ready["Ready for<br>Implementation"]
     Success -->|"No"| Fix["Fix Technology<br>Issues"]
     Fix --> Document
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style POC fill:#4da6ff,stroke:#0066cc,color:white
     style Success fill:#ff5555,stroke:#dd3333,color:white
@@ -142,10 +147,10 @@ Before planning can begin, verify the file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md<br>initialized?"}
-    
+
     CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to VAN Mode"]
     CheckTasks -->|"Yes"| CheckActive{"activeContext.md<br>exists?"}
-    
+
     CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to VAN Mode"]
     CheckActive -->|"Yes"| ReadyPlan["Ready for<br>Planning"]
 ```
@@ -212,17 +217,17 @@ For Level 3-4 tasks, identify components requiring creative phases:
 ```mermaid
 graph TD
     Start["Creative Phase<br>Identification"] --> CheckComp{"Component<br>Analysis"}
-    
+
     CheckComp --> UI["UI/UX<br>Components"]
     CheckComp --> Data["Data Model<br>Components"]
     CheckComp --> Arch["Architecture<br>Components"]
     CheckComp --> Algo["Algorithm<br>Components"]
-    
+
     UI & Data & Arch & Algo --> Decision{"Design Decisions<br>Required?"}
-    
+
     Decision -->|"Yes"| Flag["Flag for<br>Creative Phase"]
     Decision -->|"No"| Skip["Standard<br>Implementation"]
-    
+
     Flag --> Document["Document in<br>tasks.md"]
 ```
 
@@ -272,4 +277,4 @@ When planning is complete, notify user with:
 ✅ Challenges and mitigations documented
 [✅ Creative phases identified (for Level 3-4)]
 
-→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE 
+→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE

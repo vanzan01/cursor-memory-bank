@@ -1,6 +1,6 @@
 ---
 description: Comprehensive archiving approach for Level 4 Complex System tasks
-globs: "**/level4/**", "**/archive/**"
+globs: "**/Level4/**", "**/archive/**"
 alwaysApply: false
 ---
 
@@ -17,7 +17,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Archiving<br>Process]) --> Template[Load Comprehensive<br>Archive Template]
     Template --> RefDoc[Review Reflection<br>Document]
     RefDoc --> SysDoc[Create System<br>Documentation]
@@ -37,14 +37,14 @@ flowchart TD
     Verification -->|Pass| Complete([Archiving<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Archiving]
     Revise --> Verification
-    
+
     Template -.-> AT((Archive<br>Template))
     SysDoc -.-> SD((System<br>Documentation))
     ArchDoc -.-> AD((Architecture<br>Documentation))
     ImplDoc -.-> ID((Implementation<br>Documentation))
     APIDoc & DataDoc -.-> IntDoc((Interface<br>Documentation))
     TestDoc & DeployDoc & OpDoc -.-> OpDocs((Operational<br>Documentation))
-    
+
     class Start,Complete milestone
     class Template,RefDoc,SysDoc,ArchDoc,ImplDoc,APIDoc,DataDoc,SecDoc,TestDoc,DeployDoc,OpDoc,KnowledgeDoc,CrossRef,Archive,UpdateMB step
     class Verification verification
@@ -374,7 +374,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Archive<br>Preparation]) --> Template[Load Archive<br>Template]
     Template --> Review[Review Project<br>Documentation]
     Review --> Identify[Identify All<br>Artifacts]
@@ -383,12 +383,12 @@ flowchart TD
     Organize --> Plan[Create Archiving<br>Plan]
     Plan --> Resources[Allocate<br>Resources]
     Resources --> Complete([Preparation<br>Complete])
-    
+
     Template -.-> AT((Archive<br>Template))
     Review -.-> ProjDocs((Project<br>Documentation))
     Identify -.-> ArtList((Artifact<br>List))
     Plan -.-> ArchPlan((Archiving<br>Plan))
-    
+
     class Start,Complete milestone
     class Template,Review,Identify,Gather,Organize,Plan,Resources step
     class AT,ProjDocs,ArtList,ArchPlan artifact
@@ -409,7 +409,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Documentation<br>Creation]) --> System[Create System<br>Documentation]
     System --> Req[Create Requirements<br>and Design Documentation]
     Req --> Impl[Create Implementation<br>Documentation]
@@ -423,7 +423,7 @@ flowchart TD
     Knowledge --> History[Create Project History<br>Documentation]
     History --> Review[Review All<br>Documentation]
     Review --> Complete([Documentation<br>Creation Complete])
-    
+
     System -.-> SysDoc((System<br>Documentation))
     Req -.-> ReqDoc((Requirements<br>Documentation))
     Impl -.-> ImplDoc((Implementation<br>Documentation))
@@ -435,7 +435,7 @@ flowchart TD
     Ops -.-> OpsDoc((Operational<br>Documentation))
     Knowledge -.-> KnowDoc((Knowledge Transfer<br>Documentation))
     History -.-> HistDoc((Project History<br>Documentation))
-    
+
     class Start,Complete milestone
     class System,Req,Impl,API,Data,Security,Test,Deploy,Ops,Knowledge,History,Review step
     class SysDoc,ReqDoc,ImplDoc,APIDoc,DataDoc,SecDoc,TestDoc,DeployDoc,OpsDoc,KnowDoc,HistDoc artifact
@@ -462,7 +462,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Archiving<br>and Integration]) --> Consolidate[Consolidate All<br>Documentation]
     Consolidate --> CrossRef[Create Cross-Reference<br>Index]
     CrossRef --> Version[Version All<br>Documentation]
@@ -474,12 +474,12 @@ flowchart TD
     Verification -->|Pass| Complete([Archiving<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Archiving]
     Revise --> Verification
-    
+
     Consolidate -.-> AllDocs((Consolidated<br>Documentation))
     CrossRef -.-> Index((Cross-Reference<br>Index))
     Archive -.-> Repo((Archive<br>Repository))
     UpdateMB -.-> MB((Updated Memory<br>Bank))
-    
+
     class Start,Complete milestone
     class Consolidate,CrossRef,Version,Archive,UpdateMB,AccessControl,Announce,Revise step
     class Verification verification
@@ -502,17 +502,17 @@ flowchart TD
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Archiving[Comprehensive<br>Archiving] --> PB[projectbrief.md]
     Archiving --> PC[productContext.md]
     Archiving --> AC[activeContext.md]
     Archiving --> SP[systemPatterns.md]
     Archiving --> TC[techContext.md]
     Archiving --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Repository of<br>Knowledge]
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Archiving,MBI,Next process
 ```
@@ -681,4 +681,4 @@ For situations requiring a more compact archiving approach:
 │ until comprehensive archiving is finished and        │
 │ verified.                                            │
 └─────────────────────────────────────────────────────┘
-``` 
+```

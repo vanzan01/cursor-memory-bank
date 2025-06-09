@@ -16,19 +16,19 @@ graph TD
     Struct --> Track["📊 Progress<br>Tracking"]
     Track --> Update["🔄 Regular<br>Updates"]
     Update --> Complete["✅ Task<br>Completion"]
-    
+
     Struct --> Components["Components:"]
     Components --> Req["Requirements"]
     Components --> Steps["Implementation<br>Steps"]
     Components --> Creative["Creative Phase<br>Markers"]
     Components --> Check["Checkpoints"]
-    
+
     Track --> Status["Track Status:"]
     Status --> InProg["🔄 In Progress"]
     Status --> Block["⛔ Blocked"]
     Status --> Done["✅ Complete"]
     Status --> Skip["⏭️ Skipped"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Init fill:#ffa64d,stroke:#cc7a30,color:white
     style Struct fill:#4dbb5f,stroke:#36873f,color:white
@@ -86,7 +86,7 @@ graph TD
     P5["□ Testing"]
     P6["□ Documentation"]
     end
-    
+
     style P1 fill:#4dbb5f,stroke:#36873f,color:white
     style P2 fill:#4dbb5f,stroke:#36873f,color:white
     style P3 fill:#ffa64d,stroke:#cc7a30,color:white
@@ -103,7 +103,7 @@ sequenceDiagram
     participant Status as Status Update
     participant Creative as Creative Phase
     participant Implementation as Implementation
-    
+
     Task->>Status: Update Progress
     Status->>Creative: Flag for Creative Phase
     Creative->>Implementation: Complete Design
@@ -126,10 +126,10 @@ sequenceDiagram
 
 ```mermaid
 graph TD
-    Current["Current Documents"] --> Active["Active:<br>- task-tracking-intermediate.md<br>- planning-comprehensive.md"]
-    Current --> Required["Required Next:<br>- creative-phase-enforcement.md<br>- implementation-phase-reference.md"]
-    
+    Current["Current Documents"] --> Active["Active:<br>- task-tracking-intermediate.mdc<br>- planning-comprehensive.mdc"]
+    Current --> Required["Required Next:<br>- creative-phase-enforcement.mdc<br>- implementation-phase-reference.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Required fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```

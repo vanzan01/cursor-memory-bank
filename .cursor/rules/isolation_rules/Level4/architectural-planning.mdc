@@ -1,6 +1,6 @@
 ---
 description: Architectural planning guidelines for Level 4 Complex System tasks
-globs: "**/level4/**", "**/architecture/**"
+globs: "**/Level4/**", "**/architecture/**"
 alwaysApply: false
 ---
 
@@ -17,7 +17,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Architectural<br>Planning]) --> Reqs[Analyze<br>Requirements]
     Reqs --> Context[Define Business<br>Context]
     Context --> Vision[Establish Vision<br>and Goals]
@@ -33,7 +33,7 @@ flowchart TD
     Verification -->|Pass| Complete([Architectural<br>Planning Complete])
     Verification -->|Fail| Revise[Revise<br>Architecture]
     Revise --> Verification
-    
+
     Reqs -.-> ReqDoc((Requirements<br>Document))
     Context -.-> ConDoc((Context<br>Document))
     Vision -.-> VisDoc((Vision<br>Document))
@@ -41,7 +41,7 @@ flowchart TD
     Explore -.-> AltDoc((Alternatives<br>Analysis))
     Decision -.-> ADR((Architecture<br>Decision Records))
     Create -.-> ArchDoc((Architecture<br>Documentation))
-    
+
     class Start,Complete milestone
     class Reqs,Context,Vision,Principles,Constraints,Explore,Evaluate,Decision,Create,Validate,Communicate,Revise step
     class Verification verification
@@ -71,13 +71,13 @@ Begin architectural planning with a comprehensive analysis of requirements:
 flowchart LR
     classDef req fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef arch fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     FR[Functional<br>Requirements] --> USE[Use Cases/<br>User Stories]
     USE --> DOM[Domain<br>Model]
     DOM --> COMP[Component<br>Identification]
     COMP --> INT[Interface<br>Definition]
     INT --> FLOW[Information<br>Flow]
-    
+
     class FR,USE,DOM req
     class COMP,INT,FLOW arch
 ```
@@ -122,15 +122,15 @@ flowchart LR
 flowchart LR
     classDef req fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef arch fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     NFR[Non-Functional<br>Requirements] --> PERF[Performance<br>Requirements]
     NFR --> SEC[Security<br>Requirements]
     NFR --> SCAL[Scalability<br>Requirements]
     NFR --> AVAIL[Availability<br>Requirements]
     NFR --> MAINT[Maintainability<br>Requirements]
-    
+
     PERF & SEC & SCAL & AVAIL & MAINT --> ARCH[Architectural<br>Decisions]
-    
+
     class NFR,PERF,SEC,SCAL,AVAIL,MAINT req
     class ARCH arch
 ```
@@ -397,13 +397,13 @@ flowchart TD
     classDef system fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef external fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef user fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     U1[User 1] --> S[System]
     U2[User 2] --> S
     S --> E1[External<br>System 1]
     S --> E2[External<br>System 2]
     S --> E3[External<br>System 3]
-    
+
     class S system
     class E1,E2,E3 external
     class U1,U2 user
@@ -417,13 +417,13 @@ flowchart TD
     classDef backend fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef data fill:#c5e8b7,stroke:#a5c897,color:#000
     classDef integration fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     U[Users] --> F[Frontend<br>Layer]
     F --> B[Backend<br>Layer]
     B --> D[Data<br>Layer]
     B --> I[Integration<br>Layer]
     I --> E[External<br>Systems]
-    
+
     class F frontend
     class B backend
     class D data
@@ -438,7 +438,7 @@ flowchart TD
     classDef ui fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef service fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef data fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     UI[User Interface] --> API[API Gateway]
     API --> S1[Service 1]
     API --> S2[Service 2]
@@ -447,7 +447,7 @@ flowchart TD
     S2 --> DB1
     S2 --> DB2[Database 2]
     S3 --> DB2
-    
+
     class UI ui
     class API,S1,S2,S3 service
     class DB1,DB2 data
@@ -459,12 +459,12 @@ flowchart TD
 flowchart TD
     classDef entity fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef relation fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     E1[Entity 1] -- 1:N --> E2[Entity 2]
     E1 -- 1:1 --> E3[Entity 3]
     E2 -- N:M --> E4[Entity 4]
     E3 -- 1:N --> E4
-    
+
     class E1,E2,E3,E4 entity
 ```
 
@@ -474,7 +474,7 @@ flowchart TD
 flowchart TD
     classDef security fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef app fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     U[Users] --> WAF[Web Application<br>Firewall]
     WAF --> LB[Load<br>Balancer]
     LB --> API[API Gateway]
@@ -482,7 +482,7 @@ flowchart TD
     API --> S1[Service 1]
     API --> S2[Service 2]
     AuthZ --> IAM[Identity &<br>Access Management]
-    
+
     class WAF,AuthZ,IAM security
     class API,S1,S2 app
     class U,LB external
@@ -494,7 +494,7 @@ flowchart TD
 flowchart TD
     classDef env fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef component fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     subgraph Production
     LB[Load Balancer] --> W1[Web Server 1]
     LB --> W2[Web Server 2]
@@ -502,7 +502,7 @@ flowchart TD
     W1 & W2 --> A2[App Server 2]
     A1 & A2 --> DB[Database<br>Cluster]
     end
-    
+
     class Production env
     class LB,W1,W2,A1,A2,DB component
 ```
@@ -664,15 +664,15 @@ Communicate architecture to stakeholders:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Architecture[Architectural<br>Planning] --> PB[projectbrief.md]
     Architecture --> PC[productContext.md]
     Architecture --> SP[systemPatterns.md]
     Architecture --> TC[techContext.md]
-    
+
     PB & PC & SP & TC --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Implementation<br>Phase]
-    
+
     class PB,PC,SP,TC memfile
     class Architecture,MBI,Next process
 ```
@@ -806,4 +806,4 @@ For situations requiring a more compact architectural planning approach:
 │ tasks. Implementation CANNOT begin until             │
 │ architectural planning is complete and approved.     │
 └─────────────────────────────────────────────────────┘
-``` 
+```

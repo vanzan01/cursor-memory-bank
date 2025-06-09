@@ -18,7 +18,7 @@ graph TD
     Options --> Eval["4. Option<br>Evaluation"]
     Eval --> Decision["5. Decision &<br>Documentation"]
     Decision --> Valid["6. Validation &<br>Verification"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Req fill:#ffa64d,stroke:#cc7a30,color:white
     style Comp fill:#4dbb5f,stroke:#36873f,color:white
@@ -92,7 +92,7 @@ graph TD
     C5["Cost"]
     C6["Time to Market"]
     end
-    
+
     style C1 fill:#4dbb5f,stroke:#36873f,color:white
     style C2 fill:#ffa64d,stroke:#cc7a30,color:white
     style C3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -110,11 +110,11 @@ graph TD
     C1["Component 1"]
     C2["Component 2"]
     C3["Component 3"]
-    
+
     C1 -->|"Interface 1"| C2
     C2 -->|"Interface 2"| C3
     end
-    
+
     style C1 fill:#4dbb5f,stroke:#36873f,color:white
     style C2 fill:#ffa64d,stroke:#cc7a30,color:white
     style C3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -126,7 +126,7 @@ sequenceDiagram
     participant C1 as Component 1
     participant C2 as Component 2
     participant C3 as Component 3
-    
+
     C1->>C2: Request
     C2->>C3: Process
     C3-->>C2: Response
@@ -165,9 +165,9 @@ graph TD
     R3["Performance<br>Review"]
     R4["Final<br>Approval"]
     end
-    
+
     R1 --> R2 --> R3 --> R4
-    
+
     style R1 fill:#4dbb5f,stroke:#36873f,color:white
     style R2 fill:#ffa64d,stroke:#cc7a30,color:white
     style R3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -178,10 +178,10 @@ graph TD
 
 ```mermaid
 graph TD
-    Current["Current Document"] --> Active["Active:<br>- creative-phase-architecture.md"]
-    Current --> Related["Related:<br>- creative-phase-enforcement.md<br>- planning-comprehensive.md"]
-    
+    Current["Current Document"] --> Active["Active:<br>- creative-phase-architecture.mdc"]
+    Current --> Related["Related:<br>- creative-phase-enforcement.mdc<br>- planning-comprehensive.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Related fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```

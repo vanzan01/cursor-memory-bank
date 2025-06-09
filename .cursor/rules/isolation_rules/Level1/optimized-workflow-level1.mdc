@@ -1,9 +1,8 @@
 ---
 description: Optimized Level 1 workflow for quick bug fixes with token efficiency
-globs: "**/level1*/**", "**/quick*/**", "**/bugfix*/**"
+globs: "**/Level1/**", "**/quick*/**", "**/bugfix*/**"
 alwaysApply: false
 ---
-
 # OPTIMIZED LEVEL 1 WORKFLOW
 
 > **TL;DR:** This streamlined workflow for Level 1 tasks (quick bug fixes) optimizes for speed and token efficiency while maintaining quality.
@@ -16,7 +15,7 @@ graph TD
     Analyze --> Implement["2️⃣ IMPLEMENT<br>Fix the issue"]
     Implement --> Verify["3️⃣ VERIFY<br>Test the fix"]
     Verify --> Document["4️⃣ DOCUMENT<br>Record solution"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Analyze fill:#ffa64d,stroke:#cc7a30,color:white
     style Implement fill:#4dbb5f,stroke:#36873f,color:white
@@ -145,7 +144,7 @@ Optimize Memory Bank updates for Level 1 tasks by using a single operation:
 function updateLevel1MemoryBank(taskInfo) {
   // Read current tasks.md
   const tasksContent = readFile("tasks.md");
-  
+
   // Create minimal update
   const updateBlock = `
 ### Task: ${taskInfo.name}
@@ -153,13 +152,13 @@ function updateLevel1MemoryBank(taskInfo) {
 - Implementation: ${taskInfo.solution}
 - Link to fix: ${taskInfo.fileReference}
 `;
-  
+
   // Add update to tasks.md
   const updatedContent = appendToSection(tasksContent, "Completed Tasks", updateBlock);
-  
+
   // Write in single operation
   writeFile("tasks.md", updatedContent);
-  
+
   return "Memory Bank updated";
 }
 ```
@@ -169,7 +168,7 @@ function updateLevel1MemoryBank(taskInfo) {
 ```markdown
 ## 🔧 FIX: Login button not working on mobile devices
 
-📌 Problem: 
+📌 Problem:
 Users unable to log in on mobile devices, button appears but doesn't trigger authentication
 
 🔍 Cause:
@@ -178,7 +177,7 @@ Event listener using desktop-specific event (mousedown instead of handling touch
 🛠️ Solution:
 Updated event handling to use event delegation and support both mouse and touch events:
 ```js
-// Before: 
+// Before:
 loginButton.addEventListener('mousedown', handleLogin);
 
 // After:
@@ -187,7 +186,7 @@ loginButton.addEventListener('touchstart', handleLogin);
 ```
 
 ✅ Tested:
-- Verified on iOS Safari and Android Chrome 
+- Verified on iOS Safari and Android Chrome
 - Login now works on all tested mobile devices
 - No regression on desktop browsers
 ```

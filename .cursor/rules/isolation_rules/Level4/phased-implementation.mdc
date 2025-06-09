@@ -1,9 +1,8 @@
 ---
 description: Phased Implementation for Level 4 Complex System tasks
-globs: "**/level4/**", "**/implementation/**"
+globs: "**/Level4/**", "**/implementation/**"
 alwaysApply: false
 ---
-
 # PHASED IMPLEMENTATION FOR LEVEL 4 TASKS
 
 > **TL;DR:** This document outlines a structured phased implementation approach for Level 4 (Complex System) tasks, ensuring controlled, incremental delivery of complex systems with appropriate verification at each phase.
@@ -17,7 +16,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Implementation<br>Process]) --> Framework[Establish Implementation<br>Framework]
     Framework --> Plan[Create Phasing<br>Plan]
     Plan --> Foundation[Implement<br>Foundation Phase]
@@ -25,27 +24,27 @@ flowchart TD
     VerifyF -->|Pass| Core[Implement<br>Core Phase]
     VerifyF -->|Fail| ReviseF[Revise<br>Foundation]
     ReviseF --> VerifyF
-    
+
     Core --> VerifyC{Core<br>Verification}
     VerifyC -->|Pass| Extension[Implement<br>Extension Phase]
     VerifyC -->|Fail| ReviseC[Revise<br>Core]
     ReviseC --> VerifyC
-    
+
     Extension --> VerifyE{Extension<br>Verification}
     VerifyE -->|Pass| Integration[Implement<br>Integration Phase]
     VerifyE -->|Fail| ReviseE[Revise<br>Extension]
     ReviseE --> VerifyE
-    
+
     Integration --> VerifyI{Integration<br>Verification}
     VerifyI -->|Pass| Finalization[Implement<br>Finalization Phase]
     VerifyI -->|Fail| ReviseI[Revise<br>Integration]
     ReviseI --> VerifyI
-    
+
     Finalization --> VerifyFin{Finalization<br>Verification}
     VerifyFin -->|Pass| Complete([Implementation<br>Complete])
     VerifyFin -->|Fail| ReviseFin[Revise<br>Finalization]
     ReviseFin --> VerifyFin
-    
+
     Framework -.-> IF((Implementation<br>Framework))
     Plan -.-> PP((Phasing<br>Plan))
     Foundation -.-> FP((Foundation<br>Phase))
@@ -53,7 +52,7 @@ flowchart TD
     Extension -.-> EP((Extension<br>Phase))
     Integration -.-> IP((Integration<br>Phase))
     Finalization -.-> FiP((Finalization<br>Phase))
-    
+
     class Start,Complete milestone
     class Framework,Plan,Foundation,Core,Extension,Integration,Finalization,ReviseF,ReviseC,ReviseE,ReviseI,ReviseFin step
     class VerifyF,VerifyC,VerifyE,VerifyI,VerifyFin verification
@@ -80,12 +79,12 @@ Level 4 Complex System tasks typically follow a five-phase implementation approa
 ```mermaid
 flowchart LR
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     P1[1. Foundation<br>Phase] --> P2[2. Core<br>Phase]
     P2 --> P3[3. Extension<br>Phase]
     P3 --> P4[4. Integration<br>Phase]
     P4 --> P5[5. Finalization<br>Phase]
-    
+
     class P1,P2,P3,P4,P5 phase
 ```
 
@@ -211,7 +210,7 @@ For each implementation phase, create a detailed plan using this template:
 - **Component 1**: [Description]
   - [ ] Task 1.1: [Description]
   - [ ] Task 1.2: [Description]
-  
+
 - **Component 2**: [Description]
   - [ ] Task 2.1: [Description]
   - [ ] Task 2.2: [Description]
@@ -223,7 +222,7 @@ For each implementation phase, create a detailed plan using this template:
 - **Risk 1**: [Description]
   - Impact: [High/Medium/Low]
   - Mitigation: [Strategy]
-  
+
 - **Risk 2**: [Description]
   - Impact: [High/Medium/Low]
   - Mitigation: [Strategy]
@@ -250,7 +249,7 @@ flowchart TD
     classDef activity fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef decision fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Phase<br>Verification]) --> CodeReview[Conduct Code<br>Review]
     CodeReview --> TestExecution[Execute Automated<br>Tests]
     TestExecution --> QAVerification[Perform QA<br>Verification]
@@ -264,14 +263,14 @@ flowchart TD
     Remediation --> Retest[Verify<br>Fixes]
     Retest --> ExitCriteria
     Approval --> Complete([Verification<br>Complete])
-    
+
     CodeReview -.-> CodeReport((Code Review<br>Report))
     TestExecution -.-> TestReport((Test<br>Report))
     QAVerification -.-> QAReport((QA<br>Report))
     ArchReview -.-> ArchReport((Architecture<br>Report))
     StakeholderReview -.-> StakeReport((Stakeholder<br>Report))
     Checklist -.-> CheckDoc((Verification<br>Checklist))
-    
+
     class Start,Complete milestone
     class CodeReview,TestExecution,QAVerification,ArchReview,StakeholderReview,Checklist,Approval,Issues,Remediation,Retest activity
     class ExitCriteria decision
@@ -332,21 +331,21 @@ flowchart TD
 flowchart TD
     classDef solid fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef partial fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     F[Foundation<br>Phase] --> C[Core<br>Phase]
     F --> E[Extension<br>Phase]
     F --> I[Integration<br>Phase]
     F --> FN[Finalization<br>Phase]
-    
+
     C --> E
     C --> I
     C --> FN
-    
+
     E --> I
     E --> FN
-    
+
     I --> FN
-    
+
     class F,C solid
     class E,I,FN partial
 ```
@@ -376,7 +375,7 @@ flowchart TD
   - Database schema
   - Logging infrastructure
   - Basic application skeleton
-  
+
 - **External Dependencies**:
   - API specifications from external systems
   - Test data
@@ -386,17 +385,17 @@ flowchart TD
   - Core business logic
   - Primary user interface
   - Essential services
-  
+
 - **External Dependencies**:
   - [List external dependencies]
 
 ### Integration Phase Dependencies
 - **Core Phase Dependencies**:
   - [List core dependencies]
-  
+
 - **Extension Phase Dependencies**:
   - [List extension dependencies]
-  
+
 - **External Dependencies**:
   - Access to integration test environments
   - Test credentials for external systems
@@ -415,7 +414,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Phase<br>Transition]) --> Verification[Verify Current<br>Phase Complete]
     Verification --> Checkpoint{Phase<br>Verified?}
     Checkpoint -->|No| Remediation[Remediate<br>Issues]
@@ -426,12 +425,12 @@ flowchart TD
     NextPlan --> Approvals[Obtain<br>Approvals]
     Approvals --> Kickoff[Conduct Next<br>Phase Kickoff]
     Kickoff --> End([Begin Next<br>Phase])
-    
+
     Verification -.-> VerifDoc((Verification<br>Checklist))
     Documentation -.-> Docs((Updated<br>Documentation))
     Reflection -.-> ReflectDoc((Reflection<br>Document))
     NextPlan -.-> PlanDoc((Phase<br>Plan))
-    
+
     class Start,End milestone
     class Verification,Remediation,Documentation,Reflection,NextPlan,Approvals,Kickoff step
     class Checkpoint verification
@@ -519,17 +518,17 @@ Update `tasks.md` to track phased implementation progress:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Implementation[Phased<br>Implementation] --> PB[projectbrief.md]
     Implementation --> PC[productContext.md]
     Implementation --> AC[activeContext.md]
     Implementation --> SP[systemPatterns.md]
     Implementation --> TC[techContext.md]
     Implementation --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Implementation
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Implementation,MBI process
 ```
@@ -626,7 +625,7 @@ For situations requiring a more compact implementation approach:
 
 ### Phase Status Summary
 - **Foundation**: [Status] - [Progress %]
-- **Core**: [Status] - [Progress %] 
+- **Core**: [Status] - [Progress %]
 - **Extension**: [Status] - [Progress %]
 - **Integration**: [Status] - [Progress %]
 - **Finalization**: [Status] - [Progress %]
@@ -652,4 +651,4 @@ For situations requiring a more compact implementation approach:
 │ Phases MUST NOT be rushed to meet deadlines at the   │
 │ expense of quality or architectural integrity.       │
 └─────────────────────────────────────────────────────┘
-``` 
+```

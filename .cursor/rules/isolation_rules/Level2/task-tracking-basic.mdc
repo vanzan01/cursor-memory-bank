@@ -1,9 +1,8 @@
 ---
 description: Basic task tracking for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/tracking/**", "**/task/**"
+globs: "**/Level2/**", "**/tracking/**", "**/task/**"
 alwaysApply: false
 ---
-
 # BASIC TASK TRACKING FOR LEVEL 2
 
 > **TL;DR:** This document outlines a streamlined task tracking approach for Level 2 (Simple Enhancement) tasks. It provides a balanced framework for managing task progress with minimal overhead.
@@ -168,7 +167,7 @@ Task tracking integrates with Memory Bank:
 graph TD
     TasksFile["tasks.md"] --> Active["activeContext.md"]
     TasksFile --> Progress["progress.md"]
-    
+
     Active -->|"Current focus"| TasksFile
     Progress -->|"Completion status"| TasksFile
 ```
@@ -185,4 +184,4 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures everyone has visibility into current task status at all times. 
+This ensures everyone has visibility into current task status at all times.

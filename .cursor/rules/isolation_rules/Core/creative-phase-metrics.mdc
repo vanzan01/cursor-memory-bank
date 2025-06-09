@@ -21,13 +21,13 @@ graph TD
     M4["Impact<br>Assessment"]
     M5["Verification<br>Score"]
     end
-    
+
     M1 --> Score["Quality<br>Score"]
     M2 --> Score
     M3 --> Score
     M4 --> Score
     M5 --> Score
-    
+
     style M1 fill:#4dbb5f,stroke:#36873f,color:white
     style M2 fill:#ffa64d,stroke:#cc7a30,color:white
     style M3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -89,11 +89,11 @@ graph TD
     T2["Target<br>45/50 (90%)"]
     T3["Excellent<br>48/50 (96%)"]
     end
-    
+
     Score["Quality<br>Score"] --> Check{"Meets<br>Threshold?"}
     Check -->|"< 80%"| Block["⛔ BLOCKED<br>Improvements Required"]
     Check -->|"≥ 80%"| Pass["✓ PASSED<br>Can Proceed"]
-    
+
     style T1 fill:#4dbb5f,stroke:#36873f,color:white
     style T2 fill:#ffa64d,stroke:#cc7a30,color:white
     style T3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -114,7 +114,7 @@ graph TD
     Total --> Check{"Meets<br>Threshold?"}
     Check -->|No| Return["Return for<br>Improvements"]
     Check -->|Yes| Proceed["Proceed to<br>Next Phase"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Doc fill:#ffa64d,stroke:#cc7a30,color:white
     style Dec fill:#4dbb5f,stroke:#36873f,color:white
@@ -186,10 +186,10 @@ For scores below threshold:
 
 ```mermaid
 graph TD
-    Current["Current Document"] --> Active["Active:<br>- creative-phase-metrics.md"]
-    Current --> Related["Related:<br>- creative-phase-enforcement.md<br>- creative-phase-architecture.md"]
-    
+    Current["Current Document"] --> Active["Active:<br>- creative-phase-metrics.mdc"]
+    Current --> Related["Related:<br>- creative-phase-enforcement.mdc<br>- creative-phase-architecture.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Related fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```

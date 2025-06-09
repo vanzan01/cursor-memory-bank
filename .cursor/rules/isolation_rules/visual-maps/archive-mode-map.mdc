@@ -3,7 +3,6 @@ description: Visual process map for ARCHIVE mode (Task Documentation)
 globs: "**/archive*/**", "**/document*/**", "**/complete*/**"
 alwaysApply: false
 ---
-
 # ARCHIVE MODE: TASK DOCUMENTATION PROCESS MAP
 
 > **TL;DR:** This visual map guides the ARCHIVE mode process, focusing on creating comprehensive documentation of the completed task, archiving relevant files, and updating the Memory Bank for future reference.
@@ -13,30 +12,30 @@ alwaysApply: false
 ```mermaid
 graph TD
     Start["START ARCHIVE MODE"] --> ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
-    
+
     %% Initial Assessment
     ReadTasks --> VerifyReflect{"Reflection<br>Complete?"}
     VerifyReflect -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
     VerifyReflect -->|"Yes"| AssessLevel{"Determine<br>Complexity Level"}
-    
+
     %% Level-Based Archiving
-    AssessLevel -->|"Level 1"| L1Archive["LEVEL 1 ARCHIVING<br>Level1/archive-minimal.md"]
-    AssessLevel -->|"Level 2"| L2Archive["LEVEL 2 ARCHIVING<br>Level2/archive-basic.md"]
-    AssessLevel -->|"Level 3"| L3Archive["LEVEL 3 ARCHIVING<br>Level3/archive-standard.md"]
-    AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.md"]
-    
+    AssessLevel -->|"Level 1"| L1Archive["LEVEL 1 ARCHIVING<br>Level1/optimized-workflow-level1.mdc"]
+    AssessLevel -->|"Level 2"| L2Archive["LEVEL 2 ARCHIVING<br>Level2/archive-basic.mdc"]
+    AssessLevel -->|"Level 3"| L3Archive["LEVEL 3 ARCHIVING<br>Level3/workflow-level3.mdc"]
+    AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.mdc"]
+
     %% Level 1 Archiving (Minimal)
     L1Archive --> L1Summary["Create Quick<br>Summary"]
     L1Summary --> L1Task["Update<br>tasks.md"]
     L1Task --> L1Complete["Mark Task<br>Complete"]
-    
+
     %% Level 2 Archiving (Basic)
     L2Archive --> L2Summary["Create Basic<br>Archive Document"]
     L2Summary --> L2Doc["Document<br>Changes"]
     L2Doc --> L2Task["Update<br>tasks.md"]
     L2Task --> L2Progress["Update<br>progress.md"]
     L2Progress --> L2Complete["Mark Task<br>Complete"]
-    
+
     %% Level 3-4 Archiving (Comprehensive)
     L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document"]
     L34Summary --> L34Doc["Document<br>Implementation"]
@@ -48,7 +47,7 @@ graph TD
     L34Task --> L34Progress["Update<br>progress.md"]
     L34Progress --> L34System["Update System<br>Documentation"]
     L34System --> L34Complete["Mark Task<br>Complete"]
-    
+
     %% Completion
     L1Complete & L2Complete & L34Complete --> CreateArchive["Create Archive<br>Document in<br>docs/archive/"]
     CreateArchive --> UpdateActive["Update<br>activeContext.md"]
@@ -71,7 +70,7 @@ graph TD
         Lessons["## LESSONS LEARNED<br>Key takeaways from the task"]
         Refs["## REFERENCES<br>Links to related documents"]
     end
-    
+
     Header --> Meta --> Summary --> Requirements --> Implementation --> Testing --> Lessons --> Refs
 ```
 
@@ -82,13 +81,13 @@ Before archiving can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>reflection<br>complete?"}
-    
+
     CheckTasks -->|"No"| ErrorReflect["ERROR:<br>Return to REFLECT Mode"]
     CheckTasks -->|"Yes"| CheckReflection{"reflection.md<br>exists?"}
-    
+
     CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create reflection.md first"]
     CheckReflection -->|"Yes"| CheckProgress{"progress.md<br>updated?"}
-    
+
     CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
     CheckProgress -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
 ```
@@ -102,14 +101,14 @@ graph TD
         L1B["Solution<br>Summary"]
         L1C["Affected<br>Files"]
     end
-    
+
     subgraph "Level 2: Basic Archive"
         L2A["Enhancement<br>Description"]
         L2B["Implementation<br>Summary"]
         L2C["Testing<br>Results"]
         L2D["Lessons<br>Learned"]
     end
-    
+
     subgraph "Level 3-4: Comprehensive Archive"
         L3A["Detailed<br>Requirements"]
         L3B["Architecture/<br>Design Decisions"]
@@ -119,11 +118,11 @@ graph TD
         L3F["Future<br>Enhancements"]
         L3G["Cross-References<br>to Other Systems"]
     end
-    
+
     L1A --> L1B --> L1C
-    
+
     L2A --> L2B --> L2C --> L2D
-    
+
     L3A --> L3B --> L3C --> L3D --> L3E --> L3F --> L3G
 ```
 
@@ -207,11 +206,11 @@ graph TD
         Tasks["tasks/"]
         Features["features/"]
         Systems["systems/"]
-        
+
         Root --> Tasks
         Root --> Features
         Root --> Systems
-        
+
         Tasks --> Bug["bug-fix-name-YYYYMMDD.md"]
         Tasks --> Enhancement["enhancement-name-YYYYMMDD.md"]
         Features --> Feature["feature-name-YYYYMMDD.md"]
@@ -269,4 +268,4 @@ When archiving is complete, notify user with:
 
 → Memory Bank is ready for the next task
 → To start a new task, use VAN MODE
-``` 
+```

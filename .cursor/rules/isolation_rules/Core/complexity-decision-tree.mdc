@@ -19,23 +19,23 @@ graph TD
     Q1b -->|No| Q1c{"Affects system<br>architecture?"}
     Q1c -->|Yes| L3["Level 3:<br>Intermediate Feature"]
     Q1c -->|No| L2
-    
+
     Q1 -->|No| Q2{"Adding small<br>feature or<br>enhancement?"}
     Q2 -->|Yes| Q2a{"Self-contained<br>change?"}
     Q2a -->|Yes| L2
     Q2a -->|No| Q2b{"Affects multiple<br>components?"}
     Q2b -->|Yes| L3
     Q2b -->|No| L2
-    
+
     Q2 -->|No| Q3{"Complete feature<br>requiring multiple<br>components?"}
     Q3 -->|Yes| Q3a{"Architectural<br>implications?"}
     Q3a -->|Yes| L4["Level 4:<br>Complex System"]
     Q3a -->|No| L3
-    
+
     Q3 -->|No| Q4{"System-wide or<br>architectural<br>change?"}
     Q4 -->|Yes| L4
     Q4 -->|No| L3
-    
+
     L1 --> LoadL1["Load Level 1 Map"]
     L2 --> LoadL2["Load Level 2 Map"]
     L3 --> LoadL3["Load Level 3 Map"]
@@ -159,10 +159,10 @@ After determining complexity, load the appropriate process map:
 
 | Level | Description | Process Map |
 |-------|-------------|-------------|
-| 1 | Quick Bug Fix | [Level 1 Map](mdc:.cursor/rules/visual-maps/level1-map.mdc) |
-| 2 | Simple Enhancement | [Level 2 Map](mdc:.cursor/rules/visual-maps/level2-map.mdc) |
-| 3 | Intermediate Feature | [Level 3 Map](mdc:.cursor/rules/visual-maps/level3-map.mdc) |
-| 4 | Complex System | [Level 4 Map](mdc:.cursor/rules/visual-maps/level4-map.mdc) |
+| 1 | Quick Bug Fix | [Level 1 Workflow](mdc:workflow-level1.mdc) |
+| 2 | Simple Enhancement | [Level 2 Workflow](mdc:workflow-level2.mdc) |
+| 3 | Intermediate Feature | [Level 3 Workflow](mdc:workflow-level3.mdc) |
+| 4 | Complex System | [Level 4 Workflow](mdc:workflow-level4.mdc) |
 
 ## 📝 COMPLEXITY DETERMINATION TEMPLATE
 

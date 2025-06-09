@@ -1,9 +1,8 @@
 ---
 description: Comprehensive reflection format for Level 4 Complex System tasks
-globs: "**/level4/**", "**/reflection/**"
+globs: "**/Level4/**", "**/reflection/**"
 alwaysApply: false
 ---
-
 # COMPREHENSIVE REFLECTION FOR LEVEL 4 TASKS
 
 > **TL;DR:** This document outlines a structured, comprehensive approach to reflection for Level 4 (Complex System) tasks, including system review, success and challenge analysis, strategic insights, and action planning.
@@ -17,7 +16,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Reflection<br>Process]) --> Template[Load Comprehensive<br>Reflection Template]
     Template --> SysReview[Conduct System<br>Review]
     SysReview --> ArchReview[Review Architecture<br>Decisions]
@@ -35,13 +34,13 @@ flowchart TD
     Verification -->|Pass| Complete([Reflection<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Reflection]
     Revise --> Verification
-    
+
     Template -.-> RT((Reflection<br>Template))
     SysReview -.-> SR((System<br>Review))
     SuccessAnalysis & ChallengeAnalysis -.-> SCD((Success/Challenge<br>Document))
     Technical & Process & Business -.-> Insights((Insight<br>Document))
     Strategic -.-> Actions((Strategic<br>Actions))
-    
+
     class Start,Complete milestone
     class Template,SysReview,ArchReview,ImplementReview,SuccessAnalysis,ChallengeAnalysis,Technical,Process,Business,Strategic,Timeline,Documentation,Integration step
     class Verification verification
@@ -406,7 +405,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Reflection<br>Preparation]) --> Template[Load Reflection<br>Template]
     Template --> Data[Gather Project<br>Data]
     Data --> Metrics[Collect Performance<br>Metrics]
@@ -415,12 +414,12 @@ flowchart TD
     Schedule --> Participants[Identify<br>Participants]
     Participants --> Agenda[Create Session<br>Agenda]
     Agenda --> Complete([Preparation<br>Complete])
-    
+
     Template -.-> TDoc((Reflection<br>Template))
     Data -.-> ProjData((Project<br>Data))
     Metrics -.-> MetricsDoc((Performance<br>Metrics))
     Feedback -.-> FeedbackDoc((Stakeholder<br>Feedback))
-    
+
     class Start,Complete milestone
     class Template,Data,Metrics,Feedback,Schedule,Participants,Agenda step
     class TDoc,ProjData,MetricsDoc,FeedbackDoc artifact
@@ -440,7 +439,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Reflection<br>Session]) --> Intro[Introduction and<br>Context Setting]
     Intro --> Project[Project Overview<br>Presentation]
     Project --> Success[Success<br>Identification]
@@ -451,12 +450,12 @@ flowchart TD
     Actions --> Documentation[Document<br>Outcomes]
     Documentation --> Next[Define Next<br>Steps]
     Next --> Complete([Session<br>Complete])
-    
+
     Success -.-> SuccessDoc((Success<br>Document))
     Challenge -.-> ChallengeDoc((Challenge<br>Document))
     Insights -.-> InsightDoc((Insight<br>Document))
     Actions -.-> ActionDoc((Action<br>Plan))
-    
+
     class Start,Complete milestone
     class Intro,Project,Success,Challenge,Root,Insights,Actions,Documentation,Next step
     class SuccessDoc,ChallengeDoc,InsightDoc,ActionDoc artifact
@@ -475,7 +474,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Documentation<br>and Integration]) --> Draft[Draft Reflection<br>Document]
     Draft --> Review[Review with<br>Key Stakeholders]
     Review --> Revise[Incorporate<br>Feedback]
@@ -487,11 +486,11 @@ flowchart TD
     Verification -->|Pass| Complete([Documentation<br>Complete])
     Verification -->|Fail| MoreRevision[Address<br>Documentation Gaps]
     MoreRevision --> Verification
-    
+
     Draft -.-> DraftDoc((Draft<br>Document))
     Finalize -.-> FinalDoc((Final<br>Reflection))
     ActionReg -.-> ActReg((Action<br>Register))
-    
+
     class Start,Complete milestone
     class Draft,Review,Revise,Finalize,UpdateMB,ActionReg,Archive,MoreRevision step
     class Verification verification
@@ -514,7 +513,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Identify<br>Challenge]) --> What[What<br>Happened?]
     What --> When[When Did<br>It Happen?]
     When --> Where[Where Did<br>It Happen?]
@@ -527,7 +526,7 @@ flowchart TD
     Why4 --> Why5[Why?<br>Root Cause]
     Why5 --> Solution[Identify<br>Solution]
     Solution --> Prevent[Prevention<br>Strategy]
-    
+
     class Start milestone
     class What,When,Where,Who,How,Why1,Why2,Why3,Why4,Why5,Solution,Prevent step
 ```
@@ -537,7 +536,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Identify<br>Success]) --> Define[Define the<br>Success]
     Define --> Impact[Measure the<br>Impact]
     Impact --> Factors[Identify Contributing<br>Factors]
@@ -545,7 +544,7 @@ flowchart TD
     Context --> Patterns[Identify<br>Patterns]
     Patterns --> Generalize[Generalize<br>Approach]
     Generalize --> Apply[Define Where<br>to Apply]
-    
+
     class Start milestone
     class Define,Impact,Factors,Context,Patterns,Generalize,Apply step
 ```
@@ -555,7 +554,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Begin Insight<br>Generation]) --> Observe[Observe<br>Patterns]
     Observe --> Question[Question<br>Assumptions]
     Question --> Connect[Connect<br>Dots]
@@ -564,7 +563,7 @@ flowchart TD
     Hypothesize --> Test[Test<br>Hypothesis]
     Test --> Refine[Refine<br>Insight]
     Refine --> Apply[Apply to<br>Future Work]
-    
+
     class Start milestone
     class Observe,Question,Connect,Contrast,Hypothesize,Test,Refine,Apply step
 ```
@@ -575,17 +574,17 @@ flowchart TD
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Reflection[Comprehensive<br>Reflection] --> PB[projectbrief.md]
     Reflection --> PC[productContext.md]
     Reflection --> AC[activeContext.md]
     Reflection --> SP[systemPatterns.md]
     Reflection --> TC[techContext.md]
     Reflection --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Enhanced Future<br>Projects]
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Reflection,MBI,Next process
 ```
@@ -716,4 +715,4 @@ For situations requiring a more compact reflection:
 │ tasks. Archiving CANNOT proceed until reflection     │
 │ is completed and verified.                           │
 └─────────────────────────────────────────────────────┘
-``` 
+```

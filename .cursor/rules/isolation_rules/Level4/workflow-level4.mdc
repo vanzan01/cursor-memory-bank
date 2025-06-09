@@ -1,6 +1,6 @@
 ---
 description: Comprehensive workflow for Level 4 Complex System tasks
-globs: "**/level4/**", "**/workflow/**"
+globs: "**/Level4/**", "**/workflow/**"
 alwaysApply: false
 ---
 # COMPREHENSIVE WORKFLOW FOR LEVEL 4 TASKS
@@ -17,7 +17,7 @@ graph LR
     Create --> Impl["5. PHASED<br>IMPLEMENTATION"]
     Impl --> Reflect["6. REFLECTION"]
     Reflect --> Archive["7. ARCHIVING"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["INITIALIZATION"]
     Doc -.-> DocDocs["DOCUMENTATION"]
@@ -33,14 +33,14 @@ graph LR
 ```mermaid
 graph TD
     L4["Level 4 Task"] --> Assess["Continuous<br>Assessment"]
-    
+
     Assess --> Down["Downgrade to<br>Level 2/3"]
     Assess --> Split["Split into<br>Multiple Tasks"]
-    
+
     Down --> L23Trigger["Triggers:<br>- Less complex<br>- Limited scope<br>- Few components"]
-    
+
     Split --> MultiTrigger["Triggers:<br>- Too large<br>- Independent parts<br>- Parallel possible"]
-    
+
     L23Trigger --> L23Switch["Switch to<br>Level 2/3 Workflow"]
     MultiTrigger --> CreateTasks["Create Multiple<br>Lower Level Tasks"]
 ```
@@ -402,7 +402,7 @@ graph TD
     Workflow --> TC["Complete Update<br>techContext.md"]
     Workflow --> TM["Structured Maintenance<br>tasks.md"]
     Workflow --> PM["Enterprise Update<br>progress.md"]
-    
+
     PB & AC & SP & TC & TM & PM --> MB["Memory Bank<br>Integration"]
     MB --> KT["Knowledge<br>Transfer"]
     KT --> NextSystem["Enterprise<br>System Evolution"]
@@ -421,4 +421,4 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that complex systems are designed, implemented, and documented to the highest standards, with enterprise-grade quality and governance. 
+This ensures that complex systems are designed, implemented, and documented to the highest standards, with enterprise-grade quality and governance.

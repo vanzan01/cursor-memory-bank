@@ -1,0 +1,489 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# BUN TESTING FRAMEWORK INTEGRATION
+
+This file implements comprehensive testing rules (Rules #8-16) using Bun as the testing framework.
+
+## CORE TESTING PRINCIPLES
+
+### Rule #8: Высокогранулированные тесты
+**Implementation**: Each function/method must have dedicated tests
+```bash
+# Execute high-granularity tests
+bun test --reporter=verbose --coverage
+```
+
+**Test Structure Requirements**:
+- Each function has its own test file or test suite
+- Individual behaviors tested separately
+- Different input scenarios covered comprehensively
+- Both happy path and error path testing
+
+**Example Test Structure**:
+```typescript
+// user.test.ts
+import { expect, test, describe } from "bun:test";
+import { User } from "../src/user";
+
+describe("User", () => {
+  describe("constructor", () => {
+    test("should create user with valid data", () => {
+      const user = new User("john", "john@example.com");
+      expect(user.name).toBe("john");
+      expect(user.email).toBe("john@example.com");
+    });
+
+    test("should throw error with invalid email", () => {
+      expect(() => new User("john", "invalid-email")).toThrow();
+    });
+  });
+
+  describe("updateEmail", () => {
+    test("should update email with valid format", () => {
+      const user = new User("john", "john@example.com");
+      user.updateEmail("newemail@example.com");
+      expect(user.email).toBe("newemail@example.com");
+    });
+
+    test("should reject invalid email format", () => {
+      const user = new User("john", "john@example.com");
+      expect(() => user.updateEmail("invalid")).toThrow();
+    });
+  });
+});
+```
+
+### Rule #9: Изоляция контекста между тестами
+**Implementation**: Complete test isolation with clean setup/teardown
+```bash
+# Clean cache between test runs
+bun test --clean-cache
+```
+
+**Isolation Requirements**:
+- No shared state between test cases
+- Independent test execution
+- Clean setup before each test
+- Proper teardown after each test
+
+**Example Isolation Pattern**:
+```typescript
+import { beforeEach, afterEach, test } from "bun:test";
+
+describe("Database operations", () => {
+  let db: Database;
+
+  beforeEach(async () => {
+    // Clean setup for each test
+    db = new Database();
+    await db.connect();
+    await db.clear(); // Ensure clean state
+  });
+
+  afterEach(async () => {
+    // Clean teardown after each test
+    await db.close();
+    db = null;
+  });
+
+  test("should insert user", async () => {
+    // Test runs in isolation
+    const user = await db.insertUser({ name: "test" });
+    expect(user.id).toBeDefined();
+  });
+
+  test("should find user", async () => {
+    // This test doesn't depend on previous test
+    await db.insertUser({ name: "test" });
+    const user = await db.findUser("test");
+    expect(user).toBeDefined();
+  });
+});
+```
+
+### Rule #10: Обязательное тестирование каждой фичи
+**Implementation**: No feature is complete without tests
+
+**Feature Testing Checklist**:
+- [ ] Unit tests for core functionality
+- [ ] Integration tests for feature interactions
+- [ ] End-to-end tests for user workflows
+- [ ] Error handling tests
+- [ ] Edge case tests
+
+**Example Feature Test Coverage**:
+```typescript
+// Feature: User Authentication
+describe("User Authentication Feature", () => {
+  // Unit tests
+  describe("Password validation", () => {
+    test("should accept strong password", () => {
+      expect(validatePassword("StrongP@ss123")).toBe(true);
+    });
+    
+    test("should reject weak password", () => {
+      expect(validatePassword("weak")).toBe(false);
+    });
+  });
+
+  // Integration tests
+  describe("Login flow", () => {
+    test("should authenticate valid user", async () => {
+      const result = await authenticateUser("user@example.com", "password");
+      expect(result.success).toBe(true);
+    });
+  });
+
+  // End-to-end tests
+  describe("Complete authentication workflow", () => {
+    test("should complete full login process", async () => {
+      // Test complete user journey
+    });
+  });
+});
+```
+
+### Rule #11: Проверка покрытия функционала
+**Implementation**: Continuous coverage monitoring
+```bash
+# Generate coverage reports
+bun test --coverage --coverage-reporter=text-summary
+bun test --coverage --coverage-reporter=html
+```
+
+**Coverage Targets**:
+- Critical paths: 95%+
+- Core functions: 90%+
+- Utility functions: 80%+
+- Edge cases: 70%+
+
+**Coverage Configuration**:
+```json
+{
+  "scripts": {
+    "test:coverage": "bun test --coverage",
+    "test:coverage:html": "bun test --coverage --coverage-reporter=html",
+    "test:coverage:check": "bun test --coverage --coverage-threshold=90"
+  }
+}
+```
+
+### Rule #12: Тестирование edge cases
+**Implementation**: Comprehensive boundary and error testing
+
+**Edge Case Categories**:
+- Boundary conditions (min/max values)
+- Null/undefined inputs
+- Empty collections
+- Network failures
+- Resource exhaustion
+
+**Example Edge Case Tests**:
+```typescript
+describe("Edge cases", () => {
+  test("should handle null input", () => {
+    expect(() => processData(null)).not.toThrow();
+  });
+
+  test("should handle empty array", () => {
+    const result = processArray([]);
+    expect(result).toEqual([]);
+  });
+
+  test("should handle maximum integer", () => {
+    const result = calculateValue(Number.MAX_SAFE_INTEGER);
+    expect(result).toBeDefined();
+  });
+
+  test("should handle network timeout", async () => {
+    // Mock network timeout
+    const mockFetch = jest.fn().mockRejectedValue(new Error("Timeout"));
+    const result = await fetchDataWithRetry();
+    expect(result).toBeNull();
+  });
+});
+```
+
+### Rule #13: Тестирование производительности
+**Implementation**: Performance benchmarks and regression testing
+```bash
+# Run performance tests with extended timeout
+bun test --timeout=30000 performance/*.test.ts
+```
+
+**Performance Test Structure**:
+```typescript
+import { test, expect } from "bun:test";
+
+describe("Performance tests", () => {
+  test("should process large dataset within time limit", async () => {
+    const largeDataset = generateLargeDataset(10000);
+    
+    const start = performance.now();
+    const result = await processLargeDataset(largeDataset);
+    const duration = performance.now() - start;
+    
+    expect(result).toBeDefined();
+    expect(duration).toBeLessThan(1000); // Should complete within 1 second
+  });
+
+  test("should handle concurrent requests efficiently", async () => {
+    const requests = Array(100).fill(0).map(() => makeRequest());
+    
+    const start = performance.now();
+    const results = await Promise.all(requests);
+    const duration = performance.now() - start;
+    
+    expect(results).toHaveLength(100);
+    expect(duration).toBeLessThan(5000); // Should complete within 5 seconds
+  });
+});
+```
+
+### Rule #14: Высокоточное измерение времени
+**Implementation**: Precise timing measurements for performance validation
+
+**Timing Pattern**:
+```typescript
+import { test, expect } from "bun:test";
+
+function measurePerformance<T>(operation: () => T): { result: T; duration: number } {
+  const start = performance.now();
+  const result = operation();
+  const duration = performance.now() - start;
+  return { result, duration };
+}
+
+test("should measure operation timing precisely", () => {
+  const { result, duration } = measurePerformance(() => {
+    // Operation to measure
+    return expensiveCalculation();
+  });
+  
+  expect(result).toBeDefined();
+  expect(duration).toBeGreaterThan(0);
+  console.log(`Operation took ${duration.toFixed(3)}ms`);
+});
+```
+
+### Rule #15: Устойчивая генерация ID
+**Implementation**: Cryptographically secure ID generation testing
+
+**ID Generation Tests**:
+```typescript
+import { test, expect } from "bun:test";
+import { generateSecureId, generateUUID } from "../src/utils/id";
+
+describe("ID Generation", () => {
+  test("should generate unique IDs", () => {
+    const ids = new Set();
+    for (let i = 0; i < 10000; i++) {
+      const id = generateSecureId();
+      expect(ids.has(id)).toBe(false);
+      ids.add(id);
+    }
+  });
+
+  test("should generate cryptographically secure IDs", () => {
+    const id = generateSecureId();
+    expect(id).toMatch(/^[a-f0-9]{32}$/); // 32 character hex string
+    expect(id.length).toBe(32);
+  });
+
+  test("should handle concurrent ID generation", async () => {
+    const promises = Array(1000).fill(0).map(() => 
+      Promise.resolve(generateSecureId())
+    );
+    
+    const ids = await Promise.all(promises);
+    const uniqueIds = new Set(ids);
+    
+    expect(uniqueIds.size).toBe(1000); // All IDs should be unique
+  });
+});
+```
+
+### Rule #16: Тестирование временных коллизий
+**Implementation**: Concurrency and race condition testing
+
+**Concurrency Test Patterns**:
+```typescript
+import { test, expect } from "bun:test";
+
+describe("Concurrency tests", () => {
+  test("should handle race conditions safely", async () => {
+    let counter = 0;
+    const increment = () => {
+      const current = counter;
+      // Simulate async operation
+      return new Promise(resolve => {
+        setTimeout(() => {
+          counter = current + 1;
+          resolve(counter);
+        }, Math.random() * 10);
+      });
+    };
+
+    // Start multiple concurrent operations
+    const promises = Array(100).fill(0).map(() => increment());
+    await Promise.all(promises);
+    
+    // With proper synchronization, counter should be 100
+    expect(counter).toBe(100);
+  });
+
+  test("should handle timeout scenarios", async () => {
+    const timeoutOperation = () => new Promise((resolve, reject) => {
+      setTimeout(() => reject(new Error("Timeout")), 1000);
+    });
+
+    await expect(timeoutOperation()).rejects.toThrow("Timeout");
+  });
+
+  test("should handle retry mechanisms", async () => {
+    let attempts = 0;
+    const unreliableOperation = () => {
+      attempts++;
+      if (attempts < 3) {
+        throw new Error("Temporary failure");
+      }
+      return "success";
+    };
+
+    const result = await retryOperation(unreliableOperation, 3);
+    expect(result).toBe("success");
+    expect(attempts).toBe(3);
+  });
+});
+```
+
+## BUN-SPECIFIC TESTING FEATURES
+
+### Built-in Test Runner
+```bash
+# Basic test execution
+bun test
+
+# Verbose output
+bun test --reporter=verbose
+
+# Watch mode
+bun test --watch
+
+# Specific test file
+bun test user.test.ts
+
+# Test pattern matching
+bun test --grep "user authentication"
+```
+
+### Built-in Mocking
+```typescript
+import { mock, spyOn } from "bun:test";
+
+test("should mock external dependencies", () => {
+  const mockFetch = mock(() => Promise.resolve({ json: () => ({ data: "test" }) }));
+  
+  // Use mock in test
+  const result = await fetchData();
+  expect(mockFetch).toHaveBeenCalled();
+});
+
+test("should spy on method calls", () => {
+  const spy = spyOn(console, "log");
+  
+  logMessage("test");
+  
+  expect(spy).toHaveBeenCalledWith("test");
+  spy.mockRestore();
+});
+```
+
+### Performance Testing with Bun
+```typescript
+import { bench, run } from "bun:test";
+
+bench("array iteration", () => {
+  const arr = Array(1000).fill(0);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = i * 2;
+  }
+});
+
+bench("array map", () => {
+  const arr = Array(1000).fill(0);
+  arr.map((_, i) => i * 2);
+});
+
+// Run benchmarks
+await run();
+```
+
+## INTEGRATION WITH MEMORY BANK
+
+### Test Execution Logging
+All test executions are logged to `memory-bank/development/test-reports.md`:
+- Test command executed
+- Results summary
+- Coverage metrics
+- Performance benchmarks
+- Failed test analysis
+
+### Progress Tracking Integration
+Test results update the rule compliance status in `memory-bank/progress.md`:
+- Rule #8-16 compliance status
+- Test coverage metrics
+- Performance benchmark status
+- Quality gate validation
+
+### Mode Integration
+- **IMPLEMENT Mode**: Automatic test execution after code changes
+- **QA Mode**: Comprehensive test suite validation
+- **REFLECT Mode**: Test results analysis and improvement recommendations
+
+## CONTINUOUS INTEGRATION
+
+### Pre-commit Testing
+```bash
+#!/bin/sh
+# .git/hooks/pre-commit
+bun test --coverage
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Commit aborted."
+  exit 1
+fi
+```
+
+### CI/CD Pipeline
+```yaml
+# .github/workflows/test.yml
+name: Test Suite
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: bun test --coverage
+      - run: bun test performance/*.test.ts
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+```
+
+## QUALITY GATES
+
+### Test Quality Checklist
+- [ ] All functions have unit tests
+- [ ] Integration tests cover component interactions
+- [ ] End-to-end tests cover user workflows
+- [ ] Edge cases are comprehensively tested
+- [ ] Performance benchmarks are met
+- [ ] Test coverage targets achieved
+- [ ] No flaky tests in the suite
+- [ ] Tests run in isolation
+- [ ] Concurrency scenarios tested

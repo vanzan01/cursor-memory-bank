@@ -1,6 +1,6 @@
 ---
 description: Basic workflow for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/workflow/**"
+globs: "**/Level2/**", "**/workflow/**"
 alwaysApply: false
 ---
 # WORKFLOW FOR LEVEL 2 TASKS
@@ -16,7 +16,7 @@ graph LR
     Plan --> Impl["4. IMPLEMENTATION"]
     Impl --> Reflect["5. REFLECTION"]
     Reflect --> Archive["6. ARCHIVING"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["INITIALIZATION"]
     Doc -.-> DocDocs["DOCUMENTATION"]
@@ -250,14 +250,14 @@ For minimal mode, use this streamlined workflow:
 ```mermaid
 graph TD
     L2["Level 2 Task"] --> Assess["Continuous<br>Assessment"]
-    
+
     Assess --> Down["Downgrade to<br>Level 1"]
     Assess --> Up["Upgrade to<br>Level 3/4"]
-    
+
     Down --> L1Trigger["Triggers:<br>- Simpler than expected<br>- Quick fix possible<br>- Single component"]
-    
+
     Up --> L34Trigger["Triggers:<br>- More complex<br>- Multiple components<br>- Design needed"]
-    
+
     L1Trigger --> L1Switch["Switch to<br>Level 1 Workflow"]
     L34Trigger --> L34Switch["Switch to<br>Level 3/4 Workflow"]
 ```
@@ -270,7 +270,7 @@ graph TD
     Workflow --> AC["Update<br>activeContext.md"]
     Workflow --> TM["Maintain<br>tasks.md"]
     Workflow --> PM["Update<br>progress.md"]
-    
+
     PB & AC & TM & PM --> MB["Memory Bank<br>Integration"]
     MB --> NextTask["Transition to<br>Next Task"]
 ```
@@ -286,4 +286,4 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that simple enhancements are implemented with the right level of documentation and process. 
+This ensures that simple enhancements are implemented with the right level of documentation and process.

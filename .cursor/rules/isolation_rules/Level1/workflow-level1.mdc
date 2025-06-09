@@ -1,6 +1,11 @@
 ---
 description: Streamlined workflow for Level 1 Quick Bug Fix tasks
-globs: "**/level1/**", "**/workflow/**"
+globs: "**/Level1/**", "**/workflow/**"
+alwaysApply: false
+---
+---
+description: Streamlined workflow for Level 1 Quick Bug Fix tasks
+globs: "**/Level1/**", "**/workflow/**"
 alwaysApply: false
 ---
 # STREAMLINED WORKFLOW FOR LEVEL 1 TASKS
@@ -13,7 +18,7 @@ alwaysApply: false
 graph LR
     Init["1. INITIALIZATION"] --> Impl["2. IMPLEMENTATION"]
     Impl --> Doc["3. DOCUMENTATION"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["Quick setup<br>Issue understanding"]
     Impl -.-> ImplDocs["Focused fix<br>Verify resolution"]
@@ -172,7 +177,7 @@ graph TD
     Workflow["Level 1<br>Workflow"] --> TM["Update<br>tasks.md"]
     Workflow --> AC["Minimal Update<br>activeContext.md"]
     Workflow --> PM["Brief Update<br>progress.md"]
-    
+
     TM & AC & PM --> MB["Memory Bank<br>Integration"]
     MB --> NextTask["Transition to<br>Next Task"]
 ```
@@ -187,4 +192,4 @@ Remember:
 │ Minimize process overhead while ensuring adequate   │
 │ documentation of the solution.                     │
 └─────────────────────────────────────────────────────┘
-``` 
+```

@@ -1,6 +1,6 @@
 ---
 description: Advanced task tracking for Level 4 Complex System tasks
-globs: "**/level4/**", "**/task-tracking/**"
+globs: "**/Level4/**", "**/task-tracking/**"
 alwaysApply: false
 ---
 
@@ -17,7 +17,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Task<br>Tracking]) --> Framework[Establish Task<br>Framework]
     Framework --> Hierarchy[Define Task<br>Hierarchy]
     Hierarchy --> Breakdown[Create Work<br>Breakdown Structure]
@@ -33,7 +33,7 @@ flowchart TD
     Verification -->|Pass| Complete([Task Tracking<br>Complete])
     Verification -->|Fail| Revise[Revise Task<br>Tracking]
     Revise --> Verification
-    
+
     Framework -.-> TF((Task<br>Framework))
     Hierarchy -.-> TH((Task<br>Hierarchy))
     Breakdown -.-> WBS((Work Breakdown<br>Structure))
@@ -45,7 +45,7 @@ flowchart TD
     Quality -.-> QM((Quality<br>Metrics))
     Progress -.-> PT((Progress<br>Tracking))
     Adaptations -.-> AD((Adaptation<br>Document))
-    
+
     class Start,Complete milestone
     class Framework,Hierarchy,Breakdown,Dependencies,Milestones,Schedule,Resources,Risks,Quality,Progress,Adaptations,Revise step
     class Verification verification
@@ -76,21 +76,21 @@ flowchart TD
     classDef feature fill:#c5e8b7,stroke:#a5c897,color:#000
     classDef task fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef subtask fill:#d8c1f7,stroke:#b8a1d7,color:#000
-    
+
     System[System-Level Work] --> Component1[Component 1]
     System --> Component2[Component 2]
     System --> Component3[Component 3]
-    
+
     Component1 --> Feature1[Feature 1.1]
     Component1 --> Feature2[Feature 1.2]
-    
+
     Feature1 --> Task1[Task 1.1.1]
     Feature1 --> Task2[Task 1.1.2]
-    
+
     Task1 --> Subtask1[Subtask 1.1.1.1]
     Task1 --> Subtask2[Subtask 1.1.1.2]
     Task1 --> Subtask3[Subtask 1.1.1.3]
-    
+
     class System system
     class Component1,Component2,Component3 component
     class Feature1,Feature2 feature
@@ -117,7 +117,7 @@ Each Level 4 task in `tasks.md` follows this comprehensive structure:
 - **Purpose**: [Brief description of system purpose]
 - **Architectural Alignment**: [How the system aligns with architectural principles]
 - **Status**: [Planning/In Progress/Review/Complete]
-- **Milestones**: 
+- **Milestones**:
   - Milestone 1: [Date] - [Status]
   - Milestone 2: [Date] - [Status]
   - Milestone 3: [Date] - [Status]
@@ -221,7 +221,7 @@ flowchart TD
     classDef high fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef medium fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef low fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Task1[Task 1] --> Task2[Task 2]
     Task1 --> Task3[Task 3]
     Task2 --> Task4[Task 4]
@@ -230,7 +230,7 @@ flowchart TD
     Task4 --> Task6[Task 6]
     Task5 --> Task7[Task 7]
     Task6 --> Task7
-    
+
     class Task1,Task4,Task7 critical
     class Task2,Task5 high
     class Task3 medium
@@ -305,16 +305,16 @@ graph TD
 gantt
     title System Timeline
     dateFormat  YYYY-MM-DD
-    
+
     section Architecture
     Architecture Design    :done, arch, 2023-01-01, 30d
     Architecture Review    :done, arch-rev, after arch, 10d
-    
+
     section Component 1
     Design                 :active, c1-des, after arch-rev, 20d
     Implementation         :c1-imp, after c1-des, 40d
     Testing                :c1-test, after c1-imp, 15d
-    
+
     section Component 2
     Design                 :active, c2-des, after arch-rev, 25d
     Implementation         :c2-imp, after c2-des, 50d
@@ -411,17 +411,17 @@ Level 4 task tracking is tightly integrated with the Memory Bank:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     TaskTracking[Advanced Task<br>Tracking] --> PB[projectbrief.md]
     TaskTracking --> PC[productContext.md]
     TaskTracking --> AC[activeContext.md]
     TaskTracking --> SP[systemPatterns.md]
     TaskTracking --> TC[techContext.md]
     TaskTracking --> P[progress.md]
-    
+
     P --> TU[Task<br>Updates]
     TU --> TaskTracking
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class TaskTracking,TU process
 ```
@@ -463,4 +463,4 @@ For situations requiring a more compact tracking approach:
 │ tracking. All task-related decisions and status      │
 │ updates MUST be reflected in tasks.md.               │
 └─────────────────────────────────────────────────────┘
-``` 
+```

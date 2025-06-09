@@ -1,9 +1,8 @@
 ---
 description: Quick documentation approach for Level 1 Quick Bug Fix tasks
-globs: "**/level1/**", "**/documentation/**"
+globs: "**/Level1/**", "**/documentation/**"
 alwaysApply: false
 ---
-
 # QUICK DOCUMENTATION FOR LEVEL 1 TASKS
 
 > **TL;DR:** This document outlines a quick documentation approach for Level 1 (Quick Bug Fix) tasks, ensuring that essential information is captured with minimal overhead.
@@ -203,10 +202,10 @@ Quick documentation integrates with other systems:
 graph TD
     QuickDoc["Quick Fix<br>Documentation"] --> TasksMD["tasks.md<br>Update"]
     QuickDoc --> FixDetails["Fix Details<br>Documentation"]
-    
+
     TasksMD --> Tracking["Task<br>Tracking"]
     FixDetails --> Knowledge["Knowledge<br>Preservation"]
-    
+
     Tracking & Knowledge --> Future["Future<br>Reference"]
 ```
 
