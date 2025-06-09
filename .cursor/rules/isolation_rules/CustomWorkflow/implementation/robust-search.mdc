@@ -1,0 +1,73 @@
+---
+description: "Robust search and discovery patterns for development"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# ROBUST SEARCH AND DISCOVERY
+
+> **TL;DR:** Use systematic search patterns to find code, dependencies, and solutions efficiently and reliably.
+
+## 🔍 SEARCH STRATEGY WORKFLOW
+
+```mermaid
+graph TD
+    Problem["Search Problem"] --> Scope["Define Search Scope"]
+    Scope --> Strategy["Choose Search Strategy"]
+    Strategy --> Execute["Execute Search"]
+    Execute --> Verify["Verify Results"]
+    Verify --> Document["Document Findings"]
+```
+
+## 📋 ROBUST SEARCH RULES
+
+### Rule #43: Multi-Pattern Search Approach
+- **When**: Looking for code patterns, dependencies, or solutions
+- **What**: Use multiple search patterns and tools
+- **Purpose**: Ensure comprehensive coverage and avoid missing critical items
+
+### Rule #44: Context-Aware Search
+- **When**: Searching in large codebases
+- **What**: Include surrounding context in search results
+- **Purpose**: Understand usage patterns and relationships
+
+## 🎯 SEARCH PATTERNS
+
+### Code Search:
+```bash
+# Function definitions
+grep -r "function.*searchTerm" src/
+grep -r "const.*searchTerm.*=" src/
+grep -r "class.*searchTerm" src/
+
+# Usage patterns
+grep -r "searchTerm(" src/
+grep -r "\.searchTerm" src/
+grep -r "import.*searchTerm" src/
+
+# With context
+grep -A 5 -B 5 "searchTerm" src/
+```
+
+### Dependency Search:
+```bash
+# Package dependencies
+grep -r "import.*package" src/
+grep -r "require.*package" src/
+grep -r "from.*package" src/
+
+# Internal dependencies
+find . -name "*.ts" -exec grep -l "import.*component" {} \;
+```
+
+### Configuration Search:
+```bash
+# Environment variables
+grep -r "process\.env" src/
+grep -r "ENV\." src/
+
+# Configuration files
+find . -name "*.config.*" -o -name "*.env*" -o -name "*.json"
+```
+
+This systematic approach ensures thorough and reliable search results.

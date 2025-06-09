@@ -1,0 +1,251 @@
+---
+description: "Rules for avoiding stubs and implementing complete functionality"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# STUB AVOIDANCE IN IMPLEMENTATION
+
+> **TL;DR:** Implement complete, functional code instead of stubs to maintain development momentum and avoid technical debt.
+
+## 🚫 STUB AVOIDANCE WORKFLOW
+
+```mermaid
+graph TD
+    Start["Implementation Task"] --> Analyze["Analyze Requirements"]
+    Analyze --> Simple{"Simple to<br>Implement?"}
+    Simple -->|Yes| FullImpl["Full Implementation"]
+    Simple -->|No| Break["Break Down Task"]
+
+    Break --> MVP["Implement MVP Version"]
+    MVP --> Test["Test MVP"]
+    Test --> Iterate["Iterate to Full"]
+    Iterate --> FullImpl
+
+    FullImpl --> Verify["Verify Complete"]
+    Verify --> Document["Document Implementation"]
+```
+
+## 📋 STUB AVOIDANCE RULES
+
+### Rule #2: ✅/❌ Implementation Tracking
+- **When**: Every implementation task
+- **What**: Track completion status with clear ✅/❌ indicators
+- **Purpose**: Avoid partial implementations and ensure completeness
+
+### Rule #41: No Placeholder Code in Production Paths
+- **When**: Any code that could reach production
+- **What**: Implement actual functionality, not TODO comments or throw statements
+- **Purpose**: Prevent runtime failures and maintain code quality
+
+### Rule #42: MVP-First Approach for Complex Features
+- **When**: Complex features that might tempt stub creation
+- **What**: Implement minimal viable version first, then enhance
+- **Purpose**: Maintain working code while building complexity
+
+## 🎯 IMPLEMENTATION STRATEGIES
+
+### Instead of Stubs, Use:
+
+#### 1. MVP Implementation:
+```typescript
+// Bad: Stub that will be forgotten
+function calculateTax(amount: number): number {
+  // TODO: Implement tax calculation
+  return 0;
+}
+
+// Good: MVP implementation
+function calculateTax(amount: number): number {
+  // Simple flat rate for MVP, can be enhanced later
+  const TAX_RATE = 0.1;
+  return amount * TAX_RATE;
+}
+```
+
+#### 2. Configuration-Driven Defaults:
+```typescript
+// Bad: Hardcoded stub
+function getApiEndpoint(): string {
+  return "http://localhost:3000"; // TODO: Make configurable
+}
+
+// Good: Configuration with sensible default
+function getApiEndpoint(): string {
+  return process.env.API_ENDPOINT || "http://localhost:3000";
+}
+```
+
+#### 3. Feature Flags for Incomplete Features:
+```typescript
+// Bad: Commented out incomplete feature
+function advancedAnalytics(data: any) {
+  // TODO: Implement advanced analytics
+  // return complexAnalysis(data);
+  return basicAnalysis(data);
+}
+
+// Good: Feature flag approach
+function advancedAnalytics(data: any) {
+  if (isFeatureEnabled('advanced-analytics')) {
+    return complexAnalysis(data);
+  }
+  return basicAnalysis(data);
+}
+```
+
+## 🔄 PROGRESSIVE IMPLEMENTATION APPROACH
+
+### Phase 1: Core Functionality
+- Implement the essential path that makes the feature work
+- Focus on the main use case
+- Ensure basic functionality is complete and tested
+
+### Phase 2: Edge Cases
+- Handle error conditions properly
+- Add input validation
+- Implement boundary condition handling
+
+### Phase 3: Optimization
+- Improve performance if needed
+- Add caching or other optimizations
+- Refactor for better maintainability
+
+### Phase 4: Enhancement
+- Add advanced features
+- Improve user experience
+- Add comprehensive logging and monitoring
+
+## 📊 IMPLEMENTATION COMPLETENESS CHECKLIST
+
+### Core Implementation:
+- [ ] Main functionality implemented and working
+- [ ] Basic error handling in place
+- [ ] Input validation implemented
+- [ ] Return values are correct and complete
+- [ ] No TODO comments in critical paths
+
+### Testing:
+- [ ] Unit tests cover main functionality
+- [ ] Edge cases are tested
+- [ ] Error conditions are tested
+- [ ] Integration tests pass
+- [ ] Manual testing completed
+
+### Documentation:
+- [ ] Function/method documentation complete
+- [ ] Usage examples provided
+- [ ] Known limitations documented
+- [ ] Future enhancement plans noted
+
+## 🚨 ANTI-PATTERNS TO AVOID
+
+### 1. TODO-Driven Development:
+```typescript
+// Bad: TODOs that never get done
+function processPayment(payment: Payment) {
+  // TODO: Add fraud detection
+  // TODO: Add retry logic
+  // TODO: Add logging
+  return { success: true };
+}
+```
+
+### 2. Exception-Based Stubs:
+```typescript
+// Bad: Throwing exceptions instead of implementing
+function generateReport(): Report {
+  throw new Error("Not implemented yet");
+}
+```
+
+### 3. Empty Implementation:
+```typescript
+// Bad: Silent failures
+function validateInput(input: string): boolean {
+  return true; // TODO: Add actual validation
+}
+```
+
+## 🎯 STUB REPLACEMENT STRATEGIES
+
+### When You Find Stubs:
+
+#### 1. Immediate Replacement (Preferred):
+- Stop current work
+- Implement the stubbed functionality
+- Test the implementation
+- Continue with original task
+
+#### 2. Tracked Replacement:
+- Create specific task for stub replacement
+- Add to current sprint/iteration
+- Set deadline for replacement
+- Monitor until completed
+
+#### 3. Architectural Replacement:
+- If stub indicates missing architecture
+- Design proper solution
+- Implement complete solution
+- Refactor dependent code
+
+## 📋 STUB DETECTION AND TRACKING
+
+### Code Review Checklist:
+- [ ] No TODO comments in production code
+- [ ] No throw new Error("Not implemented")
+- [ ] No empty function bodies
+- [ ] No hardcoded placeholder values
+- [ ] All conditional branches implemented
+
+### Automated Detection:
+```bash
+# Search for common stub patterns
+grep -r "TODO" src/
+grep -r "Not implemented" src/
+grep -r "throw new Error" src/
+grep -r "return null; //" src/
+```
+
+### Tracking Template:
+```markdown
+# Stub Replacement Task
+
+## Stub Location
+File: [file path]
+Function: [function name]
+Line: [line number]
+
+## Current Behavior
+[What the stub currently does]
+
+## Required Implementation
+[What needs to be implemented]
+
+## Acceptance Criteria
+- [ ] [Specific requirement 1]
+- [ ] [Specific requirement 2]
+- [ ] Tests added
+- [ ] Documentation updated
+
+## Priority: [High/Medium/Low]
+## Estimated Effort: [Time estimate]
+```
+
+## 🔍 IMPLEMENTATION VERIFICATION
+
+### Before Marking Complete:
+1. **Functionality Test**: Does it work as intended?
+2. **Edge Case Test**: Does it handle edge cases?
+3. **Error Test**: Does it handle errors gracefully?
+4. **Integration Test**: Does it work with other components?
+5. **Performance Test**: Is performance acceptable?
+
+### Completion Criteria:
+- ✅ All planned functionality implemented
+- ✅ All tests passing
+- ✅ No TODO comments in critical paths
+- ✅ Error handling implemented
+- ✅ Documentation complete
+
+This approach ensures robust, complete implementations that don't accumulate technical debt.

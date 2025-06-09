@@ -1,0 +1,91 @@
+---
+description: "Phased development approach for complex tasks"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PHASED DEVELOPMENT APPROACH
+
+> **TL;DR:** Break complex development tasks into manageable phases with clear deliverables and checkpoints.
+
+## 🔄 PHASED DEVELOPMENT WORKFLOW
+
+```mermaid
+graph TD
+    Start["Task Analysis"] --> Complexity{"Task Complexity"}
+    Complexity -->|"Simple"| SinglePhase["Single Phase"]
+    Complexity -->|"Complex"| MultiPhase["Multi-Phase"]
+
+    MultiPhase --> Phase1["Phase 1: Core"]
+    Phase1 --> Checkpoint1["Checkpoint 1"]
+    Checkpoint1 --> Phase2["Phase 2: Features"]
+    Phase2 --> Checkpoint2["Checkpoint 2"]
+    Checkpoint2 --> Phase3["Phase 3: Polish"]
+    Phase3 --> Complete["Complete"]
+
+    SinglePhase --> Complete
+```
+
+## 📋 PHASE PLANNING PRINCIPLES
+
+### Rule #1: Phased Approach for Complex Tasks
+- **When**: Tasks requiring >2 hours or affecting >3 components
+- **How**: Break into 3-5 phases with clear deliverables
+- **Why**: Reduces risk, enables early feedback, maintains momentum
+
+### Phase Structure:
+1. **Phase 1**: Core functionality (MVP)
+2. **Phase 2**: Extended features
+3. **Phase 3**: Integration & polish
+4. **Phase 4**: Testing & validation (if needed)
+5. **Phase 5**: Documentation & cleanup (if needed)
+
+## 🎯 PHASE DEFINITION TEMPLATE
+
+```
+## Phase [N]: [Name]
+**Goal**: [Clear objective]
+**Deliverables**:
+- [Specific output 1]
+- [Specific output 2]
+**Success Criteria**: [How to know it's done]
+**Time Estimate**: [Realistic estimate]
+**Dependencies**: [What must be done first]
+**Risks**: [Potential issues]
+```
+
+## 📊 CHECKPOINT VALIDATION
+
+At each phase checkpoint:
+- [ ] All deliverables completed
+- [ ] Success criteria met
+- [ ] No blocking issues
+- [ ] Ready for next phase
+- [ ] Documentation updated
+
+## 🚨 PHASE FAILURE HANDLING
+
+If a phase fails:
+1. **Analyze**: What went wrong?
+2. **Adjust**: Modify approach or scope
+3. **Restart**: Begin phase again with new plan
+4. **Escalate**: If multiple failures, reassess entire approach
+
+## 📋 PHASE TRACKING FORMAT
+
+```
+# Phase Progress
+
+## Phase 1: [Name] - [STATUS]
+- [x] Task 1
+- [x] Task 2
+- [ ] Task 3
+**Completion**: 67%
+
+## Phase 2: [Name] - [PLANNED]
+- [ ] Task 1
+- [ ] Task 2
+**Completion**: 0%
+```
+
+This approach ensures systematic progress while maintaining flexibility for adjustments.

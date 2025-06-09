@@ -1,0 +1,168 @@
+---
+description: "Progress documentation and tracking rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PROGRESS DOCUMENTATION RULES
+
+> **TL;DR:** Maintain clear, actionable progress documentation that enables quick context switching and collaboration.
+
+## 📊 PROGRESS TRACKING WORKFLOW
+
+```mermaid
+graph TD
+    Start["Begin Task"] --> InitDoc["Initialize Progress Doc"]
+    InitDoc --> Work["Work on Task"]
+    Work --> Update["Update Progress"]
+    Update --> Checkpoint{"Checkpoint?"}
+    Checkpoint -->|"Yes"| Review["Review & Summarize"]
+    Checkpoint -->|"No"| Work
+    Review --> Archive["Archive Completed"]
+    Archive --> Next["Next Task"]
+```
+
+## 📋 PROGRESS DOCUMENTATION RULES
+
+### Rule #24: Real-time Progress Updates
+- **When**: After each significant change or every 30 minutes
+- **What**: Current status, next steps, blockers
+- **Where**: `progress.md` or task-specific progress file
+- **Format**: Structured entries with timestamps
+
+### Rule #25: Checkpoint Summaries
+- **When**: At natural breakpoints (end of phase, day, major milestone)
+- **What**: What was accomplished, what's next, lessons learned
+- **Format**: Executive summary + detailed breakdown
+
+## 📝 PROGRESS ENTRY TEMPLATE
+
+```markdown
+## [TIMESTAMP] - [COMPONENT/FEATURE]
+
+### Status: [IN_PROGRESS/COMPLETED/BLOCKED/PAUSED]
+
+### Accomplished:
+- [Specific achievement 1]
+- [Specific achievement 2]
+
+### Current Focus:
+[What you're working on right now]
+
+### Next Steps:
+1. [Immediate next action]
+2. [Following action]
+
+### Blockers:
+- [Issue 1]: [Description and potential solution]
+
+### Notes:
+[Any important observations, decisions, or context]
+
+### Time Spent: [X hours/minutes]
+```
+
+## 🎯 CHECKPOINT SUMMARY TEMPLATE
+
+```markdown
+# Checkpoint Summary: [DATE/PHASE]
+
+## Overview
+**Period**: [Start] - [End]
+**Focus**: [Main objective]
+**Status**: [Overall status]
+
+## Key Accomplishments
+1. [Major achievement 1]
+2. [Major achievement 2]
+3. [Major achievement 3]
+
+## Metrics
+- **Time Spent**: [Total time]
+- **Components Completed**: [X/Y]
+- **Tests Passing**: [X/Y]
+- **Issues Resolved**: [X]
+
+## Challenges & Solutions
+- **Challenge**: [Description]
+  **Solution**: [How it was resolved]
+
+## Lessons Learned
+- [Key insight 1]
+- [Key insight 2]
+
+## Next Phase Plan
+**Objective**: [Next phase goal]
+**Priority Tasks**:
+1. [High priority task]
+2. [High priority task]
+
+**Estimated Time**: [Time estimate]
+```
+
+## 📊 PROGRESS METRICS
+
+Track these key metrics:
+- **Velocity**: Tasks completed per time unit
+- **Quality**: Tests passing, bugs found
+- **Efficiency**: Time spent vs. estimated
+- **Blockers**: Number and resolution time
+
+## 🔄 CONTEXT SWITCHING SUPPORT
+
+When switching contexts:
+1. **Save State**: Document exactly where you left off
+2. **Next Action**: Write the immediate next step
+3. **Context**: Note any important mental context
+4. **Restore**: Use documentation to quickly resume
+
+### Context Switch Template:
+```markdown
+## Context Switch: [TIMESTAMP]
+
+### Current State:
+[Exactly where you are in the task]
+
+### Immediate Next Action:
+[The very next thing to do when resuming]
+
+### Mental Context:
+[Important thoughts, approaches, or insights to remember]
+
+### Files Modified:
+- [file1.ext]: [what was changed]
+- [file2.ext]: [what was changed]
+
+### Resume Instructions:
+[Step-by-step instructions to get back into flow]
+```
+
+## 📋 DAILY PROGRESS SUMMARY
+
+End each day with:
+```markdown
+# Daily Summary: [DATE]
+
+## Today's Focus: [Main objective]
+
+## Completed:
+- [Achievement 1]
+- [Achievement 2]
+
+## In Progress:
+- [Task 1]: [Status and next step]
+
+## Tomorrow's Priority:
+1. [Top priority task]
+2. [Second priority task]
+
+## Blockers for Tomorrow:
+- [Blocker 1]: [Plan to resolve]
+
+## Time Breakdown:
+- [Component A]: [X hours]
+- [Component B]: [Y hours]
+- [Meetings/Admin]: [Z hours]
+```
+
+This documentation approach ensures continuity and enables effective collaboration.

@@ -1,0 +1,47 @@
+---
+description: "System coordination and integration patterns"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# SYSTEM COORDINATION
+
+> **TL;DR:** Coordinate system components effectively to ensure reliable integration and communication.
+
+## 🔄 COORDINATION WORKFLOW
+
+```mermaid
+graph TD
+    Start["System Change"] --> Identify["Identify Dependencies"]
+    Identify --> Plan["Plan Coordination"]
+    Plan --> Execute["Execute Changes"]
+    Execute --> Verify["Verify Integration"]
+```
+
+## 📋 COORDINATION RULES
+
+### Rule #45: Dependency-First Updates
+- **When**: Making system changes
+- **What**: Update dependencies before dependent components
+- **Purpose**: Maintain system consistency
+
+### Rule #46: Integration Point Verification
+- **When**: After any system change
+- **What**: Test all integration points
+- **Purpose**: Ensure system-wide functionality
+
+## 🎯 COORDINATION PATTERNS
+
+### Service Communication:
+- Use consistent API contracts
+- Implement proper error handling
+- Add timeout and retry logic
+- Monitor integration health
+
+### Data Consistency:
+- Coordinate database changes
+- Ensure transaction boundaries
+- Handle eventual consistency
+- Implement conflict resolution
+
+This ensures reliable system operation across all components.

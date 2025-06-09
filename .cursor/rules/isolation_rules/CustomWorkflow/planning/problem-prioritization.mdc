@@ -1,0 +1,182 @@
+---
+description: "Problem prioritization and triage rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PROBLEM PRIORITIZATION RULES
+
+> **TL;DR:** Systematic approach to prioritizing and triaging problems based on impact, urgency, and effort.
+
+## 🎯 PRIORITIZATION FRAMEWORK
+
+```mermaid
+graph TD
+    Problem["New Problem"] --> Assess["Assess Impact & Urgency"]
+    Assess --> Matrix["Priority Matrix"]
+    Matrix --> P1["P1: Critical"]
+    Matrix --> P2["P2: High"]
+    Matrix --> P3["P3: Medium"]
+    Matrix --> P4["P4: Low"]
+
+    P1 --> Immediate["Handle Immediately"]
+    P2 --> Schedule["Schedule Soon"]
+    P3 --> Backlog["Add to Backlog"]
+    P4 --> Defer["Defer or Reject"]
+```
+
+## 📋 PRIORITY CLASSIFICATION
+
+### Rule #3: Priority-Based Problem Handling
+
+#### P1 - Critical (Handle Immediately)
+- **Impact**: System down, data loss, security breach
+- **Urgency**: Immediate action required
+- **Examples**: Production outages, critical bugs, security vulnerabilities
+- **Response Time**: Within 1 hour
+- **Resource Allocation**: Drop everything else
+
+#### P2 - High (Schedule Soon)
+- **Impact**: Major feature broken, significant user impact
+- **Urgency**: Should be fixed within 24-48 hours
+- **Examples**: Major feature failures, performance degradation
+- **Response Time**: Within 4 hours
+- **Resource Allocation**: High priority in current sprint
+
+#### P3 - Medium (Add to Backlog)
+- **Impact**: Minor feature issues, usability problems
+- **Urgency**: Can wait for next sprint/release
+- **Examples**: UI glitches, minor bugs, enhancement requests
+- **Response Time**: Within 1 week
+- **Resource Allocation**: Normal backlog prioritization
+
+#### P4 - Low (Defer or Reject)
+- **Impact**: Nice-to-have improvements, edge cases
+- **Urgency**: No immediate timeline
+- **Examples**: Code cleanup, minor optimizations, future features
+- **Response Time**: When time permits
+- **Resource Allocation**: Fill-in work or reject
+
+## 🔍 IMPACT ASSESSMENT CRITERIA
+
+### Technical Impact:
+- **System Stability**: Does it affect system reliability?
+- **Performance**: Does it impact system performance?
+- **Security**: Are there security implications?
+- **Data Integrity**: Could it cause data corruption?
+
+### Business Impact:
+- **User Experience**: How many users are affected?
+- **Revenue**: Does it impact business revenue?
+- **Reputation**: Could it damage company reputation?
+- **Compliance**: Are there regulatory implications?
+
+### Development Impact:
+- **Blocking**: Does it block other development work?
+- **Technical Debt**: Does it increase technical debt?
+- **Maintainability**: Does it affect code maintainability?
+
+## ⏰ URGENCY ASSESSMENT
+
+### Time Sensitivity:
+- **Immediate**: Must be fixed now
+- **Same Day**: Must be fixed today
+- **This Week**: Should be fixed this week
+- **Next Sprint**: Can wait for next sprint
+- **Future**: No specific timeline
+
+### Escalation Triggers:
+- Customer complaints increasing
+- Multiple users reporting same issue
+- Issue spreading to other systems
+- Regulatory deadline approaching
+
+## 📊 PRIORITIZATION MATRIX
+
+| Impact/Urgency | High Urgency | Medium Urgency | Low Urgency |
+|----------------|--------------|----------------|-------------|
+| **High Impact** | P1 Critical | P2 High | P2 High |
+| **Medium Impact** | P2 High | P3 Medium | P3 Medium |
+| **Low Impact** | P3 Medium | P4 Low | P4 Low |
+
+## 🎯 TRIAGE PROCESS
+
+### Step 1: Initial Assessment (5 minutes)
+- [ ] Understand the problem
+- [ ] Assess immediate impact
+- [ ] Determine if it's truly urgent
+- [ ] Check for workarounds
+
+### Step 2: Classification (2 minutes)
+- [ ] Assign priority level (P1-P4)
+- [ ] Estimate effort required
+- [ ] Identify required skills/resources
+- [ ] Set expected resolution time
+
+### Step 3: Resource Allocation
+- [ ] Assign to appropriate team member
+- [ ] Allocate necessary resources
+- [ ] Communicate to stakeholders
+- [ ] Update tracking systems
+
+## 📋 PROBLEM TRACKING TEMPLATE
+
+```markdown
+# Problem: [Brief Description]
+
+## Classification
+- **Priority**: P[1-4]
+- **Impact**: [High/Medium/Low]
+- **Urgency**: [High/Medium/Low]
+- **Effort**: [Small/Medium/Large]
+
+## Details
+- **Reporter**: [Name]
+- **Date Reported**: [Date]
+- **Affected Systems**: [List]
+- **User Impact**: [Description]
+
+## Assessment
+- **Root Cause**: [If known]
+- **Workaround**: [If available]
+- **Dependencies**: [List]
+- **Risks**: [Potential risks]
+
+## Resolution Plan
+- **Assigned To**: [Name]
+- **Target Resolution**: [Date/Time]
+- **Approach**: [High-level plan]
+- **Resources Needed**: [List]
+
+## Status Updates
+- [Date]: [Status update]
+```
+
+## 🚨 ESCALATION RULES
+
+### Automatic Escalation:
+- P1 issues not acknowledged within 30 minutes
+- P2 issues not started within 4 hours
+- Any issue that increases in scope or impact
+- Issues that reveal systemic problems
+
+### Escalation Process:
+1. **Notify**: Alert next level of management
+2. **Reassess**: Re-evaluate priority and resources
+3. **Reallocate**: Assign additional resources if needed
+4. **Communicate**: Update all stakeholders
+
+## 📊 PRIORITY REVIEW PROCESS
+
+### Daily Review (P1-P2):
+- Review all critical and high priority issues
+- Assess progress and blockers
+- Reallocate resources if needed
+
+### Weekly Review (All Priorities):
+- Review entire backlog
+- Reprioritize based on new information
+- Archive resolved issues
+- Update stakeholders
+
+This systematic approach ensures critical issues get immediate attention while maintaining overall development velocity.

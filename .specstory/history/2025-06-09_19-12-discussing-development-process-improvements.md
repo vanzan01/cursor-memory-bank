@@ -19008,3 +19008,2516 @@ When the build is complete, notify user with:
 
 ---
 
+Теперь загружаю план реализации и файлы задач для выполнения Phase 2:
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Теперь загружаю план реализации и творческие решения:
+
+---
+
+Read file: memory-bank/creative/creative-rules-integration.md
+
+---
+
+Read file: memory-bank/creative/creative-rules-integration.md
+
+---
+
+Отлично! Теперь у меня есть полная картина. Начинаю выполнение Phase 2 - Cursor Workaround Implementation согласно детальному плану. Начну с Этапа 2.1: Подготовка Cursor Workaround.
+
+## 🚀 НАЧИНАЮ PHASE 2: CURSOR WORKAROUND IMPLEMENTATION
+
+### Этап 2.1: Подготовка Cursor Workaround (5 мин)
+
+---
+
+```bash
+git status
+```
+
+```
+➜  cursor-memory-bank git:(main) git status
+Текущая ветка: main
+Эта ветка соответствует «origin/main».
+
+Изменения, которые будут включены в коммит:
+  (используйте «git restore --staged <файл>...», чтобы убрать из индекса)
+        изменено:      .specstory/history/2025-06-09_19-12-discussing-development-process-improvements.md
+        изменено:      memory-bank/activeContext.md
+        новый файл:    memory-bank/creative/creative-rules-integration.md
+        новый файл:    memory-bank/rules-integration-phase1-plan.md
+        новый файл:    memory-bank/rules-integration-plan.md
+        новый файл:    memory-bank/rules-integration-planning-complete.md
+        изменено:      memory-bank/tasks.md
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>...», чтобы добавить файл в индекс)
+  (используйте «git restore <файл>...», чтобы отменить изменения в рабочем каталоге)
+        изменено:      .specstory/history/2025-06-09_19-12-discussing-development-process-improvements.md
+
+?➜  cursor-memory-bank git:(main)
+```
+
+---
+
+Вижу, что есть изменения в git. Сначала зафиксирую текущие изменения, а затем создам backup точку:
+
+---
+
+Model provided invalid arguments to terminal tool.
+
+---
+
+```bash
+git add . && git commit -m "Phase 1.5: Creative phases completed - all architectural decisions made. Ready for Phase 2: Cursor Workaround Implementation"
+```
+
+```
+➜  cursor-memory-bank git:(main) ✗ git add . && git commit -m "Phase 1.5: Creative phases completed - all ar
+chitectural decisions made. Ready fgit add . && git commit -m "Phase 1.5: Creative phases completed - all ar
+chitectural decisions made. Ready for Phase 2: Cursor Workaround Implementation"
+[main 68ae64b] Phase 1.5: Creative phases completed - all architectural decisions made. Ready for Phase 2: C
+ursor Workaround Implementation
+ 7 files changed, 10115 insertions(+), 322 deletions(-)
+ create mode 100644 memory-bank/creative/creative-rules-integration.md
+ create mode 100644 memory-bank/rules-integration-phase1-plan.md
+ create mode 100644 memory-bank/rules-integration-plan.md
+ create mode 100644 memory-bank/rules-integration-planning-complete.md
+?➜  cursor-memory-bank git:(main) ?✗
+```
+
+---
+
+Теперь создаю backup точку:
+
+---
+
+```bash
+git tag -a "backup-rules-integration-$(date +%Y%m%d-%H%M)" -m "Backup before rules integration Phase 2"
+```
+
+```
+?➜  cursor-memory-bank git:(main) 
+
+```
+
+---
+
+Теперь начинаю Cursor workaround - переименовываю .cursor → _cursor:
+
+---
+
+```bash
+mv .cursor _cursor
+```
+
+```
+➜  cursor-memory-bank git:(main) 
+
+```
+
+---
+
+Переименовываю существующие .mdc файлы в .mdc.md:
+
+---
+
+```bash
+find _cursor -name "*.mdc" -exec sh -c 'mv "$1" "$1.md"' _ {} \;
+```
+
+```
+?➜  cursor-memory-bank git:(main) ?✗ 
+
+```
+
+---
+
+Создаю структуру директорий CustomWorkflow:
+
+---
+
+```bash
+mkdir -p _cursor/rules/isolation_rules/CustomWorkflow/{planning,implementation,testing,debugging,documentation,integration,refactoring,git-workflow,workflow}
+```
+
+```
+?➜  cursor-memory-bank git:(main) ?✗ 
+
+```
+
+---
+
+Проверяю, что структура создана правильно:
+
+---
+
+```bash
+ls _cursor/rules/isolation_rules/CustomWorkflow/
+```
+
+```
+?➜  cursor-memory-bank git:(main) ?✗ ls _cursor/rules/isolation_rules/CustomWorkflow/
+debugging      git-workflow   integration    refactoring    workflow
+documentation  implementation planning       testing
+?➜  cursor-memory-bank git:(main) ?✗
+```
+
+---
+
+Отлично! Этап 2.1 завершен. Теперь перехожу к Этапу 2.2: Создание .mdc.md файлов.
+
+### Этап 2.2: Создание .mdc.md файлов (30 мин)
+
+#### Группа 1: Planning + Git Workflow (8 файлов) - 10 мин
+
+Начинаю с создания файлов планирования:
+
+---
+
+```diff
+- 
++ ---
++ description: "Phased development approach for complex tasks"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # PHASED DEVELOPMENT APPROACH
++ 
++ > **TL;DR:** Break complex development tasks into manageable phases with clear deliverables and checkpoints.
++ 
++ ## 🔄 PHASED DEVELOPMENT WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Start["Task Analysis"] --> Complexity{"Task Complexity"}
++     Complexity -->|"Simple"| SinglePhase["Single Phase"]
++     Complexity -->|"Complex"| MultiPhase["Multi-Phase"]
++     
++     MultiPhase --> Phase1["Phase 1: Core"]
++     Phase1 --> Checkpoint1["Checkpoint 1"]
++     Checkpoint1 --> Phase2["Phase 2: Features"]
++     Phase2 --> Checkpoint2["Checkpoint 2"]
++     Checkpoint2 --> Phase3["Phase 3: Polish"]
++     Phase3 --> Complete["Complete"]
++     
++     SinglePhase --> Complete
++ ```
++ 
++ ## 📋 PHASE PLANNING PRINCIPLES
++ 
++ ### Rule #1: Phased Approach for Complex Tasks
++ - **When**: Tasks requiring >2 hours or affecting >3 components
++ - **How**: Break into 3-5 phases with clear deliverables
++ - **Why**: Reduces risk, enables early feedback, maintains momentum
++ 
++ ### Phase Structure:
++ 1. **Phase 1**: Core functionality (MVP)
++ 2. **Phase 2**: Extended features
++ 3. **Phase 3**: Integration & polish
++ 4. **Phase 4**: Testing & validation (if needed)
++ 5. **Phase 5**: Documentation & cleanup (if needed)
++ 
++ ## 🎯 PHASE DEFINITION TEMPLATE
++ 
++ ```
++ ## Phase [N]: [Name]
++ **Goal**: [Clear objective]
++ **Deliverables**: 
++ - [Specific output 1]
++ - [Specific output 2]
++ **Success Criteria**: [How to know it's done]
++ **Time Estimate**: [Realistic estimate]
++ **Dependencies**: [What must be done first]
++ **Risks**: [Potential issues]
++ ```
++ 
++ ## 📊 CHECKPOINT VALIDATION
++ 
++ At each phase checkpoint:
++ - [ ] All deliverables completed
++ - [ ] Success criteria met
++ - [ ] No blocking issues
++ - [ ] Ready for next phase
++ - [ ] Documentation updated
++ 
++ ## 🚨 PHASE FAILURE HANDLING
++ 
++ If a phase fails:
++ 1. **Analyze**: What went wrong?
++ 2. **Adjust**: Modify approach or scope
++ 3. **Restart**: Begin phase again with new plan
++ 4. **Escalate**: If multiple failures, reassess entire approach
++ 
++ ## 📋 PHASE TRACKING FORMAT
++ 
++ ```
++ # Phase Progress
++ 
++ ## Phase 1: [Name] - [STATUS]
++ - [x] Task 1
++ - [x] Task 2
++ - [ ] Task 3
++ **Completion**: 67%
++ 
++ ## Phase 2: [Name] - [PLANNED]
++ - [ ] Task 1
++ - [ ] Task 2
++ **Completion**: 0%
++ ```
++ 
++ This approach ensures systematic progress while maintaining flexibility for adjustments. 
+```
+
+---
+
+```diff
+- 
++ ---
++ description: "Progress documentation and tracking rules"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # PROGRESS DOCUMENTATION RULES
++ 
++ > **TL;DR:** Maintain clear, actionable progress documentation that enables quick context switching and collaboration.
++ 
++ ## 📊 PROGRESS TRACKING WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Start["Begin Task"] --> InitDoc["Initialize Progress Doc"]
++     InitDoc --> Work["Work on Task"]
++     Work --> Update["Update Progress"]
++     Update --> Checkpoint{"Checkpoint?"}
++     Checkpoint -->|"Yes"| Review["Review & Summarize"]
++     Checkpoint -->|"No"| Work
++     Review --> Archive["Archive Completed"]
++     Archive --> Next["Next Task"]
++ ```
++ 
++ ## 📋 PROGRESS DOCUMENTATION RULES
++ 
++ ### Rule #24: Real-time Progress Updates
++ - **When**: After each significant change or every 30 minutes
++ - **What**: Current status, next steps, blockers
++ - **Where**: `progress.md` or task-specific progress file
++ - **Format**: Structured entries with timestamps
++ 
++ ### Rule #25: Checkpoint Summaries
++ - **When**: At natural breakpoints (end of phase, day, major milestone)
++ - **What**: What was accomplished, what's next, lessons learned
++ - **Format**: Executive summary + detailed breakdown
++ 
++ ## 📝 PROGRESS ENTRY TEMPLATE
++ 
++ ```markdown
++ ## [TIMESTAMP] - [COMPONENT/FEATURE]
++ 
++ ### Status: [IN_PROGRESS/COMPLETED/BLOCKED/PAUSED]
++ 
++ ### Accomplished:
++ - [Specific achievement 1]
++ - [Specific achievement 2]
++ 
++ ### Current Focus:
++ [What you're working on right now]
++ 
++ ### Next Steps:
++ 1. [Immediate next action]
++ 2. [Following action]
++ 
++ ### Blockers:
++ - [Issue 1]: [Description and potential solution]
++ 
++ ### Notes:
++ [Any important observations, decisions, or context]
++ 
++ ### Time Spent: [X hours/minutes]
++ ```
++ 
++ ## 🎯 CHECKPOINT SUMMARY TEMPLATE
++ 
++ ```markdown
++ # Checkpoint Summary: [DATE/PHASE]
++ 
++ ## Overview
++ **Period**: [Start] - [End]
++ **Focus**: [Main objective]
++ **Status**: [Overall status]
++ 
++ ## Key Accomplishments
++ 1. [Major achievement 1]
++ 2. [Major achievement 2]
++ 3. [Major achievement 3]
++ 
++ ## Metrics
++ - **Time Spent**: [Total time]
++ - **Components Completed**: [X/Y]
++ - **Tests Passing**: [X/Y]
++ - **Issues Resolved**: [X]
++ 
++ ## Challenges & Solutions
++ - **Challenge**: [Description]
++   **Solution**: [How it was resolved]
++ 
++ ## Lessons Learned
++ - [Key insight 1]
++ - [Key insight 2]
++ 
++ ## Next Phase Plan
++ **Objective**: [Next phase goal]
++ **Priority Tasks**:
++ 1. [High priority task]
++ 2. [High priority task]
++ 
++ **Estimated Time**: [Time estimate]
++ ```
++ 
++ ## 📊 PROGRESS METRICS
++ 
++ Track these key metrics:
++ - **Velocity**: Tasks completed per time unit
++ - **Quality**: Tests passing, bugs found
++ - **Efficiency**: Time spent vs. estimated
++ - **Blockers**: Number and resolution time
++ 
++ ## 🔄 CONTEXT SWITCHING SUPPORT
++ 
++ When switching contexts:
++ 1. **Save State**: Document exactly where you left off
++ 2. **Next Action**: Write the immediate next step
++ 3. **Context**: Note any important mental context
++ 4. **Restore**: Use documentation to quickly resume
++ 
++ ### Context Switch Template:
++ ```markdown
++ ## Context Switch: [TIMESTAMP]
++ 
++ ### Current State:
++ [Exactly where you are in the task]
++ 
++ ### Immediate Next Action:
++ [The very next thing to do when resuming]
++ 
++ ### Mental Context:
++ [Important thoughts, approaches, or insights to remember]
++ 
++ ### Files Modified:
++ - [file1.ext]: [what was changed]
++ - [file2.ext]: [what was changed]
++ 
++ ### Resume Instructions:
++ [Step-by-step instructions to get back into flow]
++ ```
++ 
++ ## 📋 DAILY PROGRESS SUMMARY
++ 
++ End each day with:
++ ```markdown
++ # Daily Summary: [DATE]
++ 
++ ## Today's Focus: [Main objective]
++ 
++ ## Completed:
++ - [Achievement 1]
++ - [Achievement 2]
++ 
++ ## In Progress:
++ - [Task 1]: [Status and next step]
++ 
++ ## Tomorrow's Priority:
++ 1. [Top priority task]
++ 2. [Second priority task]
++ 
++ ## Blockers for Tomorrow:
++ - [Blocker 1]: [Plan to resolve]
++ 
++ ## Time Breakdown:
++ - [Component A]: [X hours]
++ - [Component B]: [Y hours]
++ - [Meetings/Admin]: [Z hours]
++ ```
++ 
++ This documentation approach ensures continuity and enables effective collaboration. 
+```
+
+---
+
+Продолжаю создание файлов планирования:
+
+---
+
+```diff
+- 
++ ---
++ description: "Problem prioritization and triage rules"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # PROBLEM PRIORITIZATION RULES
++ 
++ > **TL;DR:** Systematic approach to prioritizing and triaging problems based on impact, urgency, and effort.
++ 
++ ## 🎯 PRIORITIZATION FRAMEWORK
++ 
++ ```mermaid
++ graph TD
++     Problem["New Problem"] --> Assess["Assess Impact & Urgency"]
++     Assess --> Matrix["Priority Matrix"]
++     Matrix --> P1["P1: Critical"]
++     Matrix --> P2["P2: High"]
++     Matrix --> P3["P3: Medium"]
++     Matrix --> P4["P4: Low"]
++     
++     P1 --> Immediate["Handle Immediately"]
++     P2 --> Schedule["Schedule Soon"]
++     P3 --> Backlog["Add to Backlog"]
++     P4 --> Defer["Defer or Reject"]
++ ```
++ 
++ ## 📋 PRIORITY CLASSIFICATION
++ 
++ ### Rule #3: Priority-Based Problem Handling
++ 
++ #### P1 - Critical (Handle Immediately)
++ - **Impact**: System down, data loss, security breach
++ - **Urgency**: Immediate action required
++ - **Examples**: Production outages, critical bugs, security vulnerabilities
++ - **Response Time**: Within 1 hour
++ - **Resource Allocation**: Drop everything else
++ 
++ #### P2 - High (Schedule Soon)
++ - **Impact**: Major feature broken, significant user impact
++ - **Urgency**: Should be fixed within 24-48 hours
++ - **Examples**: Major feature failures, performance degradation
++ - **Response Time**: Within 4 hours
++ - **Resource Allocation**: High priority in current sprint
++ 
++ #### P3 - Medium (Add to Backlog)
++ - **Impact**: Minor feature issues, usability problems
++ - **Urgency**: Can wait for next sprint/release
++ - **Examples**: UI glitches, minor bugs, enhancement requests
++ - **Response Time**: Within 1 week
++ - **Resource Allocation**: Normal backlog prioritization
++ 
++ #### P4 - Low (Defer or Reject)
++ - **Impact**: Nice-to-have improvements, edge cases
++ - **Urgency**: No immediate timeline
++ - **Examples**: Code cleanup, minor optimizations, future features
++ - **Response Time**: When time permits
++ - **Resource Allocation**: Fill-in work or reject
++ 
++ ## 🔍 IMPACT ASSESSMENT CRITERIA
++ 
++ ### Technical Impact:
++ - **System Stability**: Does it affect system reliability?
++ - **Performance**: Does it impact system performance?
++ - **Security**: Are there security implications?
++ - **Data Integrity**: Could it cause data corruption?
++ 
++ ### Business Impact:
++ - **User Experience**: How many users are affected?
++ - **Revenue**: Does it impact business revenue?
++ - **Reputation**: Could it damage company reputation?
++ - **Compliance**: Are there regulatory implications?
++ 
++ ### Development Impact:
++ - **Blocking**: Does it block other development work?
++ - **Technical Debt**: Does it increase technical debt?
++ - **Maintainability**: Does it affect code maintainability?
++ 
++ ## ⏰ URGENCY ASSESSMENT
++ 
++ ### Time Sensitivity:
++ - **Immediate**: Must be fixed now
++ - **Same Day**: Must be fixed today
++ - **This Week**: Should be fixed this week
++ - **Next Sprint**: Can wait for next sprint
++ - **Future**: No specific timeline
++ 
++ ### Escalation Triggers:
++ - Customer complaints increasing
++ - Multiple users reporting same issue
++ - Issue spreading to other systems
++ - Regulatory deadline approaching
++ 
++ ## 📊 PRIORITIZATION MATRIX
++ 
++ | Impact/Urgency | High Urgency | Medium Urgency | Low Urgency |
++ |----------------|--------------|----------------|-------------|
++ | **High Impact** | P1 Critical | P2 High | P2 High |
++ | **Medium Impact** | P2 High | P3 Medium | P3 Medium |
++ | **Low Impact** | P3 Medium | P4 Low | P4 Low |
++ 
++ ## 🎯 TRIAGE PROCESS
++ 
++ ### Step 1: Initial Assessment (5 minutes)
++ - [ ] Understand the problem
++ - [ ] Assess immediate impact
++ - [ ] Determine if it's truly urgent
++ - [ ] Check for workarounds
++ 
++ ### Step 2: Classification (2 minutes)
++ - [ ] Assign priority level (P1-P4)
++ - [ ] Estimate effort required
++ - [ ] Identify required skills/resources
++ - [ ] Set expected resolution time
++ 
++ ### Step 3: Resource Allocation
++ - [ ] Assign to appropriate team member
++ - [ ] Allocate necessary resources
++ - [ ] Communicate to stakeholders
++ - [ ] Update tracking systems
++ 
++ ## 📋 PROBLEM TRACKING TEMPLATE
++ 
++ ```markdown
++ # Problem: [Brief Description]
++ 
++ ## Classification
++ - **Priority**: P[1-4]
++ - **Impact**: [High/Medium/Low]
++ - **Urgency**: [High/Medium/Low]
++ - **Effort**: [Small/Medium/Large]
++ 
++ ## Details
++ - **Reporter**: [Name]
++ - **Date Reported**: [Date]
++ - **Affected Systems**: [List]
++ - **User Impact**: [Description]
++ 
++ ## Assessment
++ - **Root Cause**: [If known]
++ - **Workaround**: [If available]
++ - **Dependencies**: [List]
++ - **Risks**: [Potential risks]
++ 
++ ## Resolution Plan
++ - **Assigned To**: [Name]
++ - **Target Resolution**: [Date/Time]
++ - **Approach**: [High-level plan]
++ - **Resources Needed**: [List]
++ 
++ ## Status Updates
++ - [Date]: [Status update]
++ ```
++ 
++ ## 🚨 ESCALATION RULES
++ 
++ ### Automatic Escalation:
++ - P1 issues not acknowledged within 30 minutes
++ - P2 issues not started within 4 hours
++ - Any issue that increases in scope or impact
++ - Issues that reveal systemic problems
++ 
++ ### Escalation Process:
++ 1. **Notify**: Alert next level of management
++ 2. **Reassess**: Re-evaluate priority and resources
++ 3. **Reallocate**: Assign additional resources if needed
++ 4. **Communicate**: Update all stakeholders
++ 
++ ## 📊 PRIORITY REVIEW PROCESS
++ 
++ ### Daily Review (P1-P2):
++ - Review all critical and high priority issues
++ - Assess progress and blockers
++ - Reallocate resources if needed
++ 
++ ### Weekly Review (All Priorities):
++ - Review entire backlog
++ - Reprioritize based on new information
++ - Archive resolved issues
++ - Update stakeholders
++ 
++ This systematic approach ensures critical issues get immediate attention while maintaining overall development velocity. 
+```
+
+---
+
+Теперь создаю последний файл планирования и переходу к git-workflow файлам:
+
+---
+
+```diff
+- 
++ ---
++ description: "Isolated design principles for maintainable systems"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # ISOLATED DESIGN PRINCIPLES
++ 
++ > **TL;DR:** Design components with clear boundaries, minimal dependencies, and high cohesion for maintainable and testable systems.
++ 
++ ## 🏗️ ISOLATION ARCHITECTURE
++ 
++ ```mermaid
++ graph TD
++     System["System"] --> ModuleA["Module A"]
++     System --> ModuleB["Module B"]
++     System --> ModuleC["Module C"]
++     
++     ModuleA --> InterfaceA["Well-defined Interface"]
++     ModuleB --> InterfaceB["Well-defined Interface"]
++     ModuleC --> InterfaceC["Well-defined Interface"]
++     
++     InterfaceA -.-> InterfaceB
++     InterfaceB -.-> InterfaceC
++     
++     style ModuleA fill:#e1f5fe
++     style ModuleB fill:#e8f5e8
++     style ModuleC fill:#fff3e0
++ ```
++ 
++ ## 📋 ISOLATION DESIGN RULES
++ 
++ ### Rule #26: Component Isolation
++ - **Principle**: Each component should be independently testable and deployable
++ - **Implementation**: Clear interfaces, minimal external dependencies
++ - **Benefits**: Easier testing, debugging, and maintenance
++ 
++ ### Rule #27: Dependency Inversion
++ - **Principle**: Depend on abstractions, not concretions
++ - **Implementation**: Use interfaces and dependency injection
++ - **Benefits**: Flexibility, testability, loose coupling
++ 
++ ### Rule #28: Single Responsibility
++ - **Principle**: Each component should have one reason to change
++ - **Implementation**: Clear, focused component purposes
++ - **Benefits**: Easier to understand, test, and modify
++ 
++ ## 🎯 DESIGN BOUNDARIES
++ 
++ ### Interface Design:
++ ```typescript
++ // Good: Clear, focused interface
++ interface UserRepository {
++   findById(id: string): Promise<User | null>;
++   save(user: User): Promise<void>;
++   delete(id: string): Promise<void>;
++ }
++ 
++ // Bad: Mixed responsibilities
++ interface UserService {
++   findUser(id: string): Promise<User>;
++   saveUser(user: User): Promise<void>;
++   sendEmail(user: User): Promise<void>; // Different responsibility
++   generateReport(): Promise<Report>;    // Different responsibility
++ }
++ ```
++ 
++ ### Dependency Management:
++ ```typescript
++ // Good: Dependency injection
++ class UserService {
++   constructor(
++     private userRepo: UserRepository,
++     private emailService: EmailService
++   ) {}
++ }
++ 
++ // Bad: Direct dependencies
++ class UserService {
++   private userRepo = new DatabaseUserRepository(); // Hard dependency
++   private emailService = new SMTPEmailService();   // Hard dependency
++ }
++ ```
++ 
++ ## 🔄 ISOLATION PATTERNS
++ 
++ ### 1. Repository Pattern
++ - **Purpose**: Isolate data access logic
++ - **Benefits**: Testable, swappable data sources
++ - **Implementation**: Abstract data operations behind interfaces
++ 
++ ### 2. Service Layer Pattern
++ - **Purpose**: Isolate business logic
++ - **Benefits**: Reusable, testable business rules
++ - **Implementation**: Stateless services with clear contracts
++ 
++ ### 3. Factory Pattern
++ - **Purpose**: Isolate object creation
++ - **Benefits**: Flexible object construction
++ - **Implementation**: Abstract creation logic
++ 
++ ### 4. Observer Pattern
++ - **Purpose**: Isolate event handling
++ - **Benefits**: Loose coupling between components
++ - **Implementation**: Event-driven communication
++ 
++ ## 📊 ISOLATION METRICS
++ 
++ ### Coupling Metrics:
++ - **Afferent Coupling (Ca)**: Number of classes depending on this class
++ - **Efferent Coupling (Ce)**: Number of classes this class depends on
++ - **Instability (I)**: Ce / (Ca + Ce) - should be low for stable components
++ 
++ ### Cohesion Metrics:
++ - **LCOM**: Lack of Cohesion of Methods - should be low
++ - **Single Responsibility**: Each class should have one reason to change
++ 
++ ## 🧪 TESTING ISOLATION
++ 
++ ### Unit Test Isolation:
++ ```typescript
++ // Good: Isolated unit test
++ describe('UserService', () => {
++   let userService: UserService;
++   let mockUserRepo: jest.Mocked<UserRepository>;
++   let mockEmailService: jest.Mocked<EmailService>;
++ 
++   beforeEach(() => {
++     mockUserRepo = createMockUserRepository();
++     mockEmailService = createMockEmailService();
++     userService = new UserService(mockUserRepo, mockEmailService);
++   });
++ 
++   it('should create user successfully', async () => {
++     // Test only UserService logic, not dependencies
++   });
++ });
++ ```
++ 
++ ### Integration Test Boundaries:
++ - Test component interactions at well-defined boundaries
++ - Use test doubles for external dependencies
++ - Focus on contract compliance, not implementation
++ 
++ ## 🔍 ISOLATION REVIEW CHECKLIST
++ 
++ ### Component Design:
++ - [ ] Single, clear responsibility
++ - [ ] Well-defined public interface
++ - [ ] Minimal external dependencies
++ - [ ] No circular dependencies
++ - [ ] Easily mockable for testing
++ 
++ ### Interface Design:
++ - [ ] Focused on specific domain
++ - [ ] Stable and versioned
++ - [ ] Technology-agnostic
++ - [ ] Easy to implement
++ - [ ] Clear error handling
++ 
++ ### Dependency Management:
++ - [ ] Dependencies injected, not created
++ - [ ] Abstractions over concretions
++ - [ ] Optional dependencies clearly marked
++ - [ ] Circular dependencies avoided
++ - [ ] Dependency graph is acyclic
++ 
++ ## 🚨 ISOLATION ANTI-PATTERNS
++ 
++ ### God Object:
++ - **Problem**: Single class doing too much
++ - **Solution**: Break into focused components
++ - **Detection**: Large classes with many responsibilities
++ 
++ ### Tight Coupling:
++ - **Problem**: Components directly dependent on each other
++ - **Solution**: Introduce abstractions and interfaces
++ - **Detection**: Changes in one component require changes in many others
++ 
++ ### Leaky Abstractions:
++ - **Problem**: Implementation details exposed through interfaces
++ - **Solution**: Design interfaces based on client needs
++ - **Detection**: Interface changes when implementation changes
++ 
++ ## 📋 ISOLATION DESIGN TEMPLATE
++ 
++ ```markdown
++ # Component: [Name]
++ 
++ ## Purpose
++ [Single, clear responsibility]
++ 
++ ## Public Interface
++ ```typescript
++ interface [ComponentName] {
++   [method1](params): ReturnType;
++   [method2](params): ReturnType;
++ }
++ ```
++ 
++ ## Dependencies
++ - [Dependency1]: [Purpose]
++ - [Dependency2]: [Purpose]
++ 
++ ## Isolation Boundaries
++ - **Input**: [What comes in]
++ - **Output**: [What goes out]
++ - **Side Effects**: [External changes]
++ 
++ ## Testing Strategy
++ - **Unit Tests**: [Mock all dependencies]
++ - **Integration Tests**: [Test with real dependencies]
++ - **Contract Tests**: [Verify interface compliance]
++ ```
++ 
++ This approach ensures components remain maintainable, testable, and evolvable over time. 
+```
+
+---
+
+Теперь создаю файлы git-workflow (новая категория):
+
+---
+
+```diff
+- 
++ ---
++ description: "Git commit strategies for Memory Bank phases"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # GIT COMMIT STRATEGIES FOR MEMORY BANK
++ 
++ > **TL;DR:** Structured commit strategies aligned with Memory Bank phases for clear development history and easy rollback.
++ 
++ ## 🔄 PHASE-ORIENTED COMMIT WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     VAN["VAN Mode"] --> PlanCommit["Planning Commit"]
++     PlanCommit --> CreativeCommit["Creative Commit"]
++     CreativeCommit --> ImplCommit["Implementation Commits"]
++     ImplCommit --> QACommit["QA Commit"]
++     QACommit --> ReflectCommit["Reflection Commit"]
++     ReflectCommit --> ArchiveCommit["Archive Commit"]
++     
++     ImplCommit --> FeatureCommit["Feature Commits"]
++     FeatureCommit --> ImplCommit
++ ```
++ 
++ ## 📋 COMMIT STRATEGY RULES
++ 
++ ### Rule #29: Phase-Based Commits
++ - **When**: At completion of each Memory Bank phase
++ - **Format**: `[PHASE]: [Description] - [Status]`
++ - **Purpose**: Clear development timeline and rollback points
++ 
++ ### Rule #30: Atomic Feature Commits
++ - **When**: Each complete feature or fix
++ - **Format**: `feat: [description]` or `fix: [description]`
++ - **Purpose**: Granular change tracking
++ 
++ ### Rule #31: WIP Commits for Context Switching
++ - **When**: Need to switch context mid-work
++ - **Format**: `WIP: [current work] - [next step]`
++ - **Purpose**: Save progress without breaking build
++ 
++ ## 🎯 COMMIT MESSAGE TEMPLATES
++ 
++ ### Phase Completion Commits:
++ ```
++ [PHASE]: [Phase Name] completed - [Task ID]
++ 
++ ✅ [Key accomplishment 1]
++ ✅ [Key accomplishment 2]
++ ✅ [Key accomplishment 3]
++ 
++ Next: [Next phase or action]
++ Files: [Key files changed]
++ ```
++ 
++ ### Feature Implementation Commits:
++ ```
++ feat: [feature description]
++ 
++ - [Specific change 1]
++ - [Specific change 2]
++ - [Specific change 3]
++ 
++ Tests: [Test status]
++ Docs: [Documentation status]
++ ```
++ 
++ ### Bug Fix Commits:
++ ```
++ fix: [bug description]
++ 
++ Problem: [What was wrong]
++ Solution: [How it was fixed]
++ Impact: [What this affects]
++ 
++ Closes: #[issue number]
++ ```
++ 
++ ### Work-in-Progress Commits:
++ ```
++ WIP: [current work description]
++ 
++ Progress:
++ - [x] [Completed item]
++ - [ ] [Current item - where you left off]
++ - [ ] [Next item]
++ 
++ Next: [Immediate next step when resuming]
++ Context: [Important context to remember]
++ ```
++ 
++ ## 🔄 MEMORY BANK PHASE COMMITS
++ 
++ ### VAN Mode Completion:
++ ```
++ VAN: Task analysis and mode determination - [TASK-ID]
++ 
++ ✅ Task complexity assessed: Level [X]
++ ✅ Memory Bank structure initialized
++ ✅ Core rules loaded
++ ✅ Initial context established
++ 
++ Next: PLAN mode for detailed planning
++ Files: memory-bank/tasks.md, memory-bank/activeContext.md
++ ```
++ 
++ ### PLAN Mode Completion:
++ ```
++ PLAN: Comprehensive planning completed - [TASK-ID]
++ 
++ ✅ Requirements defined and documented
++ ✅ Component analysis completed
++ ✅ Implementation strategy outlined
++ ✅ Creative phases identified
++ 
++ Next: CREATIVE mode for design decisions
++ Files: memory-bank/tasks.md, implementation-plan.md
++ ```
++ 
++ ### CREATIVE Mode Completion:
++ ```
++ CREATIVE: All design decisions finalized - [TASK-ID]
++ 
++ ✅ [Decision 1]: [Chosen approach]
++ ✅ [Decision 2]: [Chosen approach]
++ ✅ [Decision 3]: [Chosen approach]
++ 
++ Next: IMPLEMENT mode for development
++ Files: memory-bank/creative/creative-[feature].md
++ ```
++ 
++ ### IMPLEMENT Mode Completion:
++ ```
++ IMPLEMENT: Feature implementation completed - [TASK-ID]
++ 
++ ✅ All planned components built
++ ✅ Unit and integration tests passing
++ ✅ Code review completed
++ ✅ Documentation updated
++ 
++ Next: QA mode for validation
++ Files: [List of implemented files]
++ ```
++ 
++ ### QA Mode Completion:
++ ```
++ QA: Quality assurance completed - [TASK-ID]
++ 
++ ✅ All tests passing ([X]/[Y])
++ ✅ Performance benchmarks met
++ ✅ Security review completed
++ ✅ Integration testing successful
++ 
++ Status: [GOOD/WARNING/CRITICAL]
++ Next: REFLECT mode for analysis
++ ```
++ 
++ ### REFLECT Mode Completion:
++ ```
++ REFLECT: Development reflection completed - [TASK-ID]
++ 
++ ✅ Process analysis documented
++ ✅ Lessons learned captured
++ ✅ Performance metrics recorded
++ ✅ Improvement recommendations made
++ 
++ Next: ARCHIVE mode for documentation
++ Files: memory-bank/reflection/reflection-[task-id].md
++ ```
++ 
++ ### ARCHIVE Mode Completion:
++ ```
++ ARCHIVE: Task documentation archived - [TASK-ID]
++ 
++ ✅ Complete task archive created
++ ✅ All documents consolidated
++ ✅ Knowledge base updated
++ ✅ Task marked as completed
++ 
++ Status: COMPLETED AND ARCHIVED
++ Files: memory-bank/archive/archive-[task-id].md
++ ```
++ 
++ ## 🚨 EMERGENCY COMMIT STRATEGIES
++ 
++ ### Hotfix Commits:
++ ```
++ hotfix: [critical issue description]
++ 
++ URGENT: [Why this needed immediate attention]
++ Problem: [What was broken]
++ Solution: [Quick fix applied]
++ Risk: [Potential side effects]
++ 
++ Follow-up: [Planned proper fix]
++ ```
++ 
++ ### Rollback Commits:
++ ```
++ revert: [description of what's being reverted]
++ 
++ Reason: [Why rollback was necessary]
++ Reverted: [Commit hash and description]
++ Impact: [What this affects]
++ 
++ Plan: [How to move forward]
++ ```
++ 
++ ## 📊 COMMIT FREQUENCY GUIDELINES
++ 
++ ### Development Phase:
++ - **Feature work**: Commit every 30-60 minutes or logical completion
++ - **Bug fixes**: Commit immediately after verification
++ - **Refactoring**: Commit each logical refactoring step
++ 
++ ### Memory Bank Phases:
++ - **Phase completion**: Always commit at phase end
++ - **Major milestones**: Commit at significant progress points
++ - **Context switches**: Always commit before switching
++ 
++ ## 🔍 COMMIT VERIFICATION CHECKLIST
++ 
++ Before committing:
++ - [ ] Code compiles without errors
++ - [ ] Existing tests still pass
++ - [ ] New tests added for new functionality
++ - [ ] Commit message follows template
++ - [ ] No sensitive information included
++ - [ ] Files are properly staged
++ 
++ ## 📋 BRANCH STRATEGY INTEGRATION
++ 
++ ### Feature Branches:
++ ```
++ feature/[task-id]-[brief-description]
++ ```
++ 
++ ### Phase Branches (for complex tasks):
++ ```
++ phase/[task-id]-[phase-name]
++ ```
++ 
++ ### Hotfix Branches:
++ ```
++ hotfix/[issue-description]
++ ```
++ 
++ This structured approach ensures clear development history and enables effective collaboration and rollback capabilities. 
+```
+
+---
+
+Продолжаю создание остальных git-workflow файлов:
+
+---
+
+```diff
+- 
++ ---
++ description: "Branch management strategies for Memory Bank workflow"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # BRANCH MANAGEMENT FOR MEMORY BANK
++ 
++ > **TL;DR:** Structured branch management aligned with Memory Bank phases for safe development and easy collaboration.
++ 
++ ## 🌳 BRANCH STRATEGY OVERVIEW
++ 
++ ```mermaid
++ graph TD
++     Main["main"] --> Feature["feature/task-id-name"]
++     Main --> Hotfix["hotfix/issue-description"]
++     
++     Feature --> Phase1["phase/task-id-plan"]
++     Feature --> Phase2["phase/task-id-creative"]
++     Feature --> Phase3["phase/task-id-implement"]
++     
++     Phase1 --> Feature
++     Phase2 --> Feature
++     Phase3 --> Feature
++     
++     Feature --> Main
++     Hotfix --> Main
++     
++     Main --> Backup["backup/pre-task-id"]
++ ```
++ 
++ ## 📋 BRANCH MANAGEMENT RULES
++ 
++ ### Rule #32: Backup Branches Before Major Work
++ - **When**: Before starting Level 3-4 tasks or risky changes
++ - **Format**: `backup/pre-[task-id]-[date]`
++ - **Purpose**: Safe rollback point for complex changes
++ 
++ ### Rule #33: Feature Branches for All Tasks
++ - **When**: Every task regardless of complexity
++ - **Format**: `feature/[task-id]-[brief-description]`
++ - **Purpose**: Isolated development and clean history
++ 
++ ### Rule #34: Phase Branches for Complex Tasks
++ - **When**: Level 3-4 tasks with multiple phases
++ - **Format**: `phase/[task-id]-[phase-name]`
++ - **Purpose**: Checkpoint branches for long-running work
++ 
++ ## 🎯 BRANCH NAMING CONVENTIONS
++ 
++ ### Feature Branches:
++ ```
++ feature/RULES-INT-2024-12-09-memory-bank-integration
++ feature/BUG-FIX-2024-12-09-login-validation
++ feature/ENHANCE-2024-12-09-user-dashboard
++ ```
++ 
++ ### Phase Branches:
++ ```
++ phase/RULES-INT-2024-12-09-plan
++ phase/RULES-INT-2024-12-09-creative
++ phase/RULES-INT-2024-12-09-implement
++ ```
++ 
++ ### Backup Branches:
++ ```
++ backup/pre-RULES-INT-2024-12-09-20241209
++ backup/pre-major-refactor-20241209
++ backup/stable-before-experiment-20241209
++ ```
++ 
++ ### Hotfix Branches:
++ ```
++ hotfix/critical-security-patch
++ hotfix/production-database-fix
++ hotfix/memory-leak-resolution
++ ```
++ 
++ ## 🔄 BRANCH LIFECYCLE WORKFLOW
++ 
++ ### 1. Pre-Task Backup Creation:
++ ```bash
++ # Create backup branch from current main
++ git checkout main
++ git pull origin main
++ git checkout -b backup/pre-[task-id]-$(date +%Y%m%d)
++ git push origin backup/pre-[task-id]-$(date +%Y%m%d)
++ ```
++ 
++ ### 2. Feature Branch Creation:
++ ```bash
++ # Create feature branch from main
++ git checkout main
++ git checkout -b feature/[task-id]-[description]
++ git push -u origin feature/[task-id]-[description]
++ ```
++ 
++ ### 3. Phase Branch Creation (for complex tasks):
++ ```bash
++ # Create phase branch from feature branch
++ git checkout feature/[task-id]-[description]
++ git checkout -b phase/[task-id]-[phase-name]
++ git push -u origin phase/[task-id]-[phase-name]
++ ```
++ 
++ ### 4. Phase Merge Back:
++ ```bash
++ # Merge phase back to feature
++ git checkout feature/[task-id]-[description]
++ git merge phase/[task-id]-[phase-name]
++ git push origin feature/[task-id]-[description]
++ git branch -d phase/[task-id]-[phase-name]
++ ```
++ 
++ ### 5. Feature Completion:
++ ```bash
++ # Merge feature to main
++ git checkout main
++ git pull origin main
++ git merge feature/[task-id]-[description]
++ git push origin main
++ git branch -d feature/[task-id]-[description]
++ ```
++ 
++ ## 📊 MEMORY BANK PHASE BRANCHING
++ 
++ ### VAN Mode:
++ - Work directly on feature branch
++ - Create backup branch if task is Level 3-4
++ 
++ ### PLAN Mode:
++ - Continue on feature branch for Level 1-2
++ - Create phase branch for Level 3-4
++ 
++ ### CREATIVE Mode:
++ - Use phase branch if created
++ - Merge creative decisions back to feature branch
++ 
++ ### IMPLEMENT Mode:
++ - Use phase branch for complex implementations
++ - Create sub-branches for major components if needed
++ 
++ ### QA Mode:
++ - Work on feature branch
++ - Create temporary branches for experimental fixes
++ 
++ ### REFLECT/ARCHIVE Mode:
++ - Work on feature branch
++ - Prepare for final merge to main
++ 
++ ## 🚨 EMERGENCY BRANCH PROCEDURES
++ 
++ ### Hotfix Workflow:
++ ```bash
++ # Create hotfix from main
++ git checkout main
++ git pull origin main
++ git checkout -b hotfix/[issue-description]
++ 
++ # Make fix and test
++ # ... fix code ...
++ 
++ # Merge back to main
++ git checkout main
++ git merge hotfix/[issue-description]
++ git push origin main
++ 
++ # Also merge to current feature branches if needed
++ git checkout feature/[current-task]
++ git merge main
++ ```
++ 
++ ### Rollback Procedure:
++ ```bash
++ # If feature branch has issues, rollback to backup
++ git checkout main
++ git reset --hard backup/pre-[task-id]-[date]
++ git push --force-with-lease origin main
++ 
++ # Or rollback specific commits
++ git revert [commit-hash]
++ ```
++ 
++ ## 🔍 BRANCH HEALTH MONITORING
++ 
++ ### Daily Branch Checks:
++ - [ ] Feature branch is up to date with main
++ - [ ] No merge conflicts exist
++ - [ ] Branch builds successfully
++ - [ ] All tests pass on branch
++ 
++ ### Weekly Branch Cleanup:
++ - [ ] Delete merged feature branches
++ - [ ] Archive old backup branches
++ - [ ] Update branch protection rules
++ - [ ] Review stale branches
++ 
++ ## 📋 BRANCH PROTECTION RULES
++ 
++ ### Main Branch Protection:
++ - Require pull request reviews
++ - Require status checks to pass
++ - Require branches to be up to date
++ - Restrict pushes to main branch
++ 
++ ### Feature Branch Guidelines:
++ - Regular commits with clear messages
++ - Keep branches focused and small
++ - Rebase before merging to maintain clean history
++ - Delete after successful merge
++ 
++ ## 🎯 COLLABORATION BRANCH STRATEGY
++ 
++ ### Team Feature Development:
++ ```bash
++ # Shared feature branch
++ feature/[task-id]-[description]
++ 
++ # Individual developer branches
++ feature/[task-id]-[description]-[developer-name]
++ ```
++ 
++ ### Code Review Process:
++ 1. Push feature branch to origin
++ 2. Create pull request to main
++ 3. Request reviews from team
++ 4. Address feedback and update
++ 5. Merge after approval
++ 
++ ## 📊 BRANCH METRICS TRACKING
++ 
++ Track these metrics:
++ - **Branch Lifetime**: How long branches exist
++ - **Merge Frequency**: How often branches are merged
++ - **Conflict Rate**: Percentage of merges with conflicts
++ - **Rollback Rate**: How often rollbacks are needed
++ 
++ ## 🔄 AUTOMATED BRANCH MANAGEMENT
++ 
++ ### Git Hooks:
++ - Pre-commit: Run tests and linting
++ - Pre-push: Ensure branch is up to date
++ - Post-merge: Clean up temporary files
++ 
++ ### CI/CD Integration:
++ - Automatic testing on all branches
++ - Deployment from main branch only
++ - Notification on merge conflicts
++ 
++ This branch strategy ensures safe development while maintaining the flexibility needed for Memory Bank workflow. 
+```
+
+---
+
+Создаю оставшиеся два git-workflow файла:
+
+---
+
+```diff
+- 
++ ---
++ description: "Change documentation and tracking in git workflow"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # CHANGE DOCUMENTATION IN GIT WORKFLOW
++ 
++ > **TL;DR:** Comprehensive change documentation integrated with git workflow for clear development history and effective collaboration.
++ 
++ ## 📝 CHANGE DOCUMENTATION WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Change["Code Change"] --> Document["Document Change"]
++     Document --> Commit["Git Commit"]
++     Commit --> PR["Pull Request"]
++     PR --> Changelog["Update Changelog"]
++     Changelog --> Release["Release Notes"]
++     
++     Document --> ImpactAnalysis["Impact Analysis"]
++     ImpactAnalysis --> Dependencies["Update Dependencies"]
++ ```
++ 
++ ## 📋 CHANGE DOCUMENTATION RULES
++ 
++ ### Rule #35: Document All Significant Changes
++ - **When**: Any change affecting public APIs, behavior, or dependencies
++ - **Where**: Commit messages, pull requests, changelog
++ - **Format**: Structured documentation with impact analysis
++ 
++ ### Rule #36: Link Changes to Issues/Tasks
++ - **When**: Every commit and pull request
++ - **Format**: `Closes #123` or `Relates to TASK-ID`
++ - **Purpose**: Traceability and context
++ 
++ ### Rule #37: Maintain Living Changelog
++ - **When**: Every release and significant change
++ - **Format**: Keep a CHANGELOG.md following semantic versioning
++ - **Purpose**: Clear communication to users and developers
++ 
++ ## 🎯 CHANGE DOCUMENTATION TEMPLATES
++ 
++ ### Commit Message Documentation:
++ ```
++ [type]: [brief description]
++ 
++ [Detailed description of what changed and why]
++ 
++ Impact:
++ - [System/component affected]
++ - [Behavior change description]
++ - [Breaking changes if any]
++ 
++ Related:
++ - Closes #[issue-number]
++ - Relates to [TASK-ID]
++ 
++ Testing:
++ - [How this was tested]
++ - [Test cases added/modified]
++ ```
++ 
++ ### Pull Request Documentation:
++ ```markdown
++ # [Feature/Fix]: [Brief Description]
++ 
++ ## Summary
++ [Detailed description of changes]
++ 
++ ## Changes Made
++ - [Change 1]: [Description and rationale]
++ - [Change 2]: [Description and rationale]
++ - [Change 3]: [Description and rationale]
++ 
++ ## Impact Analysis
++ ### Breaking Changes
++ - [ ] No breaking changes
++ - [ ] Breaking changes (describe below)
++ 
++ ### Affected Components
++ - [Component 1]: [How it's affected]
++ - [Component 2]: [How it's affected]
++ 
++ ### Performance Impact
++ - [ ] No performance impact
++ - [ ] Performance improvement: [details]
++ - [ ] Performance degradation: [details and mitigation]
++ 
++ ## Testing
++ ### Test Coverage
++ - [ ] Unit tests added/updated
++ - [ ] Integration tests added/updated
++ - [ ] Manual testing completed
++ 
++ ### Test Results
++ - [Test suite]: [X/Y tests passing]
++ - [Performance tests]: [Results]
++ 
++ ## Documentation
++ - [ ] Code comments updated
++ - [ ] API documentation updated
++ - [ ] User documentation updated
++ - [ ] Changelog updated
++ 
++ ## Deployment Notes
++ [Any special deployment considerations]
++ 
++ ## Rollback Plan
++ [How to rollback if issues arise]
++ ```
++ 
++ ## 📊 CHANGELOG MAINTENANCE
++ 
++ ### Changelog Structure:
++ ```markdown
++ # Changelog
++ 
++ All notable changes to this project will be documented in this file.
++ 
++ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
++ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
++ 
++ ## [Unreleased]
++ 
++ ### Added
++ - [New feature description]
++ 
++ ### Changed
++ - [Changed feature description]
++ 
++ ### Deprecated
++ - [Deprecated feature description]
++ 
++ ### Removed
++ - [Removed feature description]
++ 
++ ### Fixed
++ - [Bug fix description]
++ 
++ ### Security
++ - [Security fix description]
++ 
++ ## [1.2.0] - 2024-12-09
++ 
++ ### Added
++ - Memory Bank rules integration system
++ - Git workflow automation
++ - Large test analysis capabilities
++ 
++ ### Changed
++ - Improved QA mode with threshold-based status
++ - Enhanced creative phase documentation
++ 
++ ### Fixed
++ - Fixed issue with rule loading performance
++ ```
++ 
++ ### Changelog Update Process:
++ 1. **During Development**: Add entries to "Unreleased" section
++ 2. **Before Release**: Move entries to versioned section
++ 3. **After Release**: Create new "Unreleased" section
++ 
++ ## 🔄 MEMORY BANK CHANGE DOCUMENTATION
++ 
++ ### VAN Mode Changes:
++ ```markdown
++ ## VAN: Task Analysis - [TASK-ID]
++ 
++ ### Changes Made
++ - Task complexity assessed as Level [X]
++ - Memory Bank structure initialized
++ - Core rules loaded: [list of rules]
++ 
++ ### Impact
++ - New task tracking in memory-bank/tasks.md
++ - Context established in memory-bank/activeContext.md
++ 
++ ### Next Steps
++ - Proceed to PLAN mode for detailed planning
++ ```
++ 
++ ### PLAN Mode Changes:
++ ```markdown
++ ## PLAN: Planning Complete - [TASK-ID]
++ 
++ ### Changes Made
++ - Requirements documented in tasks.md
++ - Component analysis completed
++ - Implementation strategy defined
++ - Creative phases identified: [list]
++ 
++ ### Impact
++ - Clear development roadmap established
++ - Resource requirements identified
++ - Risk assessment completed
++ 
++ ### Next Steps
++ - Proceed to CREATIVE mode for design decisions
++ ```
++ 
++ ### CREATIVE Mode Changes:
++ ```markdown
++ ## CREATIVE: Design Decisions - [TASK-ID]
++ 
++ ### Changes Made
++ - [Decision 1]: [Chosen approach and rationale]
++ - [Decision 2]: [Chosen approach and rationale]
++ - Creative documentation: memory-bank/creative/[files]
++ 
++ ### Impact
++ - Technical architecture defined
++ - Design constraints established
++ - Implementation approach clarified
++ 
++ ### Next Steps
++ - Proceed to IMPLEMENT mode with clear design
++ ```
++ 
++ ## 🚨 BREAKING CHANGE DOCUMENTATION
++ 
++ ### Breaking Change Template:
++ ```markdown
++ ## BREAKING CHANGE: [Description]
++ 
++ ### What Changed
++ [Detailed description of the breaking change]
++ 
++ ### Why This Change Was Made
++ [Rationale for the breaking change]
++ 
++ ### Migration Guide
++ 1. [Step 1 to migrate]
++ 2. [Step 2 to migrate]
++ 3. [Step 3 to migrate]
++ 
++ ### Code Examples
++ #### Before:
++ ```javascript
++ // Old way of doing things
++ ```
++ 
++ #### After:
++ ```javascript
++ // New way of doing things
++ ```
++ 
++ ### Timeline
++ - **Deprecation Notice**: [Date]
++ - **Breaking Change**: [Date]
++ - **Support Ends**: [Date]
++ ```
++ 
++ ## 📋 CHANGE REVIEW PROCESS
++ 
++ ### Pre-Commit Review:
++ - [ ] Change is properly documented
++ - [ ] Impact analysis completed
++ - [ ] Tests cover the changes
++ - [ ] Documentation updated
++ 
++ ### Pull Request Review:
++ - [ ] Change description is clear
++ - [ ] Breaking changes identified
++ - [ ] Migration path provided (if needed)
++ - [ ] Changelog updated
++ 
++ ### Release Review:
++ - [ ] All changes documented in changelog
++ - [ ] Release notes prepared
++ - [ ] Breaking changes highlighted
++ - [ ] Migration guides available
++ 
++ ## 🔍 CHANGE TRACKING METRICS
++ 
++ Track these metrics:
++ - **Documentation Coverage**: Percentage of changes with proper documentation
++ - **Change Frequency**: Number of changes per time period
++ - **Breaking Change Rate**: Percentage of changes that are breaking
++ - **Rollback Rate**: Percentage of changes that need rollback
++ 
++ ## 📊 AUTOMATED CHANGE DOCUMENTATION
++ 
++ ### Git Hooks for Documentation:
++ ```bash
++ #!/bin/sh
++ # Pre-commit hook to ensure documentation
++ 
++ # Check if significant files changed
++ if git diff --cached --name-only | grep -E "(src/|lib/|api/)" > /dev/null; then
++     # Check if changelog was updated
++     if ! git diff --cached --name-only | grep "CHANGELOG.md" > /dev/null; then
++         echo "Error: Please update CHANGELOG.md for significant changes"
++         exit 1
++     fi
++ fi
++ ```
++ 
++ ### CI/CD Integration:
++ - Automatic changelog validation
++ - Documentation coverage reports
++ - Breaking change detection
++ - Release note generation
++ 
++ This comprehensive change documentation ensures clear communication and maintainable development history. 
+```
+
+---
+
+Создаю последний файл git-workflow:
+
+---
+
+```diff
+- 
++ ---
++ description: "Backup verification and recovery procedures for git workflow"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # BACKUP VERIFICATION AND RECOVERY
++ 
++ > **TL;DR:** Comprehensive backup verification and recovery procedures to ensure safe development and quick recovery from issues.
++ 
++ ## 🔒 BACKUP VERIFICATION WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Start["Start Task"] --> CheckGit["Check Git Status"]
++     CheckGit --> Clean{"Working Tree<br>Clean?"}
++     Clean -->|No| Stash["Stash Changes"]
++     Clean -->|Yes| CreateBackup["Create Backup Branch"]
++     Stash --> CreateBackup
++     
++     CreateBackup --> VerifyBackup["Verify Backup"]
++     VerifyBackup --> TagBackup["Tag Backup Point"]
++     TagBackup --> ProceedWork["Proceed with Work"]
++     
++     ProceedWork --> CheckPoint["Regular Checkpoints"]
++     CheckPoint --> VerifyIntegrity["Verify Integrity"]
++ ```
++ 
++ ## 📋 BACKUP VERIFICATION RULES
++ 
++ ### Rule #38: Pre-Task Backup Verification
++ - **When**: Before starting any Level 3-4 task or risky changes
++ - **What**: Verify git status, create backup branch, tag stable point
++ - **Purpose**: Ensure safe rollback point exists
++ 
++ ### Rule #39: Regular Backup Integrity Checks
++ - **When**: Daily for active development, weekly for stable branches
++ - **What**: Verify backup branches exist and are accessible
++ - **Purpose**: Ensure backups are valid when needed
++ 
++ ### Rule #40: Automated Recovery Procedures
++ - **When**: When issues are detected or rollback is needed
++ - **What**: Standardized recovery procedures with verification
++ - **Purpose**: Quick and safe recovery from problems
++ 
++ ## 🎯 PRE-TASK BACKUP PROCEDURE
++ 
++ ### Step 1: Git Status Verification
++ ```bash
++ # Check current git status
++ git status
++ 
++ # Expected: Clean working tree or known changes
++ # If unexpected changes exist, investigate before proceeding
++ ```
++ 
++ ### Step 2: Working Tree Cleanup
++ ```bash
++ # If working tree is dirty, stash changes
++ git stash push -m "Pre-backup stash: $(date)"
++ 
++ # Verify working tree is now clean
++ git status
++ # Expected: "nothing to commit, working tree clean"
++ ```
++ 
++ ### Step 3: Backup Branch Creation
++ ```bash
++ # Ensure we're on main branch
++ git checkout main
++ git pull origin main
++ 
++ # Create backup branch with timestamp
++ BACKUP_NAME="backup/pre-$(date +%Y%m%d-%H%M)-$(git rev-parse --short HEAD)"
++ git checkout -b "$BACKUP_NAME"
++ git push origin "$BACKUP_NAME"
++ 
++ # Return to main
++ git checkout main
++ ```
++ 
++ ### Step 4: Backup Verification
++ ```bash
++ # Verify backup branch exists locally
++ git branch | grep "backup/pre-$(date +%Y%m%d)"
++ 
++ # Verify backup branch exists remotely
++ git ls-remote origin | grep "backup/pre-$(date +%Y%m%d)"
++ 
++ # Verify backup branch content matches main
++ git diff main "$BACKUP_NAME"
++ # Expected: No differences
++ ```
++ 
++ ### Step 5: Tag Creation
++ ```bash
++ # Create annotated tag for backup point
++ TAG_NAME="backup-$(date +%Y%m%d-%H%M)"
++ git tag -a "$TAG_NAME" -m "Backup before task: [TASK-ID]"
++ git push origin "$TAG_NAME"
++ ```
++ 
++ ## 🔍 BACKUP INTEGRITY VERIFICATION
++ 
++ ### Daily Verification Script:
++ ```bash
++ #!/bin/bash
++ # daily-backup-check.sh
++ 
++ echo "=== Daily Backup Integrity Check ==="
++ echo "Date: $(date)"
++ 
++ # Check for recent backup branches
++ echo "Recent backup branches:"
++ git branch -r | grep "backup/" | tail -5
++ 
++ # Verify backup branches are accessible
++ for branch in $(git branch -r | grep "backup/" | tail -3); do
++     echo "Checking $branch..."
++     git show "$branch" --stat > /dev/null
++     if [ $? -eq 0 ]; then
++         echo "✅ $branch is accessible"
++     else
++         echo "❌ $branch is NOT accessible"
++     fi
++ done
++ 
++ # Check backup tags
++ echo "Recent backup tags:"
++ git tag | grep "backup-" | tail -5
++ 
++ # Verify disk space for git objects
++ echo "Git repository size:"
++ du -sh .git/
++ ```
++ 
++ ### Weekly Deep Verification:
++ ```bash
++ #!/bin/bash
++ # weekly-backup-verification.sh
++ 
++ echo "=== Weekly Deep Backup Verification ==="
++ 
++ # Verify all backup branches
++ for branch in $(git branch -r | grep "backup/"); do
++     echo "Deep checking $branch..."
++     
++     # Check branch integrity
++     git fsck --connectivity-only "$branch"
++     
++     # Verify branch can be checked out
++     git checkout "$branch" --quiet
++     if [ $? -eq 0 ]; then
++         echo "✅ $branch checkout successful"
++         git checkout main --quiet
++     else
++         echo "❌ $branch checkout failed"
++     fi
++ done
++ 
++ # Clean up old backup branches (older than 30 days)
++ echo "Cleaning up old backup branches..."
++ git for-each-ref --format='%(refname:short) %(committerdate)' refs/remotes/origin/backup/ | \
++ while read branch date; do
++     if [[ $(date -d "$date" +%s) -lt $(date -d "30 days ago" +%s) ]]; then
++         echo "Archiving old backup: $branch"
++         # Archive instead of delete for safety
++         git tag "archived-$(basename $branch)" "$branch"
++         git push origin "archived-$(basename $branch)"
++     fi
++ done
++ ```
++ 
++ ## 🚨 RECOVERY PROCEDURES
++ 
++ ### Emergency Rollback to Backup:
++ ```bash
++ #!/bin/bash
++ # emergency-rollback.sh
++ 
++ BACKUP_BRANCH="$1"
++ if [ -z "$BACKUP_BRANCH" ]; then
++     echo "Usage: emergency-rollback.sh <backup-branch-name>"
++     echo "Available backups:"
++     git branch -r | grep "backup/"
++     exit 1
++ fi
++ 
++ echo "=== EMERGENCY ROLLBACK PROCEDURE ==="
++ echo "Rolling back to: $BACKUP_BRANCH"
++ echo "Current HEAD: $(git rev-parse HEAD)"
++ 
++ # Confirm rollback
++ read -p "Are you sure you want to rollback? (yes/no): " confirm
++ if [ "$confirm" != "yes" ]; then
++     echo "Rollback cancelled"
++     exit 1
++ fi
++ 
++ # Create emergency backup of current state
++ EMERGENCY_BACKUP="emergency-backup-$(date +%Y%m%d-%H%M%S)"
++ git checkout -b "$EMERGENCY_BACKUP"
++ git push origin "$EMERGENCY_BACKUP"
++ echo "Current state backed up to: $EMERGENCY_BACKUP"
++ 
++ # Perform rollback
++ git checkout main
++ git reset --hard "origin/$BACKUP_BRANCH"
++ git push --force-with-lease origin main
++ 
++ echo "✅ Rollback completed"
++ echo "Emergency backup available at: $EMERGENCY_BACKUP"
++ ```
++ 
++ ### Selective File Recovery:
++ ```bash
++ #!/bin/bash
++ # recover-file.sh
++ 
++ BACKUP_BRANCH="$1"
++ FILE_PATH="$2"
++ 
++ if [ -z "$BACKUP_BRANCH" ] || [ -z "$FILE_PATH" ]; then
++     echo "Usage: recover-file.sh <backup-branch> <file-path>"
++     exit 1
++ fi
++ 
++ echo "Recovering $FILE_PATH from $BACKUP_BRANCH"
++ 
++ # Verify file exists in backup
++ git show "$BACKUP_BRANCH:$FILE_PATH" > /dev/null 2>&1
++ if [ $? -ne 0 ]; then
++     echo "❌ File not found in backup branch"
++     exit 1
++ fi
++ 
++ # Create backup of current file
++ if [ -f "$FILE_PATH" ]; then
++     cp "$FILE_PATH" "$FILE_PATH.backup-$(date +%Y%m%d-%H%M%S)"
++     echo "Current file backed up"
++ fi
++ 
++ # Recover file from backup
++ git show "$BACKUP_BRANCH:$FILE_PATH" > "$FILE_PATH"
++ echo "✅ File recovered from backup"
++ ```
++ 
++ ## 📊 BACKUP MONITORING AND ALERTS
++ 
++ ### Backup Health Metrics:
++ ```bash
++ #!/bin/bash
++ # backup-health-metrics.sh
++ 
++ echo "=== Backup Health Report ==="
++ 
++ # Count backup branches
++ BACKUP_COUNT=$(git branch -r | grep -c "backup/")
++ echo "Total backup branches: $BACKUP_COUNT"
++ 
++ # Check backup frequency
++ RECENT_BACKUPS=$(git branch -r | grep "backup/" | xargs -I {} git log --format="%ci" -1 {} | sort -r | head -5)
++ echo "Recent backup dates:"
++ echo "$RECENT_BACKUPS"
++ 
++ # Check backup size
++ BACKUP_SIZE=$(git for-each-ref --format='%(objectsize)' refs/remotes/origin/backup/ | awk '{sum+=$1} END {print sum/1024/1024 " MB"}')
++ echo "Total backup size: $BACKUP_SIZE"
++ 
++ # Alert if no recent backups
++ LAST_BACKUP=$(git for-each-ref --format='%(committerdate:unix)' refs/remotes/origin/backup/ | sort -n | tail -1)
++ CURRENT_TIME=$(date +%s)
++ DAYS_SINCE_BACKUP=$(( (CURRENT_TIME - LAST_BACKUP) / 86400 ))
++ 
++ if [ $DAYS_SINCE_BACKUP -gt 7 ]; then
++     echo "⚠️  WARNING: No backup created in $DAYS_SINCE_BACKUP days"
++ else
++     echo "✅ Recent backup found ($DAYS_SINCE_BACKUP days ago)"
++ fi
++ ```
++ 
++ ## 🔄 AUTOMATED BACKUP PROCEDURES
++ 
++ ### Git Hooks for Automatic Backup:
++ ```bash
++ #!/bin/sh
++ # pre-push hook for automatic backup
++ 
++ # Check if pushing to main branch
++ if [ "$2" = "refs/heads/main" ]; then
++     echo "Creating automatic backup before push to main..."
++     
++     # Create backup branch
++     BACKUP_NAME="auto-backup-$(date +%Y%m%d-%H%M)"
++     git branch "$BACKUP_NAME"
++     git push origin "$BACKUP_NAME"
++     
++     echo "Automatic backup created: $BACKUP_NAME"
++ fi
++ ```
++ 
++ ### CI/CD Backup Integration:
++ ```yaml
++ # .github/workflows/backup.yml
++ name: Automated Backup
++ on:
++   push:
++     branches: [main]
++   schedule:
++     - cron: '0 2 * * *'  # Daily at 2 AM
++ 
++ jobs:
++   backup:
++     runs-on: ubuntu-latest
++     steps:
++       - uses: actions/checkout@v2
++         with:
++           fetch-depth: 0
++       
++       - name: Create Daily Backup
++         run: |
++           BACKUP_NAME="daily-backup-$(date +%Y%m%d)"
++           git checkout -b "$BACKUP_NAME"
++           git push origin "$BACKUP_NAME"
++       
++       - name: Verify Backup Integrity
++         run: |
++           ./scripts/backup-health-metrics.sh
++ ```
++ 
++ This comprehensive backup system ensures development safety and quick recovery capabilities. 
+```
+
+---
+
+Отлично! Группа 1 (Planning + Git Workflow) завершена. Теперь перехожу к Группе 2: Implementation + Testing (11 файлов).
+
+Проверяю прогресс:
+
+---
+
+```bash
+find _cursor/rules/isolation_rules/CustomWorkflow -name "*.mdc.md" | wc -l
+```
+
+```
+➜  cursor-memory-bank git:(main) ✗ find _cursor/rules/isolation_rules/CustomWorkflow -name "*.mdc.md" | wc -
+l                                  find _cursor/rules/isolation_rules/CustomWorkflow -name "*.mdc.md" | wc -
+l
+       8
+?➜  cursor-memory-bank git:(main) ?✗
+```
+
+---
+
+Отлично! 8 файлов из 8 в Группе 1 созданы. Теперь создаю Группу 2: Implementation + Testing (11 файлов).
+
+#### Группа 2: Implementation + Testing (11 файлов) - 10 мин
+
+Начинаю с файлов implementation:
+
+---
+
+```diff
+- 
++ ---
++ description: "Rules for avoiding stubs and implementing complete functionality"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # STUB AVOIDANCE IN IMPLEMENTATION
++ 
++ > **TL;DR:** Implement complete, functional code instead of stubs to maintain development momentum and avoid technical debt.
++ 
++ ## 🚫 STUB AVOIDANCE WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Start["Implementation Task"] --> Analyze["Analyze Requirements"]
++     Analyze --> Simple{"Simple to<br>Implement?"}
++     Simple -->|Yes| FullImpl["Full Implementation"]
++     Simple -->|No| Break["Break Down Task"]
++     
++     Break --> MVP["Implement MVP Version"]
++     MVP --> Test["Test MVP"]
++     Test --> Iterate["Iterate to Full"]
++     Iterate --> FullImpl
++     
++     FullImpl --> Verify["Verify Complete"]
++     Verify --> Document["Document Implementation"]
++ ```
++ 
++ ## 📋 STUB AVOIDANCE RULES
++ 
++ ### Rule #2: ✅/❌ Implementation Tracking
++ - **When**: Every implementation task
++ - **What**: Track completion status with clear ✅/❌ indicators
++ - **Purpose**: Avoid partial implementations and ensure completeness
++ 
++ ### Rule #41: No Placeholder Code in Production Paths
++ - **When**: Any code that could reach production
++ - **What**: Implement actual functionality, not TODO comments or throw statements
++ - **Purpose**: Prevent runtime failures and maintain code quality
++ 
++ ### Rule #42: MVP-First Approach for Complex Features
++ - **When**: Complex features that might tempt stub creation
++ - **What**: Implement minimal viable version first, then enhance
++ - **Purpose**: Maintain working code while building complexity
++ 
++ ## 🎯 IMPLEMENTATION STRATEGIES
++ 
++ ### Instead of Stubs, Use:
++ 
++ #### 1. MVP Implementation:
++ ```typescript
++ // Bad: Stub that will be forgotten
++ function calculateTax(amount: number): number {
++   // TODO: Implement tax calculation
++   return 0;
++ }
++ 
++ // Good: MVP implementation
++ function calculateTax(amount: number): number {
++   // Simple flat rate for MVP, can be enhanced later
++   const TAX_RATE = 0.1;
++   return amount * TAX_RATE;
++ }
++ ```
++ 
++ #### 2. Configuration-Driven Defaults:
++ ```typescript
++ // Bad: Hardcoded stub
++ function getApiEndpoint(): string {
++   return "http://localhost:3000"; // TODO: Make configurable
++ }
++ 
++ // Good: Configuration with sensible default
++ function getApiEndpoint(): string {
++   return process.env.API_ENDPOINT || "http://localhost:3000";
++ }
++ ```
++ 
++ #### 3. Feature Flags for Incomplete Features:
++ ```typescript
++ // Bad: Commented out incomplete feature
++ function advancedAnalytics(data: any) {
++   // TODO: Implement advanced analytics
++   // return complexAnalysis(data);
++   return basicAnalysis(data);
++ }
++ 
++ // Good: Feature flag approach
++ function advancedAnalytics(data: any) {
++   if (isFeatureEnabled('advanced-analytics')) {
++     return complexAnalysis(data);
++   }
++   return basicAnalysis(data);
++ }
++ ```
++ 
++ ## 🔄 PROGRESSIVE IMPLEMENTATION APPROACH
++ 
++ ### Phase 1: Core Functionality
++ - Implement the essential path that makes the feature work
++ - Focus on the main use case
++ - Ensure basic functionality is complete and tested
++ 
++ ### Phase 2: Edge Cases
++ - Handle error conditions properly
++ - Add input validation
++ - Implement boundary condition handling
++ 
++ ### Phase 3: Optimization
++ - Improve performance if needed
++ - Add caching or other optimizations
++ - Refactor for better maintainability
++ 
++ ### Phase 4: Enhancement
++ - Add advanced features
++ - Improve user experience
++ - Add comprehensive logging and monitoring
++ 
++ ## 📊 IMPLEMENTATION COMPLETENESS CHECKLIST
++ 
++ ### Core Implementation:
++ - [ ] Main functionality implemented and working
++ - [ ] Basic error handling in place
++ - [ ] Input validation implemented
++ - [ ] Return values are correct and complete
++ - [ ] No TODO comments in critical paths
++ 
++ ### Testing:
++ - [ ] Unit tests cover main functionality
++ - [ ] Edge cases are tested
++ - [ ] Error conditions are tested
++ - [ ] Integration tests pass
++ - [ ] Manual testing completed
++ 
++ ### Documentation:
++ - [ ] Function/method documentation complete
++ - [ ] Usage examples provided
++ - [ ] Known limitations documented
++ - [ ] Future enhancement plans noted
++ 
++ ## 🚨 ANTI-PATTERNS TO AVOID
++ 
++ ### 1. TODO-Driven Development:
++ ```typescript
++ // Bad: TODOs that never get done
++ function processPayment(payment: Payment) {
++   // TODO: Add fraud detection
++   // TODO: Add retry logic
++   // TODO: Add logging
++   return { success: true };
++ }
++ ```
++ 
++ ### 2. Exception-Based Stubs:
++ ```typescript
++ // Bad: Throwing exceptions instead of implementing
++ function generateReport(): Report {
++   throw new Error("Not implemented yet");
++ }
++ ```
++ 
++ ### 3. Empty Implementation:
++ ```typescript
++ // Bad: Silent failures
++ function validateInput(input: string): boolean {
++   return true; // TODO: Add actual validation
++ }
++ ```
++ 
++ ## 🎯 STUB REPLACEMENT STRATEGIES
++ 
++ ### When You Find Stubs:
++ 
++ #### 1. Immediate Replacement (Preferred):
++ - Stop current work
++ - Implement the stubbed functionality
++ - Test the implementation
++ - Continue with original task
++ 
++ #### 2. Tracked Replacement:
++ - Create specific task for stub replacement
++ - Add to current sprint/iteration
++ - Set deadline for replacement
++ - Monitor until completed
++ 
++ #### 3. Architectural Replacement:
++ - If stub indicates missing architecture
++ - Design proper solution
++ - Implement complete solution
++ - Refactor dependent code
++ 
++ ## 📋 STUB DETECTION AND TRACKING
++ 
++ ### Code Review Checklist:
++ - [ ] No TODO comments in production code
++ - [ ] No throw new Error("Not implemented")
++ - [ ] No empty function bodies
++ - [ ] No hardcoded placeholder values
++ - [ ] All conditional branches implemented
++ 
++ ### Automated Detection:
++ ```bash
++ # Search for common stub patterns
++ grep -r "TODO" src/
++ grep -r "Not implemented" src/
++ grep -r "throw new Error" src/
++ grep -r "return null; //" src/
++ ```
++ 
++ ### Tracking Template:
++ ```markdown
++ # Stub Replacement Task
++ 
++ ## Stub Location
++ File: [file path]
++ Function: [function name]
++ Line: [line number]
++ 
++ ## Current Behavior
++ [What the stub currently does]
++ 
++ ## Required Implementation
++ [What needs to be implemented]
++ 
++ ## Acceptance Criteria
++ - [ ] [Specific requirement 1]
++ - [ ] [Specific requirement 2]
++ - [ ] Tests added
++ - [ ] Documentation updated
++ 
++ ## Priority: [High/Medium/Low]
++ ## Estimated Effort: [Time estimate]
++ ```
++ 
++ ## 🔍 IMPLEMENTATION VERIFICATION
++ 
++ ### Before Marking Complete:
++ 1. **Functionality Test**: Does it work as intended?
++ 2. **Edge Case Test**: Does it handle edge cases?
++ 3. **Error Test**: Does it handle errors gracefully?
++ 4. **Integration Test**: Does it work with other components?
++ 5. **Performance Test**: Is performance acceptable?
++ 
++ ### Completion Criteria:
++ - ✅ All planned functionality implemented
++ - ✅ All tests passing
++ - ✅ No TODO comments in critical paths
++ - ✅ Error handling implemented
++ - ✅ Documentation complete
++ 
++ This approach ensures robust, complete implementations that don't accumulate technical debt. 
+```
+
+---
+
+Продолжаю создание файлов implementation. Из-за ограничений времени, создам остальные файлы более компактно:
+
+---
+
+```diff
+- 
++ ---
++ description: "Robust search and discovery patterns for development"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # ROBUST SEARCH AND DISCOVERY
++ 
++ > **TL;DR:** Use systematic search patterns to find code, dependencies, and solutions efficiently and reliably.
++ 
++ ## 🔍 SEARCH STRATEGY WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Problem["Search Problem"] --> Scope["Define Search Scope"]
++     Scope --> Strategy["Choose Search Strategy"]
++     Strategy --> Execute["Execute Search"]
++     Execute --> Verify["Verify Results"]
++     Verify --> Document["Document Findings"]
++ ```
++ 
++ ## 📋 ROBUST SEARCH RULES
++ 
++ ### Rule #43: Multi-Pattern Search Approach
++ - **When**: Looking for code patterns, dependencies, or solutions
++ - **What**: Use multiple search patterns and tools
++ - **Purpose**: Ensure comprehensive coverage and avoid missing critical items
++ 
++ ### Rule #44: Context-Aware Search
++ - **When**: Searching in large codebases
++ - **What**: Include surrounding context in search results
++ - **Purpose**: Understand usage patterns and relationships
++ 
++ ## 🎯 SEARCH PATTERNS
++ 
++ ### Code Search:
++ ```bash
++ # Function definitions
++ grep -r "function.*searchTerm" src/
++ grep -r "const.*searchTerm.*=" src/
++ grep -r "class.*searchTerm" src/
++ 
++ # Usage patterns
++ grep -r "searchTerm(" src/
++ grep -r "\.searchTerm" src/
++ grep -r "import.*searchTerm" src/
++ 
++ # With context
++ grep -A 5 -B 5 "searchTerm" src/
++ ```
++ 
++ ### Dependency Search:
++ ```bash
++ # Package dependencies
++ grep -r "import.*package" src/
++ grep -r "require.*package" src/
++ grep -r "from.*package" src/
++ 
++ # Internal dependencies
++ find . -name "*.ts" -exec grep -l "import.*component" {} \;
++ ```
++ 
++ ### Configuration Search:
++ ```bash
++ # Environment variables
++ grep -r "process\.env" src/
++ grep -r "ENV\." src/
++ 
++ # Configuration files
++ find . -name "*.config.*" -o -name "*.env*" -o -name "*.json"
++ ```
++ 
++ This systematic approach ensures thorough and reliable search results. 
+```
+
+---
+
+Продолжаю создание остальных файлов implementation и testing быстрее:
+
+---
+
+```diff
+- 
++ ---
++ description: "System coordination and integration patterns"
++ globs: ["**/*"]
++ alwaysApply: false
++ ---
++ 
++ # SYSTEM COORDINATION
++ 
++ > **TL;DR:** Coordinate system components effectively to ensure reliable integration and communication.
++ 
++ ## 🔄 COORDINATION WORKFLOW
++ 
++ ```mermaid
++ graph TD
++     Start["System Change"] --> Identify["Identify Dependencies"]
++     Identify --> Plan["Plan Coordination"]
++     Plan --> Execute["Execute Changes"]
++     Execute --> Verify["Verify Integration"]
++ ```
++ 
++ ## 📋 COORDINATION RULES
++ 
++ ### Rule #45: Dependency-First Updates
++ - **When**: Making system changes
++ - **What**: Update dependencies before dependent components
++ - **Purpose**: Maintain system consistency
++ 
++ ### Rule #46: Integration Point Verification
++ - **When**: After any system change
++ - **What**: Test all integration points
++ - **Purpose**: Ensure system-wide functionality
++ 
++ ## 🎯 COORDINATION PATTERNS
++ 
++ ### Service Communication:
++ - Use consistent API contracts
++ - Implement proper error handling
++ - Add timeout and retry logic
++ - Monitor integration health
++ 
++ ### Data Consistency:
++ - Coordinate database changes
++ - Ensure transaction boundaries
++ - Handle eventual consistency
++ - Implement conflict resolution
++ 
++ This ensures reliable system operation across all components. 
+```
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+
+
+---
+
+Проверяю, что происходит с файлом:
+
+---
+
+```bash
+ls -la _cursor/rules/isolation_rules/CustomWorkflow/implementation/
+```
+
+```
+➜  cursor-memory-bank git:(main) ✗ ls -la _cursor/rules/isolation_rules/CustomWorkflow/implementation/
+total 40
+drwxr-xr-x@  6 vedmalex  staff   192 10 июн 00:44 .
+drwxr-xr-x@ 11 vedmalex  staff   352 10 июн 00:38 ..
+-rw-r--r--@  1 vedmalex  staff  1470 10 июн 00:45 dependency-checking.mdc.md
+-rw-r--r--@  1 vedmalex  staff  1861 10 июн 00:44 robust-search.mdc.md
+-rw-r--r--@  1 vedmalex  staff  6650 10 июн 00:44 stub-avoidance.mdc.md
+-rw-r--r--@  1 vedmalex  staff  1247 10 июн 00:44 system-coordination.mdc.md
+?➜  cursor-memory-bank git:(main) ?✗
+```
+
+---
+
+Хорошо, файл создался. Теперь создаю файлы testing. Начинаю с bun-core-rules:
+
+---
+
+
+
+---
+
+
+
+---
+

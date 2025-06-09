@@ -1,0 +1,62 @@
+---
+description: "Dependency checking and validation rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# DEPENDENCY CHECKING
+
+> **TL;DR:** Systematically verify and manage dependencies to prevent integration issues and ensure system reliability.
+
+## 🔍 DEPENDENCY VERIFICATION WORKFLOW
+
+```mermaid
+graph TD
+    Start["Code Change"] --> Scan["Scan Dependencies"]
+    Scan --> Check["Check Versions"]
+    Check --> Validate["Validate Compatibility"]
+    Validate --> Update["Update if Needed"]
+    Update --> Test["Test Integration"]
+```
+
+## 📋 DEPENDENCY RULES
+
+### Rule #47: Pre-Implementation Dependency Check
+- **When**: Before starting implementation
+- **What**: Verify all required dependencies are available and compatible
+- **Purpose**: Prevent mid-implementation blockers
+
+### Rule #48: Dependency Impact Analysis
+- **When**: Adding or updating dependencies
+- **What**: Analyze impact on existing code and other dependencies
+- **Purpose**: Avoid breaking changes and conflicts
+
+## 🎯 CHECKING PROCEDURES
+
+### Package Dependencies:
+```bash
+# Check package versions
+npm list
+npm outdated
+npm audit
+
+# Verify compatibility
+npm ls --depth=0
+```
+
+### System Dependencies:
+```bash
+# Check system requirements
+node --version
+npm --version
+bun --version
+```
+
+### Internal Dependencies:
+```bash
+# Find internal imports
+grep -r "import.*\.\." src/
+grep -r "require.*\.\." src/
+```
+
+This systematic approach prevents dependency-related issues and ensures reliable builds.

@@ -1,0 +1,85 @@
+---
+description: "Core Bun testing rules and patterns"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BUN CORE TESTING RULES
+
+> **TL;DR:** Essential Bun testing patterns for reliable, fast test execution with proper isolation and coverage.
+
+## 🧪 BUN TESTING WORKFLOW
+
+```mermaid
+graph TD
+    Start["Write Code"] --> Test["Write Tests"]
+    Test --> Run["Run with Bun"]
+    Run --> Check["Check Coverage"]
+    Check --> Fix["Fix Issues"]
+    Fix --> Test
+```
+
+## 📋 BUN TESTING RULES
+
+### Rule #8: Bun Test Runner Priority
+- **When**: All testing scenarios
+- **What**: Use `bun test` as primary test runner
+- **Purpose**: Leverage Bun's speed and built-in features
+
+### Rule #9: Test Isolation
+- **When**: Every test
+- **What**: Ensure tests don't affect each other
+- **Purpose**: Reliable and repeatable test results
+
+### Rule #10: Fast Feedback Loop
+- **When**: Development
+- **What**: Run tests frequently with `bun test --watch`
+- **Purpose**: Immediate feedback on changes
+
+## 🎯 BUN TEST PATTERNS
+
+### Basic Test Structure:
+```typescript
+import { test, expect, describe, beforeEach, afterEach } from "bun:test";
+
+describe("Component", () => {
+  beforeEach(() => {
+    // Setup for each test
+  });
+
+  afterEach(() => {
+    // Cleanup after each test
+  });
+
+  test("should do something", () => {
+    // Arrange
+    const input = "test";
+
+    // Act
+    const result = functionUnderTest(input);
+
+    // Assert
+    expect(result).toBe("expected");
+  });
+});
+```
+
+### Async Testing:
+```typescript
+test("async operation", async () => {
+  const result = await asyncFunction();
+  expect(result).toBeDefined();
+});
+```
+
+### Mock Usage:
+```typescript
+import { mock } from "bun:test";
+
+test("with mocks", () => {
+  const mockFn = mock(() => "mocked");
+  expect(mockFn()).toBe("mocked");
+});
+```
+
+This ensures fast, reliable testing with Bun's optimized test runner.

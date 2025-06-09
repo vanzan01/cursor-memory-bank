@@ -1,0 +1,305 @@
+---
+description: "Change documentation and tracking in git workflow"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# CHANGE DOCUMENTATION IN GIT WORKFLOW
+
+> **TL;DR:** Comprehensive change documentation integrated with git workflow for clear development history and effective collaboration.
+
+## 📝 CHANGE DOCUMENTATION WORKFLOW
+
+```mermaid
+graph TD
+    Change["Code Change"] --> Document["Document Change"]
+    Document --> Commit["Git Commit"]
+    Commit --> PR["Pull Request"]
+    PR --> Changelog["Update Changelog"]
+    Changelog --> Release["Release Notes"]
+
+    Document --> ImpactAnalysis["Impact Analysis"]
+    ImpactAnalysis --> Dependencies["Update Dependencies"]
+```
+
+## 📋 CHANGE DOCUMENTATION RULES
+
+### Rule #35: Document All Significant Changes
+- **When**: Any change affecting public APIs, behavior, or dependencies
+- **Where**: Commit messages, pull requests, changelog
+- **Format**: Structured documentation with impact analysis
+
+### Rule #36: Link Changes to Issues/Tasks
+- **When**: Every commit and pull request
+- **Format**: `Closes #123` or `Relates to TASK-ID`
+- **Purpose**: Traceability and context
+
+### Rule #37: Maintain Living Changelog
+- **When**: Every release and significant change
+- **Format**: Keep a CHANGELOG.md following semantic versioning
+- **Purpose**: Clear communication to users and developers
+
+## 🎯 CHANGE DOCUMENTATION TEMPLATES
+
+### Commit Message Documentation:
+```
+[type]: [brief description]
+
+[Detailed description of what changed and why]
+
+Impact:
+- [System/component affected]
+- [Behavior change description]
+- [Breaking changes if any]
+
+Related:
+- Closes #[issue-number]
+- Relates to [TASK-ID]
+
+Testing:
+- [How this was tested]
+- [Test cases added/modified]
+```
+
+### Pull Request Documentation:
+```markdown
+# [Feature/Fix]: [Brief Description]
+
+## Summary
+[Detailed description of changes]
+
+## Changes Made
+- [Change 1]: [Description and rationale]
+- [Change 2]: [Description and rationale]
+- [Change 3]: [Description and rationale]
+
+## Impact Analysis
+### Breaking Changes
+- [ ] No breaking changes
+- [ ] Breaking changes (describe below)
+
+### Affected Components
+- [Component 1]: [How it's affected]
+- [Component 2]: [How it's affected]
+
+### Performance Impact
+- [ ] No performance impact
+- [ ] Performance improvement: [details]
+- [ ] Performance degradation: [details and mitigation]
+
+## Testing
+### Test Coverage
+- [ ] Unit tests added/updated
+- [ ] Integration tests added/updated
+- [ ] Manual testing completed
+
+### Test Results
+- [Test suite]: [X/Y tests passing]
+- [Performance tests]: [Results]
+
+## Documentation
+- [ ] Code comments updated
+- [ ] API documentation updated
+- [ ] User documentation updated
+- [ ] Changelog updated
+
+## Deployment Notes
+[Any special deployment considerations]
+
+## Rollback Plan
+[How to rollback if issues arise]
+```
+
+## 📊 CHANGELOG MAINTENANCE
+
+### Changelog Structure:
+```markdown
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- [New feature description]
+
+### Changed
+- [Changed feature description]
+
+### Deprecated
+- [Deprecated feature description]
+
+### Removed
+- [Removed feature description]
+
+### Fixed
+- [Bug fix description]
+
+### Security
+- [Security fix description]
+
+## [1.2.0] - 2024-12-09
+
+### Added
+- Memory Bank rules integration system
+- Git workflow automation
+- Large test analysis capabilities
+
+### Changed
+- Improved QA mode with threshold-based status
+- Enhanced creative phase documentation
+
+### Fixed
+- Fixed issue with rule loading performance
+```
+
+### Changelog Update Process:
+1. **During Development**: Add entries to "Unreleased" section
+2. **Before Release**: Move entries to versioned section
+3. **After Release**: Create new "Unreleased" section
+
+## 🔄 MEMORY BANK CHANGE DOCUMENTATION
+
+### VAN Mode Changes:
+```markdown
+## VAN: Task Analysis - [TASK-ID]
+
+### Changes Made
+- Task complexity assessed as Level [X]
+- Memory Bank structure initialized
+- Core rules loaded: [list of rules]
+
+### Impact
+- New task tracking in memory-bank/tasks.md
+- Context established in memory-bank/activeContext.md
+
+### Next Steps
+- Proceed to PLAN mode for detailed planning
+```
+
+### PLAN Mode Changes:
+```markdown
+## PLAN: Planning Complete - [TASK-ID]
+
+### Changes Made
+- Requirements documented in tasks.md
+- Component analysis completed
+- Implementation strategy defined
+- Creative phases identified: [list]
+
+### Impact
+- Clear development roadmap established
+- Resource requirements identified
+- Risk assessment completed
+
+### Next Steps
+- Proceed to CREATIVE mode for design decisions
+```
+
+### CREATIVE Mode Changes:
+```markdown
+## CREATIVE: Design Decisions - [TASK-ID]
+
+### Changes Made
+- [Decision 1]: [Chosen approach and rationale]
+- [Decision 2]: [Chosen approach and rationale]
+- Creative documentation: memory-bank/creative/[files]
+
+### Impact
+- Technical architecture defined
+- Design constraints established
+- Implementation approach clarified
+
+### Next Steps
+- Proceed to IMPLEMENT mode with clear design
+```
+
+## 🚨 BREAKING CHANGE DOCUMENTATION
+
+### Breaking Change Template:
+```markdown
+## BREAKING CHANGE: [Description]
+
+### What Changed
+[Detailed description of the breaking change]
+
+### Why This Change Was Made
+[Rationale for the breaking change]
+
+### Migration Guide
+1. [Step 1 to migrate]
+2. [Step 2 to migrate]
+3. [Step 3 to migrate]
+
+### Code Examples
+#### Before:
+```javascript
+// Old way of doing things
+```
+
+#### After:
+```javascript
+// New way of doing things
+```
+
+### Timeline
+- **Deprecation Notice**: [Date]
+- **Breaking Change**: [Date]
+- **Support Ends**: [Date]
+```
+
+## 📋 CHANGE REVIEW PROCESS
+
+### Pre-Commit Review:
+- [ ] Change is properly documented
+- [ ] Impact analysis completed
+- [ ] Tests cover the changes
+- [ ] Documentation updated
+
+### Pull Request Review:
+- [ ] Change description is clear
+- [ ] Breaking changes identified
+- [ ] Migration path provided (if needed)
+- [ ] Changelog updated
+
+### Release Review:
+- [ ] All changes documented in changelog
+- [ ] Release notes prepared
+- [ ] Breaking changes highlighted
+- [ ] Migration guides available
+
+## 🔍 CHANGE TRACKING METRICS
+
+Track these metrics:
+- **Documentation Coverage**: Percentage of changes with proper documentation
+- **Change Frequency**: Number of changes per time period
+- **Breaking Change Rate**: Percentage of changes that are breaking
+- **Rollback Rate**: Percentage of changes that need rollback
+
+## 📊 AUTOMATED CHANGE DOCUMENTATION
+
+### Git Hooks for Documentation:
+```bash
+#!/bin/sh
+# Pre-commit hook to ensure documentation
+
+# Check if significant files changed
+if git diff --cached --name-only | grep -E "(src/|lib/|api/)" > /dev/null; then
+    # Check if changelog was updated
+    if ! git diff --cached --name-only | grep "CHANGELOG.md" > /dev/null; then
+        echo "Error: Please update CHANGELOG.md for significant changes"
+        exit 1
+    fi
+fi
+```
+
+### CI/CD Integration:
+- Automatic changelog validation
+- Documentation coverage reports
+- Breaking change detection
+- Release note generation
+
+This comprehensive change documentation ensures clear communication and maintainable development history.

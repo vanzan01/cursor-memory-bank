@@ -1,0 +1,249 @@
+---
+description: "Git commit strategies for Memory Bank phases"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# GIT COMMIT STRATEGIES FOR MEMORY BANK
+
+> **TL;DR:** Structured commit strategies aligned with Memory Bank phases for clear development history and easy rollback.
+
+## 🔄 PHASE-ORIENTED COMMIT WORKFLOW
+
+```mermaid
+graph TD
+    VAN["VAN Mode"] --> PlanCommit["Planning Commit"]
+    PlanCommit --> CreativeCommit["Creative Commit"]
+    CreativeCommit --> ImplCommit["Implementation Commits"]
+    ImplCommit --> QACommit["QA Commit"]
+    QACommit --> ReflectCommit["Reflection Commit"]
+    ReflectCommit --> ArchiveCommit["Archive Commit"]
+
+    ImplCommit --> FeatureCommit["Feature Commits"]
+    FeatureCommit --> ImplCommit
+```
+
+## 📋 COMMIT STRATEGY RULES
+
+### Rule #29: Phase-Based Commits
+- **When**: At completion of each Memory Bank phase
+- **Format**: `[PHASE]: [Description] - [Status]`
+- **Purpose**: Clear development timeline and rollback points
+
+### Rule #30: Atomic Feature Commits
+- **When**: Each complete feature or fix
+- **Format**: `feat: [description]` or `fix: [description]`
+- **Purpose**: Granular change tracking
+
+### Rule #31: WIP Commits for Context Switching
+- **When**: Need to switch context mid-work
+- **Format**: `WIP: [current work] - [next step]`
+- **Purpose**: Save progress without breaking build
+
+## 🎯 COMMIT MESSAGE TEMPLATES
+
+### Phase Completion Commits:
+```
+[PHASE]: [Phase Name] completed - [Task ID]
+
+✅ [Key accomplishment 1]
+✅ [Key accomplishment 2]
+✅ [Key accomplishment 3]
+
+Next: [Next phase or action]
+Files: [Key files changed]
+```
+
+### Feature Implementation Commits:
+```
+feat: [feature description]
+
+- [Specific change 1]
+- [Specific change 2]
+- [Specific change 3]
+
+Tests: [Test status]
+Docs: [Documentation status]
+```
+
+### Bug Fix Commits:
+```
+fix: [bug description]
+
+Problem: [What was wrong]
+Solution: [How it was fixed]
+Impact: [What this affects]
+
+Closes: #[issue number]
+```
+
+### Work-in-Progress Commits:
+```
+WIP: [current work description]
+
+Progress:
+- [x] [Completed item]
+- [ ] [Current item - where you left off]
+- [ ] [Next item]
+
+Next: [Immediate next step when resuming]
+Context: [Important context to remember]
+```
+
+## 🔄 MEMORY BANK PHASE COMMITS
+
+### VAN Mode Completion:
+```
+VAN: Task analysis and mode determination - [TASK-ID]
+
+✅ Task complexity assessed: Level [X]
+✅ Memory Bank structure initialized
+✅ Core rules loaded
+✅ Initial context established
+
+Next: PLAN mode for detailed planning
+Files: memory-bank/tasks.md, memory-bank/activeContext.md
+```
+
+### PLAN Mode Completion:
+```
+PLAN: Comprehensive planning completed - [TASK-ID]
+
+✅ Requirements defined and documented
+✅ Component analysis completed
+✅ Implementation strategy outlined
+✅ Creative phases identified
+
+Next: CREATIVE mode for design decisions
+Files: memory-bank/tasks.md, implementation-plan.md
+```
+
+### CREATIVE Mode Completion:
+```
+CREATIVE: All design decisions finalized - [TASK-ID]
+
+✅ [Decision 1]: [Chosen approach]
+✅ [Decision 2]: [Chosen approach]
+✅ [Decision 3]: [Chosen approach]
+
+Next: IMPLEMENT mode for development
+Files: memory-bank/creative/creative-[feature].md
+```
+
+### IMPLEMENT Mode Completion:
+```
+IMPLEMENT: Feature implementation completed - [TASK-ID]
+
+✅ All planned components built
+✅ Unit and integration tests passing
+✅ Code review completed
+✅ Documentation updated
+
+Next: QA mode for validation
+Files: [List of implemented files]
+```
+
+### QA Mode Completion:
+```
+QA: Quality assurance completed - [TASK-ID]
+
+✅ All tests passing ([X]/[Y])
+✅ Performance benchmarks met
+✅ Security review completed
+✅ Integration testing successful
+
+Status: [GOOD/WARNING/CRITICAL]
+Next: REFLECT mode for analysis
+```
+
+### REFLECT Mode Completion:
+```
+REFLECT: Development reflection completed - [TASK-ID]
+
+✅ Process analysis documented
+✅ Lessons learned captured
+✅ Performance metrics recorded
+✅ Improvement recommendations made
+
+Next: ARCHIVE mode for documentation
+Files: memory-bank/reflection/reflection-[task-id].md
+```
+
+### ARCHIVE Mode Completion:
+```
+ARCHIVE: Task documentation archived - [TASK-ID]
+
+✅ Complete task archive created
+✅ All documents consolidated
+✅ Knowledge base updated
+✅ Task marked as completed
+
+Status: COMPLETED AND ARCHIVED
+Files: memory-bank/archive/archive-[task-id].md
+```
+
+## 🚨 EMERGENCY COMMIT STRATEGIES
+
+### Hotfix Commits:
+```
+hotfix: [critical issue description]
+
+URGENT: [Why this needed immediate attention]
+Problem: [What was broken]
+Solution: [Quick fix applied]
+Risk: [Potential side effects]
+
+Follow-up: [Planned proper fix]
+```
+
+### Rollback Commits:
+```
+revert: [description of what's being reverted]
+
+Reason: [Why rollback was necessary]
+Reverted: [Commit hash and description]
+Impact: [What this affects]
+
+Plan: [How to move forward]
+```
+
+## 📊 COMMIT FREQUENCY GUIDELINES
+
+### Development Phase:
+- **Feature work**: Commit every 30-60 minutes or logical completion
+- **Bug fixes**: Commit immediately after verification
+- **Refactoring**: Commit each logical refactoring step
+
+### Memory Bank Phases:
+- **Phase completion**: Always commit at phase end
+- **Major milestones**: Commit at significant progress points
+- **Context switches**: Always commit before switching
+
+## 🔍 COMMIT VERIFICATION CHECKLIST
+
+Before committing:
+- [ ] Code compiles without errors
+- [ ] Existing tests still pass
+- [ ] New tests added for new functionality
+- [ ] Commit message follows template
+- [ ] No sensitive information included
+- [ ] Files are properly staged
+
+## 📋 BRANCH STRATEGY INTEGRATION
+
+### Feature Branches:
+```
+feature/[task-id]-[brief-description]
+```
+
+### Phase Branches (for complex tasks):
+```
+phase/[task-id]-[phase-name]
+```
+
+### Hotfix Branches:
+```
+hotfix/[issue-description]
+```
+
+This structured approach ensures clear development history and enables effective collaboration and rollback capabilities.

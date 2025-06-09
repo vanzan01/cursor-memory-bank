@@ -1,0 +1,162 @@
+---
+description: "Large test suite analysis and pattern detection"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# LARGE TEST ANALYSIS SYSTEM
+
+> **TL;DR:** Hybrid approach for analyzing large test suites (>100 tests) with pipeline analysis and structured pattern detection.
+
+## 🧪 LARGE TEST ANALYSIS WORKFLOW
+
+```mermaid
+graph TD
+    TestRun["bun test > test_output.log"] --> Count{"Test Count > 100?"}
+    Count -->|No| SimpleQA["Simple QA Process"]
+    Count -->|Yes| BasicAnalysis["Basic Pipeline Analysis"]
+
+    BasicAnalysis --> Stats["General Statistics"]
+    BasicAnalysis --> Failures["Extract Failures"]
+
+    Failures --> PatternAnalysis["Pattern Analysis Engine"]
+    PatternAnalysis --> GroupPattern["Group Patterns"]
+    PatternAnalysis --> TimePattern["Time Patterns"]
+    PatternAnalysis --> DepPattern["Dependency Patterns"]
+    PatternAnalysis --> ResPattern["Resource Patterns"]
+    PatternAnalysis --> ConfigPattern["Config Patterns"]
+    PatternAnalysis --> IntegPattern["Integration Patterns"]
+
+    Stats --> Report["test_analysis.log"]
+    GroupPattern --> Report
+    TimePattern --> Report
+    DepPattern --> Report
+    ResPattern --> Report
+    ConfigPattern --> Report
+    IntegPattern --> Report
+```
+
+## 📋 LARGE TEST ANALYSIS RULES
+
+### Rule #51: Automatic Large Test Detection
+- **When**: Test count exceeds 100 tests
+- **What**: Automatically activate large test analysis
+- **Purpose**: Handle large test suites with specialized analysis
+
+### Rule #52: Hybrid Analysis Approach
+- **When**: Large test analysis is active
+- **What**: Use pipeline for basic stats + structured analysis for patterns
+- **Purpose**: Balance simplicity and functionality
+
+### Rule #53: Pattern-Based Failure Analysis
+- **When**: Test failures detected in large suites
+- **What**: Categorize failures into 6 pattern types
+- **Purpose**: Identify systemic issues and root causes
+
+## 🎯 ANALYSIS IMPLEMENTATION
+
+### Basic Pipeline Analysis:
+```bash
+#!/bin/bash
+# Basic test statistics pipeline
+
+echo "=== LARGE TEST ANALYSIS ===" > test_analysis.log
+echo "Analysis Date: $(date)" >> test_analysis.log
+
+# Count total tests
+TOTAL_TESTS=$(grep -c "test(" test_output.log)
+echo "Total Tests: $TOTAL_TESTS" >> test_analysis.log
+
+# Count passed/failed
+PASSED=$(grep -c "✓" test_output.log)
+FAILED=$(grep -c "✗" test_output.log)
+echo "Passed: $PASSED" >> test_analysis.log
+echo "Failed: $FAILED" >> test_analysis.log
+
+# Calculate failure rate
+FAILURE_RATE=$(echo "scale=2; $FAILED * 100 / $TOTAL_TESTS" | bc)
+echo "Failure Rate: $FAILURE_RATE%" >> test_analysis.log
+```
+
+### Pattern Analysis Engine:
+```bash
+#!/bin/bash
+# Pattern detection for test failures
+
+echo "=== PATTERN ANALYSIS ===" >> test_analysis.log
+
+# 1. Group Patterns - tests failing in same module/component
+echo "Group Patterns:" >> test_analysis.log
+grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr >> test_analysis.log
+
+# 2. Time Patterns - tests failing at specific times
+echo "Time Patterns:" >> test_analysis.log
+grep "timeout" test_output.log | wc -l >> test_analysis.log
+
+# 3. Dependency Patterns - tests failing due to missing dependencies
+echo "Dependency Patterns:" >> test_analysis.log
+grep -i "cannot find\|module not found\|import error" test_output.log | wc -l >> test_analysis.log
+
+# 4. Resource Patterns - tests failing due to resource constraints
+echo "Resource Patterns:" >> test_analysis.log
+grep -i "memory\|disk\|network" test_output.log | wc -l >> test_analysis.log
+
+# 5. Configuration Patterns - tests failing due to config issues
+echo "Configuration Patterns:" >> test_analysis.log
+grep -i "config\|environment\|env" test_output.log | wc -l >> test_analysis.log
+
+# 6. Integration Patterns - tests failing due to integration issues
+echo "Integration Patterns:" >> test_analysis.log
+grep -i "connection\|api\|service" test_output.log | wc -l >> test_analysis.log
+```
+
+## 📊 QA MODE INTEGRATION
+
+### Threshold-Based Status Determination:
+```bash
+#!/bin/bash
+# Determine QA status based on failure rate
+
+FAILURE_RATE=$(grep "Failure Rate:" test_analysis.log | cut -d' ' -f3 | cut -d'%' -f1)
+
+if (( $(echo "$FAILURE_RATE > 20" | bc -l) )); then
+    echo "QA Status: CRITICAL" >> test_analysis.log
+    echo "Action: Block REFLECT transition" >> test_analysis.log
+elif (( $(echo "$FAILURE_RATE > 5" | bc -l) )); then
+    echo "QA Status: WARNING" >> test_analysis.log
+    echo "Action: Allow REFLECT with warning" >> test_analysis.log
+else
+    echo "QA Status: GOOD" >> test_analysis.log
+    echo "Action: Normal REFLECT transition" >> test_analysis.log
+fi
+```
+
+## 🔄 AUTOMATED ACTIVATION
+
+### Test Count Detection:
+```bash
+#!/bin/bash
+# Auto-detect if large test analysis is needed
+
+TEST_COUNT=$(grep -c "test(" test_output.log)
+
+if [ $TEST_COUNT -gt 100 ]; then
+    echo "Large test suite detected ($TEST_COUNT tests)"
+    echo "Activating large test analysis..."
+
+    # Run basic pipeline analysis
+    ./basic-test-analysis.sh
+
+    # Run pattern analysis
+    ./pattern-analysis.sh
+
+    # Determine QA status
+    ./qa-status-determination.sh
+
+    echo "Large test analysis complete. See test_analysis.log"
+else
+    echo "Standard test suite ($TEST_COUNT tests) - using simple QA"
+fi
+```
+
+This hybrid approach provides comprehensive analysis for large test suites while maintaining simplicity for smaller ones.

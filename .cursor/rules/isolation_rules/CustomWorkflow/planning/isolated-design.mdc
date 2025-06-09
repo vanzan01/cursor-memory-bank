@@ -1,0 +1,216 @@
+---
+description: "Isolated design principles for maintainable systems"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# ISOLATED DESIGN PRINCIPLES
+
+> **TL;DR:** Design components with clear boundaries, minimal dependencies, and high cohesion for maintainable and testable systems.
+
+## 🏗️ ISOLATION ARCHITECTURE
+
+```mermaid
+graph TD
+    System["System"] --> ModuleA["Module A"]
+    System --> ModuleB["Module B"]
+    System --> ModuleC["Module C"]
+
+    ModuleA --> InterfaceA["Well-defined Interface"]
+    ModuleB --> InterfaceB["Well-defined Interface"]
+    ModuleC --> InterfaceC["Well-defined Interface"]
+
+    InterfaceA -.-> InterfaceB
+    InterfaceB -.-> InterfaceC
+
+    style ModuleA fill:#e1f5fe
+    style ModuleB fill:#e8f5e8
+    style ModuleC fill:#fff3e0
+```
+
+## 📋 ISOLATION DESIGN RULES
+
+### Rule #26: Component Isolation
+- **Principle**: Each component should be independently testable and deployable
+- **Implementation**: Clear interfaces, minimal external dependencies
+- **Benefits**: Easier testing, debugging, and maintenance
+
+### Rule #27: Dependency Inversion
+- **Principle**: Depend on abstractions, not concretions
+- **Implementation**: Use interfaces and dependency injection
+- **Benefits**: Flexibility, testability, loose coupling
+
+### Rule #28: Single Responsibility
+- **Principle**: Each component should have one reason to change
+- **Implementation**: Clear, focused component purposes
+- **Benefits**: Easier to understand, test, and modify
+
+## 🎯 DESIGN BOUNDARIES
+
+### Interface Design:
+```typescript
+// Good: Clear, focused interface
+interface UserRepository {
+  findById(id: string): Promise<User | null>;
+  save(user: User): Promise<void>;
+  delete(id: string): Promise<void>;
+}
+
+// Bad: Mixed responsibilities
+interface UserService {
+  findUser(id: string): Promise<User>;
+  saveUser(user: User): Promise<void>;
+  sendEmail(user: User): Promise<void>; // Different responsibility
+  generateReport(): Promise<Report>;    // Different responsibility
+}
+```
+
+### Dependency Management:
+```typescript
+// Good: Dependency injection
+class UserService {
+  constructor(
+    private userRepo: UserRepository,
+    private emailService: EmailService
+  ) {}
+}
+
+// Bad: Direct dependencies
+class UserService {
+  private userRepo = new DatabaseUserRepository(); // Hard dependency
+  private emailService = new SMTPEmailService();   // Hard dependency
+}
+```
+
+## 🔄 ISOLATION PATTERNS
+
+### 1. Repository Pattern
+- **Purpose**: Isolate data access logic
+- **Benefits**: Testable, swappable data sources
+- **Implementation**: Abstract data operations behind interfaces
+
+### 2. Service Layer Pattern
+- **Purpose**: Isolate business logic
+- **Benefits**: Reusable, testable business rules
+- **Implementation**: Stateless services with clear contracts
+
+### 3. Factory Pattern
+- **Purpose**: Isolate object creation
+- **Benefits**: Flexible object construction
+- **Implementation**: Abstract creation logic
+
+### 4. Observer Pattern
+- **Purpose**: Isolate event handling
+- **Benefits**: Loose coupling between components
+- **Implementation**: Event-driven communication
+
+## 📊 ISOLATION METRICS
+
+### Coupling Metrics:
+- **Afferent Coupling (Ca)**: Number of classes depending on this class
+- **Efferent Coupling (Ce)**: Number of classes this class depends on
+- **Instability (I)**: Ce / (Ca + Ce) - should be low for stable components
+
+### Cohesion Metrics:
+- **LCOM**: Lack of Cohesion of Methods - should be low
+- **Single Responsibility**: Each class should have one reason to change
+
+## 🧪 TESTING ISOLATION
+
+### Unit Test Isolation:
+```typescript
+// Good: Isolated unit test
+describe('UserService', () => {
+  let userService: UserService;
+  let mockUserRepo: jest.Mocked<UserRepository>;
+  let mockEmailService: jest.Mocked<EmailService>;
+
+  beforeEach(() => {
+    mockUserRepo = createMockUserRepository();
+    mockEmailService = createMockEmailService();
+    userService = new UserService(mockUserRepo, mockEmailService);
+  });
+
+  it('should create user successfully', async () => {
+    // Test only UserService logic, not dependencies
+  });
+});
+```
+
+### Integration Test Boundaries:
+- Test component interactions at well-defined boundaries
+- Use test doubles for external dependencies
+- Focus on contract compliance, not implementation
+
+## 🔍 ISOLATION REVIEW CHECKLIST
+
+### Component Design:
+- [ ] Single, clear responsibility
+- [ ] Well-defined public interface
+- [ ] Minimal external dependencies
+- [ ] No circular dependencies
+- [ ] Easily mockable for testing
+
+### Interface Design:
+- [ ] Focused on specific domain
+- [ ] Stable and versioned
+- [ ] Technology-agnostic
+- [ ] Easy to implement
+- [ ] Clear error handling
+
+### Dependency Management:
+- [ ] Dependencies injected, not created
+- [ ] Abstractions over concretions
+- [ ] Optional dependencies clearly marked
+- [ ] Circular dependencies avoided
+- [ ] Dependency graph is acyclic
+
+## 🚨 ISOLATION ANTI-PATTERNS
+
+### God Object:
+- **Problem**: Single class doing too much
+- **Solution**: Break into focused components
+- **Detection**: Large classes with many responsibilities
+
+### Tight Coupling:
+- **Problem**: Components directly dependent on each other
+- **Solution**: Introduce abstractions and interfaces
+- **Detection**: Changes in one component require changes in many others
+
+### Leaky Abstractions:
+- **Problem**: Implementation details exposed through interfaces
+- **Solution**: Design interfaces based on client needs
+- **Detection**: Interface changes when implementation changes
+
+## 📋 ISOLATION DESIGN TEMPLATE
+
+```markdown
+# Component: [Name]
+
+## Purpose
+[Single, clear responsibility]
+
+## Public Interface
+```typescript
+interface [ComponentName] {
+  [method1](params): ReturnType;
+  [method2](params): ReturnType;
+}
+```
+
+## Dependencies
+- [Dependency1]: [Purpose]
+- [Dependency2]: [Purpose]
+
+## Isolation Boundaries
+- **Input**: [What comes in]
+- **Output**: [What goes out]
+- **Side Effects**: [External changes]
+
+## Testing Strategy
+- **Unit Tests**: [Mock all dependencies]
+- **Integration Tests**: [Test with real dependencies]
+- **Contract Tests**: [Verify interface compliance]
+```
+
+This approach ensures components remain maintainable, testable, and evolvable over time.

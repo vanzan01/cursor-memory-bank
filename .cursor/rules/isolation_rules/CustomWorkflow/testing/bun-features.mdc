@@ -1,0 +1,53 @@
+---
+description: "Advanced Bun testing features and capabilities"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BUN ADVANCED TESTING FEATURES
+
+> **TL;DR:** Leverage Bun's advanced testing capabilities for comprehensive test coverage and performance optimization.
+
+## 🚀 ADVANCED BUN FEATURES
+
+### Rule #49: Bun Built-in Mocking
+- **When**: Need to mock modules or functions
+- **What**: Use Bun's built-in mock system
+- **Purpose**: Fast, reliable mocking without external dependencies
+
+### Rule #50: Snapshot Testing
+- **When**: Testing complex output or UI components
+- **What**: Use Bun's snapshot testing capabilities
+- **Purpose**: Detect unexpected changes in output
+
+## 🎯 FEATURE USAGE
+
+### Module Mocking:
+```typescript
+import { mock } from "bun:test";
+
+// Mock entire module
+mock.module("./api", () => ({
+  fetchData: mock(() => Promise.resolve({ data: "test" }))
+}));
+```
+
+### Snapshot Testing:
+```typescript
+test("component snapshot", () => {
+  const output = renderComponent();
+  expect(output).toMatchSnapshot();
+});
+```
+
+### Performance Testing:
+```typescript
+test("performance benchmark", () => {
+  const start = performance.now();
+  heavyOperation();
+  const end = performance.now();
+  expect(end - start).toBeLessThan(1000);
+});
+```
+
+This maximizes Bun's testing capabilities for comprehensive coverage.
