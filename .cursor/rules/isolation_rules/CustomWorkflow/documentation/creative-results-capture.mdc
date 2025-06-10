@@ -1,647 +1,452 @@
 ---
-description: "Creative results capture system for Memory Bank creative phases"
-globs: "**/creative/**", "**/documentation/**", "**/capture/**"
+description:
+globs:
 alwaysApply: false
 ---
-
----
-description: "Creative results capture system for Memory Bank creative phases"
-globs: "**/creative/**", "**/documentation/**", "**/capture/**"
-alwaysApply: false
----
-
 # CREATIVE RESULTS CAPTURE SYSTEM
 
-> **TL;DR:** Automated system for capturing, structuring, and preserving creative phase results including architectural decisions, design processes, and implementation guidance.
+> **TL;DR:** This system automatically captures, structures, and preserves all results from CREATIVE phases, ensuring comprehensive knowledge retention and enabling future reuse of architectural decisions and design solutions.
 
-## 🎯 CAPTURE SYSTEM OVERVIEW
+## 🎨 CREATIVE CAPTURE OVERVIEW
 
-The Creative Results Capture System automatically documents and preserves all outputs from creative phases, ensuring no architectural decisions or design insights are lost and creating a comprehensive knowledge base for future reference.
+The Creative Results Capture System provides comprehensive preservation of all creative phase outputs:
 
-### Core Capture Components
+- **Automatic Capture**: Real-time preservation of creative decisions
+- **Structured Storage**: Organized archival with metadata
+- **Context Preservation**: Complete decision-making context
+- **Knowledge Linking**: Connections between related decisions
+- **Future Access**: Easy retrieval for similar problems
 
-**Automatic Documentation**
-- Real-time capture of creative phase outputs
-- Structured metadata extraction
-- Decision point identification
-- Artifact preservation
+## 📊 CAPTURE ARCHITECTURE
 
-**Structured Storage**
-- Hierarchical organization by project and date
-- Categorization by decision type
-- Searchable metadata indexing
-- Version control integration
+### Core Components
 
-**Quality Assurance**
-- Completeness validation
-- Consistency checking
-- Format standardization
-- Integrity verification
+**Creative Phase Monitor**
+- Detects CREATIVE mode activation
+- Tracks creative session progress
+- Monitors decision points
+- Captures intermediate results
 
-## 📸 AUTOMATIC CAPTURE MECHANISMS
+**Decision Capture Engine**
+- Records architectural decisions
+- Preserves design rationale
+- Captures alternative options
+- Documents decision criteria
 
-### Real-time Documentation Capture
+**Context Preservation System**
+- Saves problem context
+- Records constraints and requirements
+- Preserves stakeholder input
+- Documents environmental factors
 
-**Creative Phase Monitoring**
+**Metadata Generator**
+- Creates searchable metadata
+- Generates classification tags
+- Assigns quality metrics
+- Links to related decisions
+
+**Storage Orchestrator**
+- Manages file organization
+- Handles version control
+- Ensures data integrity
+- Optimizes storage efficiency
+
+## 🔄 CAPTURE WORKFLOWS
+
+### Automatic Capture Triggers
+
+**CREATIVE Mode Entry**
+- Initialize capture session
+- Create session metadata
+- Set up monitoring systems
+- Prepare storage structures
+
+**Decision Points**
+- Detect architectural decisions
+- Capture decision rationale
+- Record alternative options
+- Save decision context
+
+**Phase Milestones**
+- Capture intermediate results
+- Save progress snapshots
+- Update session metadata
+- Generate progress reports
+
+**CREATIVE Mode Exit**
+- Finalize capture session
+- Generate session summary
+- Create archive package
+- Update knowledge index
+
+### Capture Process Flow
+
+1. **Session Initialization**
+   - Create unique session ID
+   - Initialize capture workspace
+   - Set up monitoring hooks
+   - Prepare metadata structure
+
+2. **Real-Time Monitoring**
+   - Track document changes
+   - Monitor decision discussions
+   - Capture design iterations
+   - Record thought processes
+
+3. **Decision Point Processing**
+   - Identify decision moments
+   - Extract decision criteria
+   - Capture alternatives considered
+   - Record final choice rationale
+
+4. **Context Enrichment**
+   - Add problem context
+   - Include constraint information
+   - Reference related decisions
+   - Link to source requirements
+
+5. **Quality Assessment**
+   - Evaluate decision completeness
+   - Assess documentation quality
+   - Rate decision confidence
+   - Generate improvement suggestions
+
+6. **Archive Preparation**
+   - Structure captured data
+   - Generate summary documents
+   - Create searchable metadata
+   - Package for long-term storage
+
+## 📋 CAPTURE DATA STRUCTURE
+
+### Creative Session Metadata
+
 ```yaml
-capture_triggers:
-  phase_start:
-    - Initialize capture session
-    - Create session metadata
-    - Set up monitoring hooks
-
-  decision_points:
-    - Capture decision context
-    - Record alternatives considered
-    - Document selection rationale
-    - Store supporting artifacts
-
-  phase_completion:
-    - Finalize documentation
-    - Generate summary report
-    - Archive all artifacts
-    - Update search indexes
-```
-
-**Document Structure Extraction**
-- Automatic parsing of creative phase documents
-- Identification of key sections (decisions, alternatives, rationale)
-- Extraction of architectural diagrams and models
-- Capture of discussion notes and comments
-
-### Metadata Generation
-
-**Session Metadata**
-```yaml
-session_metadata:
-  basic_info:
-    session_id: "CREATIVE-SESS-2024-12-09-001"
-    task_id: "TASK-ID-YYYY-MM-DD"
-    start_time: "2024-12-09T10:00:00Z"
-    end_time: "2024-12-09T11:30:00Z"
-    duration: "90 minutes"
-
-  participants:
-    - role: "architect"
-      name: "John Doe"
-      contribution_level: "high"
-    - role: "developer"
-      name: "Jane Smith"
-      contribution_level: "medium"
+creative_session:
+  session_id: "CREATIVE-2024-12-09-103045"
+  task_id: "TASK-CONTINUITY-FIX-2024-12-09"
+  start_time: "2024-12-09T10:30:45Z"
+  end_time: "2024-12-09T12:15:30Z"
+  duration_minutes: 105
 
   context:
-    project_phase: "design"
+    problem_domain: "System Architecture"
     complexity_level: "Level 3"
-    domain: "web_application"
-    technologies: ["React", "Node.js", "PostgreSQL"]
+    stakeholders: ["Development Team", "System Users"]
+    constraints:
+      - "Must maintain backward compatibility"
+      - "Zero data loss requirement"
+      - "Performance impact < 5%"
 
-  outcomes:
-    decisions_made: 5
-    alternatives_considered: 12
-    artifacts_created: 3
-    follow_up_actions: 2
+  participants:
+    - role: "Architect"
+      contribution: "System design"
+    - role: "Developer"
+      contribution: "Implementation feasibility"
+
+  session_type: "Architecture Design"
+  quality_score: 8.5
+  completeness: 95
 ```
 
-## 🗂️ STRUCTURED STORAGE SYSTEM
+### Architectural Decision Record
 
-### Hierarchical Organization
-
-**Directory Structure**
-```
-memory-bank/creative/
-├── architecture/
-│   ├── 2024/
-│   │   ├── 12/
-│   │   │   ├── 09-task-continuity-architecture/
-│   │   │   │   ├── session-metadata.yaml
-│   │   │   │   ├── decisions/
-│   │   │   │   ├── artifacts/
-│   │   │   │   ├── process/
-│   │   │   │   └── summary-report.md
-│   │   │   └── 08-rules-integration-architecture/
-│   │   └── 11/
-│   └── 2023/
-├── algorithms/
-├── ui-ux/
-├── data-models/
-└── cross-cutting/
-```
-
-### Categorization System
-
-**Decision Categories**
-- **Architecture**: System design, component organization, integration patterns
-- **Algorithm**: Data processing, optimization, computational approaches
-- **UI/UX**: User interface design, user experience flows, interaction patterns
-- **Data Model**: Database design, data structures, information architecture
-- **Cross-cutting**: Security, performance, monitoring, deployment
-
-## 📋 CAPTURE TEMPLATES
-
-### Decision Capture Template
-
-```markdown
-# Decision: [Decision Title]
-
-## Metadata
-- **Decision ID**: ARCH-XXX-YYYY-MM-DD
-- **Date**: YYYY-MM-DD
-- **Category**: [architecture|algorithm|ui_ux|data_model|cross_cutting]
-- **Impact Level**: [critical|high|medium|low]
-- **Confidence**: [1-10]
-
-## Context
-### Problem Statement
-[Clear description of the problem being solved]
-
-### Constraints
-- [Constraint 1]
-- [Constraint 2]
-
-### Requirements
-- [Requirement 1]
-- [Requirement 2]
-
-## Decision Process
-### Alternatives Considered
-1. **Option 1**: [Description]
-   - Pros: [List advantages]
-   - Cons: [List disadvantages]
-
-2. **Option 2**: [Description]
-   - Pros: [List advantages]
-   - Cons: [List disadvantages]
-
-### Selected Option
-[Chosen option with brief justification]
-
-### Rationale
-[Detailed explanation of why this option was selected]
-
-## Implementation Plan
-- **Phase 1**: [Description and timeline]
-- **Phase 2**: [Description and timeline]
-
-## Follow-up Actions
-- [ ] [Action item 1] - Assigned to: [Person] - Due: [Date]
-- [ ] [Action item 2] - Assigned to: [Person] - Due: [Date]
-```
-
-## 🔍 SEARCH AND INDEXING
-
-### Metadata Indexing
-
-**Search Index Structure**
 ```yaml
-search_index:
-  decisions:
-    - decision_id: "ARCH-001-2024-12-09"
-      title: "Database Architecture Selection"
-      category: "data_architecture"
-      keywords: ["database", "postgresql", "scalability", "performance"]
-      impact_level: "high"
-      date: "2024-12-09"
-      success_rate: 0.95
+architectural_decision:
+  decision_id: "ADR-2024-12-09-001"
+  session_id: "CREATIVE-2024-12-09-103045"
+  timestamp: "2024-12-09T11:15:22Z"
+
+  title: "Task Continuity Architecture Pattern"
+  status: "ACCEPTED"
+
+  context:
+    problem: "Memory Bank loses unfinished tasks during mode transitions"
+    forces:
+      - "Need 100% data preservation"
+      - "Must maintain performance"
+      - "Should be user-friendly"
+      - "Must handle edge cases"
+
+  decision:
+    chosen_option: "Hybrid Architecture with 5 Components"
+    rationale: |
+      Selected hybrid approach combining validation, migration,
+      and backup systems for comprehensive task preservation.
+
+  alternatives_considered:
+    - option: "Simple Migration Only"
+      pros: ["Easy to implement", "Low complexity"]
+      cons: ["No validation", "Risk of data loss"]
+      rejected_reason: "Insufficient data protection"
+
+    - option: "Full Database Solution"
+      pros: ["Robust", "Scalable"]
+      cons: ["Over-engineered", "High complexity"]
+      rejected_reason: "Unnecessary complexity for use case"
+
+  consequences:
+    positive:
+      - "100% task preservation guaranteed"
+      - "Comprehensive error handling"
+      - "User-friendly warnings"
+    negative:
+      - "Increased system complexity"
+      - "Additional maintenance overhead"
+    risks:
+      - "Migration document corruption"
+      - "Performance impact on large task sets"
+
+  implementation:
+    components:
+      - "Task Status Validator"
+      - "Migration Manager"
+      - "Mode Transition Controller"
+      - "Task Preservation Engine"
+      - "Warning System"
+    estimated_effort: "2.5 hours"
+    dependencies: ["Git integration", "File system monitoring"]
+
+  validation:
+    success_criteria:
+      - "Zero task loss in testing"
+      - "User acceptance > 90%"
+      - "Performance impact < 5%"
+    testing_approach: "Comprehensive scenario testing"
+
+  metadata:
+    tags: ["architecture", "data-preservation", "task-management"]
+    category: "System Architecture"
+    complexity: "Medium"
+    reusability: "High"
+    confidence: 9
 ```
 
-### Search Capabilities
+### Design Artifact Capture
 
-**Semantic Search**
-- Natural language queries for finding relevant decisions
-- Context-aware search based on current project needs
-- Similarity matching for architectural patterns
-- Success rate weighted recommendations
+```yaml
+design_artifact:
+  artifact_id: "DESIGN-2024-12-09-001"
+  session_id: "CREATIVE-2024-12-09-103045"
+  type: "System Diagram"
 
-**Faceted Search**
-- Filter by category, impact level, date range
-- Search by technology stack or domain
-- Filter by success rate or confidence level
-- Search by team or participant involvement
+  content:
+    title: "Task Continuity System Architecture"
+    description: "Visual representation of task preservation components"
+    format: "Mermaid Diagram"
+    file_path: "creative/architecture/task-continuity-diagram.md"
+
+  creation:
+    timestamp: "2024-12-09T11:30:15Z"
+    author: "System Architect"
+    version: "1.0"
+
+  relationships:
+    related_decisions: ["ADR-2024-12-09-001"]
+    implements_requirements: ["REQ-001", "REQ-002"]
+    influences_components: ["Migration System", "Validation System"]
+
+  quality_metrics:
+    completeness: 90
+    clarity: 85
+    accuracy: 95
+    usefulness: 88
+
+  metadata:
+    tags: ["diagram", "architecture", "system-design"]
+    searchable_content: "task continuity migration validation backup"
+    last_updated: "2024-12-09T11:30:15Z"
+```
+
+## 🔍 CAPTURE MECHANISMS
+
+### Document Monitoring
+
+**File System Watchers**
+- Monitor creative workspace files
+- Detect document creation/modification
+- Track version changes
+- Capture content snapshots
+
+**Content Analysis**
+- Extract key decisions from text
+- Identify architectural patterns
+- Detect design principles
+- Parse structured content
+
+**Change Detection**
+- Track incremental changes
+- Identify significant modifications
+- Capture decision evolution
+- Preserve iteration history
+
+### Interactive Capture
+
+**Decision Prompts**
+- Prompt for decision rationale
+- Request alternative options
+- Capture decision confidence
+- Record implementation notes
+
+**Context Queries**
+- Ask for problem context
+- Request constraint information
+- Gather stakeholder input
+- Collect success criteria
+
+**Quality Checks**
+- Validate decision completeness
+- Check documentation quality
+- Assess rationale clarity
+- Verify implementation feasibility
+
+### Automated Extraction
+
+**Pattern Recognition**
+- Identify common decision patterns
+- Extract architectural styles
+- Detect design principles
+- Recognize solution templates
+
+**Metadata Generation**
+- Auto-generate tags
+- Create search keywords
+- Assign categories
+- Calculate quality scores
+
+**Relationship Mapping**
+- Link related decisions
+- Connect to requirements
+- Map to implementation
+- Identify dependencies
+
+## 📊 CAPTURE QUALITY ASSURANCE
+
+### Completeness Validation
+
+**Decision Completeness**
+- Problem statement present
+- Solution rationale provided
+- Alternatives considered
+- Consequences documented
+
+**Context Completeness**
+- Problem domain identified
+- Constraints documented
+- Stakeholders listed
+- Success criteria defined
+
+**Documentation Completeness**
+- All artifacts captured
+- Metadata generated
+- Relationships mapped
+- Quality assessed
+
+### Quality Metrics
+
+**Decision Quality**
+- Rationale clarity (1-10)
+- Alternative analysis depth (1-10)
+- Implementation feasibility (1-10)
+- Risk assessment completeness (1-10)
+
+**Documentation Quality**
+- Content completeness (1-10)
+- Structure consistency (1-10)
+- Searchability effectiveness (1-10)
+- Reusability potential (1-10)
+
+**Session Quality**
+- Overall productivity (1-10)
+- Decision confidence (1-10)
+- Knowledge capture rate (1-10)
+- Future value potential (1-10)
 
 ## 🔧 INTEGRATION POINTS
 
-### Memory Bank Mode Integration
+### CREATIVE Mode Integration
+
+**Mode Entry**
+- Initialize capture session
+- Set up monitoring systems
+- Create workspace structure
+- Begin real-time tracking
+
+**During Creative Work**
+- Monitor decision points
+- Capture intermediate results
+- Track thought processes
+- Record design iterations
+
+**Mode Exit**
+- Finalize capture session
+- Generate session summary
+- Create archive package
+- Update knowledge index
+
+### Memory Bank Integration
 
 **VAN Mode**
-- Automatic loading of relevant historical decisions
-- Pattern suggestions based on project context
-- Success rate analysis for proposed approaches
+- Access previous decisions
+- Search similar problems
+- Retrieve design patterns
+- Load relevant context
 
-**CREATIVE Mode**
-- Real-time capture during creative sessions
-- Template provision for structured decision making
-- Quality scoring and feedback
+**PLAN Mode**
+- Reference architectural decisions
+- Use proven patterns
+- Apply lessons learned
+- Leverage existing designs
+
+**IMPLEMENT Mode**
+- Follow architectural decisions
+- Implement design patterns
+- Track implementation notes
+- Capture implementation insights
 
 **REFLECT Mode**
-- Comparison of planned vs. implemented decisions
-- Success rate updates based on implementation results
-- Lesson learned extraction and documentation
+- Analyze decision effectiveness
+- Evaluate implementation success
+- Update decision confidence
+- Generate improvement insights
 
 **ARCHIVE Mode**
-- Long-term preservation of creative artifacts
-- Pattern effectiveness analysis
-- Strategic knowledge synthesis
+- Finalize creative archives
+- Generate summary reports
+- Update knowledge base
+- Prepare for future access
 
-This comprehensive capture system ensures that all creative phase outputs are systematically documented, preserved, and made available for future reference, creating a valuable knowledge base that improves over time.
+### File System Integration
 
-> **TL;DR:** Automated system for capturing, structuring, and preserving creative phase results including architectural decisions, design processes, and implementation guidance.
-
-## 🎯 CAPTURE SYSTEM OVERVIEW
-
-The Creative Results Capture System automatically documents and preserves all outputs from creative phases, ensuring no architectural decisions or design insights are lost and creating a comprehensive knowledge base for future reference.
-
-### Core Capture Components
-
-**Automatic Documentation**
-- Real-time capture of creative phase outputs
-- Structured metadata extraction
-- Decision point identification
-- Artifact preservation
-
-**Structured Storage**
-- Hierarchical organization by project and date
-- Categorization by decision type
-- Searchable metadata indexing
-- Version control integration
-
-**Quality Assurance**
-- Completeness validation
-- Consistency checking
-- Format standardization
-- Integrity verification
-
-## 📸 AUTOMATIC CAPTURE MECHANISMS
-
-### Real-time Documentation Capture
-
-**Creative Phase Monitoring**
-```yaml
-capture_triggers:
-  phase_start:
-    - Initialize capture session
-    - Create session metadata
-    - Set up monitoring hooks
-
-  decision_points:
-    - Capture decision context
-    - Record alternatives considered
-    - Document selection rationale
-    - Store supporting artifacts
-
-  phase_completion:
-    - Finalize documentation
-    - Generate summary report
-    - Archive all artifacts
-    - Update search indexes
-```
-
-**Document Structure Extraction**
-- Automatic parsing of creative phase documents
-- Identification of key sections (decisions, alternatives, rationale)
-- Extraction of architectural diagrams and models
-- Capture of discussion notes and comments
-
-### Metadata Generation
-
-**Session Metadata**
-```yaml
-session_metadata:
-  basic_info:
-    session_id: "CREATIVE-SESS-2024-12-09-001"
-    task_id: "TASK-ID-YYYY-MM-DD"
-    start_time: "2024-12-09T10:00:00Z"
-    end_time: "2024-12-09T11:30:00Z"
-    duration: "90 minutes"
-
-  participants:
-    - role: "architect"
-      name: "John Doe"
-      contribution_level: "high"
-    - role: "developer"
-      name: "Jane Smith"
-      contribution_level: "medium"
-
-  context:
-    project_phase: "design"
-    complexity_level: "Level 3"
-    domain: "web_application"
-    technologies: ["React", "Node.js", "PostgreSQL"]
-
-  outcomes:
-    decisions_made: 5
-    alternatives_considered: 12
-    artifacts_created: 3
-    follow_up_actions: 2
-```
-
-**Decision Metadata**
-```yaml
-decision_metadata:
-  decision_id: "ARCH-001-2024-12-09"
-  title: "Database Architecture Selection"
-  category: "data_architecture"
-  impact_level: "high"
-  confidence_level: 8.5
-
-  context:
-    problem_statement: "Need scalable database solution for user data"
-    constraints: ["ACID compliance", "< 100ms response time", "budget < $1000/month"]
-    requirements: ["handle 10k concurrent users", "99.9% uptime"]
-
-  process:
-    alternatives_considered: 4
-    evaluation_criteria: ["performance", "cost", "scalability", "maintenance"]
-    decision_method: "weighted_scoring_matrix"
-    consensus_level: "unanimous"
-
-  outcome:
-    selected_option: "PostgreSQL with read replicas"
-    rationale: "Best balance of ACID compliance and performance"
-    implementation_complexity: "medium"
-    estimated_effort: "2 weeks"
-```
-
-## 🗂️ STRUCTURED STORAGE SYSTEM
-
-### Hierarchical Organization
-
-**Directory Structure**
+**Storage Structure**
 ```
 memory-bank/creative/
-├── architecture/
-│   ├── 2024/
-│   │   ├── 12/
-│   │   │   ├── 09-task-continuity-architecture/
-│   │   │   │   ├── session-metadata.yaml
-│   │   │   │   ├── decisions/
-│   │   │   │   │   ├── ARCH-001-database-choice.md
-│   │   │   │   │   ├── ARCH-002-api-design.md
-│   │   │   │   │   └── ARCH-003-deployment-strategy.md
-│   │   │   │   ├── artifacts/
-│   │   │   │   │   ├── architecture-diagram.md
-│   │   │   │   │   ├── data-model.md
-│   │   │   │   │   └── api-specification.yaml
-│   │   │   │   ├── process/
-│   │   │   │   │   ├── discussion-notes.md
-│   │   │   │   │   ├── evaluation-matrices.md
-│   │   │   │   │   └── iteration-log.md
-│   │   │   │   └── summary-report.md
-│   │   │   └── 08-rules-integration-architecture/
-│   │   └── 11/
-│   └── 2023/
-├── algorithms/
-├── ui-ux/
-├── data-models/
-└── cross-cutting/
+├── sessions/
+│   ├── CREATIVE-2024-12-09-103045/
+│   │   ├── session-metadata.yaml
+│   │   ├── decisions/
+│   │   ├── artifacts/
+│   │   └── context/
+├── decisions/
+│   ├── architecture/
+│   ├── algorithms/
+│   ├── ui-ux/
+│   └── data-models/
+├── artifacts/
+│   ├── diagrams/
+│   ├── documents/
+│   └── prototypes/
+└── index/
+    ├── by-date.json
+    ├── by-category.json
+    ├── by-tags.json
+    └── by-quality.json
 ```
-
-### Categorization System
-
-**Decision Categories**
-- **Architecture**: System design, component organization, integration patterns
-- **Algorithm**: Data processing, optimization, computational approaches
-- **UI/UX**: User interface design, user experience flows, interaction patterns
-- **Data Model**: Database design, data structures, information architecture
-- **Cross-cutting**: Security, performance, monitoring, deployment
-
-**Impact Levels**
-- **Critical**: System-wide impact, affects multiple components
-- **High**: Significant impact on major features or components
-- **Medium**: Moderate impact on specific features
-- **Low**: Minor impact, easily reversible
-
-## 📋 CAPTURE TEMPLATES
-
-### Decision Capture Template
-
-```markdown
-# Decision: [Decision Title]
-
-## Metadata
-- **Decision ID**: ARCH-XXX-YYYY-MM-DD
-- **Date**: YYYY-MM-DD
-- **Category**: [architecture|algorithm|ui_ux|data_model|cross_cutting]
-- **Impact Level**: [critical|high|medium|low]
-- **Confidence**: [1-10]
-
-## Context
-### Problem Statement
-[Clear description of the problem being solved]
-
-### Constraints
-- [Constraint 1]
-- [Constraint 2]
-- [Constraint 3]
-
-### Requirements
-- [Requirement 1]
-- [Requirement 2]
-- [Requirement 3]
-
-## Decision Process
-### Alternatives Considered
-1. **Option 1**: [Description]
-   - Pros: [List advantages]
-   - Cons: [List disadvantages]
-   - Effort: [Estimation]
-
-2. **Option 2**: [Description]
-   - Pros: [List advantages]
-   - Cons: [List disadvantages]
-   - Effort: [Estimation]
-
-### Evaluation Criteria
-- [Criterion 1]: Weight [X%]
-- [Criterion 2]: Weight [Y%]
-- [Criterion 3]: Weight [Z%]
-
-### Scoring Matrix
-| Option | Criterion 1 | Criterion 2 | Criterion 3 | Total |
-|--------|-------------|-------------|-------------|-------|
-| Option 1 | [Score] | [Score] | [Score] | [Total] |
-| Option 2 | [Score] | [Score] | [Score] | [Total] |
-
-## Decision
-### Selected Option
-[Chosen option with brief justification]
-
-### Rationale
-[Detailed explanation of why this option was selected]
-
-### Implementation Plan
-- **Phase 1**: [Description and timeline]
-- **Phase 2**: [Description and timeline]
-- **Phase 3**: [Description and timeline]
-
-### Success Criteria
-- [Measurable criterion 1]
-- [Measurable criterion 2]
-- [Measurable criterion 3]
-
-### Risks and Mitigation
-- **Risk 1**: [Description] → **Mitigation**: [Strategy]
-- **Risk 2**: [Description] → **Mitigation**: [Strategy]
-
-## Follow-up Actions
-- [ ] [Action item 1] - Assigned to: [Person] - Due: [Date]
-- [ ] [Action item 2] - Assigned to: [Person] - Due: [Date]
-
-## Related Decisions
-- [Link to related decision 1]
-- [Link to related decision 2]
-
-## Artifacts
-- [Link to architecture diagram]
-- [Link to technical specification]
-- [Link to prototype or proof of concept]
-```
-
-### Session Summary Template
-
-```markdown
-# Creative Session Summary
-
-## Session Information
-- **Session ID**: CREATIVE-SESS-YYYY-MM-DD-XXX
-- **Task ID**: [Related task identifier]
-- **Date**: YYYY-MM-DD
-- **Duration**: [X hours Y minutes]
-- **Type**: [architecture|algorithm|ui_ux|data_model]
-
-## Participants
-- **[Role]**: [Name] - Contribution: [high|medium|low]
-- **[Role]**: [Name] - Contribution: [high|medium|low]
-
-## Objectives
-- [Primary objective]
-- [Secondary objective]
-- [Additional goals]
-
-## Decisions Made
-1. **[Decision Title]** (ID: ARCH-XXX)
-   - Impact: [critical|high|medium|low]
-   - Confidence: [1-10]
-   - Status: [final|provisional|needs_validation]
-
-2. **[Decision Title]** (ID: ARCH-XXX)
-   - Impact: [critical|high|medium|low]
-   - Confidence: [1-10]
-   - Status: [final|provisional|needs_validation]
-
-## Key Insights
-- [Important insight or learning]
-- [Architectural principle discovered]
-- [Pattern or anti-pattern identified]
-
-## Artifacts Created
-- [Artifact name and description]
-- [Artifact name and description]
-
-## Open Questions
-- [Question requiring further investigation]
-- [Dependency on external decision]
-
-## Next Steps
-- [ ] [Action item] - Owner: [Person] - Due: [Date]
-- [ ] [Action item] - Owner: [Person] - Due: [Date]
-
-## Quality Assessment
-- **Process Effectiveness**: [1-10]
-- **Decision Quality**: [1-10]
-- **Team Collaboration**: [1-10]
-- **Time Efficiency**: [1-10]
-
-## Lessons Learned
-- [Process improvement opportunity]
-- [What worked well]
-- [What could be improved]
-```
-
-## 🔍 SEARCH AND INDEXING
-
-### Metadata Indexing
-
-**Search Index Structure**
-```yaml
-search_index:
-  decisions:
-    - decision_id: "ARCH-001-2024-12-09"
-      title: "Database Architecture Selection"
-      category: "data_architecture"
-      keywords: ["database", "postgresql", "scalability", "performance"]
-      impact_level: "high"
-      date: "2024-12-09"
-      success_rate: 0.95
-
-  patterns:
-    - pattern_id: "PAT-DB-001"
-      name: "PostgreSQL with Read Replicas"
-      category: "data_architecture"
-      success_rate: 0.92
-      usage_count: 15
-      last_used: "2024-12-09"
-
-  artifacts:
-    - artifact_id: "ART-ARCH-001"
-      type: "architecture_diagram"
-      title: "System Architecture Overview"
-      related_decisions: ["ARCH-001", "ARCH-002"]
-      file_path: "architecture/2024/12/09-task-continuity/artifacts/architecture-diagram.md"
-```
-
-### Search Capabilities
-
-**Semantic Search**
-- Natural language queries for finding relevant decisions
-- Context-aware search based on current project needs
-- Similarity matching for architectural patterns
-- Success rate weighted recommendations
-
-**Faceted Search**
-- Filter by category, impact level, date range
-- Search by technology stack or domain
-- Filter by success rate or confidence level
-- Search by team or participant involvement
-
-## �� INTEGRATION POINTS
-
-### Memory Bank Mode Integration
-
-**VAN Mode**
-- Automatic loading of relevant historical decisions
-- Pattern suggestions based on project context
-- Success rate analysis for proposed approaches
-
-**CREATIVE Mode**
-- Real-time capture during creative sessions
-- Template provision for structured decision making
-- Quality scoring and feedback
-
-**REFLECT Mode**
-- Comparison of planned vs. implemented decisions
-- Success rate updates based on implementation results
-- Lesson learned extraction and documentation
-
-**ARCHIVE Mode**
-- Long-term preservation of creative artifacts
-- Pattern effectiveness analysis
-- Strategic knowledge synthesis
-
-### Tool Integration
-
-**IDE Integration**
-- Automatic capture of design documents
-- Real-time decision logging
-- Template insertion and completion
 
 **Version Control Integration**
-- Automatic commit of creative artifacts
-- Branch correlation with creative sessions
-- Change tracking for decision evolution
+- Git hooks for automatic capture
+- Commit message analysis
+- Branch-based session tracking
+- Merge conflict resolution
 
-**Communication Tools**
-- Meeting notes integration
-- Discussion thread capture
-- Stakeholder feedback collection
-
-This comprehensive capture system ensures that all creative phase outputs are systematically documented, preserved, and made available for future reference, creating a valuable knowledge base that improves over time.
+This Creative Results Capture System ensures comprehensive preservation of all creative phase outputs, enabling effective knowledge reuse and continuous improvement of architectural decision-making.
