@@ -1,0 +1,300 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# DATE MANAGEMENT SYSTEM
+
+> **TL;DR:** Dynamic date management system that uses real command-line dates instead of hardcoded values, with mode-based access control ensuring IMPLEMENT mode cannot modify dates while other modes can update them as needed.
+
+## 🚨 CRITICAL FIX
+
+**PROBLEM SOLVED**: AI was using hardcoded date "2024-12-09" instead of real current date
+**SOLUTION**: Dynamic date system using command-line `date` command with proper access control
+
+## 📅 DATE SYSTEM ARCHITECTURE
+
+### Current Date Storage
+- **File**: `memory-bank/system/current-date.txt`
+- **Format**: YYYY-MM-DD (ISO 8601)
+- **Source**: Command line `date +%Y-%m-%d`
+- **Initialization**: System startup with real current date
+
+### Access Control by Mode
+
+**✅ WRITABLE MODES** (can update date):
+- **VAN Mode**: Can update date when starting new analysis
+- **PLAN Mode**: Can update date when planning new features
+- **CREATIVE Mode**: Can update date during creative sessions
+- **REFLECT Mode**: Can update date during reflection
+- **ARCHIVE Mode**: Can update date during archival
+
+**❌ READ-ONLY MODE** (cannot update date):
+- **IMPLEMENT Mode**: Uses stored date, cannot modify (prevents inconsistency during implementation)
+
+## 🔧 IMPLEMENTATION FUNCTIONS
+
+### Core Date Functions
+
+```bash
+# Get current system date
+get_system_date() {
+  if [[ -f "memory-bank/system/current-date.txt" ]]; then
+    cat memory-bank/system/current-date.txt
+  else
+    date +%Y-%m-%d
+  fi
+}
+
+# Update system date (with mode check)
+update_system_date() {
+  local current_mode="$1"
+
+  # Check if current mode can update date
+  if [[ "$current_mode" == "IMPLEMENT" ]]; then
+    echo "WARNING: IMPLEMENT mode cannot update system date"
+    return 1
+  fi
+
+  # Update date with real current date
+  local new_date=$(date +%Y-%m-%d)
+  echo "$new_date" > memory-bank/system/current-date.txt
+  echo "System date updated to: $new_date"
+  return 0
+}
+
+# Initialize date system
+init_date_system() {
+  mkdir -p memory-bank/system
+  local current_date=$(date +%Y-%m-%d)
+  echo "$current_date" > memory-bank/system/current-date.txt
+  echo "Date system initialized with: $current_date"
+}
+
+# Validate date format
+validate_date() {
+  local date_string="$1"
+  if [[ "$date_string" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+```
+
+### Mode Integration
+
+**VAN Mode Integration**:
+```bash
+# At VAN mode start
+update_system_date "VAN"
+CURRENT_DATE=$(get_system_date)
+echo "VAN Mode started on: $CURRENT_DATE"
+```
+
+**PLAN Mode Integration**:
+```bash
+# At PLAN mode start
+update_system_date "PLAN"
+CURRENT_DATE=$(get_system_date)
+echo "Planning session started on: $CURRENT_DATE"
+```
+
+**CREATIVE Mode Integration**:
+```bash
+# At CREATIVE mode start
+update_system_date "CREATIVE"
+CURRENT_DATE=$(get_system_date)
+echo "Creative session started on: $CURRENT_DATE"
+```
+
+**IMPLEMENT Mode Integration**:
+```bash
+# At IMPLEMENT mode start (READ-ONLY)
+CURRENT_DATE=$(get_system_date)
+echo "Implementation using date: $CURRENT_DATE (read-only)"
+# NO update_system_date call - prevents date changes during implementation
+```
+
+**REFLECT Mode Integration**:
+```bash
+# At REFLECT mode start
+update_system_date "REFLECT"
+CURRENT_DATE=$(get_system_date)
+echo "Reflection session started on: $CURRENT_DATE"
+```
+
+**ARCHIVE Mode Integration**:
+```bash
+# At ARCHIVE mode start
+update_system_date "ARCHIVE"
+CURRENT_DATE=$(get_system_date)
+echo "Archive session started on: $CURRENT_DATE"
+```
+
+## 📝 USAGE IN DOCUMENTATION
+
+### File Naming with Real Dates
+```bash
+# Instead of hardcoded dates
+CURRENT_DATE=$(get_system_date)
+FILENAME="arch-${CURRENT_DATE}-cursor-memory-bank-001-task-continuity.md"
+
+# Decision IDs with real dates
+DECISION_ID="ARCH-${CURRENT_DATE}-001"
+```
+
+### Metadata with Real Dates
+```yaml
+decision_metadata:
+  id: "ARCH-$(get_system_date)-001"
+  created: "$(date -Iseconds)"
+  last_updated: "$(get_system_date)"
+
+version_history:
+  - version: "1.0"
+    date: "$(date -Iseconds)"
+    changes: "Initial decision"
+```
+
+### Archive Organization with Real Dates
+```bash
+# Create date-based archive structure
+CURRENT_DATE=$(get_system_date)
+YEAR=$(echo $CURRENT_DATE | cut -d'-' -f1)
+MONTH=$(echo $CURRENT_DATE | cut -d'-' -f2)
+DAY=$(echo $CURRENT_DATE | cut -d'-' -f3)
+
+ARCHIVE_PATH="memory-bank/creative/projects/cursor-memory-bank/$YEAR/$MONTH/$DAY"
+mkdir -p "$ARCHIVE_PATH"
+```
+
+## 🔍 VALIDATION AND MONITORING
+
+### Date Consistency Checks
+```bash
+# Check date system health
+check_date_system() {
+  local stored_date=$(get_system_date)
+  local current_date=$(date +%Y-%m-%d)
+
+  if validate_date "$stored_date"; then
+    echo "✅ Stored date format valid: $stored_date"
+  else
+    echo "❌ Invalid stored date format: $stored_date"
+    return 1
+  fi
+
+  # Check if date is reasonable (not too old)
+  local days_diff=$(( ($(date -d "$current_date" +%s) - $(date -d "$stored_date" +%s)) / 86400 ))
+
+  if [[ $days_diff -gt 7 ]]; then
+    echo "⚠️  Stored date is $days_diff days old: $stored_date"
+    echo "Consider updating with: update_system_date <mode>"
+  else
+    echo "✅ Date freshness OK: $stored_date (${days_diff} days old)"
+  fi
+}
+
+# Monitor date usage
+log_date_access() {
+  local mode="$1"
+  local action="$2"  # "read" or "update"
+  local date_used=$(get_system_date)
+
+  echo "$(date -Iseconds) | $mode | $action | $date_used" >> memory-bank/logs/date-access.log
+}
+```
+
+### Error Handling
+```bash
+# Safe date operations with fallback
+safe_get_date() {
+  local stored_date=$(get_system_date)
+
+  if validate_date "$stored_date"; then
+    echo "$stored_date"
+  else
+    echo "ERROR: Invalid stored date, using current date"
+    date +%Y-%m-%d
+  fi
+}
+
+# Recovery from corrupted date file
+recover_date_system() {
+  echo "Recovering date system..."
+  local current_date=$(date +%Y-%m-%d)
+  echo "$current_date" > memory-bank/system/current-date.txt
+  echo "Date system recovered with: $current_date"
+}
+```
+
+## 🎯 INTEGRATION POINTS
+
+### Memory Bank Workflow Integration
+
+**System Initialization**:
+- Initialize date system on first run
+- Validate date system health on each mode start
+- Log date access for audit trail
+
+**Mode Transitions**:
+- Update date when entering writable modes
+- Preserve date when entering IMPLEMENT mode
+- Validate date consistency across transitions
+
+**Documentation Generation**:
+- Use real dates in all generated files
+- Ensure consistent date format across all documents
+- Archive with proper date-based organization
+
+### Configuration Integration
+
+**System Configuration** (`memory-bank/config/system.yaml`):
+```yaml
+date_management:
+  source: "command_line"
+  update_command: "date +%Y-%m-%d"
+  storage_file: "memory-bank/system/current-date.txt"
+  readonly_modes: ["IMPLEMENT"]
+  validation:
+    format: "YYYY-MM-DD"
+    max_age_days: 7
+```
+
+**Mode Configuration**:
+```yaml
+modes:
+  IMPLEMENT:
+    can_update_date: false
+    date_access: "readonly"
+  PLAN:
+    can_update_date: true
+    date_access: "readwrite"
+```
+
+## ✅ VERIFICATION CHECKLIST
+
+**System Health Checks**:
+- [ ] Date file exists and is readable
+- [ ] Date format is valid (YYYY-MM-DD)
+- [ ] Date is reasonably current (< 7 days old)
+- [ ] IMPLEMENT mode cannot update date
+- [ ] Other modes can update date successfully
+
+**Integration Checks**:
+- [ ] All modes use get_system_date() function
+- [ ] No hardcoded dates in documentation
+- [ ] Archive structure uses real dates
+- [ ] Decision IDs include real dates
+- [ ] Metadata timestamps are accurate
+
+**Functionality Checks**:
+- [ ] Date updates work in VAN/PLAN/CREATIVE/REFLECT/ARCHIVE modes
+- [ ] Date updates are blocked in IMPLEMENT mode
+- [ ] Date validation prevents invalid formats
+- [ ] Recovery works if date file is corrupted
+- [ ] Logging captures all date operations
+
+This date management system ensures all Memory Bank operations use accurate, real-world dates while maintaining consistency and preventing unauthorized modifications during implementation phases.
+

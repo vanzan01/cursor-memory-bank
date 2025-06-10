@@ -11,7 +11,22 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START ARCHIVE MODE"] --> ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
+    Start["START ARCHIVE MODE"] --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK"]
+
+    %% Task Continuity Validation - CRITICAL ADDITION
+    TaskContinuityCheck --> CheckReflection{"Reflection<br>Complete?"}
+    CheckReflection -->|"No"| BlockArchive["🚫 BLOCK ARCHIVE MODE<br>Reflection Incomplete"]
+    CheckReflection -->|"Yes"| CheckDeliverables{"All Deliverables<br>Ready?"}
+
+    CheckDeliverables -->|"No"| WarnMissing["⚠️ WARN: Missing<br>Deliverables"]
+    CheckDeliverables -->|"Yes"| ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
+
+    WarnMissing --> UserChoice{"User Wants to<br>Continue?"}
+    UserChoice -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
+    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive"]
+
+    CreatePartialArchive --> ReadTasks
+    BlockArchive --> ReturnReflect
 
     %% Initial Assessment
     ReadTasks --> VerifyReflect{"Reflection<br>Complete?"}
