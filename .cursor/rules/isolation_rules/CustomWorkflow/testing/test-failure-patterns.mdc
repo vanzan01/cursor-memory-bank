@@ -1,0 +1,193 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# TEST FAILURE PATTERN DETECTION
+
+> **TL;DR:** Systematic detection and analysis of test failure patterns to identify root causes and systemic issues.
+
+## 🔍 FAILURE PATTERN ANALYSIS WORKFLOW
+
+```mermaid
+graph TD
+    Failures["Test Failures"] --> Extract["Extract Failure Data"]
+    Extract --> Categorize["Categorize by Pattern"]
+    Categorize --> Group["Group Patterns"]
+    Categorize --> Time["Time Patterns"]
+    Categorize --> Dependency["Dependency Patterns"]
+    Categorize --> Resource["Resource Patterns"]
+    Categorize --> Config["Config Patterns"]
+    Categorize --> Integration["Integration Patterns"]
+
+    Group --> Report["Pattern Report"]
+    Time --> Report
+    Dependency --> Report
+    Resource --> Report
+    Config --> Report
+    Integration --> Report
+```
+
+## 📋 PATTERN DETECTION RULES
+
+### Rule #52: Six Pattern Categories
+- **When**: Analyzing test failures in large suites
+- **What**: Categorize failures into 6 distinct pattern types
+- **Purpose**: Identify systemic issues and root causes
+
+### Rule #53: Pattern-Based Root Cause Analysis
+- **When**: Multiple failures detected
+- **What**: Analyze patterns to determine underlying causes
+- **Purpose**: Fix root causes instead of individual symptoms
+
+## 🎯 PATTERN CATEGORIES
+
+### 1. Group Patterns
+**Description**: Tests failing in same module/component
+**Detection**:
+```bash
+grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr
+```
+**Indicators**: Multiple failures in same file/directory
+**Root Causes**: Module-specific bugs, shared dependencies
+
+### 2. Time Patterns
+**Description**: Tests failing due to timing issues
+**Detection**:
+```bash
+grep -i "timeout\|timing\|race\|async" test_output.log | wc -l
+```
+**Indicators**: Timeout errors, race conditions
+**Root Causes**: Async handling, slow operations, timing dependencies
+
+### 3. Dependency Patterns
+**Description**: Tests failing due to missing/incorrect dependencies
+**Detection**:
+```bash
+grep -i "cannot find\|module not found\|import error\|dependency" test_output.log | wc -l
+```
+**Indicators**: Import errors, missing modules
+**Root Causes**: Package issues, path problems, version conflicts
+
+### 4. Resource Patterns
+**Description**: Tests failing due to resource constraints
+**Detection**:
+```bash
+grep -i "memory\|disk\|network\|cpu\|resource" test_output.log | wc -l
+```
+**Indicators**: Memory errors, disk space, network issues
+**Root Causes**: Resource exhaustion, infrastructure problems
+
+### 5. Configuration Patterns
+**Description**: Tests failing due to configuration issues
+**Detection**:
+```bash
+grep -i "config\|environment\|env\|setting" test_output.log | wc -l
+```
+**Indicators**: Environment variable errors, config mismatches
+**Root Causes**: Environment setup, configuration drift
+
+### 6. Integration Patterns
+**Description**: Tests failing due to integration issues
+**Detection**:
+```bash
+grep -i "connection\|api\|service\|integration\|external" test_output.log | wc -l
+```
+**Indicators**: API failures, service unavailability
+**Root Causes**: External service issues, integration problems
+
+## 📊 PATTERN ANALYSIS SCRIPT
+
+```bash
+#!/bin/bash
+# test-failure-pattern-analysis.sh
+
+echo "=== TEST FAILURE PATTERN ANALYSIS ===" >> test_analysis.log
+echo "Analysis Date: $(date)" >> test_analysis.log
+
+# Extract all failures
+TOTAL_FAILURES=$(grep -c "✗" test_output.log)
+echo "Total Failures: $TOTAL_FAILURES" >> test_analysis.log
+
+if [ $TOTAL_FAILURES -eq 0 ]; then
+    echo "No failures detected - skipping pattern analysis" >> test_analysis.log
+    exit 0
+fi
+
+# 1. Group Patterns
+echo "" >> test_analysis.log
+echo "1. GROUP PATTERNS:" >> test_analysis.log
+GROUP_PATTERNS=$(grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr | head -5)
+echo "$GROUP_PATTERNS" >> test_analysis.log
+
+# 2. Time Patterns
+echo "" >> test_analysis.log
+echo "2. TIME PATTERNS:" >> test_analysis.log
+TIME_FAILURES=$(grep -i "timeout\|timing\|race\|async" test_output.log | wc -l)
+TIME_PERCENTAGE=$(echo "scale=1; $TIME_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Time-related failures: $TIME_FAILURES ($TIME_PERCENTAGE%)" >> test_analysis.log
+
+# 3. Dependency Patterns
+echo "" >> test_analysis.log
+echo "3. DEPENDENCY PATTERNS:" >> test_analysis.log
+DEP_FAILURES=$(grep -i "cannot find\|module not found\|import error\|dependency" test_output.log | wc -l)
+DEP_PERCENTAGE=$(echo "scale=1; $DEP_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Dependency-related failures: $DEP_FAILURES ($DEP_PERCENTAGE%)" >> test_analysis.log
+
+# 4. Resource Patterns
+echo "" >> test_analysis.log
+echo "4. RESOURCE PATTERNS:" >> test_analysis.log
+RES_FAILURES=$(grep -i "memory\|disk\|network\|cpu\|resource" test_output.log | wc -l)
+RES_PERCENTAGE=$(echo "scale=1; $RES_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Resource-related failures: $RES_FAILURES ($RES_PERCENTAGE%)" >> test_analysis.log
+
+# 5. Configuration Patterns
+echo "" >> test_analysis.log
+echo "5. CONFIGURATION PATTERNS:" >> test_analysis.log
+CONFIG_FAILURES=$(grep -i "config\|environment\|env\|setting" test_output.log | wc -l)
+CONFIG_PERCENTAGE=$(echo "scale=1; $CONFIG_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Configuration-related failures: $CONFIG_FAILURES ($CONFIG_PERCENTAGE%)" >> test_analysis.log
+
+# 6. Integration Patterns
+echo "" >> test_analysis.log
+echo "6. INTEGRATION PATTERNS:" >> test_analysis.log
+INT_FAILURES=$(grep -i "connection\|api\|service\|integration\|external" test_output.log | wc -l)
+INT_PERCENTAGE=$(echo "scale=1; $INT_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Integration-related failures: $INT_FAILURES ($INT_PERCENTAGE%)" >> test_analysis.log
+
+# Pattern Summary
+echo "" >> test_analysis.log
+echo "PATTERN SUMMARY:" >> test_analysis.log
+echo "Most common pattern: $(echo "$GROUP_PATTERNS" | head -1 | awk '{print $2}')" >> test_analysis.log
+
+# Recommendations
+echo "" >> test_analysis.log
+echo "RECOMMENDATIONS:" >> test_analysis.log
+if [ $TIME_FAILURES -gt $(echo "$TOTAL_FAILURES * 0.2" | bc) ]; then
+    echo "- High time-related failures: Review async handling and timeouts" >> test_analysis.log
+fi
+if [ $DEP_FAILURES -gt $(echo "$TOTAL_FAILURES * 0.1" | bc) ]; then
+    echo "- Dependency issues detected: Check package.json and imports" >> test_analysis.log
+fi
+if [ $RES_FAILURES -gt 0 ]; then
+    echo "- Resource constraints detected: Check system resources" >> test_analysis.log
+fi
+```
+
+## 🔄 QA MODE INTEGRATION
+
+### Pattern-Based Status Determination:
+```bash
+# Determine if patterns indicate systemic issues
+SYSTEMIC_THRESHOLD=30  # 30% of failures in single pattern = systemic
+
+if [ $TIME_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ] ||
+   [ $DEP_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ] ||
+   [ $CONFIG_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ]; then
+    echo "QA Status: CRITICAL - Systemic pattern detected" >> test_analysis.log
+else
+    echo "QA Status: Pattern analysis complete" >> test_analysis.log
+fi
+```
+
+This systematic pattern analysis helps identify and resolve root causes of test failures efficiently.

@@ -1,0 +1,235 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# QA MODE INTEGRATION WITH MEMORY BANK
+
+> **TL;DR:** Seamless integration of QA mode with Memory Bank phases, providing automated quality assessment and threshold-based status determination.
+
+## 🔄 QA MODE WORKFLOW INTEGRATION
+
+```mermaid
+graph TD
+    Start["Memory Bank Phase"] --> QACheck{"QA Mode<br>Triggered?"}
+    QACheck -->|"Yes"| Analyze["Analyze Current State"]
+    QACheck -->|"No"| Continue["Continue Phase"]
+
+    Analyze --> TestRun["Run Tests"]
+    TestRun --> PatternAnalysis["Pattern Analysis"]
+    PatternAnalysis --> ThresholdCheck["Threshold Check"]
+
+    ThresholdCheck --> Critical{"Critical<br>Issues?<br>>20%"}
+    ThresholdCheck --> Warning{"Warning<br>Issues?<br>5-20%"}
+    ThresholdCheck --> Good{"Good<br>Status?<br><5%"}
+
+    Critical -->|"Yes"| CriticalAction["🔴 CRITICAL STATUS<br>- Block progression<br>- Require fixes<br>- Document issues"]
+    Warning -->|"Yes"| WarningAction["🟡 WARNING STATUS<br>- Allow progression<br>- Flag concerns<br>- Monitor closely"]
+    Good -->|"Yes"| GoodAction["🟢 GOOD STATUS<br>- Continue normally<br>- Document success<br>- Archive results"]
+
+    CriticalAction --> UpdateMemory["Update Memory Bank"]
+    WarningAction --> UpdateMemory
+    GoodAction --> UpdateMemory
+
+    UpdateMemory --> NextPhase["Next Phase"]
+    Continue --> NextPhase
+```
+
+## 📋 QA INTEGRATION RULES
+
+### Rule #54: Automatic QA Triggering
+- **When**: Completing any Memory Bank phase
+- **What**: Automatically trigger QA assessment
+- **Purpose**: Ensure quality gates before phase transitions
+
+### Rule #55: Threshold-Based Status System
+- **When**: QA analysis complete
+- **What**: Apply threshold-based status determination
+- **Purpose**: Consistent quality assessment across all phases
+
+### Rule #56: Memory Bank State Integration
+- **When**: QA status determined
+- **What**: Update Memory Bank with QA results
+- **Purpose**: Maintain quality history and inform future decisions
+
+## 🎯 QA THRESHOLD SYSTEM
+
+### Critical Threshold (>20%)
+**Triggers**:
+- Test failure rate >20%
+- Pattern analysis shows systemic issues
+- Critical bugs detected
+
+**Actions**:
+```bash
+# Block phase progression
+echo "QA Status: CRITICAL - Phase progression blocked" >> memory-bank/qa-status.log
+echo "Issues detected: $CRITICAL_ISSUES" >> memory-bank/qa-status.log
+echo "Required actions: Fix critical issues before proceeding" >> memory-bank/qa-status.log
+
+# Update tasks.md with critical status
+sed -i 's/Status: .*/Status: ❌ CRITICAL - QA Issues Detected/' tasks.md
+```
+
+### Warning Threshold (5-20%)
+**Triggers**:
+- Test failure rate 5-20%
+- Minor pattern issues detected
+- Non-critical concerns identified
+
+**Actions**:
+```bash
+# Allow progression with warnings
+echo "QA Status: WARNING - Proceed with caution" >> memory-bank/qa-status.log
+echo "Issues detected: $WARNING_ISSUES" >> memory-bank/qa-status.log
+echo "Recommended actions: Monitor and address when possible" >> memory-bank/qa-status.log
+
+# Update tasks.md with warning status
+sed -i 's/Status: .*/Status: ⚠️ WARNING - QA Concerns/' tasks.md
+```
+
+### Good Threshold (<5%)
+**Triggers**:
+- Test failure rate <5%
+- No significant patterns detected
+- All quality checks passed
+
+**Actions**:
+```bash
+# Normal progression
+echo "QA Status: GOOD - All quality checks passed" >> memory-bank/qa-status.log
+echo "Test success rate: $SUCCESS_RATE%" >> memory-bank/qa-status.log
+echo "Ready for next phase" >> memory-bank/qa-status.log
+
+# Update tasks.md with good status
+sed -i 's/Status: .*/Status: ✅ GOOD - QA Passed/' tasks.md
+```
+
+## 🔍 QA ANALYSIS INTEGRATION
+
+### Test Analysis Integration
+```bash
+#!/bin/bash
+# qa-memory-bank-integration.sh
+
+# Get current Memory Bank phase
+CURRENT_PHASE=$(grep "Current Phase:" tasks.md | cut -d':' -f2 | xargs)
+echo "QA Analysis for Phase: $CURRENT_PHASE" >> memory-bank/qa-status.log
+
+# Run comprehensive test analysis
+bun test --reporter=verbose > test_output.log 2>&1
+TEST_EXIT_CODE=$?
+
+# Extract test metrics
+TOTAL_TESTS=$(grep -c "✓\|✗" test_output.log)
+FAILED_TESTS=$(grep -c "✗" test_output.log)
+SUCCESS_RATE=$(echo "scale=1; ($TOTAL_TESTS - $FAILED_TESTS) * 100 / $TOTAL_TESTS" | bc)
+FAILURE_RATE=$(echo "scale=1; $FAILED_TESTS * 100 / $TOTAL_TESTS" | bc)
+
+echo "Test Metrics:" >> memory-bank/qa-status.log
+echo "- Total Tests: $TOTAL_TESTS" >> memory-bank/qa-status.log
+echo "- Failed Tests: $FAILED_TESTS" >> memory-bank/qa-status.log
+echo "- Success Rate: $SUCCESS_RATE%" >> memory-bank/qa-status.log
+echo "- Failure Rate: $FAILURE_RATE%" >> memory-bank/qa-status.log
+
+# Run pattern analysis if failures detected
+if [ $FAILED_TESTS -gt 0 ]; then
+    echo "Running pattern analysis..." >> memory-bank/qa-status.log
+    bash .cursor/rules/isolation_rules/CustomWorkflow/testing/test-failure-pattern-analysis.sh
+fi
+
+# Determine QA status based on thresholds
+if [ $(echo "$FAILURE_RATE > 20" | bc) -eq 1 ]; then
+    QA_STATUS="CRITICAL"
+    QA_EMOJI="🔴"
+    QA_ACTION="BLOCK"
+elif [ $(echo "$FAILURE_RATE > 5" | bc) -eq 1 ]; then
+    QA_STATUS="WARNING"
+    QA_EMOJI="🟡"
+    QA_ACTION="PROCEED_WITH_CAUTION"
+else
+    QA_STATUS="GOOD"
+    QA_EMOJI="🟢"
+    QA_ACTION="CONTINUE"
+fi
+
+echo "" >> memory-bank/qa-status.log
+echo "QA DETERMINATION:" >> memory-bank/qa-status.log
+echo "Status: $QA_EMOJI $QA_STATUS" >> memory-bank/qa-status.log
+echo "Action: $QA_ACTION" >> memory-bank/qa-status.log
+echo "Timestamp: $(date)" >> memory-bank/qa-status.log
+
+# Update Memory Bank with QA results
+echo "" >> memory-bank/qa-status.log
+echo "MEMORY BANK INTEGRATION:" >> memory-bank/qa-status.log
+echo "Phase: $CURRENT_PHASE" >> memory-bank/qa-status.log
+echo "QA Status: $QA_STATUS" >> memory-bank/qa-status.log
+echo "Next Action: $QA_ACTION" >> memory-bank/qa-status.log
+
+# Archive QA results to appropriate Memory Bank directory
+QA_ARCHIVE_DIR="memory-bank/development/qa-results"
+mkdir -p "$QA_ARCHIVE_DIR"
+cp memory-bank/qa-status.log "$QA_ARCHIVE_DIR/qa-$(date +%Y%m%d-%H%M%S).log"
+
+echo "QA analysis complete. Status: $QA_STATUS"
+exit $TEST_EXIT_CODE
+```
+
+## 📊 MEMORY BANK QA DASHBOARD
+
+### QA Status Tracking
+```bash
+# Generate QA status summary for Memory Bank
+echo "=== MEMORY BANK QA DASHBOARD ===" > memory-bank/qa-dashboard.md
+echo "Generated: $(date)" >> memory-bank/qa-dashboard.md
+echo "" >> memory-bank/qa-dashboard.md
+
+# Current status
+CURRENT_STATUS=$(tail -1 memory-bank/qa-status.log | grep "Status:" | cut -d':' -f2 | xargs)
+echo "## Current QA Status: $CURRENT_STATUS" >> memory-bank/qa-dashboard.md
+
+# Recent QA history
+echo "" >> memory-bank/qa-dashboard.md
+echo "## Recent QA History:" >> memory-bank/qa-dashboard.md
+ls -t memory-bank/development/qa-results/ | head -5 | while read file; do
+    STATUS=$(grep "Status:" "memory-bank/development/qa-results/$file" | tail -1 | cut -d':' -f2 | xargs)
+    TIMESTAMP=$(grep "Timestamp:" "memory-bank/development/qa-results/$file" | cut -d':' -f2- | xargs)
+    echo "- $TIMESTAMP: $STATUS" >> memory-bank/qa-dashboard.md
+done
+
+# QA trends
+echo "" >> memory-bank/qa-dashboard.md
+echo "## QA Trends:" >> memory-bank/qa-dashboard.md
+CRITICAL_COUNT=$(grep -l "CRITICAL" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+WARNING_COUNT=$(grep -l "WARNING" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+GOOD_COUNT=$(grep -l "GOOD" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+
+echo "- Critical Issues: $CRITICAL_COUNT" >> memory-bank/qa-dashboard.md
+echo "- Warning Issues: $WARNING_COUNT" >> memory-bank/qa-dashboard.md
+echo "- Good Status: $GOOD_COUNT" >> memory-bank/qa-dashboard.md
+```
+
+## 🔄 PHASE TRANSITION INTEGRATION
+
+### Pre-Phase QA Check
+```bash
+# Before starting any Memory Bank phase
+echo "Pre-phase QA check for: $NEXT_PHASE" >> memory-bank/qa-status.log
+bash qa-memory-bank-integration.sh
+
+# Check if QA allows progression
+QA_ACTION=$(grep "Action:" memory-bank/qa-status.log | tail -1 | cut -d':' -f2 | xargs)
+
+if [ "$QA_ACTION" = "BLOCK" ]; then
+    echo "❌ QA BLOCK: Cannot proceed to $NEXT_PHASE due to critical issues"
+    echo "Please resolve critical issues before continuing"
+    exit 1
+elif [ "$QA_ACTION" = "PROCEED_WITH_CAUTION" ]; then
+    echo "⚠️ QA WARNING: Proceeding to $NEXT_PHASE with caution"
+    echo "Monitor for issues and address warnings when possible"
+else
+    echo "✅ QA GOOD: Proceeding to $NEXT_PHASE"
+fi
+```
+
+This QA integration ensures consistent quality assessment throughout all Memory Bank phases.
