@@ -1,56 +1,64 @@
 ---
-description: Task continuity management system for Memory Bank modes
-globs: "**/workflow/**", "**/task*/**", "**/continuity*/**"
+description: "Task continuity management across Memory Bank mode transitions"
+globs: "**/workflow/**", "**/task-continuity/**", "**/mode-transitions/**"
 alwaysApply: true
 ---
 
-# TASK CONTINUITY MANAGEMENT SYSTEM
+# TASK CONTINUITY MANAGEMENT
 
-> **TL;DR:** This system ensures 100% task preservation during Memory Bank mode transitions, preventing loss of unfinished work and maintaining development continuity through automated migration and validation.
+> **TL;DR:** This rule ensures 100% task preservation during Memory Bank mode transitions, preventing loss of unfinished work and maintaining development continuity.
 
-## 🔄 TASK CONTINUITY ARCHITECTURE
+## 🔄 TASK CONTINUITY OVERVIEW
 
-The Task Continuity system consists of five core components working together to ensure seamless task preservation across mode transitions.
+The Task Continuity Management system prevents task loss during mode transitions by implementing automated migration, validation, and preservation mechanisms.
 
-### Core Components
+### Core Principles
 
-1. **Task Status Validator** - Analyzes current task completion status
-2. **Migration Manager** - Creates and processes migration documents
-3. **Mode Transition Controller** - Manages safe transitions between modes
-4. **Task Preservation Engine** - Preserves task context and data
-5. **Warning System** - Alerts users about potential data loss
+**Zero Task Loss**
+- Never delete existing task data without user confirmation
+- Always preserve unfinished work context
+- Maintain task relationships and dependencies
+- Ensure seamless mode transitions
 
-## 📊 TASK STATUS VALIDATION SYSTEM
+**Automated Preservation**
+- Create migration documents for incomplete work
+- Validate task status before transitions
+- Merge unfinished tasks with new requirements
+- Maintain development context across sessions
+
+## 📊 TASK STATUS VALIDATION
 
 ### Task Status Categories
 
-Tasks are categorized into five status levels:
+**✅ COMPLETE**
+- All requirements implemented
+- Testing completed successfully
+- Documentation updated
+- Ready for archiving
 
-- **✅ COMPLETE** - Ready for archiving, safe to transition
-- **🔄 IN_PROGRESS** - Active development, requires migration
-- **📋 PLANNED** - Ready for implementation, requires migration
-- **⛔ BLOCKED** - Waiting for dependencies, requires migration
-- **⏸️ ON_HOLD** - Temporarily suspended, requires migration
+**🔄 IN_PROGRESS**
+- Active development underway
+- Partial implementation exists
+- Work context preserved
+- Requires migration for transitions
 
-### Validation Rules by Mode
+**📋 PLANNED**
+- Requirements defined
+- Implementation plan ready
+- No code changes yet
+- Requires migration for transitions
 
-**VAN MODE:**
-- Check for existing tasks.md
-- Validate migration.md if present
-- Preserve unfinished tasks
-- Never delete existing task data
+**⛔ BLOCKED**
+- Waiting for external dependencies
+- Cannot proceed with current resources
+- Context must be preserved
+- Requires migration for transitions
 
-**REFLECT MODE:**
-- Verify implementation completion
-- Check for unfinished subtasks
-- Require explicit completion confirmation
-- Block if critical tasks incomplete
-
-**ARCHIVE MODE:**
-- Ensure reflection completion
-- Verify all deliverables ready
-- Create comprehensive migration.md
-- Preserve context for next cycle
+**⏸️ ON_HOLD**
+- Temporarily suspended
+- May resume later
+- Low priority preservation
+- Requires migration for transitions
 
 ## 🔄 MIGRATION SYSTEM INTEGRATION
 
@@ -59,30 +67,30 @@ Tasks are categorized into five status levels:
 ```yaml
 # migration.md Template
 migration:
-  date: "2024-12-09"
+  date: "$(date +%Y-%m-%d)"
   from_mode: "IMPLEMENT"
   to_mode: "REFLECT"
 
   unfinished_tasks:
-    - id: "TASK-CONTINUITY-FIX-2024-12-09"
+    - id: "TASK-ID-$(date +%Y-%m-%d)"
       status: "IN_PROGRESS"
       priority: "CRITICAL"
       completion: "75%"
       next_steps:
-        - "Complete Phase 3: Safe Mode Transitions"
-        - "Implement Phase 4: Task Preservation Rules"
+        - "Complete Phase 3: Implementation"
+        - "Implement Phase 4: Testing"
       context:
-        - "Working on VAN mode task validation"
-        - "REFLECT mode integration in progress"
+        - "Working on system integration"
+        - "Database schema completed"
 
   completed_tasks:
-    - id: "RULES-INT-2024-12-09"
+    - id: "COMPLETED-TASK-$(date +%Y-%m-%d)"
       status: "COMPLETED"
       archived: true
 
   context_preservation:
-    active_branch: "implement-task-continuity-fix-20250610"
-    working_directory: "/Users/vedmalex/work/cursor-memory-bank"
+    active_branch: "implement-feature-$(date +%Y-%m-%d)"
+    working_directory: "/path/to/project"
     key_files:
       - "memory-bank/tasks.md"
       - "memory-bank/progress.md"
@@ -97,38 +105,64 @@ migration:
 5. **Backup Current** - Archive current state
 6. **Prepare Next** - Set up for next cycle
 
-## 🛡️ SAFE MODE TRANSITIONS
+## 🚦 SAFE MODE TRANSITIONS
 
 ### VAN Mode Safe Initialization
 
-When VAN mode starts:
+```mermaid
+graph TD
+    VanStart["🚀 VAN Mode Start"] --> CheckMigration{"📄 migration.md exists?"}
+    CheckMigration -->|"Yes"| ProcessMigration["🔄 Process Migration"]
+    CheckMigration -->|"No"| CheckTasks{"📋 tasks.md exists?"}
 
-1. Check if migration.md exists
-2. If yes: Process migration document and merge unfinished tasks
-3. If no: Check for existing tasks.md
-4. If existing tasks found: Warn user about potential loss
-5. Allow user to create migration or proceed with archiving
-6. Never delete existing task data without user confirmation
+    ProcessMigration --> MergeTasks["🔗 Merge Unfinished Tasks"]
+    CheckTasks -->|"Yes"| WarnUser["⚠️ Warn About Potential Loss"]
+    CheckTasks -->|"No"| InitializeNew["✨ Initialize New Tasks"]
+
+    WarnUser --> UserChoice{"👤 User Choice"}
+    UserChoice -->|"Create Migration"| CreateMigration["📝 Create Migration"]
+    UserChoice -->|"Proceed Anyway"| ArchiveExisting["📦 Archive Existing"]
+
+    CreateMigration --> MergeTasks
+    ArchiveExisting --> InitializeNew
+    MergeTasks --> InitializeNew
+    InitializeNew --> Complete["✅ VAN Mode Ready"]
+
+    style VanStart fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMigration fill:#d94dbb,stroke:#a3378a,color:white
+    style ProcessMigration fill:#4dbb5f,stroke:#36873f,color:white
+    style WarnUser fill:#ffa64d,stroke:#cc7a30,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
 
 ### REFLECT Mode Safe Transition
 
-Before entering REFLECT mode:
+**Entry Requirements:**
+- Implementation must be complete
+- All critical subtasks finished
+- Deliverables ready for review
 
-1. Verify implementation is complete
-2. Check all subtasks are finished
-3. If incomplete: Block transition and warn user
-4. Allow user to return to IMPLEMENT or create partial migration
-5. Only proceed when all critical tasks are complete
+**Validation Process:**
+1. Calculate overall implementation completion
+2. Check critical task status
+3. Verify deliverable readiness
+4. If incomplete: Block transition and show warnings
+5. If complete: Allow transition to REFLECT
 
 ### ARCHIVE Mode Safe Transition
 
-Before entering ARCHIVE mode:
+**Entry Requirements:**
+- Reflection must be complete
+- All deliverables documented
+- Lessons learned captured
+- System documentation updated
 
-1. Ensure reflection is complete
-2. Verify all deliverables are ready
-3. Create final migration document
-4. Preserve context for next development cycle
-5. Clean transition with full data preservation
+**Validation Process:**
+1. Verify reflection.md exists and is complete
+2. Check all deliverables are documented
+3. Validate system documentation updates
+4. If incomplete: Block transition and show warnings
+5. If complete: Create final migration and allow archiving
 
 ## 📋 TASK PRESERVATION RULES
 
@@ -180,49 +214,29 @@ Before entering ARCHIVE mode:
 - Shows affected files
 - Requires user confirmation
 
-### Warning Message Example
+### Warning Message Format
 
 ```
-⚠️ POTENTIAL TASK LOSS
-
-You have 2 unfinished tasks that will be lost if you proceed
-without creating a migration document.
-
-Unfinished tasks:
-- TASK-CONTINUITY-FIX-2024-12-09 (75% complete)
-- CREATIVE-ARCHIVE-SYSTEM-2024-12-09 (25% complete)
-
-Options:
-1. Create migration.md (Recommended)
-2. Complete tasks first
-3. Proceed anyway (NOT RECOMMENDED)
+╔═══════════════════════════════════════════════════════════════╗
+║                    🚨 VALIDATION WARNING                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: INCOMPLETE WORK                                         ║
+║ Severity: WARNING                                             ║
+║ Mode Transition: IMPLEMENT → REFLECT                         ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issues Found:                                                 ║
+║ • Task TASK-CONTINUITY-FIX-$(date +%Y-%m-%d): 75% complete   ║
+║ • Task CREATIVE-ARCHIVE-SYSTEM-$(date +%Y-%m-%d): 25% complete║
+║                                                               ║
+║ Recommendation:                                               ║
+║ Create migration.md to preserve work context                  ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Options:                                                      ║
+║ [1] Create Migration (Recommended)                            ║
+║ [2] Continue Implementation                                   ║
+║ [3] Force Transition (NOT RECOMMENDED)                       ║
+╚═══════════════════════════════════════════════════════════════╝
 ```
-
-## 📊 IMPLEMENTATION PHASES
-
-### Phase 1: Task Status Validation (30 min)
-- [ ] Task status validation system
-- [ ] Completion percentage tracking
-- [ ] Dependency checking
-- [ ] User warning system
-
-### Phase 2: Migration System Integration (45 min)
-- [ ] Migration document creation
-- [ ] Context preservation
-- [ ] Task merging logic
-- [ ] Backup system integration
-
-### Phase 3: Safe Mode Transitions (30 min)
-- [ ] VAN mode safe initialization
-- [ ] REFLECT mode validation
-- [ ] ARCHIVE mode verification
-- [ ] User confirmation flows
-
-### Phase 4: Task Preservation Rules (30 min)
-- [ ] Priority-based preservation
-- [ ] Automatic task addition
-- [ ] Conflict resolution
-- [ ] Data integrity verification
 
 ## 🔧 INTEGRATION POINTS
 
@@ -266,4 +280,4 @@ Options:
 - Preserve for next cycle
 - Clean transition
 
-This task continuity system ensures 100% preservation of development work across all Memory Bank mode transitions, solving the critical issue of task loss identified in the system analysis.
+This task continuity system ensures 100% preservation of development work across all Memory Bank mode transitions.

@@ -1,0 +1,349 @@
+---
+description: "Creative decision control system for CREATIVE mode with user choice presentation"
+globs: "**/creative/**", "**/CREATIVE/**", "**/creative-mode/**"
+alwaysApply: false
+---
+
+# CREATIVE DECISION CONTROL SYSTEM
+
+> **TL;DR:** This rule implements user-controlled creative decision making in CREATIVE mode, presenting architectural options with analysis for user choice instead of making autonomous decisions.
+
+## 🎨 CREATIVE DECISION OVERVIEW
+
+The Creative Decision Control system activates in CREATIVE mode when interaction-mode is set to "MANUAL", ensuring users make final architectural and design decisions based on AI analysis and recommendations.
+
+### Core Principles
+
+**User-Driven Decisions**
+- Present multiple viable options with analysis
+- Provide clear pros/cons for each approach
+- Let users make final architectural choices
+- Document decision rationale and context
+
+**Informed Choice**
+- Analyze each option thoroughly
+- Provide scoring and comparison matrices
+- Highlight trade-offs and implications
+- Offer implementation complexity estimates
+
+## 🔄 CREATIVE DECISION WORKFLOW
+
+```mermaid
+graph TD
+    Start["🎨 CREATIVE Mode Start"] --> CheckMode{"🔍 Check Interaction Mode"}
+    CheckMode -->|"AUTO"| AutoDecision["🤖 Autonomous Decision"]
+    CheckMode -->|"MANUAL"| AnalyzeProblem["🔍 Analyze Design Problem"]
+
+    AnalyzeProblem --> GenerateOptions["💡 Generate Solution Options"]
+    GenerateOptions --> AnalyzeOptions["📊 Analyze Each Option"]
+    AnalyzeOptions --> ScoreOptions["🎯 Score and Compare"]
+    ScoreOptions --> PresentOptions["📋 Present Options to User"]
+
+    PresentOptions --> WaitChoice["⏳ Wait for User Choice"]
+    WaitChoice --> ProcessChoice["📝 Process User Decision"]
+    ProcessChoice --> DocumentDecision["📚 Document Decision"]
+    DocumentDecision --> CreateImplementation["🏗️ Create Implementation Plan"]
+
+    AutoDecision --> DocumentDecision
+    CreateImplementation --> Complete["✅ Creative Phase Complete"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMode fill:#d94dbb,stroke:#a3378a,color:white
+    style GenerateOptions fill:#4dbb5f,stroke:#36873f,color:white
+    style PresentOptions fill:#ffa64d,stroke:#cc7a30,color:white
+    style WaitChoice fill:#ff5555,stroke:#cc0000,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📊 OPTION ANALYSIS FRAMEWORK
+
+### Analysis Dimensions
+
+**Technical Feasibility** (0-25 points)
+- Implementation complexity
+- Technology compatibility
+- Resource requirements
+- Technical risk assessment
+
+**Maintainability** (0-25 points)
+- Code clarity and organization
+- Future extensibility
+- Documentation requirements
+- Team knowledge requirements
+
+**Performance** (0-25 points)
+- Speed and efficiency
+- Resource utilization
+- Scalability potential
+- Optimization opportunities
+
+**User Experience** (0-25 points)
+- Usability and accessibility
+- User workflow impact
+- Interface design quality
+- User satisfaction potential
+
+### Scoring Matrix Template
+
+```markdown
+## Option Analysis: [Option Name]
+
+### Technical Feasibility (X/25)
+- **Complexity**: [Low/Medium/High] - [Explanation]
+- **Compatibility**: [Excellent/Good/Fair/Poor] - [Details]
+- **Resources**: [Minimal/Moderate/Significant] - [Requirements]
+- **Risk**: [Low/Medium/High] - [Risk factors]
+
+### Maintainability (X/25)
+- **Code Quality**: [Excellent/Good/Fair/Poor] - [Assessment]
+- **Extensibility**: [High/Medium/Low] - [Future growth potential]
+- **Documentation**: [Minimal/Standard/Extensive] - [Requirements]
+- **Team Skills**: [Available/Learnable/Missing] - [Skill assessment]
+
+### Performance (X/25)
+- **Speed**: [Excellent/Good/Fair/Poor] - [Performance characteristics]
+- **Resources**: [Efficient/Moderate/Heavy] - [Resource usage]
+- **Scalability**: [High/Medium/Low] - [Growth potential]
+- **Optimization**: [Easy/Moderate/Difficult] - [Optimization potential]
+
+### User Experience (X/25)
+- **Usability**: [Excellent/Good/Fair/Poor] - [User experience quality]
+- **Workflow**: [Improved/Unchanged/Degraded] - [Impact on user workflow]
+- **Interface**: [Intuitive/Standard/Complex] - [Interface assessment]
+- **Satisfaction**: [High/Medium/Low] - [Expected user satisfaction]
+
+**Total Score**: X/100
+**Recommendation**: [Recommended/Acceptable/Not Recommended]
+```
+
+## 🎯 DECISION PRESENTATION FORMAT
+
+### Standard Option Presentation
+
+```markdown
+# CREATIVE DECISION: [Problem Title]
+
+## Problem Summary
+[Brief description of the design challenge]
+
+## Available Options
+
+### Option A: [Name] (Score: X/100)
+**Approach**: [Brief description]
+**Pros**:
+- [Key advantage 1]
+- [Key advantage 2]
+- [Key advantage 3]
+
+**Cons**:
+- [Key limitation 1]
+- [Key limitation 2]
+
+**Implementation Time**: [Estimate]
+**Complexity**: [Low/Medium/High]
+
+### Option B: [Name] (Score: X/100)
+[Similar format]
+
+### Option C: [Name] (Score: X/100)
+[Similar format]
+
+## Recommendation
+Based on analysis, **Option [X]** is recommended because:
+- [Primary reason]
+- [Secondary reason]
+- [Additional consideration]
+
+## Decision Required
+Please choose your preferred option:
+1. Option A - [Brief name]
+2. Option B - [Brief name]
+3. Option C - [Brief name]
+4. Request additional analysis
+5. Suggest alternative approach
+
+**Your choice**: [User input required]
+```
+
+## 🔧 IMPLEMENTATION INTEGRATION
+
+### File System Integration
+
+**Decision Templates**: `memory-bank/templates/decision-matrix.md`
+- Standardized decision presentation format
+- Scoring matrix templates
+- Option comparison frameworks
+- Decision documentation templates
+
+**Creative Context**: `memory-bank/creative/creative-context.md`
+- Current creative session state
+- Options presented and user choices
+- Decision history and rationale
+- Implementation implications
+
+**Decision Archive**: `memory-bank/creative/decisions/`
+- Historical decision records
+- Option analysis archives
+- User preference patterns
+- Decision outcome tracking
+
+### Mode Integration
+
+**CREATIVE Mode Activation**
+- Check interaction mode on entry
+- Load decision templates if MANUAL mode
+- Prepare option analysis framework
+- Initialize user choice tracking
+
+**Option Generation Process**
+- Generate 3-5 viable options minimum
+- Analyze each option across all dimensions
+- Score options using standardized criteria
+- Prepare comparison matrices
+
+**User Choice Processing**
+- Present options in standardized format
+- Wait for user selection with timeout
+- Process and validate user choice
+- Document decision and rationale
+
+## 📋 DECISION CATEGORIES
+
+### Architectural Decisions
+**Examples**:
+- System architecture patterns (MVC, microservices, etc.)
+- Database design approaches
+- API design strategies
+- Integration patterns
+
+**Analysis Focus**:
+- Long-term maintainability
+- Scalability implications
+- Team expertise requirements
+- Technology ecosystem fit
+
+### Design Pattern Decisions
+**Examples**:
+- State management approaches
+- Error handling strategies
+- Caching mechanisms
+- Security implementations
+
+**Analysis Focus**:
+- Implementation complexity
+- Performance characteristics
+- Code organization impact
+- Testing implications
+
+### Technology Stack Decisions
+**Examples**:
+- Framework selections
+- Library choices
+- Tool integrations
+- Platform decisions
+
+**Analysis Focus**:
+- Learning curve requirements
+- Community support
+- Long-term viability
+- Integration capabilities
+
+### User Experience Decisions
+**Examples**:
+- Interface design approaches
+- User workflow designs
+- Accessibility implementations
+- Performance optimizations
+
+**Analysis Focus**:
+- User satisfaction impact
+- Usability considerations
+- Accessibility compliance
+- Performance implications
+
+## 🚨 DECISION QUALITY CONTROLS
+
+### Option Quality Validation
+
+**Minimum Requirements**
+- At least 3 viable options presented
+- Each option scored across all dimensions
+- Clear pros/cons identified for each
+- Implementation estimates provided
+
+**Quality Thresholds**
+- All options must score >40/100 to be viable
+- At least one option must score >70/100
+- Score differences must be >10 points to be meaningful
+- All dimensions must be analyzed for each option
+
+### User Choice Validation
+
+**Choice Processing**
+- Validate user selection is among presented options
+- Confirm understanding of chosen option implications
+- Document any user modifications or preferences
+- Record decision timeline and context
+
+**Fallback Handling**
+- If no user response within timeout, present recommendation
+- If user requests additional analysis, provide deeper dive
+- If user suggests alternative, analyze and incorporate
+- If user choice is unclear, ask for clarification
+
+## 📊 DECISION TRACKING METRICS
+
+### Decision Quality Metrics
+
+**Analysis Completeness**
+- All dimensions analyzed: +20 points
+- Multiple viable options: +20 points
+- Clear scoring rationale: +20 points
+- Implementation estimates: +20 points
+- Risk assessment included: +20 points
+
+**User Engagement Metrics**
+- User actively participated: +25 points
+- User provided additional context: +15 points
+- User validated understanding: +15 points
+- User satisfied with options: +25 points
+- Decision made within reasonable time: +20 points
+
+### Success Indicators
+
+- **EXCELLENT**: 90-100 points - High-quality collaborative decision
+- **GOOD**: 75-89 points - Solid decision with good analysis
+- **ACCEPTABLE**: 60-74 points - Adequate decision process
+- **POOR**: <60 points - Decision quality concerns, review needed
+
+## 📚 BEST PRACTICES
+
+### Option Generation
+
+**Diversity of Approaches**
+- Include different architectural patterns
+- Consider various implementation strategies
+- Explore different technology choices
+- Present range of complexity levels
+
+**Realistic Assessment**
+- Base scores on actual project constraints
+- Consider team capabilities honestly
+- Account for timeline limitations
+- Include maintenance considerations
+
+### User Communication
+
+**Clear Presentation**
+- Use consistent formatting
+- Highlight key differences between options
+- Provide concrete examples when helpful
+- Avoid overwhelming technical detail
+
+**Responsive Interaction**
+- Acknowledge user questions promptly
+- Provide additional analysis when requested
+- Clarify implications of choices
+- Support user decision-making process
+
+This creative decision control system ensures users maintain control over architectural and design decisions while benefiting from comprehensive AI analysis and recommendations.
