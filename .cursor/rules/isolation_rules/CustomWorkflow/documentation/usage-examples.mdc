@@ -1,0 +1,314 @@
+---
+description: "Usage examples and practical scenarios for Memory Bank development"
+globs: "**/documentation/**", "**/examples/**", "**/tutorials/**"
+alwaysApply: false
+---
+
+# USAGE EXAMPLES AND PRACTICAL SCENARIOS
+
+> **TL;DR:** Comprehensive collection of practical examples demonstrating Memory Bank usage across different complexity levels and development scenarios.
+
+## 🎯 EXAMPLE CATEGORIES
+
+### Level 1: Quick Bug Fix Examples
+
+**Example 1: CSS Styling Issue**
+```yaml
+scenario: "Button color not matching design"
+complexity: "Level 1"
+estimated_time: "15-30 minutes"
+
+workflow:
+  VAN: "Identify CSS selector issue"
+  PLAN: "Locate style file and create fix plan"
+  IMPLEMENT: "Update CSS properties"
+  REFLECT: "Verify fix across browsers"
+  ARCHIVE: "Document solution for future reference"
+
+files_modified:
+  - "styles/components/button.css"
+  - "memory-bank/tasks.md"
+
+outcome: "Button styling fixed, documentation updated"
+```
+
+**Example 2: JavaScript Function Bug**
+```yaml
+scenario: "Form validation not working"
+complexity: "Level 1"
+estimated_time: "20-45 minutes"
+
+workflow:
+  VAN: "Reproduce validation issue"
+  PLAN: "Debug validation logic"
+  IMPLEMENT: "Fix conditional statement"
+  REFLECT: "Test all form scenarios"
+  ARCHIVE: "Update validation documentation"
+
+files_modified:
+  - "js/validation.js"
+  - "tests/validation.test.js"
+  - "memory-bank/tasks.md"
+
+outcome: "Form validation working correctly"
+```
+
+### Level 2: Simple Enhancement Examples
+
+**Example 3: Add New Feature Toggle**
+```yaml
+scenario: "Add dark mode toggle to application"
+complexity: "Level 2"
+estimated_time: "2-4 hours"
+
+workflow:
+  VAN: "Analyze current theme system"
+  PLAN: "Design toggle implementation"
+  CREATIVE: "Choose toggle UI design"
+  IMPLEMENT: "Add toggle component and logic"
+  REFLECT: "Test theme switching"
+  ARCHIVE: "Document theme system"
+
+files_modified:
+  - "components/ThemeToggle.tsx"
+  - "hooks/useTheme.ts"
+  - "styles/themes.css"
+  - "memory-bank/tasks.md"
+
+outcome: "Dark mode toggle implemented and tested"
+```
+
+**Example 4: API Endpoint Enhancement**
+```yaml
+scenario: "Add pagination to user list API"
+complexity: "Level 2"
+estimated_time: "3-5 hours"
+
+workflow:
+  VAN: "Review current API structure"
+  PLAN: "Design pagination parameters"
+  CREATIVE: "Choose pagination strategy"
+  IMPLEMENT: "Add pagination logic"
+  REFLECT: "Test API with various page sizes"
+  ARCHIVE: "Update API documentation"
+
+files_modified:
+  - "api/users.ts"
+  - "types/pagination.ts"
+  - "tests/api/users.test.ts"
+  - "docs/api.md"
+
+outcome: "Pagination implemented with proper testing"
+```
+
+### Level 3: Intermediate Feature Examples
+
+**Example 5: User Authentication System**
+```yaml
+scenario: "Implement JWT-based authentication"
+complexity: "Level 3"
+estimated_time: "1-2 days"
+
+workflow:
+  VAN: "Analyze authentication requirements"
+  PLAN: "Design auth flow and security"
+  CREATIVE: "Choose JWT implementation strategy"
+  IMPLEMENT:
+    phase_1: "JWT token generation and validation"
+    phase_2: "Login/logout endpoints"
+    phase_3: "Protected route middleware"
+    phase_4: "Frontend auth integration"
+  REFLECT: "Security testing and review"
+  ARCHIVE: "Complete auth documentation"
+
+files_created:
+  - "middleware/auth.ts"
+  - "services/jwt.ts"
+  - "routes/auth.ts"
+  - "hooks/useAuth.ts"
+  - "components/LoginForm.tsx"
+
+outcome: "Secure authentication system deployed"
+```
+
+**Example 6: Real-time Chat Feature**
+```yaml
+scenario: "Add real-time messaging to application"
+complexity: "Level 3"
+estimated_time: "2-3 days"
+
+workflow:
+  VAN: "Research WebSocket requirements"
+  PLAN: "Design message flow architecture"
+  CREATIVE: "Choose real-time technology stack"
+  IMPLEMENT:
+    phase_1: "WebSocket server setup"
+    phase_2: "Message storage system"
+    phase_3: "Client-side chat interface"
+    phase_4: "Message history and persistence"
+  REFLECT: "Load testing and optimization"
+  ARCHIVE: "Real-time system documentation"
+
+files_created:
+  - "server/websocket.ts"
+  - "models/Message.ts"
+  - "components/ChatWindow.tsx"
+  - "services/messageService.ts"
+
+outcome: "Real-time chat system operational"
+```
+
+### Level 4: Complex System Examples
+
+**Example 7: Microservices Migration**
+```yaml
+scenario: "Migrate monolith to microservices"
+complexity: "Level 4"
+estimated_time: "2-4 weeks"
+
+workflow:
+  VAN: "Analyze current monolith architecture"
+  PLAN: "Design microservices decomposition"
+  CREATIVE: "Choose service boundaries and communication"
+  IMPLEMENT:
+    phase_1: "Extract user service"
+    phase_2: "Extract payment service"
+    phase_3: "Extract notification service"
+    phase_4: "Implement service mesh"
+    phase_5: "Data migration and synchronization"
+  REFLECT: "Performance and reliability testing"
+  ARCHIVE: "Microservices architecture documentation"
+
+services_created:
+  - "user-service/"
+  - "payment-service/"
+  - "notification-service/"
+  - "api-gateway/"
+
+outcome: "Scalable microservices architecture"
+```
+
+## 🔄 WORKFLOW PATTERNS
+
+### Pattern 1: Bug Fix Workflow
+```mermaid
+graph TD
+    Bug["🐛 Bug Report"] --> VAN["🔍 VAN: Reproduce & Analyze"]
+    VAN --> Plan["📋 PLAN: Create Fix Strategy"]
+    Plan --> Implement["⚒️ IMPLEMENT: Apply Fix"]
+    Implement --> Test["✅ Test Fix"]
+    Test --> Reflect["🤔 REFLECT: Document Solution"]
+    Reflect --> Archive["📦 ARCHIVE: Knowledge Base"]
+```
+
+### Pattern 2: Feature Development Workflow
+```mermaid
+graph TD
+    Request["📝 Feature Request"] --> VAN["🔍 VAN: Requirements Analysis"]
+    VAN --> Plan["📋 PLAN: Implementation Strategy"]
+    Plan --> Creative["🎨 CREATIVE: Design Decisions"]
+    Creative --> Implement["⚒️ IMPLEMENT: Build Feature"]
+    Implement --> Test["✅ Integration Testing"]
+    Test --> Reflect["🤔 REFLECT: Lessons Learned"]
+    Reflect --> Archive["📦 ARCHIVE: Feature Documentation"]
+```
+
+### Pattern 3: System Enhancement Workflow
+```mermaid
+graph TD
+    Analysis["📊 System Analysis"] --> VAN["🔍 VAN: Current State Assessment"]
+    VAN --> Plan["📋 PLAN: Enhancement Strategy"]
+    Plan --> Creative["🎨 CREATIVE: Architecture Decisions"]
+    Creative --> Phase1["⚒️ IMPLEMENT: Phase 1"]
+    Phase1 --> Phase2["⚒️ IMPLEMENT: Phase 2"]
+    Phase2 --> Phase3["⚒️ IMPLEMENT: Phase 3"]
+    Phase3 --> Integration["🔄 Integration Testing"]
+    Integration --> Reflect["🤔 REFLECT: System Impact"]
+    Reflect --> Archive["📦 ARCHIVE: System Documentation"]
+```
+
+## 📚 PRACTICAL SCENARIOS
+
+### Scenario A: Emergency Production Fix
+```yaml
+situation: "Critical bug affecting user payments"
+urgency: "CRITICAL"
+time_constraint: "2 hours maximum"
+
+approach:
+  - Skip CREATIVE phase for speed
+  - Focus on minimal viable fix
+  - Extensive testing in REFLECT
+  - Immediate documentation in ARCHIVE
+
+success_criteria:
+  - Payment system restored
+  - No data loss
+  - Root cause identified
+  - Prevention measures documented
+```
+
+### Scenario B: New Team Member Onboarding
+```yaml
+situation: "Junior developer joining team"
+goal: "Productive contribution within 1 week"
+
+training_tasks:
+  level_1: "Fix CSS styling issues"
+  level_2: "Add simple form validation"
+  level_3: "Implement user profile feature"
+
+mentoring_approach:
+  - Pair programming in IMPLEMENT
+  - Code review in REFLECT
+  - Knowledge sharing in ARCHIVE
+  - Gradual complexity increase
+```
+
+### Scenario C: Technical Debt Reduction
+```yaml
+situation: "Legacy code refactoring needed"
+scope: "Authentication module"
+timeline: "2 weeks"
+
+strategy:
+  week_1:
+    - VAN: Analyze current implementation
+    - PLAN: Design refactoring approach
+    - CREATIVE: Choose modern patterns
+  week_2:
+    - IMPLEMENT: Gradual refactoring
+    - REFLECT: Performance comparison
+    - ARCHIVE: Migration documentation
+
+risk_mitigation:
+  - Maintain backward compatibility
+  - Comprehensive testing
+  - Rollback procedures
+  - User communication plan
+```
+
+## 🎯 SUCCESS PATTERNS
+
+### High-Success Indicators
+- Clear problem definition in VAN
+- Detailed planning in PLAN
+- User-focused decisions in CREATIVE
+- Systematic implementation
+- Thorough reflection and documentation
+
+### Common Pitfalls
+- Rushing through planning phase
+- Skipping creative decision documentation
+- Insufficient testing in IMPLEMENT
+- Poor reflection quality
+- Incomplete archiving
+
+### Best Practices
+- Always start with clear requirements
+- Document decisions and rationale
+- Test thoroughly at each phase
+- Capture lessons learned
+- Maintain knowledge base
+
+This comprehensive set of examples provides practical guidance for Memory Bank usage across all complexity levels and development scenarios.
