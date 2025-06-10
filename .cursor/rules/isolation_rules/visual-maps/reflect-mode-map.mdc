@@ -12,11 +12,26 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START REFLECT MODE"] --> ReadTasks["Read tasks.md<br>and progress.md"]
+    Start["START REFLECT MODE"] --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK"]
+
+    %% Task Continuity Validation - CRITICAL ADDITION
+    TaskContinuityCheck --> CheckImplementation{"Implementation<br>Complete?"}
+    CheckImplementation -->|"No"| BlockReflect["🚫 BLOCK REFLECT MODE<br>Implementation Incomplete"]
+    CheckImplementation -->|"Yes"| CheckSubtasks{"All Subtasks<br>Complete?"}
+
+    CheckSubtasks -->|"No"| WarnIncomplete["⚠️ WARN: Incomplete<br>Subtasks Found"]
+    CheckSubtasks -->|"Yes"| ReadTasks["Read tasks.md<br>and progress.md"]
+
+    WarnIncomplete --> UserDecision{"User Wants to<br>Continue?"}
+    UserDecision -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
+    UserDecision -->|"Yes"| CreatePartialMigration["Create Partial<br>Migration"]
+
+    CreatePartialMigration --> ReadTasks
+    BlockReflect --> ReturnImplement
 
     %% Initial Assessment
     ReadTasks --> VerifyImplement{"Implementation<br>Complete?"}
-    VerifyImplement -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
+    VerifyImplement -->|"No"| ReturnImplement
     VerifyImplement -->|"Yes"| AssessLevel{"Determine<br>Complexity Level"}
 
     %% Level-Based Reflection
@@ -55,6 +70,13 @@ graph TD
     UpdateSystem --> Transition["NEXT MODE:<br>ARCHIVE MODE"]
 
     %% Task Continuity Styling
+    style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style CheckImplementation fill:#b3ffb3,stroke:#80ff80,color:black
+    style CheckSubtasks fill:#b3ffb3,stroke:#80ff80,color:black
+    style BlockReflect fill:#ff6666,stroke:#cc0000,color:white,stroke-width:2px
+    style WarnIncomplete fill:#ffcc80,stroke:#ff9900,color:black
+    style UserDecision fill:#cce6ff,stroke:#80bfff,color:black
+    style CreatePartialMigration fill:#b3ffb3,stroke:#80ff80,color:black
     style AnalyzeUnfinished fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
     style CategorizeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
     style CreateMigration fill:#b3ffb3,stroke:#80ff80,color:black

@@ -28044,6 +28044,760 @@ Read file: .cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc
 
 ---
 
+Теперь прочитаю оставшуюся часть tasks.md для понимания полного контекста задач:
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Теперь прочитаю оставшуюся часть tasks.md для понимания всех задач:
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Теперь прочитаю оставшуюся часть для полного понимания:
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Отлично! Теперь у меня есть полное понимание текущего состояния. Согласно tasks.md, у нас есть несколько задач для выполнения в IMPLEMENT режиме. Начну с определения уровня сложности и загрузки соответствующих правил.
+
+---
+
+Read file: .cursor/rules/isolation_rules/Level3/workflow-level3.mdc
+
+---
+
+Теперь загружу правила для фазовой реализации Level 3-4:
+
+---
+
+Could not find file '.cursor/rules/isolation_rules/Phases/Implementation/implementation-phase-reference.mdc' in the workspace.
+
+---
+
+Read file: .cursor/rules/isolation_rules/Level4/phased-implementation.mdc
+
+---
+
+Теперь у меня есть достаточно информации для начала IMPLEMENT режима. Согласно tasks.md, у нас есть несколько задач:
+
+1. **RULES-INT-2024-12-09** - ✅ COMPLETED (100% завершена)
+2. **TASK-CONTINUITY-FIX-2024-12-09** - 📋 PLANNED (критическая)
+3. **CREATIVE-ARCHIVE-SYSTEM-2024-12-09** - 📋 PLANNED (высокий приоритет)
+
+Начну с выполнения критической задачи TASK-CONTINUITY-FIX-2024-12-09, используя методологию changing_the_rules.md.
+
+---
+
+```bash
+git status
+```
+
+```
+➜  cursor-memory-bank git:(main) git status
+Текущая ветка: main
+Ваша ветка опережает «origin/main» на 6 коммитов.
+  (используйте «git push», чтобы опубликовать ваши локальные коммиты)
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>...», чтобы добавить файл в индекс)
+  (используйте «git restore <файл>...», чтобы отменить изменения в рабочем каталоге)
+        изменено:      .specstory/history/2025-06-09_19-12-discussing-development-process-improvements.md
+        изменено:      memory-bank/tasks.md
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>...», чтобы добавить в то, что будет включено в коммит)
+        memory-bank/creative-archive-system-plan.md
+        memory-bank/creative/architecture/
+        memory-bank/creative/index.md
+        memory-bank/task-continuity-fix-plan.md
+
+индекс пуст (используйте «git add» и/или «git commit -a»)
+?➜  cursor-memory-bank git:(main)
+```
+
+---
+
+Создам backup ветку перед началом работы:
+
+---
+
+```bash
+git add . && git commit -m "BACKUP: Before IMPLEMENT mode - task continuity fix and creative archive system"
+```
+
+```
+➜  cursor-memory-bank git:(main) ✗ git add . && git commit -m "BACKUP: Before IMPLEMENT mode - task continui
+ty fix and creative archive system"git add . && git commit -m "BACKUP: Before IMPLEMENT mode - task continui
+ty fix and creative archive system"
+[main 186e1eb] BACKUP: Before IMPLEMENT mode - task continuity fix and creative archive system
+ 6 files changed, 4004 insertions(+), 64 deletions(-)
+ create mode 100644 memory-bank/creative-archive-system-plan.md
+ create mode 100644 memory-bank/creative/architecture/2024-12-09-task-continuity-architecture.md
+ create mode 100644 memory-bank/creative/index.md
+ create mode 100644 memory-bank/task-continuity-fix-plan.md
+➜  cursor-memory-bank git:(main) ✗
+```
+
+---
+
+```bash
+git checkout -b implement-task-continuity-fix-20250610
+```
+
+```
+➜  cursor-memory-bank git:(main) git checkout -b implement-task-continuity-fix-20250610
+Переключились на новую ветку «implement-task-continuity-fix-20250610»
+?➜  cursor-memory-bank git:(main)
+```
+
+---
+
+Теперь начну выполнение задачи TASK-CONTINUITY-FIX-2024-12-09 согласно методологии changing_the_rules.md. Сначала применю Cursor workaround:
+
+---
+
+```bash
+mv .cursor _cursor
+```
+
+```
+➜  cursor-memory-bank git:(implement-task-continuity-fix-20250610) 
+
+```
+
+---
+
+```bash
+find _cursor -name "*.mdc" -exec sh -c 'mv "$1" "$1.md"' _ {} \;
+```
+
+```
+?➜  cursor-memory-bank git:(implement-task-continuity-fix-20250610) ?✗ 
+
+```
+
+---
+
+Теперь начну реализацию Phase 1: Task Status Validation System. Сначала прочитаю текущие файлы режимов для понимания структуры:
+
+---
+
+Read file: _cursor/rules/isolation_rules/visual-maps/van-mode-map.mdc.md
+
+---
+
+Теперь прочитаю REFLECT mode map для понимания логики архивирования:
+
+---
+
+Read file: _cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc.md
+
+---
+
+Теперь прочитаю ARCHIVE mode map:
+
+---
+
+Read file: _cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc.md
+
+---
+
+Теперь у меня есть полное понимание проблемы. Начну создание системы Task Continuity. Сначала создам новый файл для управления непрерывностью задач:
+
+---
+
+
+
+---
+
+```diff
+  ## 🔄 TASK CONTINUITY ARCHITECTURE
+  
+- ```mermaid
+- graph TD
+-     Start["Mode Transition<br>Request"] --> Coordinator["Task Continuity<br>Coordinator"]
+- 
+-     Coordinator --> Validator["Task Status<br>Validator"]
+-     Coordinator --> Manager["Migration<br>Manager"]
+-     Coordinator --> Controller["Mode Transition<br>Controller"]
+-     Coordinator --> Engine["Task Preservation<br>Engine"]
+-     Coordinator --> Warning["Warning<br>System"]
+- 
+-     Validator --> StatusCheck["Check Task<br>Status"]
+-     StatusCheck --> ValidationResult{"All Tasks<br>Complete?"}
+- 
+-     ValidationResult -->|"Yes"| SafeTransition["Safe Mode<br>Transition"]
+-     ValidationResult -->|"No"| MigrationFlow["Migration<br>Flow"]
+- 
+-     MigrationFlow --> Manager
+-     Manager --> CreateMigration["Create<br>migration.md"]
+-     CreateMigration --> PreserveContext["Preserve Task<br>Context"]
+-     PreserveContext --> Engine
+- 
+-     Engine --> BackupTasks["Backup Current<br>tasks.md"]
+-     BackupTasks --> ArchiveProgress["Archive<br>progress.md"]
+-     ArchiveProgress --> PrepareNext["Prepare Next<br>Cycle"]
+- 
+-     Warning --> UserAlert["Alert User About<br>Unfinished Tasks"]
+-     UserAlert --> ConfirmTransition{"User Confirms<br>Transition?"}
+- 
+-     ConfirmTransition -->|"Yes"| MigrationFlow
+-     ConfirmTransition -->|"No"| BlockTransition["Block Mode<br>Transition"]
+- 
+-     SafeTransition --> Controller
+-     PrepareNext --> Controller
+-     Controller --> NextMode["Proceed to<br>Next Mode"]
+- 
+-     style Coordinator fill:#4da6ff,stroke:#0066cc,color:white
+-     style Validator fill:#10b981,stroke:#059669,color:white
+-     style Manager fill:#f59e0b,stroke:#d97706,color:white
+-     style Engine fill:#8b5cf6,stroke:#7c3aed,color:white
+-     style Warning fill:#ef4444,stroke:#dc2626,color:white
+-     style BlockTransition fill:#ef4444,stroke:#dc2626,color:white
+- ```
++ The Task Continuity system consists of five core components working together to ensure seamless task preservation across mode transitions.
++ 
++ ### Core Components
++ 
++ 1. **Task Status Validator** - Analyzes current task completion status
++ 2. **Migration Manager** - Creates and processes migration documents
++ 3. **Mode Transition Controller** - Manages safe transitions between modes
++ 4. **Task Preservation Engine** - Preserves task context and data
++ 5. **Warning System** - Alerts users about potential data loss
+  
+  ## 📊 TASK STATUS VALIDATION SYSTEM
+  
+  ### Task Status Categories
+  
+- ```mermaid
+- graph TD
+-     TaskStatus["Task Status<br>Analysis"] --> Complete["✅ COMPLETE<br>Ready for archiving"]
+-     TaskStatus --> InProgress["🔄 IN_PROGRESS<br>Active development"]
+-     TaskStatus --> Planned["📋 PLANNED<br>Ready for implementation"]
+-     TaskStatus --> Blocked["⛔ BLOCKED<br>Waiting for dependencies"]
+-     TaskStatus --> OnHold["⏸️ ON_HOLD<br>Temporarily suspended"]
+- 
+-     Complete --> SafeArchive["Safe to<br>Archive"]
+-     InProgress --> RequiresMigration["Requires<br>Migration"]
+-     Planned --> RequiresMigration
+-     Blocked --> RequiresMigration
+-     OnHold --> RequiresMigration
+- 
+-     SafeArchive --> AllowTransition["Allow Mode<br>Transition"]
+-     RequiresMigration --> CreateMigration["Create Migration<br>Document"]
+- 
+-     style Complete fill:#10b981,stroke:#059669,color:white
+-     style InProgress fill:#f59e0b,stroke:#d97706,color:white
+-     style Planned fill:#3b82f6,stroke:#2563eb,color:white
+-     style Blocked fill:#ef4444,stroke:#dc2626,color:white
+-     style OnHold fill:#6b7280,stroke:#4b5563,color:white
+- ```
+- 
+- ### Validation Rules
+- 
+- ```yaml
+- validation_rules:
+-   VAN_MODE:
++ Tasks are categorized into five status levels:
++ 
++ - **✅ COMPLETE** - Ready for archiving, safe to transition
++ - **🔄 IN_PROGRESS** - Active development, requires migration
++ - **📋 PLANNED** - Ready for implementation, requires migration  
++ - **⛔ BLOCKED** - Waiting for dependencies, requires migration
++ - **⏸️ ON_HOLD** - Temporarily suspended, requires migration
++ 
++ ### Validation Rules by Mode
++ 
++ **VAN MODE:**
+  - Check for existing tasks.md
+  - Validate migration.md if present
+  - Preserve unfinished tasks
+  - Never delete existing task data
+  
+-   REFLECT_MODE:
++ **REFLECT MODE:**
+  - Verify implementation completion
+  - Check for unfinished subtasks
+  - Require explicit completion confirmation
+  - Block if critical tasks incomplete
+  
+-   ARCHIVE_MODE:
++ **ARCHIVE MODE:**
+  - Ensure reflection completion
+  - Verify all deliverables ready
+  - Create comprehensive migration.md
+  - Preserve context for next cycle
+- ```
+  
+  ## 🔄 MIGRATION SYSTEM INTEGRATION
+```
+
+```diff
+        - "memory-bank/tasks.md"
+        - "memory-bank/progress.md"
+-       - "_cursor/rules/isolation_rules/visual-maps/"
+  ```
+  
+- ### Migration Processing Workflow
+- 
+- ```mermaid
+- graph TD
+-     StartMigration["Start Migration<br>Process"] --> ReadCurrent["Read Current<br>tasks.md"]
+-     ReadCurrent --> AnalyzeTasks["Analyze Task<br>Status"]
+-     AnalyzeTasks --> CategorizeUnfinished["Categorize<br>Unfinished Tasks"]
+- 
+-     CategorizeUnfinished --> Critical["🔴 CRITICAL<br>Must continue"]
+-     CategorizeUnfinished --> High["🟡 HIGH<br>Should continue"]
+-     CategorizeUnfinished --> Medium["🟢 MEDIUM<br>Can defer"]
+-     CategorizeUnfinished --> Low["⚪ LOW<br>Can drop"]
+- 
+-     Critical --> PreserveFull["Preserve Full<br>Context"]
+-     High --> PreserveCore["Preserve Core<br>Context"]
+-     Medium --> PreserveBasic["Preserve Basic<br>Info"]
+-     Low --> LogOnly["Log Only"]
+- 
+-     PreserveFull --> CreateMigration["Create<br>migration.md"]
+-     PreserveCore --> CreateMigration
+-     PreserveBasic --> CreateMigration
+-     LogOnly --> CreateMigration
+- 
+-     CreateMigration --> BackupCurrent["Backup Current<br>State"]
+-     BackupCurrent --> PrepareNext["Prepare Next<br>Cycle"]
+- 
+-     style Critical fill:#ef4444,stroke:#dc2626,color:white
+-     style High fill:#f59e0b,stroke:#d97706,color:white
+-     style Medium fill:#10b981,stroke:#059669,color:white
+-     style Low fill:#6b7280,stroke:#4b5563,color:white
+- ```
++ ### Migration Processing Steps
++ 
++ 1. **Read Current State** - Analyze current tasks.md
++ 2. **Categorize Tasks** - Sort by status and priority
++ 3. **Preserve Context** - Save implementation details
++ 4. **Create Migration** - Generate migration.md
++ 5. **Backup Current** - Archive current state
++ 6. **Prepare Next** - Set up for next cycle
+  
+  ## 🛡️ SAFE MODE TRANSITIONS
+  
+  ### VAN Mode Safe Initialization
+  
+- ```mermaid
+- graph TD
+-     VanStart["VAN Mode<br>Start"] --> CheckMigration{"migration.md<br>Exists?"}
+- 
+-     CheckMigration -->|"Yes"| ProcessMigration["Process Migration<br>Document"]
+-     CheckMigration -->|"No"| CheckExisting{"Existing tasks.md<br>Found?"}
+- 
+-     ProcessMigration --> MergeTasks["Merge Unfinished<br>Tasks"]
+-     MergeTasks --> PreserveContext["Preserve Task<br>Context"]
+-     PreserveContext --> ContinueVan["Continue VAN<br>Initialization"]
+- 
+-     CheckExisting -->|"Yes"| AnalyzeExisting["Analyze Existing<br>Tasks"]
+-     CheckExisting -->|"No"| CreateNew["Create New<br>tasks.md"]
+- 
+-     AnalyzeExisting --> UnfinishedFound{"Unfinished Tasks<br>Found?"}
+-     UnfinishedFound -->|"Yes"| WarnUser["Warn User About<br>Potential Loss"]
+-     UnfinishedFound -->|"No"| ArchiveOld["Archive Old<br>tasks.md"]
+- 
+-     WarnUser --> UserChoice{"User Wants to<br>Preserve?"}
+-     UserChoice -->|"Yes"| CreateMigration["Create Migration<br>from Existing"]
+-     UserChoice -->|"No"| ArchiveOld
+- 
+-     CreateMigration --> MergeTasks
+-     ArchiveOld --> CreateNew
+-     CreateNew --> ContinueVan
+-     ContinueVan --> VanComplete["VAN Mode<br>Complete"]
+- 
+-     style WarnUser fill:#f59e0b,stroke:#d97706,color:white
+-     style UserChoice fill:#3b82f6,stroke:#2563eb,color:white
+- ```
++ When VAN mode starts:
++ 
++ 1. Check if migration.md exists
++ 2. If yes: Process migration document and merge unfinished tasks
++ 3. If no: Check for existing tasks.md
++ 4. If existing tasks found: Warn user about potential loss
++ 5. Allow user to create migration or proceed with archiving
++ 6. Never delete existing task data without user confirmation
+  
+  ### REFLECT Mode Safe Transition
+  
+- ```mermaid
+- graph TD
+-     ReflectStart["REFLECT Mode<br>Start"] --> CheckImplementation{"Implementation<br>Complete?"}
+- 
+-     CheckImplementation -->|"No"| BlockReflect["Block REFLECT<br>Mode"]
+-     CheckImplementation -->|"Yes"| CheckSubtasks{"All Subtasks<br>Complete?"}
+- 
+-     CheckSubtasks -->|"No"| WarnIncomplete["Warn About<br>Incomplete Subtasks"]
+-     CheckSubtasks -->|"Yes"| ProceedReflect["Proceed with<br>REFLECT"]
+- 
+-     WarnIncomplete --> UserDecision{"User Wants to<br>Continue?"}
+-     UserDecision -->|"No"| ReturnImplement["Return to<br>IMPLEMENT"]
+-     UserDecision -->|"Yes"| CreatePartialMigration["Create Partial<br>Migration"]
+- 
+-     CreatePartialMigration --> ProceedReflect
+-     ProceedReflect --> ReflectComplete["REFLECT Mode<br>Complete"]
+- 
+-     BlockReflect --> ReturnImplement
+- 
+-     style BlockReflect fill:#ef4444,stroke:#dc2626,color:white
+-     style WarnIncomplete fill:#f59e0b,stroke:#d97706,color:white
+- ```
++ Before entering REFLECT mode:
++ 
++ 1. Verify implementation is complete
++ 2. Check all subtasks are finished
++ 3. If incomplete: Block transition and warn user
++ 4. Allow user to return to IMPLEMENT or create partial migration
++ 5. Only proceed when all critical tasks are complete
+  
+  ### ARCHIVE Mode Safe Transition
+  
+- ```mermaid
+- graph TD
+-     ArchiveStart["ARCHIVE Mode<br>Start"] --> CheckReflection{"Reflection<br>Complete?"}
+- 
+-     CheckReflection -->|"No"| BlockArchive["Block ARCHIVE<br>Mode"]
+-     CheckReflection -->|"Yes"| CheckDeliverables{"All Deliverables<br>Ready?"}
+- 
+-     CheckDeliverables -->|"No"| WarnMissing["Warn About<br>Missing Deliverables"]
+-     CheckDeliverables -->|"Yes"| CreateFinalMigration["Create Final<br>Migration"]
+- 
+-     WarnMissing --> UserChoice{"User Wants to<br>Continue?"}
+-     UserChoice -->|"No"| ReturnReflect["Return to<br>REFLECT"]
+-     UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive"]
+- 
+-     CreatePartialArchive --> CreateFinalMigration
+-     CreateFinalMigration --> ArchiveComplete["ARCHIVE Mode<br>Complete"]
+- 
+-     BlockArchive --> ReturnReflect
+- 
+-     style BlockArchive fill:#ef4444,stroke:#dc2626,color:white
+-     style WarnMissing fill:#f59e0b,stroke:#d97706,color:white
+- ```
++ Before entering ARCHIVE mode:
++ 
++ 1. Ensure reflection is complete
++ 2. Verify all deliverables are ready
++ 3. Create final migration document
++ 4. Preserve context for next development cycle
++ 5. Clean transition with full data preservation
+  
+  ## 📋 TASK PRESERVATION RULES
+  
+  ### Preservation Priority Matrix
+  
+- ```mermaid
+- graph TD
+-     subgraph "Task Priority Matrix"
+-         Critical["🔴 CRITICAL<br>System blocking"]
+-         High["🟡 HIGH<br>Feature blocking"]
+-         Medium["🟢 MEDIUM<br>Enhancement"]
+-         Low["⚪ LOW<br>Nice to have"]
+-     end
+- 
+-     subgraph "Preservation Level"
+-         Full["Full Context<br>Preservation"]
+-         Core["Core Context<br>Preservation"]
+-         Basic["Basic Info<br>Preservation"]
+-         Log["Log Only"]
+-     end
+- 
+-     Critical --> Full
+-     High --> Core
+-     Medium --> Basic
+-     Low --> Log
+- 
+-     Full --> FullDetails["• Complete task context<br>• All subtasks<br>• Implementation details<br>• Dependencies<br>• Timeline"]
+-     Core --> CoreDetails["• Task description<br>• Current status<br>• Next steps<br>• Key dependencies"]
+-     Basic --> BasicDetails["• Task name<br>• Status<br>• Priority"]
+-     Log --> LogDetails["• Task ID<br>• Completion date"]
+- ```
++ **🔴 CRITICAL** (System blocking)
++ - Full context preservation
++ - Complete task details, subtasks, dependencies, timeline
++ 
++ **🟡 HIGH** (Feature blocking)  
++ - Core context preservation
++ - Task description, status, next steps, key dependencies
++ 
++ **🟢 MEDIUM** (Enhancement)
++ - Basic info preservation
++ - Task name, status, priority
++ 
++ **⚪ LOW** (Nice to have)
++ - Log only
++ - Task ID, completion date
+  
+  ### Automatic Task Addition Rules
+  
+- ```yaml
+- task_addition_rules:
+-   never_replace:
+-     - Always append new tasks
+-     - Never overwrite existing tasks.md
+-     - Preserve all unfinished work
+- 
+-   merge_strategy:
+-     - Combine new tasks with migrated tasks
+-     - Maintain priority ordering
+-     - Preserve task relationships
+- 
+-   conflict_resolution:
+-     - Duplicate task IDs: append timestamp
+-     - Priority conflicts: user confirmation
+-     - Dependency conflicts: preserve both
+- ```
++ - **Never Replace**: Always append new tasks, never overwrite existing tasks.md
++ - **Merge Strategy**: Combine new tasks with migrated tasks, maintain priority ordering
++ - **Conflict Resolution**: Handle duplicate IDs, priority conflicts, dependency conflicts
+  
+  ## 🚨 WARNING SYSTEM
+  
+- ### Warning Types and Triggers
+- 
+- ```mermaid
+- graph TD
+-     WarningSystem["Warning System"] --> TaskLoss["🚨 TASK LOSS<br>WARNING"]
+-     WarningSystem --> Incomplete["⚠️ INCOMPLETE<br>WARNING"]
+-     WarningSystem --> Dependency["🔗 DEPENDENCY<br>WARNING"]
+-     WarningSystem --> Data["💾 DATA LOSS<br>WARNING"]
+- 
+-     TaskLoss --> TaskLossMsg["Unfinished tasks will be lost<br>without migration"]
+-     Incomplete --> IncompleteMsg["Implementation not complete<br>for reflection"]
+-     Dependency --> DependencyMsg["Dependent tasks may be<br>affected by transition"]
+-     Data --> DataMsg["Unsaved progress may be<br>lost during transition"]
+- 
+-     TaskLossMsg --> UserAction["User Action<br>Required"]
+-     IncompleteMsg --> UserAction
+-     DependencyMsg --> UserAction
+-     DataMsg --> UserAction
+- 
+-     UserAction --> Proceed["Proceed with<br>Migration"]
+-     UserAction --> Cancel["Cancel<br>Transition"]
+-     UserAction --> Review["Review Tasks<br>First"]
+- 
+-     style TaskLoss fill:#ef4444,stroke:#dc2626,color:white
+-     style Incomplete fill:#f59e0b,stroke:#d97706,color:white
+-     style Dependency fill:#3b82f6,stroke:#2563eb,color:white
+-     style Data fill:#8b5cf6,stroke:#7c3aed,color:white
+- ```
+- 
+- ### Warning Message Templates
+- 
+- ```yaml
+- warning_templates:
+-   task_loss:
+-     title: "⚠️ POTENTIAL TASK LOSS"
+-     message: |
+-       You have {count} unfinished tasks that will be lost if you proceed
++ ### Warning Types
++ 
++ **🚨 TASK LOSS WARNING**
++ - Triggered when unfinished tasks will be lost without migration
++ - Shows list of affected tasks
++ - Offers migration creation option
++ 
++ **⚠️ INCOMPLETE WARNING**  
++ - Triggered when implementation is not complete for reflection
++ - Shows completion percentage
++ - Blocks unsafe transitions
++ 
++ **🔗 DEPENDENCY WARNING**
++ - Triggered when dependent tasks may be affected
++ - Shows dependency chain
++ - Recommends completion order
++ 
++ **💾 DATA LOSS WARNING**
++ - Triggered when unsaved progress may be lost
++ - Shows affected files
++ - Requires user confirmation
++ 
++ ### Warning Message Example
++ 
++ ```
++ ⚠️ POTENTIAL TASK LOSS
++ 
++ You have 2 unfinished tasks that will be lost if you proceed
+  without creating a migration document.
+  
+  Unfinished tasks:
+-       {task_list}
++ - TASK-CONTINUITY-FIX-2024-12-09 (75% complete)
++ - CREATIVE-ARCHIVE-SYSTEM-2024-12-09 (25% complete)
+  
+  Options:
+  1. Create migration.md (Recommended)
+  2. Complete tasks first  
+  3. Proceed anyway (NOT RECOMMENDED)
+- 
+-   incomplete_implementation:
+-     title: "🚨 IMPLEMENTATION INCOMPLETE"
+-     message: |
+-       Current task implementation is not complete:
+- 
+-       Task: {task_name}
+-       Status: {status}
+-       Completion: {percentage}%
+- 
+-       You cannot proceed to REFLECT mode until implementation
+-       is complete or you create a migration document.
+  ```
+  
+- ## 📊 IMPLEMENTATION CHECKLIST
+- 
+- ```yaml
+- implementation_checklist:
+-   phase_1_validation:
++ ## 📊 IMPLEMENTATION PHASES
++ 
++ ### Phase 1: Task Status Validation (30 min)
+  - [ ] Task status validation system
+  - [ ] Completion percentage tracking  
+  - [ ] Dependency checking
+  - [ ] User warning system
+  
+-   phase_2_migration:
++ ### Phase 2: Migration System Integration (45 min)
+  - [ ] Migration document creation
+  - [ ] Context preservation
+  - [ ] Task merging logic
+  - [ ] Backup system integration
+  
+-   phase_3_safe_transitions:
++ ### Phase 3: Safe Mode Transitions (30 min)
+  - [ ] VAN mode safe initialization
+  - [ ] REFLECT mode validation
+  - [ ] ARCHIVE mode verification
+  - [ ] User confirmation flows
+  
+-   phase_4_preservation:
++ ### Phase 4: Task Preservation Rules (30 min)
+  - [ ] Priority-based preservation
+  - [ ] Automatic task addition
+  - [ ] Conflict resolution
+  - [ ] Data integrity verification
+- ```
+  
+  ## 🔧 INTEGRATION POINTS
+  
+  ### File System Integration
+  
+- ```yaml
+- file_integration:
+-   tasks_md:
++ **tasks.md**
+  - Never delete existing content
+  - Always append new tasks
+  - Preserve task metadata
+  - Maintain formatting
+  
+-   migration_md:
++ **migration.md**
+  - Auto-create when needed
+  - Standard YAML format
+  - Complete context preservation
+  - Version tracking
+  
+-   progress_md:
++ **progress.md**
+  - Continuous updates
+  - Status tracking
+  - Milestone preservation
+  - Performance metrics
+- ```
+  
+  ### Mode Integration
+  
+- ```yaml
+- mode_integration:
+-   van_mode:
++ **VAN Mode**
+  - Check migration.md on start
+  - Process unfinished tasks
+  - Preserve user context
+  - Safe initialization
+  
+-   reflect_mode:
++ **REFLECT Mode**
+  - Validate implementation status
+  - Check task completion
+  - Create migration if needed
+  - Block unsafe transitions
+  
+-   archive_mode:
++ **ARCHIVE Mode**
+  - Verify reflection completion
+  - Create final migration
+  - Preserve for next cycle
+  - Clean transition
+- ```
+  
+- This task continuity system ensures 100% preservation of development work across all Memory Bank mode transitions, preventing the critical issue of task loss that was identified in the system analysis.
++ This task continuity system ensures 100% preservation of development work across all Memory Bank mode transitions, solving the critical issue of task loss identified in the system analysis.
+```
+
+---
+
+Теперь обновлю VAN mode map для интеграции системы task continuity:
+
+---
+
+
+
+---
+
+```diff
+      QACheck -->|"No"| FixIssues["Fix Technical Issues"]
+      FixIssues --> QAProcess
++     
++     %% Task Continuity Styling
++     style TaskContinuity fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
++     style CheckMigration fill:#b3ffb3,stroke:#80ff80,color:black
++     style ProcessMigration fill:#b3ffb3,stroke:#80ff80,color:black
++     style MergeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
++     style WarnTaskLoss fill:#ffcc80,stroke:#ff9900,color:black
++     style UserChoice fill:#cce6ff,stroke:#80bfff,color:black
+      
+      %% Style nodes
+```
+
+---
+
+Теперь обновлю REFLECT mode map для интеграции task continuity:
+
+---
+
+
+
+---
+
+
+
+---
+
+Попробую другой подход - прочитаю файл и сделаю точечные изменения:
+
+---
+
+Read file: _cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc.md
+
+---
+
+
+
 
 
 ---
