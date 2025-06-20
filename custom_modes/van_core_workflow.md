@@ -5,8 +5,8 @@
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
 - 🔄 **[Core Workflow](van_core_workflow.md)** ← You are here
-- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
-- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
+
+
 
 ---
 
@@ -18,8 +18,8 @@ graph TD
     Start["User Command"] --> CommandDetect{"Command<br>Type?"}
 
     CommandDetect -->|"VAN"| VAN["VAN Mode"]
-    CommandDetect -->|"VAN.RULES"| VanRules["VAN.RULES<br>Rules Management"]
-    CommandDetect -->|"VAN.SYSTEM"| VanSystem["VAN.SYSTEM<br>System Admin"]
+
+
     CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
     CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
     CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
@@ -27,8 +27,8 @@ graph TD
 
     %% Immediate Response Node
     VAN --> VanResp["Respond: OK VAN"]
-    VanRules --> VanRulesResp["Respond: OK VAN.RULES"]
-    VanSystem --> VanSystemResp["Respond: OK VAN.SYSTEM"]
+
+
     Plan --> PlanResp["Respond: OK PLAN"]
     Creative --> CreativeResp["Respond: OK CREATIVE"]
     Implement --> ImplResp["Respond: OK IMPLEMENT"]
@@ -43,16 +43,16 @@ graph TD
     ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
     IntegrateUnfinished --> LoadVan
 
-    VanRulesResp --> CheckMB_Rules["Check Rules Status<br>& Integration State"]
-    VanSystemResp --> CheckMB_System["Check System Status<br>& Configuration"]
+
+
     PlanResp --> CheckMB_Plan["Check Memory Bank<br>& tasks.md Status"]
     CreativeResp --> CheckMB_Creative["Check Memory Bank<br>& tasks.md Status"]
     ImplResp --> CheckMB_Impl["Check Memory Bank<br>& tasks.md Status"]
     QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
 
     %% Rule Loading with fetch_rules
-    CheckMB_Rules --> LoadRules["Load Rules via fetch_rules:<br>git-workflow/branch-management<br>implementation/dependency-checking<br>hierarchical-rule-loading"]
-    CheckMB_System --> LoadSystem["Load Rules via fetch_rules:<br>optimization-integration<br>platform-awareness<br>debugging/systematic-debugging"]
+
+
     CheckMB_Plan --> LoadPlan["Load Rules via fetch_rules:<br>visual-maps/plan-mode-map<br>interactive-planning<br>problem-prioritization"]
     CheckMB_Creative --> LoadCreative["Load Rules via fetch_rules:<br>visual-maps/creative-mode-map<br>creative-decision-control<br>creative-phase-architecture"]
     CheckMB_Impl --> LoadImpl["Load Rules via fetch_rules:<br>visual-maps/implement-mode-map<br>phased-implementation<br>command-execution"]
@@ -60,8 +60,8 @@ graph TD
 
     %% Rule Execution with Memory Bank Updates
     LoadVan --> ExecVan["Execute VAN<br>Process"]
-    LoadRules --> ExecRules["Execute Rules<br>Management Process"]
-    LoadSystem --> ExecSystem["Execute System<br>Administration"]
+
+
     LoadPlan --> ExecPlan["Execute Process<br>in Rule"]
     LoadCreative --> ExecCreative["Execute Process<br>in Rule"]
     LoadImpl --> ExecImpl["Execute Process<br>in Rule"]
@@ -69,8 +69,8 @@ graph TD
 
     %% Memory Bank Continuous Updates
     ExecVan --> UpdateMB_Van["Update Memory Bank<br>& tasks.md"]
-    ExecRules --> UpdateMB_Rules["Update Memory Bank<br>& Rules Integration"]
-    ExecSystem --> UpdateMB_System["Update Memory Bank<br>& System State"]
+
+
     ExecPlan --> UpdateMB_Plan["Update Memory Bank<br>& tasks.md"]
     ExecCreative --> UpdateMB_Creative["Update Memory Bank<br>& tasks.md"]
     ExecImpl --> UpdateMB_Impl["Update Memory Bank<br>& tasks.md"]
@@ -78,8 +78,8 @@ graph TD
 
     %% Verification with Memory Bank Checks
     UpdateMB_Van --> VerifyVan{"VAN Process<br>Complete?"}
-    UpdateMB_Rules --> VerifyRules{"Rules Operation<br>Complete?"}
-    UpdateMB_System --> VerifySystem{"System Operation<br>Complete?"}
+
+
     UpdateMB_Plan --> VerifyPlan{"Process<br>Complete?"}
     UpdateMB_Creative --> VerifyCreative{"Process<br>Complete?"}
     UpdateMB_Impl --> VerifyImpl{"Process<br>Complete?"}
@@ -91,15 +91,9 @@ graph TD
     RetryVan --- ReadMB_Van["Reference Memory Bank<br>for Context"]
     ReadMB_Van --> ExecVan
 
-    VerifyRules -->|"Yes"| CompleteRules["VAN.RULES Process<br>Complete"]
-    VerifyRules -->|"No"| RetryRules["Resume<br>Rules Process"]
-    RetryRules --- ReadMB_Rules["Reference Rules State<br>for Context"]
-    ReadMB_Rules --> ExecRules
 
-    VerifySystem -->|"Yes"| CompleteSystem["VAN.SYSTEM Process<br>Complete"]
-    VerifySystem -->|"No"| RetrySystem["Resume<br>System Process"]
-    RetrySystem --- ReadMB_System["Reference System State<br>for Context"]
-    ReadMB_System --> ExecSystem
+
+
 
     VerifyPlan -->|"Yes"| CompletePlan["PLAN Process<br>Complete"]
     VerifyPlan -->|"No"| RetryPlan["Resume<br>PLAN Process"]
@@ -123,8 +117,8 @@ graph TD
 
     %% Final Memory Bank Updates at Completion
     CompleteVan --> FinalMB_Van["Update Memory Bank<br>with Completion Status"]
-    CompleteRules --> FinalMB_Rules["Update Memory Bank<br>with Rules Integration Status"]
-    CompleteSystem --> FinalMB_System["Update Memory Bank<br>with System Status"]
+
+
     CompletePlan --> FinalMB_Plan["Update Memory Bank<br>with Completion Status"]
     CompleteCreative --> FinalMB_Creative["Update Memory Bank<br>with Completion Status"]
     CompleteImpl --> FinalMB_Impl["Update Memory Bank<br>with Completion Status"]
@@ -133,8 +127,8 @@ graph TD
     %% Mode Transitions with Memory Bank Preservation
     FinalMB_Van -->|"Level 1"| TransToImpl["→ IMPLEMENT Mode"]
     FinalMB_Van -->|"Level 2-4"| TransToPlan["→ PLAN Mode"]
-    FinalMB_Rules --> TransToAny["→ Any Mode<br>(Rules Ready)"]
-    FinalMB_System --> TransToVan["→ VAN Mode<br>(System Ready)"]
+
+
     FinalMB_Plan --> TransToCreative["→ CREATIVE Mode"]
     FinalMB_Creative --> TransToImpl2["→ IMPLEMENT Mode"]
     FinalMB_Impl --> TransToQA["→ QA Mode"]
@@ -145,10 +139,10 @@ graph TD
     MemoryBank -.-> active["activeContext.md<br>Current Focus"]
     MemoryBank -.-> progress["progress.md<br>Implementation Status"]
 
-    CheckMB_Van & CheckMB_Rules & CheckMB_System & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
-    UpdateMB_Van & UpdateMB_Rules & UpdateMB_System & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
-    ReadMB_Van & ReadMB_Rules & ReadMB_System & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
-    FinalMB_Van & FinalMB_Rules & FinalMB_System & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
+    CheckMB_Van & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
+    UpdateMB_Van & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
+    ReadMB_Van & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
+    FinalMB_Van & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
 
     %% Error Handling
     Error["⚠️ ERROR<br>DETECTION"] -->|"Todo App"| BlockCreative["⛔ BLOCK<br>creative-mode-map"]
@@ -159,16 +153,16 @@ graph TD
     style Start fill:#f8d486,stroke:#e8b84d,color:black
     style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
     style VAN fill:#ccf,stroke:#333,color:black
-    style VanRules fill:#ffc,stroke:#333,color:black
-    style VanSystem fill:#fcf,stroke:#333,color:black
+
+
     style Plan fill:#cfc,stroke:#333,color:black
     style Creative fill:#fcf,stroke:#333,color:black
     style Implement fill:#cff,stroke:#333,color:black
     style QA fill:#fcc,stroke:#333,color:black
 
     style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
-    style VanRulesResp fill:#fff9d9,stroke:#ffcc99,color:black
-    style VanSystemResp fill:#f9d9ff,stroke:#cc99ff,color:black
+
+
     style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
     style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
     style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
@@ -361,4 +355,4 @@ graph TD
 
 ---
 
-**Navigation**: Return to [Main Instructions](van_instructions.md) | Continue to [Rules Submode](van_rules_submode.md)
+**Navigation**: Return to [Main Instructions](van_instructions.md)

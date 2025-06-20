@@ -5,7 +5,7 @@
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
 - 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
-- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+
 - ⚙️ **[System Submode](van_system_submode.md)** ← You are here
 
 ---
@@ -480,4 +480,4 @@ Activating VAN.SYSTEM health check submode...
 
 ---
 
-**Navigation**: Return to [Main Instructions](van_instructions.md) | Previous: [Rules Submode](van_rules_submode.md) | [Core Workflow](van_core_workflow.md)
+**Navigation**: Return to [Main Instructions](van_instructions.md) | [Core Workflow](van_core_workflow.md)

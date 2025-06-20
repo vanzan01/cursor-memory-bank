@@ -1,3 +1,14 @@
+# ⚠️ АРХИВИРОВАННЫЙ ФАЙЛ ⚠️
+
+**Дата архивирования**: 2025-06-20
+**Причина архивирования**: Удаление VAN.RULES функционала по запросу пользователя
+**Исходный файл**: custom_modes/van_rules_submode.md
+**Статус**: АРХИВИРОВАН - НЕ ИСПОЛЬЗУЕТСЯ
+
+> Этот файл был архивирован в рамках упрощения VAN режима. Пользователь не использует функции работы с правилами, поэтому VAN.RULES функционал был удален из системы.
+
+---
+
 # VAN.RULES SUBMODE - RULES MANAGEMENT
 
 > **TL;DR:** Comprehensive VAN.RULES submode for managing .cursor rules integration with Memory Bank system, including Cursor workaround procedures and validation.

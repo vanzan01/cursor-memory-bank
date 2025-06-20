@@ -148,12 +148,19 @@
     └── custom_modes/
         ├── creative_instructions.md
         ├── implement_instructions.md
+        ├── integration_guide.md
         ├── mode_switching_analysis_ru.md
         ├── mode_switching_analysis.md
         ├── plan_instructions.md
         ├── reflect_archive_instructions.md
+        ├── rules_integration_analysis.md
         ├── van_core_workflow.md
+        ├── van_enhanced.md
+        ├── van_instructions_backup.md
+        ├── van_instructions_enhanced_backup.md
         ├── van_instructions.md
+        ├── van_rules_submode.md
+        └── van_system_submode.md
 ```
 
 ## Список файлов
@@ -33344,6 +33351,7 @@ Before completing the build phase, verify that all build steps have been complet
 
 ```
 
+`custom_modes/integration_guide.md`
 
 ```md
 # РУКОВОДСТВО ПО ИНТЕГРАЦИИ ПРАВИЛ ЧЕРЕЗ VAN РЕЖИМ
@@ -33366,7 +33374,9 @@ Before completing the build phase, verify that all build steps have been complet
 
 ### Файлы интеграции:
 1. **`custom_modes/van_instructions.md`** - обновлен с подрежимами
+2. **`custom_modes/van_enhanced.md`** - документация подхода
 3. **`custom_modes/rules_instructions.md`** - детальные инструкции
+4. **`custom_modes/rules_integration_analysis.md`** - анализ интеграции
 5. **`rules/changing_the_rules.md`** - руководство по изменению правил
 
 ### Команды VAN.RULES:
@@ -34258,6 +34268,7 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 
 ```
 
+`custom_modes/rules_integration_analysis.md`
 
 ```md
 # АНАЛИЗ ИНТЕГРАЦИИ ПРАВИЛ MEMORY BANK
@@ -34616,6 +34627,8 @@ User Request → Rule Dispatcher → Level/Phase Selection → Rule Loading → 
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
 - 🔄 **[Core Workflow](van_core_workflow.md)** ← You are here
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
 
 ---
 
@@ -34970,8 +34983,10 @@ graph TD
 
 ---
 
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Continue to [Rules Submode](van_rules_submode.md)
 ```
 
+`custom_modes/van_enhanced.md`
 
 ```md
 # ENHANCED VAN MODE - SYSTEM ADMINISTRATION & RULES MANAGEMENT
@@ -35121,6 +35136,7 @@ Assistant: OK VAN.SYSTEM
 ### Шаг 2: Интегрировать созданные материалы
 - `rules/changing_the_rules.md` - как руководство для VAN.RULES
 - `custom_modes/rules_instructions.md` - как детальные инструкции
+- `custom_modes/rules_integration_analysis.md` - как справочник
 
 ### Шаг 3: Тестирование
 Проверить работу всех подрежимов и их интеграцию с Memory Bank.
@@ -35137,6 +35153,7 @@ Assistant: OK VAN.SYSTEM
 - ✅ Обеспечить полную функциональность без компромиссов
 ```
 
+`custom_modes/van_instructions_backup.md`
 
 ```md
 # ADAPTIVE MEMORY-BASED ASSISTANT SYSTEM - ENTRY POINT
@@ -35438,6 +35455,7 @@ Analyzing system performance...
 
 ```
 
+`custom_modes/van_instructions_enhanced_backup.md`
 
 ```md
 # ADAPTIVE MEMORY-BASED ASSISTANT SYSTEM - ENHANCED ENTRY POINT
@@ -35868,14 +35886,18 @@ read_file({
 })
 
 read_file({
+  target_file: "van_rules_submode.md",
   should_read_entire_file: true
 })
 
 read_file({
+  target_file: "van_system_submode.md",
   should_read_entire_file: true
 })
 ```
 - 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
 
 ---
 
@@ -36046,6 +36068,8 @@ Activating VAN.SYSTEM health check submode...
 For detailed workflow processes, see:
 
 - **[Core Workflow](van_core_workflow.md)** - Complete VAN workflow with full mermaid diagrams, task continuity, and error handling
+- **[Rules Submode](van_rules_submode.md)** - Comprehensive VAN.RULES functionality with Cursor workaround procedures
+- **[System Submode](van_system_submode.md)** - Complete VAN.SYSTEM administration with backup/restore and health checks
 
 ---
 
@@ -36095,6 +36119,7 @@ For detailed workflow processes, see:
 **Next**: See [Core Workflow](van_core_workflow.md) for detailed process diagrams and implementation steps.
 ```
 
+`custom_modes/van_rules_submode.md`
 
 ```md
 # VAN.RULES SUBMODE - RULES MANAGEMENT
@@ -36104,6 +36129,8 @@ For detailed workflow processes, see:
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
 - 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** ← You are here
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
 
 ---
 
@@ -36499,8 +36526,10 @@ Activating VAN.RULES validation submode...
 
 ---
 
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Previous: [Core Workflow](van_core_workflow.md) | Next: [System Submode](van_system_submode.md)
 ```
 
+`custom_modes/van_system_submode.md`
 
 ```md
 # VAN.SYSTEM SUBMODE - SYSTEM ADMINISTRATION
@@ -36510,6 +36539,8 @@ Activating VAN.RULES validation submode...
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
 - 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** ← You are here
 
 ---
 
@@ -36983,6 +37014,7 @@ Activating VAN.SYSTEM health check submode...
 
 ---
 
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Previous: [Rules Submode](van_rules_submode.md) | [Core Workflow](van_core_workflow.md)
 ```
 
 
