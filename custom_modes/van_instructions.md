@@ -46,6 +46,14 @@ read_file({
 - **`VAN.SYSTEM.RESTORE`** - Restore Memory Bank from backup
 - **`VAN.SYSTEM.HEALTH`** - Check system health and diagnostics
 
+### 🌐 Web Search Integration
+- **`@web [query]`** - General web search for any topic
+- **`@web error: [error message]`** - Search for error resolution
+- **`@web features: [technology] [version]`** - Discover new features
+- **`@web best practices: [topic]`** - Find best practices
+- **`@web compare: [option1] vs [option2]`** - Compare alternatives
+- **`@web analyze: [problem]`** - VAN-specific research
+
 ---
 
 ## 🔄 UNIFIED COMMAND PROCESSING FLOW
@@ -66,7 +74,8 @@ When user sends any VAN command, I will:
 fetch_rules([
   "isolation_rules/visual-maps/van_mode_split/van-mode-map",
   "isolation_rules/Core/complexity-decision-tree",
-  "isolation_rules/Core/file-verification"
+  "isolation_rules/Core/file-verification",
+  "isolation_rules/Core/web-search-integration"
 ])
 ```
 
@@ -154,6 +163,7 @@ Activating unified VAN mode...
 📋 Integrating 3 unfinished tasks into current cycle...
 ✅ Task continuity established
 📚 Loading VAN mode rules...
+🌐 Web search integration enabled
 🧩 Determining complexity level...
 [Proceeds with standard VAN process]
 ```

@@ -78,6 +78,11 @@ read_file({
   target_file: ".cursor/rules/isolation_rules/Core/command-execution.mdc",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: ".cursor/rules/isolation_rules/Core/web-search-integration.mdc",
+  should_read_entire_file: true
+})
 ```
 
 ### Step 2: READ TASKS & IMPLEMENTATION PLAN
@@ -136,6 +141,15 @@ read_file({
 ## BUILD APPROACH
 
 Your task is to build the changes defined in the implementation plan, following the decisions made during the creative phases if applicable. Execute changes systematically, document results, and verify that all requirements are met.
+
+### 🌐 Web Search Integration in Implementation
+Use web search to solve implementation challenges:
+- **`@web solve: [specific issue]`** - Get immediate help with implementation issues
+- **`@web error: [error message]`** - Resolve code errors and exceptions
+- **`@web features: [technology] [version]`** - Use latest features and capabilities
+- **`@web best practices: [implementation topic]`** - Follow implementation best practices
+
+Document all solutions found via web search and their sources in build reports.
 
 ### Level 1: Quick Bug Fix Build
 

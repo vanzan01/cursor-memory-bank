@@ -113,6 +113,11 @@ read_file({
   target_file: ".cursor/rules/isolation_rules/Core/creative-phase-metrics.mdc",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: ".cursor/rules/isolation_rules/Core/web-search-integration.mdc",
+  should_read_entire_file: true
+})
 ```
 
 ### Step 4: LOAD DESIGN TYPE-SPECIFIC REFERENCES
@@ -145,6 +150,15 @@ read_file({
 ## CREATIVE PHASE APPROACH
 
 Your task is to generate multiple design options for components flagged during planning, analyze the pros and cons of each approach, and document implementation guidelines. Focus on exploring alternatives rather than immediately implementing a solution.
+
+### 🌐 Web Search Integration in Creative Phase
+Enhance creative exploration with web research:
+- **`@web design: [pattern/approach]`** - Research design patterns and approaches
+- **`@web best practices: [domain] design`** - Find design best practices
+- **`@web compare: [pattern1] vs [pattern2]`** - Compare design alternatives
+- **`@web examples: [pattern] implementation`** - Find real-world examples
+
+Document all research findings and sources in creative phase documentation.
 
 ### Architecture Design Process
 

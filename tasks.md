@@ -40,12 +40,51 @@
 13. ⏳ `archive-mode-integration.mdc` - Complete workflow archival system
 14. ⏳ `cross-model-compatibility.mdc` - Enhanced model communication protocols
 
+**NEW TASK - WEB SEARCH INTEGRATION:**
+15. 🔄 `web-search-integration.mdc` - Web search for error resolution & feature discovery
+
 **PHASE 2 OBJECTIVES:**
 - Complete remaining 36% of rules implementation
 - Integrate advanced project analysis capabilities
 - Implement sophisticated QA interrupt handling
 - Establish comprehensive archival workflows
 - Finalize cross-model compatibility systems
+- **NEW**: Add web search capabilities for error resolution and feature discovery
+
+---
+
+## 🔄 CURRENT IMPLEMENTATION: WEB SEARCH INTEGRATION
+
+### Task: Web Search Integration for Error Resolution & Feature Discovery
+
+**Status**: 🔄 IN PROGRESS
+
+**Objective**: Integrate web search capabilities across all Memory Bank modes to enable:
+- Error resolution through web search
+- Discovery of new language/tool features
+- Best practices research
+- Solution validation
+
+**Implementation Plan**:
+1. ✅ Create `web-search-integration.mdc` core rule
+2. ✅ Update all mode instructions in `custom_modes/`
+3. ✅ Create comprehensive web search guide
+4. ✅ Create QA mode instructions with web search
+5. ⏳ Update visual maps with web search integration
+6. ⏳ Add web search guidelines to existing rules
+7. ⏳ Test integration across all modes
+8. ⏳ Document usage patterns and best practices
+
+**Files Updated**:
+- ✅ `.cursor/rules/isolation_rules/Core/web-search-integration.mdc` (NEW)
+- ✅ `custom_modes/van_instructions.md`
+- ✅ `custom_modes/plan_instructions.md`
+- ✅ `custom_modes/creative_instructions.md`
+- ✅ `custom_modes/implement_instructions.md`
+- ✅ `custom_modes/reflect_archive_instructions.md`
+- ✅ `custom_modes/qa_instructions.md` (NEW)
+- ✅ `memory-bank/web-search-integration-guide.md` (NEW)
+- ⏳ Visual maps in `.cursor/rules/isolation_rules/visual-maps/`
 
 ---
 

@@ -85,6 +85,11 @@ read_file({
   target_file: "progress.md",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: ".cursor/rules/isolation_rules/Core/web-search-integration.mdc",
+  should_read_entire_file: true
+})
 ```
 
 ### Step 2: LOAD REFLECT+ARCHIVE MODE MAPS
@@ -119,6 +124,15 @@ read_file({
 ## DEFAULT BEHAVIOR: REFLECTION
 When this mode is activated, it defaults to the REFLECTION process. Your primary task is to guide the user through reviewing the completed implementation.
 Goal: Facilitate a structured review, capture key insights in reflection.md, and update tasks.md to reflect completion of the reflection phase.
+
+### 🌐 Web Search Integration in Reflection
+Enhance reflection with research capabilities:
+- **`@web improve: [area for improvement]`** - Research improvements and alternatives
+- **`@web trends: [technology] 2024`** - Stay current with technology trends
+- **`@web best practices: [domain] retrospective`** - Learn from industry practices
+- **`@web compare: [our approach] vs [alternatives]`** - Validate chosen approaches
+
+Document all research findings and future improvement ideas in reflection.md with sources.
 
 ```mermaid
 graph TD

@@ -84,10 +84,15 @@ read_file({
 })
 ```
 
-### Step 2: LOAD PLAN MODE MAP
+### Step 2: LOAD PLAN MODE MAP & WEB SEARCH
 ```
 read_file({
   target_file: ".cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc",
+  should_read_entire_file: true
+})
+
+read_file({
+  target_file: ".cursor/rules/isolation_rules/Core/web-search-integration.mdc",
   should_read_entire_file: true
 })
 ```
@@ -132,6 +137,15 @@ read_file({
 ## PLANNING APPROACH
 
 Create a detailed implementation plan based on the complexity level determined during initialization. Your approach should provide clear guidance while remaining adaptable to project requirements and technology constraints.
+
+### 🌐 Web Search Integration in Planning
+Use web search to enhance planning decisions:
+- **`@web research: [technology/approach]`** - Research technologies and approaches
+- **`@web best practices: [domain]`** - Find planning best practices
+- **`@web compare: [option1] vs [option2]`** - Compare architectural options
+- **`@web features: [technology] [version]`** - Discover new capabilities
+
+Document all research findings in the implementation plan with source references.
 
 ### Level 2: Simple Enhancement Planning
 
