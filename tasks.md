@@ -84,6 +84,7 @@
 - ✅ `custom_modes/implement_instructions.md`
 - ✅ `custom_modes/reflect_archive_instructions.md`
 - ✅ `custom_modes/qa_instructions.md` (NEW)
+- ✅ `custom_modes/universal_instructions.md` (NEW)
 - ✅ `memory-bank/web-search-integration-guide.md` (NEW)
 - ⏳ Visual maps in `.cursor/rules/isolation_rules/visual-maps/` (Phase 2)
 
