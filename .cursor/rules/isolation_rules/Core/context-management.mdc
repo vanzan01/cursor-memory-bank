@@ -1,368 +1,386 @@
 ---
-description:
-globs:
-alwaysApply: false
----
----
-description: Context management and CONTINUE command rules for Memory Bank system
-globs: "**/memory-bank/**", "**/custom_modes/**", "**/VAN/**", "**/PLAN/**", "**/CREATIVE/**", "**/IMPLEMENT/**", "**/QA/**", "**/REFLECT/**", "**/UNIVERSAL/**"
+description: Enhanced Context Management with Per-Task Context Preservation
+globs: "**/memory-bank/**", "**/contexts/**", "**/tasks/**"
 alwaysApply: true
 ---
 
-# CONTEXT MANAGEMENT & CONTINUE COMMAND RULES
+# ENHANCED CONTEXT MANAGEMENT SYSTEM
 
-> **TL;DR:** System for maintaining continuity in Memory Bank operations through automatic context saving and restoration during session interruptions or CONTINUE commands.
+## CORE PRINCIPLE: PER-TASK CONTEXT PRESERVATION
 
-## 🎯 SYSTEM PURPOSE
-Ensure Memory Bank operation continuity through automatic saving and restoration of user context during session interruptions or CONTINUE commands.
+**CRITICAL REQUIREMENT**: Each task MUST have separate context preservation to enable multi-task switching and parallel work on non-overlapping tasks.
 
-## 📁 CONTEXT MANAGEMENT FILES
+## CONTEXT ARCHITECTURE
 
-### 1. Main State File
-**File**: `memory-bank/system/current-context.md`
-**Purpose**: Save current user request and system state
-
-### 2. Working Mode File
-**File**: `memory-bank/system/interaction-mode.txt`
-**Purpose**: Save current Memory Bank working mode
-
-### 3. Tasks File
-**File**: `memory-bank/tasks.md`
-**Purpose**: Main tasks file with current status
-
-## 🔄 CONTEXT SAVING RULES
-
-### When Starting New Task:
-1. **Update current-context.md**:
-   - Save full user request text
-   - Specify current working mode
-   - Record task complexity level
-   - Add context description
-
-2. **Update interaction-mode.txt**:
-   - Record active mode (VAN/PLAN/CREATIVE/IMPLEMENT/QA/REFLECT/UNIVERSAL)
-
-3. **Update tasks.md**:
-   - Create new active task
-   - Set status to IN_PROGRESS
-
-### During Task Execution:
-1. **Regularly update progress** in current-context.md
-2. **Save key decisions** and intermediate results
-3. **Mark completed stages** in progress list
-
-### When Task Completes:
-1. **Clear current-context.md**:
-   - Set status to COMPLETED
-   - Clear current request
-   - Save brief results summary
-
-2. **Update tasks.md**:
-   - Move task to completed section
-   - Set status to COMPLETED
-
-## 🚀 CONTINUE COMMAND
-
-### CONTINUE Command Triggers:
-- User enters "CONTINUE" or "ПРОДОЛЖАЙ"
-- User enters "ПРОДОЛЖИТЬ" or "CONTINUE WORK"
-- System detects interrupted task on startup
-
-### Restoration Algorithm:
-1. **Check current-context.md**:
-   - If status ACTIVE - restore context
-   - If status COMPLETED - report completion
-   - If file empty - report no tasks
-
-2. **Load Context**:
-   - Read last user request
-   - Determine current working mode
-   - Restore task progress
-
-3. **Continue Execution**:
-   - Switch to saved mode
-   - Show current progress
-   - Continue from stopping point
-
-## 📋 MODE INTEGRATION
-
-### VAN Mode:
-```markdown
-## CONTEXT MANAGEMENT
-1. On request receipt - save to current-context.md
-2. On project initialization - scan rules/*.md files
-3. On project initialization - search TODO/FIXME/HACK in .md files
-4. On complexity analysis - update level in context
-5. On mode transition - update status
-6. On CONTINUE command - restore problem analysis
+### Context File Structure
+```
+memory-bank/contexts/
+├── active/
+│   ├── 2025-06-20-user-auth-context.md
+│   ├── 2025-06-20-payment-system-context.md
+│   └── 2025-06-20-dashboard-redesign-context.md
+├── suspended/
+│   ├── 2025-06-15-legacy-migration-context.md
+│   └── 2025-06-18-api-optimization-context.md
+└── archived/
+    └── 2025-06/
+        ├── 2025-06-10-bug-fix-123-context.md
+        └── 2025-06-12-feature-abc-context.md
 ```
 
-### PLAN Mode:
-```markdown
-## CONTEXT MANAGEMENT
-1. On plan creation - save key decisions
-2. On phase determination - update progress
-3. On transition to CREATIVE/IMPLEMENT - save plan
-4. On CONTINUE command - restore planning
+### Context Naming Convention
+```
+Format: YYYY-MM-DD-{task-identifier}-context.md
+Examples:
+- 2025-06-20-user-authentication-context.md
+- 2025-06-20-payment-integration-context.md
+- 2025-06-20-ui-redesign-context.md
 ```
 
-### CREATIVE Mode:
+## CONTEXT PRESERVATION REQUIREMENTS
+
+### Mental State Preservation
 ```markdown
-## CONTEXT MANAGEMENT
-1. On creative analysis - save solution variants
-2. On decision making - record justifications
-3. On guideline creation - save them
-4. On CONTINUE command - restore creative process
+## 🧠 MENTAL STATE
+
+### Current Focus
+- **Primary Objective**: [What you're trying to achieve]
+- **Current Approach**: [How you're approaching it]
+- **Mental Model**: [Your understanding of the problem/solution]
+
+### Cognitive Context
+- **Key Insights**: [Important realizations or discoveries]
+- **Assumptions Made**: [What you're assuming to be true]
+- **Questions to Resolve**: [Open questions or uncertainties]
+- **Decision Points**: [Choices that need to be made]
+
+### Emotional State
+- **Confidence Level**: [HIGH/MEDIUM/LOW]
+- **Frustration Points**: [What's been challenging]
+- **Momentum Indicators**: [What's working well]
 ```
 
-### IMPLEMENT Mode:
+### Working State Preservation
 ```markdown
-## CONTEXT MANAGEMENT
-1. On implementation start - save build plan
-2. On phase execution - update progress
-3. On errors - record them and solutions
-4. On CONTINUE command - restore build process
+## ⚙️ WORKING STATE
+
+### Technical Context
+- **Current File/Location**: [Where you're working]
+- **Code/Config State**: [What's been modified]
+- **Environment Setup**: [Tools, terminals, browsers open]
+- **Dependencies**: [What needs to be running/available]
+
+### Progress Tracking
+- **Completed Steps**: [What's been finished]
+- **Current Step**: [What you're working on now]
+- **Next Steps**: [Immediate next actions]
+- **Blocked Items**: [What's preventing progress]
+
+### Research Context
+- **Sources Consulted**: [Documentation, Stack Overflow, etc.]
+- **Key Findings**: [Important information discovered]
+- **Approaches Tried**: [What's been attempted]
+- **Approaches to Try**: [What to attempt next]
 ```
 
-### QA Mode:
+### Session Planning
 ```markdown
-## CONTEXT MANAGEMENT
-1. On testing - save test results
-2. On problem discovery - record them and fixes
-3. On transition to REFLECT - save QA report
-4. On CONTINUE command - restore testing process
+## 📋 SESSION PLANNING
+
+### Recovery Procedure
+1. **Environment Setup**: [Steps to recreate working environment]
+2. **Context Loading**: [How to get back into the mental state]
+3. **Progress Review**: [Quick review of what's been done]
+4. **Next Action**: [First thing to do when resuming]
+
+### Time Management
+- **Estimated Time Remaining**: [How much more work expected]
+- **Optimal Session Length**: [Best work session duration]
+- **Break Points**: [Good places to pause work]
+- **Dependencies on Others**: [Waiting for external input]
 ```
 
-### REFLECT Mode:
-```markdown
-## CONTEXT MANAGEMENT
-1. On results analysis - save conclusions
-2. On recommendation creation - record them
-3. On completion - clear context (task completed)
-4. On CONTINUE command - restore reflection process
+## WIP (WORK IN PROGRESS) LIMITS
+
+### Active Context Limits
+```yaml
+Maximum Active Contexts: 3
+Reasoning:
+  - Human cognitive limit for context switching
+  - 25-minute recovery time per context switch
+  - Quality degradation with too many active contexts
+  - Memory and attention span constraints
 ```
 
-### UNIVERSAL Mode:
+### Context State Management
 ```markdown
-## CONTEXT MANAGEMENT
-1. On automatic transitions - save each mode state
-2. On QA interruptions - save main task context
-3. On restoration - determine current workflow phase
-4. On CONTINUE command - restore full workflow
+Context States:
+- **ACTIVE**: Currently being worked on (max 3)
+- **SUSPENDED**: Temporarily paused, can be resumed
+- **BLOCKED**: Waiting for external dependencies
+- **ARCHIVED**: Completed or permanently shelved
 ```
 
-## 🔍 PROJECT INITIALIZATION
+## CONTEXT SWITCHING PROTOCOLS
 
-### Project Rules Scanning
-On new project initialization or first VAN mode run:
-
-1. **Scan rules/ directory**:
+### Suspension Protocol
 ```bash
-find rules/ -name "*.md" -type f
+# When suspending a context
+suspend_context() {
+    local context_file="$1"
+    local reason="$2"
+
+    echo "## 🔄 CONTEXT SUSPENSION" >> "$context_file"
+    echo "**Suspended At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
+    echo "**Reason**: $reason" >> "$context_file"
+    echo "**Recovery Notes**: [Add specific notes for resuming]" >> "$context_file"
+
+    # Move to suspended directory
+    mv "memory-bank/contexts/active/$context_file" "memory-bank/contexts/suspended/"
+}
 ```
 
-2. **Analyze found rules**:
-   - Read content of each .md file in rules/
-   - Determine rule purpose (testing, development, workflow, etc.)
-   - Add links to important rules in context
-
-3. **Save rule links in context**:
-```markdown
-## 📋 PROJECT RULES
-- `rules/DEVELOPMENT_RULES.md` - Development rules (45KB, 1141 lines)
-- `rules/TESTING_BUN.md` - Bun testing rules (38KB, 1419 lines)
-- `rules/DEVELOPMENT_WORKFLOW_RULES.md` - Workflow rules (8.7KB, 175 lines)
-- `rules/DEVELOPMENT_PROMPT_RULES.md` - Prompt rules (7.9KB, 237 lines)
-- `rules/changing_the_rules.md` - Rule modification guide (11KB, 353 lines)
-- [other found rules with sizes and line counts]
-```
-
-### Task Discovery in Documentation
-On project initialization, search for tasks in .md files:
-
-1. **Search TODO, FIXME, HACK**:
+### Restoration Protocol
 ```bash
-# Standard search with line numbers and file context
-grep -r -n -i "TODO\|FIXME\|HACK\|NOTE:" --include="*.md" . | head -30
+# When restoring a suspended context
+restore_context() {
+    local context_file="$1"
 
-# Example results:
-# rules/DEVELOPMENT_RULES.md:88 - // TODO: Implement real merge logic
-# rules/TESTING_BUN.md:347 - // TODO: fix this
-# rules/TESTING_BUN.md:448 - // TODO: we've only implemented this for Linux so far.
+    echo "## ▶️ CONTEXT RESTORATION" >> "$context_file"
+    echo "**Restored At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
+    echo "**Recovery Time**: [Time taken to get back into flow]" >> "$context_file"
+
+    # Move back to active directory
+    mv "memory-bank/contexts/suspended/$context_file" "memory-bank/contexts/active/"
+}
 ```
 
-2. **Search incomplete checkboxes**:
-```bash
-# Find unchecked task boxes
-grep -r -n -E "\- \[ \]" --include="*.md" . | head -20
-
-# Example results:
-# rules/DEVELOPMENT_PROMPT_RULES.md:80 - - [ ] Document current thoughts/verification needs
-# rules/DEVELOPMENT_PROMPT_RULES.md:81 - - [ ] Mark ideas as ✅ successful or ❌ failed
-# CONTRIBUTING.md:165 - - [ ] Bug fix
-```
-
-3. **Search Russian task markers**:
-```bash
-# Find Russian language task indicators
-grep -r -n -i "нужно\|требуется\|добавить\|исправить" --include="*.md" . | head -20
-
-# Example results:
-# memory-bank/system/current-context.md:7 - "нужно сохранять текущий запрос пользователя"
-# memory-bank/tasks.md:192 - "Добавить систему обоснования удаления положений"
-```
-
-4. **Comprehensive project scanning**:
-```bash
-# Get project rules overview
-find rules/ -name "*.md" -type f | head -20
-
-# Get file sizes and line counts for context
-find rules/ -name "*.md" -exec wc -l {} + | sort -nr
-```
-
-5. **Analyze found tasks**:
-   - Categorize by type (bug, enhancement, new feature)
-   - Assess priority based on keywords (FIXME > TODO > enhancement)
-   - Note file locations and line numbers
-   - Add to project task list
-
-6. **Integration into tasks.md**:
+### Context Dashboard
 ```markdown
-## 📝 TASKS FROM DOCUMENTATION
+# Context Dashboard Template
+## 📊 ACTIVE CONTEXTS DASHBOARD
 
-### Found TODO/FIXME:
-- [ ] **rules/DEVELOPMENT_RULES.md:88**: TODO: Implement real merge logic
-- [ ] **rules/TESTING_BUN.md:347**: TODO: fix this
-- [ ] **rules/TESTING_BUN.md:448**: TODO: we've only implemented this for Linux so far
+**Last Updated**: 2025-06-20 19:45:00
+**Active Contexts**: 2/3
 
-### Incomplete checkboxes:
-- [ ] **rules/DEVELOPMENT_PROMPT_RULES.md:80**: Document current thoughts/verification needs
-- [ ] **rules/DEVELOPMENT_PROMPT_RULES.md:81**: Mark ideas as ✅ successful or ❌ failed
-- [ ] **CONTRIBUTING.md:165**: Bug fix
+### 🟢 Active Contexts
+| Context | Priority | Progress | Last Updated | Next Action |
+|---------|----------|----------|--------------|-------------|
+| [user-auth](contexts/active/2025-06-20-user-auth-context.md) | HIGH | 60% | 19:30 | Implement JWT validation |
+| [payment-system](contexts/active/2025-06-20-payment-context.md) | MEDIUM | 30% | 18:45 | Research Stripe integration |
 
-### Russian task markers:
-- [ ] **memory-bank/system/current-context.md:7**: нужно сохранять текущий запрос пользователя
-- [ ] **memory-bank/tasks.md:192**: Добавить систему обоснования удаления положений
+### ⏸️ Suspended Contexts
+| Context | Reason | Suspended Since | Resume Priority |
+|---------|--------|-----------------|-----------------|
+| [legacy-migration](contexts/suspended/2025-06-15-legacy-context.md) | Waiting for DB access | 2 days | LOW |
+
+### ⚠️ Context Health Alerts
+- [ ] No contexts over WIP limit ✅
+- [ ] All active contexts updated within 2 hours ⚠️
+- [ ] No contexts suspended over 1 week ✅
 ```
 
-### Practical Benefits:
-- **Full Visibility**: System sees all project rules and tasks
-- **Automation**: No need to manually search for TODOs or rules
-- **Context Preservation**: All information saved in context for CONTINUE
-- **Multi-language Support**: Supports Russian and English task markers
-- **Smart Integration**: Found tasks can be integrated into tasks.md
-- **Project Awareness**: Complete understanding of project structure and requirements
+## INTEGRATION WITH TASK MANAGEMENT
 
-## 📋 CONTEXT FILE FORMAT
-
-### current-context.md Template:
+### Task-Context Linking
 ```markdown
-# CURRENT CONTEXT STATE
-**Last Updated**: [DATE]
-**Status**: ACTIVE|COMPLETED|PAUSED
+# In task files:
+**Related Context**: [contexts/active/2025-06-20-task-name-context.md](../contexts/active/2025-06-20-task-name-context.md)
 
-## 🎯 CURRENT USER REQUEST
-[Full user request text]
-
-## 🔧 CURRENT WORKING MODE
-**Active Mode**: [MODE]
-**Phase**: [PHASE]
-**Complexity Level**: [LEVEL]
-
-## 📋 TASK CONTEXT
-[Task details and progress]
-
-## 📋 PROJECT RULES
-[Found rules from rules/ directory]
-
-## 📝 FOUND TASKS
-[TODO/FIXME tasks and incomplete checkboxes]
-
-## 📊 PROGRESS TRACKING
-- [ ] Stage 1: [Description]
-- [ ] Stage 2: [Description]
-- [x] Stage 3: [Completed]
-
-## 🔍 SESSION METRICS
-**Started**: [TIMESTAMP]
-**Last Activity**: [TIMESTAMP]
-**Mode Transitions**: [COUNT]
-**Commands Executed**: [COUNT]
+# In context files:
+**Related Task**: [tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md](../tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md)
 ```
 
-## 🚀 SUPPORTING COMMANDS
+### Context Lifecycle Management
+```bash
+# Context lifecycle automation
+manage_context_lifecycle() {
+    local task_status="$1"
+    local context_file="$2"
 
-### Context Management Commands:
-- **CONTINUE** / **ПРОДОЛЖАЙ** - Restore interrupted task
-- **SHOW CONTEXT** - Display current context state
-- **CLEAR CONTEXT** - Clear saved context
-- **SAVE CONTEXT** - Manually save current state
+    case "$task_status" in
+        "started")
+            create_active_context "$context_file"
+            ;;
+        "suspended")
+            suspend_context "$context_file" "Task suspended"
+            ;;
+        "resumed")
+            restore_context "$context_file"
+            ;;
+        "completed")
+            archive_context "$context_file"
+            ;;
+        "cancelled")
+            archive_context "$context_file" "Task cancelled"
+            ;;
+    esac
+}
+```
 
-### Project Discovery Commands:
-- **SCAN RULES** - Scan and integrate project rules
-- **FIND TASKS** - Search for tasks in documentation
-- **INIT PROJECT** - Full project initialization
+## MODE-SPECIFIC CONTEXT REQUIREMENTS
 
-## 🎯 PRACTICAL APPLICATION EXAMPLES
-
-### Automatic VAN Mode Initialization:
-When VAN mode starts, the system automatically:
-1. Scans project for rules and tasks
-2. Builds comprehensive project context
-3. Integrates findings into current-context.md
-4. Makes all information available for CONTINUE
-
-### Real Project Example (cursor-memory-bank):
+### VAN Mode Context
 ```markdown
-## 📋 DISCOVERED PROJECT RULES
-- rules/DEVELOPMENT_RULES.md (45KB, 1141 lines) - Development standards
-- rules/TESTING_BUN.md (38KB, 1419 lines) - Bun testing framework
-- rules/DEVELOPMENT_WORKFLOW_RULES.md (8.7KB, 175 lines) - Workflow processes
-- rules/DEVELOPMENT_PROMPT_RULES.md (7.9KB, 237 lines) - Prompt engineering
-- rules/changing_the_rules.md (11KB, 353 lines) - Rule modification procedures
-
-## 📝 DISCOVERED TASKS
-### TODO/FIXME (4 found):
-- rules/DEVELOPMENT_RULES.md:88 - TODO: Implement real merge logic
-- rules/TESTING_BUN.md:347 - TODO: fix this
-- rules/TESTING_BUN.md:448 - TODO: Linux implementation needed
-- RULES.md:109 - TODO: Replace merge logic
-
-### Incomplete Checkboxes (200+ found):
-- rules/DEVELOPMENT_PROMPT_RULES.md:80 - Document verification needs
-- CONTRIBUTING.md:165 - Bug fix process
-- [+198 more items]
-
-### Russian Task Markers (100+ found):
-- memory-bank/system/current-context.md:7 - Context saving requirement
-- memory-bank/tasks.md:192 - Deletion justification system
-- [+98 more items]
+VAN Context Requirements:
+- Preserve analysis state and findings
+- Track migration progress and decisions
+- Document discovered patterns and issues
+- Maintain investigation context across sessions
 ```
 
-### Integration Benefits:
-- **Context Awareness**: System understands project structure completely
-- **Task Visibility**: All pending work is visible and trackable
-- **Rule Compliance**: All project rules are accessible to all modes
-- **Continuity**: CONTINUE command has full project context
-- **Automation**: No manual rule or task discovery needed
-
-## 🔄 INTEGRATION WORKFLOW
-
-```mermaid
-graph TD
-    Start["Task Start"] --> Save["Save Context"]
-    Save --> Execute["Execute Task"]
-    Execute --> Update["Update Progress"]
-    Update --> Check{"Task Complete?"}
-    Check -->|"No"| Execute
-    Check -->|"Yes"| Clear["Clear Context"]
-    Clear --> Archive["Archive Results"]
-
-    Interrupt["Interruption"] --> SaveState["Save Current State"]
-    SaveState --> Wait["Wait for CONTINUE"]
-    Wait --> Restore["Restore Context"]
-    Restore --> Execute
+### PLAN Mode Context
+```markdown
+PLAN Context Requirements:
+- Preserve strategic thinking and decisions
+- Track component analysis progress
+- Document research findings and sources
+- Maintain planning assumptions and constraints
 ```
 
-This system ensures complete continuity for Memory Bank operations with automatic project awareness and task discovery capabilities.
+### CREATIVE Mode Context
+```markdown
+CREATIVE Context Requirements:
+- Preserve design thinking and iterations
+- Track option evaluation and decisions
+- Document inspiration sources and references
+- Maintain creative flow and momentum
+```
+
+### IMPLEMENT Mode Context
+```markdown
+IMPLEMENT Context Requirements:
+- Preserve technical implementation state
+- Track code changes and debugging progress
+- Document technical decisions and trade-offs
+- Maintain development environment context
+```
+
+## CONTEXT QUALITY ASSURANCE
+
+### Context Health Checks
+```bash
+# Daily context health check
+check_context_health() {
+    local active_contexts=$(find memory-bank/contexts/active -name "*.md" | wc -l)
+    local stale_contexts=$(find memory-bank/contexts/active -name "*.md" -mtime +1)
+
+    if [[ $active_contexts -gt 3 ]]; then
+        echo "⚠️ WIP LIMIT EXCEEDED: $active_contexts active contexts (max 3)"
+    fi
+
+    if [[ -n "$stale_contexts" ]]; then
+        echo "⚠️ STALE CONTEXTS DETECTED:"
+        echo "$stale_contexts"
+    fi
+}
+```
+
+### Context Validation
+```bash
+# Validate context file completeness
+validate_context() {
+    local context_file="$1"
+    local required_sections=("MENTAL STATE" "WORKING STATE" "SESSION PLANNING")
+
+    for section in "${required_sections[@]}"; do
+        if ! grep -q "$section" "$context_file"; then
+            echo "❌ MISSING SECTION: $section in $context_file"
+        fi
+    done
+}
+```
+
+## CONTEXT MIGRATION AND ARCHIVAL
+
+### Automatic Archival
+```bash
+# Archive completed contexts
+archive_completed_contexts() {
+    local completed_tasks=$(find memory-bank/tasks/done -name "*.md" -mtime -1)
+
+    for task_file in $completed_tasks; do
+        local task_name=$(basename "$task_file" .md)
+        local context_file="memory-bank/contexts/active/${task_name}-context.md"
+
+        if [[ -f "$context_file" ]]; then
+            local archive_dir="memory-bank/contexts/archived/$(date +%Y-%m)"
+            mkdir -p "$archive_dir"
+            mv "$context_file" "$archive_dir/"
+        fi
+    done
+}
+```
+
+### Context Search and Recovery
+```bash
+# Search contexts by content
+search_contexts() {
+    local search_term="$1"
+    echo "🔍 Searching contexts for: $search_term"
+
+    find memory-bank/contexts -name "*.md" -exec grep -l "$search_term" {} \;
+}
+
+# Recover archived context
+recover_context() {
+    local context_name="$1"
+    local archived_context=$(find memory-bank/contexts/archived -name "*$context_name*")
+
+    if [[ -n "$archived_context" ]]; then
+        cp "$archived_context" "memory-bank/contexts/active/"
+        echo "✅ Context recovered: $archived_context"
+    fi
+}
+```
+
+## PERFORMANCE OPTIMIZATION
+
+### Context Switching Cost Mitigation
+```markdown
+Strategies to Reduce 25-Minute Context Switch Cost:
+
+1. **Detailed State Preservation**
+   - Complete mental state documentation
+   - Specific next-action identification
+   - Environment recreation instructions
+
+2. **Quick Context Loading**
+   - Summary sections for rapid review
+   - Visual cues and mnemonics
+   - Progress indicators and milestones
+
+3. **Gradual Context Building**
+   - Start with simple tasks in new context
+   - Build complexity gradually
+   - Use warm-up exercises
+
+4. **Context Boundaries**
+   - Clear separation between contexts
+   - Avoid context bleeding
+   - Use physical/temporal boundaries
+```
+
+### Context Efficiency Metrics
+```bash
+# Track context switching efficiency
+track_context_efficiency() {
+    local context_file="$1"
+    local switch_time="$2"
+
+    echo "## 📊 CONTEXT METRICS" >> "$context_file"
+    echo "**Switch Time**: $switch_time minutes" >> "$context_file"
+    echo "**Recovery Quality**: [HIGH/MEDIUM/LOW]" >> "$context_file"
+    echo "**Productivity Impact**: [POSITIVE/NEUTRAL/NEGATIVE]" >> "$context_file"
+}
+```
+
+## CRITICAL SUCCESS FACTORS
+
+1. **Disciplined Context Management**: Consistent use of context preservation
+2. **WIP Limit Enforcement**: Never exceed 3 active contexts
+3. **Quality Documentation**: Detailed and actionable context information
+4. **Regular Context Health Checks**: Daily validation and cleanup
+5. **Context-Task Integration**: Seamless linking between tasks and contexts
+
+This enhanced context management system enables efficient multi-task work while preserving the quality and continuity of work across context switches.
