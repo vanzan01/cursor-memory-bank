@@ -4,6 +4,22 @@
 
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** ← You are here
+```
+read_file({
+  target_file: "van_core_workflow.md",
+  should_read_entire_file: true
+})
+
+read_file({
+  target_file: "van_rules_submode.md",
+  should_read_entire_file: true
+})
+
+read_file({
+  target_file: "van_system_submode.md",
+  should_read_entire_file: true
+})
+```
 - 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
 - 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
 - ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality

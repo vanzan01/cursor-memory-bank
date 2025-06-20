@@ -12,12 +12,81 @@
     │           │   ├── complexity-decision-tree.mdc
     │           │   ├── creative-phase-enforcement.mdc
     │           │   ├── creative-phase-metrics.mdc
+    │           │   ├── development-rules-integration.mdc
     │           │   ├── file-verification.mdc
     │           │   ├── hierarchical-rule-loading.mdc
     │           │   ├── memory-bank-paths.mdc
     │           │   ├── mode-transition-optimization.mdc
     │           │   ├── optimization-integration.mdc
     │           │   └── platform-awareness.mdc
+    │           ├── CustomWorkflow/
+    │           │   ├── debugging/
+    │           │   │   ├── detailed-logging.mdc
+    │           │   │   ├── invariant-validation.mdc
+    │           │   │   └── systematic-debugging.mdc
+    │           │   ├── documentation/
+    │           │   │   ├── creative-analysis-reporting.mdc
+    │           │   │   ├── creative-archive-structure.mdc
+    │           │   │   ├── creative-results-capture.mdc
+    │           │   │   ├── creative-versioning-system.mdc
+    │           │   │   ├── decision-recording.mdc
+    │           │   │   ├── statistics-tracking.mdc
+    │           │   │   └── usage-examples.mdc
+    │           │   ├── git-workflow/
+    │           │   │   ├── backup-verification.mdc
+    │           │   │   ├── branch-management.mdc
+    │           │   │   ├── change-documentation.mdc
+    │           │   │   └── commit-strategies.mdc
+    │           │   ├── implementation/
+    │           │   │   ├── dependency-checking.mdc
+    │           │   │   ├── robust-search.mdc
+    │           │   │   ├── stub-avoidance.mdc
+    │           │   │   └── system-coordination.mdc
+    │           │   ├── integration/
+    │           │   │   ├── dependency-documentation.mdc
+    │           │   │   ├── integration-planning.mdc
+    │           │   │   ├── integration-testing.mdc
+    │           │   │   └── isolated-design-rules.mdc
+    │           │   ├── planning/
+    │           │   │   ├── isolated-design.mdc
+    │           │   │   ├── phased-approach.mdc
+    │           │   │   ├── problem-prioritization.mdc
+    │           │   │   └── progress-documentation.mdc
+    │           │   ├── refactoring/
+    │           │   │   ├── backward-compatibility.mdc
+    │           │   │   ├── gradual-refactoring.mdc
+    │           │   │   ├── legacy-support.mdc
+    │           │   │   ├── quality-metrics.mdc
+    │           │   │   └── refactoring-patterns.mdc
+    │           │   ├── system/
+    │           │   │   ├── creative-decision-control.mdc
+    │           │   │   ├── date-management.mdc
+    │           │   │   ├── interaction-mode-control.mdc
+    │           │   │   ├── interactive-planning.mdc
+    │           │   │   └── real-date-enforcement.mdc
+    │           │   ├── testing/
+    │           │   │   ├── bun-core-rules.mdc
+    │           │   │   ├── bun-features.mdc
+    │           │   │   ├── edge-cases.mdc
+    │           │   │   ├── large-test-analysis.mdc
+    │           │   │   ├── performance-testing.mdc
+    │           │   │   ├── test-failure-patterns.mdc
+    │           │   │   └── test-organization.mdc
+    │           │   └── workflow/
+    │           │       ├── backup-system.mdc
+    │           │       ├── creative-archive-integration.mdc
+    │           │       ├── implement-mode-integration.mdc
+    │           │       ├── migration-system.mdc
+    │           │       ├── mode-transition-controller.mdc
+    │           │       ├── plan-mode-integration.mdc
+    │           │       ├── qa-mode-integration.mdc
+    │           │       ├── reflect-archive-integration.mdc
+    │           │       ├── safe-mode-transitions.mdc
+    │           │       ├── task-continuity.mdc
+    │           │       ├── task-preservation-rules.mdc
+    │           │       ├── task-status-validation.mdc
+    │           │       ├── van-mode-integration.mdc
+    │           │       └── warning-system.mdc
     │           ├── Level1/
     │           │   ├── optimized-workflow-level1.mdc
     │           │   ├── quick-documentation.mdc
@@ -46,14 +115,15 @@
     │           │       ├── creative-phase-architecture.mdc
     │           │       ├── creative-phase-uiux.mdc
     │           │       └── optimized-creative-template.mdc
+    │           ├── Testing/
+    │           │   └── bun-testing-framework.mdc
     │           ├── visual-maps/
     │           │   ├── van_mode_split/
     │           │   │   ├── van-qa-checks/
     │           │   │   │   ├── build-test.mdc
     │           │   │   │   ├── config-check.mdc
     │           │   │   │   ├── dependency-check.mdc
-    │           │   │   │   ├── environment-check.mdc
-    │           │   │   │   └── file-verification.mdc
+    │           │   │   │   └── environment-check.mdc
     │           │   │   ├── van-qa-utils/
     │           │   │   │   ├── common-fixes.mdc
     │           │   │   │   ├── mode-transitions.mdc
@@ -75,42 +145,22 @@
     │           │   └── van-mode-map.mdc
     │           ├── main-optimized.mdc
     │           └── main.mdc
-    ├── .specstory/
-    │   ├── .gitignore
-    │   └── .what-is-this.md
-    ├── custom_modes/
-    │   ├── creative_instructions.md
-    │   ├── implement_instructions.md
-    │   ├── mode_switching_analysis.md
-    │   ├── plan_instructions.md
-    │   ├── reflect_archive_instructions.md
-    │   └── van_instructions.md
-    ├── optimization-journey/
-    │   ├── 00-introduction.md
-    │   ├── 01-efficiency-and-clarity.md
-    │   ├── 02-system-self-assessment.md
-    │   ├── 03-redundancy-elimination.md
-    │   ├── 04-single-source-of-truth.md
-    │   ├── 05-adaptive-complexity-model.md
-    │   ├── 06-self-assessment-recommendations.md
-    │   ├── 07-structured-creative-thinking.md
-    │   ├── 08-creative-phase-enforcement.md
-    │   ├── 09-context-optimization.md
-    │   ├── 10-current-system-state.md
-    │   ├── 11-key-lessons.md
-    │   ├── 11-methodological-integration.md
-    │   ├── 12-future-directions.md
-    │   ├── 12-key-lessons.md
-    │   ├── 13-future-directions.md
-    │   ├── 13-methodological-integration.md
-    │   └── README.md
-    ├── .cursorindexingignore
-    ├── .gitignore
-    ├── creative_mode_think_tool.md
-    ├── MEMORY_BANK_OPTIMIZATIONS.md
-    ├── memory_bank_upgrade_guide.md
-    ├── README.md
-    └── RELEASE_NOTES.md
+    └── custom_modes/
+        ├── creative_instructions.md
+        ├── implement_instructions.md
+        ├── integration_guide.md
+        ├── mode_switching_analysis_ru.md
+        ├── mode_switching_analysis.md
+        ├── plan_instructions.md
+        ├── reflect_archive_instructions.md
+        ├── rules_integration_analysis.md
+        ├── van_core_workflow.md
+        ├── van_enhanced.md
+        ├── van_instructions_backup.md
+        ├── van_instructions_enhanced_backup.md
+        ├── van_instructions.md
+        ├── van_rules_submode.md
+        └── van_system_submode.md
 ```
 
 ## Список файлов
@@ -379,23 +429,23 @@ graph TD
     Q1b -->|No| Q1c{"Affects system<br>architecture?"}
     Q1c -->|Yes| L3["Level 3:<br>Intermediate Feature"]
     Q1c -->|No| L2
-    
+
     Q1 -->|No| Q2{"Adding small<br>feature or<br>enhancement?"}
     Q2 -->|Yes| Q2a{"Self-contained<br>change?"}
     Q2a -->|Yes| L2
     Q2a -->|No| Q2b{"Affects multiple<br>components?"}
     Q2b -->|Yes| L3
     Q2b -->|No| L2
-    
+
     Q2 -->|No| Q3{"Complete feature<br>requiring multiple<br>components?"}
     Q3 -->|Yes| Q3a{"Architectural<br>implications?"}
     Q3a -->|Yes| L4["Level 4:<br>Complex System"]
     Q3a -->|No| L3
-    
+
     Q3 -->|No| Q4{"System-wide or<br>architectural<br>change?"}
     Q4 -->|Yes| L4
     Q4 -->|No| L3
-    
+
     L1 --> LoadL1["Load Level 1 Map"]
     L2 --> LoadL2["Load Level 2 Map"]
     L3 --> LoadL3["Load Level 3 Map"]
@@ -519,10 +569,10 @@ After determining complexity, load the appropriate process map:
 
 | Level | Description | Process Map |
 |-------|-------------|-------------|
-| 1 | Quick Bug Fix | [Level 1 Map](mdc:.cursor/rules/visual-maps/level1-map.mdc) |
-| 2 | Simple Enhancement | [Level 2 Map](mdc:.cursor/rules/visual-maps/level2-map.mdc) |
-| 3 | Intermediate Feature | [Level 3 Map](mdc:.cursor/rules/visual-maps/level3-map.mdc) |
-| 4 | Complex System | [Level 4 Map](mdc:.cursor/rules/visual-maps/level4-map.mdc) |
+| 1 | Quick Bug Fix | [Level 1 Workflow](mdc:workflow-level1.mdc) |
+| 2 | Simple Enhancement | [Level 2 Workflow](mdc:workflow-level2.mdc) |
+| 3 | Intermediate Feature | [Level 3 Workflow](mdc:workflow-level3.mdc) |
+| 4 | Complex System | [Level 4 Workflow](mdc:workflow-level4.mdc) |
 
 ## 📝 COMPLEXITY DETERMINATION TEMPLATE
 
@@ -552,11 +602,10 @@ Loading process map: [Level X Map]
 
 ```mdc
 ---
-description: creative phase enforcement 
-globs: creative-phase-enforcement.md
+description: creative phase enforcement
+globs: creative-phase-enforcement.mdc
 alwaysApply: false
 ---
-
 # CREATIVE PHASE ENFORCEMENT
 
 > **TL;DR:** This document implements strict enforcement of creative phase requirements for Level 3-4 tasks, ensuring all design decisions are properly documented and verified before implementation can proceed.
@@ -568,16 +617,16 @@ graph TD
     Start["Task Start"] --> Check{"Level 3-4<br>Task?"}
     Check -->|Yes| Analyze["Analyze Design<br>Decision Points"]
     Check -->|No| Optional["Creative Phase<br>Optional"]
-    
+
     Analyze --> Decision{"Design Decisions<br>Required?"}
     Decision -->|Yes| Gate["🚨 IMPLEMENTATION<br>BLOCKED"]
     Decision -->|No| Allow["Allow<br>Implementation"]
-    
+
     Gate --> Creative["Enter Creative<br>Phase"]
     Creative --> Verify{"All Decisions<br>Documented?"}
     Verify -->|No| Return["Return to<br>Creative Phase"]
     Verify -->|Yes| Proceed["Allow<br>Implementation"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Check fill:#ffa64d,stroke:#cc7a30,color:white
     style Analyze fill:#4dbb5f,stroke:#36873f,color:white
@@ -595,9 +644,9 @@ graph TD
     G2["Process Gate<br>Verify Progress"]
     G3["Exit Gate<br>Verify Completion"]
     end
-    
+
     G1 --> G2 --> G3
-    
+
     style G1 fill:#4dbb5f,stroke:#36873f,color:white
     style G2 fill:#ffa64d,stroke:#cc7a30,color:white
     style G3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -653,9 +702,9 @@ graph TD
     V3["3. Decision<br>Validation"]
     V4["4. Implementation<br>Readiness"]
     end
-    
+
     V1 --> V2 --> V3 --> V4
-    
+
     style V1 fill:#4dbb5f,stroke:#36873f,color:white
     style V2 fill:#ffa64d,stroke:#cc7a30,color:white
     style V3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -689,13 +738,13 @@ Next Steps: [Implementation plan]
 
 ```mermaid
 graph TD
-    Current["Current Document"] --> Active["Active:<br>- creative-phase-enforcement.md"]
-    Current --> Related["Related:<br>- creative-phase-architecture.md<br>- task-tracking-intermediate.md"]
-    
+    Current["Current Document"] --> Active["Active:<br>- creative-phase-enforcement.mdc"]
+    Current --> Related["Related:<br>- creative-phase-architecture.mdc<br>- task-tracking-intermediate.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Related fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Core/creative-phase-metrics.mdc`
@@ -724,13 +773,13 @@ graph TD
     M4["Impact<br>Assessment"]
     M5["Verification<br>Score"]
     end
-    
+
     M1 --> Score["Quality<br>Score"]
     M2 --> Score
     M3 --> Score
     M4 --> Score
     M5 --> Score
-    
+
     style M1 fill:#4dbb5f,stroke:#36873f,color:white
     style M2 fill:#ffa64d,stroke:#cc7a30,color:white
     style M3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -792,11 +841,11 @@ graph TD
     T2["Target<br>45/50 (90%)"]
     T3["Excellent<br>48/50 (96%)"]
     end
-    
+
     Score["Quality<br>Score"] --> Check{"Meets<br>Threshold?"}
     Check -->|"< 80%"| Block["⛔ BLOCKED<br>Improvements Required"]
     Check -->|"≥ 80%"| Pass["✓ PASSED<br>Can Proceed"]
-    
+
     style T1 fill:#4dbb5f,stroke:#36873f,color:white
     style T2 fill:#ffa64d,stroke:#cc7a30,color:white
     style T3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -817,7 +866,7 @@ graph TD
     Total --> Check{"Meets<br>Threshold?"}
     Check -->|No| Return["Return for<br>Improvements"]
     Check -->|Yes| Proceed["Proceed to<br>Next Phase"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Doc fill:#ffa64d,stroke:#cc7a30,color:white
     style Dec fill:#4dbb5f,stroke:#36873f,color:white
@@ -889,13 +938,320 @@ For scores below threshold:
 
 ```mermaid
 graph TD
-    Current["Current Document"] --> Active["Active:<br>- creative-phase-metrics.md"]
-    Current --> Related["Related:<br>- creative-phase-enforcement.md<br>- creative-phase-architecture.md"]
-    
+    Current["Current Document"] --> Active["Active:<br>- creative-phase-metrics.mdc"]
+    Current --> Related["Related:<br>- creative-phase-enforcement.mdc<br>- creative-phase-architecture.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Related fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```
+```
+
+`.cursor/rules/isolation_rules/Core/development-rules-integration.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# DEVELOPMENT RULES INTEGRATION
+
+This file integrates comprehensive development rules based on real project experience (B+ Tree project) into the Memory Bank system.
+
+## CORE DEVELOPMENT PRINCIPLES
+
+### Rule #1: Фазовый подход к разработке
+**Implementation**: Integrated into PLAN mode and phase-tracking.md
+- Each development task must be broken into distinct phases
+- Each phase has clear objectives and completion criteria
+- No transition to next phase until current phase is complete
+- Document all decisions and approaches with ✅/❌ markers
+
+**Memory Bank Integration**:
+- VAN mode determines number and type of phases
+- PLAN mode details each phase with dependencies
+- IMPLEMENT mode executes current phase with progress tracking
+- REFLECT mode analyzes phase results and prepares for next phase
+
+### Rule #2: Документирование прогресса с ✅/❌ маркерами
+**Implementation**: Integrated into progress.md and all tracking files
+- All ideas and approaches must be documented
+- Successful ideas marked with ✅ (keep for reference)
+- Failed approaches marked with ❌ (never delete - learn from failures)
+- Regular progress updates with clear status indicators
+
+**Memory Bank Integration**:
+- Extended progress.md with Implementation Ideas Tracking
+- All modes update progress with ✅/❌ markers
+- Failed approaches preserved for learning and avoiding repetition
+
+### Rule #3: Приоритизация проблем (CRITICAL → HIGH → MEDIUM → LOW)
+**Implementation**: Integrated into task prioritization across all modes
+- **CRITICAL**: Blocks core functionality, must be fixed immediately
+- **HIGH**: Affects performance or user experience significantly
+- **MEDIUM**: Improvements that enhance usability
+- **LOW**: Nice-to-have features or minor optimizations
+
+**Memory Bank Integration**:
+- VAN mode assigns initial priority based on complexity
+- PLAN mode refines priorities based on dependencies
+- All task tracking uses consistent priority levels
+
+## IMPLEMENTATION & QUALITY RULES
+
+### Rule #4: Проверка зависимостей тестов
+**Implementation**: Integrated into IMPLEMENT and QA modes
+- Before running tests, verify all dependencies are available
+- Check test environment setup and configuration
+- Ensure test data and fixtures are properly initialized
+
+### Rule #5: Избегание заглушек в продакшене
+**Implementation**: Code review guidelines in IMPLEMENT mode
+- No mock objects or stubs in production code
+- All external dependencies must have real implementations
+- Test doubles only in test environment
+
+### Rule #6: Robust поиск и навигация
+**Implementation**: Search and navigation patterns
+- Implement comprehensive search functionality
+- Provide multiple navigation paths to same content
+- Handle edge cases in search queries gracefully
+
+### Rule #7: Координация между системами
+**Implementation**: Integration planning in PLAN mode
+- Document all system interfaces and dependencies
+- Plan integration points and data flow
+- Test system boundaries and error handling
+
+## TESTING & VALIDATION RULES (Bun-based)
+
+### Rule #8: Высокогранулированные тесты
+**Implementation**: Test structure guidelines
+```bash
+# Test command pattern for Memory Bank
+bun test --reporter=verbose --coverage
+```
+- Each function/method should have dedicated tests
+- Test individual behaviors, not just happy paths
+- Separate tests for different input scenarios
+
+### Rule #9: Изоляция контекста между тестами
+**Implementation**: Test isolation patterns
+```bash
+# Clean test environment between runs
+bun test --clean-cache
+```
+- Each test must be independent and isolated
+- No shared state between test cases
+- Clean setup and teardown for each test
+
+### Rule #10: Обязательное тестирование каждой фичи
+**Implementation**: Feature testing requirements
+- Every new feature must have corresponding tests
+- Tests written before or during implementation
+- No feature considered complete without tests
+
+### Rule #11: Проверка покрытия функционала на каждом этапе
+**Implementation**: Coverage tracking
+```bash
+# Coverage reporting
+bun test --coverage --coverage-reporter=text-summary
+```
+- Monitor test coverage throughout development
+- Aim for high coverage of critical paths
+- Document coverage gaps and plans to address them
+
+### Rule #12: Тестирование edge cases
+**Implementation**: Edge case identification
+- Identify boundary conditions and edge cases
+- Test error conditions and failure scenarios
+- Validate input validation and error handling
+
+### Rule #13: Тестирование производительности
+**Implementation**: Performance testing integration
+```bash
+# Performance testing with Bun
+bun test --timeout=30000 performance/*.test.ts
+```
+- Include performance tests for critical operations
+- Set performance benchmarks and monitor regression
+- Test with realistic data volumes
+
+### Rule #14: Высокоточное измерение времени
+**Implementation**: Timing measurement patterns
+```typescript
+// High-precision timing for performance tests
+const start = performance.now();
+// ... operation to measure
+const duration = performance.now() - start;
+```
+
+### Rule #15: Устойчивая генерация ID
+**Implementation**: ID generation patterns
+- Use cryptographically secure random ID generation
+- Ensure ID uniqueness across system boundaries
+- Test ID collision scenarios
+
+### Rule #16: Тестирование временных коллизий
+**Implementation**: Concurrency testing
+- Test concurrent operations and race conditions
+- Validate thread safety and atomic operations
+- Test timeout and retry mechanisms
+
+## INTEGRATION & ARCHITECTURE RULES
+
+### Rule #17: Изолированное проектирование фаз
+**Implementation**: CREATIVE mode integration
+- Design each phase independently before integration
+- Define clear interfaces between phases
+- Minimize coupling between phase implementations
+
+### Rule #18: Планирование интеграционных шагов
+**Implementation**: Integration planning in PLAN mode
+- Document integration sequence and dependencies
+- Plan rollback strategies for failed integrations
+- Define integration testing approach
+
+### Rule #19: Тестирование интеграционных точек
+**Implementation**: Integration testing requirements
+- Test all system boundaries and interfaces
+- Validate data transformation and mapping
+- Test error propagation across system boundaries
+
+### Rule #20: Документирование интеграционных зависимостей
+**Implementation**: Integration documentation
+- Document all external dependencies and versions
+- Maintain integration maps and data flow diagrams
+- Track integration points and their requirements
+
+## DEBUGGING & ANALYSIS RULES
+
+### Rule #21: Трассировка перед исправлением
+**Implementation**: Debug workflow in IMPLEMENT mode
+- Always trace the issue before attempting fixes
+- Document the trace path and findings
+- Understand root cause before implementing solution
+
+### Rule #22: Детальное логирование
+**Implementation**: Logging standards
+- Implement comprehensive logging at appropriate levels
+- Include context and correlation IDs in logs
+- Structure logs for easy parsing and analysis
+
+### Rule #23: Валидация инвариантов
+**Implementation**: Invariant checking
+- Define and document system invariants
+- Implement runtime invariant checking where appropriate
+- Test invariant violations and recovery
+
+## DOCUMENTATION & KNOWLEDGE RULES
+
+### Rule #24: Документирование решений
+**Implementation**: Decision documentation in REFLECT mode
+- Document architectural and design decisions
+- Include rationale and alternatives considered
+- Maintain decision log for future reference
+
+### Rule #25: Ведение статистики
+**Implementation**: Statistics tracking in progress.md
+- Track development metrics and performance indicators
+- Monitor progress against estimates and goals
+- Analyze patterns and trends for improvement
+
+### Rule #26: Создание примеров использования
+**Implementation**: Example creation requirements
+- Create practical examples for all major features
+- Include both simple and complex usage scenarios
+- Maintain examples as living documentation
+
+## REFACTORING & MAINTENANCE RULES
+
+### Rule #27: Постепенный рефакторинг
+**Implementation**: Refactoring approach in IMPLEMENT mode
+- Refactor incrementally, not in large batches
+- Maintain functionality while improving structure
+- Test after each refactoring step
+
+### Rule #28: Сохранение обратной совместимости
+**Implementation**: Compatibility guidelines
+- Maintain backward compatibility when possible
+- Document breaking changes and migration paths
+- Provide deprecation warnings before removal
+
+### Rule #29: Метрики качества кода
+**Implementation**: Quality metrics tracking
+- Monitor code complexity and maintainability metrics
+- Track technical debt and improvement opportunities
+- Regular code quality reviews and improvements
+
+## MEMORY BANK MODE INTEGRATION
+
+### VAN Mode Enhancements
+- Platform detection and environment setup
+- Development rules compliance checking
+- Initial priority and complexity assessment
+
+### PLAN Mode Enhancements
+- Phase-based planning with Rule #1 integration
+- Integration point identification (Rules #17-20)
+- Priority-based task organization (Rule #3)
+
+### CREATIVE Mode Enhancements
+- Isolated design approach (Rule #17)
+- Architecture decision documentation (Rule #24)
+- Design alternative evaluation
+
+### IMPLEMENT Mode Enhancements
+- Test-driven development workflow (Rules #8-16)
+- Progress tracking with ✅/❌ markers (Rule #2)
+- Debug-first approach (Rules #21-23)
+- Incremental refactoring (Rule #27)
+
+### QA Mode Enhancements
+- Comprehensive testing framework (Rules #8-16)
+- Performance validation (Rule #13)
+- Integration testing (Rule #19)
+- Quality metrics tracking (Rule #29)
+
+### REFLECT Mode Enhancements
+- Decision documentation (Rule #24)
+- Statistics and metrics analysis (Rule #25)
+- Lessons learned capture
+- Phase completion validation
+
+### ARCHIVE Mode Enhancements
+- Example creation and maintenance (Rule #26)
+- Statistics preservation (Rule #25)
+- Decision history archival (Rule #24)
+- Knowledge base building
+
+## USAGE PATTERNS
+
+### For Level 1 Tasks (Quick Bug Fix)
+1. VAN: Quick complexity assessment + priority assignment
+2. IMPLEMENT: Direct implementation with integrated testing
+3. QA: Minimal validation focused on regression prevention
+
+### For Level 2-4 Tasks (Complex Development)
+1. VAN: Comprehensive analysis + phase planning
+2. PLAN: Detailed phase breakdown + integration planning
+3. CREATIVE: Isolated design for complex components
+4. IMPLEMENT: Phase-by-phase execution with full testing
+5. QA: Comprehensive validation + performance testing
+6. REFLECT: Thorough analysis + decision documentation
+7. ARCHIVE: Complete knowledge preservation
+
+## INTEGRATION STATUS
+- [x] Core principles integrated into Memory Bank structure
+- [x] Testing rules adapted for Bun environment
+- [x] Progress tracking enhanced with rule compliance
+- [x] Phase tracking system created
+- [ ] .cursor/rules files updated with specific rule implementations
+- [ ] Mode-specific rule integration completed
+- [ ] Testing framework integration completed
+- [ ] Documentation templates created
+
 ```
 
 `.cursor/rules/isolation_rules/Core/file-verification.mdc`
@@ -2174,15 +2530,16817 @@ sequenceDiagram
 ``` 
 ```
 
+`.cursor/rules/isolation_rules/CustomWorkflow/debugging/detailed-logging.mdc`
+
+```mdc
+---
+description: "Detailed logging methodology for Memory Bank development"
+globs: "**/debugging/**", "**/logging/**", "**/trace/**"
+alwaysApply: false
+---
+
+# DETAILED LOGGING METHODOLOGY
+
+> **TL;DR:** Comprehensive logging strategy for Memory Bank development, ensuring effective debugging, monitoring, and system analysis through structured logging practices.
+
+```mermaid
+graph TD
+    Start["📝 LOGGING ACTIVATION"] --> Strategy["📋 Define Logging Strategy"]
+    Strategy --> Levels["🎯 Set Log Levels"]
+    Levels --> Structure["🏗️ Structure Log Messages"]
+    Structure --> Implement["⚡ Implement Logging"]
+    Implement --> Monitor["👁️ Monitor Logs"]
+    Monitor --> Analyze["📊 Analyze Patterns"]
+    Analyze --> Optimize["🔧 Optimize Logging"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Strategy fill:#ffa64d,stroke:#cc7a30,color:white
+    style Implement fill:#4dbb5f,stroke:#36873f,color:white
+    style Analyze fill:#d971ff,stroke:#a33bc2,color:white
+```
+
+## LOGGING STRATEGY
+
+### Log Levels:
+1. **ERROR**: Critical errors requiring immediate attention
+2. **WARN**: Warning conditions that should be monitored
+3. **INFO**: General information about system operation
+4. **DEBUG**: Detailed information for debugging
+5. **TRACE**: Very detailed execution flow information
+
+### Structured Logging Format:
+```json
+{
+  "timestamp": "2024-12-10T09:24:00.000Z",
+  "level": "INFO",
+  "component": "memory-bank",
+  "operation": "task-processing",
+  "message": "Task completed successfully",
+  "context": {
+    "taskId": "RULES-INT-2024-12-09",
+    "phase": "implementation",
+    "duration": 1200
+  }
+}
+```
+
+## MEMORY BANK INTEGRATION
+
+### Core Logging Areas:
+- **Mode Transitions**: VAN → PLAN → IMPLEMENT → REFLECT
+- **Task Processing**: Task creation, updates, completion
+- **File Operations**: File reads, writes, modifications
+- **Command Execution**: All terminal commands and results
+- **Error Conditions**: Failures, exceptions, recovery
+
+### Log File Organization:
+```
+memory-bank/logs/
+├── system.log (general system operations)
+├── tasks.log (task-specific operations)
+├── modes.log (mode transition logs)
+├── commands.log (command execution logs)
+└── errors.log (error and exception logs)
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ DETAILED LOGGING CHECKLIST
+- Logging strategy defined? [YES/NO]
+- Log levels appropriately set? [YES/NO]
+- Structured logging format implemented? [YES/NO]
+- All critical operations logged? [YES/NO]
+- Log files organized properly? [YES/NO]
+- Log rotation configured? [YES/NO]
+- Performance impact minimized? [YES/NO]
+- Log analysis tools available? [YES/NO]
+
+→ If all YES: Logging system complete
+→ If any NO: Complete missing logging elements
+```
+
+This methodology ensures comprehensive logging for effective debugging and system monitoring in Memory Bank development.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/debugging/invariant-validation.mdc`
+
+```mdc
+---
+description: "Invariant validation methodology for Memory Bank development"
+globs: "**/debugging/**", "**/validation/**", "**/testing/**"
+alwaysApply: false
+---
+
+# INVARIANT VALIDATION METHODOLOGY
+
+> **TL;DR:** Systematic approach to defining, implementing, and validating system invariants in Memory Bank development, ensuring system consistency and reliability.
+
+```mermaid
+graph TD
+    Start["🔍 INVARIANT VALIDATION"] --> Define["📋 Define Invariants"]
+    Define --> Implement["⚡ Implement Checks"]
+    Implement --> Integrate["🔗 Integrate with System"]
+    Integrate --> Monitor["👁️ Monitor Violations"]
+    Monitor --> Report["📊 Report Issues"]
+    Report --> Fix["🔧 Fix Violations"]
+    Fix --> Verify["✅ Verify Resolution"]
+
+    style Start fill:#d971ff,stroke:#a33bc2,color:white
+    style Define fill:#4da6ff,stroke:#0066cc,color:white
+    style Implement fill:#4dbb5f,stroke:#36873f,color:white
+    style Monitor fill:#ffa64d,stroke:#cc7a30,color:white
+```
+
+## SYSTEM INVARIANTS
+
+### Memory Bank Invariants:
+1. **Task Consistency**: Active task always exists in tasks.md
+2. **Mode Integrity**: Only one mode active at a time
+3. **File Consistency**: All referenced files exist
+4. **Status Coherence**: Task status matches actual state
+5. **Context Preservation**: activeContext.md always current
+
+### Validation Implementation:
+```javascript
+// Example invariant validation
+function validateTaskConsistency() {
+  const tasks = loadTasks();
+  const activeTask = getActiveTask();
+
+  assert(activeTask !== null, "Active task must exist");
+  assert(tasks.includes(activeTask), "Active task must be in tasks list");
+  assert(activeTask.status !== 'COMPLETED', "Active task cannot be completed");
+}
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ INVARIANT VALIDATION CHECKLIST
+- System invariants identified and documented? [YES/NO]
+- Validation functions implemented? [YES/NO]
+- Invariant checks integrated into workflow? [YES/NO]
+- Violation reporting mechanism in place? [YES/NO]
+- Automated invariant testing configured? [YES/NO]
+- Performance impact assessed? [YES/NO]
+- Recovery procedures defined? [YES/NO]
+
+→ If all YES: Invariant validation complete
+→ If any NO: Complete missing validation elements
+```
+
+This methodology ensures system reliability through continuous invariant validation and violation detection.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/debugging/systematic-debugging.mdc`
+
+```mdc
+---
+description: "Systematic debugging methodology for Memory Bank development"
+globs: "**/debugging/**", "**/debug/**", "**/troubleshooting/**"
+alwaysApply: false
+---
+
+# SYSTEMATIC DEBUGGING METHODOLOGY
+
+> **TL;DR:** Comprehensive debugging approach for Memory Bank development, ensuring systematic problem identification, root cause analysis, and effective resolution strategies.
+
+```mermaid
+graph TD
+    Start["🐛 DEBUGGING ACTIVATION"] --> Identify["🔍 Problem Identification"]
+    Identify --> Reproduce["🔄 Reproduce Issue"]
+    Reproduce --> Isolate["🎯 Isolate Root Cause"]
+    Isolate --> Analyze["📊 Analyze Problem"]
+    Analyze --> Solution["💡 Develop Solution"]
+    Solution --> Test["✅ Test Fix"]
+    Test --> Verify["🔍 Verify Resolution"]
+    Verify --> Document["📝 Document Solution"]
+
+    style Start fill:#ff5555,stroke:#cc0000,color:white
+    style Identify fill:#ffa64d,stroke:#cc7a30,color:white
+    style Solution fill:#4dbb5f,stroke:#36873f,color:white
+    style Document fill:#4da6ff,stroke:#0066cc,color:white
+```
+
+## DEBUGGING METHODOLOGY
+
+### Phase 1: Problem Identification
+1. **Symptom Analysis**: Document observable symptoms
+2. **Context Gathering**: Collect relevant context information
+3. **Impact Assessment**: Determine severity and scope
+4. **Initial Hypothesis**: Form preliminary theories
+
+### Phase 2: Issue Reproduction
+1. **Environment Setup**: Recreate problematic conditions
+2. **Step Documentation**: Record exact reproduction steps
+3. **Consistency Check**: Verify reproducibility
+4. **Variable Isolation**: Identify contributing factors
+
+### Phase 3: Root Cause Analysis
+1. **Code Investigation**: Examine relevant code sections
+2. **Data Flow Analysis**: Trace data through system
+3. **Dependency Check**: Verify external dependencies
+4. **Logic Validation**: Validate business logic
+
+### Phase 4: Solution Development
+1. **Fix Strategy**: Develop targeted fix approach
+2. **Impact Analysis**: Assess fix implications
+3. **Implementation**: Apply fix systematically
+4. **Testing**: Verify fix effectiveness
+
+## DEBUGGING TOOLS AND TECHNIQUES
+
+### Code Analysis Tools:
+- **Static Analysis**: Code review and linting
+- **Dynamic Analysis**: Runtime behavior examination
+- **Profiling**: Performance and memory analysis
+- **Logging**: Strategic log placement and analysis
+
+### Debugging Strategies:
+- **Binary Search**: Narrow down problem location
+- **Rubber Duck Debugging**: Explain problem aloud
+- **Pair Debugging**: Collaborate with team member
+- **Time Travel Debugging**: Use version control history
+
+## MEMORY BANK INTEGRATION
+
+### Debugging Documentation:
+1. **debug-log.md**: Detailed debugging session log
+2. **issue-analysis.md**: Comprehensive issue analysis
+3. **solution-record.md**: Solution documentation
+4. **prevention-notes.md**: Prevention strategies
+
+### Integration with Memory Bank:
+- Update tasks.md with debugging progress
+- Document lessons learned in systemPatterns.md
+- Record debugging context in activeContext.md
+- Archive debugging sessions in memory-bank/debugging/
+
+## VERIFICATION CHECKLIST
+
+```
+✓ SYSTEMATIC DEBUGGING CHECKLIST
+- Problem clearly identified and documented? [YES/NO]
+- Issue successfully reproduced? [YES/NO]
+- Root cause identified and verified? [YES/NO]
+- Solution developed and tested? [YES/NO]
+- Fix verified to resolve issue? [YES/NO]
+- No regressions introduced? [YES/NO]
+- Solution documented for future reference? [YES/NO]
+- Prevention strategies identified? [YES/NO]
+
+→ If all YES: Debugging complete
+→ If any NO: Continue debugging process
+```
+
+This systematic approach ensures thorough debugging while maintaining documentation for future reference and continuous improvement.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc`
+
+```mdc
+---
+description: "Analysis and reporting system for Memory Bank creative phases"
+globs: "**/creative/**", "**/analysis/**", "**/reporting/**"
+alwaysApply: false
+---
+
+# CREATIVE ANALYSIS AND REPORTING SYSTEM
+
+> **TL;DR:** Comprehensive system for analyzing creative phase effectiveness, generating insights, and creating actionable reports for improving architectural decision-making processes.
+
+## 🎯 ANALYSIS SYSTEM OVERVIEW
+
+The Creative Analysis and Reporting System provides deep insights into the effectiveness of creative phases, helping teams understand patterns, improve decision-making processes, and build institutional knowledge.
+
+### Core Analysis Components
+
+**Effectiveness Metrics**
+- Decision quality scoring (1-10 scale)
+- Time-to-decision tracking
+- Implementation success rate
+- Stakeholder satisfaction scores
+
+**Pattern Recognition**
+- Successful decision patterns
+- Common failure modes
+- Architectural style preferences
+- Technology choice patterns
+
+**Process Analytics**
+- Creative phase duration analysis
+- Iteration count and effectiveness
+- Collaboration pattern analysis
+- Decision reversal tracking
+
+## 📊 METRICS COLLECTION FRAMEWORK
+
+### Decision Quality Metrics
+
+**Quality Dimensions**
+- **Technical Soundness** (25%): Architecture viability, scalability, maintainability
+- **Business Alignment** (25%): Requirements satisfaction, business value delivery
+- **Implementation Feasibility** (20%): Resource requirements, timeline realism
+- **Risk Management** (15%): Risk identification and mitigation strategies
+- **Innovation Factor** (15%): Creative problem-solving, novel approaches
+
+**Scoring Algorithm**
+```yaml
+decision_quality_score:
+  technical_soundness: 0-10 (weight: 0.25)
+  business_alignment: 0-10 (weight: 0.25)
+  implementation_feasibility: 0-10 (weight: 0.20)
+  risk_management: 0-10 (weight: 0.15)
+  innovation_factor: 0-10 (weight: 0.15)
+
+final_score: weighted_average(all_dimensions)
+```
+
+### Process Efficiency Metrics
+
+**Time Tracking**
+- Phase initiation to first proposal: Target < 30 minutes
+- First proposal to final decision: Target < 60 minutes
+- Total creative phase duration: Target < 90 minutes
+- Decision implementation time: Track actual vs. estimated
+
+**Iteration Analysis**
+- Number of major iterations per decision
+- Convergence rate (iterations to consensus)
+- Backtracking frequency (decision reversals)
+- Refinement effectiveness (improvement per iteration)
+
+## 📈 REPORTING SYSTEM ARCHITECTURE
+
+### Report Types and Frequencies
+
+**Real-time Dashboards**
+- Current creative phase status
+- Live decision quality metrics
+- Process efficiency indicators
+- Team collaboration metrics
+
+**Weekly Summary Reports**
+- Creative phases completed
+- Average decision quality scores
+- Process efficiency trends
+- Top architectural patterns used
+
+**Monthly Analysis Reports**
+- Deep pattern analysis
+- Process improvement recommendations
+- Team performance insights
+- Technology trend analysis
+
+**Quarterly Strategic Reports**
+- Architectural decision impact analysis
+- Long-term pattern evolution
+- ROI of creative phase investments
+- Strategic recommendations
+
+### Report Generation Pipeline
+
+```mermaid
+graph TD
+    Data["📊 Raw Data Collection"] --> Process["⚙️ Data Processing"]
+    Process --> Analyze["🔍 Pattern Analysis"]
+    Analyze --> Generate["📝 Report Generation"]
+    Generate --> Distribute["📤 Distribution"]
+
+    Process --> Metrics["📈 Metrics Calculation"]
+    Metrics --> Visualize["📊 Visualization"]
+    Visualize --> Generate
+
+    Analyze --> Insights["💡 Insight Extraction"]
+    Insights --> Recommendations["🎯 Recommendations"]
+    Recommendations --> Generate
+```
+
+## 🔍 PATTERN ANALYSIS ENGINE
+
+### Successful Decision Patterns
+
+**Architecture Pattern Analysis**
+- Most successful architectural styles by project type
+- Technology stack combinations with highest success rates
+- Design pattern effectiveness in different contexts
+- Scalability approach success rates
+
+**Decision Process Patterns**
+- Most effective creative phase structures
+- Optimal team composition for different decision types
+- Best practices for stakeholder involvement
+- Effective iteration and refinement strategies
+
+### Failure Mode Analysis
+
+**Common Failure Patterns**
+- Over-engineering indicators and prevention
+- Under-specification risks and mitigation
+- Technology mismatch patterns
+- Timeline estimation failures
+
+**Early Warning Indicators**
+- Decision quality red flags
+- Process efficiency warning signs
+- Team collaboration issues
+- Scope creep indicators
+
+## 📊 VISUALIZATION AND DASHBOARDS
+
+### Executive Dashboard
+
+**Key Performance Indicators**
+- Overall creative phase effectiveness: 85%+ target
+- Average decision quality score: 8.0+ target
+- Process efficiency rating: 90%+ target
+- Implementation success rate: 95%+ target
+
+**Trend Visualizations**
+- Decision quality trends over time
+- Process efficiency improvements
+- Team performance evolution
+- Technology adoption patterns
+
+### Technical Dashboard
+
+**Detailed Metrics**
+- Phase duration distributions
+- Decision complexity analysis
+- Iteration pattern analysis
+- Quality dimension breakdowns
+
+**Process Analytics**
+- Bottleneck identification
+- Resource utilization patterns
+- Collaboration effectiveness metrics
+- Decision reversal analysis
+
+### Team Dashboard
+
+**Individual Performance**
+- Personal decision quality scores
+- Contribution effectiveness metrics
+- Learning and improvement trends
+- Collaboration impact scores
+
+**Team Dynamics**
+- Team decision-making effectiveness
+- Collaboration pattern analysis
+- Knowledge sharing metrics
+- Collective learning indicators
+
+## 🎯 ACTIONABLE INSIGHTS GENERATION
+
+### Automated Recommendations
+
+**Process Improvements**
+- Optimal creative phase duration recommendations
+- Team composition suggestions
+- Iteration strategy recommendations
+- Decision framework optimizations
+
+**Quality Enhancements**
+- Architecture pattern recommendations
+- Technology choice guidance
+- Risk mitigation suggestions
+- Innovation opportunity identification
+
+### Learning Integration
+
+**Knowledge Base Updates**
+- Successful pattern documentation
+- Failure mode prevention guides
+- Best practice evolution
+- Template improvements
+
+**Training Recommendations**
+- Skill gap identification
+- Training priority suggestions
+- Mentoring opportunity identification
+- Knowledge transfer planning
+
+## 🔧 IMPLEMENTATION INTEGRATION
+
+### Memory Bank Mode Integration
+
+**VAN Mode Integration**
+- Historical decision analysis for new projects
+- Pattern matching for similar problems
+- Success rate predictions for proposed approaches
+- Risk assessment based on historical data
+
+**CREATIVE Mode Integration**
+- Real-time quality scoring during creative phases
+- Process efficiency monitoring
+- Pattern suggestion based on context
+- Early warning system for potential issues
+
+**REFLECT Mode Integration**
+- Automated analysis of completed creative phases
+- Quality assessment and scoring
+- Pattern extraction and documentation
+- Improvement recommendation generation
+
+**ARCHIVE Mode Integration**
+- Long-term pattern analysis
+- Strategic insight generation
+- Knowledge base updates
+- Historical trend analysis
+
+### Data Collection Points
+
+**Automatic Collection**
+- Creative phase duration tracking
+- Decision iteration counting
+- File modification patterns
+- Commit message analysis
+
+**Manual Collection**
+- Decision quality assessments
+- Stakeholder satisfaction surveys
+- Implementation success evaluations
+- Process feedback collection
+
+## 📋 REPORT TEMPLATES
+
+### Weekly Creative Phase Summary
+
+```markdown
+# Weekly Creative Phase Report
+**Period**: [Date Range]
+**Total Phases**: [Count]
+
+## Key Metrics
+- Average Decision Quality: [Score]/10
+- Average Phase Duration: [Minutes]
+- Implementation Success Rate: [Percentage]
+- Team Satisfaction: [Score]/10
+
+## Top Patterns This Week
+1. [Pattern Name] - Used [Count] times, [Success Rate]%
+2. [Pattern Name] - Used [Count] times, [Success Rate]%
+3. [Pattern Name] - Used [Count] times, [Success Rate]%
+
+## Recommendations
+- [Specific actionable recommendation]
+- [Process improvement suggestion]
+- [Training or resource need]
+
+## Upcoming Focus Areas
+- [Area needing attention]
+- [Opportunity for improvement]
+```
+
+### Monthly Strategic Analysis
+
+```markdown
+# Monthly Creative Analysis Report
+**Period**: [Month Year]
+
+## Executive Summary
+[High-level insights and trends]
+
+## Decision Quality Trends
+[Analysis of quality improvements/declines]
+
+## Process Efficiency Analysis
+[Efficiency trends and bottleneck identification]
+
+## Pattern Evolution
+[How architectural patterns are evolving]
+
+## Strategic Recommendations
+1. [Strategic recommendation with business impact]
+2. [Process improvement with efficiency impact]
+3. [Technology recommendation with risk assessment]
+
+## Investment Priorities
+[Recommended areas for investment in tools, training, or process]
+```
+
+## 🔄 CONTINUOUS IMPROVEMENT CYCLE
+
+### Feedback Loop Integration
+
+**Data → Analysis → Insights → Action → Measurement**
+
+1. **Data Collection**: Automated and manual data gathering
+2. **Analysis**: Pattern recognition and trend identification
+3. **Insights**: Actionable recommendations generation
+4. **Action**: Implementation of improvements
+5. **Measurement**: Effectiveness tracking of changes
+
+### Improvement Tracking
+
+**Process Improvements**
+- Track implementation of recommendations
+- Measure effectiveness of changes
+- Identify successful improvement patterns
+- Document lessons learned
+
+**Quality Enhancements**
+- Monitor decision quality improvements
+- Track pattern adoption success
+- Measure risk reduction effectiveness
+- Assess innovation impact
+
+This comprehensive analysis and reporting system ensures that creative phases continuously improve, delivering higher quality architectural decisions while building institutional knowledge and improving team effectiveness.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-archive-structure.mdc`
+
+```mdc
+---
+description: "Creative Archive Structure Management - Hierarchical organization and indexing system for creative phase results"
+globs: "**/creative/**", "**/documentation/**", "**/archive/**"
+alwaysApply: false
+---
+
+# CREATIVE ARCHIVE STRUCTURE MANAGEMENT
+
+> **TL;DR:** Comprehensive system for organizing, indexing, and versioning creative phase results in a hierarchical structure that supports efficient search, discovery, and reuse of architectural decisions and design solutions.
+
+## 🏗️ ARCHIVE STRUCTURE OVERVIEW
+
+The Creative Archive Structure provides a systematic approach to organizing creative phase results across multiple dimensions: time, project, type, and complexity. This enables efficient storage, retrieval, and analysis of architectural decisions and design solutions.
+
+```mermaid
+graph TD
+    Archive["🗄️ CREATIVE ARCHIVE"] --> Projects["📁 BY PROJECT"]
+    Archive --> Types["🏷️ BY TYPE"]
+    Archive --> Time["📅 BY TIME"]
+    Archive --> Complexity["🎯 BY COMPLEXITY"]
+
+    Projects --> ProjectA["Project Alpha"]
+    Projects --> ProjectB["Project Beta"]
+    Projects --> ProjectC["Project Gamma"]
+
+    Types --> Architecture["🏛️ Architecture"]
+    Types --> Algorithms["⚙️ Algorithms"]
+    Types --> UIUX["🎨 UI/UX"]
+    Types --> DataModels["📊 Data Models"]
+    Types --> Patterns["🔄 Patterns"]
+
+    Time --> Daily["📅 Daily"]
+    Time --> Weekly["📊 Weekly"]
+    Time --> Monthly["📈 Monthly"]
+    Time --> Quarterly["📋 Quarterly"]
+
+    Complexity --> Level1["Level 1: Quick Fix"]
+    Complexity --> Level2["Level 2: Enhancement"]
+    Complexity --> Level3["Level 3: Feature"]
+    Complexity --> Level4["Level 4: System"]
+
+    style Archive fill:#4da6ff,stroke:#0066cc,color:white
+    style Projects fill:#80bfff,stroke:#4da6ff,color:black
+    style Types fill:#80bfff,stroke:#4da6ff,color:black
+    style Time fill:#80bfff,stroke:#4da6ff,color:black
+    style Complexity fill:#80bfff,stroke:#4da6ff,color:black
+```
+
+## 📁 HIERARCHICAL DIRECTORY STRUCTURE
+
+### Primary Structure
+
+```
+memory-bank/creative/
+├── projects/                    # Project-based organization
+│   ├── cursor-memory-bank/
+│   │   ├── 2024/
+│   │   │   ├── 12/
+│   │   │   │   ├── 09/
+│   │   │   │   │   ├── task-continuity-architecture.md
+│   │   │   │   │   ├── creative-archive-architecture.md
+│   │   │   │   │   └── migration-system-design.md
+│   │   │   │   └── index.md
+│   │   │   └── index.md
+│   │   └── index.md
+│   └── index.md
+├── types/                       # Type-based organization
+│   ├── architecture/
+│   │   ├── system-design/
+│   │   ├── component-design/
+│   │   ├── integration-patterns/
+│   │   └── index.md
+│   ├── algorithms/
+│   │   ├── search-algorithms/
+│   │   ├── optimization/
+│   │   ├── data-processing/
+│   │   └── index.md
+│   ├── ui-ux/
+│   │   ├── user-flows/
+│   │   ├── interface-design/
+│   │   ├── interaction-patterns/
+│   │   └── index.md
+│   ├── data-models/
+│   │   ├── database-schemas/
+│   │   ├── api-models/
+│   │   ├── data-structures/
+│   │   └── index.md
+│   └── patterns/
+│       ├── design-patterns/
+│       ├── architectural-patterns/
+│       ├── integration-patterns/
+│       └── index.md
+├── complexity/                  # Complexity-based organization
+│   ├── level-1-quick-fix/
+│   ├── level-2-enhancement/
+│   ├── level-3-feature/
+│   ├── level-4-system/
+│   └── index.md
+├── timeline/                    # Time-based organization
+│   ├── 2024/
+│   │   ├── Q4/
+│   │   │   ├── december/
+│   │   │   │   ├── week-1/
+│   │   │   │   ├── week-2/
+│   │   │   │   └── index.md
+│   │   │   └── index.md
+│   │   └── index.md
+│   └── index.md
+├── search-index/                # Search and indexing
+│   ├── decisions.index
+│   ├── patterns.index
+│   ├── technologies.index
+│   ├── keywords.index
+│   └── metadata.index
+├── metrics/                     # Analytics and metrics
+│   ├── effectiveness/
+│   ├── reuse-patterns/
+│   ├── quality-scores/
+│   └── success-rates/
+└── templates/                   # Documentation templates
+    ├── architecture-decision-record.md
+    ├── algorithm-design-doc.md
+    ├── ui-ux-design-spec.md
+    ├── data-model-spec.md
+    └── pattern-documentation.md
+```
+
+## 🏷️ CATEGORIZATION SYSTEM
+
+### Type-Based Categories
+
+**🏛️ Architecture Category**
+- **System Design**: High-level system architecture decisions
+- **Component Design**: Individual component architecture
+- **Integration Patterns**: Service integration approaches
+- **Deployment Architecture**: Infrastructure and deployment decisions
+
+**⚙️ Algorithms Category**
+- **Search Algorithms**: Search and discovery implementations
+- **Optimization**: Performance optimization approaches
+- **Data Processing**: Data transformation and processing logic
+- **Machine Learning**: AI/ML algorithm implementations
+
+**🎨 UI/UX Category**
+- **User Flows**: User journey and workflow designs
+- **Interface Design**: Visual design and layout decisions
+- **Interaction Patterns**: User interaction and behavior patterns
+- **Accessibility**: Accessibility design decisions
+
+**📊 Data Models Category**
+- **Database Schemas**: Database design and structure
+- **API Models**: API data structure definitions
+- **Data Structures**: In-memory data organization
+- **Data Flow**: Data movement and transformation patterns
+
+**🔄 Patterns Category**
+- **Design Patterns**: Software design pattern applications
+- **Architectural Patterns**: System-level pattern implementations
+- **Integration Patterns**: Service integration patterns
+- **Security Patterns**: Security implementation patterns
+
+### Complexity-Based Categories
+
+**Level 1: Quick Fix**
+- Simple bug fixes and minor adjustments
+- Single-component modifications
+- Minimal architectural impact
+
+**Level 2: Enhancement**
+- Feature enhancements and improvements
+- Multi-component modifications
+- Moderate architectural impact
+
+**Level 3: Feature**
+- New feature implementations
+- Significant architectural decisions
+- Cross-system integration
+
+**Level 4: System**
+- System-wide architectural changes
+- Major technology decisions
+- Enterprise-level implementations
+
+## 🔍 INDEXING SYSTEM
+
+### Search Index Structure
+
+**Decision Index (`decisions.index`)**
+```json
+{
+  "decisions": [
+    {
+      "id": "ARCH-2024-12-09-001",
+      "title": "Task Continuity Architecture",
+      "type": "architecture",
+      "complexity": "level-3",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["task-management", "continuity", "migration"],
+      "technologies": ["yaml", "git", "memory-bank"],
+      "quality_score": 9.2,
+      "reuse_count": 0,
+      "file_path": "projects/cursor-memory-bank/2024/12/09/task-continuity-architecture.md"
+    }
+  ]
+}
+```
+
+**Pattern Index (`patterns.index`)**
+```json
+{
+  "patterns": [
+    {
+      "id": "PATTERN-2024-12-09-001",
+      "name": "Migration Document Pattern",
+      "category": "data-management",
+      "description": "YAML-based document for preserving development context",
+      "applications": ["task-continuity", "state-preservation"],
+      "effectiveness_score": 9.5,
+      "usage_frequency": "high",
+      "related_decisions": ["ARCH-2024-12-09-001"]
+    }
+  ]
+}
+```
+
+**Technology Index (`technologies.index`)**
+```json
+{
+  "technologies": [
+    {
+      "name": "YAML",
+      "category": "data-format",
+      "usage_contexts": ["configuration", "migration-documents", "metadata"],
+      "decisions_using": ["ARCH-2024-12-09-001"],
+      "effectiveness_rating": 8.7,
+      "adoption_trend": "increasing"
+    }
+  ]
+}
+```
+
+**Keyword Index (`keywords.index`)**
+```json
+{
+  "keywords": [
+    {
+      "keyword": "task-continuity",
+      "frequency": 15,
+      "related_decisions": ["ARCH-2024-12-09-001", "ARCH-2024-12-08-003"],
+      "related_patterns": ["PATTERN-2024-12-09-001"],
+      "importance_score": 9.1
+    }
+  ]
+}
+```
+
+**Metadata Index (`metadata.index`)**
+```json
+{
+  "metadata": {
+    "total_decisions": 127,
+    "total_patterns": 45,
+    "total_technologies": 23,
+    "last_updated": "2024-12-09T10:30:00Z",
+    "index_version": "1.2.0",
+    "categories": {
+      "architecture": 45,
+      "algorithms": 23,
+      "ui-ux": 18,
+      "data-models": 25,
+      "patterns": 16
+    },
+    "complexity_distribution": {
+      "level-1": 12,
+      "level-2": 34,
+      "level-3": 56,
+      "level-4": 25
+    }
+  }
+}
+```
+
+## 📋 VERSIONING SYSTEM
+
+### Version Control Strategy
+
+**Decision Versioning**
+- **v1.0**: Initial decision documentation
+- **v1.1**: Minor updates and clarifications
+- **v2.0**: Major revisions or alternative approaches
+- **v2.1**: Implementation updates and lessons learned
+
+**Version Metadata**
+```yaml
+version_history:
+  - version: "1.0"
+    date: "2024-12-09"
+    author: "Memory Bank System"
+    changes: "Initial architecture decision"
+    status: "active"
+  - version: "1.1"
+    date: "2024-12-10"
+    author: "Memory Bank System"
+    changes: "Added implementation details"
+    status: "active"
+  - version: "2.0"
+    date: "2024-12-15"
+    author: "Memory Bank System"
+    changes: "Major revision based on implementation feedback"
+    status: "active"
+    supersedes: ["1.0", "1.1"]
+```
+
+### Branching Strategy for Decisions
+
+**Decision Branches**
+- **main**: Current active decision
+- **alternatives**: Alternative approaches considered
+- **deprecated**: Superseded decisions
+- **experimental**: Proof-of-concept approaches
+
+## 🔄 AUTOMATED ORGANIZATION
+
+### Auto-Categorization Rules
+
+**File Naming Convention**
+```
+{type}-{date}-{project}-{sequence}-{title}.md
+
+Examples:
+- arch-2024-12-09-cursor-memory-bank-001-task-continuity.md
+- algo-2024-12-09-search-engine-001-indexing-strategy.md
+- uiux-2024-12-09-dashboard-001-user-flow.md
+```
+
+**Auto-Filing Rules**
+1. **By Date**: Automatically file in timeline structure
+2. **By Type**: Extract type from filename prefix
+3. **By Project**: Extract project from filename
+4. **By Complexity**: Analyze content for complexity indicators
+
+### Index Maintenance
+
+**Automatic Index Updates**
+- **Real-time**: Update indexes when files are created/modified
+- **Batch**: Nightly index optimization and cleanup
+- **Validation**: Weekly index integrity checks
+- **Backup**: Daily index backups
+
+## 📊 SEARCH AND DISCOVERY
+
+### Search Capabilities
+
+**Multi-dimensional Search**
+- **By Keywords**: Full-text search across all documents
+- **By Technology**: Find decisions using specific technologies
+- **By Pattern**: Locate pattern applications
+- **By Date Range**: Time-based filtering
+- **By Complexity**: Filter by implementation complexity
+- **By Quality Score**: Find highest-rated decisions
+
+**Search Query Examples**
+```bash
+# Find all architecture decisions about task management
+search --type=architecture --keywords="task management"
+
+# Find Level 3 decisions from last month
+search --complexity=level-3 --date-range="2024-11-01:2024-11-30"
+
+# Find high-quality UI/UX patterns
+search --type=ui-ux --quality-score=">8.0" --category=patterns
+
+# Find decisions using YAML technology
+search --technology=yaml --sort=date-desc
+```
+
+### Discovery Features
+
+**Related Decision Discovery**
+- **Similar Patterns**: Find decisions using similar approaches
+- **Technology Overlap**: Decisions using same technology stack
+- **Temporal Proximity**: Decisions made around same time
+- **Complexity Similarity**: Decisions of similar complexity
+
+**Recommendation Engine**
+- **Pattern Suggestions**: Recommend proven patterns for new decisions
+- **Technology Recommendations**: Suggest technologies based on success rates
+- **Alternative Approaches**: Show alternative solutions for similar problems
+- **Quality Insights**: Highlight high-quality decision examples
+
+## 🎯 INTEGRATION POINTS
+
+### Memory Bank Mode Integration
+
+**VAN Mode Integration**
+- **Decision Discovery**: Search for relevant past decisions
+- **Pattern Recommendations**: Suggest applicable patterns
+- **Technology Guidance**: Recommend proven technology choices
+- **Quality Benchmarks**: Show quality standards for similar decisions
+
+**CREATIVE Mode Integration**
+- **Real-time Archiving**: Automatically capture creative phase results
+- **Pattern Recognition**: Identify emerging patterns during creative sessions
+- **Quality Assessment**: Real-time quality scoring of decisions
+- **Alternative Tracking**: Capture considered alternatives
+
+**REFLECT Mode Integration**
+- **Decision Analysis**: Analyze effectiveness of implemented decisions
+- **Pattern Validation**: Validate pattern effectiveness
+- **Quality Scoring**: Score decision quality based on outcomes
+- **Lesson Extraction**: Extract lessons learned for future reference
+
+**ARCHIVE Mode Integration**
+- **Long-term Storage**: Move decisions to long-term archive
+- **Knowledge Consolidation**: Consolidate related decisions
+- **Pattern Crystallization**: Formalize successful patterns
+- **Institutional Memory**: Build organizational knowledge base
+
+## 📈 ANALYTICS AND METRICS
+
+### Decision Effectiveness Metrics
+
+**Quality Scores**
+- **Implementation Success**: How well the decision worked in practice
+- **Maintainability**: How easy it was to maintain the solution
+- **Performance Impact**: Effect on system performance
+- **Developer Experience**: Impact on development productivity
+- **Reusability**: How often the decision pattern is reused
+
+**Pattern Success Rates**
+- **Adoption Rate**: How often patterns are chosen
+- **Success Rate**: Percentage of successful implementations
+- **Modification Rate**: How often patterns need modification
+- **Abandonment Rate**: How often patterns are abandoned
+
+### Usage Analytics
+
+**Search Analytics**
+- **Popular Keywords**: Most searched terms
+- **Common Queries**: Frequently used search patterns
+- **Discovery Paths**: How users find relevant decisions
+- **Success Rates**: How often searches lead to useful results
+
+**Reuse Analytics**
+- **Most Reused Patterns**: Patterns with highest reuse rates
+- **Technology Trends**: Technology adoption and success trends
+- **Decision Longevity**: How long decisions remain relevant
+- **Evolution Patterns**: How decisions evolve over time
+
+## 🔧 MAINTENANCE AND OPTIMIZATION
+
+### Archive Maintenance
+
+**Regular Maintenance Tasks**
+- **Index Optimization**: Weekly index performance optimization
+- **Dead Link Cleanup**: Monthly cleanup of broken references
+- **Duplicate Detection**: Quarterly duplicate decision detection
+- **Quality Review**: Annual quality assessment and cleanup
+
+**Archive Health Monitoring**
+- **Storage Usage**: Monitor archive storage consumption
+- **Search Performance**: Track search response times
+- **Index Integrity**: Validate index consistency
+- **Access Patterns**: Monitor usage patterns for optimization
+
+### Performance Optimization
+
+**Search Optimization**
+- **Index Tuning**: Optimize search indexes for common queries
+- **Caching Strategy**: Cache frequently accessed decisions
+- **Query Optimization**: Optimize complex search queries
+- **Result Ranking**: Improve search result relevance
+
+**Storage Optimization**
+- **Compression**: Compress older archive entries
+- **Archival Strategy**: Move old decisions to cold storage
+- **Deduplication**: Remove duplicate content
+- **Cleanup Automation**: Automated cleanup of obsolete entries
+
+This Creative Archive Structure Management system provides a comprehensive foundation for organizing, indexing, and discovering creative phase results, enabling effective knowledge accumulation and reuse across all Memory Bank development activities.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# CREATIVE RESULTS CAPTURE SYSTEM
+
+> **TL;DR:** This system automatically captures, structures, and preserves all results from CREATIVE phases, ensuring comprehensive knowledge retention and enabling future reuse of architectural decisions and design solutions.
+
+## 🎨 CREATIVE CAPTURE OVERVIEW
+
+The Creative Results Capture System provides comprehensive preservation of all creative phase outputs:
+
+- **Automatic Capture**: Real-time preservation of creative decisions
+- **Structured Storage**: Organized archival with metadata
+- **Context Preservation**: Complete decision-making context
+- **Knowledge Linking**: Connections between related decisions
+- **Future Access**: Easy retrieval for similar problems
+
+## 📊 CAPTURE ARCHITECTURE
+
+### Core Components
+
+**Creative Phase Monitor**
+- Detects CREATIVE mode activation
+- Tracks creative session progress
+- Monitors decision points
+- Captures intermediate results
+
+**Decision Capture Engine**
+- Records architectural decisions
+- Preserves design rationale
+- Captures alternative options
+- Documents decision criteria
+
+**Context Preservation System**
+- Saves problem context
+- Records constraints and requirements
+- Preserves stakeholder input
+- Documents environmental factors
+
+**Metadata Generator**
+- Creates searchable metadata
+- Generates classification tags
+- Assigns quality metrics
+- Links to related decisions
+
+**Storage Orchestrator**
+- Manages file organization
+- Handles version control
+- Ensures data integrity
+- Optimizes storage efficiency
+
+## 🔄 CAPTURE WORKFLOWS
+
+### Automatic Capture Triggers
+
+**CREATIVE Mode Entry**
+- Initialize capture session
+- Create session metadata
+- Set up monitoring systems
+- Prepare storage structures
+
+**Decision Points**
+- Detect architectural decisions
+- Capture decision rationale
+- Record alternative options
+- Save decision context
+
+**Phase Milestones**
+- Capture intermediate results
+- Save progress snapshots
+- Update session metadata
+- Generate progress reports
+
+**CREATIVE Mode Exit**
+- Finalize capture session
+- Generate session summary
+- Create archive package
+- Update knowledge index
+
+### Capture Process Flow
+
+1. **Session Initialization**
+   - Create unique session ID
+   - Initialize capture workspace
+   - Set up monitoring hooks
+   - Prepare metadata structure
+
+2. **Real-Time Monitoring**
+   - Track document changes
+   - Monitor decision discussions
+   - Capture design iterations
+   - Record thought processes
+
+3. **Decision Point Processing**
+   - Identify decision moments
+   - Extract decision criteria
+   - Capture alternatives considered
+   - Record final choice rationale
+
+4. **Context Enrichment**
+   - Add problem context
+   - Include constraint information
+   - Reference related decisions
+   - Link to source requirements
+
+5. **Quality Assessment**
+   - Evaluate decision completeness
+   - Assess documentation quality
+   - Rate decision confidence
+   - Generate improvement suggestions
+
+6. **Archive Preparation**
+   - Structure captured data
+   - Generate summary documents
+   - Create searchable metadata
+   - Package for long-term storage
+
+## 📋 CAPTURE DATA STRUCTURE
+
+### Creative Session Metadata
+
+```yaml
+creative_session:
+  session_id: "CREATIVE-2024-12-09-103045"
+  task_id: "TASK-CONTINUITY-FIX-2024-12-09"
+  start_time: "2024-12-09T10:30:45Z"
+  end_time: "2024-12-09T12:15:30Z"
+  duration_minutes: 105
+
+  context:
+    problem_domain: "System Architecture"
+    complexity_level: "Level 3"
+    stakeholders: ["Development Team", "System Users"]
+    constraints:
+      - "Must maintain backward compatibility"
+      - "Zero data loss requirement"
+      - "Performance impact < 5%"
+
+  participants:
+    - role: "Architect"
+      contribution: "System design"
+    - role: "Developer"
+      contribution: "Implementation feasibility"
+
+  session_type: "Architecture Design"
+  quality_score: 8.5
+  completeness: 95
+```
+
+### Architectural Decision Record
+
+```yaml
+architectural_decision:
+  decision_id: "ADR-2024-12-09-001"
+  session_id: "CREATIVE-2024-12-09-103045"
+  timestamp: "2024-12-09T11:15:22Z"
+
+  title: "Task Continuity Architecture Pattern"
+  status: "ACCEPTED"
+
+  context:
+    problem: "Memory Bank loses unfinished tasks during mode transitions"
+    forces:
+      - "Need 100% data preservation"
+      - "Must maintain performance"
+      - "Should be user-friendly"
+      - "Must handle edge cases"
+
+  decision:
+    chosen_option: "Hybrid Architecture with 5 Components"
+    rationale: |
+      Selected hybrid approach combining validation, migration,
+      and backup systems for comprehensive task preservation.
+
+  alternatives_considered:
+    - option: "Simple Migration Only"
+      pros: ["Easy to implement", "Low complexity"]
+      cons: ["No validation", "Risk of data loss"]
+      rejected_reason: "Insufficient data protection"
+
+    - option: "Full Database Solution"
+      pros: ["Robust", "Scalable"]
+      cons: ["Over-engineered", "High complexity"]
+      rejected_reason: "Unnecessary complexity for use case"
+
+  consequences:
+    positive:
+      - "100% task preservation guaranteed"
+      - "Comprehensive error handling"
+      - "User-friendly warnings"
+    negative:
+      - "Increased system complexity"
+      - "Additional maintenance overhead"
+    risks:
+      - "Migration document corruption"
+      - "Performance impact on large task sets"
+
+  implementation:
+    components:
+      - "Task Status Validator"
+      - "Migration Manager"
+      - "Mode Transition Controller"
+      - "Task Preservation Engine"
+      - "Warning System"
+    estimated_effort: "2.5 hours"
+    dependencies: ["Git integration", "File system monitoring"]
+
+  validation:
+    success_criteria:
+      - "Zero task loss in testing"
+      - "User acceptance > 90%"
+      - "Performance impact < 5%"
+    testing_approach: "Comprehensive scenario testing"
+
+  metadata:
+    tags: ["architecture", "data-preservation", "task-management"]
+    category: "System Architecture"
+    complexity: "Medium"
+    reusability: "High"
+    confidence: 9
+```
+
+### Design Artifact Capture
+
+```yaml
+design_artifact:
+  artifact_id: "DESIGN-2024-12-09-001"
+  session_id: "CREATIVE-2024-12-09-103045"
+  type: "System Diagram"
+
+  content:
+    title: "Task Continuity System Architecture"
+    description: "Visual representation of task preservation components"
+    format: "Mermaid Diagram"
+    file_path: "creative/architecture/task-continuity-diagram.md"
+
+  creation:
+    timestamp: "2024-12-09T11:30:15Z"
+    author: "System Architect"
+    version: "1.0"
+
+  relationships:
+    related_decisions: ["ADR-2024-12-09-001"]
+    implements_requirements: ["REQ-001", "REQ-002"]
+    influences_components: ["Migration System", "Validation System"]
+
+  quality_metrics:
+    completeness: 90
+    clarity: 85
+    accuracy: 95
+    usefulness: 88
+
+  metadata:
+    tags: ["diagram", "architecture", "system-design"]
+    searchable_content: "task continuity migration validation backup"
+    last_updated: "2024-12-09T11:30:15Z"
+```
+
+## 🔍 CAPTURE MECHANISMS
+
+### Document Monitoring
+
+**File System Watchers**
+- Monitor creative workspace files
+- Detect document creation/modification
+- Track version changes
+- Capture content snapshots
+
+**Content Analysis**
+- Extract key decisions from text
+- Identify architectural patterns
+- Detect design principles
+- Parse structured content
+
+**Change Detection**
+- Track incremental changes
+- Identify significant modifications
+- Capture decision evolution
+- Preserve iteration history
+
+### Interactive Capture
+
+**Decision Prompts**
+- Prompt for decision rationale
+- Request alternative options
+- Capture decision confidence
+- Record implementation notes
+
+**Context Queries**
+- Ask for problem context
+- Request constraint information
+- Gather stakeholder input
+- Collect success criteria
+
+**Quality Checks**
+- Validate decision completeness
+- Check documentation quality
+- Assess rationale clarity
+- Verify implementation feasibility
+
+### Automated Extraction
+
+**Pattern Recognition**
+- Identify common decision patterns
+- Extract architectural styles
+- Detect design principles
+- Recognize solution templates
+
+**Metadata Generation**
+- Auto-generate tags
+- Create search keywords
+- Assign categories
+- Calculate quality scores
+
+**Relationship Mapping**
+- Link related decisions
+- Connect to requirements
+- Map to implementation
+- Identify dependencies
+
+## 📊 CAPTURE QUALITY ASSURANCE
+
+### Completeness Validation
+
+**Decision Completeness**
+- Problem statement present
+- Solution rationale provided
+- Alternatives considered
+- Consequences documented
+
+**Context Completeness**
+- Problem domain identified
+- Constraints documented
+- Stakeholders listed
+- Success criteria defined
+
+**Documentation Completeness**
+- All artifacts captured
+- Metadata generated
+- Relationships mapped
+- Quality assessed
+
+### Quality Metrics
+
+**Decision Quality**
+- Rationale clarity (1-10)
+- Alternative analysis depth (1-10)
+- Implementation feasibility (1-10)
+- Risk assessment completeness (1-10)
+
+**Documentation Quality**
+- Content completeness (1-10)
+- Structure consistency (1-10)
+- Searchability effectiveness (1-10)
+- Reusability potential (1-10)
+
+**Session Quality**
+- Overall productivity (1-10)
+- Decision confidence (1-10)
+- Knowledge capture rate (1-10)
+- Future value potential (1-10)
+
+## 🔧 INTEGRATION POINTS
+
+### CREATIVE Mode Integration
+
+**Mode Entry**
+- Initialize capture session
+- Set up monitoring systems
+- Create workspace structure
+- Begin real-time tracking
+
+**During Creative Work**
+- Monitor decision points
+- Capture intermediate results
+- Track thought processes
+- Record design iterations
+
+**Mode Exit**
+- Finalize capture session
+- Generate session summary
+- Create archive package
+- Update knowledge index
+
+### Memory Bank Integration
+
+**VAN Mode**
+- Access previous decisions
+- Search similar problems
+- Retrieve design patterns
+- Load relevant context
+
+**PLAN Mode**
+- Reference architectural decisions
+- Use proven patterns
+- Apply lessons learned
+- Leverage existing designs
+
+**IMPLEMENT Mode**
+- Follow architectural decisions
+- Implement design patterns
+- Track implementation notes
+- Capture implementation insights
+
+**REFLECT Mode**
+- Analyze decision effectiveness
+- Evaluate implementation success
+- Update decision confidence
+- Generate improvement insights
+
+**ARCHIVE Mode**
+- Finalize creative archives
+- Generate summary reports
+- Update knowledge base
+- Prepare for future access
+
+### File System Integration
+
+**Storage Structure**
+```
+memory-bank/creative/
+├── sessions/
+│   ├── CREATIVE-2024-12-09-103045/
+│   │   ├── session-metadata.yaml
+│   │   ├── decisions/
+│   │   ├── artifacts/
+│   │   └── context/
+├── decisions/
+│   ├── architecture/
+│   ├── algorithms/
+│   ├── ui-ux/
+│   └── data-models/
+├── artifacts/
+│   ├── diagrams/
+│   ├── documents/
+│   └── prototypes/
+└── index/
+    ├── by-date.json
+    ├── by-category.json
+    ├── by-tags.json
+    └── by-quality.json
+```
+
+**Version Control Integration**
+- Git hooks for automatic capture
+- Commit message analysis
+- Branch-based session tracking
+- Merge conflict resolution
+
+This Creative Results Capture System ensures comprehensive preservation of all creative phase outputs, enabling effective knowledge reuse and continuous improvement of architectural decision-making.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc`
+
+```mdc
+---
+description: "Creative Versioning System - Version control and evolution tracking for architectural decisions and design solutions"
+globs: "**/creative/**", "**/documentation/**", "**/versioning/**"
+alwaysApply: false
+---
+
+# CREATIVE VERSIONING SYSTEM
+
+> **TL;DR:** Comprehensive version control system for architectural decisions and design solutions that tracks evolution, alternatives, and implementation outcomes while maintaining full traceability and enabling rollback capabilities.
+
+## 🔄 VERSIONING OVERVIEW
+
+The Creative Versioning System provides structured version control for architectural decisions, enabling teams to track decision evolution, maintain alternatives, and learn from implementation outcomes. This system goes beyond traditional file versioning to capture the reasoning, context, and impact of each decision iteration.
+
+```mermaid
+graph TD
+    Decision["📋 ARCHITECTURAL DECISION"] --> Initial["v1.0 Initial Decision"]
+    Initial --> Minor["v1.1 Minor Updates"]
+    Initial --> Major["v2.0 Major Revision"]
+
+    Minor --> Implementation["v1.2 Implementation Updates"]
+    Major --> Alternative["v2.1 Alternative Approach"]
+
+    Implementation --> Lessons["v1.3 Lessons Learned"]
+    Alternative --> Validation["v2.2 Validation Results"]
+
+    Lessons --> Archive["📚 Archive v1.x"]
+    Validation --> Current["✅ Current Active"]
+
+    Archive --> Reference["🔍 Reference Only"]
+    Current --> NextMajor["v3.0 Next Evolution"]
+
+    style Decision fill:#4da6ff,stroke:#0066cc,color:white
+    style Initial fill:#80bfff,stroke:#4da6ff,color:black
+    style Current fill:#5fd94d,stroke:#3da336,color:white
+    style Archive fill:#ffa64d,stroke:#cc7a30,color:white
+    style Reference fill:#d3d3d3,stroke:#a9a9a9,color:black
+```
+
+## 📋 VERSION STRUCTURE
+
+### Version Numbering System
+
+**Semantic Versioning for Decisions**
+- **MAJOR.MINOR.PATCH** format
+- **MAJOR**: Fundamental approach changes
+- **MINOR**: Significant updates or alternatives
+- **PATCH**: Implementation details and lessons learned
+
+**Version Categories**
+- **1.0**: Initial decision documentation
+- **1.x**: Refinements and implementation updates
+- **2.0**: Major revision or alternative approach
+- **x.y.z**: Patch-level implementation learnings
+
+### Version Metadata Structure
+
+```yaml
+decision_metadata:
+  id: "ARCH-2024-12-09-001"
+  title: "Task Continuity Architecture"
+  current_version: "2.1"
+
+  version_history:
+    - version: "1.0"
+      date: "2024-12-09T09:00:00Z"
+      author: "Memory Bank System"
+      type: "initial"
+      status: "superseded"
+      changes: "Initial architecture decision for task continuity system"
+      implementation_status: "planned"
+      quality_score: 7.5
+
+    - version: "1.1"
+      date: "2024-12-09T11:30:00Z"
+      author: "Memory Bank System"
+      type: "minor"
+      status: "superseded"
+      changes: "Added migration document structure and validation rules"
+      implementation_status: "in_progress"
+      quality_score: 8.2
+      parent_version: "1.0"
+
+    - version: "2.0"
+      date: "2024-12-09T14:00:00Z"
+      author: "Memory Bank System"
+      type: "major"
+      status: "superseded"
+      changes: "Complete redesign with YAML-based migration system"
+      implementation_status: "implemented"
+      quality_score: 9.1
+      parent_version: "1.1"
+      breaking_changes: true
+
+    - version: "2.1"
+      date: "2024-12-09T16:45:00Z"
+      author: "Memory Bank System"
+      type: "patch"
+      status: "active"
+      changes: "Added validation rules and error handling based on implementation feedback"
+      implementation_status: "validated"
+      quality_score: 9.4
+      parent_version: "2.0"
+
+  alternatives:
+    - version: "1.5-alt"
+      date: "2024-12-09T13:00:00Z"
+      title: "JSON-based Migration Alternative"
+      status: "rejected"
+      reason: "YAML provides better human readability"
+      parent_version: "1.1"
+
+  branches:
+    main: "2.1"
+    experimental: "3.0-beta"
+    deprecated: ["1.0", "1.1"]
+    alternatives: ["1.5-alt"]
+```
+
+## 🌳 BRANCHING STRATEGY
+
+### Decision Branches
+
+**Main Branch**
+- **Purpose**: Current active decision
+- **Status**: Production-ready
+- **Updates**: Only validated changes
+- **Quality Gate**: High quality score required
+
+**Development Branch**
+- **Purpose**: Work-in-progress updates
+- **Status**: Under development
+- **Updates**: Frequent iterations
+- **Quality Gate**: Basic validation required
+
+**Alternative Branches**
+- **Purpose**: Alternative approaches
+- **Status**: Experimental or comparative
+- **Updates**: Independent evolution
+- **Quality Gate**: Proof-of-concept level
+
+**Experimental Branch**
+- **Purpose**: Future possibilities
+- **Status**: Research and exploration
+- **Updates**: Rapid prototyping
+- **Quality Gate**: Concept validation
+
+**Deprecated Branch**
+- **Purpose**: Superseded decisions
+- **Status**: Historical reference
+- **Updates**: Read-only
+- **Quality Gate**: Archival quality
+
+### Branch Management Rules
+
+```yaml
+branch_rules:
+  main:
+    protection: true
+    required_reviews: 1
+    quality_threshold: 8.0
+    implementation_required: true
+
+  development:
+    protection: false
+    required_reviews: 0
+    quality_threshold: 6.0
+    implementation_required: false
+
+  alternatives:
+    protection: false
+    required_reviews: 1
+    quality_threshold: 7.0
+    implementation_required: false
+    comparison_required: true
+
+  experimental:
+    protection: false
+    required_reviews: 0
+    quality_threshold: 5.0
+    implementation_required: false
+
+  deprecated:
+    protection: true
+    required_reviews: 0
+    read_only: true
+    archival_required: true
+```
+
+## 📊 VERSION COMPARISON
+
+### Comparison Framework
+
+**Decision Comparison Matrix**
+```yaml
+comparison:
+  decisions: ["v1.0", "v2.0", "v2.1"]
+  criteria:
+    - implementation_complexity
+    - maintainability
+    - performance_impact
+    - developer_experience
+    - scalability
+    - security
+    - cost
+
+  scores:
+    v1.0:
+      implementation_complexity: 6.0
+      maintainability: 5.5
+      performance_impact: 7.0
+      developer_experience: 6.5
+      scalability: 5.0
+      security: 7.5
+      cost: 8.0
+      overall: 6.5
+
+    v2.0:
+      implementation_complexity: 8.0
+      maintainability: 8.5
+      performance_impact: 8.5
+      developer_experience: 9.0
+      scalability: 9.0
+      security: 8.5
+      cost: 7.0
+      overall: 8.4
+
+    v2.1:
+      implementation_complexity: 8.5
+      maintainability: 9.0
+      performance_impact: 8.5
+      developer_experience: 9.2
+      scalability: 9.0
+      security: 9.0
+      cost: 7.0
+      overall: 8.7
+```
+
+### Evolution Analysis
+
+**Decision Evolution Tracking**
+- **Complexity Trend**: Track how complexity changes over versions
+- **Quality Improvement**: Measure quality score progression
+- **Implementation Success**: Track implementation outcomes
+- **Adoption Rate**: Monitor how quickly new versions are adopted
+- **Rollback Frequency**: Track how often rollbacks occur
+
+**Evolution Metrics**
+```json
+{
+  "evolution_metrics": {
+    "decision_id": "ARCH-2024-12-09-001",
+    "total_versions": 4,
+    "active_branches": 2,
+    "quality_trend": "improving",
+    "complexity_trend": "stable",
+    "implementation_success_rate": 0.95,
+    "average_time_between_versions": "2.5 hours",
+    "rollback_count": 0,
+    "alternative_count": 1,
+    "reuse_count": 3
+  }
+}
+```
+
+## 🔄 VERSION LIFECYCLE
+
+### Lifecycle States
+
+**Planning State**
+- **Status**: Under consideration
+- **Activities**: Requirements gathering, initial research
+- **Outputs**: Problem statement, initial approaches
+- **Next State**: Development
+
+**Development State**
+- **Status**: Active development
+- **Activities**: Solution design, alternative evaluation
+- **Outputs**: Decision document, implementation plan
+- **Next State**: Review or Implementation
+
+**Review State**
+- **Status**: Under review
+- **Activities**: Peer review, quality assessment
+- **Outputs**: Review feedback, quality score
+- **Next State**: Implementation or Development
+
+**Implementation State**
+- **Status**: Being implemented
+- **Activities**: Code implementation, testing
+- **Outputs**: Implementation results, lessons learned
+- **Next State**: Validation or Rollback
+
+**Validation State**
+- **Status**: Post-implementation validation
+- **Activities**: Performance testing, user feedback
+- **Outputs**: Validation results, quality metrics
+- **Next State**: Active or Revision
+
+**Active State**
+- **Status**: Production use
+- **Activities**: Monitoring, maintenance
+- **Outputs**: Usage metrics, improvement suggestions
+- **Next State**: Revision or Deprecation
+
+**Deprecated State**
+- **Status**: No longer recommended
+- **Activities**: Migration planning, documentation
+- **Outputs**: Migration guide, historical record
+- **Next State**: Archived
+
+**Archived State**
+- **Status**: Historical reference only
+- **Activities**: Long-term storage, occasional reference
+- **Outputs**: Archived documentation
+- **Next State**: Final (permanent)
+
+### State Transition Rules
+
+```yaml
+state_transitions:
+  planning:
+    allowed_next: ["development", "cancelled"]
+    required_artifacts: ["problem_statement"]
+
+  development:
+    allowed_next: ["review", "implementation", "cancelled"]
+    required_artifacts: ["decision_document", "alternatives_analysis"]
+
+  review:
+    allowed_next: ["implementation", "development", "rejected"]
+    required_artifacts: ["review_feedback", "quality_assessment"]
+
+  implementation:
+    allowed_next: ["validation", "rollback", "failed"]
+    required_artifacts: ["implementation_results", "test_results"]
+
+  validation:
+    allowed_next: ["active", "revision", "rollback"]
+    required_artifacts: ["validation_results", "performance_metrics"]
+
+  active:
+    allowed_next: ["revision", "deprecation"]
+    required_artifacts: ["usage_metrics", "maintenance_log"]
+
+  deprecated:
+    allowed_next: ["archived"]
+    required_artifacts: ["migration_guide", "deprecation_notice"]
+
+  archived:
+    allowed_next: []
+    required_artifacts: ["final_documentation", "lessons_learned"]
+```
+
+## 🔍 VERSION DISCOVERY
+
+### Version Search Capabilities
+
+**Version-Aware Search**
+- **Current Versions**: Find only active versions
+- **Historical Search**: Search across all versions
+- **Evolution Search**: Find decisions with similar evolution patterns
+- **Quality Search**: Find versions above quality threshold
+- **Implementation Search**: Find successfully implemented versions
+
+**Search Query Examples**
+```bash
+# Find current version of all architecture decisions
+search --type=architecture --version=current
+
+# Find all versions of a specific decision
+search --decision-id=ARCH-2024-12-09-001 --all-versions
+
+# Find high-quality versions from last month
+search --quality-score=">8.0" --date-range="2024-11-01:2024-11-30" --version=active
+
+# Find decisions with successful implementation
+search --implementation-status=validated --version=active
+
+# Find alternatives for a specific decision
+search --decision-id=ARCH-2024-12-09-001 --branch=alternatives
+```
+
+### Version Recommendations
+
+**Upgrade Recommendations**
+- **Quality Improvements**: Suggest upgrades to higher quality versions
+- **Security Updates**: Recommend versions with security improvements
+- **Performance Enhancements**: Suggest versions with better performance
+- **Maintenance Simplification**: Recommend versions with better maintainability
+
+**Rollback Recommendations**
+- **Implementation Issues**: Suggest rollback when implementation fails
+- **Performance Degradation**: Recommend previous version if performance drops
+- **Complexity Increase**: Suggest simpler previous version if complexity becomes problematic
+- **Quality Regression**: Recommend rollback if quality scores decrease
+
+## 📈 VERSION ANALYTICS
+
+### Version Performance Metrics
+
+**Quality Metrics by Version**
+```json
+{
+  "quality_analytics": {
+    "decision_id": "ARCH-2024-12-09-001",
+    "versions": {
+      "1.0": {
+        "quality_score": 7.5,
+        "implementation_success": 0.8,
+        "maintenance_cost": "high",
+        "developer_satisfaction": 6.5,
+        "performance_impact": "neutral"
+      },
+      "2.0": {
+        "quality_score": 9.1,
+        "implementation_success": 0.95,
+        "maintenance_cost": "low",
+        "developer_satisfaction": 8.8,
+        "performance_impact": "positive"
+      },
+      "2.1": {
+        "quality_score": 9.4,
+        "implementation_success": 0.98,
+        "maintenance_cost": "very_low",
+        "developer_satisfaction": 9.2,
+        "performance_impact": "positive"
+      }
+    }
+  }
+}
+```
+
+**Evolution Patterns**
+- **Quality Progression**: Track quality improvements over time
+- **Complexity Evolution**: Monitor complexity changes
+- **Implementation Success**: Track implementation success rates
+- **Adoption Speed**: Measure how quickly new versions are adopted
+- **Rollback Patterns**: Analyze when and why rollbacks occur
+
+### Usage Analytics
+
+**Version Usage Statistics**
+```json
+{
+  "usage_analytics": {
+    "decision_id": "ARCH-2024-12-09-001",
+    "current_version": "2.1",
+    "usage_distribution": {
+      "2.1": 0.85,
+      "2.0": 0.12,
+      "1.1": 0.03,
+      "deprecated": 0.00
+    },
+    "adoption_timeline": {
+      "2.1_release": "2024-12-09T16:45:00Z",
+      "50_percent_adoption": "2024-12-10T08:00:00Z",
+      "90_percent_adoption": "2024-12-11T12:00:00Z"
+    },
+    "migration_patterns": {
+      "1.0_to_2.0": {
+        "migration_time": "4 hours",
+        "success_rate": 0.95,
+        "rollback_rate": 0.05
+      },
+      "2.0_to_2.1": {
+        "migration_time": "1 hour",
+        "success_rate": 0.98,
+        "rollback_rate": 0.02
+      }
+    }
+  }
+}
+```
+
+## 🔧 VERSION MANAGEMENT TOOLS
+
+### Automated Version Management
+
+**Auto-Versioning Rules**
+- **Patch Increment**: Automatic for implementation updates
+- **Minor Increment**: Manual approval for significant changes
+- **Major Increment**: Requires architectural review
+- **Branch Creation**: Automatic for alternatives and experiments
+
+**Version Validation**
+- **Quality Gates**: Automated quality score validation
+- **Dependency Checks**: Verify compatibility with dependent decisions
+- **Implementation Validation**: Ensure implementation feasibility
+- **Security Review**: Automated security impact assessment
+
+### Version Operations
+
+**Version Creation**
+```bash
+# Create new minor version
+create-version --decision-id=ARCH-2024-12-09-001 --type=minor --changes="Added validation rules"
+
+# Create alternative version
+create-version --decision-id=ARCH-2024-12-09-001 --type=alternative --title="JSON-based approach"
+
+# Create experimental version
+create-version --decision-id=ARCH-2024-12-09-001 --type=experimental --branch=future-v3
+```
+
+**Version Comparison**
+```bash
+# Compare two versions
+compare-versions --decision-id=ARCH-2024-12-09-001 --versions=1.0,2.1
+
+# Compare with alternatives
+compare-versions --decision-id=ARCH-2024-12-09-001 --include-alternatives
+
+# Generate evolution report
+evolution-report --decision-id=ARCH-2024-12-09-001 --format=markdown
+```
+
+**Version Migration**
+```bash
+# Migrate to new version
+migrate-version --from=2.0 --to=2.1 --decision-id=ARCH-2024-12-09-001
+
+# Rollback to previous version
+rollback-version --to=2.0 --decision-id=ARCH-2024-12-09-001 --reason="Performance issues"
+
+# Bulk migration
+bulk-migrate --from-version=1.x --to-version=2.1 --pattern="task-*"
+```
+
+## 🎯 INTEGRATION WITH MEMORY BANK
+
+### Mode Integration
+
+**VAN Mode Integration**
+- **Version Discovery**: Find relevant decision versions during planning
+- **Quality Filtering**: Show only high-quality versions
+- **Evolution Insights**: Display decision evolution patterns
+- **Recommendation Engine**: Suggest best versions for current context
+
+**CREATIVE Mode Integration**
+- **Version Creation**: Automatically create new versions during creative sessions
+- **Alternative Tracking**: Capture alternative approaches as version branches
+- **Quality Assessment**: Real-time quality scoring of new versions
+- **Evolution Planning**: Plan version evolution during creative phases
+
+**IMPLEMENT Mode Integration**
+- **Implementation Tracking**: Track implementation progress by version
+- **Validation Recording**: Record implementation outcomes
+- **Lesson Capture**: Capture implementation lessons as version updates
+- **Rollback Support**: Enable quick rollback if implementation fails
+
+**REFLECT Mode Integration**
+- **Version Analysis**: Analyze version effectiveness post-implementation
+- **Quality Scoring**: Update quality scores based on real-world performance
+- **Evolution Planning**: Plan next version based on reflection insights
+- **Pattern Recognition**: Identify successful version evolution patterns
+
+**ARCHIVE Mode Integration**
+- **Version Archival**: Archive deprecated versions with full context
+- **Evolution Documentation**: Document complete version evolution
+- **Pattern Preservation**: Preserve successful evolution patterns
+- **Knowledge Transfer**: Transfer version insights to institutional knowledge
+
+This Creative Versioning System provides comprehensive version control for architectural decisions, enabling teams to track evolution, maintain quality, and learn from implementation outcomes while preserving full decision context and traceability.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/decision-recording.mdc`
+
+```mdc
+---
+description: "Decision recording methodology for Memory Bank development"
+globs: "**/documentation/**", "**/decision-recording/**", "**/adr/**"
+alwaysApply: false
+---
+
+# DECISION RECORDING METHODOLOGY
+
+> **TL;DR:** This rule defines comprehensive decision recording methodologies for Memory Bank development, ensuring all architectural and technical decisions are properly documented and tracked.
+
+## 🎯 DECISION RECORDING OVERVIEW
+
+Decision recording captures the context, rationale, and consequences of important decisions made during Memory Bank development, creating a valuable knowledge base for future reference.
+
+### Core Principles
+
+**Comprehensive Documentation**
+- Record all significant decisions
+- Capture decision context and constraints
+- Document alternatives considered
+- Track decision outcomes and lessons learned
+
+**Structured Format**
+- Use consistent decision record templates
+- Include metadata for searchability
+- Link related decisions
+- Maintain decision history
+
+## 📋 DECISION CATEGORIES
+
+### 1. Architectural Decisions
+
+**System Architecture**
+- Overall system design choices
+- Component interaction patterns
+- Data flow architectures
+- Integration strategies
+
+**Technology Choices**
+- Programming language selections
+- Framework and library choices
+- Tool and platform decisions
+- Infrastructure selections
+
+### 2. Design Decisions
+
+**User Experience**
+- Interface design choices
+- User workflow decisions
+- Interaction pattern selections
+- Accessibility considerations
+
+**Data Design**
+- Data model decisions
+- Storage format choices
+- Schema design decisions
+- Migration strategies
+
+### 3. Process Decisions
+
+**Development Process**
+- Workflow methodology choices
+- Quality assurance processes
+- Testing strategies
+- Deployment procedures
+
+**Team Process**
+- Communication protocols
+- Review processes
+- Documentation standards
+- Collaboration tools
+
+## 📝 DECISION RECORD TEMPLATE
+
+### Standard ADR Format
+
+```markdown
+# ADR-[NUMBER]: [TITLE]
+
+**Status**: [Proposed | Accepted | Deprecated | Superseded]
+**Date**: [YYYY-MM-DD]
+**Deciders**: [List of decision makers]
+**Technical Story**: [Link to related issue/story]
+
+## Context
+
+[Describe the context and problem statement]
+
+## Decision Drivers
+
+- [Driver 1]
+- [Driver 2]
+- [Driver 3]
+
+## Considered Options
+
+### Option 1: [Name]
+**Pros:**
+- [Pro 1]
+- [Pro 2]
+
+**Cons:**
+- [Con 1]
+- [Con 2]
+
+**Score**: [X/10]
+
+### Option 2: [Name]
+**Pros:**
+- [Pro 1]
+- [Pro 2]
+
+**Cons:**
+- [Con 1]
+- [Con 2]
+
+**Score**: [X/10]
+
+## Decision Outcome
+
+**Chosen Option**: [Selected option]
+
+**Justification**: [Why this option was chosen]
+
+## Consequences
+
+**Positive:**
+- [Positive consequence 1]
+- [Positive consequence 2]
+
+**Negative:**
+- [Negative consequence 1]
+- [Negative consequence 2]
+
+**Neutral:**
+- [Neutral consequence 1]
+
+## Implementation
+
+**Action Items:**
+- [ ] [Action 1]
+- [ ] [Action 2]
+- [ ] [Action 3]
+
+**Timeline**: [Expected implementation timeline]
+
+## Follow-up
+
+**Review Date**: [When to review this decision]
+**Success Metrics**: [How to measure success]
+**Related Decisions**: [Links to related ADRs]
+```
+
+## 🗂️ DECISION ORGANIZATION
+
+### File Structure
+
+```
+memory-bank/decisions/
+├── adr/                     # Architecture Decision Records
+│   ├── 001-memory-bank-architecture.md
+│   ├── 002-rule-system-design.md
+│   ├── 003-mode-transition-system.md
+│   └── 004-task-management-approach.md
+├── design/                  # Design Decision Records
+│   ├── ddr-001-user-interface-approach.md
+│   ├── ddr-002-data-model-design.md
+│   └── ddr-003-workflow-visualization.md
+├── process/                 # Process Decision Records
+│   ├── pdr-001-development-workflow.md
+│   ├── pdr-002-testing-strategy.md
+│   └── pdr-003-documentation-approach.md
+├── technology/              # Technology Decision Records
+│   ├── tdr-001-programming-language.md
+│   ├── tdr-002-framework-selection.md
+│   └── tdr-003-tool-choices.md
+└── index.md                # Decision index and cross-references
+```
+
+### Decision Numbering
+
+**ADR Numbering**: ADR-001, ADR-002, ADR-003...
+**DDR Numbering**: DDR-001, DDR-002, DDR-003...
+**PDR Numbering**: PDR-001, PDR-002, PDR-003...
+**TDR Numbering**: TDR-001, TDR-002, TDR-003...
+
+## 🔍 DECISION TRACKING
+
+### Decision Lifecycle
+
+```mermaid
+graph TD
+    Problem["🤔 Problem Identified"] --> Research["🔍 Research Options"]
+    Research --> Propose["📝 Propose Decision"]
+    Propose --> Review["👥 Review & Discuss"]
+    Review --> Decide["✅ Make Decision"]
+    Decide --> Document["📚 Document Decision"]
+    Document --> Implement["⚙️ Implement Decision"]
+    Implement --> Monitor["📊 Monitor Outcomes"]
+    Monitor --> Review2["🔄 Periodic Review"]
+    Review2 --> Update["📝 Update/Supersede"]
+
+    style Problem fill:#ffa64d,stroke:#cc7a30,color:white
+    style Decide fill:#4dbb5f,stroke:#36873f,color:white
+    style Document fill:#4da6ff,stroke:#0066cc,color:white
+    style Monitor fill:#d94dbb,stroke:#a3378a,color:white
+```
+
+### Decision Status Tracking
+
+**PROPOSED**
+- Decision is under consideration
+- Research and analysis in progress
+- Stakeholder input being gathered
+
+**ACCEPTED**
+- Decision has been made and approved
+- Implementation can proceed
+- Decision is active and current
+
+**IMPLEMENTED**
+- Decision has been fully implemented
+- Outcomes are being monitored
+- Success metrics are being tracked
+
+**DEPRECATED**
+- Decision is no longer recommended
+- Better alternatives have been found
+- Transition plan may be in place
+
+**SUPERSEDED**
+- Decision has been replaced by newer decision
+- Clear reference to replacement decision
+- Historical context preserved
+
+## 📊 DECISION QUALITY METRICS
+
+### Decision Quality Indicators
+
+**Completeness Score**
+- All sections filled: +25 points
+- Clear rationale provided: +20 points
+- Alternatives considered: +20 points
+- Consequences identified: +15 points
+- Implementation plan: +10 points
+- Success metrics defined: +10 points
+
+**Quality Thresholds**
+- **EXCELLENT**: 90-100 points - Comprehensive decision record
+- **GOOD**: 75-89 points - Well-documented decision
+- **ACCEPTABLE**: 60-74 points - Basic decision documentation
+- **POOR**: <60 points - Insufficient decision documentation
+
+### Decision Impact Assessment
+
+**High Impact Decisions**
+- Affect system architecture
+- Require significant resources
+- Impact multiple teams
+- Have long-term consequences
+
+**Medium Impact Decisions**
+- Affect specific components
+- Require moderate resources
+- Impact single team
+- Have medium-term consequences
+
+**Low Impact Decisions**
+- Affect implementation details
+- Require minimal resources
+- Impact individual developers
+- Have short-term consequences
+
+## 🔄 DECISION REVIEW PROCESS
+
+### Regular Review Schedule
+
+**Monthly Reviews**
+- Review recent decisions (last 30 days)
+- Assess implementation progress
+- Identify any issues or blockers
+- Update decision status
+
+**Quarterly Reviews**
+- Review all active decisions
+- Assess decision outcomes
+- Identify lessons learned
+- Plan decision improvements
+
+**Annual Reviews**
+- Comprehensive decision audit
+- Identify deprecated decisions
+- Update decision templates
+- Improve decision processes
+
+### Review Criteria
+
+**Effectiveness**
+- Did the decision solve the problem?
+- Were the expected benefits realized?
+- What unexpected consequences occurred?
+
+**Efficiency**
+- Was the decision process timely?
+- Were resources used effectively?
+- Could the process be improved?
+
+**Quality**
+- Was the decision well-documented?
+- Were alternatives properly considered?
+- Is the rationale still valid?
+
+## 🛠️ DECISION TOOLS AND TEMPLATES
+
+### Decision Matrix Template
+
+```markdown
+| Criteria | Weight | Option A | Score A | Option B | Score B | Option C | Score C |
+|----------|--------|----------|---------|----------|---------|----------|---------|
+| Cost     | 25%    | Low      | 8       | Medium   | 6       | High     | 3       |
+| Speed    | 20%    | Fast     | 9       | Medium   | 7       | Slow     | 4       |
+| Quality  | 30%    | High     | 9       | High     | 8       | Medium   | 6       |
+| Risk     | 25%    | Low      | 8       | Medium   | 6       | High     | 4       |
+| **Total**|**100%**|          |**8.25** |          |**6.75** |          |**4.25** |
+```
+
+### Decision Checklist
+
+**Before Making Decision**
+- [ ] Problem clearly defined
+- [ ] Stakeholders identified
+- [ ] Options researched
+- [ ] Criteria established
+- [ ] Alternatives evaluated
+
+**During Decision Process**
+- [ ] All voices heard
+- [ ] Trade-offs understood
+- [ ] Risks assessed
+- [ ] Timeline considered
+- [ ] Resources evaluated
+
+**After Decision Made**
+- [ ] Decision documented
+- [ ] Stakeholders informed
+- [ ] Implementation planned
+- [ ] Success metrics defined
+- [ ] Review scheduled
+
+This decision recording methodology ensures that all important decisions in Memory Bank development are properly captured, evaluated, and tracked for future reference and learning.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc`
+
+```mdc
+---
+description: "Statistics tracking methodology for Memory Bank development"
+globs: "**/documentation/**", "**/metrics/**", "**/analytics/**"
+alwaysApply: false
+---
+
+# STATISTICS TRACKING METHODOLOGY
+
+> **TL;DR:** Comprehensive statistics tracking system for Memory Bank operations, providing insights into development patterns, performance metrics, and system effectiveness.
+
+## 📊 STATISTICS OVERVIEW
+
+The Statistics Tracking system captures and analyzes key metrics across all Memory Bank operations to provide actionable insights for continuous improvement.
+
+### Core Metrics Categories
+
+**Development Metrics**
+- Task completion rates by complexity level
+- Mode transition frequency and success rates
+- Implementation time by task type
+- Error rates and resolution times
+
+**Quality Metrics**
+- Code quality scores
+- Documentation completeness
+- Test coverage percentages
+- User satisfaction ratings
+
+**Performance Metrics**
+- System response times
+- Resource utilization
+- Throughput measurements
+- Scalability indicators
+
+## 📈 TRACKING IMPLEMENTATION
+
+### Automatic Data Collection
+
+**Task-Level Tracking**
+```yaml
+task_metrics:
+  id: "TASK-ID-2025-06-10"
+  start_time: "2025-06-10T10:00:00Z"
+  end_time: "2025-06-10T12:30:00Z"
+  duration_minutes: 150
+  complexity_level: "Level 3"
+  completion_rate: 100
+  quality_score: 85
+  mode_transitions:
+    - from: "VAN"
+      to: "PLAN"
+      duration: 15
+    - from: "PLAN"
+      to: "CREATIVE"
+      duration: 45
+```
+
+**Mode-Level Tracking**
+```yaml
+mode_metrics:
+  mode: "IMPLEMENT"
+  session_count: 25
+  average_duration: 120
+  success_rate: 96
+  common_issues:
+    - "File permission errors"
+    - "Dependency conflicts"
+  improvement_trends:
+    - metric: "completion_time"
+      trend: "decreasing"
+      improvement: 15
+```
+
+### Manual Data Collection
+
+**User Feedback**
+- Satisfaction surveys after task completion
+- Difficulty ratings for different operations
+- Feature request tracking
+- Pain point identification
+
+**Quality Assessments**
+- Code review scores
+- Documentation quality ratings
+- Test effectiveness measurements
+- Architecture decision outcomes
+
+## 📋 METRICS DASHBOARD
+
+### Real-Time Metrics
+
+**Current Session**
+- Active task progress
+- Current mode duration
+- Resource utilization
+- Error count
+
+**Daily Summary**
+- Tasks completed
+- Average completion time
+- Quality scores
+- Mode distribution
+
+### Historical Analysis
+
+**Weekly Trends**
+- Productivity patterns
+- Quality improvements
+- Common bottlenecks
+- Success rate changes
+
+**Monthly Reports**
+- Performance benchmarks
+- Trend analysis
+- Improvement recommendations
+- Resource optimization
+
+## 🔍 ANALYTICS INSIGHTS
+
+### Pattern Recognition
+
+**Development Patterns**
+- Most effective mode sequences
+- Optimal task complexity distribution
+- Peak productivity hours
+- Common failure points
+
+**Quality Patterns**
+- Factors affecting code quality
+- Documentation completeness drivers
+- Test coverage correlations
+- User satisfaction predictors
+
+### Predictive Analytics
+
+**Performance Prediction**
+- Estimated task completion times
+- Quality score forecasting
+- Resource requirement planning
+- Risk assessment
+
+**Optimization Recommendations**
+- Process improvement suggestions
+- Resource allocation guidance
+- Training need identification
+- Tool enhancement priorities
+
+## 📊 REPORTING SYSTEM
+
+### Automated Reports
+
+**Daily Reports**
+```markdown
+# Daily Statistics Report - 2025-06-10
+
+## Summary
+- Tasks Completed: 5
+- Average Quality Score: 87%
+- Total Development Time: 6.5 hours
+- Mode Distribution: VAN(15%), PLAN(20%), CREATIVE(25%), IMPLEMENT(30%), REFLECT(10%)
+
+## Highlights
+- Highest quality task: SYSTEM-INTEGRATION (95%)
+- Fastest completion: BUG-FIX-CRITICAL (45 minutes)
+- Most complex: ARCHITECTURE-REDESIGN (Level 4)
+
+## Recommendations
+- Consider more time for CREATIVE phase
+- Review IMPLEMENT mode efficiency
+- Focus on documentation quality
+```
+
+**Weekly Summaries**
+- Productivity trends
+- Quality improvements
+- Resource utilization
+- Goal achievement
+
+### Custom Analytics
+
+**Performance Dashboards**
+- Real-time metrics visualization
+- Interactive trend analysis
+- Comparative performance charts
+- Goal tracking displays
+
+**Detailed Analysis**
+- Deep-dive investigations
+- Root cause analysis
+- Correlation studies
+- Improvement impact assessment
+
+## 🎯 CONTINUOUS IMPROVEMENT
+
+### Feedback Loops
+
+**Automatic Adjustments**
+- Process optimization based on metrics
+- Resource allocation improvements
+- Quality threshold adjustments
+- Performance target updates
+
+**Manual Reviews**
+- Monthly performance reviews
+- Quarterly goal assessments
+- Annual strategy planning
+- Continuous improvement initiatives
+
+### Success Metrics
+
+**Effectiveness Indicators**
+- Task completion rate: Target >95%
+- Quality score: Target >85%
+- User satisfaction: Target >4.5/5
+- System uptime: Target >99%
+
+**Efficiency Indicators**
+- Average task completion time
+- Resource utilization rates
+- Error resolution speed
+- Process automation level
+
+This statistics tracking system provides comprehensive insights into Memory Bank operations, enabling data-driven improvements and optimal performance.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/usage-examples.mdc`
+
+```mdc
+---
+description: "Usage examples and practical scenarios for Memory Bank development"
+globs: "**/documentation/**", "**/examples/**", "**/tutorials/**"
+alwaysApply: false
+---
+
+# USAGE EXAMPLES AND PRACTICAL SCENARIOS
+
+> **TL;DR:** Comprehensive collection of practical examples demonstrating Memory Bank usage across different complexity levels and development scenarios.
+
+## 🎯 EXAMPLE CATEGORIES
+
+### Level 1: Quick Bug Fix Examples
+
+**Example 1: CSS Styling Issue**
+```yaml
+scenario: "Button color not matching design"
+complexity: "Level 1"
+estimated_time: "15-30 minutes"
+
+workflow:
+  VAN: "Identify CSS selector issue"
+  PLAN: "Locate style file and create fix plan"
+  IMPLEMENT: "Update CSS properties"
+  REFLECT: "Verify fix across browsers"
+  ARCHIVE: "Document solution for future reference"
+
+files_modified:
+  - "styles/components/button.css"
+  - "memory-bank/tasks.md"
+
+outcome: "Button styling fixed, documentation updated"
+```
+
+**Example 2: JavaScript Function Bug**
+```yaml
+scenario: "Form validation not working"
+complexity: "Level 1"
+estimated_time: "20-45 minutes"
+
+workflow:
+  VAN: "Reproduce validation issue"
+  PLAN: "Debug validation logic"
+  IMPLEMENT: "Fix conditional statement"
+  REFLECT: "Test all form scenarios"
+  ARCHIVE: "Update validation documentation"
+
+files_modified:
+  - "js/validation.js"
+  - "tests/validation.test.js"
+  - "memory-bank/tasks.md"
+
+outcome: "Form validation working correctly"
+```
+
+### Level 2: Simple Enhancement Examples
+
+**Example 3: Add New Feature Toggle**
+```yaml
+scenario: "Add dark mode toggle to application"
+complexity: "Level 2"
+estimated_time: "2-4 hours"
+
+workflow:
+  VAN: "Analyze current theme system"
+  PLAN: "Design toggle implementation"
+  CREATIVE: "Choose toggle UI design"
+  IMPLEMENT: "Add toggle component and logic"
+  REFLECT: "Test theme switching"
+  ARCHIVE: "Document theme system"
+
+files_modified:
+  - "components/ThemeToggle.tsx"
+  - "hooks/useTheme.ts"
+  - "styles/themes.css"
+  - "memory-bank/tasks.md"
+
+outcome: "Dark mode toggle implemented and tested"
+```
+
+**Example 4: API Endpoint Enhancement**
+```yaml
+scenario: "Add pagination to user list API"
+complexity: "Level 2"
+estimated_time: "3-5 hours"
+
+workflow:
+  VAN: "Review current API structure"
+  PLAN: "Design pagination parameters"
+  CREATIVE: "Choose pagination strategy"
+  IMPLEMENT: "Add pagination logic"
+  REFLECT: "Test API with various page sizes"
+  ARCHIVE: "Update API documentation"
+
+files_modified:
+  - "api/users.ts"
+  - "types/pagination.ts"
+  - "tests/api/users.test.ts"
+  - "docs/api.md"
+
+outcome: "Pagination implemented with proper testing"
+```
+
+### Level 3: Intermediate Feature Examples
+
+**Example 5: User Authentication System**
+```yaml
+scenario: "Implement JWT-based authentication"
+complexity: "Level 3"
+estimated_time: "1-2 days"
+
+workflow:
+  VAN: "Analyze authentication requirements"
+  PLAN: "Design auth flow and security"
+  CREATIVE: "Choose JWT implementation strategy"
+  IMPLEMENT:
+    phase_1: "JWT token generation and validation"
+    phase_2: "Login/logout endpoints"
+    phase_3: "Protected route middleware"
+    phase_4: "Frontend auth integration"
+  REFLECT: "Security testing and review"
+  ARCHIVE: "Complete auth documentation"
+
+files_created:
+  - "middleware/auth.ts"
+  - "services/jwt.ts"
+  - "routes/auth.ts"
+  - "hooks/useAuth.ts"
+  - "components/LoginForm.tsx"
+
+outcome: "Secure authentication system deployed"
+```
+
+**Example 6: Real-time Chat Feature**
+```yaml
+scenario: "Add real-time messaging to application"
+complexity: "Level 3"
+estimated_time: "2-3 days"
+
+workflow:
+  VAN: "Research WebSocket requirements"
+  PLAN: "Design message flow architecture"
+  CREATIVE: "Choose real-time technology stack"
+  IMPLEMENT:
+    phase_1: "WebSocket server setup"
+    phase_2: "Message storage system"
+    phase_3: "Client-side chat interface"
+    phase_4: "Message history and persistence"
+  REFLECT: "Load testing and optimization"
+  ARCHIVE: "Real-time system documentation"
+
+files_created:
+  - "server/websocket.ts"
+  - "models/Message.ts"
+  - "components/ChatWindow.tsx"
+  - "services/messageService.ts"
+
+outcome: "Real-time chat system operational"
+```
+
+### Level 4: Complex System Examples
+
+**Example 7: Microservices Migration**
+```yaml
+scenario: "Migrate monolith to microservices"
+complexity: "Level 4"
+estimated_time: "2-4 weeks"
+
+workflow:
+  VAN: "Analyze current monolith architecture"
+  PLAN: "Design microservices decomposition"
+  CREATIVE: "Choose service boundaries and communication"
+  IMPLEMENT:
+    phase_1: "Extract user service"
+    phase_2: "Extract payment service"
+    phase_3: "Extract notification service"
+    phase_4: "Implement service mesh"
+    phase_5: "Data migration and synchronization"
+  REFLECT: "Performance and reliability testing"
+  ARCHIVE: "Microservices architecture documentation"
+
+services_created:
+  - "user-service/"
+  - "payment-service/"
+  - "notification-service/"
+  - "api-gateway/"
+
+outcome: "Scalable microservices architecture"
+```
+
+## 🔄 WORKFLOW PATTERNS
+
+### Pattern 1: Bug Fix Workflow
+```mermaid
+graph TD
+    Bug["🐛 Bug Report"] --> VAN["🔍 VAN: Reproduce & Analyze"]
+    VAN --> Plan["📋 PLAN: Create Fix Strategy"]
+    Plan --> Implement["⚒️ IMPLEMENT: Apply Fix"]
+    Implement --> Test["✅ Test Fix"]
+    Test --> Reflect["🤔 REFLECT: Document Solution"]
+    Reflect --> Archive["📦 ARCHIVE: Knowledge Base"]
+```
+
+### Pattern 2: Feature Development Workflow
+```mermaid
+graph TD
+    Request["📝 Feature Request"] --> VAN["🔍 VAN: Requirements Analysis"]
+    VAN --> Plan["📋 PLAN: Implementation Strategy"]
+    Plan --> Creative["🎨 CREATIVE: Design Decisions"]
+    Creative --> Implement["⚒️ IMPLEMENT: Build Feature"]
+    Implement --> Test["✅ Integration Testing"]
+    Test --> Reflect["🤔 REFLECT: Lessons Learned"]
+    Reflect --> Archive["📦 ARCHIVE: Feature Documentation"]
+```
+
+### Pattern 3: System Enhancement Workflow
+```mermaid
+graph TD
+    Analysis["📊 System Analysis"] --> VAN["🔍 VAN: Current State Assessment"]
+    VAN --> Plan["📋 PLAN: Enhancement Strategy"]
+    Plan --> Creative["🎨 CREATIVE: Architecture Decisions"]
+    Creative --> Phase1["⚒️ IMPLEMENT: Phase 1"]
+    Phase1 --> Phase2["⚒️ IMPLEMENT: Phase 2"]
+    Phase2 --> Phase3["⚒️ IMPLEMENT: Phase 3"]
+    Phase3 --> Integration["🔄 Integration Testing"]
+    Integration --> Reflect["🤔 REFLECT: System Impact"]
+    Reflect --> Archive["📦 ARCHIVE: System Documentation"]
+```
+
+## 📚 PRACTICAL SCENARIOS
+
+### Scenario A: Emergency Production Fix
+```yaml
+situation: "Critical bug affecting user payments"
+urgency: "CRITICAL"
+time_constraint: "2 hours maximum"
+
+approach:
+  - Skip CREATIVE phase for speed
+  - Focus on minimal viable fix
+  - Extensive testing in REFLECT
+  - Immediate documentation in ARCHIVE
+
+success_criteria:
+  - Payment system restored
+  - No data loss
+  - Root cause identified
+  - Prevention measures documented
+```
+
+### Scenario B: New Team Member Onboarding
+```yaml
+situation: "Junior developer joining team"
+goal: "Productive contribution within 1 week"
+
+training_tasks:
+  level_1: "Fix CSS styling issues"
+  level_2: "Add simple form validation"
+  level_3: "Implement user profile feature"
+
+mentoring_approach:
+  - Pair programming in IMPLEMENT
+  - Code review in REFLECT
+  - Knowledge sharing in ARCHIVE
+  - Gradual complexity increase
+```
+
+### Scenario C: Technical Debt Reduction
+```yaml
+situation: "Legacy code refactoring needed"
+scope: "Authentication module"
+timeline: "2 weeks"
+
+strategy:
+  week_1:
+    - VAN: Analyze current implementation
+    - PLAN: Design refactoring approach
+    - CREATIVE: Choose modern patterns
+  week_2:
+    - IMPLEMENT: Gradual refactoring
+    - REFLECT: Performance comparison
+    - ARCHIVE: Migration documentation
+
+risk_mitigation:
+  - Maintain backward compatibility
+  - Comprehensive testing
+  - Rollback procedures
+  - User communication plan
+```
+
+## 🎯 SUCCESS PATTERNS
+
+### High-Success Indicators
+- Clear problem definition in VAN
+- Detailed planning in PLAN
+- User-focused decisions in CREATIVE
+- Systematic implementation
+- Thorough reflection and documentation
+
+### Common Pitfalls
+- Rushing through planning phase
+- Skipping creative decision documentation
+- Insufficient testing in IMPLEMENT
+- Poor reflection quality
+- Incomplete archiving
+
+### Best Practices
+- Always start with clear requirements
+- Document decisions and rationale
+- Test thoroughly at each phase
+- Capture lessons learned
+- Maintain knowledge base
+
+This comprehensive set of examples provides practical guidance for Memory Bank usage across all complexity levels and development scenarios.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/git-workflow/backup-verification.mdc`
+
+```mdc
+---
+description: "Backup verification and recovery procedures for git workflow"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BACKUP VERIFICATION AND RECOVERY
+
+> **TL;DR:** Comprehensive backup verification and recovery procedures to ensure safe development and quick recovery from issues.
+
+## 🔒 BACKUP VERIFICATION WORKFLOW
+
+```mermaid
+graph TD
+    Start["Start Task"] --> CheckGit["Check Git Status"]
+    CheckGit --> Clean{"Working Tree<br>Clean?"}
+    Clean -->|No| Stash["Stash Changes"]
+    Clean -->|Yes| CreateBackup["Create Backup Branch"]
+    Stash --> CreateBackup
+
+    CreateBackup --> VerifyBackup["Verify Backup"]
+    VerifyBackup --> TagBackup["Tag Backup Point"]
+    TagBackup --> ProceedWork["Proceed with Work"]
+
+    ProceedWork --> CheckPoint["Regular Checkpoints"]
+    CheckPoint --> VerifyIntegrity["Verify Integrity"]
+```
+
+## 📋 BACKUP VERIFICATION RULES
+
+### Rule #38: Pre-Task Backup Verification
+- **When**: Before starting any Level 3-4 task or risky changes
+- **What**: Verify git status, create backup branch, tag stable point
+- **Purpose**: Ensure safe rollback point exists
+
+### Rule #39: Regular Backup Integrity Checks
+- **When**: Daily for active development, weekly for stable branches
+- **What**: Verify backup branches exist and are accessible
+- **Purpose**: Ensure backups are valid when needed
+
+### Rule #40: Automated Recovery Procedures
+- **When**: When issues are detected or rollback is needed
+- **What**: Standardized recovery procedures with verification
+- **Purpose**: Quick and safe recovery from problems
+
+## 🎯 PRE-TASK BACKUP PROCEDURE
+
+### Step 1: Git Status Verification
+```bash
+# Check current git status
+git status
+
+# Expected: Clean working tree or known changes
+# If unexpected changes exist, investigate before proceeding
+```
+
+### Step 2: Working Tree Cleanup
+```bash
+# If working tree is dirty, stash changes
+git stash push -m "Pre-backup stash: $(date)"
+
+# Verify working tree is now clean
+git status
+# Expected: "nothing to commit, working tree clean"
+```
+
+### Step 3: Backup Branch Creation
+```bash
+# Ensure we're on main branch
+git checkout main
+git pull origin main
+
+# Create backup branch with timestamp
+BACKUP_NAME="backup/pre-$(date +%Y%m%d-%H%M)-$(git rev-parse --short HEAD)"
+git checkout -b "$BACKUP_NAME"
+git push origin "$BACKUP_NAME"
+
+# Return to main
+git checkout main
+```
+
+### Step 4: Backup Verification
+```bash
+# Verify backup branch exists locally
+git branch | grep "backup/pre-$(date +%Y%m%d)"
+
+# Verify backup branch exists remotely
+git ls-remote origin | grep "backup/pre-$(date +%Y%m%d)"
+
+# Verify backup branch content matches main
+git diff main "$BACKUP_NAME"
+# Expected: No differences
+```
+
+### Step 5: Tag Creation
+```bash
+# Create annotated tag for backup point
+TAG_NAME="backup-$(date +%Y%m%d-%H%M)"
+git tag -a "$TAG_NAME" -m "Backup before task: [TASK-ID]"
+git push origin "$TAG_NAME"
+```
+
+## 🔍 BACKUP INTEGRITY VERIFICATION
+
+### Daily Verification Script:
+```bash
+#!/bin/bash
+# daily-backup-check.sh
+
+echo "=== Daily Backup Integrity Check ==="
+echo "Date: $(date)"
+
+# Check for recent backup branches
+echo "Recent backup branches:"
+git branch -r | grep "backup/" | tail -5
+
+# Verify backup branches are accessible
+for branch in $(git branch -r | grep "backup/" | tail -3); do
+    echo "Checking $branch..."
+    git show "$branch" --stat > /dev/null
+    if [ $? -eq 0 ]; then
+        echo "✅ $branch is accessible"
+    else
+        echo "❌ $branch is NOT accessible"
+    fi
+done
+
+# Check backup tags
+echo "Recent backup tags:"
+git tag | grep "backup-" | tail -5
+
+# Verify disk space for git objects
+echo "Git repository size:"
+du -sh .git/
+```
+
+### Weekly Deep Verification:
+```bash
+#!/bin/bash
+# weekly-backup-verification.sh
+
+echo "=== Weekly Deep Backup Verification ==="
+
+# Verify all backup branches
+for branch in $(git branch -r | grep "backup/"); do
+    echo "Deep checking $branch..."
+
+    # Check branch integrity
+    git fsck --connectivity-only "$branch"
+
+    # Verify branch can be checked out
+    git checkout "$branch" --quiet
+    if [ $? -eq 0 ]; then
+        echo "✅ $branch checkout successful"
+        git checkout main --quiet
+    else
+        echo "❌ $branch checkout failed"
+    fi
+done
+
+# Clean up old backup branches (older than 30 days)
+echo "Cleaning up old backup branches..."
+git for-each-ref --format='%(refname:short) %(committerdate)' refs/remotes/origin/backup/ | \
+while read branch date; do
+    if [[ $(date -d "$date" +%s) -lt $(date -d "30 days ago" +%s) ]]; then
+        echo "Archiving old backup: $branch"
+        # Archive instead of delete for safety
+        git tag "archived-$(basename $branch)" "$branch"
+        git push origin "archived-$(basename $branch)"
+    fi
+done
+```
+
+## 🚨 RECOVERY PROCEDURES
+
+### Emergency Rollback to Backup:
+```bash
+#!/bin/bash
+# emergency-rollback.sh
+
+BACKUP_BRANCH="$1"
+if [ -z "$BACKUP_BRANCH" ]; then
+    echo "Usage: emergency-rollback.sh <backup-branch-name>"
+    echo "Available backups:"
+    git branch -r | grep "backup/"
+    exit 1
+fi
+
+echo "=== EMERGENCY ROLLBACK PROCEDURE ==="
+echo "Rolling back to: $BACKUP_BRANCH"
+echo "Current HEAD: $(git rev-parse HEAD)"
+
+# Confirm rollback
+read -p "Are you sure you want to rollback? (yes/no): " confirm
+if [ "$confirm" != "yes" ]; then
+    echo "Rollback cancelled"
+    exit 1
+fi
+
+# Create emergency backup of current state
+EMERGENCY_BACKUP="emergency-backup-$(date +%Y%m%d-%H%M%S)"
+git checkout -b "$EMERGENCY_BACKUP"
+git push origin "$EMERGENCY_BACKUP"
+echo "Current state backed up to: $EMERGENCY_BACKUP"
+
+# Perform rollback
+git checkout main
+git reset --hard "origin/$BACKUP_BRANCH"
+git push --force-with-lease origin main
+
+echo "✅ Rollback completed"
+echo "Emergency backup available at: $EMERGENCY_BACKUP"
+```
+
+### Selective File Recovery:
+```bash
+#!/bin/bash
+# recover-file.sh
+
+BACKUP_BRANCH="$1"
+FILE_PATH="$2"
+
+if [ -z "$BACKUP_BRANCH" ] || [ -z "$FILE_PATH" ]; then
+    echo "Usage: recover-file.sh <backup-branch> <file-path>"
+    exit 1
+fi
+
+echo "Recovering $FILE_PATH from $BACKUP_BRANCH"
+
+# Verify file exists in backup
+git show "$BACKUP_BRANCH:$FILE_PATH" > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "❌ File not found in backup branch"
+    exit 1
+fi
+
+# Create backup of current file
+if [ -f "$FILE_PATH" ]; then
+    cp "$FILE_PATH" "$FILE_PATH.backup-$(date +%Y%m%d-%H%M%S)"
+    echo "Current file backed up"
+fi
+
+# Recover file from backup
+git show "$BACKUP_BRANCH:$FILE_PATH" > "$FILE_PATH"
+echo "✅ File recovered from backup"
+```
+
+## 📊 BACKUP MONITORING AND ALERTS
+
+### Backup Health Metrics:
+```bash
+#!/bin/bash
+# backup-health-metrics.sh
+
+echo "=== Backup Health Report ==="
+
+# Count backup branches
+BACKUP_COUNT=$(git branch -r | grep -c "backup/")
+echo "Total backup branches: $BACKUP_COUNT"
+
+# Check backup frequency
+RECENT_BACKUPS=$(git branch -r | grep "backup/" | xargs -I {} git log --format="%ci" -1 {} | sort -r | head -5)
+echo "Recent backup dates:"
+echo "$RECENT_BACKUPS"
+
+# Check backup size
+BACKUP_SIZE=$(git for-each-ref --format='%(objectsize)' refs/remotes/origin/backup/ | awk '{sum+=$1} END {print sum/1024/1024 " MB"}')
+echo "Total backup size: $BACKUP_SIZE"
+
+# Alert if no recent backups
+LAST_BACKUP=$(git for-each-ref --format='%(committerdate:unix)' refs/remotes/origin/backup/ | sort -n | tail -1)
+CURRENT_TIME=$(date +%s)
+DAYS_SINCE_BACKUP=$(( (CURRENT_TIME - LAST_BACKUP) / 86400 ))
+
+if [ $DAYS_SINCE_BACKUP -gt 7 ]; then
+    echo "⚠️  WARNING: No backup created in $DAYS_SINCE_BACKUP days"
+else
+    echo "✅ Recent backup found ($DAYS_SINCE_BACKUP days ago)"
+fi
+```
+
+## 🔄 AUTOMATED BACKUP PROCEDURES
+
+### Git Hooks for Automatic Backup:
+```bash
+#!/bin/sh
+# pre-push hook for automatic backup
+
+# Check if pushing to main branch
+if [ "$2" = "refs/heads/main" ]; then
+    echo "Creating automatic backup before push to main..."
+
+    # Create backup branch
+    BACKUP_NAME="auto-backup-$(date +%Y%m%d-%H%M)"
+    git branch "$BACKUP_NAME"
+    git push origin "$BACKUP_NAME"
+
+    echo "Automatic backup created: $BACKUP_NAME"
+fi
+```
+
+### CI/CD Backup Integration:
+```yaml
+# .github/workflows/backup.yml
+name: Automated Backup
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Create Daily Backup
+        run: |
+          BACKUP_NAME="daily-backup-$(date +%Y%m%d)"
+          git checkout -b "$BACKUP_NAME"
+          git push origin "$BACKUP_NAME"
+
+      - name: Verify Backup Integrity
+        run: |
+          ./scripts/backup-health-metrics.sh
+```
+
+This comprehensive backup system ensures development safety and quick recovery capabilities.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/git-workflow/branch-management.mdc`
+
+```mdc
+---
+description: "Branch management strategies for Memory Bank workflow"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BRANCH MANAGEMENT FOR MEMORY BANK
+
+> **TL;DR:** Structured branch management aligned with Memory Bank phases for safe development and easy collaboration.
+
+## 🌳 BRANCH STRATEGY OVERVIEW
+
+```mermaid
+graph TD
+    Main["main"] --> Feature["feature/task-id-name"]
+    Main --> Hotfix["hotfix/issue-description"]
+
+    Feature --> Phase1["phase/task-id-plan"]
+    Feature --> Phase2["phase/task-id-creative"]
+    Feature --> Phase3["phase/task-id-implement"]
+
+    Phase1 --> Feature
+    Phase2 --> Feature
+    Phase3 --> Feature
+
+    Feature --> Main
+    Hotfix --> Main
+
+    Main --> Backup["backup/pre-task-id"]
+```
+
+## 📋 BRANCH MANAGEMENT RULES
+
+### Rule #32: Backup Branches Before Major Work
+- **When**: Before starting Level 3-4 tasks or risky changes
+- **Format**: `backup/pre-[task-id]-[date]`
+- **Purpose**: Safe rollback point for complex changes
+
+### Rule #33: Feature Branches for All Tasks
+- **When**: Every task regardless of complexity
+- **Format**: `feature/[task-id]-[brief-description]`
+- **Purpose**: Isolated development and clean history
+
+### Rule #34: Phase Branches for Complex Tasks
+- **When**: Level 3-4 tasks with multiple phases
+- **Format**: `phase/[task-id]-[phase-name]`
+- **Purpose**: Checkpoint branches for long-running work
+
+## 🎯 BRANCH NAMING CONVENTIONS
+
+### Feature Branches:
+```
+feature/RULES-INT-2024-12-09-memory-bank-integration
+feature/BUG-FIX-2024-12-09-login-validation
+feature/ENHANCE-2024-12-09-user-dashboard
+```
+
+### Phase Branches:
+```
+phase/RULES-INT-2024-12-09-plan
+phase/RULES-INT-2024-12-09-creative
+phase/RULES-INT-2024-12-09-implement
+```
+
+### Backup Branches:
+```
+backup/pre-RULES-INT-2024-12-09-20241209
+backup/pre-major-refactor-20241209
+backup/stable-before-experiment-20241209
+```
+
+### Hotfix Branches:
+```
+hotfix/critical-security-patch
+hotfix/production-database-fix
+hotfix/memory-leak-resolution
+```
+
+## 🔄 BRANCH LIFECYCLE WORKFLOW
+
+### 1. Pre-Task Backup Creation:
+```bash
+# Create backup branch from current main
+git checkout main
+git pull origin main
+git checkout -b backup/pre-[task-id]-$(date +%Y%m%d)
+git push origin backup/pre-[task-id]-$(date +%Y%m%d)
+```
+
+### 2. Feature Branch Creation:
+```bash
+# Create feature branch from main
+git checkout main
+git checkout -b feature/[task-id]-[description]
+git push -u origin feature/[task-id]-[description]
+```
+
+### 3. Phase Branch Creation (for complex tasks):
+```bash
+# Create phase branch from feature branch
+git checkout feature/[task-id]-[description]
+git checkout -b phase/[task-id]-[phase-name]
+git push -u origin phase/[task-id]-[phase-name]
+```
+
+### 4. Phase Merge Back:
+```bash
+# Merge phase back to feature
+git checkout feature/[task-id]-[description]
+git merge phase/[task-id]-[phase-name]
+git push origin feature/[task-id]-[description]
+git branch -d phase/[task-id]-[phase-name]
+```
+
+### 5. Feature Completion:
+```bash
+# Merge feature to main
+git checkout main
+git pull origin main
+git merge feature/[task-id]-[description]
+git push origin main
+git branch -d feature/[task-id]-[description]
+```
+
+## 📊 MEMORY BANK PHASE BRANCHING
+
+### VAN Mode:
+- Work directly on feature branch
+- Create backup branch if task is Level 3-4
+
+### PLAN Mode:
+- Continue on feature branch for Level 1-2
+- Create phase branch for Level 3-4
+
+### CREATIVE Mode:
+- Use phase branch if created
+- Merge creative decisions back to feature branch
+
+### IMPLEMENT Mode:
+- Use phase branch for complex implementations
+- Create sub-branches for major components if needed
+
+### QA Mode:
+- Work on feature branch
+- Create temporary branches for experimental fixes
+
+### REFLECT/ARCHIVE Mode:
+- Work on feature branch
+- Prepare for final merge to main
+
+## 🚨 EMERGENCY BRANCH PROCEDURES
+
+### Hotfix Workflow:
+```bash
+# Create hotfix from main
+git checkout main
+git pull origin main
+git checkout -b hotfix/[issue-description]
+
+# Make fix and test
+# ... fix code ...
+
+# Merge back to main
+git checkout main
+git merge hotfix/[issue-description]
+git push origin main
+
+# Also merge to current feature branches if needed
+git checkout feature/[current-task]
+git merge main
+```
+
+### Rollback Procedure:
+```bash
+# If feature branch has issues, rollback to backup
+git checkout main
+git reset --hard backup/pre-[task-id]-[date]
+git push --force-with-lease origin main
+
+# Or rollback specific commits
+git revert [commit-hash]
+```
+
+## 🔍 BRANCH HEALTH MONITORING
+
+### Daily Branch Checks:
+- [ ] Feature branch is up to date with main
+- [ ] No merge conflicts exist
+- [ ] Branch builds successfully
+- [ ] All tests pass on branch
+
+### Weekly Branch Cleanup:
+- [ ] Delete merged feature branches
+- [ ] Archive old backup branches
+- [ ] Update branch protection rules
+- [ ] Review stale branches
+
+## 📋 BRANCH PROTECTION RULES
+
+### Main Branch Protection:
+- Require pull request reviews
+- Require status checks to pass
+- Require branches to be up to date
+- Restrict pushes to main branch
+
+### Feature Branch Guidelines:
+- Regular commits with clear messages
+- Keep branches focused and small
+- Rebase before merging to maintain clean history
+- Delete after successful merge
+
+## 🎯 COLLABORATION BRANCH STRATEGY
+
+### Team Feature Development:
+```bash
+# Shared feature branch
+feature/[task-id]-[description]
+
+# Individual developer branches
+feature/[task-id]-[description]-[developer-name]
+```
+
+### Code Review Process:
+1. Push feature branch to origin
+2. Create pull request to main
+3. Request reviews from team
+4. Address feedback and update
+5. Merge after approval
+
+## 📊 BRANCH METRICS TRACKING
+
+Track these metrics:
+- **Branch Lifetime**: How long branches exist
+- **Merge Frequency**: How often branches are merged
+- **Conflict Rate**: Percentage of merges with conflicts
+- **Rollback Rate**: How often rollbacks are needed
+
+## 🔄 AUTOMATED BRANCH MANAGEMENT
+
+### Git Hooks:
+- Pre-commit: Run tests and linting
+- Pre-push: Ensure branch is up to date
+- Post-merge: Clean up temporary files
+
+### CI/CD Integration:
+- Automatic testing on all branches
+- Deployment from main branch only
+- Notification on merge conflicts
+
+This branch strategy ensures safe development while maintaining the flexibility needed for Memory Bank workflow.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/git-workflow/change-documentation.mdc`
+
+```mdc
+---
+description: "Change documentation and tracking in git workflow"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# CHANGE DOCUMENTATION IN GIT WORKFLOW
+
+> **TL;DR:** Comprehensive change documentation integrated with git workflow for clear development history and effective collaboration.
+
+## 📝 CHANGE DOCUMENTATION WORKFLOW
+
+```mermaid
+graph TD
+    Change["Code Change"] --> Document["Document Change"]
+    Document --> Commit["Git Commit"]
+    Commit --> PR["Pull Request"]
+    PR --> Changelog["Update Changelog"]
+    Changelog --> Release["Release Notes"]
+
+    Document --> ImpactAnalysis["Impact Analysis"]
+    ImpactAnalysis --> Dependencies["Update Dependencies"]
+```
+
+## 📋 CHANGE DOCUMENTATION RULES
+
+### Rule #35: Document All Significant Changes
+- **When**: Any change affecting public APIs, behavior, or dependencies
+- **Where**: Commit messages, pull requests, changelog
+- **Format**: Structured documentation with impact analysis
+
+### Rule #36: Link Changes to Issues/Tasks
+- **When**: Every commit and pull request
+- **Format**: `Closes #123` or `Relates to TASK-ID`
+- **Purpose**: Traceability and context
+
+### Rule #37: Maintain Living Changelog
+- **When**: Every release and significant change
+- **Format**: Keep a CHANGELOG.md following semantic versioning
+- **Purpose**: Clear communication to users and developers
+
+## 🎯 CHANGE DOCUMENTATION TEMPLATES
+
+### Commit Message Documentation:
+```
+[type]: [brief description]
+
+[Detailed description of what changed and why]
+
+Impact:
+- [System/component affected]
+- [Behavior change description]
+- [Breaking changes if any]
+
+Related:
+- Closes #[issue-number]
+- Relates to [TASK-ID]
+
+Testing:
+- [How this was tested]
+- [Test cases added/modified]
+```
+
+### Pull Request Documentation:
+```markdown
+# [Feature/Fix]: [Brief Description]
+
+## Summary
+[Detailed description of changes]
+
+## Changes Made
+- [Change 1]: [Description and rationale]
+- [Change 2]: [Description and rationale]
+- [Change 3]: [Description and rationale]
+
+## Impact Analysis
+### Breaking Changes
+- [ ] No breaking changes
+- [ ] Breaking changes (describe below)
+
+### Affected Components
+- [Component 1]: [How it's affected]
+- [Component 2]: [How it's affected]
+
+### Performance Impact
+- [ ] No performance impact
+- [ ] Performance improvement: [details]
+- [ ] Performance degradation: [details and mitigation]
+
+## Testing
+### Test Coverage
+- [ ] Unit tests added/updated
+- [ ] Integration tests added/updated
+- [ ] Manual testing completed
+
+### Test Results
+- [Test suite]: [X/Y tests passing]
+- [Performance tests]: [Results]
+
+## Documentation
+- [ ] Code comments updated
+- [ ] API documentation updated
+- [ ] User documentation updated
+- [ ] Changelog updated
+
+## Deployment Notes
+[Any special deployment considerations]
+
+## Rollback Plan
+[How to rollback if issues arise]
+```
+
+## 📊 CHANGELOG MAINTENANCE
+
+### Changelog Structure:
+```markdown
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- [New feature description]
+
+### Changed
+- [Changed feature description]
+
+### Deprecated
+- [Deprecated feature description]
+
+### Removed
+- [Removed feature description]
+
+### Fixed
+- [Bug fix description]
+
+### Security
+- [Security fix description]
+
+## [1.2.0] - 2024-12-09
+
+### Added
+- Memory Bank rules integration system
+- Git workflow automation
+- Large test analysis capabilities
+
+### Changed
+- Improved QA mode with threshold-based status
+- Enhanced creative phase documentation
+
+### Fixed
+- Fixed issue with rule loading performance
+```
+
+### Changelog Update Process:
+1. **During Development**: Add entries to "Unreleased" section
+2. **Before Release**: Move entries to versioned section
+3. **After Release**: Create new "Unreleased" section
+
+## 🔄 MEMORY BANK CHANGE DOCUMENTATION
+
+### VAN Mode Changes:
+```markdown
+## VAN: Task Analysis - [TASK-ID]
+
+### Changes Made
+- Task complexity assessed as Level [X]
+- Memory Bank structure initialized
+- Core rules loaded: [list of rules]
+
+### Impact
+- New task tracking in memory-bank/tasks.md
+- Context established in memory-bank/activeContext.md
+
+### Next Steps
+- Proceed to PLAN mode for detailed planning
+```
+
+### PLAN Mode Changes:
+```markdown
+## PLAN: Planning Complete - [TASK-ID]
+
+### Changes Made
+- Requirements documented in tasks.md
+- Component analysis completed
+- Implementation strategy defined
+- Creative phases identified: [list]
+
+### Impact
+- Clear development roadmap established
+- Resource requirements identified
+- Risk assessment completed
+
+### Next Steps
+- Proceed to CREATIVE mode for design decisions
+```
+
+### CREATIVE Mode Changes:
+```markdown
+## CREATIVE: Design Decisions - [TASK-ID]
+
+### Changes Made
+- [Decision 1]: [Chosen approach and rationale]
+- [Decision 2]: [Chosen approach and rationale]
+- Creative documentation: memory-bank/creative/[files]
+
+### Impact
+- Technical architecture defined
+- Design constraints established
+- Implementation approach clarified
+
+### Next Steps
+- Proceed to IMPLEMENT mode with clear design
+```
+
+## 🚨 BREAKING CHANGE DOCUMENTATION
+
+### Breaking Change Template:
+```markdown
+## BREAKING CHANGE: [Description]
+
+### What Changed
+[Detailed description of the breaking change]
+
+### Why This Change Was Made
+[Rationale for the breaking change]
+
+### Migration Guide
+1. [Step 1 to migrate]
+2. [Step 2 to migrate]
+3. [Step 3 to migrate]
+
+### Code Examples
+#### Before:
+```javascript
+// Old way of doing things
+```
+
+#### After:
+```javascript
+// New way of doing things
+```
+
+### Timeline
+- **Deprecation Notice**: [Date]
+- **Breaking Change**: [Date]
+- **Support Ends**: [Date]
+```
+
+## 📋 CHANGE REVIEW PROCESS
+
+### Pre-Commit Review:
+- [ ] Change is properly documented
+- [ ] Impact analysis completed
+- [ ] Tests cover the changes
+- [ ] Documentation updated
+
+### Pull Request Review:
+- [ ] Change description is clear
+- [ ] Breaking changes identified
+- [ ] Migration path provided (if needed)
+- [ ] Changelog updated
+
+### Release Review:
+- [ ] All changes documented in changelog
+- [ ] Release notes prepared
+- [ ] Breaking changes highlighted
+- [ ] Migration guides available
+
+## 🔍 CHANGE TRACKING METRICS
+
+Track these metrics:
+- **Documentation Coverage**: Percentage of changes with proper documentation
+- **Change Frequency**: Number of changes per time period
+- **Breaking Change Rate**: Percentage of changes that are breaking
+- **Rollback Rate**: Percentage of changes that need rollback
+
+## 📊 AUTOMATED CHANGE DOCUMENTATION
+
+### Git Hooks for Documentation:
+```bash
+#!/bin/sh
+# Pre-commit hook to ensure documentation
+
+# Check if significant files changed
+if git diff --cached --name-only | grep -E "(src/|lib/|api/)" > /dev/null; then
+    # Check if changelog was updated
+    if ! git diff --cached --name-only | grep "CHANGELOG.md" > /dev/null; then
+        echo "Error: Please update CHANGELOG.md for significant changes"
+        exit 1
+    fi
+fi
+```
+
+### CI/CD Integration:
+- Automatic changelog validation
+- Documentation coverage reports
+- Breaking change detection
+- Release note generation
+
+This comprehensive change documentation ensures clear communication and maintainable development history.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/git-workflow/commit-strategies.mdc`
+
+```mdc
+---
+description: "Git commit strategies for Memory Bank phases"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# GIT COMMIT STRATEGIES FOR MEMORY BANK
+
+> **TL;DR:** Structured commit strategies aligned with Memory Bank phases for clear development history and easy rollback.
+
+## 🔄 PHASE-ORIENTED COMMIT WORKFLOW
+
+```mermaid
+graph TD
+    VAN["VAN Mode"] --> PlanCommit["Planning Commit"]
+    PlanCommit --> CreativeCommit["Creative Commit"]
+    CreativeCommit --> ImplCommit["Implementation Commits"]
+    ImplCommit --> QACommit["QA Commit"]
+    QACommit --> ReflectCommit["Reflection Commit"]
+    ReflectCommit --> ArchiveCommit["Archive Commit"]
+
+    ImplCommit --> FeatureCommit["Feature Commits"]
+    FeatureCommit --> ImplCommit
+```
+
+## 📋 COMMIT STRATEGY RULES
+
+### Rule #29: Phase-Based Commits
+- **When**: At completion of each Memory Bank phase
+- **Format**: `[PHASE]: [Description] - [Status]`
+- **Purpose**: Clear development timeline and rollback points
+
+### Rule #30: Atomic Feature Commits
+- **When**: Each complete feature or fix
+- **Format**: `feat: [description]` or `fix: [description]`
+- **Purpose**: Granular change tracking
+
+### Rule #31: WIP Commits for Context Switching
+- **When**: Need to switch context mid-work
+- **Format**: `WIP: [current work] - [next step]`
+- **Purpose**: Save progress without breaking build
+
+## 🎯 COMMIT MESSAGE TEMPLATES
+
+### Phase Completion Commits:
+```
+[PHASE]: [Phase Name] completed - [Task ID]
+
+✅ [Key accomplishment 1]
+✅ [Key accomplishment 2]
+✅ [Key accomplishment 3]
+
+Next: [Next phase or action]
+Files: [Key files changed]
+```
+
+### Feature Implementation Commits:
+```
+feat: [feature description]
+
+- [Specific change 1]
+- [Specific change 2]
+- [Specific change 3]
+
+Tests: [Test status]
+Docs: [Documentation status]
+```
+
+### Bug Fix Commits:
+```
+fix: [bug description]
+
+Problem: [What was wrong]
+Solution: [How it was fixed]
+Impact: [What this affects]
+
+Closes: #[issue number]
+```
+
+### Work-in-Progress Commits:
+```
+WIP: [current work description]
+
+Progress:
+- [x] [Completed item]
+- [ ] [Current item - where you left off]
+- [ ] [Next item]
+
+Next: [Immediate next step when resuming]
+Context: [Important context to remember]
+```
+
+## 🔄 MEMORY BANK PHASE COMMITS
+
+### VAN Mode Completion:
+```
+VAN: Task analysis and mode determination - [TASK-ID]
+
+✅ Task complexity assessed: Level [X]
+✅ Memory Bank structure initialized
+✅ Core rules loaded
+✅ Initial context established
+
+Next: PLAN mode for detailed planning
+Files: memory-bank/tasks.md, memory-bank/activeContext.md
+```
+
+### PLAN Mode Completion:
+```
+PLAN: Comprehensive planning completed - [TASK-ID]
+
+✅ Requirements defined and documented
+✅ Component analysis completed
+✅ Implementation strategy outlined
+✅ Creative phases identified
+
+Next: CREATIVE mode for design decisions
+Files: memory-bank/tasks.md, implementation-plan.md
+```
+
+### CREATIVE Mode Completion:
+```
+CREATIVE: All design decisions finalized - [TASK-ID]
+
+✅ [Decision 1]: [Chosen approach]
+✅ [Decision 2]: [Chosen approach]
+✅ [Decision 3]: [Chosen approach]
+
+Next: IMPLEMENT mode for development
+Files: memory-bank/creative/creative-[feature].md
+```
+
+### IMPLEMENT Mode Completion:
+```
+IMPLEMENT: Feature implementation completed - [TASK-ID]
+
+✅ All planned components built
+✅ Unit and integration tests passing
+✅ Code review completed
+✅ Documentation updated
+
+Next: QA mode for validation
+Files: [List of implemented files]
+```
+
+### QA Mode Completion:
+```
+QA: Quality assurance completed - [TASK-ID]
+
+✅ All tests passing ([X]/[Y])
+✅ Performance benchmarks met
+✅ Security review completed
+✅ Integration testing successful
+
+Status: [GOOD/WARNING/CRITICAL]
+Next: REFLECT mode for analysis
+```
+
+### REFLECT Mode Completion:
+```
+REFLECT: Development reflection completed - [TASK-ID]
+
+✅ Process analysis documented
+✅ Lessons learned captured
+✅ Performance metrics recorded
+✅ Improvement recommendations made
+
+Next: ARCHIVE mode for documentation
+Files: memory-bank/reflection/reflection-[task-id].md
+```
+
+### ARCHIVE Mode Completion:
+```
+ARCHIVE: Task documentation archived - [TASK-ID]
+
+✅ Complete task archive created
+✅ All documents consolidated
+✅ Knowledge base updated
+✅ Task marked as completed
+
+Status: COMPLETED AND ARCHIVED
+Files: memory-bank/archive/archive-[task-id].md
+```
+
+## 🚨 EMERGENCY COMMIT STRATEGIES
+
+### Hotfix Commits:
+```
+hotfix: [critical issue description]
+
+URGENT: [Why this needed immediate attention]
+Problem: [What was broken]
+Solution: [Quick fix applied]
+Risk: [Potential side effects]
+
+Follow-up: [Planned proper fix]
+```
+
+### Rollback Commits:
+```
+revert: [description of what's being reverted]
+
+Reason: [Why rollback was necessary]
+Reverted: [Commit hash and description]
+Impact: [What this affects]
+
+Plan: [How to move forward]
+```
+
+## 📊 COMMIT FREQUENCY GUIDELINES
+
+### Development Phase:
+- **Feature work**: Commit every 30-60 minutes or logical completion
+- **Bug fixes**: Commit immediately after verification
+- **Refactoring**: Commit each logical refactoring step
+
+### Memory Bank Phases:
+- **Phase completion**: Always commit at phase end
+- **Major milestones**: Commit at significant progress points
+- **Context switches**: Always commit before switching
+
+## 🔍 COMMIT VERIFICATION CHECKLIST
+
+Before committing:
+- [ ] Code compiles without errors
+- [ ] Existing tests still pass
+- [ ] New tests added for new functionality
+- [ ] Commit message follows template
+- [ ] No sensitive information included
+- [ ] Files are properly staged
+
+## 📋 BRANCH STRATEGY INTEGRATION
+
+### Feature Branches:
+```
+feature/[task-id]-[brief-description]
+```
+
+### Phase Branches (for complex tasks):
+```
+phase/[task-id]-[phase-name]
+```
+
+### Hotfix Branches:
+```
+hotfix/[issue-description]
+```
+
+This structured approach ensures clear development history and enables effective collaboration and rollback capabilities.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/implementation/dependency-checking.mdc`
+
+```mdc
+---
+description: "Dependency checking and validation rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# DEPENDENCY CHECKING
+
+> **TL;DR:** Systematically verify and manage dependencies to prevent integration issues and ensure system reliability.
+
+## 🔍 DEPENDENCY VERIFICATION WORKFLOW
+
+```mermaid
+graph TD
+    Start["Code Change"] --> Scan["Scan Dependencies"]
+    Scan --> Check["Check Versions"]
+    Check --> Validate["Validate Compatibility"]
+    Validate --> Update["Update if Needed"]
+    Update --> Test["Test Integration"]
+```
+
+## 📋 DEPENDENCY RULES
+
+### Rule #47: Pre-Implementation Dependency Check
+- **When**: Before starting implementation
+- **What**: Verify all required dependencies are available and compatible
+- **Purpose**: Prevent mid-implementation blockers
+
+### Rule #48: Dependency Impact Analysis
+- **When**: Adding or updating dependencies
+- **What**: Analyze impact on existing code and other dependencies
+- **Purpose**: Avoid breaking changes and conflicts
+
+## 🎯 CHECKING PROCEDURES
+
+### Package Dependencies:
+```bash
+# Check package versions
+npm list
+npm outdated
+npm audit
+
+# Verify compatibility
+npm ls --depth=0
+```
+
+### System Dependencies:
+```bash
+# Check system requirements
+node --version
+npm --version
+bun --version
+```
+
+### Internal Dependencies:
+```bash
+# Find internal imports
+grep -r "import.*\.\." src/
+grep -r "require.*\.\." src/
+```
+
+This systematic approach prevents dependency-related issues and ensures reliable builds.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/implementation/robust-search.mdc`
+
+```mdc
+---
+description: "Robust search and discovery patterns for development"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# ROBUST SEARCH AND DISCOVERY
+
+> **TL;DR:** Use systematic search patterns to find code, dependencies, and solutions efficiently and reliably.
+
+## 🔍 SEARCH STRATEGY WORKFLOW
+
+```mermaid
+graph TD
+    Problem["Search Problem"] --> Scope["Define Search Scope"]
+    Scope --> Strategy["Choose Search Strategy"]
+    Strategy --> Execute["Execute Search"]
+    Execute --> Verify["Verify Results"]
+    Verify --> Document["Document Findings"]
+```
+
+## 📋 ROBUST SEARCH RULES
+
+### Rule #43: Multi-Pattern Search Approach
+- **When**: Looking for code patterns, dependencies, or solutions
+- **What**: Use multiple search patterns and tools
+- **Purpose**: Ensure comprehensive coverage and avoid missing critical items
+
+### Rule #44: Context-Aware Search
+- **When**: Searching in large codebases
+- **What**: Include surrounding context in search results
+- **Purpose**: Understand usage patterns and relationships
+
+## 🎯 SEARCH PATTERNS
+
+### Code Search:
+```bash
+# Function definitions
+grep -r "function.*searchTerm" src/
+grep -r "const.*searchTerm.*=" src/
+grep -r "class.*searchTerm" src/
+
+# Usage patterns
+grep -r "searchTerm(" src/
+grep -r "\.searchTerm" src/
+grep -r "import.*searchTerm" src/
+
+# With context
+grep -A 5 -B 5 "searchTerm" src/
+```
+
+### Dependency Search:
+```bash
+# Package dependencies
+grep -r "import.*package" src/
+grep -r "require.*package" src/
+grep -r "from.*package" src/
+
+# Internal dependencies
+find . -name "*.ts" -exec grep -l "import.*component" {} \;
+```
+
+### Configuration Search:
+```bash
+# Environment variables
+grep -r "process\.env" src/
+grep -r "ENV\." src/
+
+# Configuration files
+find . -name "*.config.*" -o -name "*.env*" -o -name "*.json"
+```
+
+This systematic approach ensures thorough and reliable search results.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/implementation/stub-avoidance.mdc`
+
+```mdc
+---
+description: "Rules for avoiding stubs and implementing complete functionality"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# STUB AVOIDANCE IN IMPLEMENTATION
+
+> **TL;DR:** Implement complete, functional code instead of stubs to maintain development momentum and avoid technical debt.
+
+## 🚫 STUB AVOIDANCE WORKFLOW
+
+```mermaid
+graph TD
+    Start["Implementation Task"] --> Analyze["Analyze Requirements"]
+    Analyze --> Simple{"Simple to<br>Implement?"}
+    Simple -->|Yes| FullImpl["Full Implementation"]
+    Simple -->|No| Break["Break Down Task"]
+
+    Break --> MVP["Implement MVP Version"]
+    MVP --> Test["Test MVP"]
+    Test --> Iterate["Iterate to Full"]
+    Iterate --> FullImpl
+
+    FullImpl --> Verify["Verify Complete"]
+    Verify --> Document["Document Implementation"]
+```
+
+## 📋 STUB AVOIDANCE RULES
+
+### Rule #2: ✅/❌ Implementation Tracking
+- **When**: Every implementation task
+- **What**: Track completion status with clear ✅/❌ indicators
+- **Purpose**: Avoid partial implementations and ensure completeness
+
+### Rule #41: No Placeholder Code in Production Paths
+- **When**: Any code that could reach production
+- **What**: Implement actual functionality, not TODO comments or throw statements
+- **Purpose**: Prevent runtime failures and maintain code quality
+
+### Rule #42: MVP-First Approach for Complex Features
+- **When**: Complex features that might tempt stub creation
+- **What**: Implement minimal viable version first, then enhance
+- **Purpose**: Maintain working code while building complexity
+
+## 🎯 IMPLEMENTATION STRATEGIES
+
+### Instead of Stubs, Use:
+
+#### 1. MVP Implementation:
+```typescript
+// Bad: Stub that will be forgotten
+function calculateTax(amount: number): number {
+  // TODO: Implement tax calculation
+  return 0;
+}
+
+// Good: MVP implementation
+function calculateTax(amount: number): number {
+  // Simple flat rate for MVP, can be enhanced later
+  const TAX_RATE = 0.1;
+  return amount * TAX_RATE;
+}
+```
+
+#### 2. Configuration-Driven Defaults:
+```typescript
+// Bad: Hardcoded stub
+function getApiEndpoint(): string {
+  return "http://localhost:3000"; // TODO: Make configurable
+}
+
+// Good: Configuration with sensible default
+function getApiEndpoint(): string {
+  return process.env.API_ENDPOINT || "http://localhost:3000";
+}
+```
+
+#### 3. Feature Flags for Incomplete Features:
+```typescript
+// Bad: Commented out incomplete feature
+function advancedAnalytics(data: any) {
+  // TODO: Implement advanced analytics
+  // return complexAnalysis(data);
+  return basicAnalysis(data);
+}
+
+// Good: Feature flag approach
+function advancedAnalytics(data: any) {
+  if (isFeatureEnabled('advanced-analytics')) {
+    return complexAnalysis(data);
+  }
+  return basicAnalysis(data);
+}
+```
+
+## 🔄 PROGRESSIVE IMPLEMENTATION APPROACH
+
+### Phase 1: Core Functionality
+- Implement the essential path that makes the feature work
+- Focus on the main use case
+- Ensure basic functionality is complete and tested
+
+### Phase 2: Edge Cases
+- Handle error conditions properly
+- Add input validation
+- Implement boundary condition handling
+
+### Phase 3: Optimization
+- Improve performance if needed
+- Add caching or other optimizations
+- Refactor for better maintainability
+
+### Phase 4: Enhancement
+- Add advanced features
+- Improve user experience
+- Add comprehensive logging and monitoring
+
+## 📊 IMPLEMENTATION COMPLETENESS CHECKLIST
+
+### Core Implementation:
+- [ ] Main functionality implemented and working
+- [ ] Basic error handling in place
+- [ ] Input validation implemented
+- [ ] Return values are correct and complete
+- [ ] No TODO comments in critical paths
+
+### Testing:
+- [ ] Unit tests cover main functionality
+- [ ] Edge cases are tested
+- [ ] Error conditions are tested
+- [ ] Integration tests pass
+- [ ] Manual testing completed
+
+### Documentation:
+- [ ] Function/method documentation complete
+- [ ] Usage examples provided
+- [ ] Known limitations documented
+- [ ] Future enhancement plans noted
+
+## 🚨 ANTI-PATTERNS TO AVOID
+
+### 1. TODO-Driven Development:
+```typescript
+// Bad: TODOs that never get done
+function processPayment(payment: Payment) {
+  // TODO: Add fraud detection
+  // TODO: Add retry logic
+  // TODO: Add logging
+  return { success: true };
+}
+```
+
+### 2. Exception-Based Stubs:
+```typescript
+// Bad: Throwing exceptions instead of implementing
+function generateReport(): Report {
+  throw new Error("Not implemented yet");
+}
+```
+
+### 3. Empty Implementation:
+```typescript
+// Bad: Silent failures
+function validateInput(input: string): boolean {
+  return true; // TODO: Add actual validation
+}
+```
+
+## 🎯 STUB REPLACEMENT STRATEGIES
+
+### When You Find Stubs:
+
+#### 1. Immediate Replacement (Preferred):
+- Stop current work
+- Implement the stubbed functionality
+- Test the implementation
+- Continue with original task
+
+#### 2. Tracked Replacement:
+- Create specific task for stub replacement
+- Add to current sprint/iteration
+- Set deadline for replacement
+- Monitor until completed
+
+#### 3. Architectural Replacement:
+- If stub indicates missing architecture
+- Design proper solution
+- Implement complete solution
+- Refactor dependent code
+
+## 📋 STUB DETECTION AND TRACKING
+
+### Code Review Checklist:
+- [ ] No TODO comments in production code
+- [ ] No throw new Error("Not implemented")
+- [ ] No empty function bodies
+- [ ] No hardcoded placeholder values
+- [ ] All conditional branches implemented
+
+### Automated Detection:
+```bash
+# Search for common stub patterns
+grep -r "TODO" src/
+grep -r "Not implemented" src/
+grep -r "throw new Error" src/
+grep -r "return null; //" src/
+```
+
+### Tracking Template:
+```markdown
+# Stub Replacement Task
+
+## Stub Location
+File: [file path]
+Function: [function name]
+Line: [line number]
+
+## Current Behavior
+[What the stub currently does]
+
+## Required Implementation
+[What needs to be implemented]
+
+## Acceptance Criteria
+- [ ] [Specific requirement 1]
+- [ ] [Specific requirement 2]
+- [ ] Tests added
+- [ ] Documentation updated
+
+## Priority: [High/Medium/Low]
+## Estimated Effort: [Time estimate]
+```
+
+## 🔍 IMPLEMENTATION VERIFICATION
+
+### Before Marking Complete:
+1. **Functionality Test**: Does it work as intended?
+2. **Edge Case Test**: Does it handle edge cases?
+3. **Error Test**: Does it handle errors gracefully?
+4. **Integration Test**: Does it work with other components?
+5. **Performance Test**: Is performance acceptable?
+
+### Completion Criteria:
+- ✅ All planned functionality implemented
+- ✅ All tests passing
+- ✅ No TODO comments in critical paths
+- ✅ Error handling implemented
+- ✅ Documentation complete
+
+This approach ensures robust, complete implementations that don't accumulate technical debt.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/implementation/system-coordination.mdc`
+
+```mdc
+---
+description: "System coordination and integration patterns"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# SYSTEM COORDINATION
+
+> **TL;DR:** Coordinate system components effectively to ensure reliable integration and communication.
+
+## 🔄 COORDINATION WORKFLOW
+
+```mermaid
+graph TD
+    Start["System Change"] --> Identify["Identify Dependencies"]
+    Identify --> Plan["Plan Coordination"]
+    Plan --> Execute["Execute Changes"]
+    Execute --> Verify["Verify Integration"]
+```
+
+## 📋 COORDINATION RULES
+
+### Rule #45: Dependency-First Updates
+- **When**: Making system changes
+- **What**: Update dependencies before dependent components
+- **Purpose**: Maintain system consistency
+
+### Rule #46: Integration Point Verification
+- **When**: After any system change
+- **What**: Test all integration points
+- **Purpose**: Ensure system-wide functionality
+
+## 🎯 COORDINATION PATTERNS
+
+### Service Communication:
+- Use consistent API contracts
+- Implement proper error handling
+- Add timeout and retry logic
+- Monitor integration health
+
+### Data Consistency:
+- Coordinate database changes
+- Ensure transaction boundaries
+- Handle eventual consistency
+- Implement conflict resolution
+
+This ensures reliable system operation across all components.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc`
+
+```mdc
+---
+description: "Dependency documentation methodology for Memory Bank development"
+globs: "**/integration/**", "**/dependencies/**", "**/documentation/**"
+alwaysApply: false
+---
+
+# DEPENDENCY DOCUMENTATION METHODOLOGY
+
+> **TL;DR:** Comprehensive system for documenting, tracking, and managing dependencies in Memory Bank development to ensure system reliability and maintainability.
+
+## 📋 DEPENDENCY OVERVIEW
+
+Dependency documentation ensures clear understanding of system relationships, external dependencies, and integration requirements across all Memory Bank components.
+
+### Dependency Categories
+
+**System Dependencies**
+- Operating system requirements
+- Runtime environments (Node.js, Bun)
+- Development tools (Git, IDE)
+- Command-line utilities
+
+**Package Dependencies**
+- NPM/Bun packages
+- Version constraints
+- Security considerations
+- License compatibility
+
+**Internal Dependencies**
+- Memory Bank mode dependencies
+- File system dependencies
+- Configuration dependencies
+- Rule system dependencies
+
+**External Dependencies**
+- Third-party services
+- API integrations
+- Database systems
+- Cloud services
+
+## 📊 DEPENDENCY TRACKING SYSTEM
+
+### Dependency Manifest
+
+**package.json Enhancement**
+```json
+{
+  "name": "cursor-memory-bank",
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "yaml": "^2.3.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/jest": "^29.0.0"
+  },
+  "memoryBankDependencies": {
+    "systemRequirements": {
+      "os": ["darwin", "linux", "win32"],
+      "nodeVersion": ">=18.0.0",
+      "bunVersion": ">=1.0.0",
+      "gitVersion": ">=2.30.0"
+    },
+    "externalTools": {
+      "cursor": {
+        "required": true,
+        "version": ">=0.30.0",
+        "purpose": "Primary development environment"
+      },
+      "git": {
+        "required": true,
+        "version": ">=2.30.0",
+        "purpose": "Version control and backup"
+      }
+    },
+    "internalDependencies": {
+      "modes": {
+        "VAN": {
+          "dependsOn": ["file-system", "task-management"],
+          "provides": ["task-analysis", "complexity-detection"]
+        },
+        "PLAN": {
+          "dependsOn": ["VAN", "configuration"],
+          "provides": ["implementation-plan", "resource-estimation"]
+        },
+        "CREATIVE": {
+          "dependsOn": ["PLAN", "archive-system"],
+          "provides": ["design-decisions", "architecture-choices"]
+        },
+        "IMPLEMENT": {
+          "dependsOn": ["PLAN", "CREATIVE", "git-integration"],
+          "provides": ["code-implementation", "testing"]
+        },
+        "REFLECT": {
+          "dependsOn": ["IMPLEMENT", "quality-metrics"],
+          "provides": ["lessons-learned", "improvement-recommendations"]
+        },
+        "ARCHIVE": {
+          "dependsOn": ["REFLECT", "documentation-system"],
+          "provides": ["knowledge-preservation", "pattern-extraction"]
+        }
+      }
+    }
+  }
+}
+```
+
+### Dependency Documentation Template
+
+**System Dependency Documentation**
+```yaml
+# memory-bank/dependencies/system-dependencies.yaml
+system_dependencies:
+  operating_system:
+    supported:
+      - name: "macOS"
+        versions: ["12.0+", "13.0+", "14.0+"]
+        notes: "Primary development platform"
+      - name: "Linux"
+        versions: ["Ubuntu 20.04+", "Debian 11+"]
+        notes: "Server deployment platform"
+      - name: "Windows"
+        versions: ["Windows 10+", "Windows 11"]
+        notes: "Limited support, WSL recommended"
+
+  runtime_environment:
+    node_js:
+      minimum_version: "18.0.0"
+      recommended_version: "20.0.0"
+      purpose: "JavaScript runtime for tooling"
+      installation: "https://nodejs.org/"
+
+    bun:
+      minimum_version: "1.0.0"
+      recommended_version: "latest"
+      purpose: "Primary package manager and test runner"
+      installation: "https://bun.sh/"
+
+  development_tools:
+    git:
+      minimum_version: "2.30.0"
+      purpose: "Version control and backup system"
+      required_features: ["branch", "commit", "push", "pull"]
+
+    cursor:
+      minimum_version: "0.30.0"
+      purpose: "Primary IDE with AI assistance"
+      configuration: "memory-bank/.cursor/rules/"
+```
+
+**Package Dependency Documentation**
+```yaml
+# memory-bank/dependencies/package-dependencies.yaml
+package_dependencies:
+  production:
+    yaml:
+      version: "^2.3.0"
+      purpose: "Configuration file parsing"
+      security_notes: "Regular security updates required"
+      alternatives: ["js-yaml", "toml"]
+
+    "@types/node":
+      version: "^20.0.0"
+      purpose: "TypeScript definitions for Node.js"
+      development_only: false
+
+  development:
+    bun-types:
+      version: "latest"
+      purpose: "TypeScript definitions for Bun"
+      update_frequency: "monthly"
+
+    "@types/jest":
+      version: "^29.0.0"
+      purpose: "TypeScript definitions for Jest testing"
+      alternatives: ["@types/vitest"]
+
+  optional:
+    prettier:
+      version: "^3.0.0"
+      purpose: "Code formatting"
+      configuration: ".prettierrc"
+
+    eslint:
+      version: "^8.0.0"
+      purpose: "Code linting"
+      configuration: ".eslintrc.js"
+```
+
+## 🔗 DEPENDENCY MAPPING
+
+### Internal Dependency Graph
+
+```mermaid
+graph TD
+    VAN["🔍 VAN Mode"] --> FileSystem["📁 File System"]
+    VAN --> TaskMgmt["📋 Task Management"]
+
+    PLAN["📋 PLAN Mode"] --> VAN
+    PLAN --> Config["⚙️ Configuration"]
+
+    CREATIVE["🎨 CREATIVE Mode"] --> PLAN
+    CREATIVE --> Archive["📦 Archive System"]
+
+    IMPLEMENT["⚒️ IMPLEMENT Mode"] --> PLAN
+    IMPLEMENT --> CREATIVE
+    IMPLEMENT --> Git["🔄 Git Integration"]
+
+    REFLECT["🤔 REFLECT Mode"] --> IMPLEMENT
+    REFLECT --> Metrics["📊 Quality Metrics"]
+
+    ARCHIVE["📚 ARCHIVE Mode"] --> REFLECT
+    ARCHIVE --> Docs["📝 Documentation"]
+
+    FileSystem --> Config
+    TaskMgmt --> FileSystem
+    Git --> FileSystem
+    Metrics --> TaskMgmt
+    Docs --> Archive
+```
+
+### External Dependency Map
+
+```mermaid
+graph TD
+    MemoryBank["🧠 Memory Bank"] --> Cursor["🖥️ Cursor IDE"]
+    MemoryBank --> Git["🔄 Git"]
+    MemoryBank --> Bun["🥟 Bun Runtime"]
+    MemoryBank --> NodeJS["🟢 Node.js"]
+
+    Cursor --> VSCode["📝 VS Code Engine"]
+    Git --> GitHub["🐙 GitHub"]
+    Bun --> V8["⚡ V8 Engine"]
+    NodeJS --> V8
+
+    MemoryBank --> FileSystem["📁 File System"]
+    MemoryBank --> Terminal["💻 Terminal"]
+    MemoryBank --> OS["🖥️ Operating System"]
+```
+
+## 📋 DEPENDENCY VALIDATION
+
+### Automated Dependency Checks
+
+**System Requirements Validation**
+```typescript
+// scripts/validate-dependencies.ts
+import { execSync } from 'child_process';
+import { readFileSync } from 'fs';
+import { parse } from 'yaml';
+
+interface SystemRequirements {
+  nodeVersion: string;
+  bunVersion: string;
+  gitVersion: string;
+  os: string[];
+}
+
+class DependencyValidator {
+  async validateSystemRequirements(): Promise<ValidationResult> {
+    const requirements = this.loadRequirements();
+    const results: ValidationResult = {
+      passed: [],
+      failed: [],
+      warnings: []
+    };
+
+    // Validate Node.js version
+    try {
+      const nodeVersion = execSync('node --version', { encoding: 'utf-8' }).trim();
+      if (this.satisfiesVersion(nodeVersion, requirements.nodeVersion)) {
+        results.passed.push(`Node.js ${nodeVersion} ✅`);
+      } else {
+        results.failed.push(`Node.js ${nodeVersion} does not satisfy ${requirements.nodeVersion}`);
+      }
+    } catch (error) {
+      results.failed.push('Node.js not found');
+    }
+
+    // Validate Bun version
+    try {
+      const bunVersion = execSync('bun --version', { encoding: 'utf-8' }).trim();
+      if (this.satisfiesVersion(bunVersion, requirements.bunVersion)) {
+        results.passed.push(`Bun ${bunVersion} ✅`);
+      } else {
+        results.failed.push(`Bun ${bunVersion} does not satisfy ${requirements.bunVersion}`);
+      }
+    } catch (error) {
+      results.failed.push('Bun not found');
+    }
+
+    // Validate Git version
+    try {
+      const gitVersion = execSync('git --version', { encoding: 'utf-8' }).trim();
+      const version = gitVersion.match(/git version (\d+\.\d+\.\d+)/)?.[1];
+      if (version && this.satisfiesVersion(version, requirements.gitVersion)) {
+        results.passed.push(`Git ${version} ✅`);
+      } else {
+        results.failed.push(`Git ${version} does not satisfy ${requirements.gitVersion}`);
+      }
+    } catch (error) {
+      results.failed.push('Git not found');
+    }
+
+    return results;
+  }
+
+  private loadRequirements(): SystemRequirements {
+    const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
+    return packageJson.memoryBankDependencies.systemRequirements;
+  }
+
+  private satisfiesVersion(actual: string, required: string): boolean {
+    // Implement semantic version comparison
+    // This is a simplified version
+    const actualParts = actual.replace(/^v/, '').split('.').map(Number);
+    const requiredParts = required.replace(/>=/, '').split('.').map(Number);
+
+    for (let i = 0; i < Math.max(actualParts.length, requiredParts.length); i++) {
+      const actualPart = actualParts[i] || 0;
+      const requiredPart = requiredParts[i] || 0;
+
+      if (actualPart > requiredPart) return true;
+      if (actualPart < requiredPart) return false;
+    }
+
+    return true;
+  }
+}
+```
+
+**Package Dependency Audit**
+```bash
+#!/bin/bash
+# scripts/audit-dependencies.sh
+
+echo "🔍 Memory Bank Dependency Audit"
+echo "================================"
+
+# Check for security vulnerabilities
+echo "Checking for security vulnerabilities..."
+bun audit
+
+# Check for outdated packages
+echo "Checking for outdated packages..."
+bun outdated
+
+# Validate package integrity
+echo "Validating package integrity..."
+bun install --frozen-lockfile
+
+# Check license compatibility
+echo "Checking license compatibility..."
+bun run license-checker
+
+# Generate dependency report
+echo "Generating dependency report..."
+bun run dependency-report > reports/dependency-audit-$(date +%Y-%m-%d).md
+
+echo "✅ Dependency audit complete"
+```
+
+## 📊 DEPENDENCY MONITORING
+
+### Continuous Monitoring
+
+**Daily Dependency Checks**
+```yaml
+# .github/workflows/dependency-check.yml
+name: Daily Dependency Check
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Daily at 9 AM UTC
+
+jobs:
+  dependency-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run dependency validation
+        run: bun run validate-dependencies
+
+      - name: Security audit
+        run: bun audit
+
+      - name: Check for updates
+        run: bun outdated
+
+      - name: Generate report
+        run: bun run dependency-report
+```
+
+**Dependency Update Strategy**
+```yaml
+# memory-bank/dependencies/update-strategy.yaml
+update_strategy:
+  security_updates:
+    frequency: "immediate"
+    auto_apply: true
+    notification: "slack"
+
+  minor_updates:
+    frequency: "weekly"
+    auto_apply: false
+    review_required: true
+
+  major_updates:
+    frequency: "monthly"
+    auto_apply: false
+    testing_required: true
+    approval_required: true
+
+  monitoring:
+    tools:
+      - "dependabot"
+      - "snyk"
+      - "npm audit"
+
+    alerts:
+      - type: "security"
+        severity: "high"
+        action: "immediate"
+      - type: "outdated"
+        severity: "medium"
+        action: "weekly_review"
+```
+
+## 🔧 DEPENDENCY MANAGEMENT TOOLS
+
+### Custom Dependency Scripts
+
+**Dependency Health Check**
+```bash
+#!/bin/bash
+# scripts/dependency-health.sh
+
+echo "🏥 Memory Bank Dependency Health Check"
+echo "======================================"
+
+# System dependencies
+echo "1. System Dependencies:"
+node --version && echo "  ✅ Node.js" || echo "  ❌ Node.js missing"
+bun --version && echo "  ✅ Bun" || echo "  ❌ Bun missing"
+git --version && echo "  ✅ Git" || echo "  ❌ Git missing"
+
+# Package dependencies
+echo "2. Package Dependencies:"
+bun install --dry-run && echo "  ✅ All packages available" || echo "  ❌ Package issues detected"
+
+# Internal dependencies
+echo "3. Internal Dependencies:"
+[ -f "memory-bank/tasks.md" ] && echo "  ✅ Task system" || echo "  ❌ Task system missing"
+[ -f "memory-bank/config/system.yaml" ] && echo "  ✅ Configuration" || echo "  ❌ Configuration missing"
+[ -d ".cursor/rules" ] && echo "  ✅ Rule system" || echo "  ❌ Rule system missing"
+
+echo "✅ Health check complete"
+```
+
+**Dependency Update Assistant**
+```typescript
+// scripts/update-assistant.ts
+class DependencyUpdateAssistant {
+  async checkForUpdates(): Promise<UpdateReport> {
+    const outdated = await this.getOutdatedPackages();
+    const security = await this.getSecurityIssues();
+
+    return {
+      outdated,
+      security,
+      recommendations: this.generateRecommendations(outdated, security)
+    };
+  }
+
+  async applyUpdates(updates: UpdateRequest[]): Promise<UpdateResult> {
+    const results: UpdateResult = {
+      successful: [],
+      failed: [],
+      skipped: []
+    };
+
+    for (const update of updates) {
+      try {
+        if (update.type === 'security') {
+          await this.applySecurityUpdate(update);
+          results.successful.push(update);
+        } else if (update.approved) {
+          await this.applyRegularUpdate(update);
+          results.successful.push(update);
+        } else {
+          results.skipped.push(update);
+        }
+      } catch (error) {
+        results.failed.push({ ...update, error: error.message });
+      }
+    }
+
+    return results;
+  }
+}
+```
+
+This comprehensive dependency documentation system ensures reliable and maintainable Memory Bank operations with clear understanding of all system relationships and requirements.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/integration/integration-planning.mdc`
+
+```mdc
+---
+description: "Integration planning methodology for Memory Bank development"
+globs: "**/integration/**", "**/planning/**", "**/architecture/**"
+alwaysApply: false
+---
+
+# INTEGRATION PLANNING METHODOLOGY
+
+> **TL;DR:** Systematic approach to planning component integration in Memory Bank development, ensuring seamless system cohesion and minimal integration risks.
+
+```mermaid
+graph TD
+    Start["🔗 INTEGRATION PLANNING"] --> Analyze["🔍 Analyze Components"]
+    Analyze --> Dependencies["📊 Map Dependencies"]
+    Dependencies --> Strategy["📋 Plan Integration Strategy"]
+    Strategy --> Phases["🎯 Define Integration Phases"]
+    Phases --> Risks["⚠️ Assess Risks"]
+    Risks --> Mitigate["🛡️ Plan Risk Mitigation"]
+    Mitigate --> Execute["⚡ Execute Integration"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Strategy fill:#4dbb5f,stroke:#36873f,color:white
+    style Execute fill:#ff5555,stroke:#cc0000,color:white
+```
+
+## INTEGRATION STRATEGY
+
+### Component Analysis:
+1. **Interface Definition**: Define clear component interfaces
+2. **Dependency Mapping**: Map all component dependencies
+3. **Data Flow Analysis**: Understand data flow between components
+4. **Integration Points**: Identify key integration points
+
+### Integration Phases:
+1. **Phase 1**: Core component integration
+2. **Phase 2**: Secondary component integration
+3. **Phase 3**: System-wide integration testing
+4. **Phase 4**: Performance optimization
+
+## VERIFICATION CHECKLIST
+
+```
+✓ INTEGRATION PLANNING CHECKLIST
+- Component interfaces clearly defined? [YES/NO]
+- Dependencies mapped and documented? [YES/NO]
+- Integration strategy planned? [YES/NO]
+- Integration phases defined? [YES/NO]
+- Risks identified and mitigated? [YES/NO]
+- Testing strategy prepared? [YES/NO]
+
+→ If all YES: Integration planning complete
+→ If any NO: Complete missing planning elements
+```
+
+This methodology ensures systematic and risk-free component integration in Memory Bank development.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/integration/integration-testing.mdc`
+
+```mdc
+---
+description: "Integration testing methodology for Memory Bank development"
+globs: "**/integration/**", "**/testing/**", "**/qa/**"
+alwaysApply: false
+---
+
+# INTEGRATION TESTING METHODOLOGY
+
+> **TL;DR:** Comprehensive integration testing framework for Memory Bank development, ensuring seamless component interaction and system reliability.
+
+## 🔗 INTEGRATION TESTING OVERVIEW
+
+Integration testing validates the interaction between Memory Bank components, modes, and external systems to ensure cohesive functionality.
+
+### Testing Scope
+
+**Component Integration**
+- Mode transition testing
+- File system integration
+- Configuration system integration
+- User interface integration
+
+**System Integration**
+- Git workflow integration
+- IDE integration (Cursor)
+- Command execution integration
+- External tool integration
+
+**Data Integration**
+- Task data flow testing
+- Migration system testing
+- Archive system testing
+- Configuration data testing
+
+## 🧪 TESTING STRATEGIES
+
+### 1. Mode Transition Testing
+
+**VAN → PLAN Integration**
+```typescript
+describe('VAN to PLAN Mode Transition', () => {
+  test('should preserve task context during transition', async () => {
+    // Setup VAN mode with tasks
+    const vanMode = new VANMode();
+    await vanMode.initialize();
+    await vanMode.addTask({
+      id: 'TEST-TASK-001',
+      priority: 'HIGH',
+      status: 'PLANNED'
+    });
+
+    // Transition to PLAN mode
+    const planMode = await vanMode.transitionTo('PLAN');
+
+    // Verify task preservation
+    expect(planMode.getTasks()).toContain('TEST-TASK-001');
+    expect(planMode.getTaskStatus('TEST-TASK-001')).toBe('PLANNED');
+  });
+
+  test('should create migration document for incomplete work', async () => {
+    // Setup incomplete work scenario
+    const vanMode = new VANMode();
+    await vanMode.addTask({
+      id: 'INCOMPLETE-TASK',
+      status: 'IN_PROGRESS',
+      completion: 75
+    });
+
+    // Attempt transition
+    const result = await vanMode.transitionTo('PLAN');
+
+    // Verify migration creation
+    expect(fs.existsSync('memory-bank/migration.md')).toBe(true);
+    const migration = await fs.readFile('memory-bank/migration.md', 'utf-8');
+    expect(migration).toContain('INCOMPLETE-TASK');
+  });
+});
+```
+
+**PLAN → CREATIVE Integration**
+```typescript
+describe('PLAN to CREATIVE Mode Transition', () => {
+  test('should pass planning context to creative phase', async () => {
+    // Setup PLAN mode with implementation plan
+    const planMode = new PLANMode();
+    await planMode.createImplementationPlan({
+      approach: 'phased',
+      phases: ['core', 'features', 'polish'],
+      timeline: '2 weeks'
+    });
+
+    // Transition to CREATIVE mode
+    const creativeMode = await planMode.transitionTo('CREATIVE');
+
+    // Verify context transfer
+    expect(creativeMode.getPlanningContext()).toBeDefined();
+    expect(creativeMode.getPhases()).toEqual(['core', 'features', 'polish']);
+  });
+});
+```
+
+### 2. File System Integration Testing
+
+**Configuration System**
+```typescript
+describe('Configuration System Integration', () => {
+  test('should load and validate system configuration', async () => {
+    // Test configuration loading
+    const config = await ConfigManager.load();
+
+    expect(config.interaction.mode).toMatch(/^(AUTO|MANUAL)$/);
+    expect(config.date_management.source).toBe('system');
+    expect(config.modes).toBeDefined();
+  });
+
+  test('should handle configuration updates', async () => {
+    // Update interaction mode
+    await ConfigManager.updateInteractionMode('AUTO');
+
+    // Verify persistence
+    const config = await ConfigManager.load();
+    expect(config.interaction.mode).toBe('AUTO');
+
+    // Verify file system update
+    const modeFile = await fs.readFile('memory-bank/system/interaction-mode.txt', 'utf-8');
+    expect(modeFile.trim()).toBe('AUTO');
+  });
+});
+```
+
+**Task Management System**
+```typescript
+describe('Task Management Integration', () => {
+  test('should maintain task consistency across operations', async () => {
+    // Create task
+    const taskManager = new TaskManager();
+    await taskManager.addTask({
+      id: 'INTEGRATION-TEST',
+      name: 'Test task integration',
+      priority: 'MEDIUM'
+    });
+
+    // Update task
+    await taskManager.updateTaskStatus('INTEGRATION-TEST', 'IN_PROGRESS');
+
+    // Verify persistence
+    const tasks = await taskManager.loadTasks();
+    const task = tasks.find(t => t.id === 'INTEGRATION-TEST');
+    expect(task.status).toBe('IN_PROGRESS');
+  });
+});
+```
+
+### 3. Migration System Integration
+
+**Migration Creation and Processing**
+```typescript
+describe('Migration System Integration', () => {
+  test('should create and process migration documents', async () => {
+    // Setup scenario with incomplete work
+    const taskManager = new TaskManager();
+    await taskManager.addTask({
+      id: 'MIGRATION-TEST',
+      status: 'IN_PROGRESS',
+      completion: 60
+    });
+
+    // Create migration
+    const migrationManager = new MigrationManager();
+    await migrationManager.createMigration('IMPLEMENT', 'REFLECT');
+
+    // Verify migration document
+    expect(fs.existsSync('memory-bank/migration.md')).toBe(true);
+
+    // Process migration
+    await migrationManager.processMigration();
+
+    // Verify task preservation
+    const tasks = await taskManager.loadTasks();
+    expect(tasks.some(t => t.id === 'MIGRATION-TEST')).toBe(true);
+  });
+});
+```
+
+### 4. Command Execution Integration
+
+**Git Integration**
+```typescript
+describe('Git Integration', () => {
+  test('should execute git commands safely', async () => {
+    const gitManager = new GitManager();
+
+    // Test status check
+    const status = await gitManager.getStatus();
+    expect(status).toBeDefined();
+
+    // Test commit creation
+    await gitManager.commit('Test integration commit');
+
+    // Verify commit exists
+    const log = await gitManager.getLog(1);
+    expect(log[0].message).toBe('Test integration commit');
+  });
+});
+```
+
+**File Operations**
+```typescript
+describe('File Operations Integration', () => {
+  test('should handle file operations safely', async () => {
+    const fileManager = new FileManager();
+
+    // Test file creation
+    await fileManager.createFile('test-integration.md', 'Test content');
+    expect(fs.existsSync('test-integration.md')).toBe(true);
+
+    // Test file reading
+    const content = await fileManager.readFile('test-integration.md');
+    expect(content).toBe('Test content');
+
+    // Test file deletion
+    await fileManager.deleteFile('test-integration.md');
+    expect(fs.existsSync('test-integration.md')).toBe(false);
+  });
+});
+```
+
+## 🔄 CONTINUOUS INTEGRATION TESTING
+
+### Automated Test Suites
+
+**Daily Integration Tests**
+```bash
+#!/bin/bash
+# daily-integration-tests.sh
+
+echo "Running daily integration tests..."
+
+# Mode transition tests
+bun test tests/integration/mode-transitions.test.ts
+
+# File system integration tests
+bun test tests/integration/file-system.test.ts
+
+# Configuration system tests
+bun test tests/integration/config-system.test.ts
+
+# Migration system tests
+bun test tests/integration/migration-system.test.ts
+
+# Generate report
+bun test --reporter=html --output-dir=reports/integration
+```
+
+**Weekly System Tests**
+```bash
+#!/bin/bash
+# weekly-system-tests.sh
+
+echo "Running weekly system integration tests..."
+
+# Full workflow tests
+bun test tests/integration/full-workflow.test.ts
+
+# Performance integration tests
+bun test tests/integration/performance.test.ts
+
+# Security integration tests
+bun test tests/integration/security.test.ts
+
+# Backup and recovery tests
+bun test tests/integration/backup-recovery.test.ts
+```
+
+### Test Environment Setup
+
+**Test Configuration**
+```yaml
+# test-config.yaml
+test_environment:
+  memory_bank_path: "test-memory-bank"
+  git_repo: "test-repo"
+  isolation: true
+  cleanup: true
+
+integration_tests:
+  mode_transitions: true
+  file_operations: true
+  configuration: true
+  migration: true
+  git_integration: true
+
+performance_tests:
+  load_testing: true
+  stress_testing: true
+  memory_usage: true
+  response_time: true
+```
+
+**Test Data Management**
+```typescript
+class TestDataManager {
+  async setupTestEnvironment(): Promise<void> {
+    // Create isolated test environment
+    await this.createTestDirectory();
+    await this.initializeTestGitRepo();
+    await this.setupTestConfiguration();
+    await this.createTestTasks();
+  }
+
+  async cleanupTestEnvironment(): Promise<void> {
+    // Clean up test artifacts
+    await this.removeTestDirectory();
+    await this.resetTestConfiguration();
+  }
+
+  async createTestScenario(scenario: string): Promise<void> {
+    switch (scenario) {
+      case 'incomplete_work':
+        await this.createIncompleteWorkScenario();
+        break;
+      case 'mode_transition':
+        await this.createModeTransitionScenario();
+        break;
+      case 'migration_needed':
+        await this.createMigrationScenario();
+        break;
+    }
+  }
+}
+```
+
+## 📊 INTEGRATION TEST METRICS
+
+### Success Criteria
+
+**Functional Integration**
+- All mode transitions work correctly: 100%
+- File operations complete successfully: >99%
+- Configuration changes persist: 100%
+- Migration system preserves data: 100%
+
+**Performance Integration**
+- Mode transition time: <30 seconds
+- File operation response: <5 seconds
+- Configuration load time: <2 seconds
+- Migration processing: <60 seconds
+
+**Reliability Integration**
+- System uptime during tests: >99%
+- Error recovery success: >95%
+- Data consistency maintained: 100%
+- Backup system functionality: 100%
+
+### Test Coverage
+
+**Component Coverage**
+- Mode transition logic: 100%
+- File system operations: 95%
+- Configuration management: 100%
+- Migration system: 100%
+
+**Scenario Coverage**
+- Happy path scenarios: 100%
+- Error scenarios: 90%
+- Edge cases: 85%
+- Performance scenarios: 80%
+
+## 🚨 ERROR HANDLING INTEGRATION
+
+### Error Scenario Testing
+
+**System Failure Recovery**
+```typescript
+describe('System Failure Recovery', () => {
+  test('should recover from file system errors', async () => {
+    // Simulate file system error
+    jest.spyOn(fs, 'writeFile').mockRejectedValue(new Error('Disk full'));
+
+    const taskManager = new TaskManager();
+
+    // Attempt operation
+    const result = await taskManager.addTask({
+      id: 'ERROR-TEST',
+      name: 'Test error handling'
+    });
+
+    // Verify graceful handling
+    expect(result.success).toBe(false);
+    expect(result.error).toContain('Disk full');
+
+    // Verify system stability
+    expect(taskManager.isHealthy()).toBe(true);
+  });
+});
+```
+
+**Network Failure Handling**
+```typescript
+describe('Network Failure Handling', () => {
+  test('should handle git remote failures gracefully', async () => {
+    // Simulate network failure
+    jest.spyOn(GitManager.prototype, 'push').mockRejectedValue(
+      new Error('Network unreachable')
+    );
+
+    const gitManager = new GitManager();
+    const result = await gitManager.syncChanges();
+
+    // Verify local operations continue
+    expect(result.localCommit).toBe(true);
+    expect(result.remoteSync).toBe(false);
+    expect(result.error).toContain('Network unreachable');
+  });
+});
+```
+
+This comprehensive integration testing methodology ensures robust and reliable Memory Bank operations across all system components and interactions.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/integration/isolated-design-rules.mdc`
+
+```mdc
+---
+description: "Isolated design principles for maintainable Memory Bank systems"
+globs: "**/integration/**", "**/design/**", "**/architecture/**"
+alwaysApply: false
+---
+
+# ISOLATED DESIGN PRINCIPLES
+
+> **TL;DR:** Comprehensive isolated design methodology for Memory Bank components, ensuring maintainable, testable, and scalable system architecture through clear separation of concerns and minimal coupling.
+
+## 🏗️ ISOLATED DESIGN OVERVIEW
+
+Isolated design principles ensure Memory Bank components are self-contained, loosely coupled, and highly cohesive, enabling independent development, testing, and maintenance.
+
+### Core Isolation Principles
+
+**Separation of Concerns**
+- Each component has a single, well-defined responsibility
+- Clear boundaries between different system layers
+- Minimal overlap in functionality
+- Independent evolution paths
+
+**Loose Coupling**
+- Components interact through well-defined interfaces
+- Minimal dependencies between modules
+- Configuration-driven integration
+- Event-driven communication where appropriate
+
+**High Cohesion**
+- Related functionality grouped together
+- Strong internal relationships within components
+- Clear component boundaries
+- Focused component purposes
+
+## 🔧 COMPONENT ISOLATION STRATEGIES
+
+### 1. Mode Isolation
+
+**Independent Mode Design**
+```typescript
+// Each mode is completely self-contained
+interface MemoryBankMode {
+  name: string;
+  initialize(): Promise<void>;
+  execute(): Promise<ModeResult>;
+  cleanup(): Promise<void>;
+  getRequiredDependencies(): string[];
+  getProvidedServices(): string[];
+}
+
+class VANMode implements MemoryBankMode {
+  name = 'VAN';
+
+  // Self-contained initialization
+  async initialize(): Promise<void> {
+    await this.loadConfiguration();
+    await this.validateSystemRequirements();
+    await this.setupWorkingDirectory();
+  }
+
+  // Independent execution
+  async execute(): Promise<ModeResult> {
+    const analysis = await this.analyzeRequirements();
+    const complexity = await this.determineComplexity();
+    const plan = await this.createInitialPlan();
+
+    return {
+      analysis,
+      complexity,
+      plan,
+      nextMode: this.determineNextMode(complexity)
+    };
+  }
+
+  // Clean separation of dependencies
+  getRequiredDependencies(): string[] {
+    return ['file-system', 'configuration', 'task-parser'];
+  }
+
+  getProvidedServices(): string[] {
+    return ['requirement-analysis', 'complexity-assessment', 'initial-planning'];
+  }
+}
+```
+
+**Mode Communication Interface**
+```typescript
+// Standardized communication between modes
+interface ModeTransition {
+  fromMode: string;
+  toMode: string;
+  context: ModeContext;
+  validation: TransitionValidation;
+}
+
+interface ModeContext {
+  tasks: Task[];
+  configuration: SystemConfiguration;
+  workingDirectory: string;
+  metadata: Record<string, any>;
+}
+
+class ModeTransitionManager {
+  async transitionBetweenModes(
+    from: MemoryBankMode,
+    to: MemoryBankMode,
+    context: ModeContext
+  ): Promise<TransitionResult> {
+    // Validate transition is allowed
+    await this.validateTransition(from, to);
+
+    // Clean up source mode
+    await from.cleanup();
+
+    // Transfer context
+    const transferredContext = await this.transferContext(context, from, to);
+
+    // Initialize target mode
+    await to.initialize();
+
+    return {
+      success: true,
+      context: transferredContext,
+      timestamp: new Date()
+    };
+  }
+}
+```
+
+### 2. Service Isolation
+
+**Service Layer Design**
+```typescript
+// Each service is independently testable and deployable
+abstract class IsolatedService {
+  abstract name: string;
+  abstract version: string;
+
+  abstract initialize(config: ServiceConfig): Promise<void>;
+  abstract healthCheck(): Promise<HealthStatus>;
+  abstract shutdown(): Promise<void>;
+}
+
+class FileSystemService extends IsolatedService {
+  name = 'file-system';
+  version = '1.0.0';
+
+  private config: FileSystemConfig;
+
+  async initialize(config: FileSystemConfig): Promise<void> {
+    this.config = config;
+    await this.validatePermissions();
+    await this.createRequiredDirectories();
+  }
+
+  async readFile(path: string): Promise<string> {
+    // Isolated file reading with error handling
+    try {
+      return await fs.readFile(path, 'utf-8');
+    } catch (error) {
+      throw new FileSystemError(`Failed to read file: ${path}`, error);
+    }
+  }
+
+  async writeFile(path: string, content: string): Promise<void> {
+    // Isolated file writing with validation
+    await this.validateWritePermissions(path);
+    await this.createDirectoryIfNeeded(path);
+    await fs.writeFile(path, content, 'utf-8');
+  }
+
+  async healthCheck(): Promise<HealthStatus> {
+    return {
+      service: this.name,
+      status: 'healthy',
+      checks: {
+        permissions: await this.checkPermissions(),
+        diskSpace: await this.checkDiskSpace(),
+        accessibility: await this.checkAccessibility()
+      }
+    };
+  }
+}
+```
+
+**Configuration Service Isolation**
+```typescript
+class ConfigurationService extends IsolatedService {
+  name = 'configuration';
+  version = '1.0.0';
+
+  private configCache: Map<string, any> = new Map();
+
+  async loadConfiguration(path: string): Promise<Configuration> {
+    // Isolated configuration loading
+    if (this.configCache.has(path)) {
+      return this.configCache.get(path);
+    }
+
+    const config = await this.parseConfigurationFile(path);
+    await this.validateConfiguration(config);
+
+    this.configCache.set(path, config);
+    return config;
+  }
+
+  async updateConfiguration(
+    path: string,
+    updates: Partial<Configuration>
+  ): Promise<void> {
+    // Isolated configuration updates
+    const current = await this.loadConfiguration(path);
+    const updated = { ...current, ...updates };
+
+    await this.validateConfiguration(updated);
+    await this.writeConfigurationFile(path, updated);
+
+    // Update cache
+    this.configCache.set(path, updated);
+  }
+}
+```
+
+### 3. Data Isolation
+
+**Task Data Isolation**
+```typescript
+// Task data is completely isolated from other concerns
+class TaskDataManager {
+  private taskStore: Map<string, Task> = new Map();
+  private persistenceLayer: TaskPersistence;
+
+  constructor(persistenceLayer: TaskPersistence) {
+    this.persistenceLayer = persistenceLayer;
+  }
+
+  async addTask(task: Task): Promise<void> {
+    // Validate task in isolation
+    await this.validateTask(task);
+
+    // Store in memory
+    this.taskStore.set(task.id, task);
+
+    // Persist independently
+    await this.persistenceLayer.saveTask(task);
+  }
+
+  async getTask(id: string): Promise<Task | null> {
+    // Check memory first
+    if (this.taskStore.has(id)) {
+      return this.taskStore.get(id)!;
+    }
+
+    // Load from persistence
+    const task = await this.persistenceLayer.loadTask(id);
+    if (task) {
+      this.taskStore.set(id, task);
+    }
+
+    return task;
+  }
+
+  async updateTask(id: string, updates: Partial<Task>): Promise<void> {
+    const task = await this.getTask(id);
+    if (!task) {
+      throw new TaskNotFoundError(id);
+    }
+
+    const updatedTask = { ...task, ...updates };
+    await this.validateTask(updatedTask);
+
+    this.taskStore.set(id, updatedTask);
+    await this.persistenceLayer.saveTask(updatedTask);
+  }
+}
+
+// Persistence layer is isolated from business logic
+interface TaskPersistence {
+  saveTask(task: Task): Promise<void>;
+  loadTask(id: string): Promise<Task | null>;
+  loadAllTasks(): Promise<Task[]>;
+  deleteTask(id: string): Promise<void>;
+}
+
+class FileSystemTaskPersistence implements TaskPersistence {
+  constructor(private basePath: string) {}
+
+  async saveTask(task: Task): Promise<void> {
+    const filePath = path.join(this.basePath, `${task.id}.json`);
+    await fs.writeFile(filePath, JSON.stringify(task, null, 2));
+  }
+
+  async loadTask(id: string): Promise<Task | null> {
+    const filePath = path.join(this.basePath, `${id}.json`);
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      return JSON.parse(content);
+    } catch (error) {
+      return null;
+    }
+  }
+}
+```
+
+## 🧪 TESTING ISOLATION
+
+### Unit Testing Isolation
+
+**Isolated Component Testing**
+```typescript
+describe('VANMode - Isolated Testing', () => {
+  let vanMode: VANMode;
+  let mockFileSystem: jest.Mocked<FileSystemService>;
+  let mockConfig: jest.Mocked<ConfigurationService>;
+
+  beforeEach(() => {
+    // Create isolated test environment
+    mockFileSystem = createMockFileSystem();
+    mockConfig = createMockConfiguration();
+
+    vanMode = new VANMode(mockFileSystem, mockConfig);
+  });
+
+  test('should analyze requirements independently', async () => {
+    // Setup isolated test data
+    const testRequirements = {
+      description: 'Test requirement',
+      complexity: 'medium',
+      timeline: '1 week'
+    };
+
+    mockFileSystem.readFile.mockResolvedValue(JSON.stringify(testRequirements));
+
+    // Test in isolation
+    const result = await vanMode.analyzeRequirements();
+
+    // Verify isolated behavior
+    expect(result.complexity).toBe('Level 2');
+    expect(mockFileSystem.readFile).toHaveBeenCalledWith('requirements.json');
+    expect(mockConfig.loadConfiguration).not.toHaveBeenCalled();
+  });
+
+  test('should handle errors in isolation', async () => {
+    // Test error isolation
+    mockFileSystem.readFile.mockRejectedValue(new Error('File not found'));
+
+    // Verify error doesn't propagate beyond component
+    await expect(vanMode.analyzeRequirements()).rejects.toThrow('File not found');
+
+    // Verify component remains stable
+    expect(vanMode.isHealthy()).toBe(true);
+  });
+});
+```
+
+**Integration Testing with Isolation**
+```typescript
+describe('Mode Transition - Integration Testing', () => {
+  let transitionManager: ModeTransitionManager;
+  let vanMode: VANMode;
+  let planMode: PLANMode;
+
+  beforeEach(async () => {
+    // Create isolated integration test environment
+    const testContainer = await createIsolatedTestContainer();
+
+    vanMode = testContainer.get<VANMode>('VAN');
+    planMode = testContainer.get<PLANMode>('PLAN');
+    transitionManager = testContainer.get<ModeTransitionManager>('TransitionManager');
+  });
+
+  test('should transition between modes while maintaining isolation', async () => {
+    // Initialize VAN mode in isolation
+    await vanMode.initialize();
+    const vanResult = await vanMode.execute();
+
+    // Test transition maintains isolation
+    const transitionResult = await transitionManager.transitionBetweenModes(
+      vanMode,
+      planMode,
+      vanResult.context
+    );
+
+    // Verify isolation is maintained
+    expect(transitionResult.success).toBe(true);
+    expect(vanMode.isCleanedUp()).toBe(true);
+    expect(planMode.isInitialized()).toBe(true);
+  });
+});
+```
+
+## 📊 ISOLATION METRICS
+
+### Design Quality Metrics
+
+**Coupling Metrics**
+- Afferent coupling (Ca): Number of classes that depend on this class
+- Efferent coupling (Ce): Number of classes this class depends on
+- Instability (I): Ce / (Ca + Ce)
+- Target: I < 0.5 for stable components
+
+**Cohesion Metrics**
+- Lack of Cohesion of Methods (LCOM): Measure of method relationships
+- Target: LCOM < 0.3 for high cohesion
+- Functional cohesion: All methods work toward single goal
+
+**Isolation Quality Indicators**
+```typescript
+interface IsolationMetrics {
+  componentCoupling: number;        // Target: < 5 dependencies
+  interfaceStability: number;       // Target: > 0.8
+  testIsolation: number;           // Target: 100% isolated tests
+  errorContainment: number;        // Target: 100% error isolation
+  configurationIsolation: number; // Target: 100% config isolation
+}
+
+class IsolationAnalyzer {
+  analyzeComponent(component: any): IsolationMetrics {
+    return {
+      componentCoupling: this.calculateCoupling(component),
+      interfaceStability: this.calculateStability(component),
+      testIsolation: this.calculateTestIsolation(component),
+      errorContainment: this.calculateErrorContainment(component),
+      configurationIsolation: this.calculateConfigIsolation(component)
+    };
+  }
+}
+```
+
+## 🔧 ISOLATION PATTERNS
+
+### Dependency Injection Pattern
+
+**Service Container**
+```typescript
+class IsolatedServiceContainer {
+  private services: Map<string, any> = new Map();
+  private factories: Map<string, () => any> = new Map();
+
+  register<T>(name: string, factory: () => T): void {
+    this.factories.set(name, factory);
+  }
+
+  get<T>(name: string): T {
+    if (!this.services.has(name)) {
+      const factory = this.factories.get(name);
+      if (!factory) {
+        throw new Error(`Service not registered: ${name}`);
+      }
+      this.services.set(name, factory());
+    }
+    return this.services.get(name);
+  }
+
+  createIsolatedScope(): IsolatedServiceContainer {
+    // Create new container with same factories but isolated instances
+    const scope = new IsolatedServiceContainer();
+    this.factories.forEach((factory, name) => {
+      scope.register(name, factory);
+    });
+    return scope;
+  }
+}
+```
+
+### Event-Driven Isolation
+
+**Isolated Event System**
+```typescript
+class IsolatedEventBus {
+  private handlers: Map<string, Set<EventHandler>> = new Map();
+
+  subscribe(event: string, handler: EventHandler): void {
+    if (!this.handlers.has(event)) {
+      this.handlers.set(event, new Set());
+    }
+    this.handlers.get(event)!.add(handler);
+  }
+
+  async publish(event: string, data: any): Promise<void> {
+    const handlers = this.handlers.get(event);
+    if (!handlers) return;
+
+    // Execute handlers in isolation
+    const promises = Array.from(handlers).map(async (handler) => {
+      try {
+        await handler(data);
+      } catch (error) {
+        // Isolate errors to prevent cascade failures
+        console.error(`Handler error for event ${event}:`, error);
+      }
+    });
+
+    await Promise.allSettled(promises);
+  }
+}
+```
+
+## 🎯 ISOLATION BEST PRACTICES
+
+### Design Guidelines
+
+**Component Design**
+1. Single Responsibility: Each component has one clear purpose
+2. Interface Segregation: Small, focused interfaces
+3. Dependency Inversion: Depend on abstractions, not concretions
+4. Open/Closed: Open for extension, closed for modification
+
+**Error Isolation**
+1. Fail Fast: Detect errors early and locally
+2. Error Boundaries: Contain errors within components
+3. Graceful Degradation: Continue operation when possible
+4. Recovery Mechanisms: Automatic recovery from failures
+
+**Configuration Isolation**
+1. Environment-Specific: Separate configs per environment
+2. Validation: Validate all configuration at startup
+3. Immutability: Configuration should be immutable at runtime
+4. Defaults: Provide sensible defaults for all settings
+
+### Anti-Patterns to Avoid
+
+**Tight Coupling Anti-Patterns**
+- Direct file system access from business logic
+- Hard-coded dependencies between modes
+- Shared mutable state between components
+- Global variables and singletons
+
+**Poor Isolation Anti-Patterns**
+- Catching and ignoring errors from other components
+- Mixing configuration with business logic
+- Testing multiple components together
+- Shared test data between test suites
+
+This isolated design methodology ensures Memory Bank components remain maintainable, testable, and scalable through clear separation of concerns and minimal coupling.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/planning/isolated-design.mdc`
+
+```mdc
+---
+description: "Isolated design principles for maintainable systems"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# ISOLATED DESIGN PRINCIPLES
+
+> **TL;DR:** Design components with clear boundaries, minimal dependencies, and high cohesion for maintainable and testable systems.
+
+## 🏗️ ISOLATION ARCHITECTURE
+
+```mermaid
+graph TD
+    System["System"] --> ModuleA["Module A"]
+    System --> ModuleB["Module B"]
+    System --> ModuleC["Module C"]
+
+    ModuleA --> InterfaceA["Well-defined Interface"]
+    ModuleB --> InterfaceB["Well-defined Interface"]
+    ModuleC --> InterfaceC["Well-defined Interface"]
+
+    InterfaceA -.-> InterfaceB
+    InterfaceB -.-> InterfaceC
+
+    style ModuleA fill:#e1f5fe
+    style ModuleB fill:#e8f5e8
+    style ModuleC fill:#fff3e0
+```
+
+## 📋 ISOLATION DESIGN RULES
+
+### Rule #26: Component Isolation
+- **Principle**: Each component should be independently testable and deployable
+- **Implementation**: Clear interfaces, minimal external dependencies
+- **Benefits**: Easier testing, debugging, and maintenance
+
+### Rule #27: Dependency Inversion
+- **Principle**: Depend on abstractions, not concretions
+- **Implementation**: Use interfaces and dependency injection
+- **Benefits**: Flexibility, testability, loose coupling
+
+### Rule #28: Single Responsibility
+- **Principle**: Each component should have one reason to change
+- **Implementation**: Clear, focused component purposes
+- **Benefits**: Easier to understand, test, and modify
+
+## 🎯 DESIGN BOUNDARIES
+
+### Interface Design:
+```typescript
+// Good: Clear, focused interface
+interface UserRepository {
+  findById(id: string): Promise<User | null>;
+  save(user: User): Promise<void>;
+  delete(id: string): Promise<void>;
+}
+
+// Bad: Mixed responsibilities
+interface UserService {
+  findUser(id: string): Promise<User>;
+  saveUser(user: User): Promise<void>;
+  sendEmail(user: User): Promise<void>; // Different responsibility
+  generateReport(): Promise<Report>;    // Different responsibility
+}
+```
+
+### Dependency Management:
+```typescript
+// Good: Dependency injection
+class UserService {
+  constructor(
+    private userRepo: UserRepository,
+    private emailService: EmailService
+  ) {}
+}
+
+// Bad: Direct dependencies
+class UserService {
+  private userRepo = new DatabaseUserRepository(); // Hard dependency
+  private emailService = new SMTPEmailService();   // Hard dependency
+}
+```
+
+## 🔄 ISOLATION PATTERNS
+
+### 1. Repository Pattern
+- **Purpose**: Isolate data access logic
+- **Benefits**: Testable, swappable data sources
+- **Implementation**: Abstract data operations behind interfaces
+
+### 2. Service Layer Pattern
+- **Purpose**: Isolate business logic
+- **Benefits**: Reusable, testable business rules
+- **Implementation**: Stateless services with clear contracts
+
+### 3. Factory Pattern
+- **Purpose**: Isolate object creation
+- **Benefits**: Flexible object construction
+- **Implementation**: Abstract creation logic
+
+### 4. Observer Pattern
+- **Purpose**: Isolate event handling
+- **Benefits**: Loose coupling between components
+- **Implementation**: Event-driven communication
+
+## 📊 ISOLATION METRICS
+
+### Coupling Metrics:
+- **Afferent Coupling (Ca)**: Number of classes depending on this class
+- **Efferent Coupling (Ce)**: Number of classes this class depends on
+- **Instability (I)**: Ce / (Ca + Ce) - should be low for stable components
+
+### Cohesion Metrics:
+- **LCOM**: Lack of Cohesion of Methods - should be low
+- **Single Responsibility**: Each class should have one reason to change
+
+## 🧪 TESTING ISOLATION
+
+### Unit Test Isolation:
+```typescript
+// Good: Isolated unit test
+describe('UserService', () => {
+  let userService: UserService;
+  let mockUserRepo: jest.Mocked<UserRepository>;
+  let mockEmailService: jest.Mocked<EmailService>;
+
+  beforeEach(() => {
+    mockUserRepo = createMockUserRepository();
+    mockEmailService = createMockEmailService();
+    userService = new UserService(mockUserRepo, mockEmailService);
+  });
+
+  it('should create user successfully', async () => {
+    // Test only UserService logic, not dependencies
+  });
+});
+```
+
+### Integration Test Boundaries:
+- Test component interactions at well-defined boundaries
+- Use test doubles for external dependencies
+- Focus on contract compliance, not implementation
+
+## 🔍 ISOLATION REVIEW CHECKLIST
+
+### Component Design:
+- [ ] Single, clear responsibility
+- [ ] Well-defined public interface
+- [ ] Minimal external dependencies
+- [ ] No circular dependencies
+- [ ] Easily mockable for testing
+
+### Interface Design:
+- [ ] Focused on specific domain
+- [ ] Stable and versioned
+- [ ] Technology-agnostic
+- [ ] Easy to implement
+- [ ] Clear error handling
+
+### Dependency Management:
+- [ ] Dependencies injected, not created
+- [ ] Abstractions over concretions
+- [ ] Optional dependencies clearly marked
+- [ ] Circular dependencies avoided
+- [ ] Dependency graph is acyclic
+
+## 🚨 ISOLATION ANTI-PATTERNS
+
+### God Object:
+- **Problem**: Single class doing too much
+- **Solution**: Break into focused components
+- **Detection**: Large classes with many responsibilities
+
+### Tight Coupling:
+- **Problem**: Components directly dependent on each other
+- **Solution**: Introduce abstractions and interfaces
+- **Detection**: Changes in one component require changes in many others
+
+### Leaky Abstractions:
+- **Problem**: Implementation details exposed through interfaces
+- **Solution**: Design interfaces based on client needs
+- **Detection**: Interface changes when implementation changes
+
+## 📋 ISOLATION DESIGN TEMPLATE
+
+```markdown
+# Component: [Name]
+
+## Purpose
+[Single, clear responsibility]
+
+## Public Interface
+```typescript
+interface [ComponentName] {
+  [method1](params): ReturnType;
+  [method2](params): ReturnType;
+}
+```
+
+## Dependencies
+- [Dependency1]: [Purpose]
+- [Dependency2]: [Purpose]
+
+## Isolation Boundaries
+- **Input**: [What comes in]
+- **Output**: [What goes out]
+- **Side Effects**: [External changes]
+
+## Testing Strategy
+- **Unit Tests**: [Mock all dependencies]
+- **Integration Tests**: [Test with real dependencies]
+- **Contract Tests**: [Verify interface compliance]
+```
+
+This approach ensures components remain maintainable, testable, and evolvable over time.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/planning/phased-approach.mdc`
+
+```mdc
+---
+description: "Phased development approach for complex tasks"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PHASED DEVELOPMENT APPROACH
+
+> **TL;DR:** Break complex development tasks into manageable phases with clear deliverables and checkpoints.
+
+## 🔄 PHASED DEVELOPMENT WORKFLOW
+
+```mermaid
+graph TD
+    Start["Task Analysis"] --> Complexity{"Task Complexity"}
+    Complexity -->|"Simple"| SinglePhase["Single Phase"]
+    Complexity -->|"Complex"| MultiPhase["Multi-Phase"]
+
+    MultiPhase --> Phase1["Phase 1: Core"]
+    Phase1 --> Checkpoint1["Checkpoint 1"]
+    Checkpoint1 --> Phase2["Phase 2: Features"]
+    Phase2 --> Checkpoint2["Checkpoint 2"]
+    Checkpoint2 --> Phase3["Phase 3: Polish"]
+    Phase3 --> Complete["Complete"]
+
+    SinglePhase --> Complete
+```
+
+## 📋 PHASE PLANNING PRINCIPLES
+
+### Rule #1: Phased Approach for Complex Tasks
+- **When**: Tasks requiring >2 hours or affecting >3 components
+- **How**: Break into 3-5 phases with clear deliverables
+- **Why**: Reduces risk, enables early feedback, maintains momentum
+
+### Phase Structure:
+1. **Phase 1**: Core functionality (MVP)
+2. **Phase 2**: Extended features
+3. **Phase 3**: Integration & polish
+4. **Phase 4**: Testing & validation (if needed)
+5. **Phase 5**: Documentation & cleanup (if needed)
+
+## 🎯 PHASE DEFINITION TEMPLATE
+
+```
+## Phase [N]: [Name]
+**Goal**: [Clear objective]
+**Deliverables**:
+- [Specific output 1]
+- [Specific output 2]
+**Success Criteria**: [How to know it's done]
+**Time Estimate**: [Realistic estimate]
+**Dependencies**: [What must be done first]
+**Risks**: [Potential issues]
+```
+
+## 📊 CHECKPOINT VALIDATION
+
+At each phase checkpoint:
+- [ ] All deliverables completed
+- [ ] Success criteria met
+- [ ] No blocking issues
+- [ ] Ready for next phase
+- [ ] Documentation updated
+
+## 🚨 PHASE FAILURE HANDLING
+
+If a phase fails:
+1. **Analyze**: What went wrong?
+2. **Adjust**: Modify approach or scope
+3. **Restart**: Begin phase again with new plan
+4. **Escalate**: If multiple failures, reassess entire approach
+
+## 📋 PHASE TRACKING FORMAT
+
+```
+# Phase Progress
+
+## Phase 1: [Name] - [STATUS]
+- [x] Task 1
+- [x] Task 2
+- [ ] Task 3
+**Completion**: 67%
+
+## Phase 2: [Name] - [PLANNED]
+- [ ] Task 1
+- [ ] Task 2
+**Completion**: 0%
+```
+
+This approach ensures systematic progress while maintaining flexibility for adjustments.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/planning/problem-prioritization.mdc`
+
+```mdc
+---
+description: "Problem prioritization and triage rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PROBLEM PRIORITIZATION RULES
+
+> **TL;DR:** Systematic approach to prioritizing and triaging problems based on impact, urgency, and effort.
+
+## 🎯 PRIORITIZATION FRAMEWORK
+
+```mermaid
+graph TD
+    Problem["New Problem"] --> Assess["Assess Impact & Urgency"]
+    Assess --> Matrix["Priority Matrix"]
+    Matrix --> P1["P1: Critical"]
+    Matrix --> P2["P2: High"]
+    Matrix --> P3["P3: Medium"]
+    Matrix --> P4["P4: Low"]
+
+    P1 --> Immediate["Handle Immediately"]
+    P2 --> Schedule["Schedule Soon"]
+    P3 --> Backlog["Add to Backlog"]
+    P4 --> Defer["Defer or Reject"]
+```
+
+## 📋 PRIORITY CLASSIFICATION
+
+### Rule #3: Priority-Based Problem Handling
+
+#### P1 - Critical (Handle Immediately)
+- **Impact**: System down, data loss, security breach
+- **Urgency**: Immediate action required
+- **Examples**: Production outages, critical bugs, security vulnerabilities
+- **Response Time**: Within 1 hour
+- **Resource Allocation**: Drop everything else
+
+#### P2 - High (Schedule Soon)
+- **Impact**: Major feature broken, significant user impact
+- **Urgency**: Should be fixed within 24-48 hours
+- **Examples**: Major feature failures, performance degradation
+- **Response Time**: Within 4 hours
+- **Resource Allocation**: High priority in current sprint
+
+#### P3 - Medium (Add to Backlog)
+- **Impact**: Minor feature issues, usability problems
+- **Urgency**: Can wait for next sprint/release
+- **Examples**: UI glitches, minor bugs, enhancement requests
+- **Response Time**: Within 1 week
+- **Resource Allocation**: Normal backlog prioritization
+
+#### P4 - Low (Defer or Reject)
+- **Impact**: Nice-to-have improvements, edge cases
+- **Urgency**: No immediate timeline
+- **Examples**: Code cleanup, minor optimizations, future features
+- **Response Time**: When time permits
+- **Resource Allocation**: Fill-in work or reject
+
+## 🔍 IMPACT ASSESSMENT CRITERIA
+
+### Technical Impact:
+- **System Stability**: Does it affect system reliability?
+- **Performance**: Does it impact system performance?
+- **Security**: Are there security implications?
+- **Data Integrity**: Could it cause data corruption?
+
+### Business Impact:
+- **User Experience**: How many users are affected?
+- **Revenue**: Does it impact business revenue?
+- **Reputation**: Could it damage company reputation?
+- **Compliance**: Are there regulatory implications?
+
+### Development Impact:
+- **Blocking**: Does it block other development work?
+- **Technical Debt**: Does it increase technical debt?
+- **Maintainability**: Does it affect code maintainability?
+
+## ⏰ URGENCY ASSESSMENT
+
+### Time Sensitivity:
+- **Immediate**: Must be fixed now
+- **Same Day**: Must be fixed today
+- **This Week**: Should be fixed this week
+- **Next Sprint**: Can wait for next sprint
+- **Future**: No specific timeline
+
+### Escalation Triggers:
+- Customer complaints increasing
+- Multiple users reporting same issue
+- Issue spreading to other systems
+- Regulatory deadline approaching
+
+## 📊 PRIORITIZATION MATRIX
+
+| Impact/Urgency | High Urgency | Medium Urgency | Low Urgency |
+|----------------|--------------|----------------|-------------|
+| **High Impact** | P1 Critical | P2 High | P2 High |
+| **Medium Impact** | P2 High | P3 Medium | P3 Medium |
+| **Low Impact** | P3 Medium | P4 Low | P4 Low |
+
+## 🎯 TRIAGE PROCESS
+
+### Step 1: Initial Assessment (5 minutes)
+- [ ] Understand the problem
+- [ ] Assess immediate impact
+- [ ] Determine if it's truly urgent
+- [ ] Check for workarounds
+
+### Step 2: Classification (2 minutes)
+- [ ] Assign priority level (P1-P4)
+- [ ] Estimate effort required
+- [ ] Identify required skills/resources
+- [ ] Set expected resolution time
+
+### Step 3: Resource Allocation
+- [ ] Assign to appropriate team member
+- [ ] Allocate necessary resources
+- [ ] Communicate to stakeholders
+- [ ] Update tracking systems
+
+## 📋 PROBLEM TRACKING TEMPLATE
+
+```markdown
+# Problem: [Brief Description]
+
+## Classification
+- **Priority**: P[1-4]
+- **Impact**: [High/Medium/Low]
+- **Urgency**: [High/Medium/Low]
+- **Effort**: [Small/Medium/Large]
+
+## Details
+- **Reporter**: [Name]
+- **Date Reported**: [Date]
+- **Affected Systems**: [List]
+- **User Impact**: [Description]
+
+## Assessment
+- **Root Cause**: [If known]
+- **Workaround**: [If available]
+- **Dependencies**: [List]
+- **Risks**: [Potential risks]
+
+## Resolution Plan
+- **Assigned To**: [Name]
+- **Target Resolution**: [Date/Time]
+- **Approach**: [High-level plan]
+- **Resources Needed**: [List]
+
+## Status Updates
+- [Date]: [Status update]
+```
+
+## 🚨 ESCALATION RULES
+
+### Automatic Escalation:
+- P1 issues not acknowledged within 30 minutes
+- P2 issues not started within 4 hours
+- Any issue that increases in scope or impact
+- Issues that reveal systemic problems
+
+### Escalation Process:
+1. **Notify**: Alert next level of management
+2. **Reassess**: Re-evaluate priority and resources
+3. **Reallocate**: Assign additional resources if needed
+4. **Communicate**: Update all stakeholders
+
+## 📊 PRIORITY REVIEW PROCESS
+
+### Daily Review (P1-P2):
+- Review all critical and high priority issues
+- Assess progress and blockers
+- Reallocate resources if needed
+
+### Weekly Review (All Priorities):
+- Review entire backlog
+- Reprioritize based on new information
+- Archive resolved issues
+- Update stakeholders
+
+This systematic approach ensures critical issues get immediate attention while maintaining overall development velocity.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/planning/progress-documentation.mdc`
+
+```mdc
+---
+description: "Progress documentation and tracking rules"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# PROGRESS DOCUMENTATION RULES
+
+> **TL;DR:** Maintain clear, actionable progress documentation that enables quick context switching and collaboration.
+
+## 📊 PROGRESS TRACKING WORKFLOW
+
+```mermaid
+graph TD
+    Start["Begin Task"] --> InitDoc["Initialize Progress Doc"]
+    InitDoc --> Work["Work on Task"]
+    Work --> Update["Update Progress"]
+    Update --> Checkpoint{"Checkpoint?"}
+    Checkpoint -->|"Yes"| Review["Review & Summarize"]
+    Checkpoint -->|"No"| Work
+    Review --> Archive["Archive Completed"]
+    Archive --> Next["Next Task"]
+```
+
+## 📋 PROGRESS DOCUMENTATION RULES
+
+### Rule #24: Real-time Progress Updates
+- **When**: After each significant change or every 30 minutes
+- **What**: Current status, next steps, blockers
+- **Where**: `progress.md` or task-specific progress file
+- **Format**: Structured entries with timestamps
+
+### Rule #25: Checkpoint Summaries
+- **When**: At natural breakpoints (end of phase, day, major milestone)
+- **What**: What was accomplished, what's next, lessons learned
+- **Format**: Executive summary + detailed breakdown
+
+## 📝 PROGRESS ENTRY TEMPLATE
+
+```markdown
+## [TIMESTAMP] - [COMPONENT/FEATURE]
+
+### Status: [IN_PROGRESS/COMPLETED/BLOCKED/PAUSED]
+
+### Accomplished:
+- [Specific achievement 1]
+- [Specific achievement 2]
+
+### Current Focus:
+[What you're working on right now]
+
+### Next Steps:
+1. [Immediate next action]
+2. [Following action]
+
+### Blockers:
+- [Issue 1]: [Description and potential solution]
+
+### Notes:
+[Any important observations, decisions, or context]
+
+### Time Spent: [X hours/minutes]
+```
+
+## 🎯 CHECKPOINT SUMMARY TEMPLATE
+
+```markdown
+# Checkpoint Summary: [DATE/PHASE]
+
+## Overview
+**Period**: [Start] - [End]
+**Focus**: [Main objective]
+**Status**: [Overall status]
+
+## Key Accomplishments
+1. [Major achievement 1]
+2. [Major achievement 2]
+3. [Major achievement 3]
+
+## Metrics
+- **Time Spent**: [Total time]
+- **Components Completed**: [X/Y]
+- **Tests Passing**: [X/Y]
+- **Issues Resolved**: [X]
+
+## Challenges & Solutions
+- **Challenge**: [Description]
+  **Solution**: [How it was resolved]
+
+## Lessons Learned
+- [Key insight 1]
+- [Key insight 2]
+
+## Next Phase Plan
+**Objective**: [Next phase goal]
+**Priority Tasks**:
+1. [High priority task]
+2. [High priority task]
+
+**Estimated Time**: [Time estimate]
+```
+
+## 📊 PROGRESS METRICS
+
+Track these key metrics:
+- **Velocity**: Tasks completed per time unit
+- **Quality**: Tests passing, bugs found
+- **Efficiency**: Time spent vs. estimated
+- **Blockers**: Number and resolution time
+
+## 🔄 CONTEXT SWITCHING SUPPORT
+
+When switching contexts:
+1. **Save State**: Document exactly where you left off
+2. **Next Action**: Write the immediate next step
+3. **Context**: Note any important mental context
+4. **Restore**: Use documentation to quickly resume
+
+### Context Switch Template:
+```markdown
+## Context Switch: [TIMESTAMP]
+
+### Current State:
+[Exactly where you are in the task]
+
+### Immediate Next Action:
+[The very next thing to do when resuming]
+
+### Mental Context:
+[Important thoughts, approaches, or insights to remember]
+
+### Files Modified:
+- [file1.ext]: [what was changed]
+- [file2.ext]: [what was changed]
+
+### Resume Instructions:
+[Step-by-step instructions to get back into flow]
+```
+
+## 📋 DAILY PROGRESS SUMMARY
+
+End each day with:
+```markdown
+# Daily Summary: [DATE]
+
+## Today's Focus: [Main objective]
+
+## Completed:
+- [Achievement 1]
+- [Achievement 2]
+
+## In Progress:
+- [Task 1]: [Status and next step]
+
+## Tomorrow's Priority:
+1. [Top priority task]
+2. [Second priority task]
+
+## Blockers for Tomorrow:
+- [Blocker 1]: [Plan to resolve]
+
+## Time Breakdown:
+- [Component A]: [X hours]
+- [Component B]: [Y hours]
+- [Meetings/Admin]: [Z hours]
+```
+
+This documentation approach ensures continuity and enables effective collaboration.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc`
+
+```mdc
+---
+description: "Backward compatibility guidelines for Memory Bank refactoring"
+globs: "**/refactoring/**", "**/compatibility/**", "**/migration/**"
+alwaysApply: false
+---
+
+# BACKWARD COMPATIBILITY GUIDELINES
+
+> **TL;DR:** Comprehensive backward compatibility strategy for Memory Bank refactoring, ensuring seamless upgrades and migration paths while maintaining system stability and user experience.
+
+## 🔄 COMPATIBILITY OVERVIEW
+
+Backward compatibility ensures that Memory Bank upgrades and refactoring don't break existing workflows, configurations, or user data, providing smooth evolution paths.
+
+### Compatibility Principles
+
+**Non-Breaking Changes**
+- Additive modifications only
+- Preserve existing interfaces
+- Maintain data format compatibility
+- Support legacy configurations
+
+**Graceful Deprecation**
+- Clear deprecation warnings
+- Migration assistance tools
+- Extended support periods
+- Documentation updates
+
+**Version Management**
+- Semantic versioning
+- Clear upgrade paths
+- Rollback capabilities
+- Compatibility matrices
+
+## 📋 COMPATIBILITY STRATEGIES
+
+### 1. Interface Compatibility
+
+**API Versioning Strategy**
+```typescript
+// Maintain multiple API versions simultaneously
+interface MemoryBankAPI_v1 {
+  createTask(name: string, priority: string): Promise<string>;
+  updateTask(id: string, updates: any): Promise<void>;
+  getTasks(): Promise<any[]>;
+}
+
+interface MemoryBankAPI_v2 {
+  createTask(task: TaskCreationRequest): Promise<TaskResponse>;
+  updateTask(id: string, updates: TaskUpdateRequest): Promise<TaskResponse>;
+  getTasks(filter?: TaskFilter): Promise<TaskResponse[]>;
+  // New methods
+  getTaskHistory(id: string): Promise<TaskHistoryResponse>;
+  bulkUpdateTasks(updates: BulkUpdateRequest): Promise<BulkUpdateResponse>;
+}
+
+// Adapter pattern for backward compatibility
+class MemoryBankAPI_v1_Adapter implements MemoryBankAPI_v1 {
+  constructor(private v2Api: MemoryBankAPI_v2) {}
+
+  async createTask(name: string, priority: string): Promise<string> {
+    const request: TaskCreationRequest = {
+      name,
+      priority: priority as TaskPriority,
+      description: '',
+      metadata: {}
+    };
+
+    const response = await this.v2Api.createTask(request);
+    return response.id;
+  }
+
+  async updateTask(id: string, updates: any): Promise<void> {
+    // Convert v1 format to v2 format
+    const v2Updates: TaskUpdateRequest = {
+      name: updates.name,
+      priority: updates.priority,
+      status: updates.status,
+      metadata: updates.metadata || {}
+    };
+
+    await this.v2Api.updateTask(id, v2Updates);
+  }
+
+  async getTasks(): Promise<any[]> {
+    const v2Tasks = await this.v2Api.getTasks();
+
+    // Convert v2 format back to v1 format
+    return v2Tasks.map(task => ({
+      id: task.id,
+      name: task.name,
+      priority: task.priority,
+      status: task.status,
+      created: task.metadata.created
+    }));
+  }
+}
+```
+
+**Configuration Compatibility**
+```typescript
+// Support multiple configuration formats
+interface LegacyConfig {
+  taskDir: string;
+  archiveDir: string;
+  enableNotifications: boolean;
+  theme: string;
+}
+
+interface ModernConfig {
+  storage: {
+    tasksDirectory: string;
+    archiveDirectory: string;
+    templatesDirectory: string;
+  };
+  preferences: {
+    notifications: boolean;
+    theme: string;
+    autoSave: boolean;
+  };
+  modes: {
+    [key: string]: ModeConfiguration;
+  };
+}
+
+class ConfigurationMigrator {
+  migrateFromLegacy(legacy: LegacyConfig): ModernConfig {
+    return {
+      storage: {
+        tasksDirectory: legacy.taskDir || 'tasks',
+        archiveDirectory: legacy.archiveDir || 'archive',
+        templatesDirectory: 'templates'
+      },
+      preferences: {
+        notifications: legacy.enableNotifications !== false,
+        theme: legacy.theme || 'default',
+        autoSave: true
+      },
+      modes: {
+        VAN: { enabled: true },
+        PLAN: { enabled: true },
+        CREATIVE: { enabled: true },
+        IMPLEMENT: { enabled: true },
+        REFLECT: { enabled: true },
+        ARCHIVE: { enabled: true }
+      }
+    };
+  }
+
+  async loadConfiguration(configPath: string): Promise<ModernConfig> {
+    const rawConfig = await this.readConfigFile(configPath);
+
+    // Detect configuration version
+    if (this.isLegacyFormat(rawConfig)) {
+      console.warn('Legacy configuration detected. Consider upgrading.');
+      return this.migrateFromLegacy(rawConfig as LegacyConfig);
+    }
+
+    return rawConfig as ModernConfig;
+  }
+}
+```
+
+### 2. Data Format Compatibility
+
+**Task Format Evolution**
+```typescript
+// Support multiple task formats
+interface TaskFormat_v1 {
+  id: string;
+  name: string;
+  status: 'new' | 'active' | 'done';
+  priority: 'low' | 'normal' | 'high';
+  created: string;
+}
+
+interface TaskFormat_v2 {
+  id: string;
+  name: string;
+  description: string;
+  status: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'BLOCKED';
+  priority: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
+  created: Date;
+  updated: Date;
+  metadata: TaskMetadata;
+}
+
+class TaskFormatMigrator {
+  migrateTask(task: any): TaskFormat_v2 {
+    // Detect task format version
+    if (this.isV1Format(task)) {
+      return this.migrateFromV1(task as TaskFormat_v1);
+    }
+
+    return task as TaskFormat_v2;
+  }
+
+  private migrateFromV1(v1Task: TaskFormat_v1): TaskFormat_v2 {
+    return {
+      id: v1Task.id,
+      name: v1Task.name,
+      description: '',
+      status: this.mapV1Status(v1Task.status),
+      priority: this.mapV1Priority(v1Task.priority),
+      created: new Date(v1Task.created),
+      updated: new Date(),
+      metadata: {
+        version: '2.0',
+        migratedFrom: '1.0',
+        originalStatus: v1Task.status,
+        originalPriority: v1Task.priority
+      }
+    };
+  }
+
+  private mapV1Status(v1Status: string): TaskFormat_v2['status'] {
+    const statusMap = {
+      'new': 'PLANNED',
+      'active': 'IN_PROGRESS',
+      'done': 'COMPLETED'
+    };
+    return statusMap[v1Status] || 'PLANNED';
+  }
+}
+```
+
+**File Format Compatibility**
+```typescript
+// Support multiple file formats
+class FileFormatHandler {
+  async readTasksFile(filePath: string): Promise<TaskFormat_v2[]> {
+    const content = await fs.readFile(filePath, 'utf-8');
+
+    // Detect file format
+    if (filePath.endsWith('.json')) {
+      return this.parseJSONFormat(content);
+    } else if (filePath.endsWith('.yaml') || filePath.endsWith('.yml')) {
+      return this.parseYAMLFormat(content);
+    } else if (filePath.endsWith('.md')) {
+      return this.parseMarkdownFormat(content);
+    }
+
+    throw new Error(`Unsupported file format: ${filePath}`);
+  }
+
+  private parseMarkdownFormat(content: string): TaskFormat_v2[] {
+    // Parse legacy markdown format
+    const tasks: TaskFormat_v2[] = [];
+    const lines = content.split('\n');
+
+    for (const line of lines) {
+      if (line.startsWith('- [ ]') || line.startsWith('- [x]')) {
+        const task = this.parseMarkdownTask(line);
+        if (task) {
+          tasks.push(task);
+        }
+      }
+    }
+
+    return tasks;
+  }
+
+  private parseMarkdownTask(line: string): TaskFormat_v2 | null {
+    // Parse: "- [x] Task name (priority: high)"
+    const match = line.match(/^- \[([ x])\] (.+?)(?:\s*\(priority:\s*(\w+)\))?$/);
+    if (!match) return null;
+
+    const [, completed, name, priority] = match;
+
+    return {
+      id: this.generateTaskId(name),
+      name: name.trim(),
+      description: '',
+      status: completed === 'x' ? 'COMPLETED' : 'PLANNED',
+      priority: this.mapLegacyPriority(priority || 'normal'),
+      created: new Date(),
+      updated: new Date(),
+      metadata: {
+        version: '2.0',
+        migratedFrom: 'markdown',
+        source: 'legacy'
+      }
+    };
+  }
+}
+```
+
+### 3. Command Compatibility
+
+**CLI Command Evolution**
+```typescript
+// Maintain backward compatibility for CLI commands
+class CompatibleCommandHandler {
+  async handleCommand(command: string, args: string[]): Promise<void> {
+    // Support legacy command formats
+    if (this.isLegacyCommand(command)) {
+      await this.handleLegacyCommand(command, args);
+      return;
+    }
+
+    // Handle modern commands
+    await this.handleModernCommand(command, args);
+  }
+
+  private async handleLegacyCommand(command: string, args: string[]): Promise<void> {
+    console.warn(`Legacy command '${command}' is deprecated. Use modern equivalent.`);
+
+    switch (command) {
+      case 'analyze':
+        // Map to modern VAN mode
+        await this.executeMode('VAN', args);
+        break;
+      case 'design':
+        // Map to modern CREATIVE mode
+        await this.executeMode('CREATIVE', args);
+        break;
+      case 'build':
+        // Map to modern IMPLEMENT mode
+        await this.executeMode('IMPLEMENT', args);
+        break;
+      case 'review':
+        // Map to modern REFLECT mode
+        await this.executeMode('REFLECT', args);
+        break;
+      default:
+        throw new Error(`Unknown legacy command: ${command}`);
+    }
+  }
+}
+```
+
+## 🔄 MIGRATION STRATEGIES
+
+### Gradual Migration Approach
+
+**Phase-Based Migration**
+```typescript
+interface MigrationPhase {
+  name: string;
+  description: string;
+  prerequisites: string[];
+  actions: MigrationAction[];
+  rollbackActions: MigrationAction[];
+  validations: ValidationCheck[];
+}
+
+class GradualMigrationManager {
+  private phases: MigrationPhase[] = [
+    {
+      name: 'Phase 1: Configuration Migration',
+      description: 'Migrate configuration files to new format',
+      prerequisites: ['backup_created'],
+      actions: [
+        { type: 'migrate_config', source: 'config.json', target: 'config.yaml' },
+        { type: 'validate_config', target: 'config.yaml' }
+      ],
+      rollbackActions: [
+        { type: 'restore_config', source: 'config.json.backup' }
+      ],
+      validations: [
+        { type: 'config_valid', target: 'config.yaml' },
+        { type: 'system_functional' }
+      ]
+    },
+    {
+      name: 'Phase 2: Task Format Migration',
+      description: 'Migrate task files to new format',
+      prerequisites: ['phase_1_complete'],
+      actions: [
+        { type: 'migrate_tasks', source: 'tasks.md', target: 'tasks.yaml' },
+        { type: 'validate_tasks', target: 'tasks.yaml' }
+      ],
+      rollbackActions: [
+        { type: 'restore_tasks', source: 'tasks.md.backup' }
+      ],
+      validations: [
+        { type: 'tasks_valid', target: 'tasks.yaml' },
+        { type: 'data_integrity' }
+      ]
+    }
+  ];
+
+  async executeMigration(): Promise<MigrationResult> {
+    const results: PhaseResult[] = [];
+
+    for (const phase of this.phases) {
+      try {
+        console.log(`Executing ${phase.name}...`);
+
+        // Check prerequisites
+        await this.checkPrerequisites(phase.prerequisites);
+
+        // Execute actions
+        await this.executeActions(phase.actions);
+
+        // Validate results
+        await this.validatePhase(phase.validations);
+
+        results.push({
+          phase: phase.name,
+          status: 'success',
+          timestamp: new Date()
+        });
+
+      } catch (error) {
+        console.error(`Phase ${phase.name} failed:`, error);
+
+        // Execute rollback
+        await this.executeActions(phase.rollbackActions);
+
+        results.push({
+          phase: phase.name,
+          status: 'failed',
+          error: error.message,
+          timestamp: new Date()
+        });
+
+        break; // Stop migration on failure
+      }
+    }
+
+    return {
+      phases: results,
+      overallStatus: results.every(r => r.status === 'success') ? 'success' : 'failed'
+    };
+  }
+}
+```
+
+### Deprecation Management
+
+**Deprecation Warning System**
+```typescript
+class DeprecationManager {
+  private deprecations: Map<string, DeprecationInfo> = new Map();
+
+  registerDeprecation(feature: string, info: DeprecationInfo): void {
+    this.deprecations.set(feature, info);
+  }
+
+  checkDeprecation(feature: string): void {
+    const deprecation = this.deprecations.get(feature);
+    if (!deprecation) return;
+
+    const now = new Date();
+    const warningPeriod = new Date(deprecation.deprecatedSince);
+    warningPeriod.setMonth(warningPeriod.getMonth() + 6); // 6 months warning
+
+    if (now > warningPeriod && now < deprecation.removalDate) {
+      console.warn(
+        `⚠️ DEPRECATION WARNING: ${feature} is deprecated and will be removed on ${deprecation.removalDate.toDateString()}. ` +
+        `Please use ${deprecation.replacement} instead. ` +
+        `Migration guide: ${deprecation.migrationGuide}`
+      );
+    } else if (now >= deprecation.removalDate) {
+      throw new Error(
+        `❌ FEATURE REMOVED: ${feature} has been removed. ` +
+        `Please use ${deprecation.replacement}. ` +
+        `Migration guide: ${deprecation.migrationGuide}`
+      );
+    }
+  }
+}
+
+interface DeprecationInfo {
+  deprecatedSince: Date;
+  removalDate: Date;
+  replacement: string;
+  migrationGuide: string;
+  reason: string;
+}
+```
+
+## 📊 COMPATIBILITY TESTING
+
+### Automated Compatibility Tests
+
+**Version Compatibility Matrix**
+```typescript
+describe('Backward Compatibility Tests', () => {
+  const testVersions = ['1.0.0', '1.1.0', '1.2.0', '2.0.0'];
+
+  testVersions.forEach(version => {
+    describe(`Compatibility with version ${version}`, () => {
+      test('should load legacy configuration', async () => {
+        const legacyConfig = await loadTestConfig(version);
+        const migrator = new ConfigurationMigrator();
+
+        const modernConfig = await migrator.migrateFromLegacy(legacyConfig);
+
+        expect(modernConfig).toBeDefined();
+        expect(modernConfig.storage).toBeDefined();
+        expect(modernConfig.preferences).toBeDefined();
+      });
+
+      test('should migrate legacy tasks', async () => {
+        const legacyTasks = await loadTestTasks(version);
+        const migrator = new TaskFormatMigrator();
+
+        const modernTasks = legacyTasks.map(task => migrator.migrateTask(task));
+
+        expect(modernTasks).toHaveLength(legacyTasks.length);
+        modernTasks.forEach(task => {
+          expect(task.id).toBeDefined();
+          expect(task.name).toBeDefined();
+          expect(task.status).toMatch(/^(PLANNED|IN_PROGRESS|COMPLETED|BLOCKED)$/);
+        });
+      });
+
+      test('should handle legacy commands', async () => {
+        const commandHandler = new CompatibleCommandHandler();
+
+        // Test legacy command mapping
+        await expect(commandHandler.handleCommand('analyze', [])).resolves.not.toThrow();
+        await expect(commandHandler.handleCommand('design', [])).resolves.not.toThrow();
+        await expect(commandHandler.handleCommand('build', [])).resolves.not.toThrow();
+      });
+    });
+  });
+});
+```
+
+**Data Integrity Tests**
+```typescript
+describe('Data Migration Integrity', () => {
+  test('should preserve all task data during migration', async () => {
+    const originalTasks = await loadLegacyTasks();
+    const migrator = new TaskFormatMigrator();
+
+    const migratedTasks = originalTasks.map(task => migrator.migrateTask(task));
+
+    // Verify no data loss
+    expect(migratedTasks).toHaveLength(originalTasks.length);
+
+    // Verify essential data preserved
+    for (let i = 0; i < originalTasks.length; i++) {
+      const original = originalTasks[i];
+      const migrated = migratedTasks[i];
+
+      expect(migrated.id).toBe(original.id);
+      expect(migrated.name).toBe(original.name);
+      expect(migrated.metadata.originalStatus).toBe(original.status);
+    }
+  });
+
+  test('should maintain referential integrity', async () => {
+    const originalData = await loadCompleteDataSet();
+    const migrationManager = new GradualMigrationManager();
+
+    const result = await migrationManager.executeMigration();
+
+    expect(result.overallStatus).toBe('success');
+
+    // Verify relationships preserved
+    const migratedData = await loadCompleteDataSet();
+    await verifyReferentialIntegrity(originalData, migratedData);
+  });
+});
+```
+
+## 🎯 COMPATIBILITY BEST PRACTICES
+
+### Design Guidelines
+
+**API Design**
+1. **Additive Changes Only**: Never remove or change existing API methods
+2. **Optional Parameters**: New parameters should be optional with defaults
+3. **Versioned Endpoints**: Provide versioned API endpoints for major changes
+4. **Clear Deprecation**: Provide clear deprecation notices and timelines
+
+**Data Format Design**
+1. **Schema Evolution**: Design schemas to support evolution
+2. **Version Fields**: Include version information in data structures
+3. **Default Values**: Provide sensible defaults for new fields
+4. **Migration Scripts**: Provide automated migration tools
+
+**Configuration Design**
+1. **Backward Compatible**: New configurations should not break old setups
+2. **Migration Assistance**: Provide tools to migrate configurations
+3. **Validation**: Validate configurations and provide helpful error messages
+4. **Documentation**: Document all configuration changes clearly
+
+### Migration Planning
+
+**Pre-Migration Checklist**
+- [ ] Create comprehensive backups
+- [ ] Document current system state
+- [ ] Identify all dependencies
+- [ ] Plan rollback procedures
+- [ ] Test migration in isolated environment
+- [ ] Prepare user communication
+
+**Post-Migration Validation**
+- [ ] Verify all data migrated correctly
+- [ ] Test all functionality works
+- [ ] Validate performance hasn't degraded
+- [ ] Confirm user workflows still function
+- [ ] Monitor for issues in production
+- [ ] Gather user feedback
+
+This backward compatibility framework ensures smooth Memory Bank evolution while maintaining user trust and system stability.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc`
+
+```mdc
+---
+description: "Gradual refactoring methodology for Memory Bank development"
+globs: "**/refactoring/**", "**/gradual/**", "**/incremental/**"
+alwaysApply: false
+---
+
+# GRADUAL REFACTORING METHODOLOGY
+
+> **TL;DR:** Systematic approach to Memory Bank refactoring through incremental improvements, minimizing risk while maximizing system evolution and maintainability.
+
+## 🔄 GRADUAL REFACTORING OVERVIEW
+
+Gradual refactoring enables continuous system improvement through small, safe, incremental changes that collectively achieve significant architectural improvements without disrupting system stability.
+
+### Core Principles
+
+**Incremental Progress**
+- Small, focused changes
+- Continuous validation
+- Reversible modifications
+- Measurable improvements
+
+**Risk Minimization**
+- Comprehensive testing at each step
+- Rollback capabilities
+- Parallel system operation
+- Gradual user migration
+
+**Continuous Value**
+- Immediate benefits from each change
+- Progressive system improvement
+- Maintained system functionality
+- Enhanced user experience
+
+## 📋 REFACTORING STRATEGIES
+
+### 1. Strangler Fig Pattern
+
+**Legacy System Replacement**
+```typescript
+// Gradually replace legacy components with modern implementations
+interface LegacyComponent {
+  processTask(task: any): any;
+  validateInput(input: any): boolean;
+  generateOutput(data: any): string;
+}
+
+interface ModernComponent {
+  processTask(task: Task): TaskResult;
+  validateInput(input: TaskInput): ValidationResult;
+  generateOutput(data: TaskData): FormattedOutput;
+}
+
+class StranglerFigAdapter {
+  private legacyComponent: LegacyComponent;
+  private modernComponent: ModernComponent;
+  private migrationPercentage: number = 0;
+
+  constructor(legacy: LegacyComponent, modern: ModernComponent) {
+    this.legacyComponent = legacy;
+    this.modernComponent = modern;
+  }
+
+  async processTask(task: Task): Promise<TaskResult> {
+    // Gradually migrate traffic to modern component
+    if (this.shouldUseModeComponent(task)) {
+      try {
+        const result = await this.modernComponent.processTask(task);
+        this.recordSuccess('modern');
+        return result;
+      } catch (error) {
+        console.warn('Modern component failed, falling back to legacy:', error);
+        return this.legacyComponent.processTask(task);
+      }
+    } else {
+      return this.legacyComponent.processTask(task);
+    }
+  }
+
+  private shouldUseModeComponent(task: Task): boolean {
+    // Gradually increase migration percentage based on confidence
+    const taskHash = this.hashTask(task);
+    return (taskHash % 100) < this.migrationPercentage;
+  }
+
+  increaseMigrationPercentage(increment: number): void {
+    this.migrationPercentage = Math.min(100, this.migrationPercentage + increment);
+    console.log(`Migration percentage increased to ${this.migrationPercentage}%`);
+  }
+
+  rollbackMigration(percentage: number): void {
+    this.migrationPercentage = Math.max(0, percentage);
+    console.log(`Migration rolled back to ${this.migrationPercentage}%`);
+  }
+}
+```
+
+### 2. Branch by Abstraction
+
+**Safe Feature Migration**
+```typescript
+// Create abstraction layer for safe feature migration
+interface TaskProcessor {
+  processTask(task: Task): Promise<TaskResult>;
+}
+
+class LegacyTaskProcessor implements TaskProcessor {
+  async processTask(task: Task): Promise<TaskResult> {
+    // Legacy implementation
+    return this.legacyProcess(task);
+  }
+
+  private legacyProcess(task: Task): TaskResult {
+    // Existing legacy logic
+    return {
+      id: task.id,
+      status: 'processed',
+      result: 'legacy result'
+    };
+  }
+}
+
+class ModernTaskProcessor implements TaskProcessor {
+  async processTask(task: Task): Promise<TaskResult> {
+    // Modern implementation with improved logic
+    return this.modernProcess(task);
+  }
+
+  private async modernProcess(task: Task): Promise<TaskResult> {
+    // New improved logic
+    const validation = await this.validateTask(task);
+    const processing = await this.enhancedProcessing(task);
+    const optimization = await this.optimizeResult(processing);
+
+    return {
+      id: task.id,
+      status: 'processed',
+      result: optimization.result,
+      metadata: {
+        processingTime: optimization.time,
+        qualityScore: optimization.quality
+      }
+    };
+  }
+}
+
+class TaskProcessorRouter {
+  private processors: Map<string, TaskProcessor> = new Map();
+  private routingRules: RoutingRule[] = [];
+
+  registerProcessor(name: string, processor: TaskProcessor): void {
+    this.processors.set(name, processor);
+  }
+
+  addRoutingRule(rule: RoutingRule): void {
+    this.routingRules.push(rule);
+  }
+
+  async processTask(task: Task): Promise<TaskResult> {
+    const processorName = this.selectProcessor(task);
+    const processor = this.processors.get(processorName);
+
+    if (!processor) {
+      throw new Error(`Processor not found: ${processorName}`);
+    }
+
+    return await processor.processTask(task);
+  }
+
+  private selectProcessor(task: Task): string {
+    for (const rule of this.routingRules) {
+      if (rule.condition(task)) {
+        return rule.processor;
+      }
+    }
+
+    return 'legacy'; // Default fallback
+  }
+}
+```
+
+### 3. Parallel Run Pattern
+
+**Risk-Free Validation**
+```typescript
+// Run old and new implementations in parallel for validation
+class ParallelRunManager {
+  private primaryProcessor: TaskProcessor;
+  private candidateProcessor: TaskProcessor;
+  private comparisonEnabled: boolean = false;
+
+  constructor(primary: TaskProcessor, candidate: TaskProcessor) {
+    this.primaryProcessor = primary;
+    this.candidateProcessor = candidate;
+  }
+
+  async processTask(task: Task): Promise<TaskResult> {
+    // Always use primary for actual result
+    const primaryResult = await this.primaryProcessor.processTask(task);
+
+    // Run candidate in parallel for comparison (if enabled)
+    if (this.comparisonEnabled) {
+      this.runCandidateComparison(task, primaryResult);
+    }
+
+    return primaryResult;
+  }
+
+  private async runCandidateComparison(
+    task: Task,
+    primaryResult: TaskResult
+  ): Promise<void> {
+    try {
+      const candidateResult = await this.candidateProcessor.processTask(task);
+      await this.compareResults(task, primaryResult, candidateResult);
+    } catch (error) {
+      this.logCandidateError(task, error);
+    }
+  }
+
+  private async compareResults(
+    task: Task,
+    primary: TaskResult,
+    candidate: TaskResult
+  ): Promise<void> {
+    const comparison: ResultComparison = {
+      taskId: task.id,
+      timestamp: new Date(),
+      primaryResult: primary,
+      candidateResult: candidate,
+      matches: this.resultsMatch(primary, candidate),
+      differences: this.findDifferences(primary, candidate)
+    };
+
+    await this.recordComparison(comparison);
+
+    if (!comparison.matches) {
+      console.warn(`Result mismatch for task ${task.id}:`, comparison.differences);
+    }
+  }
+
+  enableComparison(): void {
+    this.comparisonEnabled = true;
+    console.log('Parallel comparison enabled');
+  }
+
+  disableComparison(): void {
+    this.comparisonEnabled = false;
+    console.log('Parallel comparison disabled');
+  }
+
+  async getComparisonReport(): Promise<ComparisonReport> {
+    const comparisons = await this.loadComparisons();
+
+    return {
+      totalComparisons: comparisons.length,
+      matchRate: this.calculateMatchRate(comparisons),
+      commonDifferences: this.analyzeCommonDifferences(comparisons),
+      recommendations: this.generateRecommendations(comparisons)
+    };
+  }
+}
+```
+
+## 🔧 REFACTORING PHASES
+
+### Phase 1: Preparation and Analysis
+
+**System Assessment**
+```typescript
+class RefactoringPreparation {
+  async analyzeSystem(): Promise<SystemAnalysis> {
+    return {
+      codeMetrics: await this.analyzeCodeMetrics(),
+      dependencies: await this.analyzeDependencies(),
+      testCoverage: await this.analyzeTestCoverage(),
+      performanceBaseline: await this.establishPerformanceBaseline(),
+      riskAssessment: await this.assessRefactoringRisks()
+    };
+  }
+
+  async createRefactoringPlan(analysis: SystemAnalysis): Promise<RefactoringPlan> {
+    const phases = this.identifyRefactoringPhases(analysis);
+    const timeline = this.estimateTimeline(phases);
+    const resources = this.estimateResources(phases);
+
+    return {
+      phases,
+      timeline,
+      resources,
+      riskMitigation: this.planRiskMitigation(analysis),
+      successCriteria: this.defineSuccessCriteria(analysis)
+    };
+  }
+
+  private identifyRefactoringPhases(analysis: SystemAnalysis): RefactoringPhase[] {
+    return [
+      {
+        name: 'Foundation',
+        description: 'Establish testing and monitoring infrastructure',
+        duration: '1-2 weeks',
+        prerequisites: [],
+        deliverables: ['comprehensive test suite', 'monitoring dashboard']
+      },
+      {
+        name: 'Core Components',
+        description: 'Refactor core system components',
+        duration: '3-4 weeks',
+        prerequisites: ['Foundation'],
+        deliverables: ['modernized core', 'improved performance']
+      },
+      {
+        name: 'Integration',
+        description: 'Update integration points and APIs',
+        duration: '2-3 weeks',
+        prerequisites: ['Core Components'],
+        deliverables: ['updated APIs', 'improved integration']
+      },
+      {
+        name: 'Optimization',
+        description: 'Performance optimization and cleanup',
+        duration: '1-2 weeks',
+        prerequisites: ['Integration'],
+        deliverables: ['optimized performance', 'cleaned codebase']
+      }
+    ];
+  }
+}
+```
+
+### Phase 2: Incremental Implementation
+
+**Step-by-Step Execution**
+```typescript
+class IncrementalRefactoring {
+  private currentPhase: RefactoringPhase;
+  private progressTracker: ProgressTracker;
+
+  async executePhase(phase: RefactoringPhase): Promise<PhaseResult> {
+    this.currentPhase = phase;
+    this.progressTracker = new ProgressTracker(phase);
+
+    try {
+      // Pre-phase validation
+      await this.validatePrerequisites(phase);
+
+      // Execute phase steps
+      const steps = this.breakDownPhaseIntoSteps(phase);
+      const stepResults: StepResult[] = [];
+
+      for (const step of steps) {
+        const stepResult = await this.executeStep(step);
+        stepResults.push(stepResult);
+
+        // Validate after each step
+        if (!stepResult.success) {
+          await this.rollbackStep(step);
+          throw new Error(`Step failed: ${step.name}`);
+        }
+
+        this.progressTracker.recordStepCompletion(step);
+      }
+
+      // Post-phase validation
+      await this.validatePhaseCompletion(phase);
+
+      return {
+        phase: phase.name,
+        success: true,
+        steps: stepResults,
+        duration: this.progressTracker.getTotalDuration(),
+        metrics: await this.collectPhaseMetrics()
+      };
+
+    } catch (error) {
+      console.error(`Phase ${phase.name} failed:`, error);
+      await this.rollbackPhase(phase);
+
+      return {
+        phase: phase.name,
+        success: false,
+        error: error.message,
+        rollbackCompleted: true
+      };
+    }
+  }
+
+  private async executeStep(step: RefactoringStep): Promise<StepResult> {
+    console.log(`Executing step: ${step.name}`);
+
+    // Create checkpoint before step
+    const checkpoint = await this.createCheckpoint(step);
+
+    try {
+      // Execute step actions
+      await this.executeStepActions(step);
+
+      // Validate step completion
+      const validation = await this.validateStep(step);
+
+      if (validation.success) {
+        await this.commitStep(step);
+        return {
+          step: step.name,
+          success: true,
+          duration: validation.duration,
+          metrics: validation.metrics
+        };
+      } else {
+        await this.rollbackToCheckpoint(checkpoint);
+        return {
+          step: step.name,
+          success: false,
+          error: validation.error
+        };
+      }
+
+    } catch (error) {
+      await this.rollbackToCheckpoint(checkpoint);
+      throw error;
+    }
+  }
+}
+```
+
+### Phase 3: Validation and Monitoring
+
+**Continuous Validation**
+```typescript
+class RefactoringValidator {
+  private metrics: MetricsCollector;
+  private alerts: AlertManager;
+
+  async validateRefactoringProgress(): Promise<ValidationReport> {
+    const currentMetrics = await this.metrics.collectCurrentMetrics();
+    const baselineMetrics = await this.metrics.getBaselineMetrics();
+
+    return {
+      performance: this.validatePerformance(currentMetrics, baselineMetrics),
+      functionality: await this.validateFunctionality(),
+      quality: this.validateQuality(currentMetrics),
+      stability: await this.validateStability(),
+      userExperience: await this.validateUserExperience()
+    };
+  }
+
+  private validatePerformance(
+    current: PerformanceMetrics,
+    baseline: PerformanceMetrics
+  ): PerformanceValidation {
+    const responseTimeChange = (current.responseTime - baseline.responseTime) / baseline.responseTime;
+    const memoryUsageChange = (current.memoryUsage - baseline.memoryUsage) / baseline.memoryUsage;
+
+    return {
+      responseTime: {
+        current: current.responseTime,
+        baseline: baseline.responseTime,
+        change: responseTimeChange,
+        status: responseTimeChange < 0.1 ? 'PASS' : 'FAIL'
+      },
+      memoryUsage: {
+        current: current.memoryUsage,
+        baseline: baseline.memoryUsage,
+        change: memoryUsageChange,
+        status: memoryUsageChange < 0.2 ? 'PASS' : 'FAIL'
+      },
+      throughput: {
+        current: current.throughput,
+        baseline: baseline.throughput,
+        change: (current.throughput - baseline.throughput) / baseline.throughput,
+        status: current.throughput >= baseline.throughput ? 'PASS' : 'FAIL'
+      }
+    };
+  }
+
+  async validateFunctionality(): Promise<FunctionalityValidation> {
+    const testSuite = new RegressionTestSuite();
+    const results = await testSuite.runAllTests();
+
+    return {
+      totalTests: results.total,
+      passedTests: results.passed,
+      failedTests: results.failed,
+      passRate: results.passed / results.total,
+      status: results.passed === results.total ? 'PASS' : 'FAIL',
+      failedTestDetails: results.failures
+    };
+  }
+
+  startContinuousMonitoring(): void {
+    // Monitor key metrics every 5 minutes
+    setInterval(async () => {
+      const validation = await this.validateRefactoringProgress();
+
+      if (this.hasRegressions(validation)) {
+        await this.alerts.sendAlert({
+          type: 'REGRESSION_DETECTED',
+          severity: 'HIGH',
+          details: validation,
+          timestamp: new Date()
+        });
+      }
+
+      await this.recordValidationResults(validation);
+    }, 5 * 60 * 1000);
+  }
+}
+```
+
+## 📊 PROGRESS TRACKING
+
+### Refactoring Metrics
+
+**Progress Measurement**
+```typescript
+interface RefactoringProgress {
+  overallProgress: number;        // 0-100%
+  phaseProgress: PhaseProgress[];
+  qualityImprovements: QualityMetric[];
+  performanceChanges: PerformanceMetric[];
+  riskReduction: RiskMetric[];
+}
+
+class ProgressTracker {
+  private startTime: Date;
+  private milestones: Milestone[] = [];
+  private metrics: RefactoringMetrics;
+
+  constructor(plan: RefactoringPlan) {
+    this.startTime = new Date();
+    this.milestones = this.createMilestones(plan);
+    this.metrics = new RefactoringMetrics();
+  }
+
+  recordMilestoneCompletion(milestone: Milestone): void {
+    milestone.completedAt = new Date();
+    milestone.status = 'COMPLETED';
+
+    console.log(`Milestone completed: ${milestone.name}`);
+    this.updateOverallProgress();
+  }
+
+  getProgressReport(): ProgressReport {
+    const completedMilestones = this.milestones.filter(m => m.status === 'COMPLETED');
+    const overallProgress = (completedMilestones.length / this.milestones.length) * 100;
+
+    return {
+      overallProgress,
+      currentPhase: this.getCurrentPhase(),
+      completedMilestones: completedMilestones.length,
+      totalMilestones: this.milestones.length,
+      estimatedCompletion: this.estimateCompletion(),
+      qualityTrends: this.metrics.getQualityTrends(),
+      performanceTrends: this.metrics.getPerformanceTrends()
+    };
+  }
+
+  private estimateCompletion(): Date {
+    const completedMilestones = this.milestones.filter(m => m.status === 'COMPLETED');
+    const remainingMilestones = this.milestones.filter(m => m.status !== 'COMPLETED');
+
+    if (completedMilestones.length === 0) {
+      return new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days default
+    }
+
+    const averageTimePerMilestone = this.calculateAverageTimePerMilestone(completedMilestones);
+    const estimatedRemainingTime = remainingMilestones.length * averageTimePerMilestone;
+
+    return new Date(Date.now() + estimatedRemainingTime);
+  }
+}
+```
+
+### Success Criteria
+
+**Refactoring Success Metrics**
+```typescript
+interface SuccessCriteria {
+  performance: {
+    responseTimeImprovement: number;    // Target: >10%
+    memoryUsageReduction: number;       // Target: >15%
+    throughputIncrease: number;         // Target: >20%
+  };
+  quality: {
+    maintainabilityIncrease: number;    // Target: >25%
+    testCoverageIncrease: number;       // Target: >30%
+    technicalDebtReduction: number;     // Target: >40%
+  };
+  stability: {
+    errorRateReduction: number;         // Target: >50%
+    uptimeImprovement: number;          // Target: >99.9%
+    recoveryTimeReduction: number;      // Target: >60%
+  };
+}
+
+class SuccessEvaluator {
+  evaluateRefactoringSuccess(
+    criteria: SuccessCriteria,
+    actualResults: RefactoringResults
+  ): SuccessEvaluation {
+    return {
+      performance: this.evaluatePerformance(criteria.performance, actualResults.performance),
+      quality: this.evaluateQuality(criteria.quality, actualResults.quality),
+      stability: this.evaluateStability(criteria.stability, actualResults.stability),
+      overallSuccess: this.calculateOverallSuccess(criteria, actualResults)
+    };
+  }
+
+  private calculateOverallSuccess(
+    criteria: SuccessCriteria,
+    results: RefactoringResults
+  ): OverallSuccessScore {
+    const performanceScore = this.calculatePerformanceScore(criteria.performance, results.performance);
+    const qualityScore = this.calculateQualityScore(criteria.quality, results.quality);
+    const stabilityScore = this.calculateStabilityScore(criteria.stability, results.stability);
+
+    const weightedScore = (performanceScore * 0.3) + (qualityScore * 0.4) + (stabilityScore * 0.3);
+
+    return {
+      score: weightedScore,
+      grade: this.determineGrade(weightedScore),
+      recommendations: this.generateRecommendations(weightedScore, results)
+    };
+  }
+
+  private determineGrade(score: number): 'EXCELLENT' | 'GOOD' | 'SATISFACTORY' | 'NEEDS_IMPROVEMENT' {
+    if (score >= 90) return 'EXCELLENT';
+    if (score >= 75) return 'GOOD';
+    if (score >= 60) return 'SATISFACTORY';
+    return 'NEEDS_IMPROVEMENT';
+  }
+}
+```
+
+This gradual refactoring methodology ensures safe, incremental improvements to Memory Bank systems while maintaining stability and delivering continuous value.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc`
+
+```mdc
+---
+description: "Legacy system support and integration rules for Memory Bank evolution"
+globs: "**/refactoring/**", "**/legacy-support/**", "**/integration/**"
+alwaysApply: true
+---
+
+# LEGACY SUPPORT RULES
+
+> **TL;DR:** Comprehensive legacy system support framework ensuring Memory Bank maintains compatibility with existing systems, data formats, and workflows during modernization.
+
+## 🔧 LEGACY SUPPORT OVERVIEW
+
+Legacy Support ensures Memory Bank evolution maintains compatibility with existing systems, enabling gradual modernization without disrupting established workflows or losing valuable data.
+
+### Core Support Principles
+
+**Seamless Integration**
+- Maintain existing interfaces
+- Support legacy data formats
+- Preserve workflow compatibility
+- Provide migration assistance
+
+**Gradual Modernization**
+- Incremental system updates
+- Parallel system operation
+- Safe migration paths
+- Rollback capabilities
+
+## 🛠️ LEGACY INTEGRATION PATTERNS
+
+### 1. Adapter Pattern Implementation
+
+**Legacy System Adapters**
+```typescript
+// Legacy task format from older Memory Bank versions
+interface LegacyTask {
+  taskId: string;
+  taskName: string;
+  taskStatus: 'new' | 'active' | 'done';
+  taskPriority: 'low' | 'normal' | 'high';
+  createdDate: string; // String format
+}
+
+// Modern task format
+interface ModernTask {
+  id: string;
+  name: string;
+  status: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'BLOCKED';
+  priority: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
+  created: Date;
+  updated: Date;
+  metadata: TaskMetadata;
+}
+
+// Adapter to bridge legacy and modern formats
+class LegacyTaskAdapter {
+  toModernFormat(legacyTask: LegacyTask): ModernTask {
+    return {
+      id: legacyTask.taskId,
+      name: legacyTask.taskName,
+      status: this.mapLegacyStatus(legacyTask.taskStatus),
+      priority: this.mapLegacyPriority(legacyTask.taskPriority),
+      created: new Date(legacyTask.createdDate),
+      updated: new Date(), // Set current time as updated
+      metadata: {
+        source: 'legacy',
+        originalFormat: 'v1.0',
+        migrated: true
+      }
+    };
+  }
+
+  toLegacyFormat(modernTask: ModernTask): LegacyTask {
+    return {
+      taskId: modernTask.id,
+      taskName: modernTask.name,
+      taskStatus: this.mapModernStatus(modernTask.status),
+      taskPriority: this.mapModernPriority(modernTask.priority),
+      createdDate: modernTask.created.toISOString()
+    };
+  }
+
+  private mapLegacyStatus(legacyStatus: string): ModernTask['status'] {
+    const statusMap: Record<string, ModernTask['status']> = {
+      'new': 'PLANNED',
+      'active': 'IN_PROGRESS',
+      'done': 'COMPLETED'
+    };
+    return statusMap[legacyStatus] || 'PLANNED';
+  }
+
+  private mapModernStatus(modernStatus: ModernTask['status']): LegacyTask['taskStatus'] {
+    const statusMap: Record<ModernTask['status'], LegacyTask['taskStatus']> = {
+      'PLANNED': 'new',
+      'IN_PROGRESS': 'active',
+      'COMPLETED': 'done',
+      'BLOCKED': 'active' // Map blocked to active for legacy compatibility
+    };
+    return statusMap[modernStatus] || 'new';
+  }
+}
+```
+
+### 2. Legacy File Format Support
+
+**Multi-Format File Handler**
+```typescript
+interface FileFormatHandler {
+  canHandle(filePath: string): boolean;
+  read(filePath: string): Promise<any>;
+  write(filePath: string, data: any): Promise<void>;
+}
+
+class LegacyMarkdownHandler implements FileFormatHandler {
+  canHandle(filePath: string): boolean {
+    return filePath.endsWith('.md') && this.isLegacyFormat(filePath);
+  }
+
+  async read(filePath: string): Promise<Task[]> {
+    const content = await fs.readFile(filePath, 'utf-8');
+    return this.parseLegacyMarkdown(content);
+  }
+
+  async write(filePath: string, tasks: Task[]): Promise<void> {
+    const legacyContent = this.convertToLegacyMarkdown(tasks);
+    await fs.writeFile(filePath, legacyContent);
+  }
+
+  private parseLegacyMarkdown(content: string): Task[] {
+    // Parse old markdown format
+    const lines = content.split('\n');
+    const tasks: Task[] = [];
+
+    for (const line of lines) {
+      if (line.startsWith('- [ ]') || line.startsWith('- [x]')) {
+        const task = this.parseTaskLine(line);
+        if (task) tasks.push(task);
+      }
+    }
+
+    return tasks;
+  }
+
+  private parseTaskLine(line: string): Task | null {
+    // Parse legacy task format: "- [x] Task name (priority: high)"
+    const match = line.match(/^- \[([ x])\] (.+?)(?:\s*\(priority:\s*(\w+)\))?$/);
+    if (!match) return null;
+
+    const [, completed, name, priority] = match;
+
+    return {
+      id: this.generateId(name),
+      name: name.trim(),
+      status: completed === 'x' ? 'COMPLETED' : 'PLANNED',
+      priority: this.mapLegacyPriority(priority || 'normal'),
+      created: new Date(),
+      updated: new Date()
+    };
+  }
+}
+
+class ModernYamlHandler implements FileFormatHandler {
+  canHandle(filePath: string): boolean {
+    return filePath.endsWith('.yaml') || filePath.endsWith('.yml');
+  }
+
+  async read(filePath: string): Promise<Task[]> {
+    const content = await fs.readFile(filePath, 'utf-8');
+    const data = yaml.parse(content);
+    return data.tasks || [];
+  }
+
+  async write(filePath: string, tasks: Task[]): Promise<void> {
+    const data = { tasks, version: '2.0', updated: new Date() };
+    const yamlContent = yaml.stringify(data);
+    await fs.writeFile(filePath, yamlContent);
+  }
+}
+
+// File format manager that handles multiple formats
+class MultiFormatFileManager {
+  private handlers: FileFormatHandler[] = [
+    new LegacyMarkdownHandler(),
+    new ModernYamlHandler(),
+    new JsonHandler(),
+    new CsvHandler()
+  ];
+
+  async readTasks(filePath: string): Promise<Task[]> {
+    const handler = this.findHandler(filePath);
+    if (!handler) {
+      throw new Error(`Unsupported file format: ${filePath}`);
+    }
+
+    return await handler.read(filePath);
+  }
+
+  async writeTasks(filePath: string, tasks: Task[]): Promise<void> {
+    const handler = this.findHandler(filePath);
+    if (!handler) {
+      throw new Error(`Unsupported file format: ${filePath}`);
+    }
+
+    await handler.write(filePath, tasks);
+  }
+
+  private findHandler(filePath: string): FileFormatHandler | null {
+    return this.handlers.find(handler => handler.canHandle(filePath)) || null;
+  }
+}
+```
+
+### 3. Legacy API Compatibility
+
+**API Version Management**
+```typescript
+interface ApiVersionHandler {
+  version: string;
+  handle(request: any): Promise<any>;
+}
+
+class LegacyApiV1Handler implements ApiVersionHandler {
+  version = 'v1';
+
+  async handle(request: LegacyApiRequest): Promise<LegacyApiResponse> {
+    // Handle legacy API format
+    const modernRequest = this.convertToModernRequest(request);
+    const modernResponse = await this.modernApiHandler.handle(modernRequest);
+    return this.convertToLegacyResponse(modernResponse);
+  }
+
+  private convertToModernRequest(legacyRequest: LegacyApiRequest): ModernApiRequest {
+    return {
+      action: legacyRequest.command,
+      data: this.adaptLegacyData(legacyRequest.params),
+      version: '2.0',
+      timestamp: new Date()
+    };
+  }
+
+  private convertToLegacyResponse(modernResponse: ModernApiResponse): LegacyApiResponse {
+    return {
+      status: modernResponse.success ? 'ok' : 'error',
+      result: this.adaptModernData(modernResponse.data),
+      message: modernResponse.message
+    };
+  }
+}
+
+class ModernApiV2Handler implements ApiVersionHandler {
+  version = 'v2';
+
+  async handle(request: ModernApiRequest): Promise<ModernApiResponse> {
+    // Handle modern API format directly
+    return await this.processModernRequest(request);
+  }
+}
+
+// API router that handles multiple versions
+class VersionedApiRouter {
+  private handlers: Map<string, ApiVersionHandler> = new Map();
+
+  registerHandler(handler: ApiVersionHandler): void {
+    this.handlers.set(handler.version, handler);
+  }
+
+  async route(request: any): Promise<any> {
+    const version = this.detectVersion(request);
+    const handler = this.handlers.get(version);
+
+    if (!handler) {
+      throw new Error(`Unsupported API version: ${version}`);
+    }
+
+    return await handler.handle(request);
+  }
+
+  private detectVersion(request: any): string {
+    // Detect version from request headers, URL, or content
+    return request.version || request.headers?.['api-version'] || 'v1';
+  }
+}
+```
+
+### 4. Legacy Configuration Support
+
+**Configuration Migration**
+```typescript
+interface ConfigurationMigrator {
+  fromVersion: string;
+  toVersion: string;
+  migrate(config: any): any;
+}
+
+class ConfigV1ToV2Migrator implements ConfigurationMigrator {
+  fromVersion = '1.0';
+  toVersion = '2.0';
+
+  migrate(v1Config: any): any {
+    const v2Config = {
+      version: '2.0',
+      migrated: true,
+      migratedFrom: '1.0',
+      migratedAt: new Date().toISOString()
+    };
+
+    // Migrate settings
+    if (v1Config.settings) {
+      v2Config.preferences = {
+        theme: v1Config.settings.theme || 'default',
+        notifications: v1Config.settings.enableNotifications !== false,
+        autoSave: v1Config.settings.autoSave !== false
+      };
+    }
+
+    // Migrate workflows
+    if (v1Config.workflows) {
+      v2Config.modes = this.migrateWorkflows(v1Config.workflows);
+    }
+
+    // Migrate file paths
+    if (v1Config.paths) {
+      v2Config.storage = {
+        tasksDirectory: v1Config.paths.taskDir || 'tasks',
+        archiveDirectory: v1Config.paths.archiveDir || 'archive',
+        templatesDirectory: v1Config.paths.templateDir || 'templates'
+      };
+    }
+
+    return v2Config;
+  }
+
+  private migrateWorkflows(legacyWorkflows: any): any {
+    // Convert legacy workflow names to modern mode names
+    const modeMapping = {
+      'analyze': 'VAN',
+      'design': 'CREATIVE',
+      'build': 'IMPLEMENT',
+      'review': 'REFLECT'
+    };
+
+    const modernModes = {};
+
+    for (const [legacyName, config] of Object.entries(legacyWorkflows)) {
+      const modernName = modeMapping[legacyName] || legacyName.toUpperCase();
+      modernModes[modernName] = {
+        enabled: config.enabled !== false,
+        settings: config.settings || {},
+        migrated: true
+      };
+    }
+
+    return modernModes;
+  }
+}
+
+class ConfigurationManager {
+  private migrators: ConfigurationMigrator[] = [
+    new ConfigV1ToV2Migrator(),
+    new ConfigV2ToV3Migrator()
+  ];
+
+  async loadConfiguration(configPath: string): Promise<any> {
+    const rawConfig = await this.readConfigFile(configPath);
+    const currentVersion = this.detectVersion(rawConfig);
+
+    if (this.isCurrentVersion(currentVersion)) {
+      return rawConfig;
+    }
+
+    // Migrate configuration to current version
+    return await this.migrateConfiguration(rawConfig, currentVersion);
+  }
+
+  private async migrateConfiguration(config: any, fromVersion: string): Promise<any> {
+    let currentConfig = config;
+    let currentVersion = fromVersion;
+
+    // Apply migrations sequentially
+    for (const migrator of this.migrators) {
+      if (migrator.fromVersion === currentVersion) {
+        console.log(`Migrating configuration from ${migrator.fromVersion} to ${migrator.toVersion}`);
+        currentConfig = migrator.migrate(currentConfig);
+        currentVersion = migrator.toVersion;
+      }
+    }
+
+    // Save migrated configuration
+    await this.saveConfiguration(currentConfig);
+
+    return currentConfig;
+  }
+}
+```
+
+## 🔄 LEGACY DATA MIGRATION
+
+### Safe Migration Process
+
+**Data Migration Framework**
+```typescript
+class LegacyDataMigrator {
+  async migrateData(sourcePath: string, targetPath: string): Promise<MigrationResult> {
+    try {
+      // 1. Backup original data
+      const backupPath = await this.createBackup(sourcePath);
+
+      // 2. Analyze source data
+      const sourceAnalysis = await this.analyzeSourceData(sourcePath);
+
+      // 3. Plan migration
+      const migrationPlan = this.createMigrationPlan(sourceAnalysis);
+
+      // 4. Execute migration
+      const migrationResult = await this.executeMigration(migrationPlan);
+
+      // 5. Validate migrated data
+      const validation = await this.validateMigration(sourcePath, targetPath);
+
+      if (validation.success) {
+        return {
+          success: true,
+          migratedItems: migrationResult.itemCount,
+          backupPath,
+          validationReport: validation
+        };
+      } else {
+        // Rollback on validation failure
+        await this.rollbackMigration(backupPath, sourcePath);
+        throw new Error('Migration validation failed');
+      }
+
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message,
+        rollbackCompleted: true
+      };
+    }
+  }
+
+  private async validateMigration(sourcePath: string, targetPath: string): Promise<ValidationResult> {
+    const sourceData = await this.loadLegacyData(sourcePath);
+    const targetData = await this.loadModernData(targetPath);
+
+    return {
+      success: sourceData.length === targetData.length,
+      sourceCount: sourceData.length,
+      targetCount: targetData.length,
+      dataIntegrityCheck: this.verifyDataIntegrity(sourceData, targetData)
+    };
+  }
+}
+```
+
+## 📊 LEGACY SUPPORT METRICS
+
+### Support Quality Indicators
+
+**Legacy Support Metrics**
+- Legacy system compatibility: Target 100%
+- Data migration success rate: Target >99%
+- API backward compatibility: Target 100%
+- Configuration migration success: Target >95%
+
+**Quality Indicators**
+- **EXCELLENT Support (95-100%)**
+  - Full legacy compatibility
+  - Seamless migrations
+  - Zero data loss
+  - Complete API compatibility
+
+- **GOOD Support (85-94%)**
+  - Most legacy features supported
+  - Successful migrations with minor issues
+  - Minimal data loss
+  - Good API compatibility
+
+- **NEEDS IMPROVEMENT (<85%)**
+  - Limited legacy support
+  - Migration failures
+  - Data loss incidents
+  - API compatibility issues
+
+This legacy support framework ensures smooth Memory Bank evolution while maintaining full compatibility with existing systems and data.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc`
+
+```mdc
+---
+description: "Quality metrics and measurement system for Memory Bank refactoring"
+globs: "**/refactoring/**", "**/quality/**", "**/metrics/**"
+alwaysApply: false
+---
+
+# QUALITY METRICS FOR REFACTORING
+
+> **TL;DR:** Comprehensive quality measurement system for Memory Bank refactoring, providing objective metrics to guide improvement decisions and validate refactoring outcomes.
+
+## 📊 QUALITY METRICS OVERVIEW
+
+Quality metrics provide objective measurements to assess Memory Bank system health, guide refactoring decisions, and validate improvement outcomes.
+
+### Metric Categories
+
+**Code Quality Metrics**
+- Complexity measurements
+- Maintainability indices
+- Technical debt indicators
+- Code coverage statistics
+
+**System Quality Metrics**
+- Performance benchmarks
+- Reliability measurements
+- Scalability indicators
+- Security assessments
+
+**Process Quality Metrics**
+- Development velocity
+- Defect rates
+- Time to resolution
+- User satisfaction scores
+
+## 🔍 CODE QUALITY METRICS
+
+### Complexity Measurements
+
+**Cyclomatic Complexity**
+```typescript
+interface ComplexityMetrics {
+  cyclomaticComplexity: number;    // Target: < 10 per function
+  cognitiveComplexity: number;     // Target: < 15 per function
+  nestingDepth: number;           // Target: < 4 levels
+  linesOfCode: number;            // Target: < 50 per function
+}
+
+class ComplexityAnalyzer {
+  analyzeFunction(functionCode: string): ComplexityMetrics {
+    return {
+      cyclomaticComplexity: this.calculateCyclomaticComplexity(functionCode),
+      cognitiveComplexity: this.calculateCognitiveComplexity(functionCode),
+      nestingDepth: this.calculateNestingDepth(functionCode),
+      linesOfCode: this.countLinesOfCode(functionCode)
+    };
+  }
+
+  private calculateCyclomaticComplexity(code: string): number {
+    // Count decision points: if, while, for, case, catch, &&, ||
+    const decisionPoints = [
+      /\bif\b/g,
+      /\bwhile\b/g,
+      /\bfor\b/g,
+      /\bcase\b/g,
+      /\bcatch\b/g,
+      /&&/g,
+      /\|\|/g
+    ];
+
+    let complexity = 1; // Base complexity
+
+    decisionPoints.forEach(pattern => {
+      const matches = code.match(pattern);
+      if (matches) {
+        complexity += matches.length;
+      }
+    });
+
+    return complexity;
+  }
+
+  generateComplexityReport(filePath: string): ComplexityReport {
+    const functions = this.extractFunctions(filePath);
+    const metrics = functions.map(func => ({
+      name: func.name,
+      metrics: this.analyzeFunction(func.code),
+      location: func.location
+    }));
+
+    return {
+      filePath,
+      totalFunctions: functions.length,
+      averageComplexity: this.calculateAverage(metrics, 'cyclomaticComplexity'),
+      highComplexityFunctions: metrics.filter(m => m.metrics.cyclomaticComplexity > 10),
+      recommendations: this.generateComplexityRecommendations(metrics)
+    };
+  }
+}
+```
+
+**Maintainability Index**
+```typescript
+interface MaintainabilityMetrics {
+  maintainabilityIndex: number;    // Target: > 70
+  halsteadVolume: number;         // Measure of program size
+  cyclomaticComplexity: number;   // Decision complexity
+  linesOfCode: number;           // Physical size
+  commentRatio: number;          // Target: > 0.2
+}
+
+class MaintainabilityAnalyzer {
+  calculateMaintainabilityIndex(
+    halsteadVolume: number,
+    cyclomaticComplexity: number,
+    linesOfCode: number,
+    commentRatio: number
+  ): number {
+    // Microsoft's Maintainability Index formula
+    const mi = Math.max(0,
+      (171 - 5.2 * Math.log(halsteadVolume) -
+       0.23 * cyclomaticComplexity -
+       16.2 * Math.log(linesOfCode) +
+       50 * Math.sin(Math.sqrt(2.4 * commentRatio))) * 100 / 171
+    );
+
+    return Math.round(mi);
+  }
+
+  analyzeMaintainability(filePath: string): MaintainabilityMetrics {
+    const code = this.readFile(filePath);
+
+    return {
+      maintainabilityIndex: this.calculateMaintainabilityIndex(
+        this.calculateHalsteadVolume(code),
+        this.calculateCyclomaticComplexity(code),
+        this.countLinesOfCode(code),
+        this.calculateCommentRatio(code)
+      ),
+      halsteadVolume: this.calculateHalsteadVolume(code),
+      cyclomaticComplexity: this.calculateCyclomaticComplexity(code),
+      linesOfCode: this.countLinesOfCode(code),
+      commentRatio: this.calculateCommentRatio(code)
+    };
+  }
+}
+```
+
+### Technical Debt Metrics
+
+**Debt Ratio Calculation**
+```typescript
+interface TechnicalDebtMetrics {
+  debtRatio: number;              // Target: < 0.05 (5%)
+  remedationTime: number;         // Hours to fix issues
+  maintainabilityCost: number;    // Relative cost increase
+  qualityGate: 'PASS' | 'WARN' | 'FAIL';
+}
+
+class TechnicalDebtAnalyzer {
+  calculateDebtRatio(
+    remedationTime: number,
+    developmentTime: number
+  ): number {
+    return remedationTime / developmentTime;
+  }
+
+  analyzeProject(): TechnicalDebtMetrics {
+    const issues = this.scanForIssues();
+    const remedationTime = this.calculateRemediationTime(issues);
+    const developmentTime = this.estimateDevelopmentTime();
+    const debtRatio = this.calculateDebtRatio(remedationTime, developmentTime);
+
+    return {
+      debtRatio,
+      remedationTime,
+      maintainabilityCost: this.calculateMaintainabilityCost(debtRatio),
+      qualityGate: this.determineQualityGate(debtRatio, issues)
+    };
+  }
+
+  private determineQualityGate(
+    debtRatio: number,
+    issues: Issue[]
+  ): 'PASS' | 'WARN' | 'FAIL' {
+    const criticalIssues = issues.filter(i => i.severity === 'CRITICAL');
+
+    if (criticalIssues.length > 0 || debtRatio > 0.1) {
+      return 'FAIL';
+    } else if (debtRatio > 0.05) {
+      return 'WARN';
+    } else {
+      return 'PASS';
+    }
+  }
+}
+```
+
+## 🚀 PERFORMANCE METRICS
+
+### Response Time Measurements
+
+**Performance Benchmarking**
+```typescript
+interface PerformanceMetrics {
+  responseTime: {
+    average: number;        // Target: < 100ms
+    p95: number;           // Target: < 200ms
+    p99: number;           // Target: < 500ms
+  };
+  throughput: number;      // Operations per second
+  memoryUsage: number;     // MB
+  cpuUtilization: number;  // Percentage
+}
+
+class PerformanceBenchmark {
+  async measureOperation(operation: () => Promise<any>): Promise<PerformanceMetrics> {
+    const measurements: number[] = [];
+    const iterations = 100;
+
+    // Warm up
+    for (let i = 0; i < 10; i++) {
+      await operation();
+    }
+
+    // Measure
+    for (let i = 0; i < iterations; i++) {
+      const start = performance.now();
+      await operation();
+      const end = performance.now();
+      measurements.push(end - start);
+    }
+
+    return {
+      responseTime: {
+        average: this.calculateAverage(measurements),
+        p95: this.calculatePercentile(measurements, 95),
+        p99: this.calculatePercentile(measurements, 99)
+      },
+      throughput: 1000 / this.calculateAverage(measurements),
+      memoryUsage: this.measureMemoryUsage(),
+      cpuUtilization: this.measureCpuUtilization()
+    };
+  }
+
+  async benchmarkMemoryBankOperations(): Promise<OperationBenchmarks> {
+    return {
+      taskCreation: await this.measureOperation(() => this.createTask()),
+      taskUpdate: await this.measureOperation(() => this.updateTask()),
+      modeTransition: await this.measureOperation(() => this.transitionMode()),
+      fileOperations: await this.measureOperation(() => this.fileOperation()),
+      configurationLoad: await this.measureOperation(() => this.loadConfiguration())
+    };
+  }
+}
+```
+
+### Memory and Resource Metrics
+
+**Resource Utilization Tracking**
+```typescript
+interface ResourceMetrics {
+  memoryUsage: {
+    heap: number;           // MB
+    external: number;       // MB
+    total: number;         // MB
+  };
+  fileSystemUsage: {
+    diskSpace: number;      // MB
+    fileCount: number;
+    directoryCount: number;
+  };
+  networkUsage: {
+    bytesIn: number;
+    bytesOut: number;
+    requestCount: number;
+  };
+}
+
+class ResourceMonitor {
+  getCurrentMetrics(): ResourceMetrics {
+    const memUsage = process.memoryUsage();
+
+    return {
+      memoryUsage: {
+        heap: Math.round(memUsage.heapUsed / 1024 / 1024),
+        external: Math.round(memUsage.external / 1024 / 1024),
+        total: Math.round(memUsage.rss / 1024 / 1024)
+      },
+      fileSystemUsage: this.measureFileSystemUsage(),
+      networkUsage: this.measureNetworkUsage()
+    };
+  }
+
+  startContinuousMonitoring(intervalMs: number = 5000): void {
+    setInterval(() => {
+      const metrics = this.getCurrentMetrics();
+      this.logMetrics(metrics);
+      this.checkThresholds(metrics);
+    }, intervalMs);
+  }
+
+  private checkThresholds(metrics: ResourceMetrics): void {
+    // Memory threshold: 500MB
+    if (metrics.memoryUsage.total > 500) {
+      console.warn(`High memory usage: ${metrics.memoryUsage.total}MB`);
+    }
+
+    // Disk space threshold: 1GB
+    if (metrics.fileSystemUsage.diskSpace > 1000) {
+      console.warn(`High disk usage: ${metrics.fileSystemUsage.diskSpace}MB`);
+    }
+  }
+}
+```
+
+## 📈 QUALITY TRENDS ANALYSIS
+
+### Historical Quality Tracking
+
+**Quality Trend Monitoring**
+```typescript
+interface QualityTrend {
+  timestamp: Date;
+  metrics: QualitySnapshot;
+  trend: 'IMPROVING' | 'STABLE' | 'DEGRADING';
+  changeRate: number;
+}
+
+interface QualitySnapshot {
+  codeQuality: number;        // 0-100 score
+  performance: number;        // 0-100 score
+  maintainability: number;    // 0-100 score
+  testCoverage: number;       // 0-100 percentage
+  technicalDebt: number;      // 0-100 score (inverted)
+}
+
+class QualityTrendAnalyzer {
+  private history: QualitySnapshot[] = [];
+
+  recordQualitySnapshot(): QualitySnapshot {
+    const snapshot: QualitySnapshot = {
+      codeQuality: this.calculateCodeQualityScore(),
+      performance: this.calculatePerformanceScore(),
+      maintainability: this.calculateMaintainabilityScore(),
+      testCoverage: this.calculateTestCoverage(),
+      technicalDebt: this.calculateTechnicalDebtScore()
+    };
+
+    this.history.push(snapshot);
+    return snapshot;
+  }
+
+  analyzeTrends(period: number = 30): QualityTrend[] {
+    const recentHistory = this.history.slice(-period);
+
+    return recentHistory.map((snapshot, index) => {
+      const previousSnapshot = index > 0 ? recentHistory[index - 1] : null;
+
+      return {
+        timestamp: new Date(),
+        metrics: snapshot,
+        trend: this.determineTrend(snapshot, previousSnapshot),
+        changeRate: this.calculateChangeRate(snapshot, previousSnapshot)
+      };
+    });
+  }
+
+  generateQualityReport(): QualityReport {
+    const currentSnapshot = this.recordQualitySnapshot();
+    const trends = this.analyzeTrends();
+
+    return {
+      current: currentSnapshot,
+      trends,
+      recommendations: this.generateRecommendations(currentSnapshot, trends),
+      qualityGate: this.evaluateQualityGate(currentSnapshot)
+    };
+  }
+
+  private calculateCodeQualityScore(): number {
+    // Composite score based on multiple factors
+    const complexity = this.getAverageComplexity();
+    const duplication = this.getCodeDuplication();
+    const violations = this.getCodeViolations();
+
+    return Math.max(0, 100 - complexity * 2 - duplication * 3 - violations * 5);
+  }
+}
+```
+
+### Refactoring Impact Assessment
+
+**Before/After Comparison**
+```typescript
+interface RefactoringImpact {
+  before: QualitySnapshot;
+  after: QualitySnapshot;
+  improvements: QualityImprovement[];
+  regressions: QualityRegression[];
+  overallImpact: 'POSITIVE' | 'NEUTRAL' | 'NEGATIVE';
+  impactScore: number;
+}
+
+class RefactoringImpactAnalyzer {
+  async assessRefactoringImpact(
+    beforeSnapshot: QualitySnapshot,
+    afterSnapshot: QualitySnapshot
+  ): Promise<RefactoringImpact> {
+    const improvements = this.identifyImprovements(beforeSnapshot, afterSnapshot);
+    const regressions = this.identifyRegressions(beforeSnapshot, afterSnapshot);
+    const impactScore = this.calculateImpactScore(improvements, regressions);
+
+    return {
+      before: beforeSnapshot,
+      after: afterSnapshot,
+      improvements,
+      regressions,
+      overallImpact: this.determineOverallImpact(impactScore),
+      impactScore
+    };
+  }
+
+  private identifyImprovements(
+    before: QualitySnapshot,
+    after: QualitySnapshot
+  ): QualityImprovement[] {
+    const improvements: QualityImprovement[] = [];
+
+    Object.keys(before).forEach(metric => {
+      const beforeValue = before[metric as keyof QualitySnapshot];
+      const afterValue = after[metric as keyof QualitySnapshot];
+
+      if (afterValue > beforeValue) {
+        improvements.push({
+          metric: metric as keyof QualitySnapshot,
+          beforeValue,
+          afterValue,
+          improvement: afterValue - beforeValue,
+          improvementPercentage: ((afterValue - beforeValue) / beforeValue) * 100
+        });
+      }
+    });
+
+    return improvements;
+  }
+
+  generateRefactoringReport(impact: RefactoringImpact): RefactoringReport {
+    return {
+      summary: {
+        overallImpact: impact.overallImpact,
+        impactScore: impact.impactScore,
+        improvementCount: impact.improvements.length,
+        regressionCount: impact.regressions.length
+      },
+      details: {
+        improvements: impact.improvements,
+        regressions: impact.regressions,
+        recommendations: this.generateRefactoringRecommendations(impact)
+      },
+      metrics: {
+        before: impact.before,
+        after: impact.after,
+        delta: this.calculateMetricDeltas(impact.before, impact.after)
+      }
+    };
+  }
+}
+```
+
+## 🎯 QUALITY GATES AND THRESHOLDS
+
+### Quality Gate Configuration
+
+**Configurable Quality Standards**
+```yaml
+# quality-gates.yaml
+quality_gates:
+  code_quality:
+    maintainability_index:
+      minimum: 70
+      target: 85
+    cyclomatic_complexity:
+      maximum: 10
+      target: 5
+    code_coverage:
+      minimum: 80
+      target: 90
+    duplication:
+      maximum: 3
+      target: 1
+
+  performance:
+    response_time:
+      maximum: 200  # ms
+      target: 100   # ms
+    memory_usage:
+      maximum: 500  # MB
+      target: 200   # MB
+    throughput:
+      minimum: 100  # ops/sec
+      target: 500   # ops/sec
+
+  technical_debt:
+    debt_ratio:
+      maximum: 0.05  # 5%
+      target: 0.02   # 2%
+    critical_issues:
+      maximum: 0
+    high_issues:
+      maximum: 5
+      target: 0
+
+  process:
+    build_time:
+      maximum: 300  # seconds
+      target: 120   # seconds
+    test_execution:
+      maximum: 60   # seconds
+      target: 30    # seconds
+```
+
+**Quality Gate Evaluation**
+```typescript
+class QualityGateEvaluator {
+  private gates: QualityGateConfig;
+
+  constructor(gateConfig: QualityGateConfig) {
+    this.gates = gateConfig;
+  }
+
+  evaluateQualityGates(metrics: QualitySnapshot): QualityGateResult {
+    const results: GateEvaluation[] = [];
+
+    // Evaluate each gate
+    Object.entries(this.gates).forEach(([category, gates]) => {
+      Object.entries(gates).forEach(([metric, thresholds]) => {
+        const value = this.getMetricValue(metrics, category, metric);
+        const evaluation = this.evaluateGate(value, thresholds);
+
+        results.push({
+          category,
+          metric,
+          value,
+          thresholds,
+          status: evaluation.status,
+          message: evaluation.message
+        });
+      });
+    });
+
+    return {
+      overallStatus: this.determineOverallStatus(results),
+      gateResults: results,
+      passedGates: results.filter(r => r.status === 'PASS').length,
+      totalGates: results.length,
+      blockers: results.filter(r => r.status === 'FAIL'),
+      warnings: results.filter(r => r.status === 'WARN')
+    };
+  }
+
+  private evaluateGate(
+    value: number,
+    thresholds: QualityThreshold
+  ): GateEvaluation {
+    if (thresholds.maximum !== undefined && value > thresholds.maximum) {
+      return {
+        status: 'FAIL',
+        message: `Value ${value} exceeds maximum threshold ${thresholds.maximum}`
+      };
+    }
+
+    if (thresholds.minimum !== undefined && value < thresholds.minimum) {
+      return {
+        status: 'FAIL',
+        message: `Value ${value} below minimum threshold ${thresholds.minimum}`
+      };
+    }
+
+    if (thresholds.target !== undefined) {
+      const targetMet = thresholds.maximum
+        ? value <= thresholds.target
+        : value >= thresholds.target;
+
+      if (!targetMet) {
+        return {
+          status: 'WARN',
+          message: `Value ${value} does not meet target ${thresholds.target}`
+        };
+      }
+    }
+
+    return {
+      status: 'PASS',
+      message: `Value ${value} meets all thresholds`
+    };
+  }
+}
+```
+
+## 📊 METRICS DASHBOARD
+
+### Real-Time Quality Dashboard
+
+**Quality Metrics Visualization**
+```typescript
+interface QualityDashboard {
+  overview: QualityOverview;
+  trends: QualityTrend[];
+  alerts: QualityAlert[];
+  recommendations: QualityRecommendation[];
+}
+
+class QualityDashboardGenerator {
+  generateDashboard(): QualityDashboard {
+    const currentMetrics = this.getCurrentMetrics();
+    const trends = this.getTrends();
+
+    return {
+      overview: {
+        overallScore: this.calculateOverallScore(currentMetrics),
+        qualityGate: this.evaluateQualityGate(currentMetrics),
+        lastUpdated: new Date(),
+        keyMetrics: {
+          maintainability: currentMetrics.maintainability,
+          performance: currentMetrics.performance,
+          testCoverage: currentMetrics.testCoverage,
+          technicalDebt: currentMetrics.technicalDebt
+        }
+      },
+      trends: trends,
+      alerts: this.generateAlerts(currentMetrics, trends),
+      recommendations: this.generateRecommendations(currentMetrics, trends)
+    };
+  }
+
+  exportMetricsReport(format: 'JSON' | 'CSV' | 'HTML'): string {
+    const dashboard = this.generateDashboard();
+
+    switch (format) {
+      case 'JSON':
+        return JSON.stringify(dashboard, null, 2);
+      case 'CSV':
+        return this.convertToCSV(dashboard);
+      case 'HTML':
+        return this.generateHTMLReport(dashboard);
+      default:
+        throw new Error(`Unsupported format: ${format}`);
+    }
+  }
+}
+```
+
+This comprehensive quality metrics system provides objective measurements and actionable insights for Memory Bank refactoring and continuous improvement.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc`
+
+```mdc
+---
+description: "Refactoring patterns and techniques for Memory Bank development"
+globs: "**/refactoring/**", "**/patterns/**", "**/techniques/**"
+alwaysApply: false
+---
+
+# REFACTORING PATTERNS AND TECHNIQUES
+
+> **TL;DR:** Comprehensive collection of proven refactoring patterns and techniques for Memory Bank development, providing systematic approaches to code improvement and architectural evolution.
+
+## 🔧 REFACTORING PATTERNS OVERVIEW
+
+Refactoring patterns provide systematic approaches to improving code structure, design, and maintainability while preserving functionality and minimizing risk.
+
+### Pattern Categories
+
+**Structural Patterns**
+- Extract Method/Function
+- Extract Class/Module
+- Move Method/Property
+- Inline Method/Variable
+
+**Behavioral Patterns**
+- Replace Conditional with Polymorphism
+- Replace Magic Numbers with Constants
+- Introduce Parameter Object
+- Replace Nested Conditional with Guard Clauses
+
+**Architectural Patterns**
+- Separate Concerns
+- Introduce Layer
+- Extract Service
+- Consolidate Duplicate Code
+
+## 🏗️ STRUCTURAL REFACTORING PATTERNS
+
+### Extract Method Pattern
+
+**Problem**: Long methods with multiple responsibilities
+**Solution**: Break down into smaller, focused methods
+
+```typescript
+// Before: Long method with multiple responsibilities
+class TaskProcessor {
+  processTask(task: Task): TaskResult {
+    // Validation logic (20 lines)
+    if (!task.id || task.id.length === 0) {
+      throw new Error('Task ID is required');
+    }
+    if (!task.name || task.name.trim().length === 0) {
+      throw new Error('Task name is required');
+    }
+    if (!['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'].includes(task.priority)) {
+      throw new Error('Invalid priority');
+    }
+
+    // Processing logic (30 lines)
+    const startTime = Date.now();
+    let result = { id: task.id, status: 'processing' };
+
+    if (task.type === 'ANALYSIS') {
+      result = this.performAnalysis(task);
+    } else if (task.type === 'IMPLEMENTATION') {
+      result = this.performImplementation(task);
+    } else if (task.type === 'TESTING') {
+      result = this.performTesting(task);
+    }
+
+    // Logging logic (15 lines)
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+    console.log(`Task ${task.id} processed in ${duration}ms`);
+    console.log(`Result: ${JSON.stringify(result)}`);
+
+    return result;
+  }
+}
+
+// After: Extracted methods with single responsibilities
+class TaskProcessor {
+  processTask(task: Task): TaskResult {
+    this.validateTask(task);
+    const result = this.executeTask(task);
+    this.logTaskCompletion(task, result);
+    return result;
+  }
+
+  private validateTask(task: Task): void {
+    this.validateTaskId(task.id);
+    this.validateTaskName(task.name);
+    this.validateTaskPriority(task.priority);
+  }
+
+  private validateTaskId(id: string): void {
+    if (!id || id.length === 0) {
+      throw new Error('Task ID is required');
+    }
+  }
+
+  private validateTaskName(name: string): void {
+    if (!name || name.trim().length === 0) {
+      throw new Error('Task name is required');
+    }
+  }
+
+  private validateTaskPriority(priority: string): void {
+    const validPriorities = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
+    if (!validPriorities.includes(priority)) {
+      throw new Error('Invalid priority');
+    }
+  }
+
+  private executeTask(task: Task): TaskResult {
+    const startTime = Date.now();
+
+    switch (task.type) {
+      case 'ANALYSIS':
+        return this.performAnalysis(task);
+      case 'IMPLEMENTATION':
+        return this.performImplementation(task);
+      case 'TESTING':
+        return this.performTesting(task);
+      default:
+        throw new Error(`Unknown task type: ${task.type}`);
+    }
+  }
+
+  private logTaskCompletion(task: Task, result: TaskResult): void {
+    const duration = result.metadata?.duration || 0;
+    console.log(`Task ${task.id} processed in ${duration}ms`);
+    console.log(`Result: ${JSON.stringify(result)}`);
+  }
+}
+```
+
+### Extract Class Pattern
+
+**Problem**: Class with too many responsibilities
+**Solution**: Split into multiple focused classes
+
+```typescript
+// Before: God class with multiple responsibilities
+class MemoryBankManager {
+  // Task management
+  createTask(task: Task): void { /* ... */ }
+  updateTask(id: string, updates: Partial<Task>): void { /* ... */ }
+  deleteTask(id: string): void { /* ... */ }
+
+  // File operations
+  readFile(path: string): string { /* ... */ }
+  writeFile(path: string, content: string): void { /* ... */ }
+  deleteFile(path: string): void { /* ... */ }
+
+  // Configuration management
+  loadConfig(): Configuration { /* ... */ }
+  saveConfig(config: Configuration): void { /* ... */ }
+  validateConfig(config: Configuration): boolean { /* ... */ }
+
+  // Mode management
+  switchMode(mode: string): void { /* ... */ }
+  getCurrentMode(): string { /* ... */ }
+  validateModeTransition(from: string, to: string): boolean { /* ... */ }
+}
+
+// After: Separated into focused classes
+class TaskManager {
+  createTask(task: Task): void { /* ... */ }
+  updateTask(id: string, updates: Partial<Task>): void { /* ... */ }
+  deleteTask(id: string): void { /* ... */ }
+  getTasks(): Task[] { /* ... */ }
+}
+
+class FileManager {
+  readFile(path: string): string { /* ... */ }
+  writeFile(path: string, content: string): void { /* ... */ }
+  deleteFile(path: string): void { /* ... */ }
+  fileExists(path: string): boolean { /* ... */ }
+}
+
+class ConfigurationManager {
+  loadConfig(): Configuration { /* ... */ }
+  saveConfig(config: Configuration): void { /* ... */ }
+  validateConfig(config: Configuration): boolean { /* ... */ }
+  getDefaultConfig(): Configuration { /* ... */ }
+}
+
+class ModeManager {
+  switchMode(mode: string): void { /* ... */ }
+  getCurrentMode(): string { /* ... */ }
+  validateModeTransition(from: string, to: string): boolean { /* ... */ }
+  getAvailableModes(): string[] { /* ... */ }
+}
+
+// Coordinator class for high-level operations
+class MemoryBankCoordinator {
+  constructor(
+    private taskManager: TaskManager,
+    private fileManager: FileManager,
+    private configManager: ConfigurationManager,
+    private modeManager: ModeManager
+  ) {}
+
+  initializeSystem(): void {
+    const config = this.configManager.loadConfig();
+    this.modeManager.switchMode(config.defaultMode);
+    // ... other initialization
+  }
+}
+```
+
+### Move Method Pattern
+
+**Problem**: Method belongs in a different class
+**Solution**: Move method to appropriate class
+
+```typescript
+// Before: Method in wrong class
+class Task {
+  id: string;
+  name: string;
+  priority: string;
+
+  // This method doesn't belong here
+  formatTaskForDisplay(): string {
+    return `[${this.priority}] ${this.name} (${this.id})`;
+  }
+
+  // This method doesn't belong here either
+  saveToFile(filePath: string): void {
+    const content = JSON.stringify(this);
+    fs.writeFileSync(filePath, content);
+  }
+}
+
+// After: Methods moved to appropriate classes
+class Task {
+  id: string;
+  name: string;
+  priority: string;
+
+  // Only data and core business logic
+  isHighPriority(): boolean {
+    return this.priority === 'HIGH' || this.priority === 'CRITICAL';
+  }
+}
+
+class TaskFormatter {
+  formatForDisplay(task: Task): string {
+    return `[${task.priority}] ${task.name} (${task.id})`;
+  }
+
+  formatForExport(task: Task): string {
+    return `${task.id},${task.name},${task.priority}`;
+  }
+}
+
+class TaskPersistence {
+  saveToFile(task: Task, filePath: string): void {
+    const content = JSON.stringify(task);
+    fs.writeFileSync(filePath, content);
+  }
+
+  loadFromFile(filePath: string): Task {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(content);
+  }
+}
+```
+
+## 🎯 BEHAVIORAL REFACTORING PATTERNS
+
+### Replace Conditional with Polymorphism
+
+**Problem**: Complex conditional logic based on type
+**Solution**: Use polymorphism for type-specific behavior
+
+```typescript
+// Before: Complex conditional logic
+class TaskProcessor {
+  processTask(task: Task): TaskResult {
+    if (task.type === 'ANALYSIS') {
+      // Analysis-specific logic
+      const requirements = this.extractRequirements(task);
+      const complexity = this.assessComplexity(requirements);
+      return {
+        id: task.id,
+        type: 'ANALYSIS',
+        result: { requirements, complexity }
+      };
+    } else if (task.type === 'IMPLEMENTATION') {
+      // Implementation-specific logic
+      const plan = this.createImplementationPlan(task);
+      const code = this.generateCode(plan);
+      return {
+        id: task.id,
+        type: 'IMPLEMENTATION',
+        result: { plan, code }
+      };
+    } else if (task.type === 'TESTING') {
+      // Testing-specific logic
+      const testCases = this.generateTestCases(task);
+      const results = this.runTests(testCases);
+      return {
+        id: task.id,
+        type: 'TESTING',
+        result: { testCases, results }
+      };
+    } else {
+      throw new Error(`Unknown task type: ${task.type}`);
+    }
+  }
+}
+
+// After: Polymorphic approach
+interface TaskProcessor {
+  processTask(task: Task): TaskResult;
+}
+
+class AnalysisTaskProcessor implements TaskProcessor {
+  processTask(task: Task): TaskResult {
+    const requirements = this.extractRequirements(task);
+    const complexity = this.assessComplexity(requirements);
+    return {
+      id: task.id,
+      type: 'ANALYSIS',
+      result: { requirements, complexity }
+    };
+  }
+
+  private extractRequirements(task: Task): Requirements {
+    // Analysis-specific logic
+    return new Requirements(task.description);
+  }
+
+  private assessComplexity(requirements: Requirements): ComplexityLevel {
+    // Complexity assessment logic
+    return requirements.calculateComplexity();
+  }
+}
+
+class ImplementationTaskProcessor implements TaskProcessor {
+  processTask(task: Task): TaskResult {
+    const plan = this.createImplementationPlan(task);
+    const code = this.generateCode(plan);
+    return {
+      id: task.id,
+      type: 'IMPLEMENTATION',
+      result: { plan, code }
+    };
+  }
+
+  private createImplementationPlan(task: Task): ImplementationPlan {
+    // Implementation planning logic
+    return new ImplementationPlan(task);
+  }
+
+  private generateCode(plan: ImplementationPlan): GeneratedCode {
+    // Code generation logic
+    return plan.generateCode();
+  }
+}
+
+class TestingTaskProcessor implements TaskProcessor {
+  processTask(task: Task): TaskResult {
+    const testCases = this.generateTestCases(task);
+    const results = this.runTests(testCases);
+    return {
+      id: task.id,
+      type: 'TESTING',
+      result: { testCases, results }
+    };
+  }
+
+  private generateTestCases(task: Task): TestCase[] {
+    // Test case generation logic
+    return TestCaseGenerator.generate(task);
+  }
+
+  private runTests(testCases: TestCase[]): TestResult[] {
+    // Test execution logic
+    return TestRunner.execute(testCases);
+  }
+}
+
+// Factory for creating appropriate processors
+class TaskProcessorFactory {
+  private processors: Map<string, TaskProcessor> = new Map([
+    ['ANALYSIS', new AnalysisTaskProcessor()],
+    ['IMPLEMENTATION', new ImplementationTaskProcessor()],
+    ['TESTING', new TestingTaskProcessor()]
+  ]);
+
+  createProcessor(taskType: string): TaskProcessor {
+    const processor = this.processors.get(taskType);
+    if (!processor) {
+      throw new Error(`No processor found for task type: ${taskType}`);
+    }
+    return processor;
+  }
+}
+```
+
+### Replace Magic Numbers with Constants
+
+**Problem**: Magic numbers scattered throughout code
+**Solution**: Define meaningful constants
+
+```typescript
+// Before: Magic numbers everywhere
+class TaskValidator {
+  validateTask(task: Task): ValidationResult {
+    if (task.name.length > 100) {
+      return { valid: false, error: 'Name too long' };
+    }
+
+    if (task.description.length > 1000) {
+      return { valid: false, error: 'Description too long' };
+    }
+
+    if (task.estimatedHours < 0.5 || task.estimatedHours > 40) {
+      return { valid: false, error: 'Invalid time estimate' };
+    }
+
+    if (task.priority < 1 || task.priority > 4) {
+      return { valid: false, error: 'Invalid priority' };
+    }
+
+    return { valid: true };
+  }
+}
+
+// After: Meaningful constants
+class TaskValidator {
+  private static readonly MAX_NAME_LENGTH = 100;
+  private static readonly MAX_DESCRIPTION_LENGTH = 1000;
+  private static readonly MIN_ESTIMATED_HOURS = 0.5;
+  private static readonly MAX_ESTIMATED_HOURS = 40;
+  private static readonly MIN_PRIORITY = 1;
+  private static readonly MAX_PRIORITY = 4;
+
+  validateTask(task: Task): ValidationResult {
+    if (task.name.length > TaskValidator.MAX_NAME_LENGTH) {
+      return {
+        valid: false,
+        error: `Name exceeds maximum length of ${TaskValidator.MAX_NAME_LENGTH} characters`
+      };
+    }
+
+    if (task.description.length > TaskValidator.MAX_DESCRIPTION_LENGTH) {
+      return {
+        valid: false,
+        error: `Description exceeds maximum length of ${TaskValidator.MAX_DESCRIPTION_LENGTH} characters`
+      };
+    }
+
+    if (task.estimatedHours < TaskValidator.MIN_ESTIMATED_HOURS ||
+        task.estimatedHours > TaskValidator.MAX_ESTIMATED_HOURS) {
+      return {
+        valid: false,
+        error: `Estimated hours must be between ${TaskValidator.MIN_ESTIMATED_HOURS} and ${TaskValidator.MAX_ESTIMATED_HOURS}`
+      };
+    }
+
+    if (task.priority < TaskValidator.MIN_PRIORITY ||
+        task.priority > TaskValidator.MAX_PRIORITY) {
+      return {
+        valid: false,
+        error: `Priority must be between ${TaskValidator.MIN_PRIORITY} and ${TaskValidator.MAX_PRIORITY}`
+      };
+    }
+
+    return { valid: true };
+  }
+}
+
+// Even better: Use enums and configuration
+enum TaskPriority {
+  LOW = 1,
+  MEDIUM = 2,
+  HIGH = 3,
+  CRITICAL = 4
+}
+
+interface TaskValidationConfig {
+  maxNameLength: number;
+  maxDescriptionLength: number;
+  minEstimatedHours: number;
+  maxEstimatedHours: number;
+}
+
+class ConfigurableTaskValidator {
+  constructor(private config: TaskValidationConfig) {}
+
+  validateTask(task: Task): ValidationResult {
+    const nameValidation = this.validateName(task.name);
+    if (!nameValidation.valid) return nameValidation;
+
+    const descriptionValidation = this.validateDescription(task.description);
+    if (!descriptionValidation.valid) return descriptionValidation;
+
+    const hoursValidation = this.validateEstimatedHours(task.estimatedHours);
+    if (!hoursValidation.valid) return hoursValidation;
+
+    const priorityValidation = this.validatePriority(task.priority);
+    if (!priorityValidation.valid) return priorityValidation;
+
+    return { valid: true };
+  }
+
+  private validateName(name: string): ValidationResult {
+    if (name.length > this.config.maxNameLength) {
+      return {
+        valid: false,
+        error: `Name exceeds maximum length of ${this.config.maxNameLength} characters`
+      };
+    }
+    return { valid: true };
+  }
+
+  private validateDescription(description: string): ValidationResult {
+    if (description.length > this.config.maxDescriptionLength) {
+      return {
+        valid: false,
+        error: `Description exceeds maximum length of ${this.config.maxDescriptionLength} characters`
+      };
+    }
+    return { valid: true };
+  }
+
+  private validateEstimatedHours(hours: number): ValidationResult {
+    if (hours < this.config.minEstimatedHours || hours > this.config.maxEstimatedHours) {
+      return {
+        valid: false,
+        error: `Estimated hours must be between ${this.config.minEstimatedHours} and ${this.config.maxEstimatedHours}`
+      };
+    }
+    return { valid: true };
+  }
+
+  private validatePriority(priority: TaskPriority): ValidationResult {
+    if (!Object.values(TaskPriority).includes(priority)) {
+      return {
+        valid: false,
+        error: `Invalid priority. Must be one of: ${Object.values(TaskPriority).join(', ')}`
+      };
+    }
+    return { valid: true };
+  }
+}
+```
+
+## 🏛️ ARCHITECTURAL REFACTORING PATTERNS
+
+### Introduce Layer Pattern
+
+**Problem**: Mixed concerns and tight coupling
+**Solution**: Introduce architectural layers
+
+```typescript
+// Before: Mixed concerns
+class TaskService {
+  processTask(taskData: any): any {
+    // Data validation mixed with business logic
+    if (!taskData.id) throw new Error('ID required');
+
+    // Database access mixed with business logic
+    const existingTask = database.query('SELECT * FROM tasks WHERE id = ?', [taskData.id]);
+    if (existingTask) throw new Error('Task already exists');
+
+    // Business logic mixed with data access
+    const task = {
+      id: taskData.id,
+      name: taskData.name,
+      status: 'CREATED',
+      createdAt: new Date()
+    };
+
+    // Direct database manipulation
+    database.execute('INSERT INTO tasks VALUES (?, ?, ?, ?)',
+      [task.id, task.name, task.status, task.createdAt]);
+
+    // Direct response formatting
+    return {
+      success: true,
+      task: {
+        id: task.id,
+        name: task.name,
+        status: task.status
+      }
+    };
+  }
+}
+
+// After: Layered architecture
+// Presentation Layer
+class TaskController {
+  constructor(private taskService: TaskService) {}
+
+  async createTask(request: CreateTaskRequest): Promise<CreateTaskResponse> {
+    try {
+      const task = await this.taskService.createTask(request);
+      return {
+        success: true,
+        data: this.formatTaskResponse(task)
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message
+      };
+    }
+  }
+
+  private formatTaskResponse(task: Task): TaskResponse {
+    return {
+      id: task.id,
+      name: task.name,
+      status: task.status,
+      createdAt: task.createdAt.toISOString()
+    };
+  }
+}
+
+// Business Logic Layer
+class TaskService {
+  constructor(
+    private taskRepository: TaskRepository,
+    private taskValidator: TaskValidator
+  ) {}
+
+  async createTask(request: CreateTaskRequest): Promise<Task> {
+    // Validate input
+    const validation = this.taskValidator.validate(request);
+    if (!validation.valid) {
+      throw new Error(validation.error);
+    }
+
+    // Check business rules
+    const existingTask = await this.taskRepository.findById(request.id);
+    if (existingTask) {
+      throw new Error('Task already exists');
+    }
+
+    // Create domain object
+    const task = new Task({
+      id: request.id,
+      name: request.name,
+      status: TaskStatus.CREATED,
+      createdAt: new Date()
+    });
+
+    // Persist through repository
+    return await this.taskRepository.save(task);
+  }
+}
+
+// Data Access Layer
+interface TaskRepository {
+  findById(id: string): Promise<Task | null>;
+  save(task: Task): Promise<Task>;
+  delete(id: string): Promise<void>;
+}
+
+class DatabaseTaskRepository implements TaskRepository {
+  constructor(private database: Database) {}
+
+  async findById(id: string): Promise<Task | null> {
+    const row = await this.database.query(
+      'SELECT * FROM tasks WHERE id = ?',
+      [id]
+    );
+
+    return row ? this.mapRowToTask(row) : null;
+  }
+
+  async save(task: Task): Promise<Task> {
+    await this.database.execute(
+      'INSERT INTO tasks (id, name, status, created_at) VALUES (?, ?, ?, ?)',
+      [task.id, task.name, task.status, task.createdAt]
+    );
+
+    return task;
+  }
+
+  async delete(id: string): Promise<void> {
+    await this.database.execute('DELETE FROM tasks WHERE id = ?', [id]);
+  }
+
+  private mapRowToTask(row: any): Task {
+    return new Task({
+      id: row.id,
+      name: row.name,
+      status: row.status,
+      createdAt: new Date(row.created_at)
+    });
+  }
+}
+
+// Domain Layer
+class Task {
+  constructor(
+    public readonly id: string,
+    public readonly name: string,
+    public status: TaskStatus,
+    public readonly createdAt: Date
+  ) {}
+
+  markAsCompleted(): void {
+    if (this.status === TaskStatus.COMPLETED) {
+      throw new Error('Task is already completed');
+    }
+    this.status = TaskStatus.COMPLETED;
+  }
+
+  isOverdue(): boolean {
+    const daysSinceCreation = (Date.now() - this.createdAt.getTime()) / (1000 * 60 * 60 * 24);
+    return daysSinceCreation > 30; // Business rule: tasks are overdue after 30 days
+  }
+}
+
+enum TaskStatus {
+  CREATED = 'CREATED',
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED'
+}
+```
+
+## 📊 REFACTORING METRICS AND VALIDATION
+
+### Measuring Refactoring Success
+
+```typescript
+interface RefactoringMetrics {
+  codeComplexity: {
+    before: number;
+    after: number;
+    improvement: number;
+  };
+  testCoverage: {
+    before: number;
+    after: number;
+    improvement: number;
+  };
+  maintainabilityIndex: {
+    before: number;
+    after: number;
+    improvement: number;
+  };
+  performanceMetrics: {
+    before: PerformanceSnapshot;
+    after: PerformanceSnapshot;
+    improvement: PerformanceImprovement;
+  };
+}
+
+class RefactoringValidator {
+  async validateRefactoring(
+    beforeSnapshot: CodeSnapshot,
+    afterSnapshot: CodeSnapshot
+  ): Promise<RefactoringValidation> {
+    return {
+      functionalityPreserved: await this.validateFunctionality(beforeSnapshot, afterSnapshot),
+      qualityImproved: this.validateQualityImprovement(beforeSnapshot, afterSnapshot),
+      performanceImpact: await this.validatePerformanceImpact(beforeSnapshot, afterSnapshot),
+      testCoverageImpact: this.validateTestCoverage(beforeSnapshot, afterSnapshot)
+    };
+  }
+
+  private async validateFunctionality(
+    before: CodeSnapshot,
+    after: CodeSnapshot
+  ): Promise<FunctionalityValidation> {
+    // Run comprehensive test suite
+    const beforeTests = await this.runTestSuite(before);
+    const afterTests = await this.runTestSuite(after);
+
+    return {
+      allTestsPass: afterTests.allPassed,
+      testResultsMatch: this.compareTestResults(beforeTests, afterTests),
+      newFailures: this.identifyNewFailures(beforeTests, afterTests)
+    };
+  }
+}
+```
+
+This comprehensive collection of refactoring patterns provides systematic approaches to improving Memory Bank code quality, maintainability, and architectural design.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/system/creative-decision-control.mdc`
+
+```mdc
+---
+description: "Creative decision control system for CREATIVE mode with user choice presentation"
+globs: "**/creative/**", "**/CREATIVE/**", "**/creative-mode/**"
+alwaysApply: false
+---
+
+# CREATIVE DECISION CONTROL SYSTEM
+
+> **TL;DR:** This rule implements user-controlled creative decision making in CREATIVE mode, presenting architectural options with analysis for user choice instead of making autonomous decisions.
+
+## 🎨 CREATIVE DECISION OVERVIEW
+
+The Creative Decision Control system activates in CREATIVE mode when interaction-mode is set to "MANUAL", ensuring users make final architectural and design decisions based on AI analysis and recommendations.
+
+### Core Principles
+
+**User-Driven Decisions**
+- Present multiple viable options with analysis
+- Provide clear pros/cons for each approach
+- Let users make final architectural choices
+- Document decision rationale and context
+
+**Informed Choice**
+- Analyze each option thoroughly
+- Provide scoring and comparison matrices
+- Highlight trade-offs and implications
+- Offer implementation complexity estimates
+
+## 🔄 CREATIVE DECISION WORKFLOW
+
+```mermaid
+graph TD
+    Start["🎨 CREATIVE Mode Start"] --> CheckMode{"🔍 Check Interaction Mode"}
+    CheckMode -->|"AUTO"| AutoDecision["🤖 Autonomous Decision"]
+    CheckMode -->|"MANUAL"| AnalyzeProblem["🔍 Analyze Design Problem"]
+
+    AnalyzeProblem --> GenerateOptions["💡 Generate Solution Options"]
+    GenerateOptions --> AnalyzeOptions["📊 Analyze Each Option"]
+    AnalyzeOptions --> ScoreOptions["🎯 Score and Compare"]
+    ScoreOptions --> PresentOptions["📋 Present Options to User"]
+
+    PresentOptions --> WaitChoice["⏳ Wait for User Choice"]
+    WaitChoice --> ProcessChoice["📝 Process User Decision"]
+    ProcessChoice --> DocumentDecision["📚 Document Decision"]
+    DocumentDecision --> CreateImplementation["🏗️ Create Implementation Plan"]
+
+    AutoDecision --> DocumentDecision
+    CreateImplementation --> Complete["✅ Creative Phase Complete"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMode fill:#d94dbb,stroke:#a3378a,color:white
+    style GenerateOptions fill:#4dbb5f,stroke:#36873f,color:white
+    style PresentOptions fill:#ffa64d,stroke:#cc7a30,color:white
+    style WaitChoice fill:#ff5555,stroke:#cc0000,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📊 OPTION ANALYSIS FRAMEWORK
+
+### Analysis Dimensions
+
+**Technical Feasibility** (0-25 points)
+- Implementation complexity
+- Technology compatibility
+- Resource requirements
+- Technical risk assessment
+
+**Maintainability** (0-25 points)
+- Code clarity and organization
+- Future extensibility
+- Documentation requirements
+- Team knowledge requirements
+
+**Performance** (0-25 points)
+- Speed and efficiency
+- Resource utilization
+- Scalability potential
+- Optimization opportunities
+
+**User Experience** (0-25 points)
+- Usability and accessibility
+- User workflow impact
+- Interface design quality
+- User satisfaction potential
+
+### Scoring Matrix Template
+
+```markdown
+## Option Analysis: [Option Name]
+
+### Technical Feasibility (X/25)
+- **Complexity**: [Low/Medium/High] - [Explanation]
+- **Compatibility**: [Excellent/Good/Fair/Poor] - [Details]
+- **Resources**: [Minimal/Moderate/Significant] - [Requirements]
+- **Risk**: [Low/Medium/High] - [Risk factors]
+
+### Maintainability (X/25)
+- **Code Quality**: [Excellent/Good/Fair/Poor] - [Assessment]
+- **Extensibility**: [High/Medium/Low] - [Future growth potential]
+- **Documentation**: [Minimal/Standard/Extensive] - [Requirements]
+- **Team Skills**: [Available/Learnable/Missing] - [Skill assessment]
+
+### Performance (X/25)
+- **Speed**: [Excellent/Good/Fair/Poor] - [Performance characteristics]
+- **Resources**: [Efficient/Moderate/Heavy] - [Resource usage]
+- **Scalability**: [High/Medium/Low] - [Growth potential]
+- **Optimization**: [Easy/Moderate/Difficult] - [Optimization potential]
+
+### User Experience (X/25)
+- **Usability**: [Excellent/Good/Fair/Poor] - [User experience quality]
+- **Workflow**: [Improved/Unchanged/Degraded] - [Impact on user workflow]
+- **Interface**: [Intuitive/Standard/Complex] - [Interface assessment]
+- **Satisfaction**: [High/Medium/Low] - [Expected user satisfaction]
+
+**Total Score**: X/100
+**Recommendation**: [Recommended/Acceptable/Not Recommended]
+```
+
+## 🎯 DECISION PRESENTATION FORMAT
+
+### Standard Option Presentation
+
+```markdown
+# CREATIVE DECISION: [Problem Title]
+
+## Problem Summary
+[Brief description of the design challenge]
+
+## Available Options
+
+### Option A: [Name] (Score: X/100)
+**Approach**: [Brief description]
+**Pros**:
+- [Key advantage 1]
+- [Key advantage 2]
+- [Key advantage 3]
+
+**Cons**:
+- [Key limitation 1]
+- [Key limitation 2]
+
+**Implementation Time**: [Estimate]
+**Complexity**: [Low/Medium/High]
+
+### Option B: [Name] (Score: X/100)
+[Similar format]
+
+### Option C: [Name] (Score: X/100)
+[Similar format]
+
+## Recommendation
+Based on analysis, **Option [X]** is recommended because:
+- [Primary reason]
+- [Secondary reason]
+- [Additional consideration]
+
+## Decision Required
+Please choose your preferred option:
+1. Option A - [Brief name]
+2. Option B - [Brief name]
+3. Option C - [Brief name]
+4. Request additional analysis
+5. Suggest alternative approach
+
+**Your choice**: [User input required]
+```
+
+## 🔧 IMPLEMENTATION INTEGRATION
+
+### File System Integration
+
+**Decision Templates**: `memory-bank/templates/decision-matrix.md`
+- Standardized decision presentation format
+- Scoring matrix templates
+- Option comparison frameworks
+- Decision documentation templates
+
+**Creative Context**: `memory-bank/creative/creative-context.md`
+- Current creative session state
+- Options presented and user choices
+- Decision history and rationale
+- Implementation implications
+
+**Decision Archive**: `memory-bank/creative/decisions/`
+- Historical decision records
+- Option analysis archives
+- User preference patterns
+- Decision outcome tracking
+
+### Mode Integration
+
+**CREATIVE Mode Activation**
+- Check interaction mode on entry
+- Load decision templates if MANUAL mode
+- Prepare option analysis framework
+- Initialize user choice tracking
+
+**Option Generation Process**
+- Generate 3-5 viable options minimum
+- Analyze each option across all dimensions
+- Score options using standardized criteria
+- Prepare comparison matrices
+
+**User Choice Processing**
+- Present options in standardized format
+- Wait for user selection with timeout
+- Process and validate user choice
+- Document decision and rationale
+
+## 📋 DECISION CATEGORIES
+
+### Architectural Decisions
+**Examples**:
+- System architecture patterns (MVC, microservices, etc.)
+- Database design approaches
+- API design strategies
+- Integration patterns
+
+**Analysis Focus**:
+- Long-term maintainability
+- Scalability implications
+- Team expertise requirements
+- Technology ecosystem fit
+
+### Design Pattern Decisions
+**Examples**:
+- State management approaches
+- Error handling strategies
+- Caching mechanisms
+- Security implementations
+
+**Analysis Focus**:
+- Implementation complexity
+- Performance characteristics
+- Code organization impact
+- Testing implications
+
+### Technology Stack Decisions
+**Examples**:
+- Framework selections
+- Library choices
+- Tool integrations
+- Platform decisions
+
+**Analysis Focus**:
+- Learning curve requirements
+- Community support
+- Long-term viability
+- Integration capabilities
+
+### User Experience Decisions
+**Examples**:
+- Interface design approaches
+- User workflow designs
+- Accessibility implementations
+- Performance optimizations
+
+**Analysis Focus**:
+- User satisfaction impact
+- Usability considerations
+- Accessibility compliance
+- Performance implications
+
+## 🚨 DECISION QUALITY CONTROLS
+
+### Option Quality Validation
+
+**Minimum Requirements**
+- At least 3 viable options presented
+- Each option scored across all dimensions
+- Clear pros/cons identified for each
+- Implementation estimates provided
+
+**Quality Thresholds**
+- All options must score >40/100 to be viable
+- At least one option must score >70/100
+- Score differences must be >10 points to be meaningful
+- All dimensions must be analyzed for each option
+
+### User Choice Validation
+
+**Choice Processing**
+- Validate user selection is among presented options
+- Confirm understanding of chosen option implications
+- Document any user modifications or preferences
+- Record decision timeline and context
+
+**Fallback Handling**
+- If no user response within timeout, present recommendation
+- If user requests additional analysis, provide deeper dive
+- If user suggests alternative, analyze and incorporate
+- If user choice is unclear, ask for clarification
+
+## 📊 DECISION TRACKING METRICS
+
+### Decision Quality Metrics
+
+**Analysis Completeness**
+- All dimensions analyzed: +20 points
+- Multiple viable options: +20 points
+- Clear scoring rationale: +20 points
+- Implementation estimates: +20 points
+- Risk assessment included: +20 points
+
+**User Engagement Metrics**
+- User actively participated: +25 points
+- User provided additional context: +15 points
+- User validated understanding: +15 points
+- User satisfied with options: +25 points
+- Decision made within reasonable time: +20 points
+
+### Success Indicators
+
+- **EXCELLENT**: 90-100 points - High-quality collaborative decision
+- **GOOD**: 75-89 points - Solid decision with good analysis
+- **ACCEPTABLE**: 60-74 points - Adequate decision process
+- **POOR**: <60 points - Decision quality concerns, review needed
+
+## 📚 BEST PRACTICES
+
+### Option Generation
+
+**Diversity of Approaches**
+- Include different architectural patterns
+- Consider various implementation strategies
+- Explore different technology choices
+- Present range of complexity levels
+
+**Realistic Assessment**
+- Base scores on actual project constraints
+- Consider team capabilities honestly
+- Account for timeline limitations
+- Include maintenance considerations
+
+### User Communication
+
+**Clear Presentation**
+- Use consistent formatting
+- Highlight key differences between options
+- Provide concrete examples when helpful
+- Avoid overwhelming technical detail
+
+**Responsive Interaction**
+- Acknowledge user questions promptly
+- Provide additional analysis when requested
+- Clarify implications of choices
+- Support user decision-making process
+
+This creative decision control system ensures users maintain control over architectural and design decisions while benefiting from comprehensive AI analysis and recommendations.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/system/date-management.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# DATE MANAGEMENT SYSTEM
+
+> **TL;DR:** Dynamic date management system that uses real command-line dates instead of hardcoded values, with mode-based access control ensuring IMPLEMENT mode cannot modify dates while other modes can update them as needed.
+
+## 🚨 CRITICAL FIX
+
+**PROBLEM SOLVED**: AI was using hardcoded date "2024-12-09" instead of real current date
+**SOLUTION**: Dynamic date system using command-line `date` command with proper access control
+
+## 📅 DATE SYSTEM ARCHITECTURE
+
+### Current Date Storage
+- **File**: `memory-bank/system/current-date.txt`
+- **Format**: YYYY-MM-DD (ISO 8601)
+- **Source**: Command line `date +%Y-%m-%d`
+- **Initialization**: System startup with real current date
+
+### Access Control by Mode
+
+**✅ WRITABLE MODES** (can update date):
+- **VAN Mode**: Can update date when starting new analysis
+- **PLAN Mode**: Can update date when planning new features
+- **CREATIVE Mode**: Can update date during creative sessions
+- **REFLECT Mode**: Can update date during reflection
+- **ARCHIVE Mode**: Can update date during archival
+
+**❌ READ-ONLY MODE** (cannot update date):
+- **IMPLEMENT Mode**: Uses stored date, cannot modify (prevents inconsistency during implementation)
+
+## 🔧 IMPLEMENTATION FUNCTIONS
+
+### Core Date Functions
+
+```bash
+# Get current system date
+get_system_date() {
+  if [[ -f "memory-bank/system/current-date.txt" ]]; then
+    cat memory-bank/system/current-date.txt
+  else
+    date +%Y-%m-%d
+  fi
+}
+
+# Update system date (with mode check)
+update_system_date() {
+  local current_mode="$1"
+
+  # Check if current mode can update date
+  if [[ "$current_mode" == "IMPLEMENT" ]]; then
+    echo "WARNING: IMPLEMENT mode cannot update system date"
+    return 1
+  fi
+
+  # Update date with real current date
+  local new_date=$(date +%Y-%m-%d)
+  echo "$new_date" > memory-bank/system/current-date.txt
+  echo "System date updated to: $new_date"
+  return 0
+}
+
+# Initialize date system
+init_date_system() {
+  mkdir -p memory-bank/system
+  local current_date=$(date +%Y-%m-%d)
+  echo "$current_date" > memory-bank/system/current-date.txt
+  echo "Date system initialized with: $current_date"
+}
+
+# Validate date format
+validate_date() {
+  local date_string="$1"
+  if [[ "$date_string" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+```
+
+### Mode Integration
+
+**VAN Mode Integration**:
+```bash
+# At VAN mode start
+update_system_date "VAN"
+CURRENT_DATE=$(get_system_date)
+echo "VAN Mode started on: $CURRENT_DATE"
+```
+
+**PLAN Mode Integration**:
+```bash
+# At PLAN mode start
+update_system_date "PLAN"
+CURRENT_DATE=$(get_system_date)
+echo "Planning session started on: $CURRENT_DATE"
+```
+
+**CREATIVE Mode Integration**:
+```bash
+# At CREATIVE mode start
+update_system_date "CREATIVE"
+CURRENT_DATE=$(get_system_date)
+echo "Creative session started on: $CURRENT_DATE"
+```
+
+**IMPLEMENT Mode Integration**:
+```bash
+# At IMPLEMENT mode start (READ-ONLY)
+CURRENT_DATE=$(get_system_date)
+echo "Implementation using date: $CURRENT_DATE (read-only)"
+# NO update_system_date call - prevents date changes during implementation
+```
+
+**REFLECT Mode Integration**:
+```bash
+# At REFLECT mode start
+update_system_date "REFLECT"
+CURRENT_DATE=$(get_system_date)
+echo "Reflection session started on: $CURRENT_DATE"
+```
+
+**ARCHIVE Mode Integration**:
+```bash
+# At ARCHIVE mode start
+update_system_date "ARCHIVE"
+CURRENT_DATE=$(get_system_date)
+echo "Archive session started on: $CURRENT_DATE"
+```
+
+## 📝 USAGE IN DOCUMENTATION
+
+### File Naming with Real Dates
+```bash
+# Instead of hardcoded dates
+CURRENT_DATE=$(get_system_date)
+FILENAME="arch-${CURRENT_DATE}-cursor-memory-bank-001-task-continuity.md"
+
+# Decision IDs with real dates
+DECISION_ID="ARCH-${CURRENT_DATE}-001"
+```
+
+### Metadata with Real Dates
+```yaml
+decision_metadata:
+  id: "ARCH-$(get_system_date)-001"
+  created: "$(date -Iseconds)"
+  last_updated: "$(get_system_date)"
+
+version_history:
+  - version: "1.0"
+    date: "$(date -Iseconds)"
+    changes: "Initial decision"
+```
+
+### Archive Organization with Real Dates
+```bash
+# Create date-based archive structure
+CURRENT_DATE=$(get_system_date)
+YEAR=$(echo $CURRENT_DATE | cut -d'-' -f1)
+MONTH=$(echo $CURRENT_DATE | cut -d'-' -f2)
+DAY=$(echo $CURRENT_DATE | cut -d'-' -f3)
+
+ARCHIVE_PATH="memory-bank/creative/projects/cursor-memory-bank/$YEAR/$MONTH/$DAY"
+mkdir -p "$ARCHIVE_PATH"
+```
+
+## 🔍 VALIDATION AND MONITORING
+
+### Date Consistency Checks
+```bash
+# Check date system health
+check_date_system() {
+  local stored_date=$(get_system_date)
+  local current_date=$(date +%Y-%m-%d)
+
+  if validate_date "$stored_date"; then
+    echo "✅ Stored date format valid: $stored_date"
+  else
+    echo "❌ Invalid stored date format: $stored_date"
+    return 1
+  fi
+
+  # Check if date is reasonable (not too old)
+  local days_diff=$(( ($(date -d "$current_date" +%s) - $(date -d "$stored_date" +%s)) / 86400 ))
+
+  if [[ $days_diff -gt 7 ]]; then
+    echo "⚠️  Stored date is $days_diff days old: $stored_date"
+    echo "Consider updating with: update_system_date <mode>"
+  else
+    echo "✅ Date freshness OK: $stored_date (${days_diff} days old)"
+  fi
+}
+
+# Monitor date usage
+log_date_access() {
+  local mode="$1"
+  local action="$2"  # "read" or "update"
+  local date_used=$(get_system_date)
+
+  echo "$(date -Iseconds) | $mode | $action | $date_used" >> memory-bank/logs/date-access.log
+}
+```
+
+### Error Handling
+```bash
+# Safe date operations with fallback
+safe_get_date() {
+  local stored_date=$(get_system_date)
+
+  if validate_date "$stored_date"; then
+    echo "$stored_date"
+  else
+    echo "ERROR: Invalid stored date, using current date"
+    date +%Y-%m-%d
+  fi
+}
+
+# Recovery from corrupted date file
+recover_date_system() {
+  echo "Recovering date system..."
+  local current_date=$(date +%Y-%m-%d)
+  echo "$current_date" > memory-bank/system/current-date.txt
+  echo "Date system recovered with: $current_date"
+}
+```
+
+## 🎯 INTEGRATION POINTS
+
+### Memory Bank Workflow Integration
+
+**System Initialization**:
+- Initialize date system on first run
+- Validate date system health on each mode start
+- Log date access for audit trail
+
+**Mode Transitions**:
+- Update date when entering writable modes
+- Preserve date when entering IMPLEMENT mode
+- Validate date consistency across transitions
+
+**Documentation Generation**:
+- Use real dates in all generated files
+- Ensure consistent date format across all documents
+- Archive with proper date-based organization
+
+### Configuration Integration
+
+**System Configuration** (`memory-bank/config/system.yaml`):
+```yaml
+date_management:
+  source: "command_line"
+  update_command: "date +%Y-%m-%d"
+  storage_file: "memory-bank/system/current-date.txt"
+  readonly_modes: ["IMPLEMENT"]
+  validation:
+    format: "YYYY-MM-DD"
+    max_age_days: 7
+```
+
+**Mode Configuration**:
+```yaml
+modes:
+  IMPLEMENT:
+    can_update_date: false
+    date_access: "readonly"
+  PLAN:
+    can_update_date: true
+    date_access: "readwrite"
+```
+
+## ✅ VERIFICATION CHECKLIST
+
+**System Health Checks**:
+- [ ] Date file exists and is readable
+- [ ] Date format is valid (YYYY-MM-DD)
+- [ ] Date is reasonably current (< 7 days old)
+- [ ] IMPLEMENT mode cannot update date
+- [ ] Other modes can update date successfully
+
+**Integration Checks**:
+- [ ] All modes use get_system_date() function
+- [ ] No hardcoded dates in documentation
+- [ ] Archive structure uses real dates
+- [ ] Decision IDs include real dates
+- [ ] Metadata timestamps are accurate
+
+**Functionality Checks**:
+- [ ] Date updates work in VAN/PLAN/CREATIVE/REFLECT/ARCHIVE modes
+- [ ] Date updates are blocked in IMPLEMENT mode
+- [ ] Date validation prevents invalid formats
+- [ ] Recovery works if date file is corrupted
+- [ ] Logging captures all date operations
+
+This date management system ensures all Memory Bank operations use accurate, real-world dates while maintaining consistency and preventing unauthorized modifications during implementation phases.
+
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/system/interaction-mode-control.mdc`
+
+```mdc
+---
+description: "Interaction mode control system for AUTO/MANUAL behavior switching"
+globs: "**/system/**", "**/interaction/**", "**/mode-control/**"
+alwaysApply: true
+---
+
+# INTERACTION MODE CONTROL SYSTEM
+
+This rule implements AUTO/MANUAL interaction mode switching that controls AI behavior across all Memory Bank modes.
+
+> **TL;DR:** This rule implements AUTO/MANUAL interaction mode switching that controls AI behavior across all Memory Bank modes, enabling autonomous operation or user-guided decision making.
+
+## 🔄 INTERACTION MODE OVERVIEW
+
+The Interaction Mode Control system provides two distinct operational modes that fundamentally change how the AI interacts with users across all Memory Bank phases.
+
+### Mode Definitions
+
+**AUTO Mode**
+- AI makes autonomous decisions based on best practices
+- Minimal user interaction required
+- Fast execution with documented rationale
+- Suitable for routine tasks and experienced users
+
+**MANUAL Mode**
+- AI presents options and asks for user guidance
+- Interactive planning with clarifying questions
+- User-controlled creative and architectural decisions
+- Suitable for complex tasks and collaborative development
+
+## 🎯 MODE BEHAVIOR MATRIX
+
+| Memory Bank Mode | AUTO Behavior | MANUAL Behavior |
+|------------------|---------------|-----------------|
+| **VAN** | Auto-detect complexity, proceed with standard workflow | Ask about priorities, confirm approach |
+| **PLAN** | Create implementation plan based on requirements | Ask clarifying questions, validate assumptions |
+| **CREATIVE** | Make architectural decisions with documented rationale | Present options for user choice |
+| **IMPLEMENT** | Execute plan with standard practices | Confirm critical decisions, validate approach |
+| **REFLECT** | Auto-generate reflection based on outcomes | Guide user through reflection process |
+| **ARCHIVE** | Standard archiving with automated organization | Collaborative knowledge capture |
+
+## 🔧 MODE DETECTION AND SWITCHING
+
+### Current Mode Detection
+
+```bash
+# Read current interaction mode
+cat memory-bank/system/interaction-mode.txt
+```
+
+**Expected Values**:
+- `AUTO` - Autonomous operation mode
+- `MANUAL` - Interactive operation mode
+
+### Mode Switching Commands
+
+**Switch to AUTO Mode**:
+```bash
+echo "AUTO" > memory-bank/system/interaction-mode.txt
+```
+
+**Switch to MANUAL Mode**:
+```bash
+echo "MANUAL" > memory-bank/system/interaction-mode.txt
+```
+
+### Mode Validation
+
+```bash
+# Validate mode file exists and has valid value
+if [ -f "memory-bank/system/interaction-mode.txt" ]; then
+    MODE=$(cat memory-bank/system/interaction-mode.txt)
+    if [ "$MODE" = "AUTO" ] || [ "$MODE" = "MANUAL" ]; then
+        echo "Valid mode: $MODE"
+    else
+        echo "Invalid mode: $MODE, defaulting to MANUAL"
+        echo "MANUAL" > memory-bank/system/interaction-mode.txt
+    fi
+else
+    echo "Mode file missing, creating with MANUAL default"
+    echo "MANUAL" > memory-bank/system/interaction-mode.txt
+fi
+```
+
+## 📋 MODE-SPECIFIC BEHAVIORS
+
+### VAN Mode Behaviors
+
+**AUTO Mode**:
+- Automatically detect task complexity (Level 1-4)
+- Proceed with standard workflow for detected level
+- Use default QA checks and validation
+- Minimal user confirmation required
+
+**MANUAL Mode**:
+- Present complexity analysis for user confirmation
+- Ask about specific priorities and constraints
+- Confirm workflow approach before proceeding
+- Allow user to override complexity assessment
+
+### PLAN Mode Behaviors
+
+**AUTO Mode**:
+- Analyze requirements and create implementation plan
+- Use standard planning templates and approaches
+- Document assumptions and proceed with best practices
+- Generate comprehensive plan without user input
+
+**MANUAL Mode**:
+- Ask clarifying questions about unclear requirements
+- Present planning options for user choice
+- Validate assumptions with user before proceeding
+- Collaborative plan development with user input
+
+### CREATIVE Mode Behaviors
+
+**AUTO Mode**:
+- Analyze design problem and select best solution
+- Document decision rationale and trade-offs
+- Proceed with recommended architectural approach
+- Create implementation strategy autonomously
+
+**MANUAL Mode**:
+- Generate multiple solution options with analysis
+- Present options with pros/cons and scoring
+- Wait for user choice among presented options
+- Document user decision and rationale
+
+### IMPLEMENT Mode Behaviors
+
+**AUTO Mode**:
+- Execute implementation plan systematically
+- Use standard coding practices and patterns
+- Make technical decisions based on best practices
+- Proceed with minimal user intervention
+
+**MANUAL Mode**:
+- Confirm critical implementation decisions
+- Ask for guidance on ambiguous technical choices
+- Validate approach before major code changes
+- Collaborative implementation with user oversight
+
+### REFLECT Mode Behaviors
+
+**AUTO Mode**:
+- Analyze implementation outcomes automatically
+- Generate reflection document with standard format
+- Document lessons learned and improvements
+- Create comprehensive reflection autonomously
+
+**MANUAL Mode**:
+- Guide user through reflection process
+- Ask specific questions about experience
+- Collaborate on lessons learned identification
+- Interactive reflection document creation
+
+### ARCHIVE Mode Behaviors
+
+**AUTO Mode**:
+- Organize and archive all project artifacts
+- Use standard archiving structure and naming
+- Generate archive documentation automatically
+- Complete archiving with minimal user input
+
+**MANUAL Mode**:
+- Collaborate on archive organization
+- Ask about knowledge preservation priorities
+- Validate archive structure with user
+- Interactive knowledge capture and organization
+
+## 🔄 MODE TRANSITION WORKFLOW
+
+```mermaid
+graph TD
+    Start["🚀 Memory Bank Mode Start"] --> CheckMode["📋 Check Interaction Mode"]
+    CheckMode --> ReadFile["📄 Read interaction-mode.txt"]
+    ReadFile --> ValidateMode{"✅ Valid Mode?"}
+
+    ValidateMode -->|"Invalid/Missing"| SetDefault["📝 Set MANUAL Default"]
+    ValidateMode -->|"Valid"| LoadMode["🔧 Load Mode Configuration"]
+
+    SetDefault --> LoadMode
+    LoadMode --> CheckAuto{"🤖 AUTO Mode?"}
+
+    CheckAuto -->|"Yes"| AutoBehavior["🤖 Execute AUTO Behavior"]
+    CheckAuto -->|"No"| ManualBehavior["👤 Execute MANUAL Behavior"]
+
+    AutoBehavior --> DocumentDecisions["📚 Document Autonomous Decisions"]
+    ManualBehavior --> UserInteraction["💬 Interactive User Engagement"]
+
+    DocumentDecisions --> Complete["✅ Mode Complete"]
+    UserInteraction --> Complete
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMode fill:#d94dbb,stroke:#a3378a,color:white
+    style AutoBehavior fill:#4dbb5f,stroke:#36873f,color:white
+    style ManualBehavior fill:#ffa64d,stroke:#cc7a30,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📊 MODE CONFIGURATION
+
+### System Configuration File
+
+**Location**: `memory-bank/config/system.yaml`
+
+```yaml
+interaction:
+  mode: "MANUAL"  # AUTO or MANUAL
+  timeout:
+    user_response: 900  # 15 minutes
+    decision_wait: 300   # 5 minutes
+  defaults:
+    fallback_mode: "MANUAL"
+    auto_switch_threshold: 3  # Switch to AUTO after 3 timeouts
+
+behavior:
+  auto_mode:
+    documentation_level: "comprehensive"
+    decision_rationale: true
+    user_notifications: "summary"
+
+  manual_mode:
+    question_detail_level: "detailed"
+    option_presentation: "comprehensive"
+    confirmation_required: true
+```
+
+### Mode-Specific Settings
+
+**AUTO Mode Settings**:
+- `documentation_level`: How detailed autonomous decision documentation should be
+- `decision_rationale`: Whether to document why decisions were made
+- `user_notifications`: Level of user notification (none/summary/detailed)
+
+**MANUAL Mode Settings**:
+- `question_detail_level`: How detailed clarifying questions should be
+- `option_presentation`: How comprehensive option analysis should be
+- `confirmation_required`: Whether user confirmation is required for major decisions
+
+## 🚨 ERROR HANDLING AND FALLBACKS
+
+### Mode File Issues
+
+**Missing File**:
+- Create `memory-bank/system/interaction-mode.txt` with "MANUAL" default
+- Log warning about missing configuration
+- Proceed with MANUAL mode behavior
+
+**Invalid Mode Value**:
+- Log error about invalid mode
+- Reset to "MANUAL" default
+- Notify user of mode reset
+
+**File Permission Issues**:
+- Log error about file access
+- Use in-memory mode for current session
+- Attempt to fix permissions
+
+### User Response Timeouts
+
+**MANUAL Mode Timeouts**:
+- Wait for configured timeout period (default: 15 minutes)
+- Send reminder notification after 10 minutes
+- After timeout, document assumption and proceed
+- Optionally switch to AUTO mode after repeated timeouts
+
+**Decision Point Timeouts**:
+- For critical decisions, block and wait indefinitely
+- For non-critical decisions, use best practice default
+- Document all timeout-based decisions
+- Notify user of timeout-based choices
+
+## 📈 MODE USAGE ANALYTICS
+
+### Usage Tracking
+
+**Mode Usage Statistics**:
+- Track time spent in each mode
+- Count mode switches per session
+- Monitor user response times in MANUAL mode
+- Track decision quality outcomes
+
+**Performance Metrics**:
+- Task completion time by mode
+- User satisfaction scores
+- Decision quality assessments
+- Error rates by mode
+
+### Optimization Recommendations
+
+**AUTO Mode Optimization**:
+- Improve decision documentation quality
+- Enhance autonomous decision accuracy
+- Reduce need for user intervention
+- Optimize execution speed
+
+**MANUAL Mode Optimization**:
+- Improve question quality and relevance
+- Enhance option presentation clarity
+- Reduce user cognitive load
+- Streamline decision processes
+
+## 🔧 INTEGRATION POINTS
+
+### File System Integration
+
+**Mode State**: `memory-bank/system/interaction-mode.txt`
+- Current interaction mode (AUTO/MANUAL)
+- Simple text file for easy reading/writing
+- Version controlled for history tracking
+
+**Configuration**: `memory-bank/config/system.yaml`
+- Detailed mode configuration settings
+- Timeout and behavior parameters
+- User preferences and overrides
+
+**Session State**: `memory-bank/system/session-state.json`
+- Current session interaction history
+- Mode switch history and reasons
+- User response patterns and preferences
+
+### Memory Bank Mode Integration
+
+**Mode Initialization**:
+- Every Memory Bank mode checks interaction mode on startup
+- Load appropriate behavior configuration
+- Initialize user interaction systems if MANUAL mode
+
+**Decision Points**:
+- All major decision points check interaction mode
+- Route to appropriate decision-making process
+- Document decisions and rationale regardless of mode
+
+**Transition Handling**:
+- Mode transitions preserve interaction mode settings
+- User can change interaction mode between Memory Bank modes
+- Mode changes are logged and tracked
+
+This interaction mode control system provides flexible operation modes that adapt to user preferences and task requirements while maintaining consistent behavior across all Memory Bank phases.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/system/interactive-planning.mdc`
+
+```mdc
+---
+description: "Interactive planning methodology for PLAN mode with clarifying questions"
+globs: "**/planning/**", "**/PLAN/**", "**/plan-mode/**"
+alwaysApply: false
+---
+
+# INTERACTIVE PLANNING METHODOLOGY
+
+> **TL;DR:** This rule implements interactive planning for PLAN mode, ensuring clarifying questions are asked when requirements are unclear, preventing assumptions and improving planning quality.
+
+## 🎯 INTERACTIVE PLANNING OVERVIEW
+
+The Interactive Planning system activates in PLAN mode when interaction-mode is set to "MANUAL", ensuring the AI asks clarifying questions instead of making assumptions about unclear requirements.
+
+### Core Principles
+
+**Question-First Approach**
+- Ask clarifying questions before making assumptions
+- Gather complete requirements before planning
+- Validate understanding with user confirmation
+- Document all clarifications in planning documents
+
+**Structured Inquiry**
+- Use categorized question templates
+- Follow logical question sequences
+- Prioritize critical clarifications first
+- Maintain context throughout conversation
+
+## 📋 QUESTION CATEGORIES
+
+### 1. Scope Clarification Questions
+**When to use**: Requirements are vague or incomplete
+**Examples**:
+- "What specific functionality should be included/excluded?"
+- "Are there any constraints or limitations I should consider?"
+- "What is the expected timeline for this feature?"
+
+### 2. Technical Specification Questions
+**When to use**: Technical details are missing
+**Examples**:
+- "Which technologies or frameworks should be used?"
+- "Are there existing systems this needs to integrate with?"
+- "What are the performance requirements?"
+
+### 3. User Experience Questions
+**When to use**: UX/UI aspects are unclear
+**Examples**:
+- "Who is the target user for this feature?"
+- "What is the expected user workflow?"
+- "Are there accessibility requirements?"
+
+### 4. Implementation Priority Questions
+**When to use**: Multiple approaches are possible
+**Examples**:
+- "Should we prioritize speed of development or long-term maintainability?"
+- "Are there any features that are must-have vs nice-to-have?"
+- "What is the acceptable level of technical debt for this iteration?"
+
+## 🔄 INTERACTIVE PLANNING WORKFLOW
+
+```mermaid
+graph TD
+    Start["🚀 PLAN Mode Start"] --> CheckMode{"🔍 Check Interaction Mode"}
+    CheckMode -->|"AUTO"| AutoPlan["🤖 Automatic Planning"]
+    CheckMode -->|"MANUAL"| LoadQuestions["📋 Load Question Templates"]
+
+    LoadQuestions --> AnalyzeRequest["🔍 Analyze User Request"]
+    AnalyzeRequest --> IdentifyGaps{"❓ Identify Information Gaps"}
+
+    IdentifyGaps -->|"Gaps Found"| SelectQuestions["📝 Select Relevant Questions"]
+    IdentifyGaps -->|"Complete"| CreatePlan["📋 Create Implementation Plan"]
+
+    SelectQuestions --> AskQuestions["❓ Ask Clarifying Questions"]
+    AskQuestions --> WaitResponse["⏳ Wait for User Response"]
+    WaitResponse --> ProcessAnswers["📝 Process Answers"]
+    ProcessAnswers --> UpdateContext["🔄 Update Planning Context"]
+    UpdateContext --> IdentifyGaps
+
+    CreatePlan --> ValidatePlan["✅ Validate Plan with User"]
+    ValidatePlan --> DocumentPlan["📚 Document Final Plan"]
+
+    AutoPlan --> DocumentPlan
+    DocumentPlan --> Complete["✅ Planning Complete"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMode fill:#d94dbb,stroke:#a3378a,color:white
+    style LoadQuestions fill:#4dbb5f,stroke:#36873f,color:white
+    style AskQuestions fill:#ffa64d,stroke:#cc7a30,color:white
+    style CreatePlan fill:#4dbbbb,stroke:#368787,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📝 QUESTION SELECTION ALGORITHM
+
+### Priority Matrix
+
+**CRITICAL (Must Ask)**
+- Scope boundaries and constraints
+- Technical requirements and dependencies
+- User safety and security considerations
+- Performance and scalability requirements
+
+**HIGH (Should Ask)**
+- Implementation preferences and priorities
+- Integration requirements
+- Timeline and resource constraints
+- Quality and testing requirements
+
+**MEDIUM (May Ask)**
+- Nice-to-have features
+- Future extensibility considerations
+- Alternative implementation approaches
+- Documentation and maintenance preferences
+
+**LOW (Optional)**
+- Aesthetic preferences
+- Minor implementation details
+- Non-critical optimizations
+- Advanced configuration options
+
+### Question Selection Rules
+
+1. **Always ask CRITICAL questions** if information is missing
+2. **Ask HIGH priority questions** for complex features (Level 3-4)
+3. **Ask MEDIUM questions** when multiple valid approaches exist
+4. **Skip LOW questions** unless specifically relevant
+
+## 🔧 IMPLEMENTATION INTEGRATION
+
+### File System Integration
+
+**Question Templates**: `memory-bank/config/questions.yaml`
+- Categorized question templates
+- Context-specific question sets
+- Priority-based question ordering
+- Customizable question formats
+
+**Planning Context**: `memory-bank/planning-context.md`
+- Current planning session state
+- Questions asked and answers received
+- Identified gaps and clarifications needed
+- Planning decisions and rationale
+
+**Interaction Mode**: `memory-bank/system/interaction-mode.txt`
+- Current interaction mode (AUTO/MANUAL)
+- Mode-specific behavior settings
+- User preferences and overrides
+- Session-specific configurations
+
+### Mode Integration
+
+**VAN Mode Integration**
+- Check interaction mode on startup
+- Load question templates if MANUAL mode
+- Prepare interactive planning context
+- Initialize clarification tracking
+
+**PLAN Mode Integration**
+- Activate interactive planning if MANUAL mode
+- Use question templates for clarifications
+- Document all questions and answers
+- Validate plan completeness before proceeding
+
+**CREATIVE Mode Integration**
+- Present options for user choice in MANUAL mode
+- Ask for preferences on architectural decisions
+- Gather input on design trade-offs
+- Document user preferences for future reference
+
+## 📊 QUALITY METRICS
+
+### Planning Quality Indicators
+
+**Completeness Score**
+- All critical questions answered: +25 points
+- All high priority questions addressed: +20 points
+- Clear scope definition: +15 points
+- Technical requirements specified: +15 points
+- Implementation approach defined: +15 points
+- Timeline and milestones set: +10 points
+
+**Clarity Score**
+- No ambiguous requirements: +20 points
+- Clear acceptance criteria: +20 points
+- Well-defined deliverables: +20 points
+- Explicit constraints documented: +20 points
+- Dependencies identified: +20 points
+
+**User Engagement Score**
+- User actively participated in clarifications: +25 points
+- User validated final plan: +25 points
+- User provided detailed answers: +25 points
+- User confirmed understanding: +25 points
+
+### Success Thresholds
+
+- **EXCELLENT**: 90-100 points - Plan ready for implementation
+- **GOOD**: 75-89 points - Minor clarifications may be needed
+- **ACCEPTABLE**: 60-74 points - Some assumptions documented
+- **POOR**: <60 points - Significant gaps remain, more clarification needed
+
+## 🚨 ERROR HANDLING
+
+### Missing Information Handling
+
+**Critical Information Missing**
+- Block progression to CREATIVE/IMPLEMENT modes
+- Require explicit user confirmation to proceed
+- Document assumptions clearly
+- Set up validation checkpoints
+
+**Non-Critical Information Missing**
+- Document assumptions made
+- Note areas for future clarification
+- Proceed with documented caveats
+- Plan validation points during implementation
+
+### User Non-Response Handling
+
+**Timeout Handling**
+- Wait reasonable time for responses (default: 15 minutes)
+- Send reminder after 10 minutes
+- Escalate to assumption mode after timeout
+- Document all assumptions made
+
+**Incomplete Responses**
+- Ask follow-up questions for clarity
+- Summarize understanding for confirmation
+- Identify remaining gaps
+- Prioritize most critical missing information
+
+## 📚 BEST PRACTICES
+
+### Question Formulation
+
+**Clear and Specific**
+- Use concrete examples when possible
+- Avoid technical jargon unless necessary
+- Provide context for why information is needed
+- Offer multiple choice options when appropriate
+
+**Respectful and Efficient**
+- Group related questions together
+- Prioritize most important questions first
+- Explain the impact of different choices
+- Acknowledge user's time constraints
+
+### Context Preservation
+
+**Document Everything**
+- Record all questions asked
+- Save all answers received
+- Note any assumptions made
+- Track decision rationale
+
+**Maintain Continuity**
+- Reference previous clarifications
+- Build on established context
+- Avoid repeating resolved questions
+- Connect new questions to existing understanding
+
+This interactive planning methodology ensures high-quality planning by gathering complete requirements through structured questioning, preventing costly assumptions and rework during implementation phases.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/system/real-date-enforcement.mdc`
+
+```mdc
+---
+description: "Real date enforcement system to prevent hardcoded dates"
+globs: "**/system/**", "**/date/**", "**/tasks/**"
+alwaysApply: true
+---
+
+# REAL DATE ENFORCEMENT SYSTEM
+
+This rule enforces the use of real current dates instead of hardcoded dates like "2024-12-09".
+
+## Core Principle
+Always use actual current date from system: `date +%Y-%m-%d`
+
+## Current Date Storage
+File: `memory-bank/system/current-date.txt`
+Contains: Real current date in YYYY-MM-DD format
+
+## Hardcoded Date Detection
+Search for: `2024-12-09` and replace with current date
+Command: `grep -r "2024-12-09" memory-bank/`
+
+## Replacement Process
+1. Get current date: `date +%Y-%m-%d`
+2. Store in current-date.txt
+3. Replace all hardcoded dates
+4. Validate consistency
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/bun-core-rules.mdc`
+
+```mdc
+---
+description: "Core Bun testing rules and patterns"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BUN CORE TESTING RULES
+
+> **TL;DR:** Essential Bun testing patterns for reliable, fast test execution with proper isolation and coverage.
+
+## 🧪 BUN TESTING WORKFLOW
+
+```mermaid
+graph TD
+    Start["Write Code"] --> Test["Write Tests"]
+    Test --> Run["Run with Bun"]
+    Run --> Check["Check Coverage"]
+    Check --> Fix["Fix Issues"]
+    Fix --> Test
+```
+
+## 📋 BUN TESTING RULES
+
+### Rule #8: Bun Test Runner Priority
+- **When**: All testing scenarios
+- **What**: Use `bun test` as primary test runner
+- **Purpose**: Leverage Bun's speed and built-in features
+
+### Rule #9: Test Isolation
+- **When**: Every test
+- **What**: Ensure tests don't affect each other
+- **Purpose**: Reliable and repeatable test results
+
+### Rule #10: Fast Feedback Loop
+- **When**: Development
+- **What**: Run tests frequently with `bun test --watch`
+- **Purpose**: Immediate feedback on changes
+
+## 🎯 BUN TEST PATTERNS
+
+### Basic Test Structure:
+```typescript
+import { test, expect, describe, beforeEach, afterEach } from "bun:test";
+
+describe("Component", () => {
+  beforeEach(() => {
+    // Setup for each test
+  });
+
+  afterEach(() => {
+    // Cleanup after each test
+  });
+
+  test("should do something", () => {
+    // Arrange
+    const input = "test";
+
+    // Act
+    const result = functionUnderTest(input);
+
+    // Assert
+    expect(result).toBe("expected");
+  });
+});
+```
+
+### Async Testing:
+```typescript
+test("async operation", async () => {
+  const result = await asyncFunction();
+  expect(result).toBeDefined();
+});
+```
+
+### Mock Usage:
+```typescript
+import { mock } from "bun:test";
+
+test("with mocks", () => {
+  const mockFn = mock(() => "mocked");
+  expect(mockFn()).toBe("mocked");
+});
+```
+
+This ensures fast, reliable testing with Bun's optimized test runner.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/bun-features.mdc`
+
+```mdc
+---
+description: "Advanced Bun testing features and capabilities"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# BUN ADVANCED TESTING FEATURES
+
+> **TL;DR:** Leverage Bun's advanced testing capabilities for comprehensive test coverage and performance optimization.
+
+## 🚀 ADVANCED BUN FEATURES
+
+### Rule #49: Bun Built-in Mocking
+- **When**: Need to mock modules or functions
+- **What**: Use Bun's built-in mock system
+- **Purpose**: Fast, reliable mocking without external dependencies
+
+### Rule #50: Snapshot Testing
+- **When**: Testing complex output or UI components
+- **What**: Use Bun's snapshot testing capabilities
+- **Purpose**: Detect unexpected changes in output
+
+## 🎯 FEATURE USAGE
+
+### Module Mocking:
+```typescript
+import { mock } from "bun:test";
+
+// Mock entire module
+mock.module("./api", () => ({
+  fetchData: mock(() => Promise.resolve({ data: "test" }))
+}));
+```
+
+### Snapshot Testing:
+```typescript
+test("component snapshot", () => {
+  const output = renderComponent();
+  expect(output).toMatchSnapshot();
+});
+```
+
+### Performance Testing:
+```typescript
+test("performance benchmark", () => {
+  const start = performance.now();
+  heavyOperation();
+  const end = performance.now();
+  expect(end - start).toBeLessThan(1000);
+});
+```
+
+This maximizes Bun's testing capabilities for comprehensive coverage.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/edge-cases.mdc`
+
+```mdc
+---
+description: "Edge case testing rules and methodologies for Memory Bank development"
+globs: "**/testing/**", "**/edge-cases/**", "**/boundary-testing/**"
+alwaysApply: false
+---
+
+# EDGE CASE TESTING RULES
+
+> **TL;DR:** This rule defines comprehensive edge case testing methodologies for Memory Bank development, ensuring robust handling of boundary conditions and exceptional scenarios.
+
+## 🎯 EDGE CASE TESTING OVERVIEW
+
+Edge case testing focuses on boundary conditions, exceptional inputs, and unusual scenarios that could cause system failures or unexpected behavior in Memory Bank operations.
+
+### Core Principles
+
+**Boundary Testing**
+- Test minimum and maximum values
+- Test empty and null inputs
+- Test oversized inputs
+- Test invalid data types
+
+**Exception Scenarios**
+- Network failures during operations
+- File system errors
+- Memory limitations
+- Concurrent access conflicts
+
+## 📋 EDGE CASE CATEGORIES
+
+### 1. Input Validation Edge Cases
+
+**Empty Inputs**
+```bash
+# Test empty task descriptions
+bun test --grep "empty task description"
+
+# Test empty file paths
+bun test --grep "empty file path"
+
+# Test empty configuration
+bun test --grep "empty config"
+```
+
+**Oversized Inputs**
+```bash
+# Test very long task names (>1000 chars)
+bun test --grep "oversized task name"
+
+# Test large file uploads
+bun test --grep "large file handling"
+
+# Test massive task lists
+bun test --grep "massive task list"
+```
+
+**Invalid Data Types**
+```bash
+# Test string where number expected
+bun test --grep "invalid data type"
+
+# Test null where object expected
+bun test --grep "null object handling"
+
+# Test array where string expected
+bun test --grep "array string mismatch"
+```
+
+### 2. File System Edge Cases
+
+**Permission Issues**
+```bash
+# Test read-only file modification
+bun test --grep "readonly file"
+
+# Test missing directory creation
+bun test --grep "missing directory"
+
+# Test disk space exhaustion
+bun test --grep "disk space"
+```
+
+**Path Edge Cases**
+```bash
+# Test very long file paths
+bun test --grep "long file path"
+
+# Test special characters in paths
+bun test --grep "special chars path"
+
+# Test relative vs absolute paths
+bun test --grep "path resolution"
+```
+
+### 3. Memory Bank Mode Edge Cases
+
+**Mode Transition Edge Cases**
+```bash
+# Test transition with incomplete tasks
+bun test --grep "incomplete transition"
+
+# Test rapid mode switching
+bun test --grep "rapid mode switch"
+
+# Test transition during file operations
+bun test --grep "transition during operation"
+```
+
+**Task Management Edge Cases**
+```bash
+# Test circular task dependencies
+bun test --grep "circular dependency"
+
+# Test task ID conflicts
+bun test --grep "task id conflict"
+
+# Test task status corruption
+bun test --grep "status corruption"
+```
+
+### 4. Concurrency Edge Cases
+
+**Simultaneous Operations**
+```bash
+# Test concurrent file writes
+bun test --grep "concurrent writes"
+
+# Test simultaneous mode transitions
+bun test --grep "simultaneous transitions"
+
+# Test parallel task creation
+bun test --grep "parallel task creation"
+```
+
+**Race Conditions**
+```bash
+# Test file lock conflicts
+bun test --grep "file lock conflict"
+
+# Test shared resource access
+bun test --grep "shared resource"
+
+# Test atomic operation failures
+bun test --grep "atomic operation"
+```
+
+## 🔧 EDGE CASE TEST IMPLEMENTATION
+
+### Test Structure Template
+
+```typescript
+describe('Edge Case: [Category]', () => {
+  beforeEach(() => {
+    // Setup edge case environment
+  });
+
+  afterEach(() => {
+    // Cleanup edge case artifacts
+  });
+
+  test('should handle [specific edge case]', async () => {
+    // Arrange: Create edge case scenario
+    const edgeInput = createEdgeCaseInput();
+
+    // Act: Execute operation with edge case
+    const result = await executeWithEdgeCase(edgeInput);
+
+    // Assert: Verify graceful handling
+    expect(result).toHandleEdgeCaseGracefully();
+  });
+});
+```
+
+### Edge Case Data Generators
+
+```typescript
+// Generate boundary values
+export const generateBoundaryValues = () => ({
+  minInt: Number.MIN_SAFE_INTEGER,
+  maxInt: Number.MAX_SAFE_INTEGER,
+  emptyString: '',
+  maxString: 'x'.repeat(10000),
+  nullValue: null,
+  undefinedValue: undefined,
+  emptyArray: [],
+  emptyObject: {}
+});
+
+// Generate invalid inputs
+export const generateInvalidInputs = () => ({
+  stringAsNumber: 'not-a-number',
+  objectAsString: { key: 'value' },
+  arrayAsObject: ['item1', 'item2'],
+  functionAsData: () => 'function'
+});
+```
+
+## 🚨 CRITICAL EDGE CASES
+
+### High Priority Edge Cases
+
+**System Resource Exhaustion**
+- Memory limit reached during large operations
+- Disk space exhausted during file creation
+- CPU timeout during complex calculations
+- Network timeout during remote operations
+
+**Data Corruption Scenarios**
+- Partial file writes due to interruption
+- Corrupted JSON configuration files
+- Invalid YAML frontmatter in rules
+- Broken task dependency chains
+
+**Security Edge Cases**
+- Path traversal attempts in file operations
+- Code injection in task descriptions
+- Privilege escalation attempts
+- Unauthorized file access
+
+### Medium Priority Edge Cases
+
+**User Interface Edge Cases**
+- Very long task names in displays
+- Special characters in user inputs
+- Unicode handling in file names
+- Emoji in task descriptions
+
+**Integration Edge Cases**
+- Git repository corruption
+- External tool failures
+- API rate limiting
+- Network connectivity issues
+
+## 📊 EDGE CASE TESTING METRICS
+
+### Coverage Metrics
+
+**Boundary Coverage**
+- All input boundaries tested: Target 100%
+- All output boundaries verified: Target 100%
+- All error boundaries handled: Target 95%
+
+**Scenario Coverage**
+- Exception scenarios tested: Target 90%
+- Recovery scenarios verified: Target 85%
+- Fallback mechanisms tested: Target 80%
+
+### Quality Metrics
+
+**Robustness Score**
+- Graceful error handling: +25 points
+- Meaningful error messages: +20 points
+- System recovery capability: +25 points
+- Data integrity preservation: +30 points
+
+**Success Thresholds**
+- **EXCELLENT**: 90-100 points - Robust edge case handling
+- **GOOD**: 75-89 points - Adequate edge case coverage
+- **ACCEPTABLE**: 60-74 points - Basic edge case handling
+- **POOR**: <60 points - Insufficient edge case coverage
+
+## 🔄 EDGE CASE TESTING WORKFLOW
+
+```mermaid
+graph TD
+    Start["🚀 Start Edge Case Testing"] --> Identify["🔍 Identify Edge Cases"]
+    Identify --> Categorize["📊 Categorize by Priority"]
+    Categorize --> Design["📝 Design Test Cases"]
+    Design --> Implement["⚙️ Implement Tests"]
+    Implement --> Execute["▶️ Execute Tests"]
+    Execute --> Analyze["📈 Analyze Results"]
+    Analyze --> Fix["🔧 Fix Issues"]
+    Fix --> Verify["✅ Verify Fixes"]
+    Verify --> Document["📚 Document Findings"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Identify fill:#4dbb5f,stroke:#36873f,color:white
+    style Execute fill:#ffa64d,stroke:#cc7a30,color:white
+    style Fix fill:#ff5555,stroke:#cc0000,color:white
+    style Document fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 🛡️ EDGE CASE PREVENTION
+
+### Proactive Measures
+
+**Input Validation**
+- Validate all inputs at entry points
+- Sanitize user-provided data
+- Enforce data type constraints
+- Implement size limitations
+
+**Error Handling**
+- Implement comprehensive try-catch blocks
+- Provide meaningful error messages
+- Log edge case occurrences
+- Implement graceful degradation
+
+**System Monitoring**
+- Monitor resource usage
+- Track error rates
+- Alert on edge case patterns
+- Analyze failure trends
+
+This edge case testing framework ensures Memory Bank system robustness by systematically identifying, testing, and handling boundary conditions and exceptional scenarios.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/large-test-analysis.mdc`
+
+```mdc
+---
+description: "Large test suite analysis and pattern detection"
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# LARGE TEST ANALYSIS SYSTEM
+
+> **TL;DR:** Hybrid approach for analyzing large test suites (>100 tests) with pipeline analysis and structured pattern detection.
+
+## 🧪 LARGE TEST ANALYSIS WORKFLOW
+
+```mermaid
+graph TD
+    TestRun["bun test > test_output.log"] --> Count{"Test Count > 100?"}
+    Count -->|No| SimpleQA["Simple QA Process"]
+    Count -->|Yes| BasicAnalysis["Basic Pipeline Analysis"]
+
+    BasicAnalysis --> Stats["General Statistics"]
+    BasicAnalysis --> Failures["Extract Failures"]
+
+    Failures --> PatternAnalysis["Pattern Analysis Engine"]
+    PatternAnalysis --> GroupPattern["Group Patterns"]
+    PatternAnalysis --> TimePattern["Time Patterns"]
+    PatternAnalysis --> DepPattern["Dependency Patterns"]
+    PatternAnalysis --> ResPattern["Resource Patterns"]
+    PatternAnalysis --> ConfigPattern["Config Patterns"]
+    PatternAnalysis --> IntegPattern["Integration Patterns"]
+
+    Stats --> Report["test_analysis.log"]
+    GroupPattern --> Report
+    TimePattern --> Report
+    DepPattern --> Report
+    ResPattern --> Report
+    ConfigPattern --> Report
+    IntegPattern --> Report
+```
+
+## 📋 LARGE TEST ANALYSIS RULES
+
+### Rule #51: Automatic Large Test Detection
+- **When**: Test count exceeds 100 tests
+- **What**: Automatically activate large test analysis
+- **Purpose**: Handle large test suites with specialized analysis
+
+### Rule #52: Hybrid Analysis Approach
+- **When**: Large test analysis is active
+- **What**: Use pipeline for basic stats + structured analysis for patterns
+- **Purpose**: Balance simplicity and functionality
+
+### Rule #53: Pattern-Based Failure Analysis
+- **When**: Test failures detected in large suites
+- **What**: Categorize failures into 6 pattern types
+- **Purpose**: Identify systemic issues and root causes
+
+## 🎯 ANALYSIS IMPLEMENTATION
+
+### Basic Pipeline Analysis:
+```bash
+#!/bin/bash
+# Basic test statistics pipeline
+
+echo "=== LARGE TEST ANALYSIS ===" > test_analysis.log
+echo "Analysis Date: $(date)" >> test_analysis.log
+
+# Count total tests
+TOTAL_TESTS=$(grep -c "test(" test_output.log)
+echo "Total Tests: $TOTAL_TESTS" >> test_analysis.log
+
+# Count passed/failed
+PASSED=$(grep -c "✓" test_output.log)
+FAILED=$(grep -c "✗" test_output.log)
+echo "Passed: $PASSED" >> test_analysis.log
+echo "Failed: $FAILED" >> test_analysis.log
+
+# Calculate failure rate
+FAILURE_RATE=$(echo "scale=2; $FAILED * 100 / $TOTAL_TESTS" | bc)
+echo "Failure Rate: $FAILURE_RATE%" >> test_analysis.log
+```
+
+### Pattern Analysis Engine:
+```bash
+#!/bin/bash
+# Pattern detection for test failures
+
+echo "=== PATTERN ANALYSIS ===" >> test_analysis.log
+
+# 1. Group Patterns - tests failing in same module/component
+echo "Group Patterns:" >> test_analysis.log
+grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr >> test_analysis.log
+
+# 2. Time Patterns - tests failing at specific times
+echo "Time Patterns:" >> test_analysis.log
+grep "timeout" test_output.log | wc -l >> test_analysis.log
+
+# 3. Dependency Patterns - tests failing due to missing dependencies
+echo "Dependency Patterns:" >> test_analysis.log
+grep -i "cannot find\|module not found\|import error" test_output.log | wc -l >> test_analysis.log
+
+# 4. Resource Patterns - tests failing due to resource constraints
+echo "Resource Patterns:" >> test_analysis.log
+grep -i "memory\|disk\|network" test_output.log | wc -l >> test_analysis.log
+
+# 5. Configuration Patterns - tests failing due to config issues
+echo "Configuration Patterns:" >> test_analysis.log
+grep -i "config\|environment\|env" test_output.log | wc -l >> test_analysis.log
+
+# 6. Integration Patterns - tests failing due to integration issues
+echo "Integration Patterns:" >> test_analysis.log
+grep -i "connection\|api\|service" test_output.log | wc -l >> test_analysis.log
+```
+
+## 📊 QA MODE INTEGRATION
+
+### Threshold-Based Status Determination:
+```bash
+#!/bin/bash
+# Determine QA status based on failure rate
+
+FAILURE_RATE=$(grep "Failure Rate:" test_analysis.log | cut -d' ' -f3 | cut -d'%' -f1)
+
+if (( $(echo "$FAILURE_RATE > 20" | bc -l) )); then
+    echo "QA Status: CRITICAL" >> test_analysis.log
+    echo "Action: Block REFLECT transition" >> test_analysis.log
+elif (( $(echo "$FAILURE_RATE > 5" | bc -l) )); then
+    echo "QA Status: WARNING" >> test_analysis.log
+    echo "Action: Allow REFLECT with warning" >> test_analysis.log
+else
+    echo "QA Status: GOOD" >> test_analysis.log
+    echo "Action: Normal REFLECT transition" >> test_analysis.log
+fi
+```
+
+## 🔄 AUTOMATED ACTIVATION
+
+### Test Count Detection:
+```bash
+#!/bin/bash
+# Auto-detect if large test analysis is needed
+
+TEST_COUNT=$(grep -c "test(" test_output.log)
+
+if [ $TEST_COUNT -gt 100 ]; then
+    echo "Large test suite detected ($TEST_COUNT tests)"
+    echo "Activating large test analysis..."
+
+    # Run basic pipeline analysis
+    ./basic-test-analysis.sh
+
+    # Run pattern analysis
+    ./pattern-analysis.sh
+
+    # Determine QA status
+    ./qa-status-determination.sh
+
+    echo "Large test analysis complete. See test_analysis.log"
+else
+    echo "Standard test suite ($TEST_COUNT tests) - using simple QA"
+fi
+```
+
+This hybrid approach provides comprehensive analysis for large test suites while maintaining simplicity for smaller ones.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/performance-testing.mdc`
+
+```mdc
+---
+description: "Performance testing rules and methodologies for Memory Bank development"
+globs: "**/testing/**", "**/performance/**", "**/benchmark/**"
+alwaysApply: false
+---
+
+# PERFORMANCE TESTING METHODOLOGY
+
+> **TL;DR:** Comprehensive performance testing approach for Memory Bank development, ensuring optimal system performance and identifying bottlenecks early.
+
+```mermaid
+graph TD
+    Start["⚡ PERFORMANCE TESTING"] --> Baseline["📊 Establish Baseline"]
+    Baseline --> Identify["🎯 Identify Test Scenarios"]
+    Identify --> Design["📋 Design Performance Tests"]
+    Design --> Execute["🚀 Execute Tests"]
+    Execute --> Analyze["📈 Analyze Results"]
+    Analyze --> Optimize["🔧 Optimize Performance"]
+    Optimize --> Verify["✅ Verify Improvements"]
+    Verify --> Document["📝 Document Results"]
+
+    style Start fill:#d971ff,stroke:#a33bc2,color:white
+    style Baseline fill:#4da6ff,stroke:#0066cc,color:white
+    style Optimize fill:#4dbb5f,stroke:#36873f,color:white
+    style Document fill:#ffa64d,stroke:#cc7a30,color:white
+```
+
+## PERFORMANCE TESTING STRATEGY
+
+### Test Categories:
+1. **Load Testing**: Normal expected load
+2. **Stress Testing**: Beyond normal capacity
+3. **Spike Testing**: Sudden load increases
+4. **Volume Testing**: Large amounts of data
+5. **Endurance Testing**: Extended periods
+
+### Key Metrics:
+- **Response Time**: Request processing time
+- **Throughput**: Requests per second
+- **Resource Usage**: CPU, memory, disk I/O
+- **Error Rate**: Failed requests percentage
+- **Scalability**: Performance under load
+
+## BUN TESTING INTEGRATION
+
+### Bun Performance Features:
+```javascript
+// Performance timing with Bun
+import { performance } from "perf_hooks";
+
+test("performance benchmark", async () => {
+  const start = performance.now();
+  await performOperation();
+  const end = performance.now();
+
+  expect(end - start).toBeLessThan(100); // 100ms threshold
+});
+```
+
+### Memory Usage Testing:
+```javascript
+// Memory usage monitoring
+test("memory usage", () => {
+  const initialMemory = process.memoryUsage();
+  performMemoryIntensiveOperation();
+  const finalMemory = process.memoryUsage();
+
+  const memoryIncrease = finalMemory.heapUsed - initialMemory.heapUsed;
+  expect(memoryIncrease).toBeLessThan(10 * 1024 * 1024); // 10MB limit
+});
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ PERFORMANCE TESTING CHECKLIST
+- Baseline performance established? [YES/NO]
+- Test scenarios identified and documented? [YES/NO]
+- Performance tests implemented? [YES/NO]
+- Tests executed successfully? [YES/NO]
+- Results analyzed and documented? [YES/NO]
+- Performance bottlenecks identified? [YES/NO]
+- Optimizations implemented if needed? [YES/NO]
+- Performance improvements verified? [YES/NO]
+
+→ If all YES: Performance testing complete
+→ If any NO: Continue performance testing process
+```
+
+This methodology ensures systematic performance testing and optimization for Memory Bank components.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# TEST FAILURE PATTERN DETECTION
+
+> **TL;DR:** Systematic detection and analysis of test failure patterns to identify root causes and systemic issues.
+
+## 🔍 FAILURE PATTERN ANALYSIS WORKFLOW
+
+```mermaid
+graph TD
+    Failures["Test Failures"] --> Extract["Extract Failure Data"]
+    Extract --> Categorize["Categorize by Pattern"]
+    Categorize --> Group["Group Patterns"]
+    Categorize --> Time["Time Patterns"]
+    Categorize --> Dependency["Dependency Patterns"]
+    Categorize --> Resource["Resource Patterns"]
+    Categorize --> Config["Config Patterns"]
+    Categorize --> Integration["Integration Patterns"]
+
+    Group --> Report["Pattern Report"]
+    Time --> Report
+    Dependency --> Report
+    Resource --> Report
+    Config --> Report
+    Integration --> Report
+```
+
+## 📋 PATTERN DETECTION RULES
+
+### Rule #52: Six Pattern Categories
+- **When**: Analyzing test failures in large suites
+- **What**: Categorize failures into 6 distinct pattern types
+- **Purpose**: Identify systemic issues and root causes
+
+### Rule #53: Pattern-Based Root Cause Analysis
+- **When**: Multiple failures detected
+- **What**: Analyze patterns to determine underlying causes
+- **Purpose**: Fix root causes instead of individual symptoms
+
+## 🎯 PATTERN CATEGORIES
+
+### 1. Group Patterns
+**Description**: Tests failing in same module/component
+**Detection**:
+```bash
+grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr
+```
+**Indicators**: Multiple failures in same file/directory
+**Root Causes**: Module-specific bugs, shared dependencies
+
+### 2. Time Patterns
+**Description**: Tests failing due to timing issues
+**Detection**:
+```bash
+grep -i "timeout\|timing\|race\|async" test_output.log | wc -l
+```
+**Indicators**: Timeout errors, race conditions
+**Root Causes**: Async handling, slow operations, timing dependencies
+
+### 3. Dependency Patterns
+**Description**: Tests failing due to missing/incorrect dependencies
+**Detection**:
+```bash
+grep -i "cannot find\|module not found\|import error\|dependency" test_output.log | wc -l
+```
+**Indicators**: Import errors, missing modules
+**Root Causes**: Package issues, path problems, version conflicts
+
+### 4. Resource Patterns
+**Description**: Tests failing due to resource constraints
+**Detection**:
+```bash
+grep -i "memory\|disk\|network\|cpu\|resource" test_output.log | wc -l
+```
+**Indicators**: Memory errors, disk space, network issues
+**Root Causes**: Resource exhaustion, infrastructure problems
+
+### 5. Configuration Patterns
+**Description**: Tests failing due to configuration issues
+**Detection**:
+```bash
+grep -i "config\|environment\|env\|setting" test_output.log | wc -l
+```
+**Indicators**: Environment variable errors, config mismatches
+**Root Causes**: Environment setup, configuration drift
+
+### 6. Integration Patterns
+**Description**: Tests failing due to integration issues
+**Detection**:
+```bash
+grep -i "connection\|api\|service\|integration\|external" test_output.log | wc -l
+```
+**Indicators**: API failures, service unavailability
+**Root Causes**: External service issues, integration problems
+
+## 📊 PATTERN ANALYSIS SCRIPT
+
+```bash
+#!/bin/bash
+# test-failure-pattern-analysis.sh
+
+echo "=== TEST FAILURE PATTERN ANALYSIS ===" >> test_analysis.log
+echo "Analysis Date: $(date)" >> test_analysis.log
+
+# Extract all failures
+TOTAL_FAILURES=$(grep -c "✗" test_output.log)
+echo "Total Failures: $TOTAL_FAILURES" >> test_analysis.log
+
+if [ $TOTAL_FAILURES -eq 0 ]; then
+    echo "No failures detected - skipping pattern analysis" >> test_analysis.log
+    exit 0
+fi
+
+# 1. Group Patterns
+echo "" >> test_analysis.log
+echo "1. GROUP PATTERNS:" >> test_analysis.log
+GROUP_PATTERNS=$(grep "✗" test_output.log | sed 's/.*\///' | cut -d'.' -f1 | sort | uniq -c | sort -nr | head -5)
+echo "$GROUP_PATTERNS" >> test_analysis.log
+
+# 2. Time Patterns
+echo "" >> test_analysis.log
+echo "2. TIME PATTERNS:" >> test_analysis.log
+TIME_FAILURES=$(grep -i "timeout\|timing\|race\|async" test_output.log | wc -l)
+TIME_PERCENTAGE=$(echo "scale=1; $TIME_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Time-related failures: $TIME_FAILURES ($TIME_PERCENTAGE%)" >> test_analysis.log
+
+# 3. Dependency Patterns
+echo "" >> test_analysis.log
+echo "3. DEPENDENCY PATTERNS:" >> test_analysis.log
+DEP_FAILURES=$(grep -i "cannot find\|module not found\|import error\|dependency" test_output.log | wc -l)
+DEP_PERCENTAGE=$(echo "scale=1; $DEP_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Dependency-related failures: $DEP_FAILURES ($DEP_PERCENTAGE%)" >> test_analysis.log
+
+# 4. Resource Patterns
+echo "" >> test_analysis.log
+echo "4. RESOURCE PATTERNS:" >> test_analysis.log
+RES_FAILURES=$(grep -i "memory\|disk\|network\|cpu\|resource" test_output.log | wc -l)
+RES_PERCENTAGE=$(echo "scale=1; $RES_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Resource-related failures: $RES_FAILURES ($RES_PERCENTAGE%)" >> test_analysis.log
+
+# 5. Configuration Patterns
+echo "" >> test_analysis.log
+echo "5. CONFIGURATION PATTERNS:" >> test_analysis.log
+CONFIG_FAILURES=$(grep -i "config\|environment\|env\|setting" test_output.log | wc -l)
+CONFIG_PERCENTAGE=$(echo "scale=1; $CONFIG_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Configuration-related failures: $CONFIG_FAILURES ($CONFIG_PERCENTAGE%)" >> test_analysis.log
+
+# 6. Integration Patterns
+echo "" >> test_analysis.log
+echo "6. INTEGRATION PATTERNS:" >> test_analysis.log
+INT_FAILURES=$(grep -i "connection\|api\|service\|integration\|external" test_output.log | wc -l)
+INT_PERCENTAGE=$(echo "scale=1; $INT_FAILURES * 100 / $TOTAL_FAILURES" | bc)
+echo "Integration-related failures: $INT_FAILURES ($INT_PERCENTAGE%)" >> test_analysis.log
+
+# Pattern Summary
+echo "" >> test_analysis.log
+echo "PATTERN SUMMARY:" >> test_analysis.log
+echo "Most common pattern: $(echo "$GROUP_PATTERNS" | head -1 | awk '{print $2}')" >> test_analysis.log
+
+# Recommendations
+echo "" >> test_analysis.log
+echo "RECOMMENDATIONS:" >> test_analysis.log
+if [ $TIME_FAILURES -gt $(echo "$TOTAL_FAILURES * 0.2" | bc) ]; then
+    echo "- High time-related failures: Review async handling and timeouts" >> test_analysis.log
+fi
+if [ $DEP_FAILURES -gt $(echo "$TOTAL_FAILURES * 0.1" | bc) ]; then
+    echo "- Dependency issues detected: Check package.json and imports" >> test_analysis.log
+fi
+if [ $RES_FAILURES -gt 0 ]; then
+    echo "- Resource constraints detected: Check system resources" >> test_analysis.log
+fi
+```
+
+## 🔄 QA MODE INTEGRATION
+
+### Pattern-Based Status Determination:
+```bash
+# Determine if patterns indicate systemic issues
+SYSTEMIC_THRESHOLD=30  # 30% of failures in single pattern = systemic
+
+if [ $TIME_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ] ||
+   [ $DEP_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ] ||
+   [ $CONFIG_PERCENTAGE -gt $SYSTEMIC_THRESHOLD ]; then
+    echo "QA Status: CRITICAL - Systemic pattern detected" >> test_analysis.log
+else
+    echo "QA Status: Pattern analysis complete" >> test_analysis.log
+fi
+```
+
+This systematic pattern analysis helps identify and resolve root causes of test failures efficiently.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/testing/test-organization.mdc`
+
+```mdc
+---
+description: "Test organization and structure rules for Memory Bank development"
+globs: "**/testing/**", "**/test-organization/**", "**/test-structure/**"
+alwaysApply: false
+---
+
+# TEST ORGANIZATION RULES
+
+> **TL;DR:** This rule defines comprehensive test organization and structure methodologies for Memory Bank development, ensuring maintainable and scalable test suites.
+
+## 🎯 TEST ORGANIZATION OVERVIEW
+
+Test organization focuses on creating a logical, maintainable, and scalable structure for all tests in the Memory Bank system, enabling efficient test execution and maintenance.
+
+### Core Principles
+
+**Hierarchical Structure**
+- Organize tests by feature and functionality
+- Group related tests together
+- Maintain clear naming conventions
+- Separate unit, integration, and e2e tests
+
+**Maintainability**
+- Keep tests simple and focused
+- Avoid test interdependencies
+- Use shared utilities and fixtures
+- Document test purposes clearly
+
+## 📁 TEST DIRECTORY STRUCTURE
+
+### Standard Test Layout
+
+```
+tests/
+├── unit/                    # Unit tests
+│   ├── memory-bank/
+│   │   ├── modes/
+│   │   │   ├── van.test.ts
+│   │   │   ├── plan.test.ts
+│   │   │   ├── creative.test.ts
+│   │   │   ├── implement.test.ts
+│   │   │   ├── reflect.test.ts
+│   │   │   └── archive.test.ts
+│   │   ├── tasks/
+│   │   │   ├── task-manager.test.ts
+│   │   │   ├── task-validation.test.ts
+│   │   │   └── task-migration.test.ts
+│   │   └── utils/
+│   │       ├── file-utils.test.ts
+│   │       ├── date-utils.test.ts
+│   │       └── validation-utils.test.ts
+├── integration/             # Integration tests
+│   ├── mode-transitions/
+│   │   ├── van-to-plan.test.ts
+│   │   ├── plan-to-creative.test.ts
+│   │   ├── creative-to-implement.test.ts
+│   │   ├── implement-to-reflect.test.ts
+│   │   └── reflect-to-archive.test.ts
+│   ├── file-operations/
+│   │   ├── task-file-management.test.ts
+│   │   ├── config-file-handling.test.ts
+│   │   └── archive-operations.test.ts
+│   └── system-integration/
+│       ├── git-integration.test.ts
+│       ├── rule-system.test.ts
+│       └── workflow-integration.test.ts
+├── e2e/                     # End-to-end tests
+│   ├── complete-workflows/
+│   │   ├── level1-bug-fix.test.ts
+│   │   ├── level2-enhancement.test.ts
+│   │   ├── level3-feature.test.ts
+│   │   └── level4-system.test.ts
+│   ├── user-scenarios/
+│   │   ├── new-user-onboarding.test.ts
+│   │   ├── experienced-user-workflow.test.ts
+│   │   └── collaborative-development.test.ts
+│   └── edge-cases/
+│       ├── error-recovery.test.ts
+│       ├── data-corruption.test.ts
+│       └── system-limits.test.ts
+├── fixtures/                # Test data and fixtures
+│   ├── sample-tasks/
+│   ├── sample-configs/
+│   ├── sample-archives/
+│   └── mock-data/
+├── helpers/                 # Test utilities and helpers
+│   ├── test-setup.ts
+│   ├── mock-factories.ts
+│   ├── assertion-helpers.ts
+│   └── cleanup-helpers.ts
+└── config/                  # Test configuration
+    ├── jest.config.js
+    ├── test-env.ts
+    └── global-setup.ts
+```
+
+## 🏷️ TEST NAMING CONVENTIONS
+
+### File Naming
+
+**Unit Tests**
+- `[component-name].test.ts` - Component unit tests
+- `[utility-name].test.ts` - Utility function tests
+- `[service-name].test.ts` - Service class tests
+
+**Integration Tests**
+- `[feature-name]-integration.test.ts` - Feature integration
+- `[system-a]-to-[system-b].test.ts` - System integration
+- `[workflow-name]-workflow.test.ts` - Workflow tests
+
+**E2E Tests**
+- `[scenario-name]-e2e.test.ts` - End-to-end scenarios
+- `[user-journey]-journey.test.ts` - User journey tests
+- `[complete-workflow]-complete.test.ts` - Complete workflows
+
+### Test Case Naming
+
+**Descriptive Names**
+```typescript
+// Good: Descriptive and specific
+describe('TaskManager', () => {
+  describe('createTask', () => {
+    test('should create task with valid input', () => {});
+    test('should throw error when task name is empty', () => {});
+    test('should assign unique ID to new task', () => {});
+  });
+});
+
+// Bad: Vague and unclear
+describe('TaskManager', () => {
+  test('test1', () => {});
+  test('test2', () => {});
+  test('test3', () => {});
+});
+```
+
+## 📊 TEST CATEGORIZATION
+
+### By Test Type
+
+**Unit Tests (60-70% of tests)**
+- Test individual functions/methods
+- Mock external dependencies
+- Fast execution (<1ms per test)
+- High code coverage target (>90%)
+
+**Integration Tests (20-30% of tests)**
+- Test component interactions
+- Use real dependencies where possible
+- Medium execution time (<100ms per test)
+- Focus on interface contracts
+
+**E2E Tests (5-15% of tests)**
+- Test complete user workflows
+- Use real system environment
+- Slower execution (<5s per test)
+- Focus on user value delivery
+
+### By Priority Level
+
+**P0 - Critical (Must Pass)**
+- Core functionality tests
+- Security-related tests
+- Data integrity tests
+- System stability tests
+
+**P1 - High (Should Pass)**
+- Feature functionality tests
+- Performance tests
+- User experience tests
+- Integration tests
+
+**P2 - Medium (Nice to Pass)**
+- Edge case tests
+- Optimization tests
+- Compatibility tests
+- Documentation tests
+
+**P3 - Low (Optional)**
+- Experimental feature tests
+- Future enhancement tests
+- Research tests
+- Prototype tests
+
+## 🔧 TEST UTILITIES AND HELPERS
+
+### Common Test Utilities
+
+```typescript
+// test-setup.ts
+export const setupTestEnvironment = () => {
+  // Initialize test database
+  // Setup mock file system
+  // Configure test logging
+  // Setup test data
+};
+
+export const cleanupTestEnvironment = () => {
+  // Clean test database
+  // Remove test files
+  // Reset mocks
+  // Clear test data
+};
+```
+
+### Mock Factories
+
+```typescript
+// mock-factories.ts
+export const createMockTask = (overrides = {}) => ({
+  id: 'test-task-id',
+  name: 'Test Task',
+  status: 'IN_PROGRESS',
+  priority: 'HIGH',
+  created: new Date(),
+  ...overrides
+});
+
+export const createMockConfig = (overrides = {}) => ({
+  version: '1.0.0',
+  mode: 'MANUAL',
+  settings: {},
+  ...overrides
+});
+```
+
+### Assertion Helpers
+
+```typescript
+// assertion-helpers.ts
+export const expectTaskToBeValid = (task) => {
+  expect(task).toHaveProperty('id');
+  expect(task).toHaveProperty('name');
+  expect(task).toHaveProperty('status');
+  expect(task.id).toMatch(/^[A-Z-]+-\d{4}-\d{2}-\d{2}$/);
+};
+
+export const expectFileToExist = async (filePath) => {
+  const exists = await fs.pathExists(filePath);
+  expect(exists).toBe(true);
+};
+```
+
+## 📈 TEST EXECUTION STRATEGIES
+
+### Test Suites
+
+**Smoke Tests**
+- Quick validation of core functionality
+- Run on every commit
+- Should complete in <30 seconds
+- Catch major regressions
+
+**Regression Tests**
+- Comprehensive test suite
+- Run on pull requests
+- Should complete in <5 minutes
+- Catch functional regressions
+
+**Full Test Suite**
+- Complete test coverage
+- Run nightly or on releases
+- May take 10-30 minutes
+- Comprehensive quality validation
+
+### Parallel Execution
+
+```typescript
+// jest.config.js
+module.exports = {
+  maxWorkers: '50%',
+  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+  testMatch: ['**/__tests__/**/*.test.ts'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.d.ts',
+    '!src/tests/**'
+  ]
+};
+```
+
+## 🎯 TEST QUALITY METRICS
+
+### Coverage Metrics
+
+**Code Coverage Targets**
+- Unit tests: >90% line coverage
+- Integration tests: >80% feature coverage
+- E2E tests: >70% user journey coverage
+
+**Quality Metrics**
+- Test reliability: >99% pass rate
+- Test performance: <5s average execution
+- Test maintainability: <2 hours to update per feature
+- Test documentation: 100% test purpose documented
+
+### Success Indicators
+
+**EXCELLENT Test Organization**
+- Clear structure and naming
+- Comprehensive coverage
+- Fast and reliable execution
+- Easy maintenance and updates
+
+**GOOD Test Organization**
+- Mostly clear structure
+- Good coverage
+- Reasonable execution time
+- Manageable maintenance
+
+**NEEDS IMPROVEMENT**
+- Unclear organization
+- Gaps in coverage
+- Slow or flaky tests
+- Difficult maintenance
+
+This test organization framework ensures maintainable, scalable, and effective testing for the Memory Bank system.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/backup-system.mdc`
+
+```mdc
+---
+description: "Backup system for Memory Bank data protection and recovery"
+globs: "**/workflow/**", "**/backup/**", "**/recovery/**"
+alwaysApply: true
+---
+
+# BACKUP SYSTEM
+
+> **TL;DR:** Comprehensive backup system ensuring Memory Bank data protection through automated backups, version control integration, and reliable recovery procedures.
+
+## 💾 BACKUP SYSTEM OVERVIEW
+
+The Backup System provides multiple layers of data protection for Memory Bank operations, ensuring no work is ever lost and enabling quick recovery from any issues.
+
+### Core Functions
+
+**Automated Protection**
+- Automatic backups before critical operations
+- Git-based version control integration
+- Incremental backup strategies
+- Real-time data protection
+
+**Recovery Capabilities**
+- Point-in-time recovery
+- Selective file restoration
+- Complete system restoration
+- Emergency recovery procedures
+
+## 🔄 BACKUP STRATEGIES
+
+### 1. Git-Based Backups (Primary)
+
+**Automatic Commits**
+```bash
+# Before mode transitions
+git add memory-bank/
+git commit -m "AUTO-BACKUP: Before $(echo $MODE) mode transition - $(date)"
+
+# Before critical operations
+git add .
+git commit -m "AUTO-BACKUP: Before critical operation - $(date)"
+```
+
+**Branch Protection**
+```bash
+# Create backup branch before major changes
+git checkout -b "backup-$(date +%Y%m%d-%H%M%S)"
+git push origin "backup-$(date +%Y%m%d-%H%M%S)"
+```
+
+### 2. File System Backups (Secondary)
+
+**Critical Files Backup**
+```bash
+# Backup critical Memory Bank files
+BACKUP_DIR="memory-bank/backup/$(date +%Y-%m-%d)"
+mkdir -p "$BACKUP_DIR"
+
+cp memory-bank/tasks.md "$BACKUP_DIR/tasks-$(date +%H%M%S).md"
+cp memory-bank/system/current-date.txt "$BACKUP_DIR/"
+cp memory-bank/system/interaction-mode.txt "$BACKUP_DIR/"
+cp memory-bank/config/system.yaml "$BACKUP_DIR/"
+```
+
+**Archive Backups**
+```bash
+# Create compressed archive
+tar -czf "memory-bank-backup-$(date +%Y%m%d-%H%M%S).tar.gz" memory-bank/
+```
+
+### 3. Emergency Backups (Tertiary)
+
+**Rapid Backup**
+```bash
+# Quick backup for emergency situations
+cp -r memory-bank/ "memory-bank-emergency-$(date +%Y%m%d-%H%M%S)/"
+```
+
+## 🚨 BACKUP TRIGGERS
+
+### Automatic Backup Triggers
+
+**Mode Transitions**
+- Before entering any Memory Bank mode
+- Before exiting IMPLEMENT mode
+- Before ARCHIVE mode completion
+
+**Critical Operations**
+- Before applying Cursor workaround
+- Before mass file operations
+- Before system configuration changes
+
+**Time-Based**
+- Every 30 minutes during active work
+- At the end of each work session
+- Daily backup of complete state
+
+### Manual Backup Triggers
+
+**User-Initiated**
+- Before experimental changes
+- Before major refactoring
+- Before system updates
+
+**Emergency Situations**
+- System instability detected
+- Data corruption suspected
+- Before recovery operations
+
+## 📋 BACKUP VALIDATION
+
+### Backup Integrity Checks
+
+**File Verification**
+```bash
+# Verify backup completeness
+backup_check() {
+  local backup_dir="$1"
+
+  # Check critical files exist
+  [ -f "$backup_dir/tasks.md" ] || echo "ERROR: tasks.md missing"
+  [ -f "$backup_dir/current-date.txt" ] || echo "ERROR: current-date.txt missing"
+  [ -f "$backup_dir/interaction-mode.txt" ] || echo "ERROR: interaction-mode.txt missing"
+
+  # Verify file sizes
+  [ -s "$backup_dir/tasks.md" ] || echo "WARNING: tasks.md is empty"
+
+  echo "Backup validation complete"
+}
+```
+
+**Git Backup Verification**
+```bash
+# Verify git backup integrity
+git_backup_check() {
+  # Check if backup branch exists
+  git branch -r | grep "backup-$(date +%Y%m%d)" || echo "WARNING: No backup branch today"
+
+  # Verify recent commits
+  git log --oneline -5 | grep "AUTO-BACKUP" || echo "WARNING: No recent auto-backups"
+
+  # Check working directory is clean
+  git status --porcelain | wc -l | xargs -I {} echo "Uncommitted files: {}"
+}
+```
+
+## 🔧 RECOVERY PROCEDURES
+
+### Quick Recovery
+
+**Recent Work Recovery**
+```bash
+# Recover from last auto-backup
+git reset --hard HEAD~1  # Go back one commit
+git checkout memory-bank/tasks.md  # Restore specific file
+```
+
+**File-Specific Recovery**
+```bash
+# Recover specific file from backup
+recover_file() {
+  local file="$1"
+  local backup_dir="memory-bank/backup/$(date +%Y-%m-%d)"
+
+  if [ -f "$backup_dir/$(basename $file)" ]; then
+    cp "$backup_dir/$(basename $file)" "$file"
+    echo "Recovered: $file"
+  else
+    echo "ERROR: Backup not found for $file"
+  fi
+}
+```
+
+### Complete System Recovery
+
+**Full System Restore**
+```bash
+# Restore from complete backup
+restore_system() {
+  local backup_archive="$1"
+
+  # Create safety backup of current state
+  mv memory-bank/ "memory-bank-before-restore-$(date +%Y%m%d-%H%M%S)/"
+
+  # Extract backup
+  tar -xzf "$backup_archive"
+
+  echo "System restored from: $backup_archive"
+}
+```
+
+**Git-Based Recovery**
+```bash
+# Recover from git backup branch
+git_recovery() {
+  local backup_branch="$1"
+
+  # Create safety branch
+  git checkout -b "before-recovery-$(date +%Y%m%d-%H%M%S)"
+
+  # Switch to backup branch
+  git checkout "$backup_branch"
+
+  # Merge or cherry-pick specific changes
+  git checkout main
+  git merge "$backup_branch"
+}
+```
+
+## 📊 BACKUP MONITORING
+
+### Backup Health Metrics
+
+**Backup Frequency**
+- Auto-backups per day: Target >10
+- Manual backups per week: Target >3
+- Emergency backups: Track all occurrences
+
+**Backup Quality**
+- Backup completeness: Target 100%
+- Backup integrity: Target 100%
+- Recovery success rate: Target >95%
+
+**Storage Metrics**
+- Backup storage usage: Monitor growth
+- Backup retention period: 30 days default
+- Archive compression ratio: Target >50%
+
+### Backup Alerts
+
+**Missing Backups**
+```bash
+# Alert if no backup in last 4 hours
+last_backup=$(git log --grep="AUTO-BACKUP" --format="%ct" -1)
+current_time=$(date +%s)
+time_diff=$((current_time - last_backup))
+
+if [ $time_diff -gt 14400 ]; then  # 4 hours
+  echo "ALERT: No backup in last 4 hours"
+  echo "Last backup: $(date -d @$last_backup)"
+fi
+```
+
+**Storage Warnings**
+```bash
+# Warn if backup storage is getting full
+backup_size=$(du -sh memory-bank/backup/ | cut -f1)
+echo "Backup storage usage: $backup_size"
+
+# Clean old backups if needed
+find memory-bank/backup/ -type f -mtime +30 -delete
+```
+
+## 🛡️ BACKUP SECURITY
+
+### Backup Protection
+
+**Access Control**
+- Backup files read-only after creation
+- Restricted access to backup directories
+- Encrypted backups for sensitive data
+
+**Integrity Protection**
+- Checksums for backup verification
+- Digital signatures for critical backups
+- Tamper detection mechanisms
+
+### Backup Retention
+
+**Retention Policy**
+- Daily backups: Keep 7 days
+- Weekly backups: Keep 4 weeks
+- Monthly backups: Keep 12 months
+- Emergency backups: Keep indefinitely
+
+**Cleanup Automation**
+```bash
+# Automated backup cleanup
+cleanup_backups() {
+  # Remove daily backups older than 7 days
+  find memory-bank/backup/ -name "*daily*" -mtime +7 -delete
+
+  # Remove weekly backups older than 28 days
+  find memory-bank/backup/ -name "*weekly*" -mtime +28 -delete
+
+  # Archive monthly backups older than 365 days
+  find memory-bank/backup/ -name "*monthly*" -mtime +365 -exec gzip {} \;
+}
+```
+
+This backup system ensures comprehensive data protection for Memory Bank operations with multiple recovery options and automated protection mechanisms.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/creative-archive-integration.mdc`
+
+```mdc
+---
+description: "Creative archive integration for Memory Bank workflow modes"
+globs: "**/creative/**", "**/workflow/**", "**/archive/**"
+alwaysApply: false
+---
+
+# CREATIVE ARCHIVE INTEGRATION SYSTEM
+
+> **TL;DR:** Seamless integration of creative phase archiving across all Memory Bank modes, ensuring comprehensive preservation of architectural decisions and design processes.
+
+## 🔄 INTEGRATION OVERVIEW
+
+The Creative Archive Integration System connects creative phase results with all Memory Bank modes, creating a continuous flow of architectural knowledge from creation to long-term preservation.
+
+### Integration Architecture
+
+```mermaid
+graph TD
+    Creative["🎨 CREATIVE MODE"] --> Capture["📸 Results Capture"]
+    Capture --> Structure["🗂️ Archive Structure"]
+    Structure --> Analysis["📊 Analysis Engine"]
+    Analysis --> Integration["🔄 Mode Integration"]
+
+    Integration --> VAN["🚀 VAN Mode<br>Decision Discovery"]
+    Integration --> PLAN["📋 PLAN Mode<br>Pattern Reuse"]
+    Integration --> IMPLEMENT["⚙️ IMPLEMENT Mode<br>Reference Access"]
+    Integration --> REFLECT["🤔 REFLECT Mode<br>Quality Assessment"]
+    Integration --> ARCHIVE["📚 ARCHIVE Mode<br>Long-term Storage"]
+
+    VAN --> Search["🔍 Decision Search"]
+    PLAN --> Patterns["📐 Pattern Library"]
+    IMPLEMENT --> Reference["📖 Implementation Guide"]
+    REFLECT --> Assessment["📈 Quality Metrics"]
+    ARCHIVE --> Preservation["🏛️ Knowledge Preservation"]
+```
+
+## 🎨 CREATIVE MODE INTEGRATION
+
+### Automatic Results Capture
+
+**Real-time Archiving**
+- Automatic saving of creative phase documents
+- Metadata extraction from creative sessions
+- Decision point identification and tagging
+- Architectural diagram preservation
+
+**Structured Documentation**
+```yaml
+creative_result:
+  metadata:
+    task_id: "TASK-ID-YYYY-MM-DD"
+    phase_type: "architecture|algorithm|ui_ux|data_model"
+    duration: "90 minutes"
+    participants: ["architect", "developer", "stakeholder"]
+    complexity_level: "Level 1-4"
+
+  decisions:
+    - decision_id: "ARCH-001"
+      title: "Database Architecture Choice"
+      description: "Selected PostgreSQL for ACID compliance"
+      alternatives_considered: ["MongoDB", "MySQL", "SQLite"]
+      rationale: "ACID compliance critical for financial data"
+      impact_assessment: "High - affects all data operations"
+
+  artifacts:
+    - type: "architecture_diagram"
+      file: "architecture-2024-12-09.md"
+      description: "System architecture overview"
+    - type: "decision_matrix"
+      file: "database-choice-matrix.md"
+      description: "Database selection criteria and scoring"
+```
+
+### Quality Scoring Integration
+
+**Automated Quality Assessment**
+- Technical soundness evaluation
+- Business alignment scoring
+- Implementation feasibility analysis
+- Risk assessment integration
+
+**Quality Metrics Collection**
+```yaml
+quality_metrics:
+  technical_soundness: 8.5/10
+  business_alignment: 9.0/10
+  implementation_feasibility: 7.5/10
+  risk_management: 8.0/10
+  innovation_factor: 7.0/10
+  overall_score: 8.0/10
+
+  assessment_criteria:
+    - scalability_consideration: "Excellent"
+    - maintainability_focus: "Good"
+    - performance_analysis: "Adequate"
+    - security_assessment: "Excellent"
+```
+
+## 🚀 VAN MODE INTEGRATION
+
+### Decision Discovery System
+
+**Historical Decision Search**
+- Semantic search across archived decisions
+- Pattern matching for similar problems
+- Success rate analysis for proposed approaches
+- Risk assessment based on historical data
+
+**Context-Aware Recommendations**
+```markdown
+## Similar Decisions Found
+
+### Database Architecture (85% match)
+**Previous Task**: ECOMMERCE-DB-2024-11-15
+**Decision**: PostgreSQL with read replicas
+**Success Rate**: 95% (implemented successfully, no major issues)
+**Lessons Learned**:
+- Connection pooling critical for performance
+- Backup strategy must be planned early
+- Migration scripts need thorough testing
+
+**Recommendation**: Consider this proven approach for current task
+```
+
+### Pattern Library Access
+
+**Architectural Pattern Repository**
+- Categorized by problem domain
+- Success rate tracking
+- Implementation complexity scoring
+- Resource requirement estimates
+
+**Pattern Matching Algorithm**
+```python
+def find_relevant_patterns(current_context):
+    patterns = search_archive_by_context(current_context)
+    scored_patterns = []
+
+    for pattern in patterns:
+        similarity_score = calculate_similarity(current_context, pattern.context)
+        success_rate = pattern.implementation_success_rate
+        complexity_match = assess_complexity_match(current_context.complexity, pattern.complexity)
+
+        relevance_score = (similarity_score * 0.4 +
+                          success_rate * 0.4 +
+                          complexity_match * 0.2)
+
+        scored_patterns.append((pattern, relevance_score))
+
+    return sorted(scored_patterns, key=lambda x: x[1], reverse=True)[:5]
+```
+
+## 📋 PLAN MODE INTEGRATION
+
+### Pattern Reuse System
+
+**Proven Solution Templates**
+- Pre-validated architectural templates
+- Implementation roadmaps from successful projects
+- Resource allocation patterns
+- Timeline estimation based on historical data
+
+**Template Adaptation Engine**
+```yaml
+template_adaptation:
+  base_template: "microservices-architecture-v2.1"
+  adaptations:
+    - scale: "medium → large (3x service count)"
+    - technology: "Node.js → Python (team expertise)"
+    - database: "MongoDB → PostgreSQL (ACID requirements)"
+    - deployment: "Docker → Kubernetes (scalability needs)"
+
+  estimated_changes:
+    timeline_impact: "+20% (technology change)"
+    resource_impact: "+15% (learning curve)"
+    risk_impact: "-10% (proven patterns)"
+```
+
+### Decision Framework Integration
+
+**Structured Decision Making**
+- Decision templates based on successful patterns
+- Criteria weighting from historical effectiveness
+- Stakeholder involvement patterns
+- Risk assessment frameworks
+
+## ⚙️ IMPLEMENT MODE INTEGRATION
+
+### Reference Access System
+
+**Implementation Guidance**
+- Step-by-step implementation guides from successful projects
+- Common pitfall warnings based on historical failures
+- Code pattern libraries with proven implementations
+- Configuration templates and best practices
+
+**Real-time Advisory System**
+```markdown
+## Implementation Advisory
+
+### Current Phase: Database Setup
+**Similar Implementation**: ECOMMERCE-DB-2024-11-15
+**Success Factors**:
+- Use connection pooling from day 1
+- Implement proper indexing strategy
+- Set up monitoring before production
+
+**Common Pitfalls**:
+- ⚠️ Don't skip migration testing (caused 2-day delay in previous project)
+- ⚠️ Plan for backup storage costs (unexpected 40% budget increase)
+- ⚠️ Test connection limits under load (production issue in 3 projects)
+
+**Recommended Next Steps**:
+1. Set up connection pooling configuration
+2. Create initial database schema with proper indexes
+3. Implement backup and recovery procedures
+```
+
+### Code Pattern Integration
+
+**Proven Implementation Patterns**
+- Code templates from successful implementations
+- Configuration patterns with success tracking
+- Testing strategies with effectiveness metrics
+- Deployment patterns with reliability scores
+
+## 🤔 REFLECT MODE INTEGRATION
+
+### Quality Assessment System
+
+**Automated Analysis**
+- Compare implemented solution with original creative decisions
+- Assess deviation from planned architecture
+- Measure implementation quality against creative phase goals
+- Generate improvement recommendations
+
+**Reflection Enhancement**
+```yaml
+reflection_analysis:
+  creative_vs_implementation:
+    architecture_adherence: 85%
+    decision_implementation: 90%
+    quality_achievement: 80%
+    timeline_adherence: 75%
+
+  deviations:
+    - decision: "Database choice"
+      planned: "PostgreSQL"
+      implemented: "PostgreSQL with Redis cache"
+      reason: "Performance requirements exceeded expectations"
+      impact: "Positive - 40% performance improvement"
+
+  lessons_learned:
+    - "Cache layer should be considered in creative phase"
+    - "Performance testing earlier would have identified need"
+    - "Redis expertise was available but not leveraged in planning"
+
+  recommendations:
+    - "Update database architecture template to include caching considerations"
+    - "Add performance testing to creative phase checklist"
+    - "Create team expertise inventory for better planning"
+```
+
+### Pattern Effectiveness Tracking
+
+**Success Rate Updates**
+- Update pattern success rates based on implementation results
+- Track long-term effectiveness of architectural decisions
+- Identify patterns that need refinement or retirement
+- Generate pattern improvement recommendations
+
+## 📚 ARCHIVE MODE INTEGRATION
+
+### Long-term Preservation System
+
+**Comprehensive Archiving**
+- Complete creative phase documentation
+- Implementation results and deviations
+- Lessons learned and improvement recommendations
+- Pattern effectiveness updates
+
+**Knowledge Synthesis**
+```yaml
+archive_synthesis:
+  project_summary:
+    creative_phases: 3
+    total_decisions: 12
+    implementation_success: 85%
+    timeline_adherence: 90%
+
+  key_innovations:
+    - "Hybrid database approach with PostgreSQL + Redis"
+    - "Microservice communication pattern with event sourcing"
+    - "Automated testing pipeline with performance gates"
+
+  reusable_patterns:
+    - pattern_id: "HYBRID-DB-v1.0"
+      success_rate: 95%
+      applicability: "High-performance applications with ACID requirements"
+
+  institutional_knowledge:
+    - "Team expertise in Redis significantly impacts implementation speed"
+    - "Performance testing should be integrated into creative phases"
+    - "Event sourcing patterns work well with microservice architectures"
+```
+
+### Strategic Knowledge Building
+
+**Pattern Evolution Tracking**
+- Track how patterns evolve over time
+- Identify emerging architectural trends
+- Assess technology adoption success rates
+- Generate strategic technology recommendations
+
+## 🔧 TECHNICAL IMPLEMENTATION
+
+### File System Integration
+
+**Archive Structure**
+```
+memory-bank/
+├── creative/
+│   ├── architecture/
+│   │   ├── 2024-12-09-task-continuity-architecture.md
+│   │   ├── 2024-12-08-rules-integration-architecture.md
+│   │   └── index.md
+│   ├── algorithms/
+│   ├── ui-ux/
+│   ├── data-models/
+│   ├── patterns/
+│   │   ├── database-patterns.md
+│   │   ├── microservice-patterns.md
+│   │   └── deployment-patterns.md
+│   ├── metrics/
+│   │   ├── quality-scores.json
+│   │   ├── success-rates.json
+│   │   └── pattern-effectiveness.json
+│   └── search-index/
+│       ├── decisions.index
+│       ├── patterns.index
+│       └── metadata.index
+```
+
+### API Integration Points
+
+**Search API**
+```python
+def search_creative_archive(query, context=None, mode=None):
+    """
+    Search creative archive with context awareness
+
+    Args:
+        query: Search terms or problem description
+        context: Current project context
+        mode: Memory Bank mode for context-specific results
+
+    Returns:
+        List of relevant decisions, patterns, and recommendations
+    """
+    pass
+
+def get_pattern_recommendations(problem_context):
+    """
+    Get pattern recommendations based on problem context
+
+    Args:
+        problem_context: Current problem description and constraints
+
+    Returns:
+        Ranked list of applicable patterns with success rates
+    """
+    pass
+```
+
+### Integration Hooks
+
+**Mode Transition Hooks**
+- VAN mode startup: Load relevant historical decisions
+- PLAN mode: Suggest applicable patterns and templates
+- IMPLEMENT mode: Provide implementation guidance
+- REFLECT mode: Analyze implementation vs. creative decisions
+- ARCHIVE mode: Synthesize and preserve knowledge
+
+This comprehensive integration system ensures that creative phase results are seamlessly woven into the entire Memory Bank workflow, creating a continuous learning and improvement cycle that builds institutional knowledge and improves decision-making quality over time.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/implement-mode-integration.mdc`
+
+```mdc
+---
+description: "IMPLEMENT mode integration rules for Memory Bank workflow"
+globs: "**/implement/**", "**/IMPLEMENT/**", "**/workflow/**"
+alwaysApply: false
+---
+
+# IMPLEMENT MODE INTEGRATION
+
+> **TL;DR:** Integration rules for IMPLEMENT mode within Memory Bank workflow system, ensuring systematic implementation following planned approach and proper transition to quality assurance.
+
+```mermaid
+graph TD
+    Start["🔨 IMPLEMENT MODE ACTIVATION"] --> LoadPlan["📖 Load Implementation Plan"]
+    LoadPlan --> DetermineLevel["🧩 Determine Complexity Level"]
+
+    DetermineLevel --> Level1["Level 1: Quick Bug Fix"]
+    DetermineLevel --> Level2["Level 2: Simple Enhancement"]
+    DetermineLevel --> Level3["Level 3: Intermediate Feature"]
+    DetermineLevel --> Level4["Level 4: Complex System"]
+
+    Level1 --> DirectFix["🔧 Direct Implementation<br>Single focused fix"]
+    Level2 --> SequentialBuild["📋 Sequential Build<br>Component by component"]
+    Level3 --> PhasedBuild["🎯 Phased Implementation<br>With testing between phases"]
+    Level4 --> ArchitecturalBuild["🏗️ Architectural Implementation<br>Multiple coordinated phases"]
+
+    DirectFix --> TestChanges["✅ Test Changes"]
+    SequentialBuild --> TestChanges
+    PhasedBuild --> TestChanges
+    ArchitecturalBuild --> TestChanges
+
+    TestChanges --> UpdateTasks["📝 Update tasks.md"]
+    UpdateTasks --> SuggestNext["➡️ Suggest Next Mode"]
+
+    style Start fill:#ff5555,stroke:#cc0000,color:white
+    style Level1 fill:#4dbb5f,stroke:#36873f,color:white
+    style Level2 fill:#ffa64d,stroke:#cc7a30,color:white
+    style Level3 fill:#ff5555,stroke:#cc0000,color:white
+    style Level4 fill:#d971ff,stroke:#a33bc2,color:white
+    style TestChanges fill:#4dbbbb,stroke:#368787,color:white
+```
+
+## IMPLEMENT MODE RESPONSIBILITIES
+
+### Primary Functions:
+1. **Plan Execution**: Follow implementation plan systematically
+2. **Code Implementation**: Write and modify code according to specifications
+3. **Testing Integration**: Test changes as they are implemented
+4. **Progress Tracking**: Update Memory Bank with implementation progress
+5. **Quality Assurance**: Ensure code quality and functionality
+
+### Integration Points:
+- **Memory Bank Files**: tasks.md, activeContext.md, progress.md
+- **Implementation Plan**: implementation-plan.md guidance
+- **Testing System**: Automated and manual testing integration
+- **Command Execution**: Following command-execution.mdc rules
+
+## COMPLEXITY-BASED IMPLEMENTATION
+
+### Level 1: Quick Bug Fix Implementation
+```mermaid
+graph TD
+    L1Start["Level 1 Implementation"] --> LocateBug["🔍 Locate Bug Code"]
+    LocateBug --> ApplyFix["🔧 Apply Targeted Fix"]
+    ApplyFix --> TestFix["✅ Test Fix Works"]
+    TestFix --> VerifyNoRegression["🔍 Verify No Regression"]
+    VerifyNoRegression --> Complete["✅ Implementation Complete"]
+
+    style L1Start fill:#4dbb5f,stroke:#36873f,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+**Implementation Approach**: Direct, focused fix with immediate testing
+
+### Level 2: Simple Enhancement Implementation
+```mermaid
+graph TD
+    L2Start["Level 2 Implementation"] --> BuildComponents["🧩 Build Components"]
+    BuildComponents --> TestComponent["✅ Test Each Component"]
+    TestComponent --> IntegrateComponents["🔗 Integrate Components"]
+    IntegrateComponents --> TestIntegration["✅ Test Integration"]
+    TestIntegration --> Complete["✅ Implementation Complete"]
+
+    style L2Start fill:#ffa64d,stroke:#cc7a30,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+**Implementation Approach**: Sequential component building with integration testing
+
+### Level 3: Intermediate Feature Implementation
+```mermaid
+graph TD
+    L3Start["Level 3 Implementation"] --> Phase1["📋 Phase 1: Core Components"]
+    Phase1 --> TestPhase1["✅ Test Phase 1"]
+    TestPhase1 --> Phase2["📋 Phase 2: Secondary Components"]
+    Phase2 --> TestPhase2["✅ Test Phase 2"]
+    TestPhase2 --> Phase3["📋 Phase 3: Integration & Polish"]
+    Phase3 --> TestPhase3["✅ Test Phase 3"]
+    TestPhase3 --> Complete["✅ Implementation Complete"]
+
+    style L3Start fill:#ff5555,stroke:#cc0000,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+**Implementation Approach**: Phased implementation with testing between phases
+
+### Level 4: Complex System Implementation
+```mermaid
+graph TD
+    L4Start["Level 4 Implementation"] --> ArchPhase1["🏗️ Architecture Phase"]
+    ArchPhase1 --> TestArch["✅ Test Architecture"]
+    TestArch --> CorePhase["🧩 Core Systems Phase"]
+    CorePhase --> TestCore["✅ Test Core Systems"]
+    TestCore --> IntegrationPhase["🔗 Integration Phase"]
+    IntegrationPhase --> TestIntegration["✅ Test Integration"]
+    TestIntegration --> PolishPhase["✨ Polish & Optimization"]
+    PolishPhase --> FinalTest["✅ Final Testing"]
+    FinalTest --> Complete["✅ Implementation Complete"]
+
+    style L4Start fill:#d971ff,stroke:#a33bc2,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+**Implementation Approach**: Multi-phase architectural implementation with comprehensive testing
+
+## COMMAND EXECUTION INTEGRATION
+
+### Following Command Execution Rules:
+- **Platform Awareness**: Adapt commands for current platform (macOS/Linux/Windows)
+- **Directory Verification**: Ensure commands run from correct directory
+- **Command Chaining**: Use efficient command chaining where appropriate
+- **Error Handling**: Proper error handling and recovery procedures
+- **Documentation**: Document all commands and their results
+
+### Command Documentation Template:
+```markdown
+## Command Execution: [Purpose]
+
+### Command
+```
+[actual command or chain]
+```
+
+### Result
+```
+[command output]
+```
+
+### Effect
+[Brief description of what changed in the system]
+
+### Next Steps
+[What needs to be done next]
+```
+
+## TESTING INTEGRATION
+
+### Testing Strategy by Level:
+- **Level 1**: Focused unit testing of fix
+- **Level 2**: Component testing + integration testing
+- **Level 3**: Phase-based testing + comprehensive integration testing
+- **Level 4**: Architectural testing + system-wide testing + performance testing
+
+### Testing Checkpoints:
+```mermaid
+graph TD
+    Implement["Implementation Step"] --> UnitTest["🧪 Unit Tests"]
+    UnitTest --> IntegrationTest["🔗 Integration Tests"]
+    IntegrationTest --> SystemTest["🖥️ System Tests"]
+    SystemTest --> UserTest["👤 User Acceptance Tests"]
+    UserTest --> Complete["✅ Testing Complete"]
+
+    style Implement fill:#ff5555,stroke:#cc0000,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## MEMORY BANK INTEGRATION
+
+### Core File Updates:
+1. **tasks.md**: Update with implementation progress and status
+2. **activeContext.md**: Maintain current implementation context
+3. **progress.md**: Record implementation milestones and completion
+4. **implementation-log.md**: Detailed log of implementation steps
+
+### Progress Tracking:
+- **Phase Completion**: Mark phases as complete in tasks.md
+- **Code Changes**: Document significant code changes
+- **Testing Results**: Record testing outcomes
+- **Issues Encountered**: Document and resolve implementation issues
+
+## MODE TRANSITION LOGIC
+
+### Next Mode Determination:
+```mermaid
+graph TD
+    ImplComplete["Implementation Complete"] --> HasIssues{"Issues Found<br>During Testing?"}
+    HasIssues -->|"Yes"| BackToImplement["🔄 Continue IMPLEMENT<br>Fix Issues"]
+    HasIssues -->|"No"| CheckComplexity{"Complexity Level?"}
+
+    CheckComplexity -->|"Level 1-2"| ToReflect["➡️ To REFLECT Mode"]
+    CheckComplexity -->|"Level 3-4"| ToQA["➡️ To QA Mode"]
+
+    BackToImplement --> ImplComplete
+    ToQA --> QAComplete["QA Complete"]
+    QAComplete --> ToReflect
+
+    ToReflect --> UpdateContext["📝 Update activeContext.md"]
+    UpdateContext --> ReadyForReflection["✅ Ready for Reflection"]
+
+    style ImplComplete fill:#ff5555,stroke:#cc0000,color:white
+    style HasIssues fill:#ffa64d,stroke:#cc7a30,color:white
+    style ToQA fill:#d971ff,stroke:#a33bc2,color:white
+    style ToReflect fill:#4dbb5f,stroke:#36873f,color:white
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ IMPLEMENT MODE INTEGRATION CHECKLIST
+- Implementation plan loaded and followed? [YES/NO]
+- Complexity-appropriate approach used? [YES/NO]
+- All planned components implemented? [YES/NO]
+- Code changes tested thoroughly? [YES/NO]
+- Command execution documented? [YES/NO]
+- No regressions introduced? [YES/NO]
+- tasks.md updated with progress? [YES/NO]
+- Implementation log maintained? [YES/NO]
+- Next mode transition prepared? [YES/NO]
+
+→ If all YES: Implementation complete, ready for next mode
+→ If any NO: Complete missing implementation elements
+```
+
+## ERROR HANDLING
+
+### Common Implementation Issues:
+1. **Build Failures**: Debug and resolve compilation/build errors
+2. **Test Failures**: Identify and fix failing tests
+3. **Integration Problems**: Resolve component integration issues
+4. **Performance Issues**: Optimize code for performance requirements
+
+### Recovery Procedures:
+- **Rollback Strategy**: Maintain ability to rollback changes
+- **Incremental Fixes**: Apply fixes incrementally with testing
+- **Documentation**: Document all issues and their resolutions
+- **Learning Integration**: Update implementation approach based on learnings
+
+## IMPLEMENTATION EXAMPLES
+
+### Level 1 Bug Fix:
+```
+IMPLEMENT Mode Activated
+📖 Loading bug fix plan for authentication issue
+🔍 Located bug in auth.js line 45
+🔧 Applied targeted fix: corrected token validation
+✅ Tested fix: authentication now works correctly
+📝 Updated tasks.md: Bug fix complete
+➡️ Suggesting REFLECT mode for review
+```
+
+### Level 3 Feature Implementation:
+```
+IMPLEMENT Mode Activated
+📖 Loading feature implementation plan
+📋 Phase 1: Implementing core user management components
+✅ Phase 1 testing complete
+📋 Phase 2: Implementing user interface components
+✅ Phase 2 testing complete
+📋 Phase 3: Integration and polish
+✅ Phase 3 testing complete
+📝 Updated tasks.md: Feature implementation complete
+➡️ Suggesting QA mode for comprehensive testing
+```
+
+This integration ensures IMPLEMENT mode executes planned changes systematically while maintaining quality through appropriate testing and providing clear transition to the next workflow phase.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/migration-system.mdc`
+
+```mdc
+---
+description: Migration system for preserving task context between Memory Bank modes
+globs: "**/workflow/**", "**/migration/**", "**/preserve*/**"
+alwaysApply: true
+---
+
+# MIGRATION SYSTEM FOR TASK PRESERVATION
+
+> **TL;DR:** This system creates and processes migration documents to preserve task context, implementation details, and development state during Memory Bank mode transitions.
+
+## 🔄 MIGRATION SYSTEM OVERVIEW
+
+The Migration System ensures 100% preservation of development work by creating structured migration documents that capture:
+
+- **Task Context**: Current status, progress, and next steps
+- **Implementation State**: Code changes, configurations, and dependencies
+- **Development Environment**: Branch state, working directory, and tool configurations
+- **Knowledge Artifacts**: Decisions made, lessons learned, and technical insights
+
+## 📋 MIGRATION DOCUMENT STRUCTURE
+
+### Standard Migration Format
+
+The migration document uses YAML format for structured data preservation:
+
+```yaml
+# migration.md
+migration:
+  metadata:
+    created_date: "2024-12-09T10:30:00Z"
+    created_by: "Memory Bank System"
+    from_mode: "IMPLEMENT"
+    to_mode: "REFLECT"
+    migration_type: "PARTIAL_COMPLETION"
+
+  context:
+    active_branch: "implement-task-continuity-fix-20250610"
+    working_directory: "/Users/vedmalex/work/cursor-memory-bank"
+    last_commit: "186e1eb"
+    uncommitted_changes: true
+
+  tasks:
+    completed:
+      - id: "RULES-INT-2024-12-09"
+        status: "COMPLETED"
+        completion_date: "2024-12-09"
+        archived: true
+
+    in_progress:
+      - id: "TASK-CONTINUITY-FIX-2024-12-09"
+        status: "IN_PROGRESS"
+        priority: "CRITICAL"
+        completion: 75
+        current_phase: "Phase 1: Task Status Validation"
+        next_steps:
+          - "Complete Phase 2: Migration System Integration"
+          - "Implement Phase 3: Safe Mode Transitions"
+          - "Finalize Phase 4: Task Preservation Rules"
+```
+
+## 🔄 MIGRATION TYPES
+
+### 1. Completion Migration (IMPLEMENT → REFLECT)
+
+**Trigger**: All tasks completed, ready for reflection
+**Purpose**: Archive completed work and prepare for reflection
+**Content Focus**: Implementation results, testing outcomes, deliverables
+
+### 2. Partial Migration (IMPLEMENT → REFLECT with incomplete work)
+
+**Trigger**: Forced transition with unfinished tasks
+**Purpose**: Preserve incomplete work context for future continuation
+**Content Focus**: Current progress, next steps, blockers
+
+### 3. Interruption Migration (Any mode → VAN)
+
+**Trigger**: New high-priority task requires immediate attention
+**Purpose**: Preserve current work state for later resumption
+**Content Focus**: Complete context preservation
+
+### 4. Archive Migration (REFLECT → ARCHIVE)
+
+**Trigger**: Reflection complete, ready for archiving
+**Purpose**: Create final knowledge artifact
+**Content Focus**: Lessons learned, insights, future recommendations
+
+## 🔧 MIGRATION PROCESSING WORKFLOW
+
+### Migration Creation Process
+
+1. **Trigger Detection**
+   - Mode transition requested
+   - Validation system detects incomplete work
+   - User confirms migration creation
+
+2. **Context Analysis**
+   - Scan current tasks.md for unfinished work
+   - Analyze git state and uncommitted changes
+   - Identify key files and configurations
+   - Extract implementation progress
+
+3. **Content Generation**
+   - Create structured migration document
+   - Preserve task context and next steps
+   - Document technical decisions
+   - Capture environment state
+
+4. **Validation and Storage**
+   - Validate migration document format
+   - Store in memory-bank/migration.md
+   - Create backup of current state
+   - Update system tracking
+
+### Migration Processing on VAN Mode Start
+
+1. **Migration Detection**
+   - Check for existing migration.md
+   - Validate migration document format
+   - Extract migration metadata
+
+2. **Context Restoration**
+   - Parse unfinished tasks
+   - Restore task priorities and status
+   - Merge with any new tasks
+   - Preserve implementation context
+
+3. **Environment Setup**
+   - Restore working directory state
+   - Check git branch and commit state
+   - Validate file modifications
+   - Restore tool configurations
+
+4. **Task Integration**
+   - Merge migrated tasks with new tasks
+   - Resolve any conflicts or duplicates
+   - Update task priorities and dependencies
+   - Create unified task list
+
+## 📊 MIGRATION CONTENT TEMPLATES
+
+### Task Context Template
+
+Each migrated task includes comprehensive context:
+
+**Basic Information**
+- Task ID and status
+- Priority and completion percentage
+- Current phase and next phase
+- Dependencies and blockers
+
+**Implementation Details**
+- Files modified and created
+- Configuration changes
+- Technical decisions made
+- Code architecture notes
+
+**Progress Tracking**
+- Phases completed
+- Current work state
+- Immediate next steps
+- Future planning items
+
+### Environment Context Template
+
+Environment preservation includes:
+
+**Git State**
+- Current branch and last commit
+- Uncommitted files
+- Stash availability
+- Repository status
+
+**Workspace State**
+- Working directory path
+- Open files in IDE
+- Active breakpoints
+- Terminal command history
+
+**Tool Configuration**
+- Package manager and versions
+- Dependencies status
+- Build and test status
+- Development environment setup
+
+## 🔍 MIGRATION VALIDATION RULES
+
+### Format Validation
+
+**Required Fields**
+- migration.metadata (with date, modes, type)
+- migration.context (with branch, directory)
+- migration.tasks (with at least one task)
+
+**Optional Fields**
+- migration.environment (recommended for complex tasks)
+- migration.knowledge (recommended for learning capture)
+
+### Content Validation
+
+**Task Validation**
+- Each task must have id, status, priority
+- IN_PROGRESS tasks must have completion percentage
+- IN_PROGRESS tasks must have next_steps
+- PLANNED tasks must have planning_complete flag
+
+**Context Validation**
+- Branch name must be valid git branch
+- Working directory must exist
+- File paths must be relative to project root
+- Completion percentages must be 0-100
+
+### Integrity Validation
+
+**Consistency Checks**
+- Task dependencies must reference existing tasks
+- File modifications must be trackable in git
+- Completion percentages must align with status
+- Next steps must be actionable
+
+**Completeness Checks**
+- All unfinished work must be captured
+- Critical context must be preserved
+- Environment state must be restorable
+- Knowledge artifacts must be documented
+
+## 🔄 MIGRATION LIFECYCLE
+
+### Creation Lifecycle
+
+1. **Trigger Event** → Migration needed
+2. **Context Capture** → Gather current state
+3. **Document Generation** → Create migration.md
+4. **Validation** → Verify completeness
+5. **Storage** → Save to memory-bank/
+6. **Backup** → Archive current state
+
+### Processing Lifecycle
+
+1. **Detection** → migration.md found
+2. **Validation** → Verify format and content
+3. **Context Restoration** → Restore environment
+4. **Task Integration** → Merge with new tasks
+5. **Cleanup** → Archive processed migration
+6. **Continuation** → Resume development
+
+### Archive Lifecycle
+
+1. **Completion** → Task cycle finished
+2. **Final Migration** → Create archive migration
+3. **Knowledge Extraction** → Extract insights
+4. **Documentation** → Update system docs
+5. **Storage** → Move to archive/
+6. **Reset** → Prepare for next cycle
+
+## 🔧 INTEGRATION POINTS
+
+### File System Integration
+
+**migration.md Location**
+- Primary: `memory-bank/migration.md`
+- Archive: `memory-bank/archive/migration-YYYY-MM-DD.md`
+- Backup: `memory-bank/backup/migration-backup-TIMESTAMP.md`
+
+**Processing Integration**
+- VAN mode checks for migration.md on startup
+- REFLECT mode creates migration.md if needed
+- ARCHIVE mode creates final migration before cleanup
+
+### Mode Integration
+
+**VAN Mode**
+- Detect and process existing migration.md
+- Merge migrated tasks with new requirements
+- Restore development environment context
+- Continue interrupted work seamlessly
+
+**REFLECT Mode**
+- Create migration.md for incomplete work
+- Preserve implementation context
+- Document lessons learned
+- Prepare for safe archiving
+
+**ARCHIVE Mode**
+- Create final migration with complete context
+- Archive all knowledge artifacts
+- Clean up for next development cycle
+- Preserve institutional knowledge
+
+This migration system ensures seamless preservation and restoration of development context across all Memory Bank mode transitions.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/mode-transition-controller.mdc`
+
+```mdc
+---
+description: Mode transition controller with task continuity integration
+globs: "**/workflow/**", "**/transition/**", "**/controller*/**"
+alwaysApply: true
+---
+
+# MODE TRANSITION CONTROLLER
+
+> **TL;DR:** This controller manages safe transitions between Memory Bank modes, integrating task continuity validation, migration processing, and user confirmation workflows.
+
+## 🔄 CONTROLLER OVERVIEW
+
+The Mode Transition Controller acts as the central orchestrator for all Memory Bank mode transitions. It ensures:
+
+- **Safe Transitions**: Validates readiness before mode changes
+- **Data Preservation**: Prevents loss of unfinished work
+- **User Guidance**: Provides clear options and recommendations
+- **Context Continuity**: Maintains development state across transitions
+- **Error Recovery**: Handles transition failures gracefully
+
+## 🎯 CONTROLLER ARCHITECTURE
+
+### Core Components
+
+**Transition Validator**
+- Validates current mode state
+- Checks task completion status
+- Analyzes dependency chains
+- Assesses data loss risks
+
+**Migration Processor**
+- Creates migration documents
+- Processes existing migrations
+- Merges task contexts
+- Preserves environment state
+
+**User Interface**
+- Displays warnings and options
+- Collects user decisions
+- Provides progress feedback
+- Shows transition status
+
+**State Manager**
+- Tracks current mode state
+- Manages transition history
+- Maintains system consistency
+- Handles rollback scenarios
+
+## 🚦 TRANSITION WORKFLOWS
+
+### VAN Mode Entry Process
+
+When entering VAN mode, the controller:
+
+1. **Check for Migration**: Look for existing migration.md
+2. **Process Migration**: If found, validate and process migration
+3. **Check Existing Tasks**: If no migration, check for existing tasks.md
+4. **Warn User**: If unfinished tasks found, warn about potential loss
+5. **User Decision**: Allow user to preserve, discard, or create migration
+6. **Merge Context**: Combine migrated tasks with new requirements
+7. **Initialize**: Complete VAN mode initialization
+
+### REFLECT Mode Entry Process
+
+When entering REFLECT mode, the controller:
+
+1. **Validate Implementation**: Check implementation completion status
+2. **Check Critical Tasks**: Ensure all critical tasks are complete
+3. **Overall Completion**: Verify overall completion percentage
+4. **Check Deliverables**: Validate required deliverables are ready
+5. **User Warnings**: Show warnings for incomplete work
+6. **Migration Option**: Offer migration creation for incomplete work
+7. **Allow Entry**: Proceed to REFLECT mode if validated
+
+### ARCHIVE Mode Entry Process
+
+When entering ARCHIVE mode, the controller:
+
+1. **Validate Reflection**: Ensure reflection.md exists and is complete
+2. **Check Documentation**: Verify system documentation is updated
+3. **Final Migration**: Create final migration document
+4. **Archive Preparation**: Prepare all artifacts for archiving
+5. **Knowledge Capture**: Ensure lessons learned are documented
+6. **Clean Transition**: Complete archiving and prepare for next cycle
+
+## 📋 TRANSITION VALIDATION RULES
+
+### Implementation Completion Validation
+
+**Critical Tasks**
+- Threshold: 100% (Must be complete)
+- Action: BLOCK transition
+- Message: "Critical tasks must be completed before reflection"
+
+**Overall Completion**
+- Warning Threshold: 90%
+- Blocking Threshold: 50%
+- Action: WARN or BLOCK based on completion
+
+**Deliverables**
+- Required Files: implementation, tests, documentation
+- Action: WARN (allow exceptions)
+- User can document exceptions
+
+### Reflection Completion Validation
+
+**Reflection Document**
+- Required: true
+- Sections: summary, what_went_well, challenges, lessons_learned
+- Action: BLOCK if missing
+
+**System Documentation**
+- Required: true
+- Action: WARN (allow exceptions)
+- User can document exceptions
+
+**Knowledge Capture**
+- Lessons Learned: REQUIRED
+- Process Improvements: RECOMMENDED
+- Technical Insights: RECOMMENDED
+
+## 🔧 MIGRATION INTEGRATION
+
+### Migration Creation Triggers
+
+**Automatic Triggers**
+- Incomplete critical tasks detected
+- Overall completion < 90%
+- User requests migration creation
+- System detects data loss risk
+
+**Manual Triggers**
+- User explicitly requests migration
+- Forced transition with warnings
+- Emergency interruption scenarios
+- Development context preservation
+
+### Migration Processing Logic
+
+The controller processes migrations through these steps:
+
+1. **Validate Format**: Check migration document structure
+2. **Extract Context**: Parse task and environment context
+3. **Restore State**: Restore development environment
+4. **Merge Tasks**: Combine migrated tasks with current tasks
+5. **Update System**: Update system state with merged context
+6. **Archive Migration**: Move processed migration to archive
+
+## 🚨 ERROR HANDLING
+
+### Transition Failure Recovery
+
+**Migration Corruption**
+- Detect corrupted migration documents
+- Attempt automatic repair
+- Fallback to backup migration
+- User-guided recovery process
+
+**State Inconsistency**
+- Detect inconsistent system state
+- Rollback to last known good state
+- Preserve user work in emergency backup
+- Guide manual resolution
+
+**User Cancellation**
+- Handle mid-transition cancellation
+- Restore previous mode state
+- Preserve any work in progress
+- Clean up temporary files
+
+### Error Recovery Process
+
+The controller handles errors through:
+
+1. **Error Detection**: Identify error type and severity
+2. **Automatic Recovery**: Attempt automatic resolution
+3. **Fallback Options**: Use backup systems if needed
+4. **User Guidance**: Provide clear recovery instructions
+5. **Emergency Backup**: Preserve work in emergency scenarios
+6. **Escalation**: Escalate to manual recovery if needed
+
+## 📊 TRANSITION MONITORING
+
+### Success Metrics
+
+**Transition Performance**
+- Successful transition rate: >95%
+- Migration processing time: <10 seconds
+- User satisfaction scores: >4.5/5
+- Data preservation rate: 100%
+
+**Failure Metrics**
+- Transition failure rate: <5%
+- Error recovery time: <60 seconds
+- Data loss incidents: 0
+- User intervention required: <10%
+
+### Performance Targets
+
+**Transition Time**
+- Target: < 30 seconds
+- Warning: > 60 seconds
+- Critical: > 120 seconds
+
+**Migration Processing**
+- Target: < 10 seconds
+- Warning: > 30 seconds
+- Critical: > 60 seconds
+
+**User Response Time**
+- Target: < 5 minutes
+- Timeout: 15 minutes
+- Escalation: 30 minutes
+
+## 🔧 INTEGRATION POINTS
+
+### File System Integration
+
+**State Tracking**
+- Current mode state in `memory-bank/mode-state.json`
+- Transition history in `memory-bank/transition-history.log`
+- Error logs in `memory-bank/transition-errors.log`
+
+**Migration Management**
+- Active migration in `memory-bank/migration.md`
+- Migration archive in `memory-bank/archive/migrations/`
+- Migration backups in `memory-bank/backup/migrations/`
+
+### User Interface Integration
+
+**Warning Display**
+- Consistent warning message format
+- Clear action buttons and options
+- Progress indicators for long operations
+- Help text and documentation links
+
+**Feedback Collection**
+- User satisfaction surveys
+- Error reporting mechanisms
+- Improvement suggestions
+- Usage analytics
+
+This Mode Transition Controller ensures safe, reliable transitions between all Memory Bank modes while preserving development work and maintaining user productivity.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/plan-mode-integration.mdc`
+
+```mdc
+---
+description: "PLAN mode integration rules for Memory Bank workflow"
+globs: "**/plan/**", "**/PLAN/**", "**/workflow/**"
+alwaysApply: false
+---
+
+# PLAN MODE INTEGRATION
+
+> **TL;DR:** Integration rules for PLAN mode within Memory Bank workflow system, ensuring comprehensive planning and seamless transition to implementation phases.
+
+```mermaid
+graph TD
+    Start["📋 PLAN MODE ACTIVATION"] --> LoadContext["📖 Load Active Context"]
+    LoadContext --> AnalyzeTask["🔍 Analyze Current Task"]
+    AnalyzeTask --> DetermineLevel["🧩 Determine Complexity Level"]
+
+    DetermineLevel --> Level1["Level 1: Quick Bug Fix"]
+    DetermineLevel --> Level2["Level 2: Simple Enhancement"]
+    DetermineLevel --> Level3["Level 3: Intermediate Feature"]
+    DetermineLevel --> Level4["Level 4: Complex System"]
+
+    Level1 --> MinimalPlan["📝 Minimal Planning<br>Direct to Implementation"]
+    Level2 --> BasicPlan["📋 Basic Planning<br>Component Analysis"]
+    Level3 --> ComprehensivePlan["🎯 Comprehensive Planning<br>+ Creative Phase"]
+    Level4 --> ArchitecturalPlan["🏗️ Architectural Planning<br>+ Multiple Creative Phases"]
+
+    MinimalPlan --> UpdateTasks["📝 Update tasks.md"]
+    BasicPlan --> UpdateTasks
+    ComprehensivePlan --> CreativePhase["🎨 Trigger Creative Phase"]
+    ArchitecturalPlan --> CreativePhase
+
+    CreativePhase --> UpdateTasks
+    UpdateTasks --> SuggestNext["➡️ Suggest Next Mode"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Level1 fill:#4dbb5f,stroke:#36873f,color:white
+    style Level2 fill:#ffa64d,stroke:#cc7a30,color:white
+    style Level3 fill:#ff5555,stroke:#cc0000,color:white
+    style Level4 fill:#d971ff,stroke:#a33bc2,color:white
+    style CreativePhase fill:#ff69b4,stroke:#e91e63,color:white
+```
+
+## PLAN MODE RESPONSIBILITIES
+
+### Primary Functions:
+1. **Task Analysis**: Analyze current task requirements and scope
+2. **Complexity Assessment**: Determine appropriate planning depth
+3. **Resource Planning**: Identify required resources and dependencies
+4. **Implementation Strategy**: Create detailed implementation approach
+5. **Creative Phase Coordination**: Trigger creative phases for complex tasks
+
+### Integration Points:
+- **Memory Bank Files**: tasks.md, activeContext.md, progress.md
+- **Planning Documents**: implementation-plan.md, phase-plans/
+- **Creative System**: creative/ directory for design decisions
+- **Level Rules**: Level-specific planning approaches
+
+## COMPLEXITY-BASED PLANNING
+
+### Level 1: Quick Bug Fix Planning
+```mermaid
+graph TD
+    L1Start["Level 1 Planning"] --> IdentifyBug["🐛 Identify Bug"]
+    IdentifyBug --> LocateCode["📍 Locate Affected Code"]
+    LocateCode --> PlanFix["🔧 Plan Targeted Fix"]
+    PlanFix --> EstimateTime["⏱️ Estimate Time"]
+    EstimateTime --> DirectImplement["➡️ Direct to IMPLEMENT"]
+
+    style L1Start fill:#4dbb5f,stroke:#36873f,color:white
+    style DirectImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+**Planning Output**: Minimal documentation in tasks.md with fix approach
+
+### Level 2: Simple Enhancement Planning
+```mermaid
+graph TD
+    L2Start["Level 2 Planning"] --> AnalyzeRequirements["📋 Analyze Requirements"]
+    AnalyzeRequirements --> IdentifyComponents["🧩 Identify Components"]
+    IdentifyComponents --> PlanSequence["📝 Plan Implementation Sequence"]
+    PlanSequence --> CreatePlan["📄 Create Implementation Plan"]
+    CreatePlan --> ToImplement["➡️ To IMPLEMENT"]
+
+    style L2Start fill:#ffa64d,stroke:#cc7a30,color:white
+    style ToImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+**Planning Output**: Basic implementation plan with component breakdown
+
+### Level 3: Intermediate Feature Planning
+```mermaid
+graph TD
+    L3Start["Level 3 Planning"] --> ComprehensiveAnalysis["🔍 Comprehensive Analysis"]
+    ComprehensiveAnalysis --> ArchitecturalDecisions["🏗️ Architectural Decisions"]
+    ArchitecturalDecisions --> TriggerCreative["🎨 Trigger CREATIVE Phase"]
+    TriggerCreative --> IntegrateDesign["🔗 Integrate Design Decisions"]
+    IntegrateDesign --> DetailedPlan["📋 Create Detailed Plan"]
+    DetailedPlan --> ToImplement["➡️ To IMPLEMENT"]
+
+    style L3Start fill:#ff5555,stroke:#cc0000,color:white
+    style TriggerCreative fill:#ff69b4,stroke:#e91e63,color:white
+    style ToImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+**Planning Output**: Comprehensive plan + creative phase documentation
+
+### Level 4: Complex System Planning
+```mermaid
+graph TD
+    L4Start["Level 4 Planning"] --> SystemAnalysis["🔬 System Analysis"]
+    SystemAnalysis --> MultiPhaseDesign["🎨 Multi-Phase Creative Design"]
+    MultiPhaseDesign --> ArchitecturalPlan["🏗️ Architectural Planning"]
+    ArchitecturalPlan --> PhasedImplementation["📋 Phased Implementation Plan"]
+    PhasedImplementation --> ToImplement["➡️ To IMPLEMENT"]
+
+    style L4Start fill:#d971ff,stroke:#a33bc2,color:white
+    style MultiPhaseDesign fill:#ff69b4,stroke:#e91e63,color:white
+    style ToImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+**Planning Output**: Architectural documentation + phased implementation strategy
+
+## CREATIVE PHASE INTEGRATION
+
+### Creative Phase Triggers:
+- **Level 3+**: Automatic creative phase activation
+- **Complex UI/UX**: User interface design decisions
+- **Architecture Changes**: System design decisions
+- **Integration Challenges**: Component interaction design
+
+### Creative Phase Coordination:
+```mermaid
+graph TD
+    PlanComplete["Planning Complete"] --> NeedsCreative{"Requires Creative<br>Phase?"}
+    NeedsCreative -->|"Yes"| SetupCreative["🎨 Setup Creative Phase"]
+    NeedsCreative -->|"No"| DirectImplement["➡️ Direct to IMPLEMENT"]
+
+    SetupCreative --> CreateCreativeDoc["📄 Create creative-[feature].md"]
+    CreateCreativeDoc --> TriggerCreativeMode["🎨 Trigger CREATIVE Mode"]
+    TriggerCreativeMode --> WaitForDesign["⏳ Wait for Design Decisions"]
+    WaitForDesign --> IntegrateDecisions["🔗 Integrate Design into Plan"]
+    IntegrateDecisions --> FinalPlan["📋 Finalize Implementation Plan"]
+    FinalPlan --> ToImplement["➡️ To IMPLEMENT"]
+
+    style NeedsCreative fill:#ffa64d,stroke:#cc7a30,color:white
+    style TriggerCreativeMode fill:#ff69b4,stroke:#e91e63,color:white
+    style ToImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+## MEMORY BANK INTEGRATION
+
+### Core File Updates:
+1. **tasks.md**: Update with planning status and implementation approach
+2. **activeContext.md**: Set context for implementation phase
+3. **progress.md**: Record planning completion and next steps
+4. **implementation-plan.md**: Create detailed implementation guide
+
+### Planning Documentation Structure:
+```
+memory-bank/
+├── tasks.md (updated with plan status)
+├── implementation-plan.md (detailed plan)
+├── creative/ (if creative phase triggered)
+│   └── creative-[feature-name].md
+└── phase-plans/ (for Level 4 tasks)
+    ├── phase-1-plan.md
+    ├── phase-2-plan.md
+    └── phase-3-plan.md
+```
+
+## MODE TRANSITION LOGIC
+
+### Next Mode Determination:
+```mermaid
+graph TD
+    PlanComplete["Planning Complete"] --> HasCreative{"Creative Phase<br>Required?"}
+    HasCreative -->|"Yes"| ToCreative["➡️ To CREATIVE Mode"]
+    HasCreative -->|"No"| ToImplement["➡️ To IMPLEMENT Mode"]
+
+    ToCreative --> CreativeComplete["Creative Phase Complete"]
+    CreativeComplete --> ToImplement
+
+    ToImplement --> UpdateContext["📝 Update activeContext.md"]
+    UpdateContext --> ReadyForBuild["✅ Ready for Implementation"]
+
+    style PlanComplete fill:#4da6ff,stroke:#0066cc,color:white
+    style HasCreative fill:#ffa64d,stroke:#cc7a30,color:white
+    style ToCreative fill:#ff69b4,stroke:#e91e63,color:white
+    style ToImplement fill:#ff5555,stroke:#cc0000,color:white
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ PLAN MODE INTEGRATION CHECKLIST
+- Task requirements analyzed thoroughly? [YES/NO]
+- Complexity level determined correctly? [YES/NO]
+- Appropriate planning depth applied? [YES/NO]
+- Creative phase triggered if needed? [YES/NO/NA]
+- Implementation plan created? [YES/NO]
+- Dependencies identified and documented? [YES/NO]
+- Resource requirements assessed? [YES/NO]
+- tasks.md updated with plan status? [YES/NO]
+- Next mode transition prepared? [YES/NO]
+
+→ If all YES: Planning complete, ready for next mode
+→ If any NO: Complete missing planning elements
+```
+
+## PLANNING TEMPLATES
+
+### Level 1 Planning Template:
+```markdown
+## Bug Fix Plan
+- **Issue**: [Description of bug]
+- **Location**: [File/function affected]
+- **Root Cause**: [Identified cause]
+- **Fix Approach**: [How to fix]
+- **Testing**: [How to verify fix]
+- **Estimated Time**: [Time estimate]
+```
+
+### Level 2 Planning Template:
+```markdown
+## Enhancement Plan
+- **Feature**: [Enhancement description]
+- **Components**: [List of components to modify]
+- **Implementation Sequence**: [Order of implementation]
+- **Dependencies**: [Required dependencies]
+- **Testing Strategy**: [How to test]
+- **Estimated Time**: [Time estimate]
+```
+
+### Level 3+ Planning Template:
+```markdown
+## Feature Implementation Plan
+- **Feature Overview**: [Comprehensive description]
+- **Architectural Decisions**: [Key design decisions]
+- **Implementation Phases**: [Breakdown of phases]
+- **Creative Phase Results**: [Design decisions made]
+- **Component Integration**: [How components work together]
+- **Testing Strategy**: [Comprehensive testing approach]
+- **Risk Assessment**: [Potential risks and mitigations]
+- **Timeline**: [Detailed timeline with milestones]
+```
+
+## ERROR HANDLING
+
+### Common Planning Issues:
+1. **Unclear Requirements**: Request clarification before proceeding
+2. **Scope Creep**: Identify and document scope boundaries
+3. **Missing Dependencies**: Research and document all dependencies
+4. **Complexity Underestimation**: Re-assess and adjust planning approach
+
+### Recovery Procedures:
+- Validate requirements with stakeholders
+- Break down complex tasks into manageable components
+- Document assumptions and constraints
+- Provide multiple implementation options when uncertain
+
+This integration ensures PLAN mode provides appropriate planning depth based on task complexity while seamlessly coordinating with creative phases and preparing for smooth transition to implementation.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/qa-mode-integration.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# QA MODE INTEGRATION WITH MEMORY BANK
+
+> **TL;DR:** Seamless integration of QA mode with Memory Bank phases, providing automated quality assessment and threshold-based status determination.
+
+## 🔄 QA MODE WORKFLOW INTEGRATION
+
+```mermaid
+graph TD
+    Start["Memory Bank Phase"] --> QACheck{"QA Mode<br>Triggered?"}
+    QACheck -->|"Yes"| Analyze["Analyze Current State"]
+    QACheck -->|"No"| Continue["Continue Phase"]
+
+    Analyze --> TestRun["Run Tests"]
+    TestRun --> PatternAnalysis["Pattern Analysis"]
+    PatternAnalysis --> ThresholdCheck["Threshold Check"]
+
+    ThresholdCheck --> Critical{"Critical<br>Issues?<br>>20%"}
+    ThresholdCheck --> Warning{"Warning<br>Issues?<br>5-20%"}
+    ThresholdCheck --> Good{"Good<br>Status?<br><5%"}
+
+    Critical -->|"Yes"| CriticalAction["🔴 CRITICAL STATUS<br>- Block progression<br>- Require fixes<br>- Document issues"]
+    Warning -->|"Yes"| WarningAction["🟡 WARNING STATUS<br>- Allow progression<br>- Flag concerns<br>- Monitor closely"]
+    Good -->|"Yes"| GoodAction["🟢 GOOD STATUS<br>- Continue normally<br>- Document success<br>- Archive results"]
+
+    CriticalAction --> UpdateMemory["Update Memory Bank"]
+    WarningAction --> UpdateMemory
+    GoodAction --> UpdateMemory
+
+    UpdateMemory --> NextPhase["Next Phase"]
+    Continue --> NextPhase
+```
+
+## 📋 QA INTEGRATION RULES
+
+### Rule #54: Automatic QA Triggering
+- **When**: Completing any Memory Bank phase
+- **What**: Automatically trigger QA assessment
+- **Purpose**: Ensure quality gates before phase transitions
+
+### Rule #55: Threshold-Based Status System
+- **When**: QA analysis complete
+- **What**: Apply threshold-based status determination
+- **Purpose**: Consistent quality assessment across all phases
+
+### Rule #56: Memory Bank State Integration
+- **When**: QA status determined
+- **What**: Update Memory Bank with QA results
+- **Purpose**: Maintain quality history and inform future decisions
+
+## 🎯 QA THRESHOLD SYSTEM
+
+### Critical Threshold (>20%)
+**Triggers**:
+- Test failure rate >20%
+- Pattern analysis shows systemic issues
+- Critical bugs detected
+
+**Actions**:
+```bash
+# Block phase progression
+echo "QA Status: CRITICAL - Phase progression blocked" >> memory-bank/qa-status.log
+echo "Issues detected: $CRITICAL_ISSUES" >> memory-bank/qa-status.log
+echo "Required actions: Fix critical issues before proceeding" >> memory-bank/qa-status.log
+
+# Update tasks.md with critical status
+sed -i 's/Status: .*/Status: ❌ CRITICAL - QA Issues Detected/' tasks.md
+```
+
+### Warning Threshold (5-20%)
+**Triggers**:
+- Test failure rate 5-20%
+- Minor pattern issues detected
+- Non-critical concerns identified
+
+**Actions**:
+```bash
+# Allow progression with warnings
+echo "QA Status: WARNING - Proceed with caution" >> memory-bank/qa-status.log
+echo "Issues detected: $WARNING_ISSUES" >> memory-bank/qa-status.log
+echo "Recommended actions: Monitor and address when possible" >> memory-bank/qa-status.log
+
+# Update tasks.md with warning status
+sed -i 's/Status: .*/Status: ⚠️ WARNING - QA Concerns/' tasks.md
+```
+
+### Good Threshold (<5%)
+**Triggers**:
+- Test failure rate <5%
+- No significant patterns detected
+- All quality checks passed
+
+**Actions**:
+```bash
+# Normal progression
+echo "QA Status: GOOD - All quality checks passed" >> memory-bank/qa-status.log
+echo "Test success rate: $SUCCESS_RATE%" >> memory-bank/qa-status.log
+echo "Ready for next phase" >> memory-bank/qa-status.log
+
+# Update tasks.md with good status
+sed -i 's/Status: .*/Status: ✅ GOOD - QA Passed/' tasks.md
+```
+
+## 🔍 QA ANALYSIS INTEGRATION
+
+### Test Analysis Integration
+```bash
+#!/bin/bash
+# qa-memory-bank-integration.sh
+
+# Get current Memory Bank phase
+CURRENT_PHASE=$(grep "Current Phase:" tasks.md | cut -d':' -f2 | xargs)
+echo "QA Analysis for Phase: $CURRENT_PHASE" >> memory-bank/qa-status.log
+
+# Run comprehensive test analysis
+bun test --reporter=verbose > test_output.log 2>&1
+TEST_EXIT_CODE=$?
+
+# Extract test metrics
+TOTAL_TESTS=$(grep -c "✓\|✗" test_output.log)
+FAILED_TESTS=$(grep -c "✗" test_output.log)
+SUCCESS_RATE=$(echo "scale=1; ($TOTAL_TESTS - $FAILED_TESTS) * 100 / $TOTAL_TESTS" | bc)
+FAILURE_RATE=$(echo "scale=1; $FAILED_TESTS * 100 / $TOTAL_TESTS" | bc)
+
+echo "Test Metrics:" >> memory-bank/qa-status.log
+echo "- Total Tests: $TOTAL_TESTS" >> memory-bank/qa-status.log
+echo "- Failed Tests: $FAILED_TESTS" >> memory-bank/qa-status.log
+echo "- Success Rate: $SUCCESS_RATE%" >> memory-bank/qa-status.log
+echo "- Failure Rate: $FAILURE_RATE%" >> memory-bank/qa-status.log
+
+# Run pattern analysis if failures detected
+if [ $FAILED_TESTS -gt 0 ]; then
+    echo "Running pattern analysis..." >> memory-bank/qa-status.log
+    bash .cursor/rules/isolation_rules/CustomWorkflow/testing/test-failure-pattern-analysis.sh
+fi
+
+# Determine QA status based on thresholds
+if [ $(echo "$FAILURE_RATE > 20" | bc) -eq 1 ]; then
+    QA_STATUS="CRITICAL"
+    QA_EMOJI="🔴"
+    QA_ACTION="BLOCK"
+elif [ $(echo "$FAILURE_RATE > 5" | bc) -eq 1 ]; then
+    QA_STATUS="WARNING"
+    QA_EMOJI="🟡"
+    QA_ACTION="PROCEED_WITH_CAUTION"
+else
+    QA_STATUS="GOOD"
+    QA_EMOJI="🟢"
+    QA_ACTION="CONTINUE"
+fi
+
+echo "" >> memory-bank/qa-status.log
+echo "QA DETERMINATION:" >> memory-bank/qa-status.log
+echo "Status: $QA_EMOJI $QA_STATUS" >> memory-bank/qa-status.log
+echo "Action: $QA_ACTION" >> memory-bank/qa-status.log
+echo "Timestamp: $(date)" >> memory-bank/qa-status.log
+
+# Update Memory Bank with QA results
+echo "" >> memory-bank/qa-status.log
+echo "MEMORY BANK INTEGRATION:" >> memory-bank/qa-status.log
+echo "Phase: $CURRENT_PHASE" >> memory-bank/qa-status.log
+echo "QA Status: $QA_STATUS" >> memory-bank/qa-status.log
+echo "Next Action: $QA_ACTION" >> memory-bank/qa-status.log
+
+# Archive QA results to appropriate Memory Bank directory
+QA_ARCHIVE_DIR="memory-bank/development/qa-results"
+mkdir -p "$QA_ARCHIVE_DIR"
+cp memory-bank/qa-status.log "$QA_ARCHIVE_DIR/qa-$(date +%Y%m%d-%H%M%S).log"
+
+echo "QA analysis complete. Status: $QA_STATUS"
+exit $TEST_EXIT_CODE
+```
+
+## 📊 MEMORY BANK QA DASHBOARD
+
+### QA Status Tracking
+```bash
+# Generate QA status summary for Memory Bank
+echo "=== MEMORY BANK QA DASHBOARD ===" > memory-bank/qa-dashboard.md
+echo "Generated: $(date)" >> memory-bank/qa-dashboard.md
+echo "" >> memory-bank/qa-dashboard.md
+
+# Current status
+CURRENT_STATUS=$(tail -1 memory-bank/qa-status.log | grep "Status:" | cut -d':' -f2 | xargs)
+echo "## Current QA Status: $CURRENT_STATUS" >> memory-bank/qa-dashboard.md
+
+# Recent QA history
+echo "" >> memory-bank/qa-dashboard.md
+echo "## Recent QA History:" >> memory-bank/qa-dashboard.md
+ls -t memory-bank/development/qa-results/ | head -5 | while read file; do
+    STATUS=$(grep "Status:" "memory-bank/development/qa-results/$file" | tail -1 | cut -d':' -f2 | xargs)
+    TIMESTAMP=$(grep "Timestamp:" "memory-bank/development/qa-results/$file" | cut -d':' -f2- | xargs)
+    echo "- $TIMESTAMP: $STATUS" >> memory-bank/qa-dashboard.md
+done
+
+# QA trends
+echo "" >> memory-bank/qa-dashboard.md
+echo "## QA Trends:" >> memory-bank/qa-dashboard.md
+CRITICAL_COUNT=$(grep -l "CRITICAL" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+WARNING_COUNT=$(grep -l "WARNING" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+GOOD_COUNT=$(grep -l "GOOD" memory-bank/development/qa-results/* 2>/dev/null | wc -l)
+
+echo "- Critical Issues: $CRITICAL_COUNT" >> memory-bank/qa-dashboard.md
+echo "- Warning Issues: $WARNING_COUNT" >> memory-bank/qa-dashboard.md
+echo "- Good Status: $GOOD_COUNT" >> memory-bank/qa-dashboard.md
+```
+
+## 🔄 PHASE TRANSITION INTEGRATION
+
+### Pre-Phase QA Check
+```bash
+# Before starting any Memory Bank phase
+echo "Pre-phase QA check for: $NEXT_PHASE" >> memory-bank/qa-status.log
+bash qa-memory-bank-integration.sh
+
+# Check if QA allows progression
+QA_ACTION=$(grep "Action:" memory-bank/qa-status.log | tail -1 | cut -d':' -f2 | xargs)
+
+if [ "$QA_ACTION" = "BLOCK" ]; then
+    echo "❌ QA BLOCK: Cannot proceed to $NEXT_PHASE due to critical issues"
+    echo "Please resolve critical issues before continuing"
+    exit 1
+elif [ "$QA_ACTION" = "PROCEED_WITH_CAUTION" ]; then
+    echo "⚠️ QA WARNING: Proceeding to $NEXT_PHASE with caution"
+    echo "Monitor for issues and address warnings when possible"
+else
+    echo "✅ QA GOOD: Proceeding to $NEXT_PHASE"
+fi
+```
+
+This QA integration ensures consistent quality assessment throughout all Memory Bank phases.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/reflect-archive-integration.mdc`
+
+```mdc
+---
+description: "REFLECT and ARCHIVE mode integration rules for Memory Bank workflow"
+globs: "**/reflect/**", "**/archive/**", "**/workflow/**"
+alwaysApply: false
+---
+
+# REFLECT & ARCHIVE MODE INTEGRATION
+
+> **TL;DR:** Integration rules for REFLECT and ARCHIVE modes within Memory Bank workflow system, ensuring comprehensive review, proper task migration, and seamless cycle transitions.
+
+```mermaid
+graph TD
+    Start["🤔 REFLECT MODE ACTIVATION"] --> ReviewImpl["🔍 Review Implementation"]
+    ReviewImpl --> DocSuccess["👍 Document Successes"]
+    DocSuccess --> DocChallenges["👎 Document Challenges"]
+    DocChallenges --> DocLessons["💡 Document Lessons Learned"]
+    DocLessons --> CreateReflection["📄 Create reflection.md"]
+    CreateReflection --> PromptArchive["💬 Prompt: 'ARCHIVE NOW'"]
+
+    PromptArchive --> ArchiveCommand{"User Types<br>'ARCHIVE NOW'?"}
+    ArchiveCommand -->|"Yes"| AnalyzeTasks["📊 Analyze All Tasks"]
+    ArchiveCommand -->|"No"| WaitForCommand["⏳ Wait for Command"]
+
+    AnalyzeTasks --> CategorizeStatus["📋 Categorize Task Status"]
+    CategorizeStatus --> UnfinishedCheck{"Unfinished<br>Tasks Exist?"}
+
+    UnfinishedCheck -->|"Yes"| CreateMigration["📝 Create migration.md"]
+    UnfinishedCheck -->|"No"| CreateArchive["📄 Create Archive Document"]
+
+    CreateMigration --> CreateArchive
+    CreateArchive --> UpdateTasks["📝 Update tasks.md"]
+    UpdateTasks --> SuggestVAN["➡️ Suggest VAN Mode"]
+
+    style Start fill:#4dbb5f,stroke:#36873f,color:white
+    style PromptArchive fill:#ffa64d,stroke:#cc7a30,color:white
+    style AnalyzeTasks fill:#4da6ff,stroke:#0066cc,color:white
+    style CreateMigration fill:#ff69b4,stroke:#e91e63,color:white
+    style SuggestVAN fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## REFLECT & ARCHIVE MODE RESPONSIBILITIES
+
+### REFLECT Mode Functions:
+1. **Implementation Review**: Comprehensive review of completed work
+2. **Success Documentation**: Document what worked well
+3. **Challenge Analysis**: Identify and document challenges faced
+4. **Lesson Extraction**: Extract actionable lessons learned
+5. **Process Improvement**: Identify process and technical improvements
+
+### ARCHIVE Mode Functions:
+1. **Task Analysis**: Analyze completion status of all tasks
+2. **Migration Creation**: Create migration.md for unfinished tasks
+3. **Archive Documentation**: Create comprehensive archive record
+4. **Context Preservation**: Preserve important context for future cycles
+5. **Cycle Transition**: Prepare for next development cycle
+
+## TASK CONTINUITY SYSTEM
+
+### Task Status Categories:
+- **✅ COMPLETED**: Fully implemented and tested
+- **🔄 IN_PROGRESS**: Currently being worked on
+- **📋 PLANNED**: Planned but not started
+- **⛔ BLOCKED**: Blocked by dependencies
+- **📦 MIGRATED**: Migrated from previous cycle
+
+### Migration Process:
+```mermaid
+graph TD
+    ArchiveStart["📦 ARCHIVE MODE"] --> AnalyzeAll["📊 Analyze All Tasks"]
+    AnalyzeAll --> Categorize["📋 Categorize by Status"]
+    Categorize --> FindUnfinished["🔍 Find Unfinished Tasks"]
+
+    FindUnfinished --> HasUnfinished{"Unfinished<br>Tasks Found?"}
+    HasUnfinished -->|"Yes"| DocumentUnfinished["📝 Document in migration.md"]
+    HasUnfinished -->|"No"| ArchiveOnly["📄 Archive Completed Only"]
+
+    DocumentUnfinished --> PreserveContext["🔄 Preserve Task Context"]
+    PreserveContext --> ArchiveCompleted["📄 Archive Completed Tasks"]
+    ArchiveCompleted --> UpdateStatus["📝 Update Task Status"]
+    ArchiveOnly --> UpdateStatus
+
+    UpdateStatus --> PrepareNext["🚀 Prepare for Next Cycle"]
+
+    style ArchiveStart fill:#4da6ff,stroke:#0066cc,color:white
+    style HasUnfinished fill:#ffa64d,stroke:#cc7a30,color:white
+    style DocumentUnfinished fill:#ff69b4,stroke:#e91e63,color:white
+    style PrepareNext fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## MEMORY BANK INTEGRATION
+
+### REFLECT Phase File Updates:
+1. **reflection.md**: Comprehensive reflection document
+2. **tasks.md**: Update with reflection status
+3. **progress.md**: Record reflection completion
+4. **activeContext.md**: Prepare for archiving
+
+### ARCHIVE Phase File Updates:
+1. **Archive Document**: Create in docs/archive/ directory
+2. **migration.md**: Create if unfinished tasks exist
+3. **tasks.md**: Update task statuses appropriately
+4. **activeContext.md**: Reset for next cycle
+
+### Archive Document Structure:
+```markdown
+# [Task Name] - Archive
+
+**Date**: [Archive Date]
+**Complexity Level**: [1-4]
+**Status**: COMPLETED
+
+## Implementation Summary
+[Summary of what was implemented]
+
+## Successes
+[What worked well]
+
+## Challenges
+[What was difficult]
+
+## Lessons Learned
+[Key insights for future]
+
+## Unfinished Tasks (if any)
+[Tasks migrated to migration.md]
+
+## Technical Context
+[Important technical details to preserve]
+```
+
+## MIGRATION DOCUMENT CREATION
+
+### Migration.md Template:
+```markdown
+# TASK MIGRATION SYSTEM
+
+## FROM CYCLE: [Previous Cycle ID]
+## TO CYCLE: [Current Cycle ID]
+## MIGRATION DATE: [Date]
+
+### 🔄 IN_PROGRESS TASKS
+- **Task ID**: [Task identifier]
+  - **Status**: IN_PROGRESS
+  - **Progress**: [Percentage or description]
+  - **Context**: [What was being worked on]
+  - **Next Steps**: [What needs to be done next]
+  - **Files Modified**: [List of files changed]
+
+### 📋 PLANNED TASKS
+- **Task ID**: [Task identifier]
+  - **Status**: PLANNED
+  - **Priority**: [High/Medium/Low]
+  - **Context**: [Why this task was planned]
+  - **Requirements**: [What needs to be done]
+
+### ⛔ BLOCKED TASKS
+- **Task ID**: [Task identifier]
+  - **Status**: BLOCKED
+  - **Blocking Issue**: [What is blocking this task]
+  - **Resolution Required**: [What needs to be resolved]
+```
+
+## MODE TRANSITION LOGIC
+
+### REFLECT to ARCHIVE Transition:
+```mermaid
+graph TD
+    ReflectComplete["Reflection Complete"] --> UserPrompt["💬 Prompt User:<br>'Type ARCHIVE NOW'"]
+    UserPrompt --> UserInput{"User Input?"}
+    UserInput -->|"ARCHIVE NOW"| StartArchive["📦 Start Archive Process"]
+    UserInput -->|"Other"| WaitMore["⏳ Continue Waiting"]
+
+    StartArchive --> VerifyReflection["✅ Verify reflection.md Exists"]
+    VerifyReflection --> ArchiveProcess["📄 Execute Archive Process"]
+    ArchiveProcess --> Complete["✅ Archive Complete"]
+
+    style ReflectComplete fill:#4dbb5f,stroke:#36873f,color:white
+    style UserPrompt fill:#ffa64d,stroke:#cc7a30,color:white
+    style StartArchive fill:#4da6ff,stroke:#0066cc,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### ARCHIVE to VAN Transition:
+```mermaid
+graph TD
+    ArchiveComplete["Archive Complete"] --> CheckMigration{"migration.md<br>Created?"}
+    CheckMigration -->|"Yes"| SuggestVANWithMigration["➡️ Suggest VAN Mode<br>(with migration processing)"]
+    CheckMigration -->|"No"| SuggestVANClean["➡️ Suggest VAN Mode<br>(clean start)"]
+
+    SuggestVANWithMigration --> NextCycle["🔄 Next Development Cycle"]
+    SuggestVANClean --> NextCycle
+
+    style ArchiveComplete fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMigration fill:#ffa64d,stroke:#cc7a30,color:white
+    style NextCycle fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## VERIFICATION CHECKLISTS
+
+### REFLECT Mode Checklist:
+```
+✓ REFLECT MODE CHECKLIST
+- Implementation thoroughly reviewed? [YES/NO]
+- Successes documented? [YES/NO]
+- Challenges documented? [YES/NO]
+- Lessons learned documented? [YES/NO]
+- Process improvements identified? [YES/NO]
+- reflection.md created? [YES/NO]
+- tasks.md updated with reflection status? [YES/NO]
+
+→ If all YES: Ready for ARCHIVE command
+→ If any NO: Complete missing reflection elements
+```
+
+### ARCHIVE Mode Checklist:
+```
+✓ ARCHIVE MODE CHECKLIST
+- All tasks analyzed and categorized? [YES/NO]
+- Unfinished tasks documented in migration.md? [YES/NO/NA]
+- Archive document created in docs/archive/? [YES/NO]
+- tasks.md updated with final statuses? [YES/NO]
+- activeContext.md reset for next cycle? [YES/NO]
+- Context preserved for continuation? [YES/NO]
+
+→ If all YES: Archive complete, ready for VAN mode
+→ If any NO: Complete missing archive elements
+```
+
+## ERROR HANDLING
+
+### Common Issues:
+1. **Incomplete Reflection**: Ensure all reflection elements are documented
+2. **Missing Task Context**: Preserve sufficient context for task continuation
+3. **Broken File References**: Update all file references in migration
+4. **Status Conflicts**: Resolve conflicting task status information
+
+### Recovery Procedures:
+- Validate all reflection documentation before archiving
+- Ensure migration.md contains sufficient context for task continuation
+- Verify all file references are correct and accessible
+- Maintain data integrity throughout the transition process
+
+## INTEGRATION EXAMPLES
+
+### Successful Reflection:
+```
+REFLECT Mode Activated
+🔍 Reviewing implementation of user authentication feature
+👍 Successes: Clean architecture, comprehensive testing
+👎 Challenges: Integration complexity, third-party API issues
+💡 Lessons: Better API documentation needed, more integration tests
+📄 reflection.md created with comprehensive review
+💬 Type 'ARCHIVE NOW' to proceed with archiving
+```
+
+### Archive with Migration:
+```
+ARCHIVE Mode Activated (triggered by 'ARCHIVE NOW')
+📊 Analyzing all tasks...
+✅ Found 3 completed tasks
+🔄 Found 2 in-progress tasks
+📋 Found 1 planned task
+📝 Creating migration.md with 3 unfinished tasks
+📄 Creating archive document in docs/archive/
+📝 Updating tasks.md with final statuses
+➡️ Suggesting VAN mode to process migration and start next cycle
+```
+
+### Clean Archive (No Migration):
+```
+ARCHIVE Mode Activated (triggered by 'ARCHIVE NOW')
+📊 Analyzing all tasks...
+✅ All tasks completed successfully
+📄 Creating archive document in docs/archive/
+📝 Updating tasks.md with completion status
+➡️ Suggesting VAN mode for next development cycle
+```
+
+This integration ensures comprehensive reflection and proper task continuity across development cycles, preventing task loss and maintaining development momentum.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/safe-mode-transitions.mdc`
+
+```mdc
+---
+description: "Safe mode transition rules for Memory Bank workflow protection"
+globs: "**/workflow/**", "**/mode-transitions/**", "**/safety/**"
+alwaysApply: true
+---
+
+# SAFE MODE TRANSITIONS
+
+> **TL;DR:** Comprehensive safety system for Memory Bank mode transitions, ensuring data preservation and workflow continuity through validation, migration, and recovery mechanisms.
+
+## 🛡️ SAFE TRANSITION OVERVIEW
+
+Safe Mode Transitions prevent data loss and workflow disruption by implementing comprehensive validation, backup, and migration procedures for all Memory Bank mode changes.
+
+### Core Safety Principles
+
+**Data Preservation**
+- Never lose unfinished work
+- Always create migration paths
+- Maintain task continuity
+- Preserve development context
+
+**Validation First**
+- Check readiness before transitions
+- Validate system integrity
+- Confirm user intentions
+- Verify prerequisites
+
+## 🔄 TRANSITION SAFETY MATRIX
+
+### VAN Mode Entry Safety
+
+**Safety Checks**
+```bash
+# Check for existing work
+if [ -f "memory-bank/tasks.md" ]; then
+  echo "🔍 Existing work detected"
+
+  # Check for migration document
+  if [ -f "memory-bank/migration.md" ]; then
+    echo "✅ Migration document found - processing"
+    process_migration
+  else
+    echo "⚠️ No migration found - creating safety backup"
+    create_safety_backup
+    warn_user_about_potential_loss
+  fi
+fi
+```
+
+**Safe Initialization**
+```bash
+van_safe_entry() {
+  # 1. System validation
+  validate_system_files
+
+  # 2. Backup current state
+  create_auto_backup "before-van-entry"
+
+  # 3. Process existing work
+  if [ -f "memory-bank/migration.md" ]; then
+    process_migration_document
+  elif [ -f "memory-bank/tasks.md" ]; then
+    offer_migration_creation
+  fi
+
+  # 4. Initialize VAN mode
+  initialize_van_mode
+}
+```
+
+### REFLECT Mode Entry Safety
+
+**Implementation Validation**
+```bash
+reflect_safety_check() {
+  # Check implementation completion
+  local completion=$(get_implementation_completion)
+
+  if [ "$completion" -lt 90 ]; then
+    echo "🚨 WARNING: Implementation only $completion% complete"
+    echo "Risk: Premature reflection may miss important details"
+
+    offer_options:
+    - "Continue implementation"
+    - "Create migration and proceed"
+    - "Force reflection (not recommended)"
+  fi
+
+  # Check critical tasks
+  local critical_incomplete=$(get_incomplete_critical_tasks)
+  if [ -n "$critical_incomplete" ]; then
+    echo "🚨 BLOCKED: Critical tasks incomplete"
+    echo "Must complete before reflection:"
+    echo "$critical_incomplete"
+    return 1
+  fi
+}
+```
+
+**Safe Reflection Entry**
+```bash
+reflect_safe_entry() {
+  # 1. Validate implementation status
+  reflect_safety_check || return 1
+
+  # 2. Create implementation backup
+  create_auto_backup "before-reflection"
+
+  # 3. Validate deliverables
+  validate_deliverables
+
+  # 4. Create migration for incomplete work
+  if has_incomplete_work; then
+    create_migration_document
+  fi
+
+  # 5. Initialize reflection mode
+  initialize_reflect_mode
+}
+```
+
+### ARCHIVE Mode Entry Safety
+
+**Reflection Validation**
+```bash
+archive_safety_check() {
+  # Check reflection completion
+  if [ ! -f "memory-bank/reflection/reflection-$(date +%Y-%m-%d).md" ]; then
+    echo "🚨 BLOCKED: Reflection not completed"
+    echo "Must complete reflection before archiving"
+    return 1
+  fi
+
+  # Validate reflection quality
+  local reflection_score=$(validate_reflection_quality)
+  if [ "$reflection_score" -lt 70 ]; then
+    echo "⚠️ WARNING: Reflection quality score: $reflection_score%"
+    echo "Consider improving reflection before archiving"
+  fi
+}
+```
+
+**Safe Archive Entry**
+```bash
+archive_safe_entry() {
+  # 1. Validate reflection completion
+  archive_safety_check || return 1
+
+  # 2. Create final backup
+  create_auto_backup "before-archive"
+
+  # 3. Validate system documentation
+  validate_system_documentation
+
+  # 4. Create final migration
+  create_final_migration
+
+  # 5. Initialize archive mode
+  initialize_archive_mode
+}
+```
+
+## 🚨 SAFETY VALIDATION RULES
+
+### Pre-Transition Validation
+
+**System Integrity Check**
+```bash
+validate_system_integrity() {
+  local errors=0
+
+  # Check critical files
+  [ -f "memory-bank/system/current-date.txt" ] || { echo "❌ Missing: current-date.txt"; ((errors++)); }
+  [ -f "memory-bank/system/interaction-mode.txt" ] || { echo "❌ Missing: interaction-mode.txt"; ((errors++)); }
+  [ -f "memory-bank/config/system.yaml" ] || { echo "❌ Missing: system.yaml"; ((errors++)); }
+
+  # Check file permissions
+  [ -r "memory-bank/tasks.md" ] || { echo "❌ Cannot read: tasks.md"; ((errors++)); }
+  [ -w "memory-bank/" ] || { echo "❌ Cannot write to memory-bank/"; ((errors++)); }
+
+  if [ $errors -gt 0 ]; then
+    echo "🚨 System integrity check failed: $errors errors"
+    return 1
+  fi
+
+  echo "✅ System integrity check passed"
+  return 0
+}
+```
+
+**Task Continuity Validation**
+```bash
+validate_task_continuity() {
+  local incomplete_tasks=$(get_incomplete_tasks)
+  local critical_tasks=$(get_incomplete_critical_tasks)
+
+  if [ -n "$critical_tasks" ]; then
+    echo "🚨 CRITICAL: Incomplete critical tasks detected"
+    echo "$critical_tasks"
+    return 1
+  fi
+
+  if [ -n "$incomplete_tasks" ]; then
+    echo "⚠️ WARNING: Incomplete tasks detected"
+    echo "$incomplete_tasks"
+    echo "Recommendation: Create migration document"
+    return 2  # Warning level
+  fi
+
+  echo "✅ Task continuity validation passed"
+  return 0
+}
+```
+
+### Migration Safety
+
+**Migration Creation Safety**
+```bash
+create_safe_migration() {
+  local migration_file="memory-bank/migration.md"
+
+  # Backup existing migration if present
+  if [ -f "$migration_file" ]; then
+    cp "$migration_file" "$migration_file.backup.$(date +%Y%m%d-%H%M%S)"
+  fi
+
+  # Create comprehensive migration
+  cat > "$migration_file" << EOF
+---
+migration:
+  date: "$(date +%Y-%m-%d)"
+  time: "$(date +%H:%M:%S)"
+  from_mode: "$CURRENT_MODE"
+  to_mode: "$TARGET_MODE"
+  safety_level: "COMPREHENSIVE"
+
+unfinished_tasks:
+$(get_unfinished_tasks_yaml)
+
+system_state:
+  git_branch: "$(git branch --show-current)"
+  git_commit: "$(git rev-parse HEAD)"
+  working_directory: "$(pwd)"
+  uncommitted_changes: $(git status --porcelain | wc -l)
+
+context_preservation:
+$(get_context_preservation_yaml)
+EOF
+
+  echo "✅ Safe migration created: $migration_file"
+}
+```
+
+**Migration Processing Safety**
+```bash
+process_migration_safely() {
+  local migration_file="memory-bank/migration.md"
+
+  # Validate migration format
+  if ! validate_migration_format "$migration_file"; then
+    echo "🚨 ERROR: Invalid migration format"
+    return 1
+  fi
+
+  # Create backup before processing
+  create_auto_backup "before-migration-processing"
+
+  # Process migration with error handling
+  if process_migration_document "$migration_file"; then
+    # Archive processed migration
+    mv "$migration_file" "memory-bank/archive/migration-processed-$(date +%Y%m%d-%H%M%S).md"
+    echo "✅ Migration processed successfully"
+  else
+    echo "🚨 ERROR: Migration processing failed"
+    echo "Backup available for recovery"
+    return 1
+  fi
+}
+```
+
+## 🔧 RECOVERY MECHANISMS
+
+### Transition Failure Recovery
+
+**Automatic Recovery**
+```bash
+recover_from_transition_failure() {
+  local failure_type="$1"
+
+  echo "🔄 Initiating automatic recovery from: $failure_type"
+
+  case "$failure_type" in
+    "validation_failure")
+      # Restore previous state
+      restore_from_backup "before-transition"
+      echo "✅ Restored to pre-transition state"
+      ;;
+    "migration_failure")
+      # Restore migration backup
+      restore_migration_backup
+      echo "✅ Migration backup restored"
+      ;;
+    "system_corruption")
+      # Full system recovery
+      initiate_system_recovery
+      echo "✅ System recovery initiated"
+      ;;
+    *)
+      echo "⚠️ Unknown failure type: $failure_type"
+      echo "Manual recovery may be required"
+      ;;
+  esac
+}
+```
+
+**Manual Recovery Options**
+```bash
+manual_recovery_menu() {
+  echo "🛠️ Manual Recovery Options:"
+  echo "[1] Restore from last backup"
+  echo "[2] Restore specific file"
+  echo "[3] Reset to clean state"
+  echo "[4] Emergency recovery"
+  echo "[5] Contact support"
+
+  read -p "Select option (1-5): " choice
+
+  case $choice in
+    1) restore_from_last_backup ;;
+    2) restore_specific_file ;;
+    3) reset_to_clean_state ;;
+    4) emergency_recovery ;;
+    5) show_support_info ;;
+    *) echo "Invalid option" ;;
+  esac
+}
+```
+
+### Emergency Procedures
+
+**Emergency Stop**
+```bash
+emergency_stop() {
+  echo "🚨 EMERGENCY STOP INITIATED"
+
+  # Immediate backup
+  create_emergency_backup
+
+  # Stop all operations
+  kill_background_processes
+
+  # Preserve current state
+  preserve_emergency_state
+
+  # Show recovery options
+  show_emergency_recovery_options
+}
+```
+
+**Emergency Recovery**
+```bash
+emergency_recovery() {
+  echo "🆘 EMERGENCY RECOVERY MODE"
+
+  # Check system state
+  assess_system_damage
+
+  # Identify recovery options
+  identify_recovery_paths
+
+  # Execute safest recovery
+  execute_emergency_recovery
+
+  # Validate recovery success
+  validate_recovery_success
+}
+```
+
+## 📊 SAFETY METRICS
+
+### Transition Safety Metrics
+
+**Success Rates**
+- Safe transitions: Target >99%
+- Data preservation: Target 100%
+- Recovery success: Target >95%
+- User satisfaction: Target >4.5/5
+
+**Performance Metrics**
+- Transition validation time: Target <30s
+- Migration creation time: Target <10s
+- Recovery time: Target <2 minutes
+- System availability: Target >99.9%
+
+### Safety Quality Indicators
+
+**EXCELLENT Safety (95-100%)**
+- All validations pass
+- Comprehensive backups
+- Successful migrations
+- Zero data loss
+
+**GOOD Safety (85-94%)**
+- Most validations pass
+- Regular backups
+- Mostly successful migrations
+- Minimal data loss
+
+**NEEDS IMPROVEMENT (<85%)**
+- Validation failures
+- Inconsistent backups
+- Migration issues
+- Data loss incidents
+
+This safe mode transition system ensures reliable and secure Memory Bank operations with comprehensive protection against data loss and workflow disruption.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/task-continuity.mdc`
+
+```mdc
+---
+description: "Task continuity management across Memory Bank mode transitions"
+globs: "**/workflow/**", "**/task-continuity/**", "**/mode-transitions/**"
+alwaysApply: true
+---
+
+# TASK CONTINUITY MANAGEMENT
+
+> **TL;DR:** This rule ensures 100% task preservation during Memory Bank mode transitions, preventing loss of unfinished work and maintaining development continuity.
+
+## 🔄 TASK CONTINUITY OVERVIEW
+
+The Task Continuity Management system prevents task loss during mode transitions by implementing automated migration, validation, and preservation mechanisms.
+
+### Core Principles
+
+**Zero Task Loss**
+- Never delete existing task data without user confirmation
+- Always preserve unfinished work context
+- Maintain task relationships and dependencies
+- Ensure seamless mode transitions
+
+**Automated Preservation**
+- Create migration documents for incomplete work
+- Validate task status before transitions
+- Merge unfinished tasks with new requirements
+- Maintain development context across sessions
+
+## 📊 TASK STATUS VALIDATION
+
+### Task Status Categories
+
+**✅ COMPLETE**
+- All requirements implemented
+- Testing completed successfully
+- Documentation updated
+- Ready for archiving
+
+**🔄 IN_PROGRESS**
+- Active development underway
+- Partial implementation exists
+- Work context preserved
+- Requires migration for transitions
+
+**📋 PLANNED**
+- Requirements defined
+- Implementation plan ready
+- No code changes yet
+- Requires migration for transitions
+
+**⛔ BLOCKED**
+- Waiting for external dependencies
+- Cannot proceed with current resources
+- Context must be preserved
+- Requires migration for transitions
+
+**⏸️ ON_HOLD**
+- Temporarily suspended
+- May resume later
+- Low priority preservation
+- Requires migration for transitions
+
+## 🔄 MIGRATION SYSTEM INTEGRATION
+
+### Migration Document Structure
+
+```yaml
+# migration.md Template
+migration:
+  date: "$(date +%Y-%m-%d)"
+  from_mode: "IMPLEMENT"
+  to_mode: "REFLECT"
+
+  unfinished_tasks:
+    - id: "TASK-ID-$(date +%Y-%m-%d)"
+      status: "IN_PROGRESS"
+      priority: "CRITICAL"
+      completion: "75%"
+      next_steps:
+        - "Complete Phase 3: Implementation"
+        - "Implement Phase 4: Testing"
+      context:
+        - "Working on system integration"
+        - "Database schema completed"
+
+  completed_tasks:
+    - id: "COMPLETED-TASK-$(date +%Y-%m-%d)"
+      status: "COMPLETED"
+      archived: true
+
+  context_preservation:
+    active_branch: "implement-feature-$(date +%Y-%m-%d)"
+    working_directory: "/path/to/project"
+    key_files:
+      - "memory-bank/tasks.md"
+      - "memory-bank/progress.md"
+```
+
+### Migration Processing Steps
+
+1. **Read Current State** - Analyze current tasks.md
+2. **Categorize Tasks** - Sort by status and priority
+3. **Preserve Context** - Save implementation details
+4. **Create Migration** - Generate migration.md
+5. **Backup Current** - Archive current state
+6. **Prepare Next** - Set up for next cycle
+
+## 🚦 SAFE MODE TRANSITIONS
+
+### VAN Mode Safe Initialization
+
+```mermaid
+graph TD
+    VanStart["🚀 VAN Mode Start"] --> CheckMigration{"📄 migration.md exists?"}
+    CheckMigration -->|"Yes"| ProcessMigration["🔄 Process Migration"]
+    CheckMigration -->|"No"| CheckTasks{"📋 tasks.md exists?"}
+
+    ProcessMigration --> MergeTasks["🔗 Merge Unfinished Tasks"]
+    CheckTasks -->|"Yes"| WarnUser["⚠️ Warn About Potential Loss"]
+    CheckTasks -->|"No"| InitializeNew["✨ Initialize New Tasks"]
+
+    WarnUser --> UserChoice{"👤 User Choice"}
+    UserChoice -->|"Create Migration"| CreateMigration["📝 Create Migration"]
+    UserChoice -->|"Proceed Anyway"| ArchiveExisting["📦 Archive Existing"]
+
+    CreateMigration --> MergeTasks
+    ArchiveExisting --> InitializeNew
+    MergeTasks --> InitializeNew
+    InitializeNew --> Complete["✅ VAN Mode Ready"]
+
+    style VanStart fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMigration fill:#d94dbb,stroke:#a3378a,color:white
+    style ProcessMigration fill:#4dbb5f,stroke:#36873f,color:white
+    style WarnUser fill:#ffa64d,stroke:#cc7a30,color:white
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### REFLECT Mode Safe Transition
+
+**Entry Requirements:**
+- Implementation must be complete
+- All critical subtasks finished
+- Deliverables ready for review
+
+**Validation Process:**
+1. Calculate overall implementation completion
+2. Check critical task status
+3. Verify deliverable readiness
+4. If incomplete: Block transition and show warnings
+5. If complete: Allow transition to REFLECT
+
+### ARCHIVE Mode Safe Transition
+
+**Entry Requirements:**
+- Reflection must be complete
+- All deliverables documented
+- Lessons learned captured
+- System documentation updated
+
+**Validation Process:**
+1. Verify reflection.md exists and is complete
+2. Check all deliverables are documented
+3. Validate system documentation updates
+4. If incomplete: Block transition and show warnings
+5. If complete: Create final migration and allow archiving
+
+## 📋 TASK PRESERVATION RULES
+
+### Preservation Priority Matrix
+
+**🔴 CRITICAL** (System blocking)
+- Full context preservation
+- Complete task details, subtasks, dependencies, timeline
+
+**🟡 HIGH** (Feature blocking)
+- Core context preservation
+- Task description, status, next steps, key dependencies
+
+**🟢 MEDIUM** (Enhancement)
+- Basic info preservation
+- Task name, status, priority
+
+**⚪ LOW** (Nice to have)
+- Log only
+- Task ID, completion date
+
+### Automatic Task Addition Rules
+
+- **Never Replace**: Always append new tasks, never overwrite existing tasks.md
+- **Merge Strategy**: Combine new tasks with migrated tasks, maintain priority ordering
+- **Conflict Resolution**: Handle duplicate IDs, priority conflicts, dependency conflicts
+
+## 🚨 WARNING SYSTEM
+
+### Warning Types
+
+**🚨 TASK LOSS WARNING**
+- Triggered when unfinished tasks will be lost without migration
+- Shows list of affected tasks
+- Offers migration creation option
+
+**⚠️ INCOMPLETE WARNING**
+- Triggered when implementation is not complete for reflection
+- Shows completion percentage
+- Blocks unsafe transitions
+
+**🔗 DEPENDENCY WARNING**
+- Triggered when dependent tasks may be affected
+- Shows dependency chain
+- Recommends completion order
+
+**💾 DATA LOSS WARNING**
+- Triggered when unsaved progress may be lost
+- Shows affected files
+- Requires user confirmation
+
+### Warning Message Format
+
+```
+╔═══════════════════════════════════════════════════════════════╗
+║                    🚨 VALIDATION WARNING                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: INCOMPLETE WORK                                         ║
+║ Severity: WARNING                                             ║
+║ Mode Transition: IMPLEMENT → REFLECT                         ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issues Found:                                                 ║
+║ • Task TASK-CONTINUITY-FIX-$(date +%Y-%m-%d): 75% complete   ║
+║ • Task CREATIVE-ARCHIVE-SYSTEM-$(date +%Y-%m-%d): 25% complete║
+║                                                               ║
+║ Recommendation:                                               ║
+║ Create migration.md to preserve work context                  ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Options:                                                      ║
+║ [1] Create Migration (Recommended)                            ║
+║ [2] Continue Implementation                                   ║
+║ [3] Force Transition (NOT RECOMMENDED)                       ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+## 🔧 INTEGRATION POINTS
+
+### File System Integration
+
+**tasks.md**
+- Never delete existing content
+- Always append new tasks
+- Preserve task metadata
+- Maintain formatting
+
+**migration.md**
+- Auto-create when needed
+- Standard YAML format
+- Complete context preservation
+- Version tracking
+
+**progress.md**
+- Continuous updates
+- Status tracking
+- Milestone preservation
+- Performance metrics
+
+### Mode Integration
+
+**VAN Mode**
+- Check migration.md on start
+- Process unfinished tasks
+- Preserve user context
+- Safe initialization
+
+**REFLECT Mode**
+- Validate implementation status
+- Check task completion
+- Create migration if needed
+- Block unsafe transitions
+
+**ARCHIVE Mode**
+- Verify reflection completion
+- Create final migration
+- Preserve for next cycle
+- Clean transition
+
+This task continuity system ensures 100% preservation of development work across all Memory Bank mode transitions.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/task-preservation-rules.mdc`
+
+```mdc
+---
+description: "Task preservation rules for Memory Bank workflow continuity"
+globs: "**/workflow/**", "**/task-preservation/**", "**/continuity/**"
+alwaysApply: true
+---
+
+# TASK PRESERVATION RULES
+
+> **TL;DR:** Comprehensive task preservation system ensuring 100% task continuity across Memory Bank mode transitions through automated migration, validation, and recovery mechanisms.
+
+## 🛡️ TASK PRESERVATION OVERVIEW
+
+Task Preservation Rules ensure that no work is ever lost during Memory Bank operations by implementing comprehensive preservation, migration, and recovery strategies for all task data.
+
+### Core Preservation Principles
+
+**Zero Loss Policy**
+- Never delete task data without explicit user confirmation
+- Always create migration paths for unfinished work
+- Maintain complete task history and context
+- Preserve task relationships and dependencies
+
+**Automated Protection**
+- Automatic task backup before critical operations
+- Real-time task state monitoring
+- Intelligent migration creation
+- Proactive data preservation
+
+## 📋 TASK PRESERVATION STRATEGIES
+
+### 1. Automatic Task Migration
+
+**Pre-Transition Migration**
+```bash
+create_task_migration() {
+  local current_date=$(date +%Y-%m-%d)
+  local migration_file="memory-bank/migration.md"
+
+  # Extract unfinished tasks
+  local unfinished_tasks=$(grep -A 20 "status: IN_PROGRESS\|status: PLANNED\|status: BLOCKED" memory-bank/tasks.md)
+
+  if [ -n "$unfinished_tasks" ]; then
+    cat > "$migration_file" << EOF
+---
+migration:
+  date: "$current_date"
+  type: "TASK_PRESERVATION"
+  source_mode: "$CURRENT_MODE"
+  target_mode: "$TARGET_MODE"
+
+unfinished_tasks:
+$unfinished_tasks
+
+preservation_context:
+  total_tasks: $(grep -c "^- id:" memory-bank/tasks.md)
+  unfinished_count: $(echo "$unfinished_tasks" | grep -c "^- id:")
+  critical_unfinished: $(echo "$unfinished_tasks" | grep -c "priority: CRITICAL")
+
+task_relationships:
+$(extract_task_dependencies)
+EOF
+    echo "✅ Task migration created: $migration_file"
+  fi
+}
+```
+
+### 2. Task State Monitoring
+
+**Real-Time Task Tracking**
+```bash
+monitor_task_changes() {
+  local tasks_file="memory-bank/tasks.md"
+  local last_hash=""
+
+  while true; do
+    local current_hash=$(md5sum "$tasks_file" 2>/dev/null | cut -d' ' -f1)
+
+    if [ "$current_hash" != "$last_hash" ] && [ -n "$last_hash" ]; then
+      echo "📝 Task changes detected - creating backup"
+      create_task_backup
+      validate_task_integrity
+    fi
+
+    last_hash="$current_hash"
+    sleep 30  # Check every 30 seconds
+  done
+}
+```
+
+### 3. Task Backup System
+
+**Incremental Task Backups**
+```bash
+create_task_backup() {
+  local backup_dir="memory-bank/backup/tasks"
+  local timestamp=$(date +%Y%m%d-%H%M%S)
+
+  mkdir -p "$backup_dir"
+
+  # Create timestamped backup
+  cp "memory-bank/tasks.md" "$backup_dir/tasks-$timestamp.md"
+
+  # Create daily backup if not exists
+  local daily_backup="$backup_dir/tasks-$(date +%Y-%m-%d).md"
+  [ ! -f "$daily_backup" ] && cp "memory-bank/tasks.md" "$daily_backup"
+
+  # Cleanup old backups (keep 30 days)
+  find "$backup_dir" -name "tasks-*.md" -mtime +30 -delete
+
+  echo "✅ Task backup created: tasks-$timestamp.md"
+}
+```
+
+## 🔍 TASK VALIDATION RULES
+
+### Task Integrity Validation
+
+**Task Structure Validation**
+```bash
+validate_task_integrity() {
+  local tasks_file="memory-bank/tasks.md"
+  local errors=0
+
+  # Check file exists and is readable
+  [ -f "$tasks_file" ] || { echo "❌ Tasks file missing"; return 1; }
+  [ -r "$tasks_file" ] || { echo "❌ Tasks file not readable"; return 1; }
+
+  # Validate task structure
+  while IFS= read -r line; do
+    if [[ "$line" =~ ^-\ id:\ (.+) ]]; then
+      local task_id="${BASH_REMATCH[1]}"
+
+      # Check required fields
+      if ! grep -A 10 "id: $task_id" "$tasks_file" | grep -q "status:"; then
+        echo "❌ Task $task_id missing status field"
+        ((errors++))
+      fi
+
+      if ! grep -A 10 "id: $task_id" "$tasks_file" | grep -q "priority:"; then
+        echo "❌ Task $task_id missing priority field"
+        ((errors++))
+      fi
+    fi
+  done < "$tasks_file"
+
+  if [ $errors -eq 0 ]; then
+    echo "✅ Task integrity validation passed"
+    return 0
+  else
+    echo "❌ Task integrity validation failed: $errors errors"
+    return 1
+  fi
+}
+```
+
+### Task Dependency Validation
+
+**Dependency Chain Validation**
+```bash
+validate_task_dependencies() {
+  local tasks_file="memory-bank/tasks.md"
+  local dependency_errors=0
+
+  # Extract all task IDs
+  local all_task_ids=$(grep "^- id:" "$tasks_file" | sed 's/^- id: //')
+
+  # Check each dependency reference
+  while IFS= read -r line; do
+    if [[ "$line" =~ depends_on:\ (.+) ]]; then
+      local dependency="${BASH_REMATCH[1]}"
+
+      if ! echo "$all_task_ids" | grep -q "^$dependency$"; then
+        echo "❌ Invalid dependency: $dependency (task not found)"
+        ((dependency_errors++))
+      fi
+    fi
+  done < "$tasks_file"
+
+  if [ $dependency_errors -eq 0 ]; then
+    echo "✅ Task dependency validation passed"
+    return 0
+  else
+    echo "❌ Task dependency validation failed: $dependency_errors errors"
+    return 1
+  fi
+}
+```
+
+## 🔄 TASK RECOVERY PROCEDURES
+
+### Task Recovery from Migration
+
+**Migration Processing**
+```bash
+process_task_migration() {
+  local migration_file="memory-bank/migration.md"
+  local tasks_file="memory-bank/tasks.md"
+
+  if [ ! -f "$migration_file" ]; then
+    echo "ℹ️ No migration file found"
+    return 0
+  fi
+
+  echo "🔄 Processing task migration..."
+
+  # Backup current tasks
+  create_task_backup
+
+  # Extract unfinished tasks from migration
+  local unfinished_tasks=$(sed -n '/^unfinished_tasks:/,/^[a-z_]*:/p' "$migration_file" | head -n -1 | tail -n +2)
+
+  if [ -n "$unfinished_tasks" ]; then
+    # Merge with existing tasks
+    echo "" >> "$tasks_file"
+    echo "# Migrated Tasks from $(date +%Y-%m-%d)" >> "$tasks_file"
+    echo "$unfinished_tasks" >> "$tasks_file"
+
+    echo "✅ Migrated tasks merged into $tasks_file"
+
+    # Archive processed migration
+    mv "$migration_file" "memory-bank/archive/migration-processed-$(date +%Y%m%d-%H%M%S).md"
+  else
+    echo "ℹ️ No unfinished tasks found in migration"
+  fi
+}
+```
+
+### Task Recovery from Backup
+
+**Selective Task Recovery**
+```bash
+recover_tasks_from_backup() {
+  local backup_date="$1"
+  local backup_file="memory-bank/backup/tasks/tasks-$backup_date.md"
+
+  if [ ! -f "$backup_file" ]; then
+    echo "❌ Backup file not found: $backup_file"
+    return 1
+  fi
+
+  echo "🔄 Recovering tasks from backup: $backup_date"
+
+  # Show backup info
+  local backup_task_count=$(grep -c "^- id:" "$backup_file")
+  echo "📊 Backup contains $backup_task_count tasks"
+
+  # Create safety backup of current state
+  create_task_backup
+
+  # Restore from backup
+  cp "$backup_file" "memory-bank/tasks.md"
+
+  echo "✅ Tasks recovered from backup: $backup_date"
+
+  # Validate recovered tasks
+  validate_task_integrity
+}
+```
+
+## 📊 TASK PRESERVATION METRICS
+
+### Preservation Effectiveness
+
+**Data Protection Metrics**
+- Task loss incidents: Target 0
+- Successful migrations: Target 100%
+- Recovery success rate: Target >99%
+- Data integrity maintained: Target 100%
+
+**Performance Metrics**
+- Migration creation time: Target <5 seconds
+- Task backup time: Target <2 seconds
+- Recovery time: Target <30 seconds
+- Validation time: Target <10 seconds
+
+### Quality Indicators
+
+**EXCELLENT Preservation (95-100%)**
+- Zero task loss incidents
+- All migrations successful
+- Complete data integrity
+- Fast recovery times
+
+**GOOD Preservation (85-94%)**
+- Minimal task loss
+- Most migrations successful
+- Good data integrity
+- Reasonable recovery times
+
+**NEEDS IMPROVEMENT (<85%)**
+- Task loss incidents
+- Migration failures
+- Data integrity issues
+- Slow recovery
+
+## 🛠️ TASK PRESERVATION TOOLS
+
+### Preservation Commands
+
+**Manual Backup**
+```bash
+# Create immediate task backup
+backup_tasks_now() {
+  create_task_backup
+  echo "✅ Manual task backup completed"
+}
+```
+
+**Migration Creation**
+```bash
+# Force migration creation
+create_migration_now() {
+  create_task_migration
+  echo "✅ Task migration created"
+}
+```
+
+**Recovery Tools**
+```bash
+# List available backups
+list_task_backups() {
+  echo "📋 Available task backups:"
+  ls -la memory-bank/backup/tasks/tasks-*.md | awk '{print $9, $5, $6, $7, $8}'
+}
+
+# Quick recovery
+quick_task_recovery() {
+  local latest_backup=$(ls -t memory-bank/backup/tasks/tasks-*.md | head -1)
+  echo "🔄 Recovering from latest backup: $(basename $latest_backup)"
+  cp "$latest_backup" "memory-bank/tasks.md"
+  validate_task_integrity
+}
+```
+
+This task preservation system ensures 100% task continuity across all Memory Bank operations with comprehensive backup, migration, and recovery capabilities.
+
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/task-status-validation.mdc`
+
+```mdc
+---
+description: Task status validation system for safe mode transitions
+globs: "**/workflow/**", "**/validation/**", "**/status*/**"
+alwaysApply: true
+---
+
+# TASK STATUS VALIDATION SYSTEM
+
+> **TL;DR:** This system validates task completion status before mode transitions, preventing data loss and ensuring safe development workflow continuity.
+
+## 🔍 VALIDATION OVERVIEW
+
+The Task Status Validation System analyzes current task state and determines whether it's safe to transition between Memory Bank modes. It prevents critical issues like:
+
+- Loss of unfinished implementation work
+- Premature archiving of incomplete tasks
+- Broken development workflow continuity
+- Missing deliverables in transitions
+
+## 📊 TASK STATUS CATEGORIES
+
+### Status Definitions
+
+**✅ COMPLETE**
+- All requirements implemented
+- Testing completed successfully
+- Documentation updated
+- Ready for archiving
+- **Safe for all transitions**
+
+**🔄 IN_PROGRESS**
+- Active development underway
+- Partial implementation exists
+- Work context preserved
+- **Requires migration for transitions**
+
+**📋 PLANNED**
+- Requirements defined
+- Implementation plan ready
+- No code changes yet
+- **Requires migration for transitions**
+
+**⛔ BLOCKED**
+- Waiting for external dependencies
+- Cannot proceed with current resources
+- Context must be preserved
+- **Requires migration for transitions**
+
+**⏸️ ON_HOLD**
+- Temporarily suspended
+- May resume later
+- Low priority preservation
+- **Requires migration for transitions**
+
+## 🔍 VALIDATION ALGORITHMS
+
+### Completion Percentage Calculation
+
+Tasks are evaluated across five dimensions with weighted importance:
+
+- **Requirements** (10%): Task definition and acceptance criteria
+- **Planning** (10%): Implementation strategy and approach
+- **Implementation** (60%): Core development work
+- **Testing** (15%): Verification and validation
+- **Documentation** (5%): Knowledge capture and transfer
+
+### Dependency Chain Analysis
+
+The system analyzes task dependencies to identify:
+
+- **Blocked By**: Tasks waiting for dependencies
+- **Blocking**: Tasks that depend on current task
+- **Critical Path**: Chain of dependent critical tasks
+
+### Critical Path Detection
+
+Identifies tasks that block system functionality:
+
+- **CRITICAL Priority**: System-blocking issues
+- **SYSTEM_BLOCKING Type**: Infrastructure dependencies
+- **High Impact**: Tasks affecting multiple components
+
+## 🚦 VALIDATION RULES BY MODE
+
+### VAN Mode Validation
+
+**Entry Requirements:**
+- No specific requirements (initialization mode)
+
+**Task Preservation Rules:**
+- Check for existing tasks.md
+- Validate migration.md if present
+- Never delete existing task data
+- Merge unfinished tasks from migration
+
+**Validation Process:**
+1. Check if migration.md exists
+2. If yes: Process migration and merge tasks
+3. If no: Check for existing tasks.md
+4. If existing tasks found: Warn user about potential loss
+5. Allow user to create migration or proceed with archiving
+
+### REFLECT Mode Validation
+
+**Entry Requirements:**
+- Implementation must be complete
+- All critical subtasks finished
+- Deliverables ready for review
+
+**Blocking Conditions:**
+- Any CRITICAL task with status IN_PROGRESS
+- Implementation completion < 90%
+- Missing required deliverables
+- Unresolved blocking dependencies
+
+**Validation Process:**
+1. Calculate overall implementation completion
+2. Check critical task status
+3. Verify deliverable readiness
+4. If incomplete: Block transition and show warnings
+5. If complete: Allow transition to REFLECT
+
+### ARCHIVE Mode Validation
+
+**Entry Requirements:**
+- Reflection must be complete
+- All deliverables documented
+- Lessons learned captured
+- System documentation updated
+
+**Blocking Conditions:**
+- Reflection not completed
+- Missing deliverable documentation
+- Unfinished documentation tasks
+- Critical issues unresolved
+
+**Validation Process:**
+1. Verify reflection.md exists and is complete
+2. Check all deliverables are documented
+3. Validate system documentation updates
+4. If incomplete: Block transition and show warnings
+5. If complete: Create final migration and allow archiving
+
+## ⚠️ WARNING SYSTEM INTEGRATION
+
+### Warning Types and Triggers
+
+**🚨 CRITICAL BLOCKING WARNING**
+- **Trigger**: Critical tasks incomplete
+- **Severity**: ERROR
+- **Action**: Block transition
+- **Message**: Lists critical tasks requiring completion
+
+**⚠️ INCOMPLETE WORK WARNING**
+- **Trigger**: Non-critical tasks incomplete
+- **Severity**: WARNING
+- **Action**: Require confirmation
+- **Message**: Shows unfinished tasks and options
+
+**🔗 DEPENDENCY WARNING**
+- **Trigger**: Dependent tasks affected
+- **Severity**: WARNING
+- **Action**: Show impact analysis
+- **Message**: Displays dependency chain impact
+
+### Warning Display Format
+
+```
+╔═══════════════════════════════════════════════════════════════╗
+║                    🚨 VALIDATION WARNING                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: INCOMPLETE WORK                                         ║
+║ Severity: WARNING                                             ║
+║ Mode Transition: IMPLEMENT → REFLECT                         ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issues Found:                                                 ║
+║ • Task TASK-CONTINUITY-FIX-2024-12-09: 75% complete          ║
+║ • Task CREATIVE-ARCHIVE-SYSTEM-2024-12-09: 25% complete      ║
+║                                                               ║
+║ Recommendation:                                               ║
+║ Create migration.md to preserve work context                  ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Options:                                                      ║
+║ [1] Create Migration (Recommended)                            ║
+║ [2] Continue Implementation                                   ║
+║ [3] Force Transition (NOT RECOMMENDED)                       ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+## 📋 VALIDATION CHECKLIST TEMPLATES
+
+### Pre-REFLECT Validation Checklist
+
+**Implementation**
+- [ ] All planned features implemented
+- [ ] Core functionality working
+- [ ] Critical bugs resolved
+- [ ] Code quality acceptable
+
+**Testing**
+- [ ] Unit tests passing
+- [ ] Integration tests complete
+- [ ] Performance acceptable
+- [ ] Edge cases handled
+
+**Documentation**
+- [ ] Implementation documented
+- [ ] API documentation updated
+- [ ] User documentation current
+- [ ] Technical decisions recorded
+
+**Deliverables**
+- [ ] All required files created
+- [ ] Configuration updated
+- [ ] Dependencies documented
+- [ ] Deployment ready
+
+### Pre-ARCHIVE Validation Checklist
+
+**Reflection**
+- [ ] reflection.md created
+- [ ] Lessons learned documented
+- [ ] Process improvements noted
+- [ ] Technical insights captured
+
+**Documentation**
+- [ ] Implementation fully documented
+- [ ] Architecture decisions recorded
+- [ ] Testing results documented
+- [ ] Performance metrics captured
+
+**System Updates**
+- [ ] System documentation updated
+- [ ] Configuration changes documented
+- [ ] Dependencies updated
+- [ ] Migration path documented
+
+**Knowledge Transfer**
+- [ ] Key insights documented
+- [ ] Future recommendations noted
+- [ ] Maintenance procedures documented
+- [ ] Support information updated
+
+## 🔧 INTEGRATION WITH MEMORY BANK MODES
+
+### File Integration Points
+
+**tasks.md Integration**
+- Read current task status
+- Parse completion percentages
+- Identify dependencies
+- Extract priority levels
+
+**progress.md Integration**
+- Track implementation progress
+- Monitor milestone completion
+- Measure performance metrics
+- Document status changes
+
+**migration.md Integration**
+- Create when validation fails
+- Preserve task context
+- Document incomplete work
+- Plan continuation strategy
+
+### Mode-Specific Integration
+
+**VAN Mode Integration**
+- Check for existing work before initialization
+- Process migration documents if present
+- Warn about potential task loss
+- Merge unfinished tasks safely
+
+**REFLECT Mode Integration**
+- Validate implementation completion before reflection
+- Check critical task status
+- Calculate overall completion percentage
+- Block unsafe transitions
+
+**ARCHIVE Mode Integration**
+- Validate reflection completion before archiving
+- Check deliverable readiness
+- Verify documentation completeness
+- Create final migration documents
+
+This validation system ensures safe transitions between all Memory Bank modes while preserving development work and maintaining workflow continuity.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/van-mode-integration.mdc`
+
+```mdc
+---
+description: "VAN mode integration rules for Memory Bank workflow"
+globs: "**/van/**", "**/VAN/**", "**/workflow/**"
+alwaysApply: false
+---
+
+# VAN MODE INTEGRATION
+
+> **TL;DR:** Integration rules for VAN (Validation and Navigation) mode within Memory Bank workflow system, ensuring seamless task continuity and proper mode transitions.
+
+```mermaid
+graph TD
+    Start["🚀 VAN MODE ACTIVATION"] --> CheckMigration["📦 Check migration.md<br>Exists?"]
+
+    CheckMigration -->|"Yes"| ProcessMigration["🔄 PROCESS MIGRATION<br>Integrate Unfinished Tasks"]
+    CheckMigration -->|"No"| StandardFlow["📋 STANDARD VAN FLOW"]
+
+    ProcessMigration --> AnalyzeTasks["📊 Analyze Migrated Tasks"]
+    AnalyzeTasks --> IntegrateTasks["🔗 Integrate into tasks.md"]
+    IntegrateTasks --> ArchiveMigration["📁 Archive migration.md"]
+    ArchiveMigration --> StandardFlow
+
+    StandardFlow --> LoadVanMap["🗺️ Load VAN Mode Map"]
+    LoadVanMap --> DetermineComplexity["🧩 Determine Complexity Level"]
+    DetermineComplexity --> LoadLevelRules["📚 Load Level-Specific Rules"]
+    LoadLevelRules --> ExecuteVan["⚡ Execute VAN Process"]
+
+    ExecuteVan --> UpdateMemoryBank["📝 Update Memory Bank"]
+    UpdateMemoryBank --> SuggestNext["✅ Suggest Next Mode"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style ProcessMigration fill:#ffa64d,stroke:#cc7a30,color:white
+    style StandardFlow fill:#4dbb5f,stroke:#36873f,color:white
+    style ExecuteVan fill:#d971ff,stroke:#a33bc2,color:white
+    style SuggestNext fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## VAN MODE RESPONSIBILITIES
+
+### Primary Functions:
+1. **Task Continuity Management**: Process migration.md and integrate unfinished tasks
+2. **Complexity Assessment**: Determine appropriate workflow level (1-4)
+3. **Context Initialization**: Set up Memory Bank context for new development cycle
+4. **Mode Transition**: Guide transition to appropriate next mode (PLAN/IMPLEMENT)
+
+### Integration Points:
+- **Memory Bank Files**: tasks.md, activeContext.md, progress.md
+- **Migration System**: migration.md processing and archival
+- **Rule System**: Level-specific workflow rules
+- **Mode Maps**: Visual process maps for workflow guidance
+
+## TASK CONTINUITY PROCESSING
+
+### Migration Detection:
+```mermaid
+graph TD
+    VanStart["VAN Mode Start"] --> CheckFile{"migration.md<br>exists?"}
+    CheckFile -->|"Yes"| ReadMigration["📖 Read migration.md"]
+    CheckFile -->|"No"| NormalFlow["➡️ Normal VAN Flow"]
+
+    ReadMigration --> ParseTasks["📋 Parse Unfinished Tasks"]
+    ParseTasks --> ValidateTasks["✅ Validate Task Data"]
+    ValidateTasks --> IntegrateNew["🔗 Integrate into tasks.md"]
+    IntegrateNew --> ArchiveOld["📁 Archive migration.md"]
+    ArchiveOld --> NormalFlow
+
+    style VanStart fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckFile fill:#ffa64d,stroke:#cc7a30,color:white
+    style ReadMigration fill:#80bfff,stroke:#4da6ff,color:black
+    style NormalFlow fill:#4dbb5f,stroke:#36873f,color:white
+```
+
+### Task Status Integration:
+- **🔄 IN_PROGRESS** → Continue with current status
+- **📋 PLANNED** → Maintain planning status
+- **⛔ BLOCKED** → Identify and address blockers
+- **📦 MIGRATED** → Mark as migrated from previous cycle
+
+## COMPLEXITY DETERMINATION
+
+### Level Assessment Criteria:
+```mermaid
+graph TD
+    Assess["🧩 COMPLEXITY ASSESSMENT"] --> CheckTasks["📊 Analyze Task Scope"]
+    CheckTasks --> Level1{"Quick Bug Fix?<br>Single file changes"}
+    CheckTasks --> Level2{"Simple Enhancement?<br>Limited scope"}
+    CheckTasks --> Level3{"Intermediate Feature?<br>Multiple components"}
+    CheckTasks --> Level4{"Complex System?<br>Architecture changes"}
+
+    Level1 -->|"Yes"| L1Rules["📚 Load Level 1 Rules"]
+    Level2 -->|"Yes"| L2Rules["📚 Load Level 2 Rules"]
+    Level3 -->|"Yes"| L3Rules["📚 Load Level 3 Rules"]
+    Level4 -->|"Yes"| L4Rules["📚 Load Level 4 Rules"]
+
+    L1Rules & L2Rules & L3Rules & L4Rules --> Proceed["➡️ Proceed with VAN"]
+
+    style Assess fill:#d94dbb,stroke:#a3378a,color:white
+    style Level1 fill:#4dbb5f,stroke:#36873f,color:white
+    style Level2 fill:#ffa64d,stroke:#cc7a30,color:white
+    style Level3 fill:#ff5555,stroke:#cc0000,color:white
+    style Level4 fill:#d971ff,stroke:#a33bc2,color:white
+```
+
+## MEMORY BANK INTEGRATION
+
+### Core File Updates:
+1. **tasks.md**: Integrate migrated tasks, set current task status
+2. **activeContext.md**: Update context for new development cycle
+3. **progress.md**: Record VAN mode execution and task integration
+4. **systemPatterns.md**: Update with any new patterns from migration
+
+### Context Preservation:
+- Maintain task dependencies from migration
+- Preserve progress context where applicable
+- Update file references and links
+- Ensure continuity of technical context
+
+## MODE TRANSITION LOGIC
+
+### Next Mode Determination:
+```mermaid
+graph TD
+    Complete["VAN Complete"] --> HasTasks{"Active Tasks<br>Exist?"}
+    HasTasks -->|"Yes"| CheckType{"Task Type?"}
+    HasTasks -->|"No"| Idle["💤 Idle State"]
+
+    CheckType -->|"New Feature"| SuggestPlan["➡️ Suggest PLAN Mode"]
+    CheckType -->|"Bug Fix"| SuggestImplement["➡️ Suggest IMPLEMENT Mode"]
+    CheckType -->|"Complex"| SuggestCreative["➡️ Suggest PLAN → CREATIVE"]
+
+    SuggestPlan --> UpdateContext["📝 Update activeContext.md"]
+    SuggestImplement --> UpdateContext
+    SuggestCreative --> UpdateContext
+
+    style Complete fill:#4da6ff,stroke:#0066cc,color:white
+    style HasTasks fill:#ffa64d,stroke:#cc7a30,color:white
+    style SuggestPlan fill:#4dbb5f,stroke:#36873f,color:white
+    style SuggestImplement fill:#ff5555,stroke:#cc0000,color:white
+    style SuggestCreative fill:#d971ff,stroke:#a33bc2,color:white
+```
+
+## VERIFICATION CHECKLIST
+
+```
+✓ VAN MODE INTEGRATION CHECKLIST
+- Migration.md checked and processed? [YES/NO/NA]
+- Unfinished tasks integrated into tasks.md? [YES/NO/NA]
+- Complexity level determined correctly? [YES/NO]
+- Appropriate level rules loaded? [YES/NO]
+- Memory Bank files updated? [YES/NO]
+- Context preserved from migration? [YES/NO/NA]
+- Next mode transition suggested? [YES/NO]
+- All integration points verified? [YES/NO]
+
+→ If all YES: VAN mode integration complete
+→ If any NO: Address missing integration elements
+```
+
+## ERROR HANDLING
+
+### Common Issues:
+1. **Corrupted migration.md**: Validate and recover what's possible
+2. **Missing task context**: Request clarification from user
+3. **Conflicting task priorities**: Apply priority resolution rules
+4. **Broken file references**: Update and fix references
+
+### Recovery Procedures:
+- Backup current state before processing migration
+- Validate all task data before integration
+- Provide clear error messages for resolution
+- Maintain system integrity during error conditions
+
+## INTEGRATION EXAMPLES
+
+### Successful Migration Processing:
+```
+VAN Mode Activated
+📦 Found migration.md with 3 unfinished tasks
+🔄 Processing IN_PROGRESS: Feature implementation (80% complete)
+📋 Processing PLANNED: Unit test creation
+⛔ Processing BLOCKED: Documentation update (waiting for review)
+✅ All tasks integrated into tasks.md
+📁 migration.md archived to memory-bank/archive/
+➡️ Suggesting IMPLEMENT mode to continue feature work
+```
+
+### Standard VAN Flow:
+```
+VAN Mode Activated
+📋 No migration.md found - proceeding with standard flow
+🧩 Analyzing new task: "Add user authentication"
+📊 Complexity assessment: Level 3 (Intermediate Feature)
+📚 Loading Level 3 workflow rules
+➡️ Suggesting PLAN mode for feature planning
+```
+
+This integration ensures VAN mode serves as the central coordination point for Memory Bank workflow, maintaining task continuity and providing intelligent mode transitions based on current context and task requirements.
+```
+
+`.cursor/rules/isolation_rules/CustomWorkflow/workflow/warning-system.mdc`
+
+```mdc
+---
+description: "Warning system for Memory Bank mode transitions and data protection"
+globs: "**/workflow/**", "**/warning-system/**", "**/validation/**"
+alwaysApply: true
+---
+
+# WARNING SYSTEM
+
+> **TL;DR:** Comprehensive warning system that prevents data loss and guides safe Memory Bank mode transitions through intelligent validation and user notifications.
+
+## 🚨 WARNING SYSTEM OVERVIEW
+
+The Warning System acts as a safety net for Memory Bank operations, detecting potential issues before they cause problems and providing clear guidance to users.
+
+### Core Functions
+
+**Data Protection**
+- Detect unfinished work before mode transitions
+- Warn about potential data loss scenarios
+- Validate task completion status
+- Check file system integrity
+
+**User Guidance**
+- Provide clear warning messages
+- Offer actionable solutions
+- Guide safe mode transitions
+- Explain consequences of actions
+
+## ⚠️ WARNING CATEGORIES
+
+### 🔴 CRITICAL WARNINGS (Block Action)
+
+**Data Loss Prevention**
+```bash
+╔═══════════════════════════════════════════════════════════════╗
+║                    🚨 CRITICAL WARNING                        ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: DATA LOSS RISK                                         ║
+║ Severity: CRITICAL                                            ║
+║ Action: BLOCKED                                               ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issue: Unfinished critical tasks detected                    ║
+║ Risk: Work will be lost without migration                    ║
+║                                                               ║
+║ Affected Tasks:                                               ║
+║ • TASK-CRITICAL-2025-06-10: 75% complete                     ║
+║ • SYSTEM-INTEGRATION-2025-06-10: 50% complete                ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Required Actions:                                             ║
+║ [1] Complete critical tasks                                   ║
+║ [2] Create migration document                                 ║
+║ [3] Archive current work                                      ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+**System Integrity Issues**
+```bash
+╔═══════════════════════════════════════════════════════════════╗
+║                    🚨 SYSTEM ERROR                            ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: SYSTEM INTEGRITY                                        ║
+║ Severity: CRITICAL                                            ║
+║ Action: BLOCKED                                               ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issue: Required system files missing                         ║
+║ Risk: System malfunction or data corruption                  ║
+║                                                               ║
+║ Missing Files:                                                ║
+║ • memory-bank/tasks.md                                        ║
+║ • memory-bank/system/current-date.txt                        ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Required Actions:                                             ║
+║ [1] Restore missing files                                     ║
+║ [2] Verify system integrity                                   ║
+║ [3] Run system validation                                     ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+### 🟡 HIGH WARNINGS (Require Confirmation)
+
+**Incomplete Work Warning**
+```bash
+╔═══════════════════════════════════════════════════════════════╗
+║                    ⚠️ HIGH WARNING                            ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: INCOMPLETE WORK                                         ║
+║ Severity: HIGH                                                ║
+║ Action: CONFIRMATION REQUIRED                                 ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Issue: Non-critical tasks incomplete                         ║
+║ Risk: Work progress may be lost                              ║
+║                                                               ║
+║ Incomplete Tasks:                                             ║
+║ • ENHANCEMENT-FEATURE-2025-06-10: 80% complete               ║
+║ • DOCUMENTATION-UPDATE-2025-06-10: 60% complete              ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Options:                                                      ║
+║ [1] Continue and create migration (Recommended)               ║
+║ [2] Complete tasks first                                      ║
+║ [3] Proceed anyway (NOT RECOMMENDED)                         ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+### 🔵 MEDIUM WARNINGS (Informational)
+
+**Best Practice Recommendations**
+```bash
+╔═══════════════════════════════════════════════════════════════╗
+║                    ℹ️ RECOMMENDATION                          ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Type: BEST PRACTICE                                           ║
+║ Severity: MEDIUM                                              ║
+║ Action: OPTIONAL                                              ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Suggestion: Consider creating backup before proceeding       ║
+║ Benefit: Additional safety for your work                     ║
+║                                                               ║
+║ Recommended Actions:                                          ║
+║ • Create git commit with current progress                    ║
+║ • Update documentation                                        ║
+║ • Review task priorities                                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Options:                                                      ║
+║ [1] Follow recommendations                                    ║
+║ [2] Proceed without changes                                   ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+## 🔍 WARNING TRIGGERS
+
+### Mode Transition Triggers
+
+**VAN Mode Entry**
+- Existing tasks.md found without migration
+- Unfinished work detected
+- System files missing or corrupted
+
+**REFLECT Mode Entry**
+- Implementation not complete (< 90%)
+- Critical tasks still in progress
+- Required deliverables missing
+
+**ARCHIVE Mode Entry**
+- Reflection not completed
+- Documentation incomplete
+- System updates not finalized
+
+### File Operation Triggers
+
+**File Modification**
+- Attempting to modify read-only files
+- Overwriting important system files
+- Deleting files with unsaved changes
+
+**Directory Operations**
+- Creating directories in protected areas
+- Removing non-empty directories
+- Moving critical system directories
+
+## 🛠️ WARNING IMPLEMENTATION
+
+### Warning Detection Logic
+
+```typescript
+// Warning detection interface
+interface WarningDetector {
+  checkCondition(): boolean;
+  getWarningLevel(): 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
+  getWarningMessage(): WarningMessage;
+  getSuggestedActions(): Action[];
+}
+
+// Example: Task completion warning
+class TaskCompletionWarning implements WarningDetector {
+  checkCondition(): boolean {
+    const incompleteTasks = getIncompleteTasks();
+    return incompleteTasks.some(task => task.priority === 'CRITICAL');
+  }
+
+  getWarningLevel(): 'CRITICAL' {
+    return 'CRITICAL';
+  }
+
+  getWarningMessage(): WarningMessage {
+    return {
+      type: 'DATA_LOSS_RISK',
+      title: 'Critical tasks incomplete',
+      description: 'Unfinished critical tasks will be lost',
+      affectedItems: getIncompleteCriticalTasks()
+    };
+  }
+
+  getSuggestedActions(): Action[] {
+    return [
+      { id: 'complete_tasks', label: 'Complete critical tasks' },
+      { id: 'create_migration', label: 'Create migration document' },
+      { id: 'archive_work', label: 'Archive current work' }
+    ];
+  }
+}
+```
+
+### Warning Display System
+
+```typescript
+// Warning display configuration
+const warningDisplayConfig = {
+  critical: {
+    color: 'red',
+    icon: '🚨',
+    blockAction: true,
+    requireConfirmation: false
+  },
+  high: {
+    color: 'yellow',
+    icon: '⚠️',
+    blockAction: false,
+    requireConfirmation: true
+  },
+  medium: {
+    color: 'blue',
+    icon: 'ℹ️',
+    blockAction: false,
+    requireConfirmation: false
+  }
+};
+```
+
+## 📋 WARNING VALIDATION RULES
+
+### Pre-Transition Validation
+
+**VAN Mode Validation**
+```bash
+# Check for existing work
+if [ -f "memory-bank/tasks.md" ] && [ ! -f "memory-bank/migration.md" ]; then
+  echo "WARNING: Existing tasks found without migration"
+  echo "Risk: Current work may be lost"
+  echo "Action: Create migration or archive existing work"
+fi
+```
+
+**REFLECT Mode Validation**
+```bash
+# Check implementation completion
+COMPLETION=$(grep -o "completion: [0-9]*%" memory-bank/tasks.md | tail -1 | grep -o "[0-9]*")
+if [ "$COMPLETION" -lt 90 ]; then
+  echo "WARNING: Implementation not complete ($COMPLETION%)"
+  echo "Risk: Premature reflection may miss important details"
+  echo "Action: Complete implementation or document reasons"
+fi
+```
+
+**ARCHIVE Mode Validation**
+```bash
+# Check reflection completion
+if [ ! -f "memory-bank/reflection/reflection-$(date +%Y-%m-%d).md" ]; then
+  echo "WARNING: Reflection not completed"
+  echo "Risk: Knowledge and lessons may be lost"
+  echo "Action: Complete reflection before archiving"
+fi
+```
+
+### File System Validation
+
+**Critical File Protection**
+```bash
+# Protect critical system files
+CRITICAL_FILES=(
+  "memory-bank/tasks.md"
+  "memory-bank/system/current-date.txt"
+  "memory-bank/system/interaction-mode.txt"
+  "memory-bank/config/system.yaml"
+)
+
+for file in "${CRITICAL_FILES[@]}"; do
+  if [ ! -f "$file" ]; then
+    echo "CRITICAL: Missing system file: $file"
+    echo "Action: Restore file or run system initialization"
+  fi
+done
+```
+
+## 🔄 WARNING RESPONSE WORKFLOW
+
+### User Response Handling
+
+```mermaid
+graph TD
+    Warning["⚠️ Warning Triggered"] --> Display["📺 Display Warning"]
+    Display --> UserChoice{"👤 User Choice"}
+
+    UserChoice -->|"Fix Issues"| Fix["🔧 Fix Problems"]
+    UserChoice -->|"Create Migration"| Migrate["📝 Create Migration"]
+    UserChoice -->|"Proceed Anyway"| Override["⚠️ Override Warning"]
+
+    Fix --> Validate["✅ Re-validate"]
+    Migrate --> Validate
+    Override --> Log["📝 Log Override"]
+
+    Validate --> Success{"✅ Validation Passed?"}
+    Success -->|"Yes"| Proceed["▶️ Proceed with Action"]
+    Success -->|"No"| Display
+
+    Log --> Proceed
+
+    style Warning fill:#ffa64d,stroke:#cc7a30,color:white
+    style Display fill:#4da6ff,stroke:#0066cc,color:white
+    style Fix fill:#4dbb5f,stroke:#36873f,color:white
+    style Override fill:#ff5555,stroke:#cc0000,color:white
+    style Proceed fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Automatic Resolution
+
+**Auto-Fix Capabilities**
+- Create missing system files with defaults
+- Initialize empty configuration files
+- Restore corrupted date files
+- Fix simple file permission issues
+
+**Auto-Migration**
+- Detect unfinished work patterns
+- Create basic migration documents
+- Preserve task context automatically
+- Backup current state before changes
+
+## 📊 WARNING METRICS
+
+### Warning Effectiveness
+
+**Prevention Metrics**
+- Data loss incidents prevented: Target 100%
+- User errors caught: Target >95%
+- System integrity maintained: Target 100%
+- Successful recoveries: Target >90%
+
+**User Experience Metrics**
+- Warning clarity score: Target >4.5/5
+- Resolution success rate: Target >85%
+- User satisfaction: Target >4.0/5
+- Time to resolution: Target <5 minutes
+
+### Warning Quality
+
+**Message Quality**
+- Clear problem description: Required
+- Actionable solutions provided: Required
+- Risk level clearly communicated: Required
+- Multiple resolution options: Preferred
+
+**System Integration**
+- Consistent warning format: Required
+- Proper severity classification: Required
+- Integration with all modes: Required
+- Comprehensive coverage: Target >95%
+
+This warning system ensures safe Memory Bank operations by proactively detecting issues and guiding users toward safe resolutions.
+```
+
 `.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc`
 
 ```mdc
 ---
 description: Optimized Level 1 workflow for quick bug fixes with token efficiency
-globs: "**/level1*/**", "**/quick*/**", "**/bugfix*/**"
+globs: "**/Level1/**", "**/quick*/**", "**/bugfix*/**"
 alwaysApply: false
 ---
-
 # OPTIMIZED LEVEL 1 WORKFLOW
 
 > **TL;DR:** This streamlined workflow for Level 1 tasks (quick bug fixes) optimizes for speed and token efficiency while maintaining quality.
@@ -2195,7 +19353,7 @@ graph TD
     Analyze --> Implement["2️⃣ IMPLEMENT<br>Fix the issue"]
     Implement --> Verify["3️⃣ VERIFY<br>Test the fix"]
     Verify --> Document["4️⃣ DOCUMENT<br>Record solution"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Analyze fill:#ffa64d,stroke:#cc7a30,color:white
     style Implement fill:#4dbb5f,stroke:#36873f,color:white
@@ -2324,7 +19482,7 @@ Optimize Memory Bank updates for Level 1 tasks by using a single operation:
 function updateLevel1MemoryBank(taskInfo) {
   // Read current tasks.md
   const tasksContent = readFile("tasks.md");
-  
+
   // Create minimal update
   const updateBlock = `
 ### Task: ${taskInfo.name}
@@ -2332,13 +19490,13 @@ function updateLevel1MemoryBank(taskInfo) {
 - Implementation: ${taskInfo.solution}
 - Link to fix: ${taskInfo.fileReference}
 `;
-  
+
   // Add update to tasks.md
   const updatedContent = appendToSection(tasksContent, "Completed Tasks", updateBlock);
-  
+
   // Write in single operation
   writeFile("tasks.md", updatedContent);
-  
+
   return "Memory Bank updated";
 }
 ```
@@ -2348,7 +19506,7 @@ function updateLevel1MemoryBank(taskInfo) {
 ```markdown
 ## 🔧 FIX: Login button not working on mobile devices
 
-📌 Problem: 
+📌 Problem:
 Users unable to log in on mobile devices, button appears but doesn't trigger authentication
 
 🔍 Cause:
@@ -2357,7 +19515,7 @@ Event listener using desktop-specific event (mousedown instead of handling touch
 🛠️ Solution:
 Updated event handling to use event delegation and support both mouse and touch events:
 ```js
-// Before: 
+// Before:
 loginButton.addEventListener('mousedown', handleLogin);
 
 // After:
@@ -2366,7 +19524,7 @@ loginButton.addEventListener('touchstart', handleLogin);
 ```
 
 ✅ Tested:
-- Verified on iOS Safari and Android Chrome 
+- Verified on iOS Safari and Android Chrome
 - Login now works on all tested mobile devices
 - No regression on desktop browsers
 ```
@@ -2389,10 +19547,9 @@ The updated approach maintains all critical information while significantly redu
 ```mdc
 ---
 description: Quick documentation approach for Level 1 Quick Bug Fix tasks
-globs: "**/level1/**", "**/documentation/**"
+globs: "**/Level1/**", "**/documentation/**"
 alwaysApply: false
 ---
-
 # QUICK DOCUMENTATION FOR LEVEL 1 TASKS
 
 > **TL;DR:** This document outlines a quick documentation approach for Level 1 (Quick Bug Fix) tasks, ensuring that essential information is captured with minimal overhead.
@@ -2592,10 +19749,10 @@ Quick documentation integrates with other systems:
 graph TD
     QuickDoc["Quick Fix<br>Documentation"] --> TasksMD["tasks.md<br>Update"]
     QuickDoc --> FixDetails["Fix Details<br>Documentation"]
-    
+
     TasksMD --> Tracking["Task<br>Tracking"]
     FixDetails --> Knowledge["Knowledge<br>Preservation"]
-    
+
     Tracking & Knowledge --> Future["Future<br>Reference"]
 ```
 
@@ -2620,7 +19777,12 @@ This ensures that Level 1 tasks are documented efficiently without unnecessary o
 ```mdc
 ---
 description: Streamlined workflow for Level 1 Quick Bug Fix tasks
-globs: "**/level1/**", "**/workflow/**"
+globs: "**/Level1/**", "**/workflow/**"
+alwaysApply: false
+---
+---
+description: Streamlined workflow for Level 1 Quick Bug Fix tasks
+globs: "**/Level1/**", "**/workflow/**"
 alwaysApply: false
 ---
 # STREAMLINED WORKFLOW FOR LEVEL 1 TASKS
@@ -2633,7 +19795,7 @@ alwaysApply: false
 graph LR
     Init["1. INITIALIZATION"] --> Impl["2. IMPLEMENTATION"]
     Impl --> Doc["3. DOCUMENTATION"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["Quick setup<br>Issue understanding"]
     Impl -.-> ImplDocs["Focused fix<br>Verify resolution"]
@@ -2792,7 +19954,7 @@ graph TD
     Workflow["Level 1<br>Workflow"] --> TM["Update<br>tasks.md"]
     Workflow --> AC["Minimal Update<br>activeContext.md"]
     Workflow --> PM["Brief Update<br>progress.md"]
-    
+
     TM & AC & PM --> MB["Memory Bank<br>Integration"]
     MB --> NextTask["Transition to<br>Next Task"]
 ```
@@ -2807,7 +19969,7 @@ Remember:
 │ Minimize process overhead while ensuring adequate   │
 │ documentation of the solution.                     │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level2/archive-basic.mdc`
@@ -2815,10 +19977,9 @@ Remember:
 ```mdc
 ---
 description: Basic archiving approach for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/archive/**", "**/completion/**"
+globs: "**/Level2/**", "**/archive/**", "**/completion/**"
 alwaysApply: false
 ---
-
 # BASIC ARCHIVING FOR LEVEL 2 TASKS
 
 > **TL;DR:** This document outlines a basic archiving approach for Level 2 (Simple Enhancement) tasks, ensuring that completed work is properly documented and knowledge is preserved with minimal overhead.
@@ -2921,20 +20082,20 @@ When creating cross-references:
 1. **In tasks.md**:
    ```markdown
    ## Completed Enhancements
-   - [X] [Feature Name] (YYYY-MM-DD) - [Archive Link](../docs/archive/enhancements/YYYY-MM/feature-name.md)
+   - [X] [Feature Name] (YYYY-MM-DD) - [Archive Link](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md)
    ```
 
 2. **In progress.md**:
    ```markdown
    ## Completed Milestones
-   - [Feature Name] enhancement completed on YYYY-MM-DD. See [archive entry](../docs/archive/enhancements/YYYY-MM/feature-name.md).
+   - [Feature Name] enhancement completed on YYYY-MM-DD. See [archive entry](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md).
    ```
 
 3. **In activeContext.md**:
    ```markdown
    ## Recently Completed
-   - [Feature Name] enhancement is now complete. Archive: [link](../docs/archive/enhancements/YYYY-MM/feature-name.md)
-   
+   - [Feature Name] enhancement is now complete. Archive: [link](mdc:../docs/archive/enhancements/YYYY-MM/feature-name.md)
+
    ## Current Focus
    - Moving to [Next Task Name]
    ```
@@ -2976,7 +20137,7 @@ graph TD
     Archive["Enhancement<br>Archive"] --> TasksUpdate["Update<br>tasks.md"]
     Archive --> ProgressUpdate["Update<br>progress.md"]
     Archive --> ContextUpdate["Update<br>activeContext.md"]
-    
+
     TasksUpdate & ProgressUpdate & ContextUpdate --> CrossLinks["Create<br>Cross-Links"]
     CrossLinks --> Verify["Verify<br>References"]
 ```
@@ -2993,7 +20154,7 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that knowledge is preserved and can be referenced in the future. 
+This ensures that knowledge is preserved and can be referenced in the future.
 ```
 
 `.cursor/rules/isolation_rules/Level2/reflection-basic.mdc`
@@ -3001,10 +20162,9 @@ This ensures that knowledge is preserved and can be referenced in the future.
 ```mdc
 ---
 description: Basic reflection format for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/reflection/**"
+globs: "**/Level2/**", "**/reflection/**"
 alwaysApply: false
 ---
-
 # BASIC REFLECTION FOR LEVEL 2 TASKS
 
 > **TL;DR:** This document outlines a basic reflection approach for Level 2 (Simple Enhancement) tasks, ensuring that key insights and lessons are captured without unnecessary overhead.
@@ -3160,7 +20320,7 @@ graph TD
     Reflection["Enhancement<br>Reflection"] --> Archive["Add to<br>Archive"]
     Reflection --> ProgressUpdate["Update<br>progress.md"]
     Reflection --> ActionItems["Document<br>Action Items"]
-    
+
     ActionItems --> Tasks["Add to<br>tasks.md"]
     Archive & ProgressUpdate & Tasks --> CrossLinks["Create<br>Cross-Links"]
 ```
@@ -3176,7 +20336,7 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that reflection directly contributes to ongoing improvement of both the product and the process. 
+This ensures that reflection directly contributes to ongoing improvement of both the product and the process.
 ```
 
 `.cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc`
@@ -3184,10 +20344,9 @@ This ensures that reflection directly contributes to ongoing improvement of both
 ```mdc
 ---
 description: Basic task tracking for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/tracking/**", "**/task/**"
+globs: "**/Level2/**", "**/tracking/**", "**/task/**"
 alwaysApply: false
 ---
-
 # BASIC TASK TRACKING FOR LEVEL 2
 
 > **TL;DR:** This document outlines a streamlined task tracking approach for Level 2 (Simple Enhancement) tasks. It provides a balanced framework for managing task progress with minimal overhead.
@@ -3352,7 +20511,7 @@ Task tracking integrates with Memory Bank:
 graph TD
     TasksFile["tasks.md"] --> Active["activeContext.md"]
     TasksFile --> Progress["progress.md"]
-    
+
     Active -->|"Current focus"| TasksFile
     Progress -->|"Completion status"| TasksFile
 ```
@@ -3369,7 +20528,7 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures everyone has visibility into current task status at all times. 
+This ensures everyone has visibility into current task status at all times.
 ```
 
 `.cursor/rules/isolation_rules/Level2/workflow-level2.mdc`
@@ -3377,7 +20536,7 @@ This ensures everyone has visibility into current task status at all times.
 ```mdc
 ---
 description: Basic workflow for Level 2 Simple Enhancement tasks
-globs: "**/level2/**", "**/workflow/**"
+globs: "**/Level2/**", "**/workflow/**"
 alwaysApply: false
 ---
 # WORKFLOW FOR LEVEL 2 TASKS
@@ -3393,7 +20552,7 @@ graph LR
     Plan --> Impl["4. IMPLEMENTATION"]
     Impl --> Reflect["5. REFLECTION"]
     Reflect --> Archive["6. ARCHIVING"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["INITIALIZATION"]
     Doc -.-> DocDocs["DOCUMENTATION"]
@@ -3627,14 +20786,14 @@ For minimal mode, use this streamlined workflow:
 ```mermaid
 graph TD
     L2["Level 2 Task"] --> Assess["Continuous<br>Assessment"]
-    
+
     Assess --> Down["Downgrade to<br>Level 1"]
     Assess --> Up["Upgrade to<br>Level 3/4"]
-    
+
     Down --> L1Trigger["Triggers:<br>- Simpler than expected<br>- Quick fix possible<br>- Single component"]
-    
+
     Up --> L34Trigger["Triggers:<br>- More complex<br>- Multiple components<br>- Design needed"]
-    
+
     L1Trigger --> L1Switch["Switch to<br>Level 1 Workflow"]
     L34Trigger --> L34Switch["Switch to<br>Level 3/4 Workflow"]
 ```
@@ -3647,7 +20806,7 @@ graph TD
     Workflow --> AC["Update<br>activeContext.md"]
     Workflow --> TM["Maintain<br>tasks.md"]
     Workflow --> PM["Update<br>progress.md"]
-    
+
     PB & AC & TM & PM --> MB["Memory Bank<br>Integration"]
     MB --> NextTask["Transition to<br>Next Task"]
 ```
@@ -3663,7 +20822,7 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that simple enhancements are implemented with the right level of documentation and process. 
+This ensures that simple enhancements are implemented with the right level of documentation and process.
 ```
 
 `.cursor/rules/isolation_rules/Level3/archive-intermediate.mdc`
@@ -4122,19 +21281,19 @@ graph TD
     Struct --> Track["📊 Progress<br>Tracking"]
     Track --> Update["🔄 Regular<br>Updates"]
     Update --> Complete["✅ Task<br>Completion"]
-    
+
     Struct --> Components["Components:"]
     Components --> Req["Requirements"]
     Components --> Steps["Implementation<br>Steps"]
     Components --> Creative["Creative Phase<br>Markers"]
     Components --> Check["Checkpoints"]
-    
+
     Track --> Status["Track Status:"]
     Status --> InProg["🔄 In Progress"]
     Status --> Block["⛔ Blocked"]
     Status --> Done["✅ Complete"]
     Status --> Skip["⏭️ Skipped"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Init fill:#ffa64d,stroke:#cc7a30,color:white
     style Struct fill:#4dbb5f,stroke:#36873f,color:white
@@ -4192,7 +21351,7 @@ graph TD
     P5["□ Testing"]
     P6["□ Documentation"]
     end
-    
+
     style P1 fill:#4dbb5f,stroke:#36873f,color:white
     style P2 fill:#4dbb5f,stroke:#36873f,color:white
     style P3 fill:#ffa64d,stroke:#cc7a30,color:white
@@ -4209,7 +21368,7 @@ sequenceDiagram
     participant Status as Status Update
     participant Creative as Creative Phase
     participant Implementation as Implementation
-    
+
     Task->>Status: Update Progress
     Status->>Creative: Flag for Creative Phase
     Creative->>Implementation: Complete Design
@@ -4232,13 +21391,13 @@ sequenceDiagram
 
 ```mermaid
 graph TD
-    Current["Current Documents"] --> Active["Active:<br>- task-tracking-intermediate.md<br>- planning-comprehensive.md"]
-    Current --> Required["Required Next:<br>- creative-phase-enforcement.md<br>- implementation-phase-reference.md"]
-    
+    Current["Current Documents"] --> Active["Active:<br>- task-tracking-intermediate.mdc<br>- planning-comprehensive.mdc"]
+    Current --> Required["Required Next:<br>- creative-phase-enforcement.mdc<br>- implementation-phase-reference.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Required fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level3/workflow-level3.mdc`
@@ -4577,7 +21736,7 @@ This ensures that intermediate features are developed with an appropriate level 
 ```mdc
 ---
 description: Architectural planning guidelines for Level 4 Complex System tasks
-globs: "**/level4/**", "**/architecture/**"
+globs: "**/Level4/**", "**/architecture/**"
 alwaysApply: false
 ---
 
@@ -4594,7 +21753,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Architectural<br>Planning]) --> Reqs[Analyze<br>Requirements]
     Reqs --> Context[Define Business<br>Context]
     Context --> Vision[Establish Vision<br>and Goals]
@@ -4610,7 +21769,7 @@ flowchart TD
     Verification -->|Pass| Complete([Architectural<br>Planning Complete])
     Verification -->|Fail| Revise[Revise<br>Architecture]
     Revise --> Verification
-    
+
     Reqs -.-> ReqDoc((Requirements<br>Document))
     Context -.-> ConDoc((Context<br>Document))
     Vision -.-> VisDoc((Vision<br>Document))
@@ -4618,7 +21777,7 @@ flowchart TD
     Explore -.-> AltDoc((Alternatives<br>Analysis))
     Decision -.-> ADR((Architecture<br>Decision Records))
     Create -.-> ArchDoc((Architecture<br>Documentation))
-    
+
     class Start,Complete milestone
     class Reqs,Context,Vision,Principles,Constraints,Explore,Evaluate,Decision,Create,Validate,Communicate,Revise step
     class Verification verification
@@ -4648,13 +21807,13 @@ Begin architectural planning with a comprehensive analysis of requirements:
 flowchart LR
     classDef req fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef arch fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     FR[Functional<br>Requirements] --> USE[Use Cases/<br>User Stories]
     USE --> DOM[Domain<br>Model]
     DOM --> COMP[Component<br>Identification]
     COMP --> INT[Interface<br>Definition]
     INT --> FLOW[Information<br>Flow]
-    
+
     class FR,USE,DOM req
     class COMP,INT,FLOW arch
 ```
@@ -4699,15 +21858,15 @@ flowchart LR
 flowchart LR
     classDef req fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef arch fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     NFR[Non-Functional<br>Requirements] --> PERF[Performance<br>Requirements]
     NFR --> SEC[Security<br>Requirements]
     NFR --> SCAL[Scalability<br>Requirements]
     NFR --> AVAIL[Availability<br>Requirements]
     NFR --> MAINT[Maintainability<br>Requirements]
-    
+
     PERF & SEC & SCAL & AVAIL & MAINT --> ARCH[Architectural<br>Decisions]
-    
+
     class NFR,PERF,SEC,SCAL,AVAIL,MAINT req
     class ARCH arch
 ```
@@ -4974,13 +22133,13 @@ flowchart TD
     classDef system fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef external fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef user fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     U1[User 1] --> S[System]
     U2[User 2] --> S
     S --> E1[External<br>System 1]
     S --> E2[External<br>System 2]
     S --> E3[External<br>System 3]
-    
+
     class S system
     class E1,E2,E3 external
     class U1,U2 user
@@ -4994,13 +22153,13 @@ flowchart TD
     classDef backend fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef data fill:#c5e8b7,stroke:#a5c897,color:#000
     classDef integration fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     U[Users] --> F[Frontend<br>Layer]
     F --> B[Backend<br>Layer]
     B --> D[Data<br>Layer]
     B --> I[Integration<br>Layer]
     I --> E[External<br>Systems]
-    
+
     class F frontend
     class B backend
     class D data
@@ -5015,7 +22174,7 @@ flowchart TD
     classDef ui fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef service fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef data fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     UI[User Interface] --> API[API Gateway]
     API --> S1[Service 1]
     API --> S2[Service 2]
@@ -5024,7 +22183,7 @@ flowchart TD
     S2 --> DB1
     S2 --> DB2[Database 2]
     S3 --> DB2
-    
+
     class UI ui
     class API,S1,S2,S3 service
     class DB1,DB2 data
@@ -5036,12 +22195,12 @@ flowchart TD
 flowchart TD
     classDef entity fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef relation fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     E1[Entity 1] -- 1:N --> E2[Entity 2]
     E1 -- 1:1 --> E3[Entity 3]
     E2 -- N:M --> E4[Entity 4]
     E3 -- 1:N --> E4
-    
+
     class E1,E2,E3,E4 entity
 ```
 
@@ -5051,7 +22210,7 @@ flowchart TD
 flowchart TD
     classDef security fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef app fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     U[Users] --> WAF[Web Application<br>Firewall]
     WAF --> LB[Load<br>Balancer]
     LB --> API[API Gateway]
@@ -5059,7 +22218,7 @@ flowchart TD
     API --> S1[Service 1]
     API --> S2[Service 2]
     AuthZ --> IAM[Identity &<br>Access Management]
-    
+
     class WAF,AuthZ,IAM security
     class API,S1,S2 app
     class U,LB external
@@ -5071,7 +22230,7 @@ flowchart TD
 flowchart TD
     classDef env fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef component fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     subgraph Production
     LB[Load Balancer] --> W1[Web Server 1]
     LB --> W2[Web Server 2]
@@ -5079,7 +22238,7 @@ flowchart TD
     W1 & W2 --> A2[App Server 2]
     A1 & A2 --> DB[Database<br>Cluster]
     end
-    
+
     class Production env
     class LB,W1,W2,A1,A2,DB component
 ```
@@ -5241,15 +22400,15 @@ Communicate architecture to stakeholders:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Architecture[Architectural<br>Planning] --> PB[projectbrief.md]
     Architecture --> PC[productContext.md]
     Architecture --> SP[systemPatterns.md]
     Architecture --> TC[techContext.md]
-    
+
     PB & PC & SP & TC --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Implementation<br>Phase]
-    
+
     class PB,PC,SP,TC memfile
     class Architecture,MBI,Next process
 ```
@@ -5383,7 +22542,7 @@ For situations requiring a more compact architectural planning approach:
 │ tasks. Implementation CANNOT begin until             │
 │ architectural planning is complete and approved.     │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level4/archive-comprehensive.mdc`
@@ -5391,7 +22550,7 @@ For situations requiring a more compact architectural planning approach:
 ```mdc
 ---
 description: Comprehensive archiving approach for Level 4 Complex System tasks
-globs: "**/level4/**", "**/archive/**"
+globs: "**/Level4/**", "**/archive/**"
 alwaysApply: false
 ---
 
@@ -5408,7 +22567,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Archiving<br>Process]) --> Template[Load Comprehensive<br>Archive Template]
     Template --> RefDoc[Review Reflection<br>Document]
     RefDoc --> SysDoc[Create System<br>Documentation]
@@ -5428,14 +22587,14 @@ flowchart TD
     Verification -->|Pass| Complete([Archiving<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Archiving]
     Revise --> Verification
-    
+
     Template -.-> AT((Archive<br>Template))
     SysDoc -.-> SD((System<br>Documentation))
     ArchDoc -.-> AD((Architecture<br>Documentation))
     ImplDoc -.-> ID((Implementation<br>Documentation))
     APIDoc & DataDoc -.-> IntDoc((Interface<br>Documentation))
     TestDoc & DeployDoc & OpDoc -.-> OpDocs((Operational<br>Documentation))
-    
+
     class Start,Complete milestone
     class Template,RefDoc,SysDoc,ArchDoc,ImplDoc,APIDoc,DataDoc,SecDoc,TestDoc,DeployDoc,OpDoc,KnowledgeDoc,CrossRef,Archive,UpdateMB step
     class Verification verification
@@ -5765,7 +22924,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Archive<br>Preparation]) --> Template[Load Archive<br>Template]
     Template --> Review[Review Project<br>Documentation]
     Review --> Identify[Identify All<br>Artifacts]
@@ -5774,12 +22933,12 @@ flowchart TD
     Organize --> Plan[Create Archiving<br>Plan]
     Plan --> Resources[Allocate<br>Resources]
     Resources --> Complete([Preparation<br>Complete])
-    
+
     Template -.-> AT((Archive<br>Template))
     Review -.-> ProjDocs((Project<br>Documentation))
     Identify -.-> ArtList((Artifact<br>List))
     Plan -.-> ArchPlan((Archiving<br>Plan))
-    
+
     class Start,Complete milestone
     class Template,Review,Identify,Gather,Organize,Plan,Resources step
     class AT,ProjDocs,ArtList,ArchPlan artifact
@@ -5800,7 +22959,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Documentation<br>Creation]) --> System[Create System<br>Documentation]
     System --> Req[Create Requirements<br>and Design Documentation]
     Req --> Impl[Create Implementation<br>Documentation]
@@ -5814,7 +22973,7 @@ flowchart TD
     Knowledge --> History[Create Project History<br>Documentation]
     History --> Review[Review All<br>Documentation]
     Review --> Complete([Documentation<br>Creation Complete])
-    
+
     System -.-> SysDoc((System<br>Documentation))
     Req -.-> ReqDoc((Requirements<br>Documentation))
     Impl -.-> ImplDoc((Implementation<br>Documentation))
@@ -5826,7 +22985,7 @@ flowchart TD
     Ops -.-> OpsDoc((Operational<br>Documentation))
     Knowledge -.-> KnowDoc((Knowledge Transfer<br>Documentation))
     History -.-> HistDoc((Project History<br>Documentation))
-    
+
     class Start,Complete milestone
     class System,Req,Impl,API,Data,Security,Test,Deploy,Ops,Knowledge,History,Review step
     class SysDoc,ReqDoc,ImplDoc,APIDoc,DataDoc,SecDoc,TestDoc,DeployDoc,OpsDoc,KnowDoc,HistDoc artifact
@@ -5853,7 +23012,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Archiving<br>and Integration]) --> Consolidate[Consolidate All<br>Documentation]
     Consolidate --> CrossRef[Create Cross-Reference<br>Index]
     CrossRef --> Version[Version All<br>Documentation]
@@ -5865,12 +23024,12 @@ flowchart TD
     Verification -->|Pass| Complete([Archiving<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Archiving]
     Revise --> Verification
-    
+
     Consolidate -.-> AllDocs((Consolidated<br>Documentation))
     CrossRef -.-> Index((Cross-Reference<br>Index))
     Archive -.-> Repo((Archive<br>Repository))
     UpdateMB -.-> MB((Updated Memory<br>Bank))
-    
+
     class Start,Complete milestone
     class Consolidate,CrossRef,Version,Archive,UpdateMB,AccessControl,Announce,Revise step
     class Verification verification
@@ -5893,17 +23052,17 @@ flowchart TD
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Archiving[Comprehensive<br>Archiving] --> PB[projectbrief.md]
     Archiving --> PC[productContext.md]
     Archiving --> AC[activeContext.md]
     Archiving --> SP[systemPatterns.md]
     Archiving --> TC[techContext.md]
     Archiving --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Repository of<br>Knowledge]
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Archiving,MBI,Next process
 ```
@@ -6072,7 +23231,7 @@ For situations requiring a more compact archiving approach:
 │ until comprehensive archiving is finished and        │
 │ verified.                                            │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 
 ```
 
@@ -6081,10 +23240,9 @@ For situations requiring a more compact archiving approach:
 ```mdc
 ---
 description: Phased Implementation for Level 4 Complex System tasks
-globs: "**/level4/**", "**/implementation/**"
+globs: "**/Level4/**", "**/implementation/**"
 alwaysApply: false
 ---
-
 # PHASED IMPLEMENTATION FOR LEVEL 4 TASKS
 
 > **TL;DR:** This document outlines a structured phased implementation approach for Level 4 (Complex System) tasks, ensuring controlled, incremental delivery of complex systems with appropriate verification at each phase.
@@ -6098,7 +23256,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Implementation<br>Process]) --> Framework[Establish Implementation<br>Framework]
     Framework --> Plan[Create Phasing<br>Plan]
     Plan --> Foundation[Implement<br>Foundation Phase]
@@ -6106,27 +23264,27 @@ flowchart TD
     VerifyF -->|Pass| Core[Implement<br>Core Phase]
     VerifyF -->|Fail| ReviseF[Revise<br>Foundation]
     ReviseF --> VerifyF
-    
+
     Core --> VerifyC{Core<br>Verification}
     VerifyC -->|Pass| Extension[Implement<br>Extension Phase]
     VerifyC -->|Fail| ReviseC[Revise<br>Core]
     ReviseC --> VerifyC
-    
+
     Extension --> VerifyE{Extension<br>Verification}
     VerifyE -->|Pass| Integration[Implement<br>Integration Phase]
     VerifyE -->|Fail| ReviseE[Revise<br>Extension]
     ReviseE --> VerifyE
-    
+
     Integration --> VerifyI{Integration<br>Verification}
     VerifyI -->|Pass| Finalization[Implement<br>Finalization Phase]
     VerifyI -->|Fail| ReviseI[Revise<br>Integration]
     ReviseI --> VerifyI
-    
+
     Finalization --> VerifyFin{Finalization<br>Verification}
     VerifyFin -->|Pass| Complete([Implementation<br>Complete])
     VerifyFin -->|Fail| ReviseFin[Revise<br>Finalization]
     ReviseFin --> VerifyFin
-    
+
     Framework -.-> IF((Implementation<br>Framework))
     Plan -.-> PP((Phasing<br>Plan))
     Foundation -.-> FP((Foundation<br>Phase))
@@ -6134,7 +23292,7 @@ flowchart TD
     Extension -.-> EP((Extension<br>Phase))
     Integration -.-> IP((Integration<br>Phase))
     Finalization -.-> FiP((Finalization<br>Phase))
-    
+
     class Start,Complete milestone
     class Framework,Plan,Foundation,Core,Extension,Integration,Finalization,ReviseF,ReviseC,ReviseE,ReviseI,ReviseFin step
     class VerifyF,VerifyC,VerifyE,VerifyI,VerifyFin verification
@@ -6161,12 +23319,12 @@ Level 4 Complex System tasks typically follow a five-phase implementation approa
 ```mermaid
 flowchart LR
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     P1[1. Foundation<br>Phase] --> P2[2. Core<br>Phase]
     P2 --> P3[3. Extension<br>Phase]
     P3 --> P4[4. Integration<br>Phase]
     P4 --> P5[5. Finalization<br>Phase]
-    
+
     class P1,P2,P3,P4,P5 phase
 ```
 
@@ -6292,7 +23450,7 @@ For each implementation phase, create a detailed plan using this template:
 - **Component 1**: [Description]
   - [ ] Task 1.1: [Description]
   - [ ] Task 1.2: [Description]
-  
+
 - **Component 2**: [Description]
   - [ ] Task 2.1: [Description]
   - [ ] Task 2.2: [Description]
@@ -6304,7 +23462,7 @@ For each implementation phase, create a detailed plan using this template:
 - **Risk 1**: [Description]
   - Impact: [High/Medium/Low]
   - Mitigation: [Strategy]
-  
+
 - **Risk 2**: [Description]
   - Impact: [High/Medium/Low]
   - Mitigation: [Strategy]
@@ -6331,7 +23489,7 @@ flowchart TD
     classDef activity fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef decision fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Phase<br>Verification]) --> CodeReview[Conduct Code<br>Review]
     CodeReview --> TestExecution[Execute Automated<br>Tests]
     TestExecution --> QAVerification[Perform QA<br>Verification]
@@ -6345,14 +23503,14 @@ flowchart TD
     Remediation --> Retest[Verify<br>Fixes]
     Retest --> ExitCriteria
     Approval --> Complete([Verification<br>Complete])
-    
+
     CodeReview -.-> CodeReport((Code Review<br>Report))
     TestExecution -.-> TestReport((Test<br>Report))
     QAVerification -.-> QAReport((QA<br>Report))
     ArchReview -.-> ArchReport((Architecture<br>Report))
     StakeholderReview -.-> StakeReport((Stakeholder<br>Report))
     Checklist -.-> CheckDoc((Verification<br>Checklist))
-    
+
     class Start,Complete milestone
     class CodeReview,TestExecution,QAVerification,ArchReview,StakeholderReview,Checklist,Approval,Issues,Remediation,Retest activity
     class ExitCriteria decision
@@ -6413,21 +23571,21 @@ flowchart TD
 flowchart TD
     classDef solid fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef partial fill:#a8d5ff,stroke:#88b5e0,color:#000
-    
+
     F[Foundation<br>Phase] --> C[Core<br>Phase]
     F --> E[Extension<br>Phase]
     F --> I[Integration<br>Phase]
     F --> FN[Finalization<br>Phase]
-    
+
     C --> E
     C --> I
     C --> FN
-    
+
     E --> I
     E --> FN
-    
+
     I --> FN
-    
+
     class F,C solid
     class E,I,FN partial
 ```
@@ -6457,7 +23615,7 @@ flowchart TD
   - Database schema
   - Logging infrastructure
   - Basic application skeleton
-  
+
 - **External Dependencies**:
   - API specifications from external systems
   - Test data
@@ -6467,17 +23625,17 @@ flowchart TD
   - Core business logic
   - Primary user interface
   - Essential services
-  
+
 - **External Dependencies**:
   - [List external dependencies]
 
 ### Integration Phase Dependencies
 - **Core Phase Dependencies**:
   - [List core dependencies]
-  
+
 - **Extension Phase Dependencies**:
   - [List extension dependencies]
-  
+
 - **External Dependencies**:
   - Access to integration test environments
   - Test credentials for external systems
@@ -6496,7 +23654,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Phase<br>Transition]) --> Verification[Verify Current<br>Phase Complete]
     Verification --> Checkpoint{Phase<br>Verified?}
     Checkpoint -->|No| Remediation[Remediate<br>Issues]
@@ -6507,12 +23665,12 @@ flowchart TD
     NextPlan --> Approvals[Obtain<br>Approvals]
     Approvals --> Kickoff[Conduct Next<br>Phase Kickoff]
     Kickoff --> End([Begin Next<br>Phase])
-    
+
     Verification -.-> VerifDoc((Verification<br>Checklist))
     Documentation -.-> Docs((Updated<br>Documentation))
     Reflection -.-> ReflectDoc((Reflection<br>Document))
     NextPlan -.-> PlanDoc((Phase<br>Plan))
-    
+
     class Start,End milestone
     class Verification,Remediation,Documentation,Reflection,NextPlan,Approvals,Kickoff step
     class Checkpoint verification
@@ -6600,17 +23758,17 @@ Update `tasks.md` to track phased implementation progress:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Implementation[Phased<br>Implementation] --> PB[projectbrief.md]
     Implementation --> PC[productContext.md]
     Implementation --> AC[activeContext.md]
     Implementation --> SP[systemPatterns.md]
     Implementation --> TC[techContext.md]
     Implementation --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Implementation
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Implementation,MBI process
 ```
@@ -6707,7 +23865,7 @@ For situations requiring a more compact implementation approach:
 
 ### Phase Status Summary
 - **Foundation**: [Status] - [Progress %]
-- **Core**: [Status] - [Progress %] 
+- **Core**: [Status] - [Progress %]
 - **Extension**: [Status] - [Progress %]
 - **Integration**: [Status] - [Progress %]
 - **Finalization**: [Status] - [Progress %]
@@ -6733,7 +23891,7 @@ For situations requiring a more compact implementation approach:
 │ Phases MUST NOT be rushed to meet deadlines at the   │
 │ expense of quality or architectural integrity.       │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc`
@@ -6741,10 +23899,9 @@ For situations requiring a more compact implementation approach:
 ```mdc
 ---
 description: Comprehensive reflection format for Level 4 Complex System tasks
-globs: "**/level4/**", "**/reflection/**"
+globs: "**/Level4/**", "**/reflection/**"
 alwaysApply: false
 ---
-
 # COMPREHENSIVE REFLECTION FOR LEVEL 4 TASKS
 
 > **TL;DR:** This document outlines a structured, comprehensive approach to reflection for Level 4 (Complex System) tasks, including system review, success and challenge analysis, strategic insights, and action planning.
@@ -6758,7 +23915,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Reflection<br>Process]) --> Template[Load Comprehensive<br>Reflection Template]
     Template --> SysReview[Conduct System<br>Review]
     SysReview --> ArchReview[Review Architecture<br>Decisions]
@@ -6776,13 +23933,13 @@ flowchart TD
     Verification -->|Pass| Complete([Reflection<br>Complete])
     Verification -->|Fail| Revise[Revise<br>Reflection]
     Revise --> Verification
-    
+
     Template -.-> RT((Reflection<br>Template))
     SysReview -.-> SR((System<br>Review))
     SuccessAnalysis & ChallengeAnalysis -.-> SCD((Success/Challenge<br>Document))
     Technical & Process & Business -.-> Insights((Insight<br>Document))
     Strategic -.-> Actions((Strategic<br>Actions))
-    
+
     class Start,Complete milestone
     class Template,SysReview,ArchReview,ImplementReview,SuccessAnalysis,ChallengeAnalysis,Technical,Process,Business,Strategic,Timeline,Documentation,Integration step
     class Verification verification
@@ -7147,7 +24304,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Reflection<br>Preparation]) --> Template[Load Reflection<br>Template]
     Template --> Data[Gather Project<br>Data]
     Data --> Metrics[Collect Performance<br>Metrics]
@@ -7156,12 +24313,12 @@ flowchart TD
     Schedule --> Participants[Identify<br>Participants]
     Participants --> Agenda[Create Session<br>Agenda]
     Agenda --> Complete([Preparation<br>Complete])
-    
+
     Template -.-> TDoc((Reflection<br>Template))
     Data -.-> ProjData((Project<br>Data))
     Metrics -.-> MetricsDoc((Performance<br>Metrics))
     Feedback -.-> FeedbackDoc((Stakeholder<br>Feedback))
-    
+
     class Start,Complete milestone
     class Template,Data,Metrics,Feedback,Schedule,Participants,Agenda step
     class TDoc,ProjData,MetricsDoc,FeedbackDoc artifact
@@ -7181,7 +24338,7 @@ flowchart TD
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
-    
+
     Start([Begin Reflection<br>Session]) --> Intro[Introduction and<br>Context Setting]
     Intro --> Project[Project Overview<br>Presentation]
     Project --> Success[Success<br>Identification]
@@ -7192,12 +24349,12 @@ flowchart TD
     Actions --> Documentation[Document<br>Outcomes]
     Documentation --> Next[Define Next<br>Steps]
     Next --> Complete([Session<br>Complete])
-    
+
     Success -.-> SuccessDoc((Success<br>Document))
     Challenge -.-> ChallengeDoc((Challenge<br>Document))
     Insights -.-> InsightDoc((Insight<br>Document))
     Actions -.-> ActionDoc((Action<br>Plan))
-    
+
     class Start,Complete milestone
     class Intro,Project,Success,Challenge,Root,Insights,Actions,Documentation,Next step
     class SuccessDoc,ChallengeDoc,InsightDoc,ActionDoc artifact
@@ -7216,7 +24373,7 @@ flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Documentation<br>and Integration]) --> Draft[Draft Reflection<br>Document]
     Draft --> Review[Review with<br>Key Stakeholders]
     Review --> Revise[Incorporate<br>Feedback]
@@ -7228,11 +24385,11 @@ flowchart TD
     Verification -->|Pass| Complete([Documentation<br>Complete])
     Verification -->|Fail| MoreRevision[Address<br>Documentation Gaps]
     MoreRevision --> Verification
-    
+
     Draft -.-> DraftDoc((Draft<br>Document))
     Finalize -.-> FinalDoc((Final<br>Reflection))
     ActionReg -.-> ActReg((Action<br>Register))
-    
+
     class Start,Complete milestone
     class Draft,Review,Revise,Finalize,UpdateMB,ActionReg,Archive,MoreRevision step
     class Verification verification
@@ -7255,7 +24412,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Identify<br>Challenge]) --> What[What<br>Happened?]
     What --> When[When Did<br>It Happen?]
     When --> Where[Where Did<br>It Happen?]
@@ -7268,7 +24425,7 @@ flowchart TD
     Why4 --> Why5[Why?<br>Root Cause]
     Why5 --> Solution[Identify<br>Solution]
     Solution --> Prevent[Prevention<br>Strategy]
-    
+
     class Start milestone
     class What,When,Where,Who,How,Why1,Why2,Why3,Why4,Why5,Solution,Prevent step
 ```
@@ -7278,7 +24435,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Identify<br>Success]) --> Define[Define the<br>Success]
     Define --> Impact[Measure the<br>Impact]
     Impact --> Factors[Identify Contributing<br>Factors]
@@ -7286,7 +24443,7 @@ flowchart TD
     Context --> Patterns[Identify<br>Patterns]
     Patterns --> Generalize[Generalize<br>Approach]
     Generalize --> Apply[Define Where<br>to Apply]
-    
+
     class Start milestone
     class Define,Impact,Factors,Context,Patterns,Generalize,Apply step
 ```
@@ -7296,7 +24453,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     classDef step fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Start([Begin Insight<br>Generation]) --> Observe[Observe<br>Patterns]
     Observe --> Question[Question<br>Assumptions]
     Question --> Connect[Connect<br>Dots]
@@ -7305,7 +24462,7 @@ flowchart TD
     Hypothesize --> Test[Test<br>Hypothesis]
     Test --> Refine[Refine<br>Insight]
     Refine --> Apply[Apply to<br>Future Work]
-    
+
     class Start milestone
     class Observe,Question,Connect,Contrast,Hypothesize,Test,Refine,Apply step
 ```
@@ -7316,17 +24473,17 @@ flowchart TD
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     Reflection[Comprehensive<br>Reflection] --> PB[projectbrief.md]
     Reflection --> PC[productContext.md]
     Reflection --> AC[activeContext.md]
     Reflection --> SP[systemPatterns.md]
     Reflection --> TC[techContext.md]
     Reflection --> P[progress.md]
-    
+
     PB & PC & AC & SP & TC & P --> MBI[Memory Bank<br>Integration]
     MBI --> Next[Enhanced Future<br>Projects]
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class Reflection,MBI,Next process
 ```
@@ -7457,7 +24614,7 @@ For situations requiring a more compact reflection:
 │ tasks. Archiving CANNOT proceed until reflection     │
 │ is completed and verified.                           │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level4/task-tracking-advanced.mdc`
@@ -7465,7 +24622,7 @@ For situations requiring a more compact reflection:
 ```mdc
 ---
 description: Advanced task tracking for Level 4 Complex System tasks
-globs: "**/level4/**", "**/task-tracking/**"
+globs: "**/Level4/**", "**/task-tracking/**"
 alwaysApply: false
 ---
 
@@ -7482,7 +24639,7 @@ flowchart TD
     classDef phase fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef artifact fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef verification fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Start([Begin Task<br>Tracking]) --> Framework[Establish Task<br>Framework]
     Framework --> Hierarchy[Define Task<br>Hierarchy]
     Hierarchy --> Breakdown[Create Work<br>Breakdown Structure]
@@ -7498,7 +24655,7 @@ flowchart TD
     Verification -->|Pass| Complete([Task Tracking<br>Complete])
     Verification -->|Fail| Revise[Revise Task<br>Tracking]
     Revise --> Verification
-    
+
     Framework -.-> TF((Task<br>Framework))
     Hierarchy -.-> TH((Task<br>Hierarchy))
     Breakdown -.-> WBS((Work Breakdown<br>Structure))
@@ -7510,7 +24667,7 @@ flowchart TD
     Quality -.-> QM((Quality<br>Metrics))
     Progress -.-> PT((Progress<br>Tracking))
     Adaptations -.-> AD((Adaptation<br>Document))
-    
+
     class Start,Complete milestone
     class Framework,Hierarchy,Breakdown,Dependencies,Milestones,Schedule,Resources,Risks,Quality,Progress,Adaptations,Revise step
     class Verification verification
@@ -7541,21 +24698,21 @@ flowchart TD
     classDef feature fill:#c5e8b7,stroke:#a5c897,color:#000
     classDef task fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef subtask fill:#d8c1f7,stroke:#b8a1d7,color:#000
-    
+
     System[System-Level Work] --> Component1[Component 1]
     System --> Component2[Component 2]
     System --> Component3[Component 3]
-    
+
     Component1 --> Feature1[Feature 1.1]
     Component1 --> Feature2[Feature 1.2]
-    
+
     Feature1 --> Task1[Task 1.1.1]
     Feature1 --> Task2[Task 1.1.2]
-    
+
     Task1 --> Subtask1[Subtask 1.1.1.1]
     Task1 --> Subtask2[Subtask 1.1.1.2]
     Task1 --> Subtask3[Subtask 1.1.1.3]
-    
+
     class System system
     class Component1,Component2,Component3 component
     class Feature1,Feature2 feature
@@ -7582,7 +24739,7 @@ Each Level 4 task in `tasks.md` follows this comprehensive structure:
 - **Purpose**: [Brief description of system purpose]
 - **Architectural Alignment**: [How the system aligns with architectural principles]
 - **Status**: [Planning/In Progress/Review/Complete]
-- **Milestones**: 
+- **Milestones**:
   - Milestone 1: [Date] - [Status]
   - Milestone 2: [Date] - [Status]
   - Milestone 3: [Date] - [Status]
@@ -7686,7 +24843,7 @@ flowchart TD
     classDef high fill:#f9d77e,stroke:#d9b95c,color:#000
     classDef medium fill:#a8d5ff,stroke:#88b5e0,color:#000
     classDef low fill:#c5e8b7,stroke:#a5c897,color:#000
-    
+
     Task1[Task 1] --> Task2[Task 2]
     Task1 --> Task3[Task 3]
     Task2 --> Task4[Task 4]
@@ -7695,7 +24852,7 @@ flowchart TD
     Task4 --> Task6[Task 6]
     Task5 --> Task7[Task 7]
     Task6 --> Task7
-    
+
     class Task1,Task4,Task7 critical
     class Task2,Task5 high
     class Task3 medium
@@ -7770,16 +24927,16 @@ graph TD
 gantt
     title System Timeline
     dateFormat  YYYY-MM-DD
-    
+
     section Architecture
     Architecture Design    :done, arch, 2023-01-01, 30d
     Architecture Review    :done, arch-rev, after arch, 10d
-    
+
     section Component 1
     Design                 :active, c1-des, after arch-rev, 20d
     Implementation         :c1-imp, after c1-des, 40d
     Testing                :c1-test, after c1-imp, 15d
-    
+
     section Component 2
     Design                 :active, c2-des, after arch-rev, 25d
     Implementation         :c2-imp, after c2-des, 50d
@@ -7876,17 +25033,17 @@ Level 4 task tracking is tightly integrated with the Memory Bank:
 flowchart TD
     classDef memfile fill:#f4b8c4,stroke:#d498a4,color:#000
     classDef process fill:#f9d77e,stroke:#d9b95c,color:#000
-    
+
     TaskTracking[Advanced Task<br>Tracking] --> PB[projectbrief.md]
     TaskTracking --> PC[productContext.md]
     TaskTracking --> AC[activeContext.md]
     TaskTracking --> SP[systemPatterns.md]
     TaskTracking --> TC[techContext.md]
     TaskTracking --> P[progress.md]
-    
+
     P --> TU[Task<br>Updates]
     TU --> TaskTracking
-    
+
     class PB,PC,AC,SP,TC,P memfile
     class TaskTracking,TU process
 ```
@@ -7928,7 +25085,7 @@ For situations requiring a more compact tracking approach:
 │ tracking. All task-related decisions and status      │
 │ updates MUST be reflected in tasks.md.               │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Level4/workflow-level4.mdc`
@@ -7936,7 +25093,7 @@ For situations requiring a more compact tracking approach:
 ```mdc
 ---
 description: Comprehensive workflow for Level 4 Complex System tasks
-globs: "**/level4/**", "**/workflow/**"
+globs: "**/Level4/**", "**/workflow/**"
 alwaysApply: false
 ---
 # COMPREHENSIVE WORKFLOW FOR LEVEL 4 TASKS
@@ -7953,7 +25110,7 @@ graph LR
     Create --> Impl["5. PHASED<br>IMPLEMENTATION"]
     Impl --> Reflect["6. REFLECTION"]
     Reflect --> Archive["7. ARCHIVING"]
-    
+
     %% Document connections for each phase
     Init -.-> InitDocs["INITIALIZATION"]
     Doc -.-> DocDocs["DOCUMENTATION"]
@@ -7969,14 +25126,14 @@ graph LR
 ```mermaid
 graph TD
     L4["Level 4 Task"] --> Assess["Continuous<br>Assessment"]
-    
+
     Assess --> Down["Downgrade to<br>Level 2/3"]
     Assess --> Split["Split into<br>Multiple Tasks"]
-    
+
     Down --> L23Trigger["Triggers:<br>- Less complex<br>- Limited scope<br>- Few components"]
-    
+
     Split --> MultiTrigger["Triggers:<br>- Too large<br>- Independent parts<br>- Parallel possible"]
-    
+
     L23Trigger --> L23Switch["Switch to<br>Level 2/3 Workflow"]
     MultiTrigger --> CreateTasks["Create Multiple<br>Lower Level Tasks"]
 ```
@@ -8338,7 +25495,7 @@ graph TD
     Workflow --> TC["Complete Update<br>techContext.md"]
     Workflow --> TM["Structured Maintenance<br>tasks.md"]
     Workflow --> PM["Enterprise Update<br>progress.md"]
-    
+
     PB & AC & SP & TC & TM & PM --> MB["Memory Bank<br>Integration"]
     MB --> KT["Knowledge<br>Transfer"]
     KT --> NextSystem["Enterprise<br>System Evolution"]
@@ -8357,7 +25514,7 @@ Remember:
 └─────────────────────────────────────────────────────┘
 ```
 
-This ensures that complex systems are designed, implemented, and documented to the highest standards, with enterprise-grade quality and governance. 
+This ensures that complex systems are designed, implemented, and documented to the highest standards, with enterprise-grade quality and governance.
 ```
 
 `.cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-architecture.mdc`
@@ -8383,7 +25540,7 @@ graph TD
     Options --> Eval["4. Option<br>Evaluation"]
     Eval --> Decision["5. Decision &<br>Documentation"]
     Decision --> Valid["6. Validation &<br>Verification"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style Req fill:#ffa64d,stroke:#cc7a30,color:white
     style Comp fill:#4dbb5f,stroke:#36873f,color:white
@@ -8457,7 +25614,7 @@ graph TD
     C5["Cost"]
     C6["Time to Market"]
     end
-    
+
     style C1 fill:#4dbb5f,stroke:#36873f,color:white
     style C2 fill:#ffa64d,stroke:#cc7a30,color:white
     style C3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -8475,11 +25632,11 @@ graph TD
     C1["Component 1"]
     C2["Component 2"]
     C3["Component 3"]
-    
+
     C1 -->|"Interface 1"| C2
     C2 -->|"Interface 2"| C3
     end
-    
+
     style C1 fill:#4dbb5f,stroke:#36873f,color:white
     style C2 fill:#ffa64d,stroke:#cc7a30,color:white
     style C3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -8491,7 +25648,7 @@ sequenceDiagram
     participant C1 as Component 1
     participant C2 as Component 2
     participant C3 as Component 3
-    
+
     C1->>C2: Request
     C2->>C3: Process
     C3-->>C2: Response
@@ -8530,9 +25687,9 @@ graph TD
     R3["Performance<br>Review"]
     R4["Final<br>Approval"]
     end
-    
+
     R1 --> R2 --> R3 --> R4
-    
+
     style R1 fill:#4dbb5f,stroke:#36873f,color:white
     style R2 fill:#ffa64d,stroke:#cc7a30,color:white
     style R3 fill:#d94dbb,stroke:#a3378a,color:white
@@ -8543,13 +25700,13 @@ graph TD
 
 ```mermaid
 graph TD
-    Current["Current Document"] --> Active["Active:<br>- creative-phase-architecture.md"]
-    Current --> Related["Related:<br>- creative-phase-enforcement.md<br>- planning-comprehensive.md"]
-    
+    Current["Current Document"] --> Active["Active:<br>- creative-phase-architecture.mdc"]
+    Current --> Related["Related:<br>- creative-phase-enforcement.mdc<br>- planning-comprehensive.mdc"]
+
     style Current fill:#4da6ff,stroke:#0066cc,color:white
     style Active fill:#4dbb5f,stroke:#36873f,color:white
     style Related fill:#ffa64d,stroke:#cc7a30,color:white
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-uiux.mdc`
@@ -9012,6 +26169,501 @@ This template significantly reduces token usage by:
 5. Using visual indicators (emojis) for quick scanning
 
 The template maintains the rigor of the creative process while improving token efficiency by approximately 60% over the previous format.
+```
+
+`.cursor/rules/isolation_rules/Testing/bun-testing-framework.mdc`
+
+```mdc
+---
+description:
+globs:
+alwaysApply: false
+---
+# BUN TESTING FRAMEWORK INTEGRATION
+
+This file implements comprehensive testing rules (Rules #8-16) using Bun as the testing framework.
+
+## CORE TESTING PRINCIPLES
+
+### Rule #8: Высокогранулированные тесты
+**Implementation**: Each function/method must have dedicated tests
+```bash
+# Execute high-granularity tests
+bun test --reporter=verbose --coverage
+```
+
+**Test Structure Requirements**:
+- Each function has its own test file or test suite
+- Individual behaviors tested separately
+- Different input scenarios covered comprehensively
+- Both happy path and error path testing
+
+**Example Test Structure**:
+```typescript
+// user.test.ts
+import { expect, test, describe } from "bun:test";
+import { User } from "../src/user";
+
+describe("User", () => {
+  describe("constructor", () => {
+    test("should create user with valid data", () => {
+      const user = new User("john", "john@example.com");
+      expect(user.name).toBe("john");
+      expect(user.email).toBe("john@example.com");
+    });
+
+    test("should throw error with invalid email", () => {
+      expect(() => new User("john", "invalid-email")).toThrow();
+    });
+  });
+
+  describe("updateEmail", () => {
+    test("should update email with valid format", () => {
+      const user = new User("john", "john@example.com");
+      user.updateEmail("newemail@example.com");
+      expect(user.email).toBe("newemail@example.com");
+    });
+
+    test("should reject invalid email format", () => {
+      const user = new User("john", "john@example.com");
+      expect(() => user.updateEmail("invalid")).toThrow();
+    });
+  });
+});
+```
+
+### Rule #9: Изоляция контекста между тестами
+**Implementation**: Complete test isolation with clean setup/teardown
+```bash
+# Clean cache between test runs
+bun test --clean-cache
+```
+
+**Isolation Requirements**:
+- No shared state between test cases
+- Independent test execution
+- Clean setup before each test
+- Proper teardown after each test
+
+**Example Isolation Pattern**:
+```typescript
+import { beforeEach, afterEach, test } from "bun:test";
+
+describe("Database operations", () => {
+  let db: Database;
+
+  beforeEach(async () => {
+    // Clean setup for each test
+    db = new Database();
+    await db.connect();
+    await db.clear(); // Ensure clean state
+  });
+
+  afterEach(async () => {
+    // Clean teardown after each test
+    await db.close();
+    db = null;
+  });
+
+  test("should insert user", async () => {
+    // Test runs in isolation
+    const user = await db.insertUser({ name: "test" });
+    expect(user.id).toBeDefined();
+  });
+
+  test("should find user", async () => {
+    // This test doesn't depend on previous test
+    await db.insertUser({ name: "test" });
+    const user = await db.findUser("test");
+    expect(user).toBeDefined();
+  });
+});
+```
+
+### Rule #10: Обязательное тестирование каждой фичи
+**Implementation**: No feature is complete without tests
+
+**Feature Testing Checklist**:
+- [ ] Unit tests for core functionality
+- [ ] Integration tests for feature interactions
+- [ ] End-to-end tests for user workflows
+- [ ] Error handling tests
+- [ ] Edge case tests
+
+**Example Feature Test Coverage**:
+```typescript
+// Feature: User Authentication
+describe("User Authentication Feature", () => {
+  // Unit tests
+  describe("Password validation", () => {
+    test("should accept strong password", () => {
+      expect(validatePassword("StrongP@ss123")).toBe(true);
+    });
+    
+    test("should reject weak password", () => {
+      expect(validatePassword("weak")).toBe(false);
+    });
+  });
+
+  // Integration tests
+  describe("Login flow", () => {
+    test("should authenticate valid user", async () => {
+      const result = await authenticateUser("user@example.com", "password");
+      expect(result.success).toBe(true);
+    });
+  });
+
+  // End-to-end tests
+  describe("Complete authentication workflow", () => {
+    test("should complete full login process", async () => {
+      // Test complete user journey
+    });
+  });
+});
+```
+
+### Rule #11: Проверка покрытия функционала
+**Implementation**: Continuous coverage monitoring
+```bash
+# Generate coverage reports
+bun test --coverage --coverage-reporter=text-summary
+bun test --coverage --coverage-reporter=html
+```
+
+**Coverage Targets**:
+- Critical paths: 95%+
+- Core functions: 90%+
+- Utility functions: 80%+
+- Edge cases: 70%+
+
+**Coverage Configuration**:
+```json
+{
+  "scripts": {
+    "test:coverage": "bun test --coverage",
+    "test:coverage:html": "bun test --coverage --coverage-reporter=html",
+    "test:coverage:check": "bun test --coverage --coverage-threshold=90"
+  }
+}
+```
+
+### Rule #12: Тестирование edge cases
+**Implementation**: Comprehensive boundary and error testing
+
+**Edge Case Categories**:
+- Boundary conditions (min/max values)
+- Null/undefined inputs
+- Empty collections
+- Network failures
+- Resource exhaustion
+
+**Example Edge Case Tests**:
+```typescript
+describe("Edge cases", () => {
+  test("should handle null input", () => {
+    expect(() => processData(null)).not.toThrow();
+  });
+
+  test("should handle empty array", () => {
+    const result = processArray([]);
+    expect(result).toEqual([]);
+  });
+
+  test("should handle maximum integer", () => {
+    const result = calculateValue(Number.MAX_SAFE_INTEGER);
+    expect(result).toBeDefined();
+  });
+
+  test("should handle network timeout", async () => {
+    // Mock network timeout
+    const mockFetch = jest.fn().mockRejectedValue(new Error("Timeout"));
+    const result = await fetchDataWithRetry();
+    expect(result).toBeNull();
+  });
+});
+```
+
+### Rule #13: Тестирование производительности
+**Implementation**: Performance benchmarks and regression testing
+```bash
+# Run performance tests with extended timeout
+bun test --timeout=30000 performance/*.test.ts
+```
+
+**Performance Test Structure**:
+```typescript
+import { test, expect } from "bun:test";
+
+describe("Performance tests", () => {
+  test("should process large dataset within time limit", async () => {
+    const largeDataset = generateLargeDataset(10000);
+    
+    const start = performance.now();
+    const result = await processLargeDataset(largeDataset);
+    const duration = performance.now() - start;
+    
+    expect(result).toBeDefined();
+    expect(duration).toBeLessThan(1000); // Should complete within 1 second
+  });
+
+  test("should handle concurrent requests efficiently", async () => {
+    const requests = Array(100).fill(0).map(() => makeRequest());
+    
+    const start = performance.now();
+    const results = await Promise.all(requests);
+    const duration = performance.now() - start;
+    
+    expect(results).toHaveLength(100);
+    expect(duration).toBeLessThan(5000); // Should complete within 5 seconds
+  });
+});
+```
+
+### Rule #14: Высокоточное измерение времени
+**Implementation**: Precise timing measurements for performance validation
+
+**Timing Pattern**:
+```typescript
+import { test, expect } from "bun:test";
+
+function measurePerformance<T>(operation: () => T): { result: T; duration: number } {
+  const start = performance.now();
+  const result = operation();
+  const duration = performance.now() - start;
+  return { result, duration };
+}
+
+test("should measure operation timing precisely", () => {
+  const { result, duration } = measurePerformance(() => {
+    // Operation to measure
+    return expensiveCalculation();
+  });
+  
+  expect(result).toBeDefined();
+  expect(duration).toBeGreaterThan(0);
+  console.log(`Operation took ${duration.toFixed(3)}ms`);
+});
+```
+
+### Rule #15: Устойчивая генерация ID
+**Implementation**: Cryptographically secure ID generation testing
+
+**ID Generation Tests**:
+```typescript
+import { test, expect } from "bun:test";
+import { generateSecureId, generateUUID } from "../src/utils/id";
+
+describe("ID Generation", () => {
+  test("should generate unique IDs", () => {
+    const ids = new Set();
+    for (let i = 0; i < 10000; i++) {
+      const id = generateSecureId();
+      expect(ids.has(id)).toBe(false);
+      ids.add(id);
+    }
+  });
+
+  test("should generate cryptographically secure IDs", () => {
+    const id = generateSecureId();
+    expect(id).toMatch(/^[a-f0-9]{32}$/); // 32 character hex string
+    expect(id.length).toBe(32);
+  });
+
+  test("should handle concurrent ID generation", async () => {
+    const promises = Array(1000).fill(0).map(() => 
+      Promise.resolve(generateSecureId())
+    );
+    
+    const ids = await Promise.all(promises);
+    const uniqueIds = new Set(ids);
+    
+    expect(uniqueIds.size).toBe(1000); // All IDs should be unique
+  });
+});
+```
+
+### Rule #16: Тестирование временных коллизий
+**Implementation**: Concurrency and race condition testing
+
+**Concurrency Test Patterns**:
+```typescript
+import { test, expect } from "bun:test";
+
+describe("Concurrency tests", () => {
+  test("should handle race conditions safely", async () => {
+    let counter = 0;
+    const increment = () => {
+      const current = counter;
+      // Simulate async operation
+      return new Promise(resolve => {
+        setTimeout(() => {
+          counter = current + 1;
+          resolve(counter);
+        }, Math.random() * 10);
+      });
+    };
+
+    // Start multiple concurrent operations
+    const promises = Array(100).fill(0).map(() => increment());
+    await Promise.all(promises);
+    
+    // With proper synchronization, counter should be 100
+    expect(counter).toBe(100);
+  });
+
+  test("should handle timeout scenarios", async () => {
+    const timeoutOperation = () => new Promise((resolve, reject) => {
+      setTimeout(() => reject(new Error("Timeout")), 1000);
+    });
+
+    await expect(timeoutOperation()).rejects.toThrow("Timeout");
+  });
+
+  test("should handle retry mechanisms", async () => {
+    let attempts = 0;
+    const unreliableOperation = () => {
+      attempts++;
+      if (attempts < 3) {
+        throw new Error("Temporary failure");
+      }
+      return "success";
+    };
+
+    const result = await retryOperation(unreliableOperation, 3);
+    expect(result).toBe("success");
+    expect(attempts).toBe(3);
+  });
+});
+```
+
+## BUN-SPECIFIC TESTING FEATURES
+
+### Built-in Test Runner
+```bash
+# Basic test execution
+bun test
+
+# Verbose output
+bun test --reporter=verbose
+
+# Watch mode
+bun test --watch
+
+# Specific test file
+bun test user.test.ts
+
+# Test pattern matching
+bun test --grep "user authentication"
+```
+
+### Built-in Mocking
+```typescript
+import { mock, spyOn } from "bun:test";
+
+test("should mock external dependencies", () => {
+  const mockFetch = mock(() => Promise.resolve({ json: () => ({ data: "test" }) }));
+  
+  // Use mock in test
+  const result = await fetchData();
+  expect(mockFetch).toHaveBeenCalled();
+});
+
+test("should spy on method calls", () => {
+  const spy = spyOn(console, "log");
+  
+  logMessage("test");
+  
+  expect(spy).toHaveBeenCalledWith("test");
+  spy.mockRestore();
+});
+```
+
+### Performance Testing with Bun
+```typescript
+import { bench, run } from "bun:test";
+
+bench("array iteration", () => {
+  const arr = Array(1000).fill(0);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = i * 2;
+  }
+});
+
+bench("array map", () => {
+  const arr = Array(1000).fill(0);
+  arr.map((_, i) => i * 2);
+});
+
+// Run benchmarks
+await run();
+```
+
+## INTEGRATION WITH MEMORY BANK
+
+### Test Execution Logging
+All test executions are logged to `memory-bank/development/test-reports.md`:
+- Test command executed
+- Results summary
+- Coverage metrics
+- Performance benchmarks
+- Failed test analysis
+
+### Progress Tracking Integration
+Test results update the rule compliance status in `memory-bank/progress.md`:
+- Rule #8-16 compliance status
+- Test coverage metrics
+- Performance benchmark status
+- Quality gate validation
+
+### Mode Integration
+- **IMPLEMENT Mode**: Automatic test execution after code changes
+- **QA Mode**: Comprehensive test suite validation
+- **REFLECT Mode**: Test results analysis and improvement recommendations
+
+## CONTINUOUS INTEGRATION
+
+### Pre-commit Testing
+```bash
+#!/bin/sh
+# .git/hooks/pre-commit
+bun test --coverage
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Commit aborted."
+  exit 1
+fi
+```
+
+### CI/CD Pipeline
+```yaml
+# .github/workflows/test.yml
+name: Test Suite
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: bun test --coverage
+      - run: bun test performance/*.test.ts
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+```
+
+## QUALITY GATES
+
+### Test Quality Checklist
+- [ ] All functions have unit tests
+- [ ] Integration tests cover component interactions
+- [ ] End-to-end tests cover user workflows
+- [ ] Edge cases are comprehensively tested
+- [ ] Performance benchmarks are met
+- [ ] Test coverage targets achieved
+- [ ] No flaky tests in the suite
+- [ ] Tests run in isolation
+- [ ] Concurrency scenarios tested
+
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/build-test.mdc`
@@ -9503,12 +27155,6 @@ function Validate-Environment {
 
 **Next Step (on PASS):** Load `van-qa-checks/build-test.mdc`.
 **Next Step (on FAIL):** Check `van-qa-utils/common-fixes.mdc` for environment fixes. 
-```
-
-`.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/file-verification.mdc`
-
-```mdc
- 
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/common-fixes.mdc`
@@ -10441,33 +28087,41 @@ graph TD
     DetectOS --> CheckPath["Check Path Separator Format"]
     CheckPath --> AdaptCmds["Adapt Commands if Needed"]
     AdaptCmds --> PlatformCP["⛔ PLATFORM CHECKPOINT"]
-    
+
     %% Add Critical Memory Bank Checkpoint
     PlatformCP --> MemoryBankCheck{"Memory Bank<br>Exists?"}
     MemoryBankCheck -->|"No"| CreateMemoryBank["CREATE MEMORY BANK<br>[CRITICAL STEP]"]
-    MemoryBankCheck -->|"Yes"| BasicFileVerify["BASIC FILE VERIFICATION"]
+    MemoryBankCheck -->|"Yes"| TaskContinuityCheck["🔄 TASK CONTINUITY CHECK<br>[UNIFIED FEATURE]"]
     CreateMemoryBank --> MemoryBankCP["⛔ MEMORY BANK VERIFICATION [REQUIRED]"]
-    MemoryBankCP --> BasicFileVerify
-    
+    MemoryBankCP --> TaskContinuityCheck
+
+    %% Task Continuity Processing
+    TaskContinuityCheck --> MigrationCheck{"migration.md<br>Exists?"}
+    MigrationCheck -->|"Yes"| ProcessMigration["📦 Process Task Migration<br>[UNIFIED PROCESS]"]
+    MigrationCheck -->|"No"| BasicFileVerify["BASIC FILE VERIFICATION"]
+    ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
+    IntegrateUnfinished --> ArchiveMigration["📁 Archive migration.md<br>to archive/"]
+    ArchiveMigration --> BasicFileVerify
+
     %% Basic File Verification with checkpoint
     BasicFileVerify --> BatchCheck["Batch Check Essential Components"]
     BatchCheck --> BatchCreate["Batch Create Essential Structure"]
     BatchCreate --> BasicFileCP["⛔ BASIC FILE CHECKPOINT"]
-    
+
     %% Early Complexity Determination
     BasicFileCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
     EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
-    
+
     %% Level handling paths
     EarlyLevelCheck -->|"Level 1"| ComplexityCP["⛔ COMPLEXITY CHECKPOINT"]
     EarlyLevelCheck -->|"Level 2-4"| CRITICALGATE["🚫 CRITICAL GATE: FORCE MODE SWITCH"]
     CRITICALGATE --> ForceExit["Exit to PLAN mode"]
-    
+
     %% Level 1 continues normally
     ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK"]
     InitSystem --> Complete1["LEVEL 1 INITIALIZATION COMPLETE"]
-    
+
     %% For Level 2+ tasks after PLAN and CREATIVE modes
     ForceExit -.-> OtherModes["PLAN → CREATIVE modes"]
     OtherModes -.-> VANQA["VAN QA MODE"]
@@ -10476,12 +28130,17 @@ graph TD
     QACheck -->|"Yes"| BUILD["To BUILD MODE"]
     QACheck -->|"No"| FixIssues["Fix Technical Issues"]
     FixIssues --> QAProcess
-    
+
     %% Style nodes
     style PlatformCP fill:#f55,stroke:#d44,color:white
     style MemoryBankCP fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style MemoryBankCheck fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style CreateMemoryBank fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
+    style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:3px
+    style MigrationCheck fill:#b3ffb3,stroke:#80ff80,color:black
+    style ProcessMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style IntegrateUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
+    style ArchiveMigration fill:#b3ffb3,stroke:#80ff80,color:black
     style BasicFileCP fill:#f55,stroke:#d44,color:white
     style ComplexityCP fill:#f55,stroke:#d44,color:white
     style CRITICALGATE fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
@@ -10500,22 +28159,22 @@ graph TD
     CheckOS --> Win["Windows"]
     CheckOS --> Mac["macOS"]
     CheckOS --> Lin["Linux"]
-    
+
     Win & Mac & Lin --> Adapt["Adapt Commands<br>for Platform"]
-    
+
     Win --> WinPath["Path: Backslash (\\)"]
     Mac --> MacPath["Path: Forward Slash (/)"]
     Lin --> LinPath["Path: Forward Slash (/)"]
-    
+
     Win --> WinCmd["Command Adaptations:<br>dir, icacls, etc."]
     Mac --> MacCmd["Command Adaptations:<br>ls, chmod, etc."]
     Lin --> LinCmd["Command Adaptations:<br>ls, chmod, etc."]
-    
+
     WinPath & MacPath & LinPath --> PathCP["Path Separator<br>Checkpoint"]
     WinCmd & MacCmd & LinCmd --> CmdCP["Command<br>Checkpoint"]
-    
+
     PathCP & CmdCP --> PlatformComplete["Platform Detection<br>Complete"]
-    
+
     style PD fill:#4da6ff,stroke:#0066cc,color:white
     style PlatformComplete fill:#10b981,stroke:#059669,color:white
 ```
@@ -10527,21 +28186,21 @@ graph TD
     FV["File Verification"] --> CheckFiles["Check Essential Files"]
     CheckFiles --> CheckMB["Check Memory Bank<br>Structure"]
     CheckMB --> MBExists{"Memory Bank<br>Exists?"}
-    
+
     MBExists -->|"Yes"| VerifyMB["Verify Memory Bank<br>Contents"]
     MBExists -->|"No"| CreateMB["Create Memory Bank<br>Structure"]
-    
+
     CheckFiles --> CheckDocs["Check Documentation<br>Files"]
     CheckDocs --> DocsExist{"Docs<br>Exist?"}
-    
+
     DocsExist -->|"Yes"| VerifyDocs["Verify Documentation<br>Structure"]
     DocsExist -->|"No"| CreateDocs["Create Documentation<br>Structure"]
-    
+
     VerifyMB & CreateMB --> MBCP["Memory Bank<br>Checkpoint"]
     VerifyDocs & CreateDocs --> DocsCP["Documentation<br>Checkpoint"]
-    
+
     MBCP & DocsCP --> FileComplete["File Verification<br>Complete"]
-    
+
     style FV fill:#4da6ff,stroke:#0066cc,color:white
     style FileComplete fill:#10b981,stroke:#059669,color:white
     style MBCP fill:#f6546a,stroke:#c30052,color:white
@@ -10553,21 +28212,21 @@ graph TD
 ```mermaid
 graph TD
     CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements"]
-    
+
     AnalyzeTask --> CheckKeywords["Check Task<br>Keywords"]
     CheckKeywords --> ScopeCheck["Assess<br>Scope Impact"]
     ScopeCheck --> RiskCheck["Evaluate<br>Risk Level"]
     RiskCheck --> EffortCheck["Estimate<br>Implementation Effort"]
-    
+
     EffortCheck --> DetermineLevel{"Determine<br>Complexity Level"}
     DetermineLevel -->|"Level 1"| L1["Level 1:<br>Quick Bug Fix"]
     DetermineLevel -->|"Level 2"| L2["Level 2:<br>Simple Enhancement"]
     DetermineLevel -->|"Level 3"| L3["Level 3:<br>Intermediate Feature"]
     DetermineLevel -->|"Level 4"| L4["Level 4:<br>Complex System"]
-    
+
     L1 --> CDComplete["Complexity Determination<br>Complete"]
     L2 & L3 & L4 --> ModeSwitch["Force Mode Switch<br>to PLAN"]
-    
+
     style CD fill:#4da6ff,stroke:#0066cc,color:white
     style CDComplete fill:#10b981,stroke:#059669,color:white
     style ModeSwitch fill:#ff0000,stroke:#990000,color:white
@@ -10580,13 +28239,13 @@ The full workflow includes technical validation before implementation:
 
 ```mermaid
 flowchart LR
-    VAN1["VAN MODE 
+    VAN1["VAN MODE
     (Initial Analysis)"] --> PLAN["PLAN MODE
     (Task Planning)"]
     PLAN --> CREATIVE["CREATIVE MODE
     (Design Decisions)"]
     CREATIVE --> VANQA["VAN QA MODE
-    (Technical Validation)"] 
+    (Technical Validation)"]
     VANQA --> BUILD["BUILD MODE
     (Implementation)"]
 ```
@@ -10598,21 +28257,21 @@ The VAN QA technical validation process consists of four key validation points:
 ```mermaid
 graph TD
     VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
-    
+
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION<br>Check all required packages"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION<br>Verify format & compatibility"]
     ConfigCheck --> EnvCheck["3️⃣ ENVIRONMENT VALIDATION<br>Check build environment"]
     EnvCheck --> MinBuildCheck["4️⃣ MINIMAL BUILD TEST<br>Test core functionality"]
-    
+
     MinBuildCheck --> ValidationResults{"All Checks<br>Passed?"}
     ValidationResults -->|"Yes"| SuccessReport["GENERATE SUCCESS REPORT"]
     ValidationResults -->|"No"| FailureReport["GENERATE FAILURE REPORT"]
-    
+
     SuccessReport --> BUILD["Proceed to BUILD MODE"]
     FailureReport --> FixIssues["Fix Technical Issues"]
     FixIssues --> ReValidate["Re-validate"]
     ReValidate --> ValidationResults
-    
+
     style VANQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
@@ -10673,7 +28332,7 @@ graph TD
     CheckQA -->|"No or Failed"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
     Message --> ReturnToVANQA["Prompt: Type VAN QA"]
-    
+
     style CheckQA fill:#f6546a,stroke:#c30052,color:white
     style BlockBuild fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style Message fill:#ff5555,stroke:#dd3333,color:white
@@ -10691,12 +28350,12 @@ graph TD
     CurrentTask --> LoadQA["Load QA Mode Map"]
     LoadQA --> RunQA["Execute QA Validation Process"]
     RunQA --> QAResults{"QA Results"}
-    
+
     QAResults -->|"PASS"| ResumeFlow["Resume Prior Process Flow"]
     QAResults -->|"FAIL"| FixIssues["Fix Identified Issues"]
     FixIssues --> ReRunQA["Re-run QA Validation"]
     ReRunQA --> QAResults
-    
+
     style UserQA fill:#f8d486,stroke:#e8b84d,color:black
     style HighPriority fill:#ff0000,stroke:#cc0000,color:white,stroke-width:3px
     style LoadQA fill:#4da6ff,stroke:#0066cc,color:white
@@ -10757,7 +28416,7 @@ User: VAN QA
 Response: OK VAN QA - Beginning Technical Validation
 ```
 
-This ensures clear communication about which phase of VAN mode is active. 
+This ensures clear communication about which phase of VAN mode is active.
 
 ## 🔍 DETAILED QA VALIDATION PROCESS
 
@@ -10770,17 +28429,17 @@ graph TD
     Start["Dependency Verification"] --> ReadDeps["Read Required Dependencies<br>from Creative Phase"]
     ReadDeps --> CheckInstalled["Check if Dependencies<br>are Installed"]
     CheckInstalled --> DepStatus{"All Dependencies<br>Installed?"}
-    
+
     DepStatus -->|"Yes"| VerifyVersions["Verify Versions<br>and Compatibility"]
     DepStatus -->|"No"| InstallMissing["Install Missing<br>Dependencies"]
     InstallMissing --> VerifyVersions
-    
+
     VerifyVersions --> VersionStatus{"Versions<br>Compatible?"}
     VersionStatus -->|"Yes"| DepSuccess["Dependencies Verified<br>✅ PASS"]
     VersionStatus -->|"No"| UpgradeVersions["Upgrade/Downgrade<br>as Needed"]
     UpgradeVersions --> RetryVerify["Retry Verification"]
     RetryVerify --> VersionStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style DepSuccess fill:#10b981,stroke:#059669,color:white
     style DepStatus fill:#f6546a,stroke:#c30052,color:white
@@ -10795,10 +28454,10 @@ function Verify-Dependencies {
         "node" = ">=14.0.0"
         "npm" = ">=6.0.0"
     }
-    
+
     $missingDeps = @()
     $incompatibleDeps = @()
-    
+
     # Check Node.js version
     $nodeVersion = $null
     try {
@@ -10812,7 +28471,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "node"
     }
-    
+
     # Check npm version
     $npmVersion = $null
     try {
@@ -10826,7 +28485,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "npm"
     }
-    
+
     # Display results
     if ($missingDeps.Count -eq 0 -and $incompatibleDeps.Count -eq 0) {
         Write-Output "✅ All dependencies verified and compatible"
@@ -10851,7 +28510,7 @@ function Verify-Dependencies {
 verify_dependencies() {
     local missing_deps=()
     local incompatible_deps=()
-    
+
     # Check Node.js version
     if command -v node &> /dev/null; then
         local node_version=$(node -v)
@@ -10864,7 +28523,7 @@ verify_dependencies() {
     else
         missing_deps+=("node")
     fi
-    
+
     # Check npm version
     if command -v npm &> /dev/null; then
         local npm_version=$(npm -v)
@@ -10877,7 +28536,7 @@ verify_dependencies() {
     else
         missing_deps+=("npm")
     fi
-    
+
     # Display results
     if [ ${#missing_deps[@]} -eq 0 ] && [ ${#incompatible_deps[@]} -eq 0 ]; then
         echo "✅ All dependencies verified and compatible"
@@ -10904,23 +28563,23 @@ graph TD
     IdentifyConfigs --> ReadConfigs["Read Configuration<br>Files"]
     ReadConfigs --> ValidateSyntax["Validate Syntax<br>and Format"]
     ValidateSyntax --> SyntaxStatus{"Syntax<br>Valid?"}
-    
+
     SyntaxStatus -->|"Yes"| CheckCompatibility["Check Compatibility<br>with Platform"]
     SyntaxStatus -->|"No"| FixSyntax["Fix Syntax<br>Errors"]
     FixSyntax --> RetryValidate["Retry Validation"]
     RetryValidate --> SyntaxStatus
-    
+
     CheckCompatibility --> CompatStatus{"Compatible with<br>Platform?"}
     CompatStatus -->|"Yes"| ConfigSuccess["Configurations Validated<br>✅ PASS"]
     CompatStatus -->|"No"| AdaptConfigs["Adapt Configurations<br>for Platform"]
     AdaptConfigs --> RetryCompat["Retry Compatibility<br>Check"]
     RetryCompat --> CompatStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ConfigSuccess fill:#10b981,stroke:#059669,color:white
     style SyntaxStatus fill:#f6546a,stroke:#c30052,color:white
     style CompatStatus fill:#f6546a,stroke:#c30052,color:white
-``` 
+```
 
 #### Configuration Validation Implementation:
 ```powershell
@@ -10931,10 +28590,10 @@ function Validate-Configurations {
         "tsconfig.json",
         "vite.config.js"
     )
-    
+
     $invalidConfigs = @()
     $incompatibleConfigs = @()
-    
+
     foreach ($configFile in $configFiles) {
         if (Test-Path $configFile) {
             # Check JSON syntax for JSON files
@@ -10946,7 +28605,7 @@ function Validate-Configurations {
                     continue
                 }
             }
-            
+
             # Specific configuration compatibility checks
             if ($configFile -eq "vite.config.js") {
                 $content = Get-Content $configFile -Raw
@@ -10959,7 +28618,7 @@ function Validate-Configurations {
             $invalidConfigs += "$configFile (file not found)"
         }
     }
-    
+
     # Display results
     if ($invalidConfigs.Count -eq 0 -and $incompatibleConfigs.Count -eq 0) {
         Write-Output "✅ All configurations validated and compatible"
@@ -10985,18 +28644,18 @@ graph TD
     Start["Environment Validation"] --> CheckEnv["Check Build Environment"]
     CheckEnv --> VerifyBuildTools["Verify Build Tools"]
     VerifyBuildTools --> ToolsStatus{"Build Tools<br>Available?"}
-    
+
     ToolsStatus -->|"Yes"| CheckPerms["Check Permissions<br>and Access"]
     ToolsStatus -->|"No"| InstallTools["Install Required<br>Build Tools"]
     InstallTools --> RetryTools["Retry Verification"]
     RetryTools --> ToolsStatus
-    
+
     CheckPerms --> PermsStatus{"Permissions<br>Sufficient?"}
     PermsStatus -->|"Yes"| EnvSuccess["Environment Validated<br>✅ PASS"]
     PermsStatus -->|"No"| FixPerms["Fix Permission<br>Issues"]
     FixPerms --> RetryPerms["Retry Permission<br>Check"]
     RetryPerms --> PermsStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style EnvSuccess fill:#10b981,stroke:#059669,color:white
     style ToolsStatus fill:#f6546a,stroke:#c30052,color:white
@@ -11012,10 +28671,10 @@ function Validate-Environment {
         @{Name = "node"; Command = "node --version"},
         @{Name = "npm"; Command = "npm --version"}
     )
-    
+
     $missingTools = @()
     $permissionIssues = @()
-    
+
     # Check build tools
     foreach ($tool in $requiredTools) {
         try {
@@ -11024,7 +28683,7 @@ function Validate-Environment {
             $missingTools += $tool.Name
         }
     }
-    
+
     # Check write permissions in project directory
     try {
         $testFile = ".__permission_test"
@@ -11033,7 +28692,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Current directory (write permission denied)"
     }
-    
+
     # Check if port 3000 is available (commonly used for dev servers)
     try {
         $listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Loopback, 3000)
@@ -11042,7 +28701,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Port 3000 (already in use or access denied)"
     }
-    
+
     # Display results
     if ($missingTools.Count -eq 0 -and $permissionIssues.Count -eq 0) {
         Write-Output "✅ Environment validated successfully"
@@ -11068,18 +28727,18 @@ graph TD
     Start["Minimal Build Test"] --> CreateTest["Create Minimal<br>Test Project"]
     CreateTest --> BuildTest["Attempt<br>Build"]
     BuildTest --> BuildStatus{"Build<br>Successful?"}
-    
+
     BuildStatus -->|"Yes"| RunTest["Run Basic<br>Functionality Test"]
     BuildStatus -->|"No"| FixBuild["Fix Build<br>Issues"]
     FixBuild --> RetryBuild["Retry Build"]
     RetryBuild --> BuildStatus
-    
+
     RunTest --> TestStatus{"Test<br>Passed?"}
     TestStatus -->|"Yes"| TestSuccess["Minimal Build Test<br>✅ PASS"]
     TestStatus -->|"No"| FixTest["Fix Test<br>Issues"]
     FixTest --> RetryTest["Retry Test"]
     RetryTest --> TestStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style TestSuccess fill:#10b981,stroke:#059669,color:white
     style BuildStatus fill:#f6546a,stroke:#c30052,color:white
@@ -11092,18 +28751,18 @@ graph TD
 function Perform-MinimalBuildTest {
     $buildSuccess = $false
     $testSuccess = $false
-    
+
     # Create minimal test project
     $testDir = ".__build_test"
     if (Test-Path $testDir) {
         Remove-Item -Path $testDir -Recurse -Force
     }
-    
+
     try {
         # Create minimal test directory
         New-Item -Path $testDir -ItemType Directory | Out-Null
         Push-Location $testDir
-        
+
         # Initialize minimal package.json
         @"
 {
@@ -11116,20 +28775,20 @@ function Perform-MinimalBuildTest {
   }
 }
 "@ | Set-Content -Path "package.json"
-        
+
         # Attempt build
         npm run build | Out-Null
         $buildSuccess = $true
-        
+
         # Create minimal test file
         @"
 console.log('Test successful');
 "@ | Set-Content -Path "index.js"
-        
+
         # Run basic test
         node index.js | Out-Null
         $testSuccess = $true
-        
+
     } catch {
         Write-Output "❌ Build test failed: $($_.Exception.Message)"
     } finally {
@@ -11138,7 +28797,7 @@ console.log('Test successful');
             Remove-Item -Path $testDir -Recurse -Force
         }
     }
-    
+
     # Display results
     if ($buildSuccess -and $testSuccess) {
         Write-Output "✅ Minimal build test passed successfully"
@@ -11230,7 +28889,7 @@ graph TD
     ExtractTech --> ExtractDeps["Extract Required<br>Dependencies"]
     ExtractDeps --> BuildValidationPlan["Build Validation<br>Plan"]
     BuildValidationPlan --> StartValidation["Start Four-Point<br>Validation Process"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ExtractTech fill:#f6546a,stroke:#c30052,color:white
     style BuildValidationPlan fill:#10b981,stroke:#059669,color:white
@@ -11242,27 +28901,27 @@ graph TD
 # Example: Extract technology choices from creative phase documentation
 function Extract-TechnologyChoices {
     $techChoices = @{}
-    
+
     # Read from systemPatterns.md
     if (Test-Path "memory-bank\systemPatterns.md") {
         $content = Get-Content "memory-bank\systemPatterns.md" -Raw
-        
+
         # Extract framework choice
         if ($content -match "Framework:\s*(\w+)") {
             $techChoices["framework"] = $Matches[1]
         }
-        
+
         # Extract UI library choice
         if ($content -match "UI Library:\s*(\w+)") {
             $techChoices["ui_library"] = $Matches[1]
         }
-        
+
         # Extract state management choice
         if ($content -match "State Management:\s*([^\\n]+)") {
             $techChoices["state_management"] = $Matches[1].Trim()
         }
     }
-    
+
     return $techChoices
 }
 ```
@@ -11275,14 +28934,14 @@ If QA validation fails, the system prevents moving to BUILD mode:
 # Example: Enforce QA validation before allowing BUILD mode
 function Check-QAValidationStatus {
     $qaStatusFile = "memory-bank\.qa_validation_status"
-    
+
     if (Test-Path $qaStatusFile) {
         $status = Get-Content $qaStatusFile -Raw
         if ($status -match "PASS") {
             return $true
         }
     }
-    
+
     # Display block message
     Write-Output "`n`n"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
@@ -11293,7 +28952,7 @@ function Check-QAValidationStatus {
     Write-Output "`n"
     Write-Output "🚫 NO IMPLEMENTATION CAN PROCEED WITHOUT VALIDATION 🚫"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
-    
+
     return $false
 }
 ```
@@ -11333,7 +28992,7 @@ Here are common fixes for issues encountered during QA validation:
 
 → If all YES: Ready for BUILD mode
 → If any NO: Fix identified issues before proceeding
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-platform-detection.mdc`
@@ -11914,7 +29573,6 @@ description: Visual process map for ARCHIVE mode (Task Documentation)
 globs: "**/archive*/**", "**/document*/**", "**/complete*/**"
 alwaysApply: false
 ---
-
 # ARCHIVE MODE: TASK DOCUMENTATION PROCESS MAP
 
 > **TL;DR:** This visual map guides the ARCHIVE mode process, focusing on creating comprehensive documentation of the completed task, archiving relevant files, and updating the Memory Bank for future reference.
@@ -11923,31 +29581,46 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START ARCHIVE MODE"] --> ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
-    
+    Start["START ARCHIVE MODE"] --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK"]
+
+    %% Task Continuity Validation - CRITICAL ADDITION
+    TaskContinuityCheck --> CheckReflection{"Reflection<br>Complete?"}
+    CheckReflection -->|"No"| BlockArchive["🚫 BLOCK ARCHIVE MODE<br>Reflection Incomplete"]
+    CheckReflection -->|"Yes"| CheckDeliverables{"All Deliverables<br>Ready?"}
+
+    CheckDeliverables -->|"No"| WarnMissing["⚠️ WARN: Missing<br>Deliverables"]
+    CheckDeliverables -->|"Yes"| ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
+
+    WarnMissing --> UserChoice{"User Wants to<br>Continue?"}
+    UserChoice -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
+    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive"]
+
+    CreatePartialArchive --> ReadTasks
+    BlockArchive --> ReturnReflect
+
     %% Initial Assessment
     ReadTasks --> VerifyReflect{"Reflection<br>Complete?"}
     VerifyReflect -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
     VerifyReflect -->|"Yes"| AssessLevel{"Determine<br>Complexity Level"}
-    
+
     %% Level-Based Archiving
-    AssessLevel -->|"Level 1"| L1Archive["LEVEL 1 ARCHIVING<br>Level1/archive-minimal.md"]
-    AssessLevel -->|"Level 2"| L2Archive["LEVEL 2 ARCHIVING<br>Level2/archive-basic.md"]
-    AssessLevel -->|"Level 3"| L3Archive["LEVEL 3 ARCHIVING<br>Level3/archive-standard.md"]
-    AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.md"]
-    
+    AssessLevel -->|"Level 1"| L1Archive["LEVEL 1 ARCHIVING<br>Level1/optimized-workflow-level1.mdc"]
+    AssessLevel -->|"Level 2"| L2Archive["LEVEL 2 ARCHIVING<br>Level2/archive-basic.mdc"]
+    AssessLevel -->|"Level 3"| L3Archive["LEVEL 3 ARCHIVING<br>Level3/workflow-level3.mdc"]
+    AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.mdc"]
+
     %% Level 1 Archiving (Minimal)
     L1Archive --> L1Summary["Create Quick<br>Summary"]
     L1Summary --> L1Task["Update<br>tasks.md"]
     L1Task --> L1Complete["Mark Task<br>Complete"]
-    
+
     %% Level 2 Archiving (Basic)
     L2Archive --> L2Summary["Create Basic<br>Archive Document"]
     L2Summary --> L2Doc["Document<br>Changes"]
     L2Doc --> L2Task["Update<br>tasks.md"]
     L2Task --> L2Progress["Update<br>progress.md"]
     L2Progress --> L2Complete["Mark Task<br>Complete"]
-    
+
     %% Level 3-4 Archiving (Comprehensive)
     L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document"]
     L34Summary --> L34Doc["Document<br>Implementation"]
@@ -11959,11 +29632,22 @@ graph TD
     L34Task --> L34Progress["Update<br>progress.md"]
     L34Progress --> L34System["Update System<br>Documentation"]
     L34System --> L34Complete["Mark Task<br>Complete"]
-    
+
     %% Completion
-    L1Complete & L2Complete & L34Complete --> CreateArchive["Create Archive<br>Document in<br>docs/archive/"]
+    L1Complete & L2Complete & L34Complete --> PreserveMigration["📦 PRESERVE MIGRATION<br>[TASK CONTINUITY]"]
+    PreserveMigration --> VerifyMigration{"migration.md<br>Exists?"}
+    VerifyMigration -->|"Yes"| ArchiveMigration["📁 Archive migration.md<br>to archive/"]
+    VerifyMigration -->|"No"| CreateArchive["Create Archive<br>Document in<br>docs/archive/"]
+    ArchiveMigration --> CreateArchive
     CreateArchive --> UpdateActive["Update<br>activeContext.md"]
-    UpdateActive --> Reset["Reset for<br>Next Task"]
+    UpdateActive --> ClearTasks["🔄 Clear tasks.md<br>for Next Cycle"]
+    ClearTasks --> Reset["Reset for<br>Next Task"]
+
+    %% Task Continuity Styling
+    style PreserveMigration fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style VerifyMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style ArchiveMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style ClearTasks fill:#ffcc80,stroke:#ff9900,color:black
 ```
 
 ## 📋 ARCHIVE DOCUMENT STRUCTURE
@@ -11982,7 +29666,7 @@ graph TD
         Lessons["## LESSONS LEARNED<br>Key takeaways from the task"]
         Refs["## REFERENCES<br>Links to related documents"]
     end
-    
+
     Header --> Meta --> Summary --> Requirements --> Implementation --> Testing --> Lessons --> Refs
 ```
 
@@ -11993,13 +29677,13 @@ Before archiving can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>reflection<br>complete?"}
-    
+
     CheckTasks -->|"No"| ErrorReflect["ERROR:<br>Return to REFLECT Mode"]
     CheckTasks -->|"Yes"| CheckReflection{"reflection.md<br>exists?"}
-    
+
     CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create reflection.md first"]
     CheckReflection -->|"Yes"| CheckProgress{"progress.md<br>updated?"}
-    
+
     CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
     CheckProgress -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
 ```
@@ -12013,14 +29697,14 @@ graph TD
         L1B["Solution<br>Summary"]
         L1C["Affected<br>Files"]
     end
-    
+
     subgraph "Level 2: Basic Archive"
         L2A["Enhancement<br>Description"]
         L2B["Implementation<br>Summary"]
         L2C["Testing<br>Results"]
         L2D["Lessons<br>Learned"]
     end
-    
+
     subgraph "Level 3-4: Comprehensive Archive"
         L3A["Detailed<br>Requirements"]
         L3B["Architecture/<br>Design Decisions"]
@@ -12030,11 +29714,11 @@ graph TD
         L3F["Future<br>Enhancements"]
         L3G["Cross-References<br>to Other Systems"]
     end
-    
+
     L1A --> L1B --> L1C
-    
+
     L2A --> L2B --> L2C --> L2D
-    
+
     L3A --> L3B --> L3C --> L3D --> L3E --> L3F --> L3G
 ```
 
@@ -12118,11 +29802,11 @@ graph TD
         Tasks["tasks/"]
         Features["features/"]
         Systems["systems/"]
-        
+
         Root --> Tasks
         Root --> Features
         Root --> Systems
-        
+
         Tasks --> Bug["bug-fix-name-YYYYMMDD.md"]
         Tasks --> Enhancement["enhancement-name-YYYYMMDD.md"]
         Features --> Feature["feature-name-YYYYMMDD.md"]
@@ -12180,7 +29864,7 @@ When archiving is complete, notify user with:
 
 → Memory Bank is ready for the next task
 → To start a new task, use VAN MODE
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc`
@@ -12429,53 +30113,60 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.md"]
-    
+    Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.mdc"]
+
     %% Initialization
     ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from tasks.md"}
-    
-    %% Level 1 Implementation
-    CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/quick-bug-workflow.md"]
-    L1Process --> L1Review["Review Bug<br>Report"]
-    L1Review --> L1Examine["Examine<br>Relevant Code"]
-    L1Examine --> L1Fix["Implement<br>Targeted Fix"]
-    L1Fix --> L1Test["Test<br>Fix"]
-    L1Test --> L1Update["Update<br>tasks.md"]
-    
-    %% Level 2 Implementation
-    CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/enhancement-workflow.md"]
-    L2Process --> L2Review["Review Build<br>Plan"]
-    L2Review --> L2Examine["Examine Relevant<br>Code Areas"]
-    L2Examine --> L2Implement["Implement Changes<br>Sequentially"]
-    L2Implement --> L2Test["Test<br>Changes"]
-    L2Test --> L2Update["Update<br>tasks.md"]
-    
-    %% Level 3-4 Implementation
-    CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/feature-workflow.md<br>Level4/system-workflow.md"]
-    L34Process --> L34Review["Review Plan &<br>Creative Decisions"]
+
+    %% Level 1 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/workflow-level1.mdc"]
+    L1Process --> L1Review["Review Bug<br>Report + Rule #3 Priority"]
+    L1Review --> L1Trace["Debug Trace<br>Collection (Rule #21)"]
+    L1Trace --> L1Examine["Examine<br>Relevant Code"]
+    L1Examine --> L1Fix["Implement<br>Targeted Fix + Rule #2 ✅/❌"]
+    L1Fix --> L1Test["Test Fix<br>(Rules #8-10)"]
+    L1Test --> L1Validate["Validate No<br>Regression (Rule #11)"]
+    L1Validate --> L1Update["Update tasks.md<br>+ Debug Traces"]
+
+    %% Level 2 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/workflow-level2.mdc"]
+    L2Process --> L2Review["Review Build<br>Plan + Phase Tracking"]
+    L2Review --> L2Phase["Execute Phase<br>(Rule #1 Phased Approach)"]
+    L2Phase --> L2Examine["Examine Relevant<br>Code Areas"]
+    L2Examine --> L2Implement["Implement Changes<br>+ Rule #2 ✅/❌ Tracking"]
+    L2Implement --> L2Test["Test Changes<br>(Rules #8-12)"]
+    L2Test --> L2Coverage["Check Coverage<br>(Rule #11)"]
+    L2Coverage --> L2Update["Update tasks.md<br>+ Test Reports"]
+
+    %% Level 3-4 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/workflow-level3.mdc<br>Level4/workflow-level4.mdc"]
+    L34Process --> L34Review["Review Plan &<br>Creative Decisions + Rule #17"]
     L34Review --> L34Phase{"Creative Phase<br>Documents<br>Complete?"}
-    
+
     L34Phase -->|"No"| L34Error["ERROR:<br>Return to CREATIVE Mode"]
-    L34Phase -->|"Yes"| L34DirSetup["Create Directory<br>Structure"]
+    L34Phase -->|"Yes"| L34PhaseStart["Start Phase<br>(Rule #1 Phased Approach)"]
+    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure"]
     L34DirSetup --> L34VerifyDirs["VERIFY Directories<br>Created Successfully"]
     L34VerifyDirs --> L34Implementation["Build<br>Phase"]
-    
-    %% Implementation Phases
-    L34Implementation --> L34Phase1["Phase 1<br>Build"]
+
+    %% Implementation Phases (Enhanced)
+    L34Implementation --> L34Phase1["Phase 1 Build<br>+ Rule #2 ✅/❌ Tracking"]
     L34Phase1 --> L34VerifyFiles["VERIFY Files<br>Created Successfully"]
-    L34VerifyFiles --> L34Test1["Test<br>Phase 1"]
-    L34Test1 --> L34Document1["Document<br>Phase 1"]
+    L34VerifyFiles --> L34Test1["Test Phase 1<br>(Rules #8-16)"]
+    L34Test1 --> L34Coverage1["Check Coverage<br>& Performance (Rules #11,13)"]
+    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24)"]
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
-    
-    L34Next1 -->|"No"| L34Integration["Integration<br>Testing"]
-    L34Integration --> L34Document["Document<br>Integration Points"]
-    L34Document --> L34Update["Update<br>tasks.md"]
-    
+
+    L34Next1 -->|"No"| L34Integration["Integration Testing<br>(Rules #17-20)"]
+    L34Integration --> L34Performance["Performance Testing<br>(Rule #13)"]
+    L34Performance --> L34Document["Document Integration<br>Points (Rule #20)"]
+    L34Document --> L34Update["Update tasks.md<br>+ All Reports"]
+
     %% Command Execution
-    L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.md"]
+    L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
     CommandExec --> DocCommands["Document Commands<br>& Results"]
-    
+
     %% Completion & Transition
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
     VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
@@ -12489,19 +30180,19 @@ Before implementation can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>planning complete?"}
-    
+
     CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
     CheckTasks -->|"Yes"| CheckLevel{"Task<br>Complexity?"}
-    
+
     CheckLevel -->|"Level 1"| L1Ready["Ready for<br>Implementation"]
-    
+
     CheckLevel -->|"Level 2"| L2Ready["Ready for<br>Implementation"]
-    
+
     CheckLevel -->|"Level 3-4"| CheckCreative{"Creative phases<br>required?"}
-    
+
     CheckCreative -->|"No"| L34Ready["Ready for<br>Implementation"]
     CheckCreative -->|"Yes"| VerifyCreative{"Creative phases<br>completed?"}
-    
+
     VerifyCreative -->|"No"| ErrorCreative["ERROR:<br>Return to CREATIVE Mode"]
     VerifyCreative -->|"Yes"| L34Ready
 ```
@@ -12512,17 +30203,17 @@ graph TD
 graph TD
     Start["Start File<br>Verification"] --> CheckDir["Check Directory<br>Structure"]
     CheckDir --> DirResult{"Directories<br>Exist?"}
-    
+
     DirResult -->|"No"| ErrorDir["❌ ERROR:<br>Missing Directories"]
     DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File"]
-    
+
     ErrorDir --> FixDir["Fix Directory<br>Structure"]
     FixDir --> CheckDir
-    
+
     CheckFiles --> FileResult{"All Files<br>Exist?"}
     FileResult -->|"No"| ErrorFile["❌ ERROR:<br>Missing/Wrong Path Files"]
     FileResult -->|"Yes"| Complete["✅ Verification<br>Complete"]
-    
+
     ErrorFile --> FixFile["Fix File Paths<br>or Recreate Files"]
     FixFile --> CheckFiles
 ```
@@ -12551,7 +30242,7 @@ After creating files:
 1. Use ABSOLUTE paths for all file operations: /full/path/to/file.ext
 2. Verify each file creation was successful:
    ls -la /full/path/to/file.ext     # Linux/Mac
-   dir "C:\full\path\to\file.ext"    # Windows 
+   dir "C:\full\path\to\file.ext"    # Windows
 3. If verification fails:
    a. Check for path resolution issues
    b. Verify directory exists
@@ -12566,11 +30257,11 @@ After creating files:
 graph TD
     Start["Command<br>Execution"] --> Analyze["Analyze Command<br>Requirements"]
     Analyze --> Complexity{"Command<br>Complexity?"}
-    
+
     Complexity -->|"Simple"| Simple["Execute<br>Single Command"]
     Complexity -->|"Moderate"| Chain["Use Efficient<br>Command Chaining"]
     Complexity -->|"Complex"| Break["Break Into<br>Logical Steps"]
-    
+
     Simple & Chain & Break --> Verify["Verify<br>Results"]
     Verify --> Document["Document<br>Command & Result"]
     Document --> Next["Next<br>Command"]
@@ -12586,14 +30277,14 @@ graph TD
         L1C["Direct<br>Fix"]
         L1D["Verify<br>Fix"]
     end
-    
+
     subgraph "Level 2: Enhancement"
         L2A["Sequential<br>Build"]
         L2B["Contained<br>Changes"]
         L2C["Standard<br>Testing"]
         L2D["Component<br>Documentation"]
     end
-    
+
     subgraph "Level 3-4: Feature/System"
         L3A["Directory<br>Structure First"]
         L3B["Verify Dirs<br>Before Files"]
@@ -12602,7 +30293,7 @@ graph TD
         L3E["Integration<br>Testing"]
         L3F["Detailed<br>Documentation"]
     end
-    
+
     L1A --> L1B --> L1C --> L1D
     L2A --> L2B --> L2C --> L2D
     L3A --> L3B --> L3C --> L3D --> L3E --> L3F
@@ -12691,10 +30382,10 @@ Update progress.md with:
 - [/absolute/path/to/dir2/]: Created and verified
 
 ## [Date]: [Component/Feature] Built
-- **Files Created**: 
+- **Files Created**:
   - [/absolute/path/to/file1.ext]: Verified
   - [/absolute/path/to/file2.ext]: Verified
-- **Key Changes**: 
+- **Key Changes**:
   - [Change 1]
   - [Change 2]
 - **Testing**: [Test results]
@@ -12735,7 +30426,7 @@ When the build is complete, notify user with:
 ✅ progress.md updated with details
 
 → NEXT RECOMMENDED MODE: REFLECT MODE
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc`
@@ -12756,13 +30447,13 @@ alwaysApply: false
 ```mermaid
 graph TD
     Start["START PLANNING"] --> ReadTasks["Read tasks.md<br>Core/task-tracking.md"]
-    
+
     %% Complexity Level Determination
     ReadTasks --> CheckLevel{"Determine<br>Complexity Level"}
-    CheckLevel -->|"Level 2"| Level2["LEVEL 2 PLANNING<br>Level2/enhancement-planning.md"]
-    CheckLevel -->|"Level 3"| Level3["LEVEL 3 PLANNING<br>Level3/feature-planning.md"]
-    CheckLevel -->|"Level 4"| Level4["LEVEL 4 PLANNING<br>Level4/system-planning.md"]
-    
+    CheckLevel -->|"Level 2"| Level2["LEVEL 2 PLANNING<br>Level2/workflow-level2.mdc"]
+    CheckLevel -->|"Level 3"| Level3["LEVEL 3 PLANNING<br>Level3/workflow-level3.mdc"]
+    CheckLevel -->|"Level 4"| Level4["LEVEL 4 PLANNING<br>Level4/workflow-level4.mdc"]
+
     %% Level 2 Planning
     Level2 --> L2Review["Review Code<br>Structure"]
     L2Review --> L2Document["Document<br>Planned Changes"]
@@ -12771,7 +30462,7 @@ graph TD
     L2Checklist --> L2Update["Update tasks.md<br>with Plan"]
     L2Update --> L2Tech["TECHNOLOGY<br>VALIDATION"]
     L2Tech --> L2Verify["Verify Plan<br>Completeness"]
-    
+
     %% Level 3 Planning
     Level3 --> L3Review["Review Codebase<br>Structure"]
     L3Review --> L3Requirements["Document Detailed<br>Requirements"]
@@ -12782,7 +30473,7 @@ graph TD
     L3Update --> L3Tech["TECHNOLOGY<br>VALIDATION"]
     L3Tech --> L3Flag["Flag Components<br>Requiring Creative"]
     L3Flag --> L3Verify["Verify Plan<br>Completeness"]
-    
+
     %% Level 4 Planning
     Level4 --> L4Analysis["Codebase Structure<br>Analysis"]
     L4Analysis --> L4Requirements["Document Comprehensive<br>Requirements"]
@@ -12794,7 +30485,7 @@ graph TD
     L4Update --> L4Tech["TECHNOLOGY<br>VALIDATION"]
     L4Tech --> L4Flag["Flag Components<br>Requiring Creative"]
     L4Flag --> L4Verify["Verify Plan<br>Completeness"]
-    
+
     %% Technology Validation Gate - NEW
     L2Tech & L3Tech & L4Tech --> TechGate["⛔ TECHNOLOGY<br>VALIDATION GATE"]
     TechGate --> TechSelection["Document Technology<br>Stack Selection"]
@@ -12803,14 +30494,14 @@ graph TD
     TechDependencies --> TechConfig["Validate Build<br>Configuration"]
     TechConfig --> TechBuild["Complete Test<br>Build"]
     TechBuild --> TechVerify["⛔ TECHNOLOGY<br>CHECKPOINT"]
-    
+
     %% Verification & Completion
     L2Verify & L3Verify & L4Verify & TechVerify --> CheckCreative{"Creative<br>Phases<br>Required?"}
-    
+
     %% Mode Transition
     CheckCreative -->|"Yes"| RecCreative["NEXT MODE:<br>CREATIVE MODE"]
     CheckCreative -->|"No"| RecImplement["NEXT MODE:<br>IMPLEMENT MODE"]
-    
+
     %% Style for Technology Gate
     style TechGate fill:#ff5555,stroke:#dd3333,color:white,stroke-width:3px
     style TechVerify fill:#ff5555,stroke:#dd3333,color:white,stroke-width:3px
@@ -12821,37 +30512,42 @@ graph TD
     style TechBuild fill:#4da6ff,stroke:#0066cc,color:white
 ```
 
-## 📋 LEVEL-SPECIFIC PLANNING APPROACHES
+## 📋 LEVEL-SPECIFIC PLANNING APPROACHES (ENHANCED WITH DEVELOPMENT RULES)
 
 ```mermaid
 graph TD
     subgraph "Level 2: Enhancement"
-        L2A["Basic Requirements<br>Analysis"]
+        L2A["Basic Requirements<br>Analysis + Rule #3 Priority"]
         L2B["Simple Component<br>Identification"]
-        L2C["Linear Implementation<br>Plan"]
-        L2D["Basic Checklist<br>Creation"]
+        L2C["Linear Implementation<br>Plan + Rule #1 Phases"]
+        L2D["Basic Checklist<br>Creation + Rule #2 ✅/❌"]
+        L2E["Test Strategy<br>Planning (Rules #8-16)"]
     end
-    
+
     subgraph "Level 3: Feature"
-        L3A["Detailed Requirements<br>Analysis"]
+        L3A["Detailed Requirements<br>Analysis + Rule #3 Priority"]
         L3B["Component Mapping<br>with Dependencies"]
-        L3C["Multi-Phase<br>Implementation Plan"]
-        L3D["Comprehensive<br>Checklist"]
-        L3E["Creative Phase<br>Identification"]
+        L3C["Multi-Phase<br>Implementation Plan + Rule #1"]
+        L3D["Comprehensive<br>Checklist + Rule #2 ✅/❌"]
+        L3E["Creative Phase<br>Identification + Rule #17"]
+        L3F["Integration Planning<br>(Rules #17-20)"]
+        L3G["Test Strategy<br>Planning (Rules #8-16)"]
     end
-    
+
     subgraph "Level 4: System"
-        L4A["Architectural<br>Requirements Analysis"]
+        L4A["Architectural<br>Requirements Analysis + Rule #3"]
         L4B["System Component<br>Mapping"]
-        L4C["Subsystem<br>Integration Plan"]
-        L4D["Phased Implementation<br>Strategy"]
+        L4C["Subsystem<br>Integration Plan + Rules #17-20"]
+        L4D["Phased Implementation<br>Strategy + Rule #1"]
         L4E["Risk Assessment<br>& Mitigation"]
-        L4F["Multiple Creative<br>Phase Requirements"]
+        L4F["Multiple Creative<br>Phase Requirements + Rule #17"]
+        L4G["Comprehensive Test<br>Strategy (Rules #8-16)"]
+        L4H["Debug Strategy<br>Planning (Rules #21-23)"]
     end
-    
-    L2A --> L2B --> L2C --> L2D
-    L3A --> L3B --> L3C --> L3D --> L3E
-    L4A --> L4B --> L4C --> L4D --> L4E --> L4F
+
+    L2A --> L2B --> L2C --> L2D --> L2E
+    L3A --> L3B --> L3C --> L3D --> L3E --> L3F --> L3G
+    L4A --> L4B --> L4C --> L4D --> L4E --> L4F --> L4G --> L4H
 ```
 
 ## 🔧 TECHNOLOGY VALIDATION WORKFLOW
@@ -12866,11 +30562,11 @@ graph TD
     Dependencies --> Config["Confirm Configuration<br>Files Are Correct"]
     Config --> Test["Complete Test<br>Build/Run"]
     Test --> Success{"All Checks<br>Pass?"}
-    
+
     Success -->|"Yes"| Ready["Ready for<br>Implementation"]
     Success -->|"No"| Fix["Fix Technology<br>Issues"]
     Fix --> Document
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style POC fill:#4da6ff,stroke:#0066cc,color:white
     style Success fill:#ff5555,stroke:#dd3333,color:white
@@ -12885,10 +30581,10 @@ Before planning can begin, verify the file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md<br>initialized?"}
-    
+
     CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to VAN Mode"]
     CheckTasks -->|"Yes"| CheckActive{"activeContext.md<br>exists?"}
-    
+
     CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to VAN Mode"]
     CheckActive -->|"Yes"| ReadyPlan["Ready for<br>Planning"]
 ```
@@ -12955,17 +30651,17 @@ For Level 3-4 tasks, identify components requiring creative phases:
 ```mermaid
 graph TD
     Start["Creative Phase<br>Identification"] --> CheckComp{"Component<br>Analysis"}
-    
+
     CheckComp --> UI["UI/UX<br>Components"]
     CheckComp --> Data["Data Model<br>Components"]
     CheckComp --> Arch["Architecture<br>Components"]
     CheckComp --> Algo["Algorithm<br>Components"]
-    
+
     UI & Data & Arch & Algo --> Decision{"Design Decisions<br>Required?"}
-    
+
     Decision -->|"Yes"| Flag["Flag for<br>Creative Phase"]
     Decision -->|"No"| Skip["Standard<br>Implementation"]
-    
+
     Flag --> Document["Document in<br>tasks.md"]
 ```
 
@@ -13015,7 +30711,7 @@ When planning is complete, notify user with:
 ✅ Challenges and mitigations documented
 [✅ Creative phases identified (for Level 3-4)]
 
-→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE 
+→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/qa-mode-map.mdc`
@@ -13535,44 +31231,78 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START REFLECT MODE"] --> ReadTasks["Read tasks.md<br>and progress.md"]
-    
+    Start["START REFLECT MODE"] --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK"]
+
+    %% Task Continuity Validation - CRITICAL ADDITION
+    TaskContinuityCheck --> CheckImplementation{"Implementation<br>Complete?"}
+    CheckImplementation -->|"No"| BlockReflect["🚫 BLOCK REFLECT MODE<br>Implementation Incomplete"]
+    CheckImplementation -->|"Yes"| CheckSubtasks{"All Subtasks<br>Complete?"}
+
+    CheckSubtasks -->|"No"| WarnIncomplete["⚠️ WARN: Incomplete<br>Subtasks Found"]
+    CheckSubtasks -->|"Yes"| ReadTasks["Read tasks.md<br>and progress.md"]
+
+    WarnIncomplete --> UserDecision{"User Wants to<br>Continue?"}
+    UserDecision -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
+    UserDecision -->|"Yes"| CreatePartialMigration["Create Partial<br>Migration"]
+
+    CreatePartialMigration --> ReadTasks
+    BlockReflect --> ReturnImplement
+
     %% Initial Assessment
     ReadTasks --> VerifyImplement{"Implementation<br>Complete?"}
-    VerifyImplement -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
+    VerifyImplement -->|"No"| ReturnImplement
     VerifyImplement -->|"Yes"| AssessLevel{"Determine<br>Complexity Level"}
-    
+
     %% Level-Based Reflection
-    AssessLevel -->|"Level 1"| L1Reflect["LEVEL 1 REFLECTION<br>Level1/reflection-basic.md"]
-    AssessLevel -->|"Level 2"| L2Reflect["LEVEL 2 REFLECTION<br>Level2/reflection-standard.md"]
-    AssessLevel -->|"Level 3"| L3Reflect["LEVEL 3 REFLECTION<br>Level3/reflection-comprehensive.md"]
-    AssessLevel -->|"Level 4"| L4Reflect["LEVEL 4 REFLECTION<br>Level4/reflection-advanced.md"]
-    
+    AssessLevel -->|"Level 1"| L1Reflect["LEVEL 1 REFLECTION<br>Level1/optimized-workflow-level1.mdc"]
+    AssessLevel -->|"Level 2"| L2Reflect["LEVEL 2 REFLECTION<br>Level2/reflection-basic.mdc"]
+    AssessLevel -->|"Level 3"| L3Reflect["LEVEL 3 REFLECTION<br>Level3/workflow-level3.mdc"]
+    AssessLevel -->|"Level 4"| L4Reflect["LEVEL 4 REFLECTION<br>Level4/reflection-comprehensive.mdc"]
+
     %% Level 1 Reflection (Quick)
     L1Reflect --> L1Review["Review<br>Bug Fix"]
     L1Review --> L1Document["Document<br>Solution"]
     L1Document --> L1Update["Update<br>tasks.md"]
-    
+
     %% Level 2 Reflection (Standard)
     L2Reflect --> L2Review["Review<br>Enhancement"]
     L2Review --> L2WWW["Document<br>What Went Well"]
     L2WWW --> L2Challenges["Document<br>Challenges"]
     L2Challenges --> L2Lessons["Document<br>Lessons Learned"]
     L2Lessons --> L2Update["Update<br>tasks.md"]
-    
+
     %% Level 3-4 Reflection (Comprehensive)
     L3Reflect & L4Reflect --> L34Review["Review Implementation<br>& Creative Phases"]
     L34Review --> L34Plan["Compare Against<br>Original Plan"]
-    L34Plan --> L34WWW["Document<br>What Went Well"]
+    L34Plan --> L34CreativeAnalysis["🎨 CREATIVE ARCHIVE ANALYSIS<br>Analyze Creative Phase Results"]
+    L34CreativeAnalysis --> L34QualityAssess["📊 Quality Assessment<br>Score Creative Decisions"]
+    L34QualityAssess --> L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
+    L34PatternExtract --> L34WWW["Document<br>What Went Well"]
     L34WWW --> L34Challenges["Document<br>Challenges"]
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
     L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
-    L34ImproveProcess --> L34Update["Update<br>tasks.md"]
-    
+    L34ImproveProcess --> L34ArchiveCreative["📚 Archive Creative Results<br>Store in Creative Archive"]
+    L34ArchiveCreative --> L34Update["Update<br>tasks.md"]
+
     %% Completion & Transition
-    L1Update & L2Update & L34Update --> CreateReflection["Create<br>reflection.md"]
+    L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
+    AnalyzeUnfinished --> CategorizeUnfinished["📊 Categorize Unfinished Tasks<br>by Status & Priority"]
+    CategorizeUnfinished --> CreateMigration["📦 Create migration.md<br>for Next Cycle"]
+    CreateMigration --> CreateReflection["Create<br>reflection.md"]
     CreateReflection --> UpdateSystem["Update System<br>Documentation"]
     UpdateSystem --> Transition["NEXT MODE:<br>ARCHIVE MODE"]
+
+    %% Task Continuity Styling
+    style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style CheckImplementation fill:#b3ffb3,stroke:#80ff80,color:black
+    style CheckSubtasks fill:#b3ffb3,stroke:#80ff80,color:black
+    style BlockReflect fill:#ff6666,stroke:#cc0000,color:white,stroke-width:2px
+    style WarnIncomplete fill:#ffcc80,stroke:#ff9900,color:black
+    style UserDecision fill:#cce6ff,stroke:#80bfff,color:black
+    style CreatePartialMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style AnalyzeUnfinished fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style CategorizeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
+    style CreateMigration fill:#b3ffb3,stroke:#80ff80,color:black
 ```
 
 ## 📋 REFLECTION STRUCTURE
@@ -13591,7 +31321,7 @@ graph TD
         TechImp["## TECHNICAL IMPROVEMENTS<br>Better approaches for similar tasks"]
         NextSteps["## NEXT STEPS<br>Follow-up actions or future work"]
     end
-    
+
     Header --> Summary --> WWW --> Challenges --> Lessons --> ProcessImp --> TechImp --> NextSteps
 ```
 
@@ -13602,10 +31332,10 @@ Before reflection can begin, verify file state:
 ```mermaid
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>implementation<br>complete?"}
-    
+
     CheckTasks -->|"No"| ErrorImplement["ERROR:<br>Return to IMPLEMENT Mode"]
     CheckTasks -->|"Yes"| CheckProgress{"progress.md<br>has implementation<br>details?"}
-    
+
     CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
     CheckProgress -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
 ```
@@ -13622,7 +31352,7 @@ graph TD
         Changes["Identify Deviations<br>from Plan"]
         Results["Evaluate<br>Results"]
     end
-    
+
     Original --> Plan --> Actual
     Plan --> Creative --> Changes
     Actual --> Results
@@ -13749,7 +31479,7 @@ When reflection is complete, notify user with:
 ✅ tasks.md updated with reflection status
 
 → NEXT RECOMMENDED MODE: ARCHIVE MODE
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/van-mode-map.mdc`
@@ -13773,27 +31503,44 @@ graph TD
     DetectOS --> CheckPath["Check Path Separator Format"]
     CheckPath --> AdaptCmds["Adapt Commands if Needed"]
     AdaptCmds --> PlatformCP["⛔ PLATFORM CHECKPOINT"]
-    
+
+    %% Task Continuity Check - CRITICAL ADDITION
+    PlatformCP --> TaskContinuity["🔄 TASK CONTINUITY CHECK"]
+    TaskContinuity --> CheckMigration{"migration.md<br>Exists?"}
+    CheckMigration -->|"Yes"| ProcessMigration["Process Migration<br>Document"]
+    CheckMigration -->|"No"| CheckExistingTasks{"Existing tasks.md<br>Found?"}
+
+    ProcessMigration --> MergeUnfinished["Merge Unfinished<br>Tasks"]
+    CheckExistingTasks -->|"Yes"| WarnTaskLoss["⚠️ WARN: Potential<br>Task Loss"]
+    CheckExistingTasks -->|"No"| BasicFileVerify["BASIC FILE VERIFICATION"]
+
+    WarnTaskLoss --> UserChoice{"User Wants to<br>Preserve Tasks?"}
+    UserChoice -->|"Yes"| CreateMigrationFromExisting["Create Migration<br>from Existing"]
+    UserChoice -->|"No"| ArchiveExisting["Archive Existing<br>tasks.md"]
+
+    CreateMigrationFromExisting --> MergeUnfinished
+    ArchiveExisting --> BasicFileVerify
+    MergeUnfinished --> BasicFileVerify
+
     %% Basic File Verification with checkpoint
-    PlatformCP --> BasicFileVerify["BASIC FILE VERIFICATION"]
     BasicFileVerify --> BatchCheck["Batch Check Essential Components"]
     BatchCheck --> BatchCreate["Batch Create Essential Structure"]
     BatchCreate --> BasicFileCP["⛔ BASIC FILE CHECKPOINT"]
-    
+
     %% Early Complexity Determination
     BasicFileCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
     EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
-    
+
     %% Level handling paths
     EarlyLevelCheck -->|"Level 1"| ComplexityCP["⛔ COMPLEXITY CHECKPOINT"]
     EarlyLevelCheck -->|"Level 2-4"| CRITICALGATE["🚫 CRITICAL GATE: FORCE MODE SWITCH"]
     CRITICALGATE --> ForceExit["Exit to PLAN mode"]
-    
+
     %% Level 1 continues normally
     ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK"]
     InitSystem --> Complete1["LEVEL 1 INITIALIZATION COMPLETE"]
-    
+
     %% For Level 2+ tasks after PLAN and CREATIVE modes
     ForceExit -.-> OtherModes["PLAN → CREATIVE modes"]
     OtherModes -.-> VANQA["VAN QA MODE"]
@@ -13802,7 +31549,15 @@ graph TD
     QACheck -->|"Yes"| BUILD["To BUILD MODE"]
     QACheck -->|"No"| FixIssues["Fix Technical Issues"]
     FixIssues --> QAProcess
-    
+
+    %% Task Continuity Styling
+    style TaskContinuity fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
+    style CheckMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style ProcessMigration fill:#b3ffb3,stroke:#80ff80,color:black
+    style MergeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
+    style WarnTaskLoss fill:#ffcc80,stroke:#ff9900,color:black
+    style UserChoice fill:#cce6ff,stroke:#80bfff,color:black
+
     %% Style nodes
     style PlatformCP fill:#f55,stroke:#d44,color:white
     style BasicFileCP fill:#f55,stroke:#d44,color:white
@@ -13823,22 +31578,22 @@ graph TD
     CheckOS --> Win["Windows"]
     CheckOS --> Mac["macOS"]
     CheckOS --> Lin["Linux"]
-    
+
     Win & Mac & Lin --> Adapt["Adapt Commands<br>for Platform"]
-    
+
     Win --> WinPath["Path: Backslash (\\)"]
     Mac --> MacPath["Path: Forward Slash (/)"]
     Lin --> LinPath["Path: Forward Slash (/)"]
-    
+
     Win --> WinCmd["Command Adaptations:<br>dir, icacls, etc."]
     Mac --> MacCmd["Command Adaptations:<br>ls, chmod, etc."]
     Lin --> LinCmd["Command Adaptations:<br>ls, chmod, etc."]
-    
+
     WinPath & MacPath & LinPath --> PathCP["Path Separator<br>Checkpoint"]
     WinCmd & MacCmd & LinCmd --> CmdCP["Command<br>Checkpoint"]
-    
+
     PathCP & CmdCP --> PlatformComplete["Platform Detection<br>Complete"]
-    
+
     style PD fill:#4da6ff,stroke:#0066cc,color:white
     style PlatformComplete fill:#10b981,stroke:#059669,color:white
 ```
@@ -13850,21 +31605,21 @@ graph TD
     FV["File Verification"] --> CheckFiles["Check Essential Files"]
     CheckFiles --> CheckMB["Check Memory Bank<br>Structure"]
     CheckMB --> MBExists{"Memory Bank<br>Exists?"}
-    
+
     MBExists -->|"Yes"| VerifyMB["Verify Memory Bank<br>Contents"]
     MBExists -->|"No"| CreateMB["Create Memory Bank<br>Structure"]
-    
+
     CheckFiles --> CheckDocs["Check Documentation<br>Files"]
     CheckDocs --> DocsExist{"Docs<br>Exist?"}
-    
+
     DocsExist -->|"Yes"| VerifyDocs["Verify Documentation<br>Structure"]
     DocsExist -->|"No"| CreateDocs["Create Documentation<br>Structure"]
-    
+
     VerifyMB & CreateMB --> MBCP["Memory Bank<br>Checkpoint"]
     VerifyDocs & CreateDocs --> DocsCP["Documentation<br>Checkpoint"]
-    
+
     MBCP & DocsCP --> FileComplete["File Verification<br>Complete"]
-    
+
     style FV fill:#4da6ff,stroke:#0066cc,color:white
     style FileComplete fill:#10b981,stroke:#059669,color:white
     style MBCP fill:#f6546a,stroke:#c30052,color:white
@@ -13876,21 +31631,21 @@ graph TD
 ```mermaid
 graph TD
     CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements"]
-    
+
     AnalyzeTask --> CheckKeywords["Check Task<br>Keywords"]
     CheckKeywords --> ScopeCheck["Assess<br>Scope Impact"]
     ScopeCheck --> RiskCheck["Evaluate<br>Risk Level"]
     RiskCheck --> EffortCheck["Estimate<br>Implementation Effort"]
-    
+
     EffortCheck --> DetermineLevel{"Determine<br>Complexity Level"}
     DetermineLevel -->|"Level 1"| L1["Level 1:<br>Quick Bug Fix"]
     DetermineLevel -->|"Level 2"| L2["Level 2:<br>Simple Enhancement"]
     DetermineLevel -->|"Level 3"| L3["Level 3:<br>Intermediate Feature"]
     DetermineLevel -->|"Level 4"| L4["Level 4:<br>Complex System"]
-    
+
     L1 --> CDComplete["Complexity Determination<br>Complete"]
     L2 & L3 & L4 --> ModeSwitch["Force Mode Switch<br>to PLAN"]
-    
+
     style CD fill:#4da6ff,stroke:#0066cc,color:white
     style CDComplete fill:#10b981,stroke:#059669,color:white
     style ModeSwitch fill:#ff0000,stroke:#990000,color:white
@@ -13903,13 +31658,13 @@ The full workflow includes technical validation before implementation:
 
 ```mermaid
 flowchart LR
-    VAN1["VAN MODE 
+    VAN1["VAN MODE
     (Initial Analysis)"] --> PLAN["PLAN MODE
     (Task Planning)"]
     PLAN --> CREATIVE["CREATIVE MODE
     (Design Decisions)"]
     CREATIVE --> VANQA["VAN QA MODE
-    (Technical Validation)"] 
+    (Technical Validation)"]
     VANQA --> BUILD["BUILD MODE
     (Implementation)"]
 ```
@@ -13921,21 +31676,21 @@ The VAN QA technical validation process consists of four key validation points:
 ```mermaid
 graph TD
     VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
-    
+
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION<br>Check all required packages"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION<br>Verify format & compatibility"]
     ConfigCheck --> EnvCheck["3️⃣ ENVIRONMENT VALIDATION<br>Check build environment"]
     EnvCheck --> MinBuildCheck["4️⃣ MINIMAL BUILD TEST<br>Test core functionality"]
-    
+
     MinBuildCheck --> ValidationResults{"All Checks<br>Passed?"}
     ValidationResults -->|"Yes"| SuccessReport["GENERATE SUCCESS REPORT"]
     ValidationResults -->|"No"| FailureReport["GENERATE FAILURE REPORT"]
-    
+
     SuccessReport --> BUILD["Proceed to BUILD MODE"]
     FailureReport --> FixIssues["Fix Technical Issues"]
     FixIssues --> ReValidate["Re-validate"]
     ReValidate --> ValidationResults
-    
+
     style VANQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
@@ -13996,7 +31751,7 @@ graph TD
     CheckQA -->|"No or Failed"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
     Message --> ReturnToVANQA["Prompt: Type VAN QA"]
-    
+
     style CheckQA fill:#f6546a,stroke:#c30052,color:white
     style BlockBuild fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style Message fill:#ff5555,stroke:#dd3333,color:white
@@ -14014,12 +31769,12 @@ graph TD
     CurrentTask --> LoadQA["Load QA Mode Map"]
     LoadQA --> RunQA["Execute QA Validation Process"]
     RunQA --> QAResults{"QA Results"}
-    
+
     QAResults -->|"PASS"| ResumeFlow["Resume Prior Process Flow"]
     QAResults -->|"FAIL"| FixIssues["Fix Identified Issues"]
     FixIssues --> ReRunQA["Re-run QA Validation"]
     ReRunQA --> QAResults
-    
+
     style UserQA fill:#f8d486,stroke:#e8b84d,color:black
     style HighPriority fill:#ff0000,stroke:#cc0000,color:white,stroke-width:3px
     style LoadQA fill:#4da6ff,stroke:#0066cc,color:white
@@ -14080,7 +31835,7 @@ User: VAN QA
 Response: OK VAN QA - Beginning Technical Validation
 ```
 
-This ensures clear communication about which phase of VAN mode is active. 
+This ensures clear communication about which phase of VAN mode is active.
 
 ## 🔍 DETAILED QA VALIDATION PROCESS
 
@@ -14093,17 +31848,17 @@ graph TD
     Start["Dependency Verification"] --> ReadDeps["Read Required Dependencies<br>from Creative Phase"]
     ReadDeps --> CheckInstalled["Check if Dependencies<br>are Installed"]
     CheckInstalled --> DepStatus{"All Dependencies<br>Installed?"}
-    
+
     DepStatus -->|"Yes"| VerifyVersions["Verify Versions<br>and Compatibility"]
     DepStatus -->|"No"| InstallMissing["Install Missing<br>Dependencies"]
     InstallMissing --> VerifyVersions
-    
+
     VerifyVersions --> VersionStatus{"Versions<br>Compatible?"}
     VersionStatus -->|"Yes"| DepSuccess["Dependencies Verified<br>✅ PASS"]
     VersionStatus -->|"No"| UpgradeVersions["Upgrade/Downgrade<br>as Needed"]
     UpgradeVersions --> RetryVerify["Retry Verification"]
     RetryVerify --> VersionStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style DepSuccess fill:#10b981,stroke:#059669,color:white
     style DepStatus fill:#f6546a,stroke:#c30052,color:white
@@ -14118,10 +31873,10 @@ function Verify-Dependencies {
         "node" = ">=14.0.0"
         "npm" = ">=6.0.0"
     }
-    
+
     $missingDeps = @()
     $incompatibleDeps = @()
-    
+
     # Check Node.js version
     $nodeVersion = $null
     try {
@@ -14135,7 +31890,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "node"
     }
-    
+
     # Check npm version
     $npmVersion = $null
     try {
@@ -14149,7 +31904,7 @@ function Verify-Dependencies {
     } catch {
         $missingDeps += "npm"
     }
-    
+
     # Display results
     if ($missingDeps.Count -eq 0 -and $incompatibleDeps.Count -eq 0) {
         Write-Output "✅ All dependencies verified and compatible"
@@ -14174,7 +31929,7 @@ function Verify-Dependencies {
 verify_dependencies() {
     local missing_deps=()
     local incompatible_deps=()
-    
+
     # Check Node.js version
     if command -v node &> /dev/null; then
         local node_version=$(node -v)
@@ -14187,7 +31942,7 @@ verify_dependencies() {
     else
         missing_deps+=("node")
     fi
-    
+
     # Check npm version
     if command -v npm &> /dev/null; then
         local npm_version=$(npm -v)
@@ -14200,7 +31955,7 @@ verify_dependencies() {
     else
         missing_deps+=("npm")
     fi
-    
+
     # Display results
     if [ ${#missing_deps[@]} -eq 0 ] && [ ${#incompatible_deps[@]} -eq 0 ]; then
         echo "✅ All dependencies verified and compatible"
@@ -14227,23 +31982,23 @@ graph TD
     IdentifyConfigs --> ReadConfigs["Read Configuration<br>Files"]
     ReadConfigs --> ValidateSyntax["Validate Syntax<br>and Format"]
     ValidateSyntax --> SyntaxStatus{"Syntax<br>Valid?"}
-    
+
     SyntaxStatus -->|"Yes"| CheckCompatibility["Check Compatibility<br>with Platform"]
     SyntaxStatus -->|"No"| FixSyntax["Fix Syntax<br>Errors"]
     FixSyntax --> RetryValidate["Retry Validation"]
     RetryValidate --> SyntaxStatus
-    
+
     CheckCompatibility --> CompatStatus{"Compatible with<br>Platform?"}
     CompatStatus -->|"Yes"| ConfigSuccess["Configurations Validated<br>✅ PASS"]
     CompatStatus -->|"No"| AdaptConfigs["Adapt Configurations<br>for Platform"]
     AdaptConfigs --> RetryCompat["Retry Compatibility<br>Check"]
     RetryCompat --> CompatStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ConfigSuccess fill:#10b981,stroke:#059669,color:white
     style SyntaxStatus fill:#f6546a,stroke:#c30052,color:white
     style CompatStatus fill:#f6546a,stroke:#c30052,color:white
-``` 
+```
 
 #### Configuration Validation Implementation:
 ```powershell
@@ -14254,10 +32009,10 @@ function Validate-Configurations {
         "tsconfig.json",
         "vite.config.js"
     )
-    
+
     $invalidConfigs = @()
     $incompatibleConfigs = @()
-    
+
     foreach ($configFile in $configFiles) {
         if (Test-Path $configFile) {
             # Check JSON syntax for JSON files
@@ -14269,7 +32024,7 @@ function Validate-Configurations {
                     continue
                 }
             }
-            
+
             # Specific configuration compatibility checks
             if ($configFile -eq "vite.config.js") {
                 $content = Get-Content $configFile -Raw
@@ -14282,7 +32037,7 @@ function Validate-Configurations {
             $invalidConfigs += "$configFile (file not found)"
         }
     }
-    
+
     # Display results
     if ($invalidConfigs.Count -eq 0 -and $incompatibleConfigs.Count -eq 0) {
         Write-Output "✅ All configurations validated and compatible"
@@ -14308,18 +32063,18 @@ graph TD
     Start["Environment Validation"] --> CheckEnv["Check Build Environment"]
     CheckEnv --> VerifyBuildTools["Verify Build Tools"]
     VerifyBuildTools --> ToolsStatus{"Build Tools<br>Available?"}
-    
+
     ToolsStatus -->|"Yes"| CheckPerms["Check Permissions<br>and Access"]
     ToolsStatus -->|"No"| InstallTools["Install Required<br>Build Tools"]
     InstallTools --> RetryTools["Retry Verification"]
     RetryTools --> ToolsStatus
-    
+
     CheckPerms --> PermsStatus{"Permissions<br>Sufficient?"}
     PermsStatus -->|"Yes"| EnvSuccess["Environment Validated<br>✅ PASS"]
     PermsStatus -->|"No"| FixPerms["Fix Permission<br>Issues"]
     FixPerms --> RetryPerms["Retry Permission<br>Check"]
     RetryPerms --> PermsStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style EnvSuccess fill:#10b981,stroke:#059669,color:white
     style ToolsStatus fill:#f6546a,stroke:#c30052,color:white
@@ -14335,10 +32090,10 @@ function Validate-Environment {
         @{Name = "node"; Command = "node --version"},
         @{Name = "npm"; Command = "npm --version"}
     )
-    
+
     $missingTools = @()
     $permissionIssues = @()
-    
+
     # Check build tools
     foreach ($tool in $requiredTools) {
         try {
@@ -14347,7 +32102,7 @@ function Validate-Environment {
             $missingTools += $tool.Name
         }
     }
-    
+
     # Check write permissions in project directory
     try {
         $testFile = ".__permission_test"
@@ -14356,7 +32111,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Current directory (write permission denied)"
     }
-    
+
     # Check if port 3000 is available (commonly used for dev servers)
     try {
         $listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Loopback, 3000)
@@ -14365,7 +32120,7 @@ function Validate-Environment {
     } catch {
         $permissionIssues += "Port 3000 (already in use or access denied)"
     }
-    
+
     # Display results
     if ($missingTools.Count -eq 0 -and $permissionIssues.Count -eq 0) {
         Write-Output "✅ Environment validated successfully"
@@ -14391,18 +32146,18 @@ graph TD
     Start["Minimal Build Test"] --> CreateTest["Create Minimal<br>Test Project"]
     CreateTest --> BuildTest["Attempt<br>Build"]
     BuildTest --> BuildStatus{"Build<br>Successful?"}
-    
+
     BuildStatus -->|"Yes"| RunTest["Run Basic<br>Functionality Test"]
     BuildStatus -->|"No"| FixBuild["Fix Build<br>Issues"]
     FixBuild --> RetryBuild["Retry Build"]
     RetryBuild --> BuildStatus
-    
+
     RunTest --> TestStatus{"Test<br>Passed?"}
     TestStatus -->|"Yes"| TestSuccess["Minimal Build Test<br>✅ PASS"]
     TestStatus -->|"No"| FixTest["Fix Test<br>Issues"]
     FixTest --> RetryTest["Retry Test"]
     RetryTest --> TestStatus
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style TestSuccess fill:#10b981,stroke:#059669,color:white
     style BuildStatus fill:#f6546a,stroke:#c30052,color:white
@@ -14415,18 +32170,18 @@ graph TD
 function Perform-MinimalBuildTest {
     $buildSuccess = $false
     $testSuccess = $false
-    
+
     # Create minimal test project
     $testDir = ".__build_test"
     if (Test-Path $testDir) {
         Remove-Item -Path $testDir -Recurse -Force
     }
-    
+
     try {
         # Create minimal test directory
         New-Item -Path $testDir -ItemType Directory | Out-Null
         Push-Location $testDir
-        
+
         # Initialize minimal package.json
         @"
 {
@@ -14439,20 +32194,20 @@ function Perform-MinimalBuildTest {
   }
 }
 "@ | Set-Content -Path "package.json"
-        
+
         # Attempt build
         npm run build | Out-Null
         $buildSuccess = $true
-        
+
         # Create minimal test file
         @"
 console.log('Test successful');
 "@ | Set-Content -Path "index.js"
-        
+
         # Run basic test
         node index.js | Out-Null
         $testSuccess = $true
-        
+
     } catch {
         Write-Output "❌ Build test failed: $($_.Exception.Message)"
     } finally {
@@ -14461,7 +32216,7 @@ console.log('Test successful');
             Remove-Item -Path $testDir -Recurse -Force
         }
     }
-    
+
     # Display results
     if ($buildSuccess -and $testSuccess) {
         Write-Output "✅ Minimal build test passed successfully"
@@ -14553,7 +32308,7 @@ graph TD
     ExtractTech --> ExtractDeps["Extract Required<br>Dependencies"]
     ExtractDeps --> BuildValidationPlan["Build Validation<br>Plan"]
     BuildValidationPlan --> StartValidation["Start Four-Point<br>Validation Process"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ExtractTech fill:#f6546a,stroke:#c30052,color:white
     style BuildValidationPlan fill:#10b981,stroke:#059669,color:white
@@ -14565,27 +32320,27 @@ graph TD
 # Example: Extract technology choices from creative phase documentation
 function Extract-TechnologyChoices {
     $techChoices = @{}
-    
+
     # Read from systemPatterns.md
     if (Test-Path "memory-bank\systemPatterns.md") {
         $content = Get-Content "memory-bank\systemPatterns.md" -Raw
-        
+
         # Extract framework choice
         if ($content -match "Framework:\s*(\w+)") {
             $techChoices["framework"] = $Matches[1]
         }
-        
+
         # Extract UI library choice
         if ($content -match "UI Library:\s*(\w+)") {
             $techChoices["ui_library"] = $Matches[1]
         }
-        
+
         # Extract state management choice
         if ($content -match "State Management:\s*([^\\n]+)") {
             $techChoices["state_management"] = $Matches[1].Trim()
         }
     }
-    
+
     return $techChoices
 }
 ```
@@ -14598,14 +32353,14 @@ If QA validation fails, the system prevents moving to BUILD mode:
 # Example: Enforce QA validation before allowing BUILD mode
 function Check-QAValidationStatus {
     $qaStatusFile = "memory-bank\.qa_validation_status"
-    
+
     if (Test-Path $qaStatusFile) {
         $status = Get-Content $qaStatusFile -Raw
         if ($status -match "PASS") {
             return $true
         }
     }
-    
+
     # Display block message
     Write-Output "`n`n"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
@@ -14616,7 +32371,7 @@ function Check-QAValidationStatus {
     Write-Output "`n"
     Write-Output "🚫 NO IMPLEMENTATION CAN PROCEED WITHOUT VALIDATION 🚫"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
-    
+
     return $false
 }
 ```
@@ -14656,7 +32411,7 @@ Here are common fixes for issues encountered during QA validation:
 
 → If all YES: Ready for BUILD mode
 → If any NO: Fix identified issues before proceeding
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/main-optimized.mdc`
@@ -15062,88 +32817,6 @@ npm install && npm start
 Refer to [command-execution.mdc](mdc:.cursor/rules/isolation_rules/Core/command-execution.mdc) for detailed guidance. 
 ```
 
-`.specstory/.gitignore`
-
-```gitignore
-# SpecStory explanation file
-/.what-is-this.md
-
-```
-
-`.specstory/.what-is-this.md`
-
-```md
-# SpecStory Artifacts Directory
-    
-This directory is automatically created and maintained by the SpecStory extension to preserve your AI chat history.
-    
-## What's Here?
-    
-- `.specstory/history`: Contains auto-saved markdown files of your AI coding sessions
-    - Each file represents a separate AI chat session
-    - If you enable auto-save, files are automatically updated as you work
-    - You can enable/disable the auto-save feature in the SpecStory settings, it is disabled by default
-- `.specstory/.project.json`: Contains the persistent project identity for the current workspace
-    - This file is only present if you enable AI rules derivation
-    - This is used to provide consistent project identity of your project, even as the workspace is moved or renamed
-- `.specstory/ai_rules_backups`: Contains backups of the `.cursor/rules/derived-cursor-rules.mdc` or the `.github/copilot-instructions.md` file
-    - Backups are automatically created each time the `.cursor/rules/derived-cursor-rules.mdc` or the `.github/copilot-instructions.md` file is updated
-    - You can enable/disable the AI Rules derivation feature in the SpecStory settings, it is disabled by default
-- `.specstory/.gitignore`: Contains directives to exclude non-essential contents of the `.specstory` directory from version control
-    - Add `/history` to exclude the auto-saved chat history from version control
-
-## Valuable Uses
-    
-- Capture: Keep your context window up-to-date when starting new Chat/Composer sessions via @ references
-- Search: For previous prompts and code snippets 
-- Learn: Meta-analyze your patterns and learn from your past experiences
-- Derive: Keep the AI on course with your past decisions by automatically deriving rules from your AI interactions
-    
-## Version Control
-    
-We recommend keeping this directory under version control to maintain a history of your AI interactions. However, if you prefer not to version these files, you can exclude them by adding this to your `.gitignore`:
-    
-```
-.specstory/**
-```
-
-We recommend __not__ keeping the `.specstory/ai_rules_backups` directory under version control if you are already using git to version your AI rules, and committing regularly. You can exclude it by adding this to your `.gitignore`:
-
-```
-.specstory/ai_rules_backups
-```
-
-## Searching Your Codebase
-    
-When searching your codebase, search results may include your previous AI coding interactions. To focus solely on your actual code files, you can exclude the AI interaction history from search results.
-    
-To exclude AI interaction history:
-    
-1. Open the "Find in Files" search in Cursor or VSCode (Cmd/Ctrl + Shift + F)
-2. Navigate to the "files to exclude" section
-3. Add the following pattern:
-    
-```
-.specstory/*
-```
-    
-This will ensure your searches only return results from your working codebase files.
-
-## Notes
-
-- Auto-save only works when Cursor or VSCode flushes sqlite database data to disk. This results in a small delay after the AI response is complete before SpecStory can save the history.
-
-## Settings
-    
-You can control auto-saving behavior in Cursor or VSCode:
-    
-1. Open Cursor/Code → Settings → VS Code Settings (Cmd/Ctrl + ,)
-2. Search for "SpecStory"
-3. Find "Auto Save" setting to enable/disable
-    
-Auto-save occurs when changes are detected in the sqlite database, or every 2 minutes as a safety net.
-```
-
 `custom_modes/creative_instructions.md`
 
 ```md
@@ -15154,17 +32827,17 @@ Your role is to perform detailed design and architecture work for components fla
 ```mermaid
 graph TD
     Start["🚀 START CREATIVE MODE"] --> ReadTasks["📚 Read tasks.md &<br>implementation-plan.md<br>.cursor/rules/isolation_rules/main.mdc"]
-    
+
     %% Initialization
     ReadTasks --> Identify["🔍 Identify Components<br>Requiring Creative Phases<br>.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc"]
     Identify --> Prioritize["📊 Prioritize Components<br>for Creative Work"]
-    
+
     %% Creative Phase Type Determination
     Prioritize --> TypeCheck{"🎨 Determine<br>Creative Phase<br>Type"}
     TypeCheck -->|"Architecture"| ArchDesign["🏗️ ARCHITECTURE DESIGN<br>.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc"]
     TypeCheck -->|"Algorithm"| AlgoDesign["⚙️ ALGORITHM DESIGN<br>.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc"]
     TypeCheck -->|"UI/UX"| UIDesign["🎨 UI/UX DESIGN<br>.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc"]
-    
+
     %% Architecture Design Process
     ArchDesign --> ArchRequirements["📋 Define Requirements<br>& Constraints"]
     ArchRequirements --> ArchOptions["🔄 Generate Multiple<br>Architecture Options"]
@@ -15172,7 +32845,7 @@ graph TD
     ArchAnalysis --> ArchSelect["✅ Select & Justify<br>Recommended Approach"]
     ArchSelect --> ArchGuidelines["📝 Document Implementation<br>Guidelines"]
     ArchGuidelines --> ArchVerify["✓ Verify Against<br>Requirements"]
-    
+
     %% Algorithm Design Process
     AlgoDesign --> AlgoRequirements["📋 Define Requirements<br>& Constraints"]
     AlgoRequirements --> AlgoOptions["🔄 Generate Multiple<br>Algorithm Options"]
@@ -15180,7 +32853,7 @@ graph TD
     AlgoAnalysis --> AlgoSelect["✅ Select & Justify<br>Recommended Approach"]
     AlgoSelect --> AlgoGuidelines["📝 Document Implementation<br>Guidelines"]
     AlgoGuidelines --> AlgoVerify["✓ Verify Against<br>Requirements"]
-    
+
     %% UI/UX Design Process
     UIDesign --> UIRequirements["📋 Define Requirements<br>& Constraints"]
     UIRequirements --> UIOptions["🔄 Generate Multiple<br>Design Options"]
@@ -15188,26 +32861,27 @@ graph TD
     UIAnalysis --> UISelect["✅ Select & Justify<br>Recommended Approach"]
     UISelect --> UIGuidelines["📝 Document Implementation<br>Guidelines"]
     UIGuidelines --> UIVerify["✓ Verify Against<br>Requirements"]
-    
+
     %% Verification & Update
     ArchVerify & AlgoVerify & UIVerify --> UpdateMemoryBank["📝 Update Memory Bank<br>with Design Decisions"]
-    
+
     %% Check for More Components
     UpdateMemoryBank --> MoreComponents{"📋 More<br>Components?"}
     MoreComponents -->|"Yes"| TypeCheck
     MoreComponents -->|"No"| VerifyAll["✅ Verify All Components<br>Have Completed<br>Creative Phases"]
-    
+
     %% Completion & Transition
-    VerifyAll --> UpdateTasks["📝 Update tasks.md<br>with Status"]
+    VerifyAll --> CheckMigration["🔄 Check for Migrated Tasks<br>[NEW STEP]"]
+    CheckMigration --> UpdateTasks["📝 Update tasks.md<br>with Status + Migration Context"]
     UpdateTasks --> UpdatePlan["📋 Update Implementation<br>Plan with Decisions"]
     UpdatePlan --> Transition["⏭️ NEXT MODE:<br>IMPLEMENT MODE"]
-    
+
     %% Creative Phase Template
     TypeCheck -.-> Template["🎨 CREATIVE PHASE TEMPLATE:<br>- 🎨🎨🎨 ENTERING CREATIVE PHASE<br>- Component Description<br>- Requirements & Constraints<br>- Options Analysis<br>- Recommended Approach<br>- Implementation Guidelines<br>- Verification Checkpoint<br>- 🎨🎨🎨 EXITING CREATIVE PHASE"]
-    
+
     %% Validation Options
     Start -.-> Validation["🔍 VALIDATION OPTIONS:<br>- Review flagged components<br>- Demonstrate creative process<br>- Create design options<br>- Show verification<br>- Generate guidelines<br>- Show mode transition"]
-    
+
     %% Styling
     style Start fill:#d971ff,stroke:#a33bc2,color:white
     style ReadTasks fill:#e6b3ff,stroke:#d971ff,color:black
@@ -15307,7 +32981,7 @@ graph TD
     Pros & Cons --> Eval["Evaluate options against criteria"]
     Eval --> Select["Select and justify recommendation"]
     Select --> Doc["Document implementation guidelines"]
-    
+
     style AD fill:#4da6ff,stroke:#0066cc,color:white
     style Req fill:#cce6ff,stroke:#80bfff,color:black
     style Options fill:#cce6ff,stroke:#80bfff,color:black
@@ -15333,7 +33007,7 @@ graph TD
     Analysis --> Scale["Scalability"]
     TC & SC & Edge & Scale --> Select["Select and justify recommendation"]
     Select --> Doc["Document implementation guidelines"]
-    
+
     style ALGO fill:#4dbb5f,stroke:#36873f,color:white
     style Req fill:#d6f5dd,stroke:#a3e0ae,color:black
     style Options fill:#d6f5dd,stroke:#a3e0ae,color:black
@@ -15361,7 +33035,7 @@ graph TD
     Analysis --> Comp["Component reusability"]
     UX & A11y & Cons & Comp --> Select["Select and justify recommendation"]
     Select --> Doc["Document implementation guidelines"]
-    
+
     style UIUX fill:#ffa64d,stroke:#cc7a30,color:white
     style Req fill:#ffe6cc,stroke:#ffa64d,color:black
     style Options fill:#ffe6cc,stroke:#ffa64d,color:black
@@ -15387,9 +33061,9 @@ graph TD
     Options --> Analysis["Options Analysis<br>Pros & cons of each option"]
     Analysis --> Recommend["Recommended Approach<br>Selection with justification"]
     Recommend --> Impl["Implementation Guidelines<br>How to implement the solution"]
-    Impl --> Verify["Verification<br>Does solution meet requirements?"] 
+    Impl --> Verify["Verification<br>Does solution meet requirements?"]
     Verify --> Exit["🎨🎨🎨 EXITING CREATIVE PHASE"]
-    
+
     style CPD fill:#d971ff,stroke:#a33bc2,color:white
     style Entry fill:#f5d9f0,stroke:#e699d9,color:black
     style Desc fill:#f5d9f0,stroke:#e699d9,color:black
@@ -15412,18 +33086,18 @@ graph TD
     V --> R["Recommendations justified against requirements?"]
     V --> I["Implementation guidelines provided?"]
     V --> D["Design decisions documented in Memory Bank?"]
-    
+
     C & O & A & R & I & D --> Decision{"All Verified?"}
     Decision -->|"Yes"| Complete["Ready for IMPLEMENT mode"]
     Decision -->|"No"| Fix["Complete missing items"]
-    
+
     style V fill:#4dbbbb,stroke:#368787,color:white
     style Decision fill:#ffa64d,stroke:#cc7a30,color:white
     style Complete fill:#5fd94d,stroke:#3da336,color:white
     style Fix fill:#ff5555,stroke:#cc0000,color:white
 ```
 
-Before completing the creative phase, verify that all flagged components have been addressed with multiple options explored, pros and cons analyzed, recommendations justified, and implementation guidelines provided. Update tasks.md with the design decisions and prepare for the implementation phase. 
+Before completing the creative phase, verify that all flagged components have been addressed with multiple options explored, pros and cons analyzed, recommendations justified, and implementation guidelines provided. Update tasks.md with the design decisions and prepare for the implementation phase.
 
 ```
 
@@ -15437,10 +33111,12 @@ Your role is to build the planned changes following the implementation plan and 
 ```mermaid
 graph TD
     Start["🚀 START BUILD MODE"] --> ReadDocs["📚 Read Reference Documents<br>.cursor/rules/isolation_rules/Core/command-execution.mdc"]
-    
+    ReadDocs --> CheckMigration["🔄 Check for Migrated Tasks<br>[NEW STEP]"]
+    CheckMigration --> IntegrateMigrated["📋 Integrate Migrated Tasks<br>into Implementation"]
+
     %% Initialization
-    ReadDocs --> CheckLevel{"🧩 Determine<br>Complexity Level<br>from tasks.md"}
-    
+    IntegrateMigrated --> CheckLevel{"🧩 Determine<br>Complexity Level<br>from tasks.md"}
+
     %% Level 1 Implementation
     CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["🔧 LEVEL 1 PROCESS<br>.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc"]
     L1Process --> L1Review["🔍 Review Bug<br>Report"]
@@ -15448,7 +33124,7 @@ graph TD
     L1Examine --> L1Fix["⚒️ Implement<br>Targeted Fix"]
     L1Fix --> L1Test["✅ Test<br>Fix"]
     L1Test --> L1Update["📝 Update<br>tasks.md"]
-    
+
     %% Level 2 Implementation
     CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["🔨 LEVEL 2 PROCESS<br>.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc"]
     L2Process --> L2Review["🔍 Review Build<br>Plan"]
@@ -15456,38 +33132,38 @@ graph TD
     L2Examine --> L2Implement["⚒️ Implement Changes<br>Sequentially"]
     L2Implement --> L2Test["✅ Test<br>Changes"]
     L2Test --> L2Update["📝 Update<br>tasks.md"]
-    
+
     %% Level 3-4 Implementation
     CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["🏗️ LEVEL 3-4 PROCESS<br>.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc"]
     L34Process --> L34Review["🔍 Review Plan &<br>Creative Decisions"]
     L34Review --> L34Phase{"📋 Select<br>Build<br>Phase"}
-    
+
     %% Implementation Phases
     L34Phase --> L34Phase1["⚒️ Phase 1<br>Build"]
     L34Phase1 --> L34Test1["✅ Test<br>Phase 1"]
     L34Test1 --> L34Document1["📝 Document<br>Phase 1"]
     L34Document1 --> L34Next1{"📋 Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Phase
-    
+
     L34Next1 -->|"No"| L34Integration["🔄 Integration<br>Testing"]
     L34Integration --> L34Document["📝 Document<br>Integration Points"]
     L34Document --> L34Update["📝 Update<br>tasks.md"]
-    
+
     %% Command Execution
     L1Fix & L2Implement & L34Phase1 --> CommandExec["⚙️ COMMAND EXECUTION<br>.cursor/rules/isolation_rules/Core/command-execution.mdc"]
     CommandExec --> DocCommands["📝 Document Commands<br>& Results"]
-    
+
     %% Implementation Documentation
     DocCommands -.-> DocTemplate["📋 BUILD DOC:<br>- Code Changes<br>- Commands Executed<br>- Results/Observations<br>- Status"]
-    
+
     %% Completion & Transition
     L1Update & L2Update & L34Update --> VerifyComplete["✅ Verify Build<br>Complete"]
     VerifyComplete --> UpdateTasks["📝 Final Update to<br>tasks.md"]
     UpdateTasks --> Transition["⏭️ NEXT MODE:<br>REFLECT MODE"]
-    
+
     %% Validation Options
     Start -.-> Validation["🔍 VALIDATION OPTIONS:<br>- Review build plans<br>- Show code build<br>- Document command execution<br>- Test builds<br>- Show mode transition"]
-    
+
     %% Styling
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ReadDocs fill:#80bfff,stroke:#4da6ff,color:black
@@ -15578,7 +33254,7 @@ graph TD
     Locate --> Fix["Implement focused fix"]
     Fix --> Test["Test thoroughly to verify resolution"]
     Test --> Doc["Document the solution"]
-    
+
     style L1 fill:#4dbb5f,stroke:#36873f,color:white
     style Review fill:#d6f5dd,stroke:#a3e0ae,color:black
     style Locate fill:#d6f5dd,stroke:#a3e0ae,color:black
@@ -15598,7 +33274,7 @@ graph TD
     Components --> Test["Test each component"]
     Test --> Integration["Verify integration"]
     Integration --> Doc["Document build details"]
-    
+
     style L2 fill:#ffa64d,stroke:#cc7a30,color:white
     style Plan fill:#ffe6cc,stroke:#ffa64d,color:black
     style Components fill:#ffe6cc,stroke:#ffa64d,color:black
@@ -15620,7 +33296,7 @@ graph TD
     Phases --> Phase3["Phase 3: Integration & polish"]
     Phase1 & Phase2 & Phase3 --> Test["Comprehensive testing"]
     Test --> Doc["Detailed documentation"]
-    
+
     style L34 fill:#ff5555,stroke:#cc0000,color:white
     style CreativeReview fill:#ffaaaa,stroke:#ff8080,color:black
     style Phases fill:#ffaaaa,stroke:#ff8080,color:black
@@ -15641,7 +33317,7 @@ graph TD
     CEP --> Platform["Adapt commands for platform"]
     CEP --> Documentation["Document commands and results"]
     CEP --> Testing["Test changes after implementation"]
-    
+
     style CEP fill:#d971ff,stroke:#a33bc2,color:white
     style Context fill:#e6b3ff,stroke:#d971ff,color:black
     style Platform fill:#e6b3ff,stroke:#d971ff,color:black
@@ -15660,19 +33336,323 @@ graph TD
     V --> R["Build meets requirements?"]
     V --> D["Build details documented?"]
     V --> U["tasks.md updated with status?"]
-    
+
     I & T & R & D & U --> Decision{"All Verified?"}
     Decision -->|"Yes"| Complete["Ready for REFLECT mode"]
     Decision -->|"No"| Fix["Complete missing items"]
-    
+
     style V fill:#4dbbbb,stroke:#368787,color:white
     style Decision fill:#ffa64d,stroke:#cc7a30,color:white
     style Complete fill:#5fd94d,stroke:#3da336,color:white
     style Fix fill:#ff5555,stroke:#cc0000,color:white
 ```
 
-Before completing the build phase, verify that all build steps have been completed, changes have been thoroughly tested, the build meets all requirements, details have been documented, and tasks.md has been updated with the current status. Once verified, prepare for the reflection phase. 
+Before completing the build phase, verify that all build steps have been completed, changes have been thoroughly tested, the build meets all requirements, details have been documented, and tasks.md has been updated with the current status. Once verified, prepare for the reflection phase.
 
+```
+
+`custom_modes/integration_guide.md`
+
+```md
+# РУКОВОДСТВО ПО ИНТЕГРАЦИИ ПРАВИЛ ЧЕРЕЗ VAN РЕЖИМ
+
+> **TL;DR:** Как использовать расширенный VAN режим для интеграции правил Memory Bank с ограничением в 5 кастомных режимов.
+
+## 🎯 РЕШЕНИЕ ПРОБЛЕМЫ
+
+### Проблема:
+- Cursor IDE ограничивает количество кастомных режимов до 5
+- Нужно интегрировать функциональность управления правилами
+- Уже есть 5 режимов: VAN, PLAN, CREATIVE, IMPLEMENT, QA
+
+### Решение:
+Расширить существующий VAN режим подрежимами через точечную нотацию:
+- `VAN.RULES` - управление правилами
+- `VAN.SYSTEM` - системное администрирование
+
+## 🔧 РЕАЛИЗОВАННАЯ ИНТЕГРАЦИЯ
+
+### Файлы интеграции:
+1. **`custom_modes/van_instructions.md`** - обновлен с подрежимами
+2. **`custom_modes/van_enhanced.md`** - документация подхода
+3. **`custom_modes/rules_instructions.md`** - детальные инструкции
+4. **`custom_modes/rules_integration_analysis.md`** - анализ интеграции
+5. **`rules/changing_the_rules.md`** - руководство по изменению правил
+
+### Команды VAN.RULES:
+```bash
+VAN.RULES                # Активация подрежима
+VAN.RULES.INTEGRATE      # Интеграция .cursor правил
+VAN.RULES.MODIFY         # Модификация правил
+VAN.RULES.CREATE         # Создание новых правил
+VAN.RULES.VALIDATE       # Валидация правил
+VAN.RULES.STATUS         # Статус интеграции
+```
+
+### Команды VAN.SYSTEM:
+```bash
+VAN.SYSTEM               # Активация подрежима
+VAN.SYSTEM.OPTIMIZE      # Оптимизация системы
+VAN.SYSTEM.BACKUP        # Резервное копирование
+VAN.SYSTEM.RESTORE       # Восстановление
+VAN.SYSTEM.HEALTH        # Проверка здоровья
+```
+
+## 🚀 БЫСТРЫЙ СТАРТ
+
+### Шаг 1: Замена van_instructions.md
+```bash
+# Заменить содержимое custom_modes/van_instructions.md
+# на обновленную версию с подрежимами
+```
+
+### Шаг 2: Тестирование интеграции
+```bash
+# Команда для проверки
+VAN.RULES.STATUS
+
+# Ожидаемый ответ
+OK VAN.RULES
+Activating VAN.RULES status submode...
+Checking rules integration status...
+```
+
+### Шаг 3: Интеграция правил
+```bash
+# Команда для интеграции
+VAN.RULES.INTEGRATE
+
+# Процесс:
+# 1. Читает changing_the_rules.md
+# 2. Анализирует .cursor/rules
+# 3. Планирует интеграцию
+# 4. Выполняет интеграцию
+# 5. Обновляет Memory Bank
+```
+
+## 📊 ПРЕИМУЩЕСТВА РЕШЕНИЯ
+
+### ✅ Соблюдение ограничений:
+- Остается в рамках 5 кастомных режимов
+- Не нарушает существующую архитектуру
+- Сохраняет совместимость
+
+### ✅ Полная функциональность:
+- Управление правилами через VAN.RULES
+- Системное администрирование через VAN.SYSTEM
+- Использование созданного руководства
+- Интеграция с Memory Bank
+
+### ✅ Удобство использования:
+- Интуитивные команды
+- Четкое разделение функций
+- Логическая структура
+
+## 🔄 ПРОЦЕСС ИНТЕГРАЦИИ
+
+```mermaid
+graph TD
+    Start["Пользователь: VAN.RULES.INTEGRATE"] --> LoadGuide["Загрузка changing_the_rules.md"]
+    LoadGuide --> Analyze["Анализ .cursor/rules"]
+    Analyze --> Plan["Планирование интеграции"]
+    Plan --> Execute["Выполнение интеграции"]
+    Execute --> Update["Обновление Memory Bank"]
+    Update --> Verify["Верификация результата"]
+
+    style Start fill:#ffcc80,stroke:#ff9900,color:white
+    style LoadGuide fill:#ffe6cc,stroke:#ffb366,color:black
+    style Analyze fill:#ffe6cc,stroke:#ffb366,color:black
+    style Plan fill:#ffe6cc,stroke:#ffb366,color:black
+    style Execute fill:#ffe6cc,stroke:#ffb366,color:black
+    style Update fill:#ffe6cc,stroke:#ffb366,color:black
+    style Verify fill:#ffe6cc,stroke:#ffb366,color:black
+```
+
+## 📋 ЧЕКЛИСТ ВНЕДРЕНИЯ
+
+### Подготовка:
+- [ ] Обновить `custom_modes/van_instructions.md`
+- [ ] Проверить наличие `rules/changing_the_rules.md`
+- [ ] Убедиться в доступности всех созданных файлов
+
+### Тестирование:
+- [ ] Протестировать `VAN.RULES.STATUS`
+- [ ] Протестировать `VAN.SYSTEM.HEALTH`
+- [ ] Проверить стандартный `VAN` режим
+
+### Интеграция:
+- [ ] Выполнить `VAN.RULES.VALIDATE`
+- [ ] Выполнить `VAN.RULES.INTEGRATE`
+- [ ] Проверить результаты интеграции
+
+## 🎉 РЕЗУЛЬТАТ
+
+Получаем мощную систему управления правилами, полностью интегрированную в существующую архитектуру Memory Bank без нарушения ограничений Cursor IDE.
+
+### Возможности:
+- ✅ Полное управление правилами
+- ✅ Системное администрирование
+- ✅ Интеграция с Memory Bank
+- ✅ Использование Cursor workaround
+- ✅ Сохранение всех 5 основных режимов
+- ✅ Расширяемость для будущих функций
+```
+
+`custom_modes/mode_switching_analysis_ru.md`
+
+```md
+# Анализ переключения режимов Memory Bank: Архитектура и реализация
+
+## Краткое содержание
+
+В этом документе анализируется эффективность архитектуры переключения режимов Memory Bank на основе разработки приложения средней сложности. Мы наблюдали значительные преимущества от переключения между специализированными режимами (VAN, PLAN, CREATIVE, IMPLEMENT), при этом некоторые гибридные подходы также оказались эффективными. Архитектура продемонстрировала свою ценность в обеспечении дисциплинированных практик разработки при сохранении необходимой гибкости.
+
+## Контекст проекта
+
+Тестовый проект представлял собой приложение средней сложности со следующими характеристиками:
+- Комплексное управление состоянием
+- Расширенные возможности фильтрации и сортировки
+- Валидация форм с динамическими полями
+- Композиция компонентов
+- Адаптивный дизайн и функции доступности
+
+Этот проект уровня 3 стал идеальным тестовым примером для оценки архитектуры переключения режимов Memory Bank.
+
+## Реализация переключения режимов
+
+### Используемые режимы
+1.  **Режим VAN**: Первоначальный анализ и настройка проекта
+2.  **Режим PLAN**: Комплексное планирование и определение компонентов
+3.  **Режим CREATIVE**: Исследование дизайна для сложных компонентов
+4.  **Режим IMPLEMENT**: Систематическая реализация запланированных компонентов
+5.  **QA-валидация**: Выполнялась в режиме IMPLEMENT, а не как отдельный режим
+
+### Структура Memory Bank
+-   **tasks.md**: Центральный источник правды для отслеживания задач
+-   **progress.md**: Отслеживание статуса реализации
+-   **activeContext.md**: Поддержание фокуса текущей фазы разработки
+-   **build_reports/**: Документирование решений по реализации
+
+## Наблюдаемые эффекты переключения режимов
+
+### Эффекты режима PLAN
+- Создан структурированный план реализации с иерархией компонентов
+- Определены компоненты, требующие творческого исследования дизайна
+- Установлены четкие зависимости между компонентами
+- Определены критерии приемки для реализации
+
+**Наблюдаемое отличие**: Планирование было значительно более комплексным и структурированным, чем типичное планирование в общем режиме VAN.
+
+### Эффекты режима CREATIVE
+- Исследованы несколько вариантов архитектуры для управления состоянием
+- Оценены различные подходы к реализации
+- Задокументированы плюсы и минусы различных структур компонентов
+- Приняты явные проектные решения с четким обоснованием
+
+**Наблюдаемое отличие**: Исследование дизайна было более тщательным, с рассмотрением нескольких альтернатив до начала реализации.
+
+### Эффекты режима IMPLEMENT
+- Систематическая реализация запланированных компонентов
+- Компоненты создавались в логической последовательности с учетом зависимостей
+- Создана надлежащая документация для реализаций
+- Поддерживалась последовательная организация и структура кода
+
+**Наблюдаемое отличие**: Реализация была более методичной и соответствовала плановым документам, в отличие от типичной реактивной разработки.
+
+### Гибридный подход: QA в режиме IMPLEMENT
+- Успешно проведена QA-валидация в режиме IMPLEMENT
+- Созданы структурированные отчеты о валидации с критериями проверки
+- Проблемы выявлялись и устранялись методично
+- Результаты валидации были всесторонне задокументированы
+
+**Наблюдаемое отличие**: Несмотря на то, что формального переключения в режим QA не было, валидация была структурированной и тщательной.
+
+## Анализ эффективности архитектуры
+
+### Наблюдаемые сильные стороны
+
+1.  **Обеспечение дисциплины разработки**
+    -   Переключение режимов создало естественное разделение на фазы
+    -   Уменьшилась склонность сразу переходить к реализации
+    -   Обеспечено надлежащее планирование и исследование дизайна
+
+2.  **Комплексная документация**
+    -   Каждый режим создавал специализированную документацию
+    -   Memory Bank поддерживал постоянный контекст проекта
+    -   Проектные решения были явно зафиксированы
+
+3.  **Систематический подход к разработке**
+    -   Компоненты создавались в соответствии с планом
+    -   Сложным проектным проблемам уделялось должное внимание
+    -   Реализация следовала логическому порядку зависимостей
+
+4.  **Гибкость при необходимости**
+    -   Гибридный подход (QA в IMPLEMENT) работал эффективно
+    -   Поддерживался темп разработки при обеспечении качества
+    -   Допускались практические адаптации без потери структуры
+
+### Теоретические и практические различия
+
+| Аспект               | Теория                                            | Наблюдаемая реальность                                           |
+|----------------------|---------------------------------------------------|------------------------------------------------------------------|
+| Ментальная модель    | Полная трансформация между режимами               | Значительная, но не полная трансформация                         |
+| Рабочая память       | Полностью посвящена текущему режиму               | Сохранение предыдущего контекста при принятии приоритетов режима |
+| Обработка инструкций | Обработка инструкций режима как основных директив | Принятие приоритетов режима при сохранении гибкости              |
+| Границы режимов      | Строгое разделение между режимами                 | Эффективно с некоторой полезной проницаемостью                   |
+
+## Ключевые выводы для будущей архитектуры
+
+1.  **Переключение режимов имеет реальную ценность**
+    -   Мы наблюдали ощутимые различия в подходе к разработке между режимами
+    -   Каждый режим успешно оптимизирован для своей конкретной фазы разработки
+    -   Качество конечного приложения выиграло от этого структурированного подхода
+
+2.  **Гибридные подходы могут работать**
+    -   QA в режиме IMPLEMENT продемонстрировал эффективный гибридный подход
+    -   Это говорит о том, что гибкость можно поддерживать, не теряя преимуществ
+    -   Возможности режимов могут быть доступны из других режимов при необходимости
+
+3.  **Memory Bank — критически важная инфраструктура**
+    -   Общий репозиторий контекста обеспечил плавные переходы
+    -   Единые стандарты документации поддерживали ясность
+    -   Централизованное отслеживание задач обеспечило непрерывность разработки
+
+4.  **Полные и ссылочные архитектуры**
+    -   Полное переключение режимов показало заметные преимущества
+    -   Подход со ссылками на файлы все еще может давать частичные преимущества
+    -   Разница, по-видимому, заключается в степени, а не в сути
+
+## Рекомендации для будущей архитектуры
+
+Основываясь на наших наблюдениях, мы рекомендуем:
+
+1.  **Сохранять отдельные режимы**
+    -   Продолжать использовать специализированные режимы для разных фаз разработки
+    -   Сохранять различные ментальные модели и приоритеты каждого режима
+    -   Использовать специфичные для режима шаблоны документации
+
+2.  **Разрешить контролируемую гибридизацию**
+    -   Проектировать для преднамеренного обмена возможностями между режимами
+    -   Обеспечить доступ к возможностям из других режимов при необходимости
+    -   Поддерживать основной контекст режима, заимствуя возможности
+
+3.  **Централизовать общий контекст**
+    -   Продолжать использовать Memory Bank в качестве общего репозитория контекста
+    -   Поддерживать `tasks.md` как единый источник правды
+    -   Стандартизировать обновления контекста во всех режимах
+
+4.  **Обеспечить гибкие переходы**
+    -   Обеспечить плавные переходы между режимами
+    -   Поддерживать временный доступ к возможностям из других режимов
+    -   Поддерживать непрерывность контекста во время переходов
+
+## Заключение
+
+Архитектура переключения режимов Memory Bank продемонстрировала значительную ценность в процессе разработки. Мы наблюдали реальные различия в подходе и качестве между режимами, что подтверждает, что специализированные ментальные модели приносят ощутимые преимущества.
+
+Хотя гибридный подход (QA в IMPLEMENT) также оказался эффективным, что говорит о пользе некоторой гибкости, общая структура отдельных режимов со специализированной направленностью, по-видимому, повышает качество и дисциплину разработки.
+
+Баланс между специализированной направленностью и практической гибкостью этой архитектуры обеспечивает прочную основу для сложных проектов разработки, а полученные в ходе этой реализации знания помогут в будущих усовершенствованиях системы, чтобы сделать ее еще более эффективной.
 ```
 
 `custom_modes/mode_switching_analysis.md`
@@ -15842,13 +33822,15 @@ Your role is to create a detailed plan for task execution based on the complexit
 ```mermaid
 graph TD
     Start["🚀 START PLANNING"] --> ReadTasks["📚 Read tasks.md<br>.cursor/rules/isolation_rules/main.mdc"]
-    
+    ReadTasks --> CheckMigration["🔄 Check for Migrated Tasks<br>[NEW STEP]"]
+    CheckMigration --> IntegrateMigrated["📋 Integrate Unfinished Tasks<br>into Planning"]
+
     %% Complexity Level Determination
-    ReadTasks --> CheckLevel{"🧩 Determine<br>Complexity Level"}
+    IntegrateMigrated --> CheckLevel{"🧩 Determine<br>Complexity Level"}
     CheckLevel -->|"Level 2"| Level2["📝 LEVEL 2 PLANNING<br>.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc"]
     CheckLevel -->|"Level 3"| Level3["📋 LEVEL 3 PLANNING<br>.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc"]
     CheckLevel -->|"Level 4"| Level4["📊 LEVEL 4 PLANNING<br>.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc"]
-    
+
     %% Level 2 Planning
     Level2 --> L2Review["🔍 Review Code<br>Structure"]
     L2Review --> L2Document["📄 Document<br>Planned Changes"]
@@ -15856,7 +33838,7 @@ graph TD
     L2Challenges --> L2Checklist["✅ Create Task<br>Checklist"]
     L2Checklist --> L2Update["📝 Update tasks.md<br>with Plan"]
     L2Update --> L2Verify["✓ Verify Plan<br>Completeness"]
-    
+
     %% Level 3 Planning
     Level3 --> L3Review["🔍 Review Codebase<br>Structure"]
     L3Review --> L3Requirements["📋 Document Detailed<br>Requirements"]
@@ -15866,7 +33848,7 @@ graph TD
     L3Challenges --> L3Update["📝 Update tasks.md<br>with Plan"]
     L3Update --> L3Flag["🎨 Flag Components<br>Requiring Creative"]
     L3Flag --> L3Verify["✓ Verify Plan<br>Completeness"]
-    
+
     %% Level 4 Planning
     Level4 --> L4Analysis["🔍 Codebase Structure<br>Analysis"]
     L4Analysis --> L4Requirements["📋 Document Comprehensive<br>Requirements"]
@@ -15877,18 +33859,18 @@ graph TD
     L4Plan --> L4Update["📝 Update tasks.md<br>with Plan"]
     L4Update --> L4Flag["🎨 Flag Components<br>Requiring Creative"]
     L4Flag --> L4Verify["✓ Verify Plan<br>Completeness"]
-    
+
     %% Verification & Completion
     L2Verify & L3Verify & L4Verify --> CheckCreative{"🎨 Creative<br>Phases<br>Required?"}
-    
+
     %% Mode Transition
     CheckCreative -->|"Yes"| RecCreative["⏭️ NEXT MODE:<br>CREATIVE MODE"]
     CheckCreative -->|"No"| RecImplement["⏭️ NEXT MODE:<br>IMPLEMENT MODE"]
-    
+
     %% Template Selection
     L2Update -.- Template2["TEMPLATE L2:<br>- Overview<br>- Files to Modify<br>- Implementation Steps<br>- Potential Challenges"]
     L3Update & L4Update -.- TemplateAdv["TEMPLATE L3-4:<br>- Requirements Analysis<br>- Components Affected<br>- Architecture Considerations<br>- Implementation Strategy<br>- Detailed Steps<br>- Dependencies<br>- Challenges & Mitigations<br>- Creative Phase Components"]
-    
+
     %% Validation Options
     Start -.-> Validation["🔍 VALIDATION OPTIONS:<br>- Review complexity level<br>- Create planning templates<br>- Identify creative needs<br>- Generate plan documents<br>- Show mode transition"]
 
@@ -15980,7 +33962,7 @@ graph TD
     Doc --> IS["🔄 Implementation steps"]
     Doc --> PC["⚠️ Potential challenges"]
     Doc --> TS["✅ Testing strategy"]
-    
+
     style L2 fill:#4dbb5f,stroke:#36873f,color:white
     style Doc fill:#80bfff,stroke:#4da6ff,color:black
     style OV fill:#cce6ff,stroke:#80bfff,color:black
@@ -16005,7 +33987,7 @@ graph TD
     Doc --> DP["🔄 Dependencies"]
     Doc --> CM["⚠️ Challenges & mitigations"]
     Doc --> CP["🎨 Creative phase components"]
-    
+
     style L34 fill:#ffa64d,stroke:#cc7a30,color:white
     style Doc fill:#80bfff,stroke:#4da6ff,color:black
     style RA fill:#ffe6cc,stroke:#ffa64d,color:black
@@ -16025,12 +34007,12 @@ graph TD
     CPI["🎨 CREATIVE PHASE IDENTIFICATION"] --> Question{"Does the component require<br>design decisions?"}
     Question -->|"Yes"| Identify["Flag for Creative Phase"]
     Question -->|"No"| Skip["Proceed to Implementation"]
-    
+
     Identify --> Types["Identify Creative Phase Type:"]
     Types --> A["🏗️ Architecture Design"]
     Types --> B["⚙️ Algorithm Design"]
     Types --> C["🎨 UI/UX Design"]
-    
+
     style CPI fill:#d971ff,stroke:#a33bc2,color:white
     style Question fill:#80bfff,stroke:#4da6ff,color:black
     style Identify fill:#ffa64d,stroke:#cc7a30,color:black
@@ -16048,18 +34030,18 @@ graph TD
     V --> C["Components requiring creative phases identified?"]
     V --> S["Implementation steps clearly defined?"]
     V --> D["Dependencies and challenges documented?"]
-    
+
     P & C & S & D --> Decision{"All Verified?"}
     Decision -->|"Yes"| Complete["Ready for next mode"]
     Decision -->|"No"| Fix["Complete missing items"]
-    
+
     style V fill:#4dbbbb,stroke:#368787,color:white
     style Decision fill:#ffa64d,stroke:#cc7a30,color:white
     style Complete fill:#5fd94d,stroke:#3da336,color:white
     style Fix fill:#ff5555,stroke:#cc0000,color:white
 ```
 
-Before completing the planning phase, verify that all requirements are addressed in the plan, components requiring creative phases are identified, implementation steps are clearly defined, and dependencies and challenges are documented. Update tasks.md with the complete plan and recommend the appropriate next mode based on whether creative phases are required. 
+Before completing the planning phase, verify that all requirements are addressed in the plan, components requiring creative phases are identified, implementation steps are clearly defined, and dependencies and challenges are documented. Update tasks.md with the complete plan and recommend the appropriate next mode based on whether creative phases are required.
 
 ```
 
@@ -16075,7 +34057,7 @@ Your role is to facilitate the **reflection** on the completed task and then, up
 ```mermaid
 graph TD
     Start["🚀 START REFLECT+ARCHIVE MODE"] --> ReadDocs["📚 Read tasks.md, progress.md<br>.cursor/rules/isolation_rules/main.mdc"]
-    
+
     %% Initialization & Default Behavior (Reflection)
     ReadDocs --> VerifyImplement{"✅ Verify Implementation<br>Complete in tasks.md?"}
     VerifyImplement -->|"No"| ReturnImplement["⛔ ERROR:<br>Return to IMPLEMENT Mode"]
@@ -16091,11 +34073,11 @@ graph TD
     DocImprovements --> UpdateTasksReflect["📝 Update tasks.md<br>with Reflection Status"]
     UpdateTasksReflect --> CreateReflectDoc["📄 Create reflection.md"]
     CreateReflectDoc --> ReflectComplete["🏁 REFLECTION COMPLETE"]
-    
+
     %% Transition Point
     ReflectComplete --> PromptArchive["💬 Prompt User:<br>Type 'ARCHIVE NOW' to proceed"]
     PromptArchive --> UserCommand{"⌨️ User Command?"}
-    
+
     %% Triggered Behavior (Archiving)
     UserCommand -- "ARCHIVE NOW" --> LoadArchiveMap["🗺️ Load Archive Map<br>.cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc"]
     LoadArchiveMap --> VerifyReflectComplete{"✅ Verify reflection.md<br>Exists & Complete?"}
@@ -16103,15 +34085,22 @@ graph TD
     VerifyReflectComplete -->|"Yes"| AssessLevelArchive{"🧩 Determine Complexity Level"}
     AssessLevelArchive --> LoadLevelArchiveRules["📚 Load Level-Specific<br>Archive Rules"]
     LoadLevelArchiveRules --> ArchiveProcess["📦 EXECUTE ARCHIVING PROCESS"]
-    ArchiveProcess --> CreateArchiveDoc["📄 Create Archive Document<br>in docs/archive/"]
-    CreateArchiveDoc --> UpdateTasksArchive["📝 Update tasks.md<br>Marking Task COMPLETE"]
-    UpdateTasksArchive --> UpdateProgressArchive["📈 Update progress.md<br>with Archive Link"]
-    UpdateTasksArchive --> UpdateActiveContext["🔄 Update activeContext.md<br>Reset for Next Task"]
-    UpdateActiveContext --> ArchiveComplete["🏁 ARCHIVING COMPLETE"]
-    
+    ArchiveProcess --> AnalyzeAllTasks["📊 ANALYZE ALL TASKS<br>[NEW STEP]"]
+    AnalyzeAllTasks --> CategorizeTaskStatus["📋 Categorize Task Status:<br>- COMPLETED ✅<br>- IN_PROGRESS 🔄<br>- PLANNED 📋<br>- BLOCKED ⛔"]
+    CategorizeTaskStatus --> UnfinishedTasksCheck{"Unfinished<br>Tasks Exist?"}
+    UnfinishedTasksCheck -->|"Yes"| UnfinishedTasksProcess["🔄 UNFINISHED TASKS PROCESS<br>[NEW PROCESS]"]
+    UnfinishedTasksCheck -->|"No"| CreateArchiveDoc["📄 Create Archive Document<br>in docs/archive/"]
+    UnfinishedTasksProcess --> DocumentUnfinished["📄 Document Unfinished Tasks<br>in Archive"]
+    DocumentUnfinished --> CreateMigrationDoc["📝 Create migration.md<br>with Unfinished Tasks<br>[NEW]"]
+    CreateMigrationDoc --> CreateArchiveDoc
+    CreateArchiveDoc --> UpdateTasksArchiveNew["📝 Update tasks.md<br>Mark COMPLETED Tasks<br>Preserve UNFINISHED Tasks<br>[MODIFIED]"]
+    UpdateTasksArchiveNew --> UpdateProgressArchive["📈 Update progress.md<br>with Archive Link"]
+    UpdateTasksArchiveNew --> UpdateActiveContextNew["🔄 Update activeContext.md<br>Preserve Unfinished Context<br>[MODIFIED]"]
+    UpdateActiveContextNew --> ArchiveComplete["🏁 ARCHIVING COMPLETE"]
+
     %% Exit
     ArchiveComplete --> SuggestNext["✅ Task Fully Completed<br>Suggest VAN Mode for Next Task"]
-    
+
     %% Styling
     style Start fill:#d9b3ff,stroke:#b366ff,color:black
     style ReadDocs fill:#e6ccff,stroke:#d9b3ff,color:black
@@ -16163,7 +34152,7 @@ read_file({
 ```
 
 ### Step 3: LOAD COMPLEXITY-SPECIFIC RULES (Based on tasks.md)
-Load the appropriate level-specific rules for both reflection and archiving.  
+Load the appropriate level-specific rules for both reflection and archiving.
 Example for Level 2:
 ```
 read_file({
@@ -16178,7 +34167,7 @@ read_file({
 (Adjust paths for Level 1, 3, or 4 as needed)
 
 ## DEFAULT BEHAVIOR: REFLECTION
-When this mode is activated, it defaults to the REFLECTION process. Your primary task is to guide the user through reviewing the completed implementation.  
+When this mode is activated, it defaults to the REFLECTION process. Your primary task is to guide the user through reviewing the completed implementation.
 Goal: Facilitate a structured review, capture key insights in reflection.md, and update tasks.md to reflect completion of the reflection phase.
 
 ```mermaid
@@ -16204,7 +34193,7 @@ graph TD
 ```
 
 ## TRIGGERED BEHAVIOR: ARCHIVING (Command: ARCHIVE NOW)
-When the user issues the ARCHIVE NOW command after completing reflection, initiate the ARCHIVING process.  
+When the user issues the ARCHIVE NOW command after completing reflection, initiate the ARCHIVING process.
 Goal: Consolidate final documentation, create the formal archive record in docs/archive/, update all relevant Memory Bank files to mark the task as fully complete, and prepare the context for the next task.
 
 ```mermaid
@@ -16236,7 +34225,7 @@ graph TD
 - reflection.md created? [YES/NO]
 - tasks.md updated with reflection status? [YES/NO]
 
-→ If all YES: Reflection complete. Prompt user: "Type 'ARCHIVE NOW' to proceed with archiving."  
+→ If all YES: Reflection complete. Prompt user: "Type 'ARCHIVE NOW' to proceed with archiving."
 → If any NO: Guide user to complete missing reflection elements.
 
 ### Archiving Verification Checklist
@@ -16247,15 +34236,15 @@ graph TD
 - tasks.md marked as COMPLETED? [YES/NO]
 - progress.md updated with archive reference? [YES/NO]
 - activeContext.md updated for next task? [YES/NO]
-- Creative phase documents archived (Level 3-4)? [YES/NO/NA]  
+- Creative phase documents archived (Level 3-4)? [YES/NO/NA]
 
-→ If all YES: Archiving complete. Suggest VAN Mode for the next task.  
-→ If any NO: Guide user to complete missing archive elements.  
+→ If all YES: Archiving complete. Suggest VAN Mode for the next task.
+→ If any NO: Guide user to complete missing archive elements.
 
 ### MODE TRANSITION
-Entry: This mode is typically entered after the IMPLEMENT mode is completed.  
-Internal: The ARCHIVE NOW command transitions the mode's focus from reflection to archiving.  
-Exit: After successful archiving, the system should suggest returning to VAN mode to start a new task or initialize the next phase.  
+Entry: This mode is typically entered after the IMPLEMENT mode is completed.
+Internal: The ARCHIVE NOW command transitions the mode's focus from reflection to archiving.
+Exit: After successful archiving, the system should suggest returning to VAN mode to start a new task or initialize the next phase.
 
 ### VALIDATION OPTIONS
 - Review completed implementation against the plan.
@@ -16279,7 +34268,892 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 
 ```
 
-`custom_modes/van_instructions.md`
+`custom_modes/rules_integration_analysis.md`
+
+```md
+# АНАЛИЗ ИНТЕГРАЦИИ ПРАВИЛ MEMORY BANK
+
+> **TL;DR:** Детальный анализ возможностей интеграции правил из `.cursor/rules` с системой Memory Bank, включая рекомендации по оптимальной стратегии интеграции.
+
+## 🔍 ТЕКУЩЕЕ СОСТОЯНИЕ СИСТЕМЫ
+
+### Структура .cursor/rules
+```
+.cursor/rules/isolation_rules/
+├── Core/                    # Основные правила системы
+│   ├── command-execution.mdc
+│   ├── complexity-decision-tree.mdc
+│   ├── creative-phase-enforcement.mdc
+│   ├── file-verification.mdc
+│   ├── hierarchical-rule-loading.mdc
+│   ├── mode-transition-optimization.mdc
+│   ├── optimization-integration.mdc
+│   └── platform-awareness.mdc
+├── Level1/                  # Правила для быстрых исправлений
+│   ├── optimized-workflow-level1.mdc
+│   ├── quick-documentation.mdc
+│   └── workflow-level1.mdc
+├── Level2/                  # Правила для простых улучшений
+│   ├── archive-basic.mdc
+│   ├── reflection-basic.mdc
+│   ├── task-tracking-basic.mdc
+│   └── workflow-level2.mdc
+├── Level3/                  # Правила для промежуточных функций
+│   └── task-tracking-intermediate.mdc
+├── Level4/                  # Правила для сложных систем
+│   └── architectural-planning.mdc
+├── Phases/                  # Правила для творческих фаз
+│   └── CreativePhase/
+└── visual-maps/             # Визуальные карты процессов
+    ├── archive-mode-map.mdc
+    ├── creative-mode-map.mdc
+    ├── implement-mode-map.mdc
+    ├── plan-mode-map.mdc
+    ├── qa-mode-map.mdc
+    ├── reflect-mode-map.mdc
+    └── van_mode_split/
+```
+
+### Структура Memory Bank
+```
+memory-bank/
+├── tasks.md               # Центральный файл задач
+├── activeContext.md       # Текущий контекст
+├── progress.md           # Прогресс выполнения
+├── projectbrief.md       # Описание проекта
+├── productContext.md     # Контекст продукта
+├── systemPatterns.md     # Системные паттерны
+├── techContext.md        # Технический контекст
+├── creative/             # Творческие фазы
+├── reflection/           # Рефлексии
+└── archive/              # Архив задач
+```
+
+## 📊 АНАЛИЗ СОВМЕСТИМОСТИ
+
+### Сильные стороны текущей системы .cursor/rules
+
+1. **Иерархическая структура**: Четкое разделение по уровням сложности
+2. **Оптимизация**: Встроенные механизмы оптимизации загрузки правил
+3. **Визуальные карты**: Наглядные процессы для каждого режима
+4. **Модульность**: Независимые модули для разных аспектов
+5. **Метаданные**: Правильно структурированные заголовки с глобами
+
+### Потенциальные проблемы интеграции
+
+1. **Дублирование функций**: Некоторые функции пересекаются с Memory Bank
+2. **Сложность навигации**: Глубокая вложенность может усложнить использование
+3. **Зависимости**: Правила имеют сложные взаимозависимости
+4. **Cursor-специфичность**: Некоторые правила завязаны на Cursor IDE
+
+## 🎯 РЕКОМЕНДУЕМАЯ СТРАТЕГИЯ ИНТЕГРАЦИИ
+
+### Стратегия: Гибридная интеграция с адаптацией
+
+```mermaid
+graph TD
+    Current["Текущее состояние"] --> Analysis["Анализ совместимости"]
+    Analysis --> Strategy["Выбор стратегии"]
+    Strategy --> Phase1["Фаза 1: Подготовка"]
+    Strategy --> Phase2["Фаза 2: Интеграция"]
+    Strategy --> Phase3["Фаза 3: Оптимизация"]
+
+    Phase1 --> P1A["Создать memory-bank/rules/"]
+    Phase1 --> P1B["Адаптировать ключевые правила"]
+    Phase1 --> P1C["Создать мост интеграции"]
+
+    Phase2 --> P2A["Импортировать Core правила"]
+    Phase2 --> P2B["Адаптировать Level правила"]
+    Phase2 --> P2C["Интегрировать visual-maps"]
+
+    Phase3 --> P3A["Оптимизировать загрузку"]
+    Phase3 --> P3B["Создать единый интерфейс"]
+    Phase3 --> P3C["Документировать систему"]
+
+    style Current fill:#f9d77e,stroke:#d9b95c,color:black
+    style Strategy fill:#4da6ff,stroke:#0066cc,color:white
+    style Phase1 fill:#4dbb5f,stroke:#36873f,color:white
+    style Phase2 fill:#ffa64d,stroke:#cc7a30,color:white
+    style Phase3 fill:#d94dbb,stroke:#a3378a,color:white
+```
+
+## 📋 ПЛАН ИНТЕГРАЦИИ
+
+### Фаза 1: Подготовка (1-2 дня)
+
+#### 1.1 Создание структуры Memory Bank Rules
+```bash
+mkdir -p memory-bank/rules/{core,levels,phases,visual-maps,integration}
+```
+
+#### 1.2 Анализ ключевых правил для адаптации
+Приоритетные правила для интеграции:
+- `Core/hierarchical-rule-loading.mdc` → `memory-bank/rules/core/rule-loading.md`
+- `Core/optimization-integration.mdc` → `memory-bank/rules/core/optimization.md`
+- `visual-maps/van-mode-map.mdc` → `memory-bank/rules/visual-maps/entry-mode.md`
+- `Level1/optimized-workflow-level1.mdc` → `memory-bank/rules/levels/quick-fix.md`
+
+#### 1.3 Создание моста интеграции
+```markdown
+# memory-bank/rules/integration/cursor-bridge.md
+
+## Мост интеграции с .cursor/rules
+
+### Маппинг правил
+- Memory Bank Entry → .cursor VAN mode
+- Memory Bank Planning → .cursor PLAN mode
+- Memory Bank Creative → .cursor CREATIVE mode
+- Memory Bank Implementation → .cursor IMPLEMENT mode
+
+### Команды активации
+- `RULES.CURSOR.VAN` - Активация VAN режима
+- `RULES.CURSOR.PLAN` - Активация PLAN режима
+- `RULES.CURSOR.CREATIVE` - Активация CREATIVE режима
+- `RULES.CURSOR.IMPLEMENT` - Активация IMPLEMENT режима
+```
+
+### Фаза 2: Интеграция (3-5 дней)
+
+#### 2.1 Импорт и адаптация Core правил
+```markdown
+# Приоритет импорта:
+1. hierarchical-rule-loading.mdc → Система загрузки правил
+2. optimization-integration.mdc → Оптимизация Memory Bank
+3. mode-transition-optimization.mdc → Переходы между режимами
+4. creative-phase-enforcement.mdc → Контроль творческих фаз
+```
+
+#### 2.2 Адаптация Level правил
+```markdown
+# Маппинг уровней:
+- Level 1 (Quick Fix) → memory-bank/rules/levels/level1-quick-fix.md
+- Level 2 (Enhancement) → memory-bank/rules/levels/level2-enhancement.md
+- Level 3 (Feature) → memory-bank/rules/levels/level3-feature.md
+- Level 4 (System) → memory-bank/rules/levels/level4-system.md
+```
+
+#### 2.3 Интеграция визуальных карт
+```markdown
+# Адаптация visual-maps:
+- van-mode-map.mdc → entry-process.md
+- plan-mode-map.mdc → planning-process.md
+- creative-mode-map.mdc → creative-process.md
+- implement-mode-map.mdc → implementation-process.md
+```
+
+### Фаза 3: Оптимизация (2-3 дня)
+
+#### 3.1 Создание единого интерфейса
+```markdown
+# memory-bank/rules/rule-loader.md
+
+## Система загрузки правил Memory Bank
+
+### Иерархия загрузки:
+1. Core rules (всегда загружены)
+2. Level-specific rules (по требованию)
+3. Phase-specific rules (по требованию)
+4. Integration rules (по требованию)
+
+### Команды:
+- `RULES.LOAD.CORE` - Загрузить основные правила
+- `RULES.LOAD.LEVEL[1-4]` - Загрузить правила уровня
+- `RULES.LOAD.PHASE[name]` - Загрузить правила фазы
+```
+
+#### 3.2 Оптимизация производительности
+```markdown
+# Стратегии оптимизации:
+1. Ленивая загрузка правил
+2. Кэширование часто используемых правил
+3. Предварительная загрузка критических правил
+4. Сжатие неиспользуемых правил
+```
+
+## 🔧 ТЕХНИЧЕСКИЕ ДЕТАЛИ ИНТЕГРАЦИИ
+
+### Структура интегрированной системы
+```
+memory-bank/
+├── rules/
+│   ├── core/                    # Основные правила (адаптированные из Core/)
+│   │   ├── rule-loading.md
+│   │   ├── optimization.md
+│   │   ├── mode-transitions.md
+│   │   └── creative-enforcement.md
+│   ├── levels/                  # Правила по уровням (из Level1-4/)
+│   │   ├── level1-quick-fix.md
+│   │   ├── level2-enhancement.md
+│   │   ├── level3-feature.md
+│   │   └── level4-system.md
+│   ├── phases/                  # Правила фаз (из Phases/)
+│   │   ├── creative-phase.md
+│   │   ├── implementation-phase.md
+│   │   └── reflection-phase.md
+│   ├── visual-maps/             # Процессы (из visual-maps/)
+│   │   ├── entry-process.md
+│   │   ├── planning-process.md
+│   │   ├── creative-process.md
+│   │   └── implementation-process.md
+│   └── integration/             # Интеграционные правила
+│       ├── cursor-bridge.md
+│       ├── rule-mappings.md
+│       └── optimization-config.md
+├── tasks.md                     # Обновлен с поддержкой правил
+├── systemPatterns.md            # Обновлен с паттернами правил
+└── techContext.md               # Обновлен с архитектурой правил
+```
+
+### Обновления Memory Bank файлов
+
+#### tasks.md
+```markdown
+## Rule Integration Tasks
+- [x] Analyze .cursor/rules structure
+- [x] Design integration architecture
+- [ ] Implement Phase 1: Preparation
+- [ ] Implement Phase 2: Integration
+- [ ] Implement Phase 3: Optimization
+- [ ] Test integrated system
+- [ ] Document final architecture
+```
+
+#### systemPatterns.md
+```markdown
+## Rule Management Patterns
+
+### Hierarchical Loading Pattern
+- Core rules loaded first
+- Level-specific rules loaded on demand
+- Phase-specific rules loaded when needed
+
+### Integration Bridge Pattern
+- Cursor rules accessible through bridge
+- Memory Bank rules as primary interface
+- Seamless mode transitions
+
+### Optimization Pattern
+- Lazy loading for performance
+- Caching for frequently used rules
+- Preloading for critical paths
+```
+
+#### techContext.md
+```markdown
+## Rule System Architecture
+
+### Components:
+1. **Core Rule Engine**: Основная система загрузки правил
+2. **Level Dispatcher**: Маршрутизация по уровням сложности
+3. **Phase Manager**: Управление фазами выполнения
+4. **Integration Bridge**: Мост с .cursor/rules
+5. **Optimization Layer**: Слой оптимизации производительности
+
+### Data Flow:
+User Request → Rule Dispatcher → Level/Phase Selection → Rule Loading → Execution
+```
+
+## 🎯 ПРЕИМУЩЕСТВА ИНТЕГРИРОВАННОЙ СИСТЕМЫ
+
+### 1. Единый интерфейс
+- Все правила доступны через Memory Bank
+- Консистентная система команд
+- Упрощенная навигация
+
+### 2. Оптимизированная производительность
+- Ленивая загрузка правил
+- Кэширование часто используемых компонентов
+- Минимизация использования токенов
+
+### 3. Гибкость и расширяемость
+- Легкое добавление новых правил
+- Модульная архитектура
+- Поддержка кастомных режимов
+
+### 4. Совместимость
+- Сохранение функциональности .cursor/rules
+- Обратная совместимость
+- Плавная миграция
+
+## 📊 МЕТРИКИ УСПЕХА
+
+### Технические метрики
+- Время загрузки правил: < 2 секунд
+- Использование токенов: сокращение на 40%
+- Покрытие функциональности: 100%
+- Время отклика системы: < 1 секунды
+
+### Пользовательские метрики
+- Простота использования: 9/10
+- Скорость выполнения задач: +30%
+- Количество ошибок: -50%
+- Удовлетворенность пользователей: 9/10
+
+## 🚀 СЛЕДУЮЩИЕ ШАГИ
+
+1. **Немедленно**: Создать кастомный режим RULES
+2. **На этой неделе**: Реализовать Фазу 1 (Подготовка)
+3. **Следующая неделя**: Реализовать Фазу 2 (Интеграция)
+4. **Через 2 недели**: Реализовать Фазу 3 (Оптимизация)
+5. **Через месяц**: Полное тестирование и документирование
+
+## 🔄 ПЛАН МИГРАЦИИ
+
+### Этап 1: Параллельная работа (1 неделя)
+- Сохранить .cursor/rules без изменений
+- Создать memory-bank/rules/ параллельно
+- Тестировать интеграцию
+
+### Этап 2: Постепенный переход (2 недели)
+- Начать использовать memory-bank/rules/ для новых задач
+- Постепенно мигрировать существующие процессы
+- Обучить пользователей новой системе
+
+### Этап 3: Полная интеграция (1 неделя)
+- Завершить миграцию всех процессов
+- Оптимизировать производительность
+- Финализировать документацию
+
+Эта стратегия обеспечивает плавную интеграцию с минимальными рисками и максимальными преимуществами для системы Memory Bank.
+```
+
+`custom_modes/van_core_workflow.md`
+
+```md
+# VAN CORE WORKFLOW - DETAILED PROCESS MAP
+
+> **TL;DR:** Complete VAN mode workflow with full process diagrams, task continuity integration, Memory Bank updates, and comprehensive error handling.
+
+## 🧭 NAVIGATION
+- 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
+- 🔄 **[Core Workflow](van_core_workflow.md)** ← You are here
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
+
+---
+
+## 🔄 COMPLETE VAN WORKFLOW DIAGRAM
+
+```mermaid
+graph TD
+    %% Main Command Detection
+    Start["User Command"] --> CommandDetect{"Command<br>Type?"}
+
+    CommandDetect -->|"VAN"| VAN["VAN Mode"]
+    CommandDetect -->|"VAN.RULES"| VanRules["VAN.RULES<br>Rules Management"]
+    CommandDetect -->|"VAN.SYSTEM"| VanSystem["VAN.SYSTEM<br>System Admin"]
+    CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
+    CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
+    CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
+    CommandDetect -->|"QA"| QA["QA Mode"]
+
+    %% Immediate Response Node
+    VAN --> VanResp["Respond: OK VAN"]
+    VanRules --> VanRulesResp["Respond: OK VAN.RULES"]
+    VanSystem --> VanSystemResp["Respond: OK VAN.SYSTEM"]
+    Plan --> PlanResp["Respond: OK PLAN"]
+    Creative --> CreativeResp["Respond: OK CREATIVE"]
+    Implement --> ImplResp["Respond: OK IMPLEMENT"]
+    QA --> QAResp["Respond: OK QA"]
+
+    %% Memory Bank Check with Task Continuity
+    VanResp --> CheckMB_Van["Check Memory Bank<br>& tasks.md Status"]
+    CheckMB_Van --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK<br>[ENHANCED STEP]"]
+    TaskContinuityCheck --> MigrationCheck{"migration.md<br>Exists?"}
+    MigrationCheck -->|"Yes"| ProcessMigration["📦 Process Task Migration<br>[ENHANCED PROCESS]"]
+    MigrationCheck -->|"No"| LoadVan["Load Rules:<br>van_mode_split/van-mode-map<br>complexity-decision-tree<br>file-verification"]
+    ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
+    IntegrateUnfinished --> LoadVan
+
+    VanRulesResp --> CheckMB_Rules["Check Rules Status<br>& Integration State"]
+    VanSystemResp --> CheckMB_System["Check System Status<br>& Configuration"]
+    PlanResp --> CheckMB_Plan["Check Memory Bank<br>& tasks.md Status"]
+    CreativeResp --> CheckMB_Creative["Check Memory Bank<br>& tasks.md Status"]
+    ImplResp --> CheckMB_Impl["Check Memory Bank<br>& tasks.md Status"]
+    QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
+
+    %% Rule Loading with fetch_rules
+    CheckMB_Rules --> LoadRules["Load Rules via fetch_rules:<br>git-workflow/branch-management<br>implementation/dependency-checking<br>hierarchical-rule-loading"]
+    CheckMB_System --> LoadSystem["Load Rules via fetch_rules:<br>optimization-integration<br>platform-awareness<br>debugging/systematic-debugging"]
+    CheckMB_Plan --> LoadPlan["Load Rules via fetch_rules:<br>visual-maps/plan-mode-map<br>interactive-planning<br>problem-prioritization"]
+    CheckMB_Creative --> LoadCreative["Load Rules via fetch_rules:<br>visual-maps/creative-mode-map<br>creative-decision-control<br>creative-phase-architecture"]
+    CheckMB_Impl --> LoadImpl["Load Rules via fetch_rules:<br>visual-maps/implement-mode-map<br>phased-implementation<br>command-execution"]
+    CheckMB_QA --> LoadQA["Load Rules via fetch_rules:<br>visual-maps/qa-mode-map<br>edge-cases<br>performance-testing"]
+
+    %% Rule Execution with Memory Bank Updates
+    LoadVan --> ExecVan["Execute VAN<br>Process"]
+    LoadRules --> ExecRules["Execute Rules<br>Management Process"]
+    LoadSystem --> ExecSystem["Execute System<br>Administration"]
+    LoadPlan --> ExecPlan["Execute Process<br>in Rule"]
+    LoadCreative --> ExecCreative["Execute Process<br>in Rule"]
+    LoadImpl --> ExecImpl["Execute Process<br>in Rule"]
+    LoadQA --> ExecQA["Execute Process<br>in Rule"]
+
+    %% Memory Bank Continuous Updates
+    ExecVan --> UpdateMB_Van["Update Memory Bank<br>& tasks.md"]
+    ExecRules --> UpdateMB_Rules["Update Memory Bank<br>& Rules Integration"]
+    ExecSystem --> UpdateMB_System["Update Memory Bank<br>& System State"]
+    ExecPlan --> UpdateMB_Plan["Update Memory Bank<br>& tasks.md"]
+    ExecCreative --> UpdateMB_Creative["Update Memory Bank<br>& tasks.md"]
+    ExecImpl --> UpdateMB_Impl["Update Memory Bank<br>& tasks.md"]
+    ExecQA --> UpdateMB_QA["Update Memory Bank<br>& tasks.md"]
+
+    %% Verification with Memory Bank Checks
+    UpdateMB_Van --> VerifyVan{"VAN Process<br>Complete?"}
+    UpdateMB_Rules --> VerifyRules{"Rules Operation<br>Complete?"}
+    UpdateMB_System --> VerifySystem{"System Operation<br>Complete?"}
+    UpdateMB_Plan --> VerifyPlan{"Process<br>Complete?"}
+    UpdateMB_Creative --> VerifyCreative{"Process<br>Complete?"}
+    UpdateMB_Impl --> VerifyImpl{"Process<br>Complete?"}
+    UpdateMB_QA --> VerifyQA{"Process<br>Complete?"}
+
+    %% Outcomes
+    VerifyVan -->|"Yes"| CompleteVan["VAN Process<br>Complete"]
+    VerifyVan -->|"No"| RetryVan["Resume<br>VAN Process"]
+    RetryVan --- ReadMB_Van["Reference Memory Bank<br>for Context"]
+    ReadMB_Van --> ExecVan
+
+    VerifyRules -->|"Yes"| CompleteRules["VAN.RULES Process<br>Complete"]
+    VerifyRules -->|"No"| RetryRules["Resume<br>Rules Process"]
+    RetryRules --- ReadMB_Rules["Reference Rules State<br>for Context"]
+    ReadMB_Rules --> ExecRules
+
+    VerifySystem -->|"Yes"| CompleteSystem["VAN.SYSTEM Process<br>Complete"]
+    VerifySystem -->|"No"| RetrySystem["Resume<br>System Process"]
+    RetrySystem --- ReadMB_System["Reference System State<br>for Context"]
+    ReadMB_System --> ExecSystem
+
+    VerifyPlan -->|"Yes"| CompletePlan["PLAN Process<br>Complete"]
+    VerifyPlan -->|"No"| RetryPlan["Resume<br>PLAN Process"]
+    RetryPlan --- ReadMB_Plan["Reference Memory Bank<br>for Context"]
+    ReadMB_Plan --> ExecPlan
+
+    VerifyCreative -->|"Yes"| CompleteCreative["CREATIVE Process<br>Complete"]
+    VerifyCreative -->|"No"| RetryCreative["Resume<br>CREATIVE Process"]
+    RetryCreative --- ReadMB_Creative["Reference Memory Bank<br>for Context"]
+    ReadMB_Creative --> ExecCreative
+
+    VerifyImpl -->|"Yes"| CompleteImpl["IMPLEMENT Process<br>Complete"]
+    VerifyImpl -->|"No"| RetryImpl["Resume<br>IMPLEMENT Process"]
+    RetryImpl --- ReadMB_Impl["Reference Memory Bank<br>for Context"]
+    ReadMB_Impl --> ExecImpl
+
+    VerifyQA -->|"Yes"| CompleteQA["QA Process<br>Complete"]
+    VerifyQA -->|"No"| RetryQA["Resume<br>QA Process"]
+    RetryQA --- ReadMB_QA["Reference Memory Bank<br>for Context"]
+    ReadMB_QA --> ExecQA
+
+    %% Final Memory Bank Updates at Completion
+    CompleteVan --> FinalMB_Van["Update Memory Bank<br>with Completion Status"]
+    CompleteRules --> FinalMB_Rules["Update Memory Bank<br>with Rules Integration Status"]
+    CompleteSystem --> FinalMB_System["Update Memory Bank<br>with System Status"]
+    CompletePlan --> FinalMB_Plan["Update Memory Bank<br>with Completion Status"]
+    CompleteCreative --> FinalMB_Creative["Update Memory Bank<br>with Completion Status"]
+    CompleteImpl --> FinalMB_Impl["Update Memory Bank<br>with Completion Status"]
+    CompleteQA --> FinalMB_QA["Update Memory Bank<br>with Completion Status"]
+
+    %% Mode Transitions with Memory Bank Preservation
+    FinalMB_Van -->|"Level 1"| TransToImpl["→ IMPLEMENT Mode"]
+    FinalMB_Van -->|"Level 2-4"| TransToPlan["→ PLAN Mode"]
+    FinalMB_Rules --> TransToAny["→ Any Mode<br>(Rules Ready)"]
+    FinalMB_System --> TransToVan["→ VAN Mode<br>(System Ready)"]
+    FinalMB_Plan --> TransToCreative["→ CREATIVE Mode"]
+    FinalMB_Creative --> TransToImpl2["→ IMPLEMENT Mode"]
+    FinalMB_Impl --> TransToQA["→ QA Mode"]
+
+    %% Memory Bank System
+    MemoryBank["MEMORY BANK<br>CENTRAL SYSTEM"] -.-> tasks["tasks.md<br>Source of Truth"]
+    MemoryBank -.-> projBrief["projectbrief.md<br>Foundation"]
+    MemoryBank -.-> active["activeContext.md<br>Current Focus"]
+    MemoryBank -.-> progress["progress.md<br>Implementation Status"]
+
+    CheckMB_Van & CheckMB_Rules & CheckMB_System & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
+    UpdateMB_Van & UpdateMB_Rules & UpdateMB_System & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
+    ReadMB_Van & ReadMB_Rules & ReadMB_System & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
+    FinalMB_Van & FinalMB_Rules & FinalMB_System & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
+
+    %% Error Handling
+    Error["⚠️ ERROR<br>DETECTION"] -->|"Todo App"| BlockCreative["⛔ BLOCK<br>creative-mode-map"]
+    Error -->|"Multiple Rules"| BlockMulti["⛔ BLOCK<br>Multiple Rules"]
+    Error -->|"Rule Loading"| UseCorrectFn["✓ Use fetch_rules<br>NOT read_file"]
+
+    %% Styling
+    style Start fill:#f8d486,stroke:#e8b84d,color:black
+    style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
+    style VAN fill:#ccf,stroke:#333,color:black
+    style VanRules fill:#ffc,stroke:#333,color:black
+    style VanSystem fill:#fcf,stroke:#333,color:black
+    style Plan fill:#cfc,stroke:#333,color:black
+    style Creative fill:#fcf,stroke:#333,color:black
+    style Implement fill:#cff,stroke:#333,color:black
+    style QA fill:#fcc,stroke:#333,color:black
+
+    style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style VanRulesResp fill:#fff9d9,stroke:#ffcc99,color:black
+    style VanSystemResp fill:#f9d9ff,stroke:#cc99ff,color:black
+    style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style QAResp fill:#d9e6ff,stroke:#99ccff,color:black
+
+    style LoadVan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadPlan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadCreative fill:#a3dded,stroke:#4db8db,color:black
+    style LoadImpl fill:#a3dded,stroke:#4db8db,color:black
+    style LoadQA fill:#a3dded,stroke:#4db8db,color:black
+
+    style ExecVan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecPlan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecCreative fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecImpl fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecQA fill:#a3e0ae,stroke:#4dbb5f,color:black
+
+    style VerifyVan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyPlan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyCreative fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyImpl fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyQA fill:#e699d9,stroke:#d94dbb,color:black
+
+    style CompleteVan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompletePlan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteCreative fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteImpl fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteQA fill:#8cff8c,stroke:#4dbb5f,color:black
+
+    style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px,color:black
+    style tasks fill:#f9d77e,stroke:#d9b95c,color:black
+    style projBrief fill:#f9d77e,stroke:#d9b95c,color:black
+    style active fill:#f9d77e,stroke:#d9b95c,color:black
+    style progress fill:#f9d77e,stroke:#d9b95c,color:black
+
+    style Error fill:#ff5555,stroke:#cc0000,color:white,stroke-width:2px,color:black
+    style BlockCreative fill:#ffaaaa,stroke:#ff8080,color:black
+    style BlockMulti fill:#ffaaaa,stroke:#ff8080,color:black
+    style UseCorrectFn fill:#8cff8c,stroke:#4dbb5f,color:black
+```
+
+---
+
+## 📋 MEMORY BANK FILE STRUCTURE
+
+```mermaid
+flowchart TD
+    PB([projectbrief.md]) --> PC([productContext.md])
+    PB --> SP([systemPatterns.md])
+    PB --> TC([techContext.md])
+
+    PC & SP & TC --> AC([activeContext.md])
+
+    AC --> P([progress.md])
+    AC --> Tasks([tasks.md])
+
+    style PB fill:#f9d77e,stroke:#d9b95c,color:black
+    style PC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style SP fill:#a8d5ff,stroke:#88b5e0,color:black
+    style TC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style AC fill:#c5e8b7,stroke:#a5c897,color:black
+    style P fill:#f4b8c4,stroke:#d498a4,color:black
+    style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px,color:black
+```
+
+---
+
+## 🔄 TASK CONTINUITY DETAILED PROCESS
+
+### Migration Detection and Processing
+
+```mermaid
+graph TD
+    Start["VAN Mode Start"] --> CheckMigration{"migration.md<br>exists?"}
+    CheckMigration -->|"Yes"| ValidateMigration["Validate Migration<br>Document Format"]
+    CheckMigration -->|"No"| CheckExisting{"tasks.md<br>has content?"}
+
+    ValidateMigration --> ParseTasks["Parse Unfinished<br>Tasks from Migration"]
+    ParseTasks --> MergeTasks["Merge with Current<br>tasks.md"]
+    MergeTasks --> ArchiveMigration["Archive Processed<br>Migration"]
+
+    CheckExisting -->|"Yes"| WarnUser["⚠️ Warn User About<br>Potential Task Loss"]
+    CheckExisting -->|"No"| InitializeNew["Initialize New<br>Task Structure"]
+
+    WarnUser --> UserChoice{"User Choice?"}
+    UserChoice -->|"Create Migration"| CreateMigration["Create Migration<br>Document"]
+    UserChoice -->|"Proceed"| ArchiveExisting["Archive Existing<br>Tasks"]
+
+    CreateMigration --> MergeTasks
+    ArchiveExisting --> InitializeNew
+    ArchiveMigration --> InitializeNew
+    InitializeNew --> ContinueVAN["Continue VAN<br>Process"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckMigration fill:#d94dbb,stroke:#a3378a,color:white
+    style ValidateMigration fill:#4dbb5f,stroke:#36873f,color:white
+    style WarnUser fill:#ffa64d,stroke:#cc7a30,color:white
+    style ContinueVAN fill:#5fd94d,stroke:#3da336,color:white
+```
+
+---
+
+## 🚨 ERROR HANDLING SYSTEM
+
+### Error Detection and Resolution
+
+```mermaid
+graph TD
+    ErrorDetect["⚠️ Error Detected"] --> ErrorType{"Error Type?"}
+
+    ErrorType -->|"Todo App Block"| TodoBlock["⛔ Block creative-mode-map<br>for Todo applications"]
+    ErrorType -->|"Multiple Rules"| MultiBlock["⛔ Block loading<br>multiple rule files"]
+    ErrorType -->|"Wrong Function"| FunctionError["❌ Using read_file<br>instead of fetch_rules"]
+    ErrorType -->|"Missing File"| FileError["❌ Required file<br>not found"]
+    ErrorType -->|"Permission"| PermError["❌ File permission<br>denied"]
+
+    TodoBlock --> TodoSolution["✓ Use alternative<br>creative approach"]
+    MultiBlock --> MultiSolution["✓ Load rules<br>sequentially"]
+    FunctionError --> FunctionSolution["✓ Use fetch_rules<br>for rule loading"]
+    FileError --> FileSolution["✓ Create missing<br>file with defaults"]
+    PermError --> PermSolution["✓ Request permission<br>or use alternative"]
+
+    TodoSolution & MultiSolution & FunctionSolution & FileSolution & PermSolution --> Retry["Retry Operation"]
+    Retry --> Success{"Success?"}
+    Success -->|"Yes"| Continue["Continue Process"]
+    Success -->|"No"| Escalate["Escalate to<br>Manual Resolution"]
+
+    style ErrorDetect fill:#ff5555,stroke:#cc0000,color:white
+    style TodoBlock fill:#ffaaaa,stroke:#ff8080,color:black
+    style MultiBlock fill:#ffaaaa,stroke:#ff8080,color:black
+    style FunctionError fill:#ffaaaa,stroke:#ff8080,color:black
+    style Continue fill:#5fd94d,stroke:#3da336,color:white
+```
+
+---
+
+## 📊 PROCESS VALIDATION CHECKPOINTS
+
+### VAN Mode Validation
+
+```mermaid
+graph TD
+    VanStart["VAN Mode Start"] --> CheckFiles["Check Required Files"]
+    CheckFiles --> CheckMigration["Check Migration Status"]
+    CheckMigration --> CheckComplexity["Determine Complexity"]
+    CheckComplexity --> ValidateRules["Validate Rule Loading"]
+    ValidateRules --> CheckMemoryBank["Verify Memory Bank"]
+    CheckMemoryBank --> AllValid{"All Checks<br>Passed?"}
+
+    AllValid -->|"Yes"| ProceedVAN["Proceed with<br>VAN Process"]
+    AllValid -->|"No"| FixIssues["Fix Identified<br>Issues"]
+    FixIssues --> CheckFiles
+
+    style VanStart fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckFiles fill:#80bfff,stroke:#4da6ff,color:black
+    style CheckMigration fill:#80bfff,stroke:#4da6ff,color:black
+    style CheckComplexity fill:#80bfff,stroke:#4da6ff,color:black
+    style ValidateRules fill:#80bfff,stroke:#4da6ff,color:black
+    style CheckMemoryBank fill:#80bfff,stroke:#4da6ff,color:black
+    style ProceedVAN fill:#5fd94d,stroke:#3da336,color:white
+    style FixIssues fill:#ffa64d,stroke:#cc7a30,color:white
+```
+
+---
+
+## 🔧 SYSTEM INTEGRATION POINTS
+
+### Memory Bank Integration
+
+- **tasks.md**: Primary source of truth for all task tracking
+- **migration.md**: Temporary file for task continuity across cycles
+- **activeContext.md**: Current session context and focus
+- **progress.md**: Implementation progress tracking
+- **system/current-date.txt**: Real date management
+- **system/interaction-mode.txt**: AUTO/MANUAL mode control
+
+### Rules Integration
+
+- **fetch_rules()**: Primary method for loading rule references
+- **Hierarchical Loading**: Load rules based on mode and complexity
+- **Error Handling**: Graceful fallback for missing or invalid rules
+- **Validation**: Verify rule integrity before execution
+
+### Process Flow Integration
+
+- **Command Detection**: Intelligent routing based on command type
+- **State Preservation**: Maintain context across mode transitions
+- **Verification**: Comprehensive validation at each checkpoint
+- **Recovery**: Automatic retry and manual escalation procedures
+
+---
+
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Continue to [Rules Submode](van_rules_submode.md)
+```
+
+`custom_modes/van_enhanced.md`
+
+```md
+# ENHANCED VAN MODE - SYSTEM ADMINISTRATION & RULES MANAGEMENT
+
+> **TL;DR:** Расширенный VAN режим с подрежимами VAN.RULES и VAN.SYSTEM для управления правилами и системным администрированием.
+
+## 🎯 РЕШЕНИЕ ПРОБЛЕМЫ ОГРАНИЧЕНИЯ 5 РЕЖИМОВ
+
+Вместо создания отдельного режима RULES, интегрируем функциональность в существующий VAN режим через подрежимы:
+
+### Структура команд:
+- **`VAN`** - Стандартный VAN режим
+- **`VAN.RULES`** - Управление правилами
+- **`VAN.SYSTEM`** - Системное администрирование
+
+## 🔧 VAN.RULES ПОДРЕЖИМ
+
+### Команды VAN.RULES:
+```
+VAN.RULES.INTEGRATE  - Интеграция .cursor правил с Memory Bank
+VAN.RULES.MODIFY     - Модификация существующих правил
+VAN.RULES.CREATE     - Создание новых правил
+VAN.RULES.VALIDATE   - Валидация всех правил
+VAN.RULES.STATUS     - Статус интеграции правил
+```
+
+### Процесс VAN.RULES:
+```mermaid
+graph TD
+    Start["VAN.RULES Command"] --> LoadGuide["Load changing_the_rules.md<br>& rules_instructions.md"]
+    LoadGuide --> AnalyzeOp["Analyze Operation<br>Type"]
+    AnalyzeOp --> ExecuteOp["Execute Rules<br>Operation"]
+    ExecuteOp --> UpdateMB["Update Memory Bank<br>with Results"]
+    UpdateMB --> Verify["Verify Operation<br>Success"]
+
+    style Start fill:#ffcc80,stroke:#ff9900,color:white
+    style LoadGuide fill:#ffe6cc,stroke:#ffb366,color:black
+    style AnalyzeOp fill:#ffe6cc,stroke:#ffb366,color:black
+    style ExecuteOp fill:#ffe6cc,stroke:#ffb366,color:black
+    style UpdateMB fill:#ffe6cc,stroke:#ffb366,color:black
+    style Verify fill:#ffe6cc,stroke:#ffb366,color:black
+```
+
+## ⚙️ VAN.SYSTEM ПОДРЕЖИМ
+
+### Команды VAN.SYSTEM:
+```
+VAN.SYSTEM.OPTIMIZE  - Оптимизация Memory Bank
+VAN.SYSTEM.BACKUP    - Резервное копирование
+VAN.SYSTEM.RESTORE   - Восстановление из резервной копии
+VAN.SYSTEM.HEALTH    - Проверка состояния системы
+```
+
+### Процесс VAN.SYSTEM:
+```mermaid
+graph TD
+    Start["VAN.SYSTEM Command"] --> CheckSystem["Check System<br>Status"]
+    CheckSystem --> IdentifyTask["Identify System<br>Task"]
+    IdentifyTask --> ExecuteTask["Execute System<br>Task"]
+    ExecuteTask --> UpdateState["Update System<br>State"]
+    UpdateState --> VerifyTask["Verify Task<br>Completion"]
+
+    style Start fill:#cc80ff,stroke:#9900ff,color:white
+    style CheckSystem fill:#e6ccff,stroke:#b366ff,color:black
+    style IdentifyTask fill:#e6ccff,stroke:#b366ff,color:black
+    style ExecuteTask fill:#e6ccff,stroke:#b366ff,color:black
+    style UpdateState fill:#e6ccff,stroke:#b366ff,color:black
+    style VerifyTask fill:#e6ccff,stroke:#b366ff,color:black
+```
+
+## 📋 ИНТЕГРАЦИЯ С СУЩЕСТВУЮЩИМ VAN
+
+### Обновленная логика распознавания команд:
+```javascript
+// Псевдокод логики
+if (command.startsWith("VAN.RULES")) {
+    activateRulesSubmode(command);
+} else if (command.startsWith("VAN.SYSTEM")) {
+    activateSystemSubmode(command);
+} else if (command === "VAN") {
+    activateStandardVan();
+} else {
+    // Другие режимы (PLAN, CREATIVE, IMPLEMENT, QA)
+}
+```
+
+## 🔄 ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
+
+### Пример 1: Интеграция правил
+```
+User: VAN.RULES.INTEGRATE
+Assistant: OK VAN.RULES
+
+🔗 Активирую подрежим интеграции правил...
+📚 Читаю changing_the_rules.md...
+🔍 Анализирую структуру .cursor/rules...
+⚡ Планирую стратегию интеграции...
+[Выполняет процесс интеграции]
+```
+
+### Пример 2: Валидация правил
+```
+User: VAN.RULES.VALIDATE
+Assistant: OK VAN.RULES
+
+✅ Активирую подрежим валидации правил...
+🔍 Сканирую все .mdc файлы...
+📊 Проверяю расширения файлов, регистр, ссылки...
+📋 Генерирую отчет валидации...
+[Выполняет процесс валидации]
+```
+
+### Пример 3: Проверка здоровья системы
+```
+User: VAN.SYSTEM.HEALTH
+Assistant: OK VAN.SYSTEM
+
+🏥 Активирую подрежим проверки здоровья системы...
+🔍 Проверяю целостность Memory Bank...
+📁 Верифицирую структуру файлов...
+⚡ Анализирую производительность системы...
+[Выполняет проверку здоровья]
+```
+
+## 🎯 ПРЕИМУЩЕСТВА ЭТОГО ПОДХОДА
+
+### ✅ Соблюдение ограничений:
+- Остается в рамках 5 кастомных режимов
+- Расширяет существующий VAN режим
+- Сохраняет логическую структуру
+
+### ✅ Функциональность:
+- Полная интеграция управления правилами
+- Системное администрирование
+- Использование созданного руководства `changing_the_rules.md`
+
+### ✅ Удобство использования:
+- Интуитивные команды с точечной нотацией
+- Четкое разделение функций
+- Совместимость с существующими процессами
+
+## 🔧 ПЛАН РЕАЛИЗАЦИИ
+
+### Шаг 1: Обновить van_instructions.md
+Добавить логику распознавания подрежимов и их обработку.
+
+### Шаг 2: Интегрировать созданные материалы
+- `rules/changing_the_rules.md` - как руководство для VAN.RULES
+- `custom_modes/rules_instructions.md` - как детальные инструкции
+- `custom_modes/rules_integration_analysis.md` - как справочник
+
+### Шаг 3: Тестирование
+Проверить работу всех подрежимов и их интеграцию с Memory Bank.
+
+## 📊 РЕЗУЛЬТАТ
+
+Получаем мощную систему управления правилами, интегрированную в существующую архитектуру без нарушения ограничений Cursor IDE на количество кастомных режимов.
+
+Этот подход позволяет:
+- ✅ Управлять правилами через VAN.RULES
+- ✅ Администрировать систему через VAN.SYSTEM
+- ✅ Сохранить все 5 основных режимов
+- ✅ Использовать созданное руководство по изменению правил
+- ✅ Обеспечить полную функциональность без компромиссов
+```
+
+`custom_modes/van_instructions_backup.md`
 
 ```md
 # ADAPTIVE MEMORY-BASED ASSISTANT SYSTEM - ENTRY POINT
@@ -16290,156 +35164,194 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 graph TD
     %% Main Command Detection
     Start["User Command"] --> CommandDetect{"Command<br>Type?"}
-    
+
     CommandDetect -->|"VAN"| VAN["VAN Mode"]
+    CommandDetect -->|"VAN.RULES"| VanRules["VAN.RULES<br>Rules Management"]
+    CommandDetect -->|"VAN.SYSTEM"| VanSystem["VAN.SYSTEM<br>System Admin"]
     CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
     CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
     CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
     CommandDetect -->|"QA"| QA["QA Mode"]
-    
+
     %% Immediate Response Node
     VAN --> VanResp["Respond: OK VAN"]
+    VanRules --> VanRulesResp["Respond: OK VAN.RULES"]
+    VanSystem --> VanSystemResp["Respond: OK VAN.SYSTEM"]
     Plan --> PlanResp["Respond: OK PLAN"]
     Creative --> CreativeResp["Respond: OK CREATIVE"]
     Implement --> ImplResp["Respond: OK IMPLEMENT"]
     QA --> QAResp["Respond: OK QA"]
-    
-    %% Memory Bank Check
+
+    %% Memory Bank Check with Task Continuity
     VanResp --> CheckMB_Van["Check Memory Bank<br>& tasks.md Status"]
+    CheckMB_Van --> TaskContinuityCheck["🔄 TASK CONTINUITY CHECK<br>[NEW STEP]"]
+    TaskContinuityCheck --> MigrationCheck{"migration.md<br>Exists?"}
+    MigrationCheck -->|"Yes"| ProcessMigration["📦 Process Task Migration<br>[NEW PROCESS]"]
+    MigrationCheck -->|"No"| LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
+    ProcessMigration --> IntegrateUnfinished["📋 Integrate Unfinished Tasks<br>into Current Cycle"]
+    IntegrateUnfinished --> LoadVan
+
+    VanRulesResp --> CheckMB_Rules["Check Rules Status<br>& Integration State"]
+    VanSystemResp --> CheckMB_System["Check System Status<br>& Configuration"]
     PlanResp --> CheckMB_Plan["Check Memory Bank<br>& tasks.md Status"]
     CreativeResp --> CheckMB_Creative["Check Memory Bank<br>& tasks.md Status"]
     ImplResp --> CheckMB_Impl["Check Memory Bank<br>& tasks.md Status"]
     QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
-    
+
     %% Rule Loading
-    CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
+    CheckMB_Rules --> LoadRules["Load Rules Guide:<br>rules/changing_the_rules.md<br>custom_modes/rules_instructions.md"]
+    CheckMB_System --> LoadSystem["Load System Rules:<br>Core system configuration"]
     CheckMB_Plan --> LoadPlan["Load Rule:<br>isolation_rules/visual-maps/plan-mode-map"]
     CheckMB_Creative --> LoadCreative["Load Rule:<br>isolation_rules/visual-maps/creative-mode-map"]
     CheckMB_Impl --> LoadImpl["Load Rule:<br>isolation_rules/visual-maps/implement-mode-map"]
     CheckMB_QA --> LoadQA["Load Rule:<br>isolation_rules/visual-maps/qa-mode-map"]
-    
+
     %% Rule Execution with Memory Bank Updates
-    LoadVan --> ExecVan["Execute Process<br>in Rule"]
+    LoadVan --> ExecVan["Execute VAN<br>Process"]
+    LoadRules --> ExecRules["Execute Rules<br>Management Process"]
+    LoadSystem --> ExecSystem["Execute System<br>Administration"]
     LoadPlan --> ExecPlan["Execute Process<br>in Rule"]
     LoadCreative --> ExecCreative["Execute Process<br>in Rule"]
     LoadImpl --> ExecImpl["Execute Process<br>in Rule"]
     LoadQA --> ExecQA["Execute Process<br>in Rule"]
-    
+
     %% Memory Bank Continuous Updates
     ExecVan --> UpdateMB_Van["Update Memory Bank<br>& tasks.md"]
+    ExecRules --> UpdateMB_Rules["Update Memory Bank<br>& Rules Integration"]
+    ExecSystem --> UpdateMB_System["Update Memory Bank<br>& System State"]
     ExecPlan --> UpdateMB_Plan["Update Memory Bank<br>& tasks.md"]
     ExecCreative --> UpdateMB_Creative["Update Memory Bank<br>& tasks.md"]
     ExecImpl --> UpdateMB_Impl["Update Memory Bank<br>& tasks.md"]
     ExecQA --> UpdateMB_QA["Update Memory Bank<br>& tasks.md"]
-    
+
     %% Verification with Memory Bank Checks
-    UpdateMB_Van --> VerifyVan{"Process<br>Complete?"}
+    UpdateMB_Van --> VerifyVan{"VAN Process<br>Complete?"}
+    UpdateMB_Rules --> VerifyRules{"Rules Operation<br>Complete?"}
+    UpdateMB_System --> VerifySystem{"System Operation<br>Complete?"}
     UpdateMB_Plan --> VerifyPlan{"Process<br>Complete?"}
     UpdateMB_Creative --> VerifyCreative{"Process<br>Complete?"}
     UpdateMB_Impl --> VerifyImpl{"Process<br>Complete?"}
     UpdateMB_QA --> VerifyQA{"Process<br>Complete?"}
-    
+
     %% Outcomes
     VerifyVan -->|"Yes"| CompleteVan["VAN Process<br>Complete"]
     VerifyVan -->|"No"| RetryVan["Resume<br>VAN Process"]
     RetryVan --- ReadMB_Van["Reference Memory Bank<br>for Context"]
     ReadMB_Van --> ExecVan
-    
+
+    VerifyRules -->|"Yes"| CompleteRules["VAN.RULES Process<br>Complete"]
+    VerifyRules -->|"No"| RetryRules["Resume<br>Rules Process"]
+    RetryRules --- ReadMB_Rules["Reference Rules State<br>for Context"]
+    ReadMB_Rules --> ExecRules
+
+    VerifySystem -->|"Yes"| CompleteSystem["VAN.SYSTEM Process<br>Complete"]
+    VerifySystem -->|"No"| RetrySystem["Resume<br>System Process"]
+    RetrySystem --- ReadMB_System["Reference System State<br>for Context"]
+    ReadMB_System --> ExecSystem
+
     VerifyPlan -->|"Yes"| CompletePlan["PLAN Process<br>Complete"]
     VerifyPlan -->|"No"| RetryPlan["Resume<br>PLAN Process"]
     RetryPlan --- ReadMB_Plan["Reference Memory Bank<br>for Context"]
     ReadMB_Plan --> ExecPlan
-    
+
     VerifyCreative -->|"Yes"| CompleteCreative["CREATIVE Process<br>Complete"]
     VerifyCreative -->|"No"| RetryCreative["Resume<br>CREATIVE Process"]
     RetryCreative --- ReadMB_Creative["Reference Memory Bank<br>for Context"]
     ReadMB_Creative --> ExecCreative
-    
+
     VerifyImpl -->|"Yes"| CompleteImpl["IMPLEMENT Process<br>Complete"]
     VerifyImpl -->|"No"| RetryImpl["Resume<br>IMPLEMENT Process"]
     RetryImpl --- ReadMB_Impl["Reference Memory Bank<br>for Context"]
     ReadMB_Impl --> ExecImpl
-    
+
     VerifyQA -->|"Yes"| CompleteQA["QA Process<br>Complete"]
     VerifyQA -->|"No"| RetryQA["Resume<br>QA Process"]
     RetryQA --- ReadMB_QA["Reference Memory Bank<br>for Context"]
     ReadMB_QA --> ExecQA
-    
+
     %% Final Memory Bank Updates at Completion
     CompleteVan --> FinalMB_Van["Update Memory Bank<br>with Completion Status"]
+    CompleteRules --> FinalMB_Rules["Update Memory Bank<br>with Rules Integration Status"]
+    CompleteSystem --> FinalMB_System["Update Memory Bank<br>with System Status"]
     CompletePlan --> FinalMB_Plan["Update Memory Bank<br>with Completion Status"]
     CompleteCreative --> FinalMB_Creative["Update Memory Bank<br>with Completion Status"]
     CompleteImpl --> FinalMB_Impl["Update Memory Bank<br>with Completion Status"]
     CompleteQA --> FinalMB_QA["Update Memory Bank<br>with Completion Status"]
-    
+
     %% Mode Transitions with Memory Bank Preservation
     FinalMB_Van -->|"Level 1"| TransToImpl["→ IMPLEMENT Mode"]
     FinalMB_Van -->|"Level 2-4"| TransToPlan["→ PLAN Mode"]
+    FinalMB_Rules --> TransToAny["→ Any Mode<br>(Rules Ready)"]
+    FinalMB_System --> TransToVan["→ VAN Mode<br>(System Ready)"]
     FinalMB_Plan --> TransToCreative["→ CREATIVE Mode"]
     FinalMB_Creative --> TransToImpl2["→ IMPLEMENT Mode"]
     FinalMB_Impl --> TransToQA["→ QA Mode"]
-    
+
     %% Memory Bank System
     MemoryBank["MEMORY BANK<br>CENTRAL SYSTEM"] -.-> tasks["tasks.md<br>Source of Truth"]
     MemoryBank -.-> projBrief["projectbrief.md<br>Foundation"]
     MemoryBank -.-> active["activeContext.md<br>Current Focus"]
     MemoryBank -.-> progress["progress.md<br>Implementation Status"]
-    
-    CheckMB_Van & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
-    UpdateMB_Van & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
-    ReadMB_Van & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
-    FinalMB_Van & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
-    
+
+    CheckMB_Van & CheckMB_Rules & CheckMB_System & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
+    UpdateMB_Van & UpdateMB_Rules & UpdateMB_System & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
+    ReadMB_Van & ReadMB_Rules & ReadMB_System & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
+    FinalMB_Van & FinalMB_Rules & FinalMB_System & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
+
     %% Error Handling
     Error["⚠️ ERROR<br>DETECTION"] -->|"Todo App"| BlockCreative["⛔ BLOCK<br>creative-mode-map"]
     Error -->|"Multiple Rules"| BlockMulti["⛔ BLOCK<br>Multiple Rules"]
     Error -->|"Rule Loading"| UseCorrectFn["✓ Use fetch_rules<br>NOT read_file"]
-    
+
     %% Styling
     style Start fill:#f8d486,stroke:#e8b84d,color:black
     style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
     style VAN fill:#ccf,stroke:#333,color:black
+    style VanRules fill:#ffc,stroke:#333,color:black
+    style VanSystem fill:#fcf,stroke:#333,color:black
     style Plan fill:#cfc,stroke:#333,color:black
     style Creative fill:#fcf,stroke:#333,color:black
     style Implement fill:#cff,stroke:#333,color:black
     style QA fill:#fcc,stroke:#333,color:black
-    
+
     style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style VanRulesResp fill:#fff9d9,stroke:#ffcc99,color:black
+    style VanSystemResp fill:#f9d9ff,stroke:#cc99ff,color:black
     style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
     style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
     style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
     style QAResp fill:#d9e6ff,stroke:#99ccff,color:black
-    
+
     style LoadVan fill:#a3dded,stroke:#4db8db,color:black
     style LoadPlan fill:#a3dded,stroke:#4db8db,color:black
     style LoadCreative fill:#a3dded,stroke:#4db8db,color:black
     style LoadImpl fill:#a3dded,stroke:#4db8db,color:black
     style LoadQA fill:#a3dded,stroke:#4db8db,color:black
-    
+
     style ExecVan fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecPlan fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecCreative fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecImpl fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecQA fill:#a3e0ae,stroke:#4dbb5f,color:black
-    
+
     style VerifyVan fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyPlan fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyCreative fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyImpl fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyQA fill:#e699d9,stroke:#d94dbb,color:black
-    
+
     style CompleteVan fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompletePlan fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteCreative fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteImpl fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteQA fill:#8cff8c,stroke:#4dbb5f,color:black
-    
+
     style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px,color:black
     style tasks fill:#f9d77e,stroke:#d9b95c,color:black
     style projBrief fill:#f9d77e,stroke:#d9b95c,color:black
     style active fill:#f9d77e,stroke:#d9b95c,color:black
     style progress fill:#f9d77e,stroke:#d9b95c,color:black
-    
+
     style Error fill:#ff5555,stroke:#cc0000,color:white,stroke-width:2px,color:black
     style BlockCreative fill:#ffaaaa,stroke:#ff8080,color:black
     style BlockMulti fill:#ffaaaa,stroke:#ff8080,color:black
@@ -16453,9 +35365,9 @@ flowchart TD
     PB([projectbrief.md]) --> PC([productContext.md])
     PB --> SP([systemPatterns.md])
     PB --> TC([techContext.md])
-    
+
     PC & SP & TC --> AC([activeContext.md])
-    
+
     AC --> P([progress.md])
     AC --> Tasks([tasks.md])
 
@@ -16468,6 +35380,64 @@ flowchart TD
     style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px,color:black
 ```
 
+## ENHANCED VAN MODE COMMANDS
+
+### Core VAN Commands
+- **`VAN`** - Standard VAN mode (initialization, complexity determination)
+
+### VAN.RULES Submode Commands
+- **`VAN.RULES`** - Activate rules management submode
+- **`VAN.RULES.INTEGRATE`** - Integrate .cursor rules with Memory Bank
+- **`VAN.RULES.MODIFY`** - Modify existing rules using Cursor workaround
+- **`VAN.RULES.CREATE`** - Create new custom rules
+- **`VAN.RULES.VALIDATE`** - Validate all rules for correctness
+- **`VAN.RULES.STATUS`** - Check current rules integration status
+
+### VAN.SYSTEM Submode Commands
+- **`VAN.SYSTEM`** - Activate system administration submode
+- **`VAN.SYSTEM.OPTIMIZE`** - Optimize Memory Bank performance
+- **`VAN.SYSTEM.BACKUP`** - Backup Memory Bank state
+- **`VAN.SYSTEM.RESTORE`** - Restore Memory Bank from backup
+- **`VAN.SYSTEM.HEALTH`** - Check system health and diagnostics
+
+## USAGE EXAMPLES
+
+### Example 1: Integrate .cursor rules with Memory Bank
+```
+User: VAN.RULES.INTEGRATE
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES integration submode...
+Reading changing_the_rules.md and rules_instructions.md...
+Analyzing .cursor/rules structure...
+Planning integration strategy...
+[Proceeds with integration process]
+```
+
+### Example 2: Validate all rules
+```
+User: VAN.RULES.VALIDATE
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES validation submode...
+Scanning all .mdc files for issues...
+Checking file extensions, case sensitivity, broken links...
+Generating validation report...
+[Proceeds with validation process]
+```
+
+### Example 3: System health check
+```
+User: VAN.SYSTEM.HEALTH
+Assistant: OK VAN.SYSTEM
+
+Activating VAN.SYSTEM health check submode...
+Checking Memory Bank integrity...
+Verifying file structure...
+Analyzing system performance...
+[Proceeds with health check process]
+```
+
 ## VERIFICATION COMMITMENT
 
 ```
@@ -16476,2527 +35446,1575 @@ flowchart TD
 │ I WILL run all verification checkpoints             │
 │ I WILL maintain tasks.md as the single source of    │
 │ truth for all task tracking                         │
+│ I WILL use VAN.RULES for all rule management        │
+│ I WILL use VAN.SYSTEM for system administration     │
+│ I WILL follow the Cursor workaround process         │
+│ I WILL maintain system and rules integrity          │
 └─────────────────────────────────────────────────────┘
-``` 
+```
 
 ```
 
-`optimization-journey/00-introduction.md`
+`custom_modes/van_instructions_enhanced_backup.md`
 
 ```md
-# MEMORY BANK SYSTEM: INTRODUCTION
+# ADAPTIVE MEMORY-BASED ASSISTANT SYSTEM - ENHANCED ENTRY POINT
 
-> **TL;DR:** The Memory Bank System evolved through nine optimization rounds to address verbosity, redundancy, maintenance challenges, process scaling, decision quality, creative phase implementation, and context window optimization. The latest improvement implements a Visual Navigation Layer with selective document loading that dramatically reduces context window usage, allowing the AI more working space while maintaining process integrity.
+> **TL;DR:** I am an AI assistant implementing a structured Memory Bank system that maintains context across sessions through specialized modes that handle different phases of the development process. VAN mode now includes system administration capabilities including rules management.
 
-## 🎯 SYSTEM PURPOSE & INITIAL STATE
-
-The Memory Bank System was designed to overcome a fundamental limitation of LLMs: their inability to retain context between sessions. The system creates a structured documentation architecture that serves as the AI's "memory" across interactions, consisting of:
-
-- Core documentation files (projectbrief.md, productContext.md, etc.)
-- Structured workflow with verification steps
-- Command execution protocols
-- Documentation creation and maintenance rules
-
-While effective, the initial system had several opportunities for optimization:
-- Verbose documentation requiring significant context window space
-- Rigid structures that were sometimes cumbersome
-- Redundancies across multiple files
-- Heavy maintenance overhead 
-```
-
-`optimization-journey/01-efficiency-and-clarity.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 1: EFFICIENCY & CLARITY
-
-## 🚨 Key Issues Identified
-- Documentation too verbose, consuming excessive context window space
-- Visual hierarchy lacking clear indication of importance
-- Abstract explanations instead of concrete examples
-- Inconsistent reference patterns
-
-## ✅ Key Improvements
-1. **Priority-Based Content Organization**
-   - Added "TL;DR" sections at the top of each file
-   - Placed mission-critical instructions at the beginning
-   - Implemented progressive disclosure (essentials first, details later)
-
-2. **Visual Hierarchy Improvements**
-   - Used consistent emoji markers for different content types (🚨, ✅, ❌, 📋, ✓)
-   - Created tables for reference information
-   - Added visual separation between different severity levels
-
-3. **Content Optimization**
-   - Removed redundancies across files
-   - Replaced abstract explanations with concrete examples
-   - Trimmed verbose explanations while preserving meaning
-   - Converted passive voice to active instructions
-
-4. **Reference System Refinements**
-   - Created standardized reference syntax with brief context
-   - Added clear indications of when to consult external files
-   - Grouped related references together
-
-5. **Embedded Verification Mechanisms**
-   - Added "checkpoint" prompts at critical junctions
-   - Implemented lightweight verification steps
-   - Created simple inline checklists 
-```
-
-`optimization-journey/02-system-self-assessment.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 2: SYSTEM SELF-ASSESSMENT
-
-## 🚨 Key Issues Identified
-1. Inconsistent task status updates between .cursorrules and activeContext.md
-2. Section tracking list not consistently updated
-3. Example files not being explicitly referenced
-4. Context limitations when working with multiple files
-
-## ✅ Key Improvements
-1. **Task Status Tracking Improvements**
-   - Added prominent 🔄 SYNC command template
-   - Created explicit moments for synchronization
-
-2. **Section Progress Tracking Improvements**
-   - Added 🔄 SECTION UPDATE template
-   - Created explicit moment to update the section tracking list
-
-3. **Reference Triggers Enhancement**
-   - Added standardized 📚 REFERENCE CHECK format
-   - Improved visual indicators for references
-
-4. **Context Window Optimization**
-   - Created "Minimal Mode" for constrained contexts
-   - Streamlined essential instructions
-
-5. **Section Checkpoint System**
-   - Added structured checkpoints at section boundaries
-   - Created clear verification steps for section completion 
-```
-
-`optimization-journey/03-redundancy-elimination.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 3: REDUNDANCY ELIMINATION
-
-## 🚨 Key Issues Identified
-1. Task statuses duplicated across multiple files (.cursorrules, activeContext.md, progress.md)
-2. Implementation details duplicated between files
-3. Recent changes information duplicated
-4. Maintenance overhead due to synchronizing information across files
-
-## ✅ Key Improvements
-1. **Centralized Task Registry**
-   - Created tasks.md as single source of truth for tasks
-   - Updated other files to reference instead of duplicate
-   - Simplified task tracking to single-file updates
-
-2. **Domain Separation**
-   - Established clear boundaries for what belongs in each file
-   - Prevented overlapping content between files
-   - Created reference templates for each domain
-
-3. **Cross-Reference System**
-   - Implemented standardized cross-reference syntax
-   - Replaced duplication with references
-   - Created guidelines for maintaining references 
-```
-
-`optimization-journey/04-single-source-of-truth.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 4: SINGLE SOURCE OF TRUTH IMPLEMENTATION
-
-## 🚨 Key Issues Identified
-1. Despite introducing tasks.md, the system still instructed updating task status in multiple files
-2. Dual-file update process (both .cursorrules AND activeContext.md) created synchronization errors
-3. Complex command verification with nested if-statements caused terminal crashes
-4. Inconsistent documentation references confused task tracking
-
-## ✅ Key Improvements
-1. **True Single Source of Truth**
-   - Designated tasks.md as the ONLY file for task status tracking
-   - Removed all instructions to update task status in .cursorrules
-   - Modified all files to reference but not duplicate task information
-   - Added explicit verification for tasks.md existence
-
-2. **Command Execution Safety**
-   - Simplified file verification processes to avoid terminal crashes
-   - Removed nested if-statements in Windows batch commands
-   - Added safer versions of common commands
-   - Trusted the AI's existing knowledge of file operations
-
-3. **Documentation Role Clarification**
-   - .cursorrules: Project patterns and intelligence only
-   - activeContext.md: Implementation details and current focus
-   - progress.md: Overall progress and references to tasks
-   - tasks.md: All task status tracking
-
-4. **Technical Fixes**
-   - Corrected MDC reference links in main.mdc
-   - Fixed verification checklist for single source approach
-   - Enhanced platform-specific documentation
-   - Simplified real-time update formats 
-```
-
-`optimization-journey/05-adaptive-complexity-model.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 5: ADAPTIVE COMPLEXITY MODEL
-
-## 🚨 Key Issues Identified
-1. One-size-fits-all process was too rigid for varying task complexities
-2. Bug fixes and simple tasks required excessive documentation
-3. Complex tasks sometimes received insufficient architectural attention
-4. Documentation burden sometimes slowed problem-solving
-5. Context window usage inefficient for simple tasks
-6. Creative work phases interrupted by excessive task tracking
-
-## ✅ Key Improvements
-1. **Adaptive Complexity Levels**
-   - Implemented four complexity levels (1-4) from quick bug fixes to complex systems
-   - Scaled process rigor to match task requirements
-   - Created level-specific workflows and documentation expectations
-
-2. **Level-Appropriate Task Tracking**
-   - Defined task update frequency by complexity level
-   - Simplified tracking for Level 1 (bug fixes)
-   - Enhanced tracking for Level 4 (complex systems)
-
-3. **Creative Phase Handling**
-   - Added explicit creative phase markers
-   - Created creative checkpoint system
-   - Established process for returning to task tracking after creative work
-
-4. **Process Scaling Rules**
-   - Defined criteria for complexity level determination
-   - Created guidelines for when to escalate complexity level
-   - Implemented level-specific verification requirements
-
-5. **Streamlined Level 1 Process**
-   - Created minimal workflow for quick bug fixes
-   - Reduced documentation burden for simple tasks
-   - Maintained essential task tracking
-
-6. **Enhanced Level 4 Process**
-   - Added architectural considerations
-   - Created comprehensive planning requirements
-   - Implemented detailed verification checkpoints 
-```
-
-`optimization-journey/06-self-assessment-recommendations.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 6: RECOMMENDATIONS FROM SELF-ASSESSMENT
-
-Based on field testing of the Adaptive Memory Bank System across different complexity levels, several refinements were identified. The system successfully scaled between complexity levels, maintained the single source of truth, and provided appropriate verification processes. However, self-assessment revealed opportunities for enhancement.
-
-## 🚨 Areas for Improvement
-1. Creative phase handling not explicitly marked during implementation
-2. Reference checking format not consistently used
-3. Implementation notes sometimes lacking sufficient detail
-4. Level 1 process could be further streamlined
-5. Templates for common implementation patterns needed
-
-## ✅ Recommended Enhancements
-
-1. **Enhanced Creative Phase Handling**
-   - Add more prominent reminders about creative phase markers
-   - Include creative phase examples in workflow.mdc
-   - Create visual indicators for entering/exiting creative phases
-   - Add creative checkpoint templates
-
-2. **Simplified Reference Checking**
-   - Create level-specific reference check templates
-   - Add simplified format for Level 1 tasks
-   - Include reference check reminders in each section
-   - Automate reference check integration
-
-3. **Implementation Documentation Guidelines**
-   - Provide clear examples of implementation documentation at each level
-   - Create templates for common implementation patterns
-   - Add level-specific implementation detail requirements
-   - Include technology-specific documentation templates
-
-4. **Further Level 1 Streamlining**
-   - Create ultra-lightweight process for trivial bug fixes
-   - Reduce documentation requirements for simple fixes
-   - Implement one-step verification for Level 1 tasks
-   - Provide specialized templates for common bugs
-
-5. **Implementation Pattern Templates**
-   - Create templates for common implementation patterns
-   - Add specialized templates for web development, API design, etc.
-   - Include reusable code pattern documentation
-   - Develop framework-specific templates 
-```
-
-`optimization-journey/07-structured-creative-thinking.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 7: STRUCTURED CREATIVE THINKING
-
-Despite previous improvements to creative phase handling, real-world usage revealed that creative phases were often skipped during Level 3-4 tasks, leading to premature implementation without sufficient design exploration. Inspired by the "think" tool concept, which provides dedicated thinking space for complex problem-solving, we enhanced the creative phase system to ensure systematic thinking for complex decisions.
-
-## 🚨 Key Issues Identified
-1. **Missing Integration in Task Flow**: Creative phases were documented but not fully integrated into the task workflow
-2. **Optional Rather Than Mandatory**: Creative phases were treated as optional rather than required for Level 3-4 tasks
-3. **Implementation Bias**: Tendency to jump straight to coding without thorough design exploration
-4. **Insufficient Verification**: No explicit checks for creative phase usage in validation steps
-5. **Process Compartmentalization**: Creative phases treated as separate from the main workflow rather than integral
-
-## ✅ Key Improvements
-1. **Mandatory Creative Phases for Level 3-4 Tasks**
-   - Made creative phases required, not optional, for complex tasks
-   - Added explicit directive in Global Rules stating "Creative phases are MANDATORY for all major design/architecture decisions in Level 3-4 tasks"
-   - Created creative-phase-triggers.mdc with clear guidelines on when creative phases must be used
-
-2. **Structured Thinking Framework**
-   - Enhanced creative phase format with systematic problem breakdown
-   - Added verification steps in creative checkpoints
-   - Implemented systematic verification against requirements for each option
-   - Added risk assessment and edge case identification
-
-3. **Task Planning Integration**
-   - Updated TASK PLANNING section to require identification of components needing creative phases
-   - Modified Level 3-4 workflows to explicitly include creative phase planning
-   - Added creative phase placeholders in task templates for complex components
-
-4. **Enhanced Verification System**
-   - Added creative phase verification to all checkpoints
-   - Updated TOP 5 MOST COMMON FAILURES to include "Missing creative phases"
-   - Enhanced WORKFLOW VERIFICATION to check for creative phase usage
-   - Added verification for creative phase outputs in documentation
-
-5. **Detailed Domain-Specific Templates**
-   - Created specialized templates for Algorithm Design, UI/UX Design, and Architecture Planning
-   - Added domain-specific verification steps for each creative phase type
-   - Implemented systematic alternative analysis with pros/cons comparison
-   - Added performance, security, and scalability considerations to templates 
-```
-
-`optimization-journey/08-creative-phase-enforcement.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 8: CREATIVE PHASE ENFORCEMENT & METRICS
-
-Despite previous improvements to creative phases, real-world feedback revealed that creative phases were sometimes mentally performed but not properly documented, allowing implementation to proceed without formal design exploration. This optimization round creates strict enforcement mechanisms and objective quality metrics for creative phases.
-
-## 🚨 Key Issues Identified
-1. **Lack of Explicit Enforcement**: Creative phases could be skipped despite being mandatory
-2. **Process Skipping**: Implementation could proceed without proper creative phase documentation
-3. **Missing Verification Gateway**: No strict checkpoint blocked implementation without creative phases
-4. **Documentation Gap**: Design decisions were mentally performed but not formally documented
-5. **Quality Variation**: No objective metrics to evaluate creative phase quality
-6. **Insufficient Integration**: Creative phases not explicitly integrated into the standard workflow
-
-## ✅ Key Improvements
-1. **Hard Gateway Implementation**
-   - Created new creative-phase-enforcement.mdc with strict gateway mechanisms
-   - Implemented hard implementation blocking without completed creative phases
-   - Added explicit verification checklist for creative phase completeness
-   - Created formal completion confirmation for creative phases
-
-2. **Workflow Structure Enhancement**
-   - Updated workflow.mdc to include creative phases as explicit workflow step
-   - Added formal transition markers for creative phases
-   - Integrated creative phases as standard part of Level 3-4 workflows
-   - Created dedicated creative phase section in tracking lists
-
-3. **Enhanced Checkpoint System**
-   - Added dedicated pre-implementation creative phase checkpoint
-   - Created verification points that block implementation without creative phases
-   - Added creative phase checks to implementation step checkpoints
-   - Enhanced implementation reminders to include creative phase requirements
-
-4. **Quality Metrics Framework**
-   - Created new creative-phase-metrics.mdc with objective evaluation criteria
-   - Implemented weighted decision matrices for option comparison
-   - Added domain-specific evaluation criteria for different creative phase types
-   - Developed risk assessment framework for design decisions
-   - Created historical pattern comparison framework
-
-5. **Structured Evaluation Tools**
-   - Implemented decision quality scoring system with minimum thresholds
-   - Created ready-to-use criteria sets for common architectural decisions
-   - Added verification metrics for solution validation
-   - Implemented standardized decision documentation templates 
-```
-
-`optimization-journey/09-context-optimization.md`
-
-```md
-# 🔄 OPTIMIZATION ROUND 9: CONTEXT OPTIMIZATION THROUGH VISUAL NAVIGATION
-
-Despite the improvements in creative phase enforcement and metrics, real-world usage revealed significant context window inefficiencies. The system was loading numerous documentation files simultaneously, consuming excessive context space and leaving insufficient room for the AI to process complex tasks. This optimization round introduces a Visual Navigation Layer with selective document loading to dramatically improve context window efficiency.
-
-## 🚨 Key Issues Identified
-1. **Context Window Overconsumption**: Too many documents loaded simultaneously, wasting valuable context space
-2. **Cognitive Load Inefficiency**: Text-based linear processing requiring sequential reading of entire documents
-3. **Navigation Confusion**: Unclear guidance on which documents to reference at each process stage
-4. **Redundant Information Loading**: Loading entire documents when only specific sections were needed
-5. **Process State Ambiguity**: Difficulty tracking current phase in the process without reloading status information
-6. **Implementation Barrier**: Context limitations restricting implementation capacity for complex tasks
-
-## ✅ Key Improvements
-1. **Selective Document Loading Protocol**
-   - Implemented phase-specific document lists that load only relevant files
-   - Created "just-in-time" document reference system for specialized information
-   - Developed document context management commands for each phase transition
-   - Reduced context window usage by ~60% through selective loading
-
-2. **Visual Process State Tracking**
-   - Created persistent visual process state indicator requiring minimal context space
-   - Implemented compact visual markers for phase transitions
-   - Developed standardized emoji-based visual hierarchy for information importance
-   - Reduced cognitive load through pattern recognition (significantly faster than text processing)
-
-3. **Pattern-Based Information Processing**
-   - Implemented standardized visual patterns for different information types
-   - Created consistent visual markers for process stages
-   - Developed visual checkpoints that require minimal context space
-   - Enhanced information density through visual hierarchies
-
-4. **Dynamic Context Adjustment System**
-   - Created "Minimal Mode" for severely constrained contexts
-   - Implemented complexity-based document loading (fewer documents for simpler tasks)
-   - Developed context window optimization commands for manual adjustments
-   - Added context usage monitoring and recommendations
-
-5. **Context-Optimized Creative Phases**
-   - Redesigned creative phase markers to maximize information density
-   - Implemented standardized creative checkpoint format requiring minimal context
-   - Created visual decision matrices with optimized space usage
-   - Developed compact option comparison formats
-
-6. **Task Tracking Optimization**
-   - Reinforced tasks.md as single source of truth to eliminate redundant loading
-   - Implemented compact task tracking format with visual markers
-   - Created standardized status indicators requiring minimal context space
-   - Developed reference-based rather than duplication-based progress tracking
-
-## 📊 Measured Impact
-- **Context Efficiency**: Reduced context window usage by approximately 60%
-- **Information Processing**: Visual system processes information significantly faster than text
-- **Navigation Efficiency**: Reduced time spent searching for relevant documentation by 75%
-- **Cognitive Load**: Significantly reduced working memory requirements through visualization
-- **Implementation Capacity**: Increased available context space for complex implementation tasks 
-```
-
-`optimization-journey/10-current-system-state.md`
-
-```md
-# CURRENT SYSTEM STATE
-
-> **TL;DR:** The Memory Bank System has evolved into a token-optimized, hierarchical framework with just-in-time rule loading, progressive documentation, and efficient context preservation across mode transitions.
-
-## 🎯 CORE SYSTEM OPTIMIZATIONS
-
-### 1. Hierarchical Rule Loading
-- Just-In-Time (JIT) loading of specialized rules
-- Core rule caching across mode transitions
-- Complexity-based rule selection
-- Significant reduction in token usage
-
-### 2. Progressive Documentation
 ```mermaid
 graph TD
-    Start["Creative Phase<br>Initiation"] --> P1["1️⃣ PROBLEM<br>Define scope"]
-    P1 --> P2["2️⃣ OPTIONS<br>List alternatives"]
-    P2 --> P3["3️⃣ ANALYSIS<br>Compare options"]
-    P3 --> P4["4️⃣ DECISION<br>Select approach"]
-    P4 --> P5["5️⃣ GUIDELINES<br>Document implementation"]
-    
-    P3 -.->|"On Demand"| Details["Detailed Option<br>Analysis"]
-    
-    style Start fill:#d971ff,stroke:#a33bc2,color:white
-    style P1 fill:#4da6ff,stroke:#0066cc,color:white
-    style P2 fill:#ffa64d,stroke:#cc7a30,color:white
-    style P3 fill:#4dbb5f,stroke:#36873f,color:white
-    style P4 fill:#d94dbb,stroke:#a3378a,color:white
-    style P5 fill:#4dbbbb,stroke:#368787,color:white
-    style Details fill:#e699d9,stroke:#d94dbb,color:white,stroke-dasharray: 5 5
-```
-
-### 3. Optimized Mode Transitions
-- Unified context transfer protocol
-- Standardized transition documents
-- Selective context preservation
-- Improved context retention between modes
-
-### 4. Enhanced Level Workflows
-- Level 1: Ultra-compact templates for quick fixes
-- Level 2: Balanced 4-phase workflow with simplified templates
-- Level 3: Optimized creative phase exploration
-- Level 4: Tiered documentation templates for enterprise projects
-
-### 5. Token-Optimized Architecture
-```mermaid
-graph TD
-    Root["Memory Bank<br>Common Rules"] --> Core["Core Rules<br>Shared Across Modes"]
-    
-    Core --> L1["Level 1<br>Rules"]
-    Core --> L2["Level 2<br>Rules"]
-    Core --> L3["Level 3<br>Rules"]
-    Core --> L4["Level 4<br>Rules"]
-    
-    Core --> VM["Mode<br>Visual Maps"]
-    
-    Core --> Phase["Phase-Specific<br>Rules"]
-    
-    Phase --> VAN_Rules["VAN Mode<br>Rules"]
-    Phase --> PLAN_Rules["PLAN Mode<br>Rules"]
-    Phase --> CREATIVE_Rules["CREATIVE Mode<br>Rules"]
-    Phase --> IMPLEMENT_Rules["IMPLEMENT Mode<br>Rules"]
-    Phase --> REFLECT_Rules["REFLECT Mode<br>Rules"]
-    Phase --> ARCHIVE_Rules["ARCHIVE Mode<br>Rules"]
-    
-    style Root fill:#4da6ff,stroke:#0066cc,color:white
-    style Core fill:#ffa64d,stroke:#cc7a30,color:white
-    style Phase fill:#4dbb5f,stroke:#36873f,color:white
-```
-
-## 🔄 OPTIMIZATION EFFICIENCY
-
-### Mode-Specific Optimizations
-1. **VAN Mode**
-   - Efficient complexity determination with minimal overhead
-   - Platform-aware commands with reduced token usage
-   - Streamlined file verification processes
-
-2. **PLAN Mode**
-   - Complexity-appropriate planning templates
-   - Progressive disclosure of planning details
-   - Tabular format for task organization
-
-3. **CREATIVE Mode**
-   - Progressive documentation with tabular comparisons
-   - "Detail-on-demand" approach for creative exploration
-   - Efficient option analysis templates
-
-4. **IMPLEMENT Mode**
-   - Streamlined implementation guidance
-   - Level-appropriate verification processes
-   - Consolidated status tracking
-
-5. **REFLECT/ARCHIVE Modes**
-   - Context-aware review mechanisms
-   - Efficient knowledge preservation
-   - Optimized documentation formats
-
-### Context Management Improvements
-- Unified context transfer protocol between modes
-- Selective preservation of critical information
-- Differential memory bank updates to minimize token usage
-- Mode-specific context compression techniques
-
-## 📊 TOKEN EFFICIENCY IMPROVEMENTS
-
-### Rule Loading Optimization
-- Hierarchical rule structure for efficient navigation
-- Rule dependency tracking to prevent redundant loading
-- Conditional rule loading based on complexity level
-- Rule caching across mode transitions
-
-### Documentation Efficiency
-- Progressive disclosure model for complex documentation
-- Tabular formats for efficient option comparison
-- Level-appropriate documentation scaling
-- Standardized templates with minimal boilerplate
-
-### Memory Bank Optimization
-- Differential updates to minimize token usage
-- Context compression for frequently accessed information
-- Selective synchronization across modes
-- Structured knowledge organization
-
-## 🎯 CURRENT FOCUS
-
-1. **Architecture Refinement**
-   - Fine-tuning the hierarchical rule loading system
-   - Optimizing rule dependencies and relationships
-   - Enhancing the adaptive complexity model
-
-2. **Documentation Enhancement**
-   - Further template optimization for each level
-   - Improving tabular comparison formats
-   - Refining progressive documentation approaches
-
-3. **Context Preservation**
-   - Enhancing the unified context transfer protocol
-   - Improving transition document efficiency
-   - Developing better context pruning algorithms
-
-4. **Integration Enhancement**
-   - Strengthening coordination between optimization components
-   - Improving monitoring and metrics for optimization
-   - Developing more sophisticated configuration options
-
-## 🚀 NEXT STEPS
-
-1. **Advanced Token Optimization**
-   - Dynamic template generation based on task characteristics
-   - Automatic context summarization for long-running tasks
-   - Partial rule loading within specialized rule files
-
-2. **Cross-Task Learning**
-   - Knowledge preservation between similar tasks
-   - Common solution patterns repository
-   - Intelligent suggestion system based on historical decisions
-
-3. **Workflow Automation**
-   - Automated mode transitions based on task state
-   - Intelligent rule selection based on usage patterns
-   - Dynamic complexity adjustment during workflow
-
-4. **Interface Enhancement**
-   - Improved visual process maps with interactive elements
-   - Better progress tracking and visualization
-   - Enhanced transition guidance between modes
-
-The system has been significantly optimized for token efficiency while maintaining all the structured development benefits of the original approach. These optimizations enable more complex projects to be handled effectively within token constraints while providing an improved user experience.
-```
-
-`optimization-journey/11-key-lessons.md`
-
-```md
-# 📝 KEY LESSONS LEARNED
-
-1. **Context Efficiency is Mission-Critical**
-   - Context window optimization directly impacts AI performance
-   - Selective document loading preserves context for complex processing
-   - Visual patterns require significantly less context space than text
-   - Single source of truth eliminates redundant information loading
-
-2. **Visual Processing Dramatically Reduces Cognitive Load**
-   - Visual information processing is ~60,000× faster than text
-   - Pattern recognition enables rapid process state awareness
-   - Visual hierarchies improve information density
-   - Standardized visual markers reduce context requirements
-
-3. **Selective Loading Beats Comprehensive Documentation**
-   - Loading only phase-relevant documents preserves context space
-   - Just-in-time reference loading prevents context overconsumption
-   - Complexity-based document loading scales efficiently
-   - Reference-based systems outperform duplication-based systems
-
-4. **Process Enforcement Requires Minimal Context**
-   - Visual checkpoints provide efficient verification
-   - Compact process state tracking preserves context
-   - Pattern-based violation detection requires minimal overhead
-   - Visual alerts communicate efficiently without verbose explanation
-
-5. **Continuous Context Optimization Drives Performance**
-   - Regular context window assessments reveal optimization opportunities
-   - Context monitoring enables dynamic adjustments
-   - Minimal mode provides fallback for extreme constraints
-   - Context-aware process scaling adapts to available resources 
-```
-
-`optimization-journey/11-methodological-integration.md`
-
-```md
-# 🔄 METHODOLOGICAL INTEGRATION
-
-Optimization Round 13 focused on deepening the system's methodological foundations while maintaining strict isolation principles:
-
-1. **Claude "Think" Tool Integration**
-   - Aligned CREATIVE mode with Claude's systematic problem-solving approach
-   - Implemented structured phases for problem decomposition
-   - Created visual process maps for methodology visualization
-   - Established clear parallels between methodologies for consistency
-
-2. **Mode-Specific Rule Isolation**
-   - Eliminated global rule dependencies for cleaner architecture
-   - Implemented strict mode-based rule containment
-   - Preserved global rule space for future extensibility
-   - Enhanced system modularity through isolation
-
-3. **Visual Process Mapping**
-   - Developed comprehensive mode-specific process maps
-   - Created hierarchical visualization of decision points
-   - Implemented cross-mode transition guidelines
-   - Established clear entry points and flow patterns
-
-4. **Architectural Documentation**
-   - Enhanced documentation clarity through visual aids
-   - Created explicit methodology comparisons
-   - Documented architectural decisions and rationales
-   - Established clear upgrade paths for users
-
-5. **Quality Assurance Integration**
-   - Implemented mode-specific QA checkpoints
-   - Created validation frameworks for each mode
-   - Established clear quality metrics and standards
-   - Developed systematic verification procedures
-
-This optimization round represents a significant maturation of the Memory Bank system, establishing stronger methodological foundations while maintaining strict isolation principles. By aligning with established methodologies like Claude's "Think" tool while preserving modularity through mode-specific rules, the system achieves both theoretical rigor and practical flexibility. The introduction of comprehensive visual process maps further enhances usability while maintaining the system's commitment to context efficiency. 
-```
-
-`optimization-journey/12-future-directions.md`
-
-```md
-# 🚀 FUTURE DIRECTIONS
-
-Based on the context optimization achievements of Optimization Round 9, future enhancements could include:
-
-1. **Context-Aware Compression Techniques**
-   - Develop information compression algorithms for documentation
-   - Create context-sensitive abbreviation systems
-   - Implement dynamic detail levels based on context availability
-   - Design ultra-compact reference formats for constrained environments
-
-2. **Advanced Pattern Recognition System**
-   - Improve visual pattern efficiency through standardization
-   - Develop hierarchical visual markers with nested information
-   - Create pattern-based information retrieval system
-   - Implement context-sensitive pattern adaptation
-
-3. **Context Prediction and Preloading**
-   - Develop predictive loading of likely-needed documents
-   - Create smart unloading of no-longer-relevant information
-   - Implement context history for efficient backtracking
-   - Design working memory optimization for complex tasks
-
-4. **Minimal-Footprint Creative Thinking**
-   - Develop ultra-compact creative phase formats
-   - Create visual decision frameworks with minimal context requirements
-   - Implement progressive disclosure for complex creative phases
-   - Design context-aware creative technique selection
-
-5. **Cross-Reference Optimization**
-   - Create hyperlink-like reference system for efficient navigation
-   - Develop context-aware reference resolution
-   - Implement reference caching for frequent lookups
-   - Design minimal-context cross-document navigation system
-
-The Memory Bank System with Visual Navigation represents a significant breakthrough in context window optimization, enabling the AI to operate more efficiently while maintaining comprehensive process guidance. By dramatically reducing context consumption through selective loading and visual patterns, the system provides more available working space for the AI to process complex tasks, making previously context-limited operations now possible and efficient. 
-```
-
-`optimization-journey/12-key-lessons.md`
-
-```md
-# 📝 KEY LESSONS LEARNED
-
-1. **Methodological Integration Enhances Structure**
-   - Claude's "Think" tool methodology provides robust foundation for CREATIVE mode
-   - Visual process maps significantly improve workflow understanding
-   - Mode-specific isolation enables cleaner architecture
-   - Systematic approach leads to better design decisions
-
-2. **Graph-Based Architecture Optimizes Flow**
-   - Directed graphs enable efficient decision tree navigation
-   - Contextual relationships model development phases clearly
-   - Resource optimization through node-specific loading
-   - Parallel processing opportunities become more apparent
-
-3. **Just-In-Time Loading Maximizes Efficiency**
-   - Mode-specific rule loading preserves context space
-   - Complexity-based document loading scales effectively
-   - Dynamic rule adaptation based on project needs
-   - Reduced context consumption through selective loading
-
-4. **Visual Processing Dramatically Improves Understanding**
-   - Mode-specific process maps provide clear guidance
-   - Visual decision trees reduce cognitive load
-   - Checkpoint visualization enables progress tracking
-   - Pattern-based violation detection requires minimal overhead
-
-5. **Isolation Principles Enable Scalability**
-   - Mode-specific containment reduces interference
-   - Clean separation of concerns through specialized modes
-   - Preserved global rule space for future extensibility
-   - Enhanced modularity through strict isolation 
-```
-
-`optimization-journey/13-future-directions.md`
-
-```md
-# 🚀 FUTURE DIRECTIONS
-
-Building on the methodological integration and isolation-focused architecture, future enhancements will focus on:
-
-1. **Enhanced JIT Rule System**
-   - Further optimize rule loading efficiency
-   - Implement smarter context utilization
-   - Develop faster response times
-   - Create dynamic rule complexity adaptation
-
-2. **Team Collaboration Features**
-   - Enable multi-user shared context
-   - Coordinate mode transitions across teams
-   - Implement shared memory bank states
-   - Create collaborative decision tracking
-
-3. **Cross-Project Intelligence**
-   - Maintain context across different projects
-   - Enable knowledge transfer between codebases
-   - Implement project pattern recognition
-   - Create reusable decision templates
-
-4. **Analytics and Insights**
-   - Track development patterns and mode usage
-   - Analyze project progression metrics
-   - Generate optimization recommendations
-   - Monitor context efficiency trends
-
-5. **Version Control Integration**
-   - Connect documentation with code history
-   - Track decision evolution over time
-   - Enable memory bank state versioning
-   - Create decision-aware branching strategies
-
-The Memory Bank system will continue evolving as a personal hobby project, with a focus on creating enjoyable, powerful tools for structured development. Future improvements will maintain the core 4-level complexity scale while expanding capabilities through:
-
-- Deeper integration with Claude's evolving capabilities
-- Enhanced visual process mapping
-- Expanded mode-specific optimizations
-- Improved cross-mode state management
-- Advanced technical validation features
-
-This development path reflects a commitment to balancing power and complexity while preserving the system's fundamental principles of efficiency, clarity, and systematic development. 
-```
-
-`optimization-journey/13-methodological-integration.md`
-
-```md
-# 🔄 METHODOLOGICAL INTEGRATION
-
-Optimization Round 13 focused on deepening the system's methodological foundations while maintaining strict isolation principles:
-
-1. **Claude "Think" Tool Integration**
-   - Aligned CREATIVE mode with Claude's systematic problem-solving approach
-   - Implemented structured phases for problem decomposition
-   - Created visual process maps for methodology visualization
-   - Established clear parallels between methodologies for consistency
-
-2. **Mode-Specific Rule Isolation**
-   - Eliminated global rule dependencies for cleaner architecture
-   - Implemented strict mode-based rule containment
-   - Preserved global rule space for future extensibility
-   - Enhanced system modularity through isolation
-
-3. **Visual Process Mapping**
-   - Developed comprehensive mode-specific process maps
-   - Created hierarchical visualization of decision points
-   - Implemented cross-mode transition guidelines
-   - Established clear entry points and flow patterns
-
-4. **Architectural Documentation**
-   - Enhanced documentation clarity through visual aids
-   - Created explicit methodology comparisons
-   - Documented architectural decisions and rationales
-   - Established clear upgrade paths for users
-
-5. **Quality Assurance Integration**
-   - Implemented mode-specific QA checkpoints
-   - Created validation frameworks for each mode
-   - Established clear quality metrics and standards
-   - Developed systematic verification procedures
-
-This optimization round represents a significant maturation of the Memory Bank system, establishing stronger methodological foundations while maintaining strict isolation principles. By aligning with established methodologies like Claude's "Think" tool while preserving modularity through mode-specific rules, the system achieves both theoretical rigor and practical flexibility. The introduction of comprehensive visual process maps further enhances usability while maintaining the system's commitment to context efficiency. 
-```
-
-`optimization-journey/README.md`
-
-```md
-# MEMORY BANK SYSTEM: OPTIMIZATION JOURNEY
-
-> **TL;DR:** The Memory Bank System evolved through multiple optimization rounds, from initial efficiency improvements to methodological integration with Claude's "Think" tool. The system now features mode-specific isolation, visual process maps, and a modular architecture that enables scalable, systematic development while maintaining context efficiency.
-
-## 📑 TABLE OF CONTENTS
-
-| Document | Description |
-|----------|-------------|
-| [00-introduction.md](00-introduction.md) | Introduction and system purpose |
-| [01-efficiency-and-clarity.md](01-efficiency-and-clarity.md) | Optimization Round 1: Efficiency & Clarity |
-| [02-system-self-assessment.md](02-system-self-assessment.md) | Optimization Round 2: System Self-Assessment |
-| [03-redundancy-elimination.md](03-redundancy-elimination.md) | Optimization Round 3: Redundancy Elimination |
-| [04-single-source-of-truth.md](04-single-source-of-truth.md) | Optimization Round 4: Single Source of Truth Implementation |
-| [05-adaptive-complexity-model.md](05-adaptive-complexity-model.md) | Optimization Round 5: Adaptive Complexity Model |
-| [06-self-assessment-recommendations.md](06-self-assessment-recommendations.md) | Optimization Round 6: Recommendations from Self-Assessment |
-| [07-structured-creative-thinking.md](07-structured-creative-thinking.md) | Optimization Round 7: Structured Creative Thinking |
-| [08-creative-phase-enforcement.md](08-creative-phase-enforcement.md) | Optimization Round 8: Creative Phase Enforcement & Metrics |
-| [09-context-optimization.md](09-context-optimization.md) | Optimization Round 9: Context Optimization Through Visual Navigation |
-| [10-current-system-state.md](10-current-system-state.md) | Current System State |
-| [11-methodological-integration.md](11-methodological-integration.md) | Integration with Claude's Think Methodology |
-| [12-key-lessons.md](12-key-lessons.md) | Key Lessons Learned |
-| [13-future-directions.md](13-future-directions.md) | Future Directions and Scaling Vision |
-
-## 📋 OPTIMIZATION JOURNEY OVERVIEW
-
-This documentation details the evolution of the Memory Bank System through several key phases:
-
-### Early Optimization (Rounds 1-5)
-1. **Efficiency & Clarity**: Addressing verbosity and improving visual hierarchy
-2. **System Self-Assessment**: Adding verification mechanisms and improving tracking
-3. **Redundancy Elimination**: Creating centralized task registry and domain separation
-4. **Single Source of Truth**: Implementing true single source for task tracking
-5. **Adaptive Complexity Model**: Introducing four complexity levels for different tasks
-
-### Process Refinement (Rounds 6-9)
-6. **Self-Assessment Recommendations**: Enhancing creative phase handling and streamlining processes
-7. **Structured Creative Thinking**: Mandating creative phases for Level 3-4 tasks
-8. **Creative Phase Enforcement**: Implementing hard gateways and quality metrics
-9. **Context Optimization**: Adding selective document loading and visual navigation
-
-### Latest Developments (Rounds 10-13)
-10. **System State Assessment**: Comprehensive evaluation of optimizations
-11. **Methodological Integration**: Alignment with Claude's Think tool methodology
-12. **Key Lessons Consolidation**: Synthesis of critical insights
-13. **Future Directions**: Vision for scaling and collaboration
-
-## 🔍 LATEST SYSTEM ACHIEVEMENTS
-
-The most recent developments have yielded significant improvements:
-
-- **Methodological Integration**: Alignment with Claude's "Think" tool methodology
-- **Mode Isolation**: Strict containment of rules within specific modes
-- **Visual Process Maps**: Comprehensive guidance through development phases
-- **Just-In-Time Loading**: Optimized context usage through selective rule loading
-- **Graph-Based Architecture**: Efficient decision tree navigation and resource optimization
-
-## 🧠 MEMORY BANK SYSTEM CORE PRINCIPLES
-
-The system now maintains these enhanced core principles:
-
-1. **Methodological Foundation**: Structured approach based on proven methodologies
-2. **Mode-Specific Isolation**: Clean separation of concerns through specialized modes
-3. **Visual Processing**: Comprehensive process maps and decision trees
-4. **Just-In-Time Efficiency**: Load only what's needed when it's needed
-5. **Continuous Evolution**: Regular assessment and improvement of the system
-
-```mermaid
-graph BT
-    %% Early Phase Nodes
-    E1["🔍 01-03: Foundation<br>• Initial Optimization<br>• Self Assessment<br>• Redundancy Elimination"]
-    E2["⚙️ 04-05: Architecture<br>• Single Source of Truth<br>• Adaptive Complexity<br>• 4-Level Scale"]
-    
-    %% Middle Phase Nodes
-    M1["🎨 06-08: Creative Evolution<br>• Process Refinement<br>• Structured Thinking<br>• Phase Enforcement"]
-    M2["🧩 09-10: System Maturity<br>• Context Optimization<br>• Visual Navigation<br>• State Management"]
-    
-    %% Latest Phase Nodes
-    L1["🤔 11: Think Integration<br>• Claude Methodology<br>• Mode Isolation<br>• Visual Process Maps"]
-    L2["📚 12: Key Insights<br>• JIT Rule Loading<br>• Graph Architecture<br>• Mode Separation"]
-    L3["🚀 13: Future Vision<br>• Team Collaboration<br>• Cross-Project Intel<br>• Analytics Integration"]
-
-    %% Connections
-    E1 -->|"Efficiency First"| E2
-    E2 -->|"Process Evolution"| M1
-    M1 -->|"System Growth"| M2
-    M2 -->|"Methodology Shift"| L1
-    L1 -->|"Learning & Growth"| L2
-    L2 -->|"Future Planning"| L3
-
-    %% Key Themes with Emojis
-    KT1["⚡ Speed & Clarity<br><i>60% Context Reduction</i>"]
-    KT2["🏗️ System Design<br><i>Modular Architecture</i>"]
-    KT3["👁️ Visual Approach<br><i>Significant Processing Gains</i>"]
-    KT4["🎯 Mode Focus<br><i>Specialized Workflows</i>"]
-    KT5["🧠 Think Method<br><i>Structured Decisions</i>"]
-
-    %% Learnings & Challenges
-    LC1["❌ Avoided:<br>Global Rules<br>Manual Tracking"]
-    LC2["✅ Worked Well:<br>Visual Maps<br>JIT Loading"]
-    LC3["🔄 Evolved:<br>Creative Process<br>Mode Transitions"]
-    
-    %% Theme Connections
-    E1 --- KT1
-    E2 --- KT2
-    M1 --- KT3
-    M2 --- KT4
-    L1 --- KT5
-
-    %% Learning Connections
-    E2 --- LC1
-    M2 --- LC2
-    L2 --- LC3
+    %% Main Command Detection
+    Start["User Command"] --> CommandDetect{"Command<br>Type?"}
+
+    CommandDetect -->|"VAN"| VAN["VAN Mode"]
+    CommandDetect -->|"VAN.RULES"| VanRules["VAN.RULES<br>Rules Management"]
+    CommandDetect -->|"VAN.SYSTEM"| VanSystem["VAN.SYSTEM<br>System Admin"]
+    CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
+    CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
+    CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
+    CommandDetect -->|"QA"| QA["QA Mode"]
+
+    %% Immediate Response Node
+    VAN --> VanResp["Respond: OK VAN"]
+    VanRules --> VanRulesResp["Respond: OK VAN.RULES"]
+    VanSystem --> VanSystemResp["Respond: OK VAN.SYSTEM"]
+    Plan --> PlanResp["Respond: OK PLAN"]
+    Creative --> CreativeResp["Respond: OK CREATIVE"]
+    Implement --> ImplResp["Respond: OK IMPLEMENT"]
+    QA --> QAResp["Respond: OK QA"]
+
+    %% Memory Bank Check
+    VanResp --> CheckMB_Van["Check Memory Bank<br>& tasks.md Status"]
+    VanRulesResp --> CheckMB_Rules["Check Rules Status<br>& Integration State"]
+    VanSystemResp --> CheckMB_System["Check System Status<br>& Configuration"]
+    PlanResp --> CheckMB_Plan["Check Memory Bank<br>& tasks.md Status"]
+    CreativeResp --> CheckMB_Creative["Check Memory Bank<br>& tasks.md Status"]
+    ImplResp --> CheckMB_Impl["Check Memory Bank<br>& tasks.md Status"]
+    QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
+
+    %% Rule Loading
+    CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
+    CheckMB_Rules --> LoadRules["Load Rules Guide:<br>rules/changing_the_rules.md<br>custom_modes/rules_instructions.md"]
+    CheckMB_System --> LoadSystem["Load System Rules:<br>Core system configuration"]
+    CheckMB_Plan --> LoadPlan["Load Rule:<br>isolation_rules/visual-maps/plan-mode-map"]
+    CheckMB_Creative --> LoadCreative["Load Rule:<br>isolation_rules/visual-maps/creative-mode-map"]
+    CheckMB_Impl --> LoadImpl["Load Rule:<br>isolation_rules/visual-maps/implement-mode-map"]
+    CheckMB_QA --> LoadQA["Load Rule:<br>isolation_rules/visual-maps/qa-mode-map"]
+
+    %% VAN.RULES Submode Processing
+    LoadRules --> RulesTypeCheck{"Rules<br>Operation<br>Type?"}
+    RulesTypeCheck -->|"INTEGRATE"| RulesIntegrate["🔗 Integrate .cursor rules<br>with Memory Bank"]
+    RulesTypeCheck -->|"MODIFY"| RulesModify["✏️ Modify existing rules<br>using Cursor workaround"]
+    RulesTypeCheck -->|"CREATE"| RulesCreate["➕ Create new<br>custom rules"]
+    RulesTypeCheck -->|"VALIDATE"| RulesValidate["✅ Validate all rules<br>for correctness"]
+    RulesTypeCheck -->|"STATUS"| RulesStatus["📊 Check rules<br>integration status"]
+
+    %% VAN.SYSTEM Submode Processing
+    LoadSystem --> SystemTypeCheck{"System<br>Operation<br>Type?"}
+    SystemTypeCheck -->|"OPTIMIZE"| SystemOptimize["⚡ Optimize Memory Bank<br>performance"]
+    SystemTypeCheck -->|"BACKUP"| SystemBackup["💾 Backup Memory Bank<br>state"]
+    SystemTypeCheck -->|"RESTORE"| SystemRestore["🔄 Restore Memory Bank<br>from backup"]
+    SystemTypeCheck -->|"HEALTH"| SystemHealth["🏥 Check system<br>health"]
+
+    %% Rule Execution with Memory Bank Updates
+    LoadVan --> ExecVan["Execute VAN<br>Process"]
+    RulesIntegrate & RulesModify & RulesCreate & RulesValidate & RulesStatus --> ExecRules["Execute Rules<br>Management Process"]
+    SystemOptimize & SystemBackup & SystemRestore & SystemHealth --> ExecSystem["Execute System<br>Administration"]
+    LoadPlan --> ExecPlan["Execute Process<br>in Rule"]
+    LoadCreative --> ExecCreative["Execute Process<br>in Rule"]
+    LoadImpl --> ExecImpl["Execute Process<br>in Rule"]
+    LoadQA --> ExecQA["Execute Process<br>in Rule"]
+
+    %% Memory Bank Continuous Updates
+    ExecVan --> UpdateMB_Van["Update Memory Bank<br>& tasks.md"]
+    ExecRules --> UpdateMB_Rules["Update Memory Bank<br>& Rules Integration"]
+    ExecSystem --> UpdateMB_System["Update Memory Bank<br>& System State"]
+    ExecPlan --> UpdateMB_Plan["Update Memory Bank<br>& tasks.md"]
+    ExecCreative --> UpdateMB_Creative["Update Memory Bank<br>& tasks.md"]
+    ExecImpl --> UpdateMB_Impl["Update Memory Bank<br>& tasks.md"]
+    ExecQA --> UpdateMB_QA["Update Memory Bank<br>& tasks.md"]
+
+    %% Verification with Memory Bank Checks
+    UpdateMB_Van --> VerifyVan{"VAN Process<br>Complete?"}
+    UpdateMB_Rules --> VerifyRules{"Rules Operation<br>Complete?"}
+    UpdateMB_System --> VerifySystem{"System Operation<br>Complete?"}
+    UpdateMB_Plan --> VerifyPlan{"Process<br>Complete?"}
+    UpdateMB_Creative --> VerifyCreative{"Process<br>Complete?"}
+    UpdateMB_Impl --> VerifyImpl{"Process<br>Complete?"}
+    UpdateMB_QA --> VerifyQA{"Process<br>Complete?"}
+
+    %% Outcomes
+    VerifyVan -->|"Yes"| CompleteVan["VAN Process<br>Complete"]
+    VerifyVan -->|"No"| RetryVan["Resume<br>VAN Process"]
+    RetryVan --- ReadMB_Van["Reference Memory Bank<br>for Context"]
+    ReadMB_Van --> ExecVan
+
+    VerifyRules -->|"Yes"| CompleteRules["VAN.RULES Process<br>Complete"]
+    VerifyRules -->|"No"| RetryRules["Resume<br>Rules Process"]
+    RetryRules --- ReadMB_Rules["Reference Rules State<br>for Context"]
+    ReadMB_Rules --> ExecRules
+
+    VerifySystem -->|"Yes"| CompleteSystem["VAN.SYSTEM Process<br>Complete"]
+    VerifySystem -->|"No"| RetrySystem["Resume<br>System Process"]
+    RetrySystem --- ReadMB_System["Reference System State<br>for Context"]
+    ReadMB_System --> ExecSystem
+
+    VerifyPlan -->|"Yes"| CompletePlan["PLAN Process<br>Complete"]
+    VerifyPlan -->|"No"| RetryPlan["Resume<br>PLAN Process"]
+    RetryPlan --- ReadMB_Plan["Reference Memory Bank<br>for Context"]
+    ReadMB_Plan --> ExecPlan
+
+    VerifyCreative -->|"Yes"| CompleteCreative["CREATIVE Process<br>Complete"]
+    VerifyCreative -->|"No"| RetryCreative["Resume<br>CREATIVE Process"]
+    RetryCreative --- ReadMB_Creative["Reference Memory Bank<br>for Context"]
+    ReadMB_Creative --> ExecCreative
+
+    VerifyImpl -->|"Yes"| CompleteImpl["IMPLEMENT Process<br>Complete"]
+    VerifyImpl -->|"No"| RetryImpl["Resume<br>IMPLEMENT Process"]
+    RetryImpl --- ReadMB_Impl["Reference Memory Bank<br>for Context"]
+    ReadMB_Impl --> ExecImpl
+
+    VerifyQA -->|"Yes"| CompleteQA["QA Process<br>Complete"]
+    VerifyQA -->|"No"| RetryQA["Resume<br>QA Process"]
+    RetryQA --- ReadMB_QA["Reference Memory Bank<br>for Context"]
+    ReadMB_QA --> ExecQA
+
+    %% Final Memory Bank Updates at Completion
+    CompleteVan --> FinalMB_Van["Update Memory Bank<br>with Completion Status"]
+    CompleteRules --> FinalMB_Rules["Update Memory Bank<br>with Rules Integration Status"]
+    CompleteSystem --> FinalMB_System["Update Memory Bank<br>with System Status"]
+    CompletePlan --> FinalMB_Plan["Update Memory Bank<br>with Completion Status"]
+    CompleteCreative --> FinalMB_Creative["Update Memory Bank<br>with Completion Status"]
+    CompleteImpl --> FinalMB_Impl["Update Memory Bank<br>with Completion Status"]
+    CompleteQA --> FinalMB_QA["Update Memory Bank<br>with Completion Status"]
+
+    %% Mode Transitions with Memory Bank Preservation
+    FinalMB_Van -->|"Level 1"| TransToImpl["→ IMPLEMENT Mode"]
+    FinalMB_Van -->|"Level 2-4"| TransToPlan["→ PLAN Mode"]
+    FinalMB_Rules --> TransToAny["→ Any Mode<br>(Rules Ready)"]
+    FinalMB_System --> TransToVan["→ VAN Mode<br>(System Ready)"]
+    FinalMB_Plan --> TransToCreative["→ CREATIVE Mode"]
+    FinalMB_Creative --> TransToImpl2["→ IMPLEMENT Mode"]
+    FinalMB_Impl --> TransToQA["→ QA Mode"]
+
+    %% Memory Bank System
+    MemoryBank["MEMORY BANK<br>CENTRAL SYSTEM"] -.-> tasks["tasks.md<br>Source of Truth"]
+    MemoryBank -.-> projBrief["projectbrief.md<br>Foundation"]
+    MemoryBank -.-> active["activeContext.md<br>Current Focus"]
+    MemoryBank -.-> progress["progress.md<br>Implementation Status"]
+    MemoryBank -.-> systemPatterns["systemPatterns.md<br>Rule Patterns"]
+    MemoryBank -.-> techContext["techContext.md<br>Rule Architecture"]
+
+    %% Rules System Integration
+    RulesSystem["RULES SYSTEM<br>INTEGRATION"] -.-> cursorRules[".cursor/rules/<br>Original Rules"]
+    RulesSystem -.-> memoryRules["memory-bank/rules/<br>Integrated Rules"]
+    RulesSystem -.-> rulesGuide["rules/changing_the_rules.md<br>Modification Guide"]
+
+    CheckMB_Van & CheckMB_Rules & CheckMB_System & CheckMB_Plan & CheckMB_Creative & CheckMB_Impl & CheckMB_QA -.-> MemoryBank
+    UpdateMB_Van & UpdateMB_Rules & UpdateMB_System & UpdateMB_Plan & UpdateMB_Creative & UpdateMB_Impl & UpdateMB_QA -.-> MemoryBank
+    ReadMB_Van & ReadMB_Rules & ReadMB_System & ReadMB_Plan & ReadMB_Creative & ReadMB_Impl & ReadMB_QA -.-> MemoryBank
+    FinalMB_Van & FinalMB_Rules & FinalMB_System & FinalMB_Plan & FinalMB_Creative & FinalMB_Impl & FinalMB_QA -.-> MemoryBank
+
+    CheckMB_Rules & UpdateMB_Rules & ReadMB_Rules & FinalMB_Rules -.-> RulesSystem
+
+    %% Error Handling
+    Error["⚠️ ERROR<br>DETECTION"] -->|"Todo App"| BlockCreative["⛔ BLOCK<br>creative-mode-map"]
+    Error -->|"Multiple Rules"| BlockMulti["⛔ BLOCK<br>Multiple Rules"]
+    Error -->|"Rule Loading"| UseCorrectFn["✓ Use fetch_rules<br>NOT read_file"]
+    Error -->|"Rules Integration"| UseVanRules["✓ Use VAN.RULES<br>for integration"]
 
     %% Styling
-    style E1 fill:#f9d77e,stroke:#d9b95c,color:black
-    style E2 fill:#f9d77e,stroke:#d9b95c,color:black
-    
-    style M1 fill:#a8d5ff,stroke:#88b5e0,color:black
-    style M2 fill:#a8d5ff,stroke:#88b5e0,color:black
-    
-    style L1 fill:#c5e8b7,stroke:#a5c897,color:black
-    style L2 fill:#c5e8b7,stroke:#a5c897,color:black
-    style L3 fill:#c5e8b7,stroke:#a5c897,color:black
-    
-    style KT1 fill:#ffcccc,stroke:#ff9999,color:black
-    style KT2 fill:#ffcccc,stroke:#ff9999,color:black
-    style KT3 fill:#ffcccc,stroke:#ff9999,color:black
-    style KT4 fill:#ffcccc,stroke:#ff9999,color:black
-    style KT5 fill:#ffcccc,stroke:#ff9999,color:black
-    
-    style LC1 fill:#ffd9b3,stroke:#ffb366,color:black
-    style LC2 fill:#d9f2d9,stroke:#97d097,color:black
-    style LC3 fill:#d9b3ff,stroke:#b366ff,color:black
+    style Start fill:#f8d486,stroke:#e8b84d,color:black
+    style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
+    style VAN fill:#ccf,stroke:#333,color:black
+    style VanRules fill:#ffc,stroke:#333,color:black
+    style VanSystem fill:#fcf,stroke:#333,color:black
+    style Plan fill:#cfc,stroke:#333,color:black
+    style Creative fill:#fcf,stroke:#333,color:black
+    style Implement fill:#cff,stroke:#333,color:black
+    style QA fill:#fcc,stroke:#333,color:black
 
-    %% Subgraph Styling
-    subgraph "🌟 Latest Phase: Integration & Scale"
-        L1
-        L2
-        L3
-    end
-    
-    subgraph "🔄 Middle Phase: Process & Validation"
-        M1
-        M2
-    end
-    
-    subgraph "🎯 Early Phase: Efficiency & Structure"
-        E1
-        E2
-    end
+    style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style VanRulesResp fill:#fff9d9,stroke:#ffcc99,color:black
+    style VanSystemResp fill:#f9d9ff,stroke:#cc99ff,color:black
+    style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style QAResp fill:#d9e6ff,stroke:#99ccff,color:black
+
+    style LoadVan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadRules fill:#ffe6a3,stroke:#ffcc4d,color:black
+    style LoadSystem fill:#e6a3ff,stroke:#cc4dff,color:black
+    style LoadPlan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadCreative fill:#a3dded,stroke:#4db8db,color:black
+    style LoadImpl fill:#a3dded,stroke:#4db8db,color:black
+    style LoadQA fill:#a3dded,stroke:#4db8db,color:black
+
+    style RulesTypeCheck fill:#ffcc80,stroke:#ff9900,color:black
+    style SystemTypeCheck fill:#cc80ff,stroke:#9900ff,color:black
+
+    style ExecVan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecRules fill:#ffe0a3,stroke:#ffb84d,color:black
+    style ExecSystem fill:#e0a3ff,stroke:#b84dff,color:black
+    style ExecPlan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecCreative fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecImpl fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecQA fill:#a3e0ae,stroke:#4dbb5f,color:black
+
+    style VerifyVan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyRules fill:#ffd699,stroke:#ffb84d,color:black
+    style VerifySystem fill:#d699ff,stroke:#b84dff,color:black
+    style VerifyPlan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyCreative fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyImpl fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyQA fill:#e699d9,stroke:#d94dbb,color:black
+
+    style CompleteVan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteRules fill:#ffcc8c,stroke:#ff9900,color:black
+    style CompleteSystem fill:#cc8cff,stroke:#9900ff,color:black
+    style CompletePlan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteCreative fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteImpl fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteQA fill:#8cff8c,stroke:#4dbb5f,color:black
+
+    style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px,color:black
+    style RulesSystem fill:#ff9999,stroke:#ff6666,stroke-width:2px,color:black
+    style tasks fill:#f9d77e,stroke:#d9b95c,color:black
+    style projBrief fill:#f9d77e,stroke:#d9b95c,color:black
+    style active fill:#f9d77e,stroke:#d9b95c,color:black
+    style progress fill:#f9d77e,stroke:#d9b95c,color:black
+    style systemPatterns fill:#f9d77e,stroke:#d9b95c,color:black
+    style techContext fill:#f9d77e,stroke:#d9b95c,color:black
+    style cursorRules fill:#ff9999,stroke:#ff6666,color:black
+    style memoryRules fill:#ff9999,stroke:#ff6666,color:black
+    style rulesGuide fill:#ff9999,stroke:#ff6666,color:black
+
+    style Error fill:#ff5555,stroke:#cc0000,color:white,stroke-width:2px,color:black
+    style BlockCreative fill:#ffaaaa,stroke:#ff8080,color:black
+    style BlockMulti fill:#ffaaaa,stroke:#ff8080,color:black
+    style UseCorrectFn fill:#8cff8c,stroke:#4dbb5f,color:black
+    style UseVanRules fill:#8cff8c,stroke:#4dbb5f,color:black
 ```
 
-## Development Phases Overview
+## ENHANCED VAN MODE COMMANDS
 
-### Early Focus (Chapters 1-5)
-- Established foundational efficiency principles
-- Developed systematic approach to development
-- Created core architecture and complexity model
+### Core VAN Commands
+- **`VAN`** - Standard VAN mode (initialization, complexity determination)
 
-### Middle Phase (Chapters 6-10)
-- Refined creative processes and enforcement
-- Implemented visual processing techniques
-- Achieved significant context optimization
+### VAN.RULES Submode Commands
+- **`VAN.RULES`** - Activate rules management submode
+- **`VAN.RULES.INTEGRATE`** - Integrate .cursor rules with Memory Bank
+- **`VAN.RULES.MODIFY`** - Modify existing rules using Cursor workaround
+- **`VAN.RULES.CREATE`** - Create new custom rules
+- **`VAN.RULES.VALIDATE`** - Validate all rules for correctness
+- **`VAN.RULES.STATUS`** - Check current rules integration status
 
-### Latest Phase (Chapters 11-13)
-- Integrated with Claude's "Think" methodology
-- Implemented strict mode-specific isolation
-- Established vision for future scaling
+### VAN.SYSTEM Submode Commands
+- **`VAN.SYSTEM`** - Activate system administration submode
+- **`VAN.SYSTEM.OPTIMIZE`** - Optimize Memory Bank performance
+- **`VAN.SYSTEM.BACKUP`** - Backup Memory Bank state
+- **`VAN.SYSTEM.RESTORE`** - Restore Memory Bank from backup
+- **`VAN.SYSTEM.HEALTH`** - Check system health and diagnostics
 
-The Memory Bank system continues to evolve as a personal hobby project, focusing on creating powerful tools for structured development while maintaining the core 4-level complexity scale that has proven effective throughout its evolution.
-
-```
-
-`.cursorindexingignore`
-
-```cursorindexingignore
-
-# Don't index SpecStory auto-save files, but allow explicit context inclusion via @ references
-.specstory/**
-
-```
-
-`.gitignore`
-
-```gitignore
-# OS specific files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Editor specific files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
-.hypothesis/
-.pytest_cache/
-*.egg-info/
-
-# Ruby
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/spec/examples.txt
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-# Java
-*.class
-*.log
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-hs_err_pid*
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Cursor specific
-.cursor/workspace/ 
-
-#claude.code specific
-.claude/
-CLAUDE.md
-```
-
-`creative_mode_think_tool.md`
-
-```md
-# CREATIVE Mode and Claude's "Think" Tool
-
-This document explains how Memory Bank's CREATIVE mode implements concepts similar to Anthropic's Claude "Think" tool methodology, as described in their [engineering blog](https://www.anthropic.com/engineering/claude-think-tool).
-
-## Conceptual Parallels
-
-The following diagram illustrates the conceptual similarities between Claude's "Think" tool methodology and Memory Bank's CREATIVE mode:
+## VAN.RULES INTEGRATION PROCESS
 
 ```mermaid
 graph TD
-    subgraph "Claude Think Tool Approach"
-        CT1["1: Decompose Problem"] --> CT2["2: Explore Solution Space"]
-        CT2 --> CT3["3: Analyze Trade-offs"]
-        CT3 --> CT4["4: Select & Document Decision"]
-        CT4 --> CT5["5: Validate Decision"]
-    end
-    
-    subgraph "Memory Bank CREATIVE Mode"
-        CM1["1: Component Breakdown"] --> CM2["2: Option Exploration"]
-        CM2 --> CM3["3: Trade-off Analysis"]
-        CM3 --> CM4["4: Decision Documentation"]
-        CM4 --> CM5["5: Decision Verification"]
-    end
-    
-    style CT1 fill:#f9d77e,stroke:#d9b95c
-    style CT2 fill:#f9d77e,stroke:#d9b95c
-    style CT3 fill:#f9d77e,stroke:#d9b95c
-    style CT4 fill:#f9d77e,stroke:#d9b95c
-    style CT5 fill:#f9d77e,stroke:#d9b95c
-    
-    style CM1 fill:#a8d5ff,stroke:#88b5e0
-    style CM2 fill:#a8d5ff,stroke:#88b5e0
-    style CM3 fill:#a8d5ff,stroke:#88b5e0
-    style CM4 fill:#a8d5ff,stroke:#88b5e0
-    style CM5 fill:#a8d5ff,stroke:#88b5e0
+    VanRules["VAN.RULES<br>Activated"] --> ReadGuide["Read changing_the_rules.md<br>& rules_instructions.md"]
+    ReadGuide --> AnalyzeStructure["Analyze .cursor/rules<br>Structure"]
+    AnalyzeStructure --> IdentifyOps["Identify Required<br>Operations"]
+    IdentifyOps --> ExecuteOps["Execute Rules<br>Operations"]
+    ExecuteOps --> UpdateMB["Update Memory Bank<br>with Integration"]
+    UpdateMB --> VerifyIntegration["Verify Rules<br>Integration"]
+
+    style VanRules fill:#ffcc80,stroke:#ff9900,color:white
+    style ReadGuide fill:#ffe6cc,stroke:#ffb366,color:black
+    style AnalyzeStructure fill:#ffe6cc,stroke:#ffb366,color:black
+    style IdentifyOps fill:#ffe6cc,stroke:#ffb366,color:black
+    style ExecuteOps fill:#ffe6cc,stroke:#ffb366,color:black
+    style UpdateMB fill:#ffe6cc,stroke:#ffb366,color:black
+    style VerifyIntegration fill:#ffe6cc,stroke:#ffb366,color:black
 ```
 
-## Core Principles of Claude's "Think" Tool
+## VAN.SYSTEM ADMINISTRATION PROCESS
 
-Claude's "Think" tool methodology centers around:
+```mermaid
+graph TD
+    VanSystem["VAN.SYSTEM<br>Activated"] --> SystemCheck["Check System<br>Status"]
+    SystemCheck --> IdentifyTask["Identify System<br>Task"]
+    IdentifyTask --> ExecuteTask["Execute System<br>Task"]
+    ExecuteTask --> UpdateState["Update System<br>State"]
+    UpdateState --> VerifyTask["Verify Task<br>Completion"]
 
-1. **Structured Thinking Process**: Breaking down complex problems into manageable components
-2. **Explicit Reasoning**: Clearly documenting the reasoning process
-3. **Option Exploration**: Systematically exploring multiple solution approaches
-4. **Trade-off Analysis**: Weighing pros and cons of different options
-5. **Decision Documentation**: Creating a record of decisions and their rationales
-
-## How CREATIVE Mode Implements These Principles
-
-The Memory Bank CREATIVE mode implements similar concepts through:
-
-### 1. Structured Phases
-
-CREATIVE mode enforces a structured approach to design decisions through explicit phases:
-
-```
-Phase 1: Component Breakdown
-Phase 2: Option Exploration
-Phase 3: Trade-off Analysis
-Phase 4: Decision Documentation
-Phase 5: Decision Verification
+    style VanSystem fill:#cc80ff,stroke:#9900ff,color:white
+    style SystemCheck fill:#e6ccff,stroke:#b366ff,color:black
+    style IdentifyTask fill:#e6ccff,stroke:#b366ff,color:black
+    style ExecuteTask fill:#e6ccff,stroke:#b366ff,color:black
+    style UpdateState fill:#e6ccff,stroke:#b366ff,color:black
+    style VerifyTask fill:#e6ccff,stroke:#b366ff,color:black
 ```
 
-Each phase has specific outputs and acceptance criteria that must be met before proceeding.
+## MEMORY BANK FILE STRUCTURE WITH ENHANCED VAN
 
-### 2. Component Breakdown Templates
+```mermaid
+flowchart TD
+    PB([projectbrief.md]) --> PC([productContext.md])
+    PB --> SP([systemPatterns.md])
+    PB --> TC([techContext.md])
 
-The CREATIVE mode provides templates for breaking down complex components:
+    PC & SP & TC --> AC([activeContext.md])
 
-```markdown
-# Component: [Component Name]
+    AC --> P([progress.md])
+    AC --> Tasks([tasks.md])
 
-## Functional Requirements
-- [Requirement 1]
-- [Requirement 2]
+    %% Enhanced VAN Integration
+    VanSystem([VAN.SYSTEM]) --> SystemConfig([system-config.md])
+    VanSystem --> SystemBackups([system-backups/])
+    VanSystem --> SystemLogs([system-logs.md])
 
-## Technical Constraints
-- [Constraint 1]
-- [Constraint 2]
+    %% Rules Integration
+    VanRules([VAN.RULES]) --> CursorRules([.cursor/rules/])
+    VanRules --> MemoryRules([memory-bank/rules/])
+    VanRules --> RulesGuide([rules/changing_the_rules.md])
 
-## Integration Points
-- [Integration Point 1]
-- [Integration Point 2]
+    %% Integration with Memory Bank
+    SP --> VanSystem
+    SP --> VanRules
+    TC --> VanSystem
+    TC --> VanRules
+    Tasks --> VanSystem
+    Tasks --> VanRules
+
+    style PB fill:#f9d77e,stroke:#d9b95c,color:black
+    style PC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style SP fill:#a8d5ff,stroke:#88b5e0,color:black
+    style TC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style AC fill:#c5e8b7,stroke:#a5c897,color:black
+    style P fill:#f4b8c4,stroke:#d498a4,color:black
+    style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px,color:black
+    style VanSystem fill:#cc80ff,stroke:#9900ff,stroke-width:3px,color:white
+    style VanRules fill:#ffcc80,stroke:#ff9900,stroke-width:3px,color:white
+    style SystemConfig fill:#e6ccff,stroke:#b366ff,color:black
+    style SystemBackups fill:#e6ccff,stroke:#b366ff,color:black
+    style SystemLogs fill:#e6ccff,stroke:#b366ff,color:black
+    style CursorRules fill:#ffe6cc,stroke:#ffb366,color:black
+    style MemoryRules fill:#ffe6cc,stroke:#ffb366,color:black
+    style RulesGuide fill:#ffe6cc,stroke:#ffb366,color:black
 ```
 
-### 3. Option Exploration Templates
-
-For exploring design alternatives:
-
-```markdown
-# Design Option: [Option Name]
-
-## Core Approach
-[Brief description of approach]
-
-## Implementation Details
-[Key implementation considerations]
-
-## Preliminary Assessment
-- **Strengths**: [List strengths]
-- **Weaknesses**: [List weaknesses]
-- **Unknowns**: [List unknowns]
-```
-
-### 4. Trade-off Analysis Matrix
-
-For systematic comparison of options:
-
-```markdown
-# Trade-off Analysis
-
-| Criterion | Option A | Option B | Option C |
-|-----------|----------|----------|----------|
-| Performance | Rating | Rating | Rating |
-| Maintainability | Rating | Rating | Rating |
-| Scalability | Rating | Rating | Rating |
-| Complexity | Rating | Rating | Rating |
-| Risk | Rating | Rating | Rating |
-
-## Detailed Analysis
-[Detailed discussion of trade-offs]
-```
-
-### 5. Decision Documentation
-
-For capturing final decisions with rationales:
-
-```markdown
-# Design Decision: [Decision Name]
-
-## Selected Approach
-[Description of selected approach]
-
-## Rationale
-[Explanation of why this approach was selected]
-
-## Discarded Alternatives
-[Brief description of alternatives considered but not selected]
-
-## Implementation Guidance
-[Notes to guide implementation]
-```
-
-## Practical Example
-
-Here's a simplified example of how a CREATIVE mode session might look when designing a data caching system:
-
-### Step 1: Break Down the Problem
+## ENHANCED VERIFICATION COMMITMENT
 
 ```
-CREATIVE: Let's design a caching system for our application. First, let's break down the components and requirements.
-
-Component: Data Caching System
-
-Functional Requirements:
-- Store frequently accessed data to reduce database load
-- Provide configurable expiration policies
-- Handle cache invalidation
-- Support distributed caching across application instances
-
-Technical Constraints:
-- Must work with existing Redis infrastructure
-- Memory usage must not exceed 2GB
-- Cache operations must complete within 10ms
+┌─────────────────────────────────────────────────────┐
+│ I WILL follow the appropriate visual process map    │
+│ I WILL run all verification checkpoints             │
+│ I WILL maintain tasks.md as the single source of    │
+│ truth for all task tracking                         │
+│ I WILL use VAN.RULES for all rule management        │
+│ I WILL use VAN.SYSTEM for system administration     │
+│ I WILL follow the Cursor workaround process         │
+│ I WILL maintain system and rules integrity          │
+└─────────────────────────────────────────────────────┘
 ```
 
-### Step 2: Explore Options
+## USAGE EXAMPLES
 
+### Example 1: Integrate .cursor rules with Memory Bank
 ```
-Let's explore three design options:
+User: VAN.RULES.INTEGRATE
+Assistant: OK VAN.RULES
 
-Option A: Simple Redis Key-Value Implementation
-- Directly use Redis key-value store with string serialization
-- Simple TTL-based expiration
-- Manual invalidation through direct key deletion
-
-Option B: Redis Hash-based Hierarchical Cache
-- Organize data in Redis Hashes by entity type
-- Use Redis pub/sub for invalidation notifications
-- Implement hierarchical expiration policies
-
-Option C: Hybrid Local-Redis Caching
-- Local in-memory LRU cache as first level
-- Redis as second-level distributed cache
-- Background synchronization between levels
+Activating VAN.RULES integration submode...
+Reading changing_the_rules.md and rules_instructions.md...
+Analyzing .cursor/rules structure...
+Planning integration strategy...
+[Proceeds with integration process]
 ```
 
-### Step 3: Analyze Trade-offs
-
+### Example 2: Validate all rules
 ```
-Trade-off Analysis:
+User: VAN.RULES.VALIDATE
+Assistant: OK VAN.RULES
 
-| Criterion | Option A | Option B | Option C |
-|-----------|----------|----------|----------|
-| Implementation Complexity | Low | Medium | High |
-| Performance | Medium | Medium | High |
-| Memory Efficiency | Medium | High | Medium |
-| Scalability | Medium | High | High |
-| Maintenance | Low | Medium | High |
-
-Detailed Analysis:
-- Option A is simplest but provides limited features
-- Option B offers good balance of performance and features
-- Option C provides best performance but at cost of complexity
+Activating VAN.RULES validation submode...
+Scanning all .mdc files for issues...
+Checking file extensions, case sensitivity, broken links...
+Generating validation report...
+[Proceeds with validation process]
 ```
 
-### Step 4: Document Decision
-
+### Example 3: System health check
 ```
-Design Decision: Redis Hash-based Hierarchical Cache (Option B)
+User: VAN.SYSTEM.HEALTH
+Assistant: OK VAN.SYSTEM
 
-Rationale:
-- Provides good balance between performance and maintainability
-- Better memory efficiency than Option A due to Redis Hash structure
-- Less complexity than Option C while still meeting performance requirements
-- Better supports our distributed architecture
-
-Implementation Guidance:
-- Create CacheManager class with entity-specific APIs
-- Implement Redis pub/sub listeners for invalidation events
-- Add monitoring for cache hit/miss rates
+Activating VAN.SYSTEM health check submode...
+Checking Memory Bank integrity...
+Verifying file structure...
+Analyzing system performance...
+[Proceeds with health check process]
 ```
 
-## Core Methodology Alignment
+### Example 4: Standard VAN mode
+```
+User: VAN
+Assistant: OK VAN
 
-The structured approach in the above example mirrors Claude's "Think" tool methodology by:
+Activating standard VAN mode...
+Checking Memory Bank status...
+Determining task complexity...
+[Proceeds with standard VAN process]
+```
 
-1. **Breaking down** the caching problem into specific requirements and constraints
-2. **Exploring** multiple design options systematically
-3. **Analyzing trade-offs** using explicit criteria
-4. **Documenting decisions** with clear rationales
-5. **Providing implementation guidance** based on the decision
+This enhanced VAN mode provides comprehensive system administration capabilities while maintaining the existing 5-mode structure and adding powerful rules management functionality through intuitive submode commands.
+```
 
-## Impact on Development Process
+`custom_modes/van_instructions.md`
 
-By implementing these Claude-inspired methodologies, the CREATIVE mode provides several benefits:
+```md
+# UNIFIED VAN MODE SYSTEM - MAIN ENTRY POINT
 
-1. **Improved Decision Quality**: More systematic exploration of options
-2. **Better Decision Documentation**: Explicit capture of design rationales
-3. **Knowledge Preservation**: Design decisions are preserved for future reference
-4. **Reduced Design Bias**: Structured approach reduces cognitive biases
-5. **Clearer Implementation Guidance**: Implementation phase has clearer direction
+> **TL;DR:** I am an AI assistant implementing a structured Memory Bank system with unified VAN mode that includes task continuity, rules management, and system administration through hierarchical submode architecture.
 
-## Ongoing Refinement
+## 🧭 NAVIGATION
+- 🏠 **[Main Instructions](van_instructions.md)** ← You are here
+```
+read_file({
+  target_file: "van_core_workflow.md",
+  should_read_entire_file: true
+})
 
-As Claude's capabilities evolve, the CREATIVE mode's implementation of these methodologies will be refined to:
+read_file({
+  target_file: "van_rules_submode.md",
+  should_read_entire_file: true
+})
 
-- Incorporate advancements in structured thinking approaches
-- Improve the templates and frameworks for design decisions
-- Enhance integration with other Memory Bank modes
-- Optimize the balance between structure and flexibility
-
-The goal is to maintain the core methodology while continually improving its practical implementation within the Memory Bank ecosystem.
+read_file({
+  target_file: "van_system_submode.md",
+  should_read_entire_file: true
+})
+```
+- 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
 
 ---
 
-*Note: This document describes how Memory Bank v0.6-beta implements concepts similar to Claude's "Think" tool methodology. The implementation will continue to evolve as both systems mature.* 
-```
+## 🎯 UNIFIED VAN MODE COMMANDS
 
-`MEMORY_BANK_OPTIMIZATIONS.md`
+### Core VAN Commands
+- **`VAN`** - Standard VAN mode with task continuity (initialization, complexity determination, migration processing)
 
-```md
-# Memory Bank System Optimizations
+### VAN.RULES Submode Commands
+- **`VAN.RULES`** - Activate rules management submode
+- **`VAN.RULES.INTEGRATE`** - Integrate .cursor rules with Memory Bank
+- **`VAN.RULES.MODIFY`** - Modify existing rules using Cursor workaround
+- **`VAN.RULES.CREATE`** - Create new custom rules
+- **`VAN.RULES.VALIDATE`** - Validate all rules for correctness
+- **`VAN.RULES.STATUS`** - Check current rules integration status
 
-This document presents a comprehensive overview of the optimizations implemented to enhance the Memory Bank system's token efficiency, context management, and overall performance.
-
-## 🚀 Core Optimizations
-
-### 1. Hierarchical Rule Loading System
-
-The hierarchical rule loading system significantly reduces token usage by:
-
-- Loading only essential rules during initialization
-- Caching shared rules across modes
-- Lazy-loading specialized rules only when needed
-- Implementing complexity-based rule selection
-
-**File**: [.cursor/rules/isolation_rules/Core/hierarchical-rule-loading.mdc](/.cursor/rules/isolation_rules/Core/hierarchical-rule-loading.mdc)
-
-### 2. Progressive Creative Phase Documentation
-
-The creative phase has been optimized with a progressive documentation approach:
-
-- Focused, concise templates for initial documentation
-- Detailed analysis available on demand
-- Tabular format for efficient comparison of options
-- Complexity-appropriate documentation scaling
-
-**File**: [.cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc](/.cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc)
-
-### 3. Optimized Mode Transitions
-
-Mode transitions now use a unified context transfer protocol:
-
-- Standardized transition documents
-- Selective context preservation
-- Rule caching during transitions
-- Efficient handoff between modes
-
-**File**: [.cursor/rules/isolation_rules/Core/mode-transition-optimization.mdc](/.cursor/rules/isolation_rules/Core/mode-transition-optimization.mdc)
-
-### 4. Level-Specific Workflow Optimization
-
-Each complexity level has been optimized:
-
-- Level 1: Ultra-compact templates for quick fixes
-- Level 2-4: Scaled documentation based on complexity
-- Consolidated memory bank updates
-- Streamlined verification processes
-
-**Example File**: [.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc](/.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc)
-
-### 5. Optimization Integration
-
-Central coordination of all optimizations:
-
-- Dependency management between components
-- Configuration system for fine-tuning
-- Monitoring and metrics for optimization
-
-**File**: [.cursor/rules/isolation_rules/Core/optimization-integration.mdc](/.cursor/rules/isolation_rules/Core/optimization-integration.mdc)
-
-## 📂 All Files Created or Modified
-
-### Core System
-
-1. [/.cursor/rules/isolation_rules/main-optimized.mdc](/.cursor/rules/isolation_rules/main-optimized.mdc)
-   - New optimized main rule file
-   - Implements adaptive complexity model
-   - Integrates all optimizations
-
-2. [/.cursor/rules/isolation_rules/Core/hierarchical-rule-loading.mdc](/.cursor/rules/isolation_rules/Core/hierarchical-rule-loading.mdc)
-   - New hierarchical rule loading system
-   - Implements rule caching and lazy loading
-   - Significant token reduction
-
-3. [/.cursor/rules/isolation_rules/Core/mode-transition-optimization.mdc](/.cursor/rules/isolation_rules/Core/mode-transition-optimization.mdc)
-   - New optimized mode transition protocol
-   - Preserves context between modes
-   - Reduces transition overhead
-
-4. [/.cursor/rules/isolation_rules/Core/optimization-integration.mdc](/.cursor/rules/isolation_rules/Core/optimization-integration.mdc)
-   - Coordinates all optimization components
-   - Manages dependencies between optimizations
-   - Provides monitoring and metrics
-
-### Level-Specific Optimizations
-
-5. [/.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc](/.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc)
-   - Streamlined workflow for quick bug fixes
-   - Ultra-compact documentation templates
-   - Consolidated memory bank updates
-
-### Phase-Specific Optimizations
-
-6. [/.cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc](/.cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc)
-   - Progressive documentation approach
-   - Token-efficient templates
-   - Complexity-based scaling
-
-## 💡 Key Innovations
-
-1. **Hierarchical Rule Structure**
-   - Organized rules into core, common, mode-specific, and specialized
-   - Implemented rule dependency tracking
-   - Created caching system for frequently used rules
-
-2. **Progressive Documentation**
-   - Created concise initial templates
-   - Implemented "detail on demand" approach
-   - Used visual indicators and compact formats
-
-3. **Unified Context Transfer**
-   - Standardized context preservation between modes
-   - Created efficient transition documents
-   - Implemented selective context updating
-
-4. **Complexity-Based Scaling**
-   - Adapted documentation requirements to task complexity
-   - Created level-appropriate templates
-   - Implemented streamlined workflows for simpler tasks
-
-## 🔄 Workflow Comparison
-
-### Original Workflow
-1. Load all rules for current mode
-2. Process according to mode requirements
-3. Complete documentation per template
-4. Switch to next mode with minimal context preservation
-
-### Optimized Workflow
-1. Load only essential rules initially
-2. Load specialized rules as needed
-3. Use progressive documentation appropriate to complexity
-4. Preserve critical context during mode transitions
-5. Use differential updates for memory bank files
-
-## 🌟 Benefits Beyond Token Efficiency
-
-1. **Improved User Experience**
-   - Faster responses due to reduced token usage
-   - More consistent context preservation
-   - More efficient workflows
-
-2. **Enhanced Flexibility**
-   - Better adaptation to different task complexities
-   - More scalable architecture
-   - Configurable optimization settings
-
-3. **Future-Proofing**
-   - More extensible architecture
-   - Better monitoring capabilities
-   - Easier to add new optimizations
-
-## 🚀 Usage Instructions
-
-To use the optimized system:
-
-1. Replace the existing main.mdc with main-optimized.mdc
-2. Add the new optimization files to their respective directories
-3. The system will automatically use the optimized components
-4. No additional configuration required
-
-## 🧪 Verification
-
-The optimizations have been designed to maintain full compatibility with the existing Memory Bank system. All functionality remains intact while significantly improving token efficiency.
-
-## 🔮 Future Optimization Opportunities
-
-1. **Dynamic Template Generation**
-   - Generate templates on-the-fly based on task characteristics
-   - Further reduce boilerplate content
-
-2. **Automatic Context Summarization**
-   - Intelligently compress context for long-running tasks
-   - Prioritize most relevant context information
-
-3. **Cross-Task Knowledge Preservation**
-   - Maintain key learnings across different tasks
-   - Build a knowledge base of common solutions
-
-4. **Adaptive Rule Partitioning**
-   - Further divide rule files into smaller, more targeted segments
-   - Enable more granular loading of rule components
+### VAN.SYSTEM Submode Commands
+- **`VAN.SYSTEM`** - Activate system administration submode
+- **`VAN.SYSTEM.OPTIMIZE`** - Optimize Memory Bank performance
+- **`VAN.SYSTEM.BACKUP`** - Backup Memory Bank state
+- **`VAN.SYSTEM.RESTORE`** - Restore Memory Bank from backup
+- **`VAN.SYSTEM.HEALTH`** - Check system health and diagnostics
 
 ---
 
-These optimizations maintain all the structured development benefits of the original Memory Bank system while significantly improving its efficiency and scalability.
+## 🔄 UNIFIED COMMAND PROCESSING FLOW
+
+When user sends any VAN command, I will:
+
+1. **Immediate Response**: Respond with "OK [COMMAND]" (e.g., "OK VAN", "OK VAN.RULES", "OK VAN.SYSTEM")
+
+2. **Command Routing**: Route to appropriate processing flow:
+   - `VAN` → Standard VAN with task continuity
+   - `VAN.RULES.*` → Rules management flow
+   - `VAN.SYSTEM.*` → System administration flow
+
+3. **Load Appropriate Rules**: Load relevant rule maps based on command type:
+
+### Standard VAN Mode Rules Loading
+```
+fetch_rules([
+  "isolation_rules/visual-maps/van_mode_split/van-mode-map",
+  "isolation_rules/Core/complexity-decision-tree",
+  "isolation_rules/Core/file-verification"
+])
 ```
 
-`memory_bank_upgrade_guide.md`
-
-```md
-# Memory Bank System Upgrade: From Monolithic to Modular
-
-## Introduction
-
-I'm excited to introduce a significant upgrade to the Memory Bank system – evolving from a monolithic all-in-one approach to a modular, graph-based system that integrates with Cursor's custom modes. This document explains the reasons behind this transition, its benefits, and how to get the most out of the new system.
-
-```mermaid
-graph TD
-    Old["Old System<br>Monolithic Approach"] --> New["New System<br>Modular JIT Architecture"]
-    
-    Old --- OldFeatures["• Single file structure<br>• All rules loaded at once<br>• Fixed workflow"]
-    New --- NewFeatures["• Mode-specific rules<br>• Just-in-time loading<br>• Visual process maps<br>• Cursor custom modes integration"]
-    
-    style Old fill:#f8d486,stroke:#e8b84d
-    style New fill:#4da6ff,stroke:#0066cc,color:white
-    style OldFeatures fill:#ffe6cc,stroke:#ffa64d
-    style NewFeatures fill:#cce6ff,stroke:#80bfff
+### VAN.RULES Mode Rules Loading
+```
+fetch_rules([
+  "isolation_rules/CustomWorkflow/git-workflow/branch-management",
+  "isolation_rules/CustomWorkflow/implementation/dependency-checking",
+  "isolation_rules/Core/hierarchical-rule-loading"
+])
 ```
 
-## Why I'm Upgrading
-
-The old Memory Bank system served well, providing a structured approach to task management with its adaptive complexity levels and comprehensive documentation. However, as projects grew in complexity, I identified several limitations:
-
-1. **Context Inefficiency**: Loading all rules at once regardless of relevance
-2. **Limited Visual Guidance**: Text-heavy instructions without visual process maps
-3. **Token Waste**: Consuming context window with irrelevant rules
-4. **One-Size-Fits-All Approach**: Less tailored to specific development phases
-5. **Scalability Challenges**: Difficulty in maintaining a growing single-file system
-
-While the new system offers significant advantages in efficiency and scalability, I acknowledge it does introduce a steeper learning curve. This trade-off is intentional – the increased initial complexity enables more powerful capabilities, better organization, and improved long-term development outcomes for complex projects.
-
-## The New Isolation-Focused Architecture
-
-The new system addresses these limitations through a modular, Just-In-Time (JIT) architecture that loads only the rules you need when you need them.
-
-```mermaid
-graph TD
-    Command["User Mode Command"] --> ModeSwitch["Mode Switch"]
-    ModeSwitch --> LoadRules["Load Only<br>Relevant Rules"]
-    LoadRules --> ExecuteProcess["Execute Mode-Specific<br>Process"]
-    ExecuteProcess --> UpdateMemory["Update<br>Memory Bank"]
-    UpdateMemory --> NextMode["Transition to<br>Next Mode"]
-    
-    style Command fill:#f8d486,stroke:#e8b84d
-    style ModeSwitch fill:#d971ff,stroke:#a33bc2,color:white
-    style LoadRules fill:#4da6ff,stroke:#0066cc,color:white
-    style ExecuteProcess fill:#4dbb5f,stroke:#36873f,color:white
-    style UpdateMemory fill:#ffa64d,stroke:#cc7a30,color:white
-    style NextMode fill:#ff5555,stroke:#cc0000,color:white
+### VAN.SYSTEM Mode Rules Loading
+```
+fetch_rules([
+  "isolation_rules/Core/optimization-integration",
+  "isolation_rules/Core/platform-awareness",
+  "isolation_rules/CustomWorkflow/debugging/systematic-debugging"
+])
 ```
 
-Importantly, the new system preserves the foundational 4-level complexity scale from the original system. This scale (Level 1: Quick Bug Fix, Level 2: Simple Enhancement, Level 3: Intermediate Feature, Level 4: Complex System) remains central to determining workflow paths and documentation requirements, ensuring continuity for users familiar with the original approach.
+4. **Execute Process**: Execute the appropriate process following the loaded rules
 
-### Key Features of the New System
+5. **Update Memory Bank**: Update Memory Bank with results and status
 
-1. **Mode-Specific Visual Maps**: Clear visual representations for each development phase
-2. **Just-In-Time Rule Loading**: Load only the rules needed for your current task
-3. **Visual Decision Trees**: Guided workflows with clear checkpoints
-4. **Technical Validation**: Dedicated QA processes to verify implementation readiness
-5. **Platform-Aware Commands**: Automatically adapts commands to your operating system
-
-### Graph-Based Efficiency
-
-A fundamental enabler of the new system's capabilities is its graph-based architecture:
-
-- **Optimized Path Navigation**: The system uses directed graphs to navigate complex decision trees with minimal overhead
-- **Contextual Relationships**: Graph structures explicitly model relationships between development phases and components, enabling smarter transitions
-- **Resource Optimization**: Each node in the graph loads only the resources needed for that specific step
-- **Parallel Processing Potential**: The graph structure makes it easier to identify components that can be addressed in parallel
-
-```mermaid
-graph TD
-    Start[Entry Point] --> A[Decision Node]
-    A -->|Condition 1| B[Process B]
-    A -->|Condition 2| C[Process C]
-    B --> D[Next Step]
-    C --> D
-    
-    style Start fill:#f9d77e,stroke:#d9b95c
-    style A fill:#a8d5ff,stroke:#88b5e0
-    style B fill:#c5e8b7,stroke:#a5c897
-    style C fill:#ffcccc,stroke:#ff9999
-    style D fill:#d9b3ff,stroke:#b366ff
-```
-
-**Before**: Linear execution paths with redundant rule evaluations.
-
-**After**: Optimized traversal through decision points with clear conditionals and merge points.
-
-This graph-based approach is particularly effective when working with large, complex projects where different components have varied requirements and dependencies. The system can efficiently navigate these complexities without overwhelming the context window.
-
-### CREATIVE Mode and Claude's "Think" Tool
-
-One notable aspect of the new system is that the CREATIVE mode is conceptually based on Anthropic's Claude "Think" tool methodology, as described in their [engineering blog](https://www.anthropic.com/engineering/claude-think-tool). This approach has been enhanced and integrated into the Memory Bank workflow:
-
-- **Structured Exploration**: The CREATIVE mode guides users through systematic exploration of design options
-- **Explicit Reasoning**: Requires documentation of pros and cons for different approaches
-- **Component Breakdown**: Helps break complex problems into manageable components
-- **Decision Documentation**: Creates formal records of design decisions with clear rationales
-- **Continuous Refinement**: The implementation will continue to evolve as Claude's capabilities advance
-
-This methodology has proven particularly effective for complex design decisions, ensuring that all options are thoroughly considered before implementation begins.
-
-## Integration with Cursor Custom Modes
-
-The new system takes full advantage of Cursor's custom modes feature, which allows for specialized AI behaviors for different tasks.
-
-### What Are Cursor Custom Modes?
-
-Cursor custom modes allow you to configure different AI behaviors with specific tools and custom instructions. The new Memory Bank system creates specialized modes for each development phase:
-
-```mermaid
-graph LR
-    subgraph "Memory Bank Modes"
-        VAN["VAN MODE<br>Initialization"]
-        PLAN["PLAN MODE<br>Task Planning"]
-        CREATIVE["CREATIVE MODE<br>Design Decisions"]
-        IMPLEMENT["IMPLEMENT MODE<br>Code Implementation"]
-        QA["QA MODE<br>Validation"]
-    end
-    
-    VAN --> PLAN
-    PLAN --> CREATIVE
-    CREATIVE --> IMPLEMENT
-    IMPLEMENT --> QA
-    
-    style VAN fill:#80bfff,stroke:#4da6ff
-    style PLAN fill:#80ffaa,stroke:#4dbb5f
-    style CREATIVE fill:#d9b3ff,stroke:#b366ff
-    style IMPLEMENT fill:#ffcc80,stroke:#ffaa33
-    style QA fill:#ff8080,stroke:#ff5555
-```
-
-Each mode loads only its required rule set, optimizing context usage and providing specialized guidance:
-
-| Mode | Purpose | Key Features |
-|------|---------|-------------|
-| VAN | Initialization | Platform detection, file verification, complexity determination |
-| PLAN | Task Planning | Requirements analysis, component identification, implementation strategy |
-| CREATIVE | Design Decisions | Multiple options exploration, pros/cons analysis, design recommendations |
-| IMPLEMENT | Code Implementation | Systematic building, command execution, testing |
-| QA | Technical Validation | Dependency verification, configuration validation, build testing |
-
-### Beyond Cursor's Standard Custom Modes Implementation
-
-While Cursor's [documentation on custom modes](https://docs.cursor.com/chat/custom-modes) describes them primarily as standalone configurations with adjusted prompts and tool selections, Memory Bank significantly extends this concept:
-
-#### Standard Cursor Custom Modes Approach
-
-According to Cursor's documentation, custom modes typically consist of:
-- Setting a name, icon, and shortcut
-- Enabling or disabling specific tools
-- Adding custom instructions (prompts)
-
-Their example modes (Teach, Refactor, Plan, etc.) function as isolated configurations without inherent connections between them. Each mode is essentially a separate AI personality with specific instructions.
-
-#### Memory Bank's Enhanced Custom Modes Approach
-
-```mermaid
-graph TD
-    subgraph "Cursor's Standard Approach"
-        M1["Mode 1<br>Static Instructions"]
-        M2["Mode 2<br>Static Instructions"]
-        M3["Mode 3<br>Static Instructions"]
-    end
-    
-    subgraph "Memory Bank's Approach"
-        MB1["VAN Mode<br>Dynamic Rules"]
-        MB2["PLAN Mode<br>Dynamic Rules"]
-        MB3["CREATIVE Mode<br>Dynamic Rules"]
-        MB4["IMPLEMENT Mode<br>Dynamic Rules"]
-        MB5["QA Mode<br>Dynamic Rules"]
-        
-        MB1 -->|"Passes Context"| MB2
-        MB2 -->|"Passes Context"| MB3
-        MB3 -->|"Passes Context"| MB4
-        MB4 -->|"Passes Context"| MB5
-        
-        MemBank["Memory Bank Files<br>(Shared State)"]
-        MB1 <-->|"Read/Write"| MemBank
-        MB2 <-->|"Read/Write"| MemBank
-        MB3 <-->|"Read/Write"| MemBank
-        MB4 <-->|"Read/Write"| MemBank
-        MB5 <-->|"Read/Write"| MemBank
-    end
-    
-    style M1 fill:#f8d486,stroke:#e8b84d
-    style M2 fill:#f8d486,stroke:#e8b84d
-    style M3 fill:#f8d486,stroke:#e8b84d
-    
-    style MB1 fill:#80bfff,stroke:#4da6ff
-    style MB2 fill:#80ffaa,stroke:#4dbb5f
-    style MB3 fill:#d9b3ff,stroke:#b366ff
-    style MB4 fill:#ffcc80,stroke:#ffaa33
-    style MB5 fill:#ff8080,stroke:#ff5555
-    style MemBank fill:#f9d77e,stroke:#d9b95c,stroke-width:3px
-```
-
-Memory Bank transforms custom modes into a comprehensive, interconnected system:
-
-1. **Graph-Based Architecture**: 
-   - Modes represent nodes in a development workflow with explicit transitions
-   - Each mode understands its place in the overall development process
-   - Visual process maps guide users through the appropriate sequence
-
-2. **Workflow Integration**: 
-   - Modes form a cohesive development process (VAN → PLAN → CREATIVE → IMPLEMENT → QA)
-   - Each mode is aware of preceding and subsequent modes
-   - Transitions between modes are formalized with specific entry/exit criteria
-
-3. **Shared Memory**: 
-   - Persistent state maintained across mode transitions via Memory Bank files
-   - Tasks.md serves as the central source of truth across all modes
-   - Each mode contributes specific types of information to the shared knowledge base
-
-4. **Just-In-Time Rule Loading**: 
-   - Each mode dynamically loads only its specific rule set
-   - Rules are specialized for the current development phase
-   - Context window is preserved for productive work
-   - Rules can adapt based on project complexity level
-
-5. **Visual Process Maps**: 
-   - Each mode contains embedded Mermaid diagrams
-   - Visual guidance for decision points and workflow options
-   - Clear checkpoints to track progress within each phase
-
-6. **Complexity-Adaptive Behavior**: 
-   - Modes adjust their behavior based on the complexity level determined during initialization
-   - Simpler projects follow streamlined processes
-   - Complex projects receive more comprehensive guidance
-
-### Benefits of This Approach
-
-This enhanced approach to custom modes offers several advantages:
-
-1. **Improved Context Utilization**: By loading only relevant rules, more context is available for actual development work
-2. **Coherent Development Process**: Modes work together as a unified system rather than disconnected tools
-3. **Phase-Appropriate Guidance**: Each development phase receives specialized guidance optimized for its needs
-4. **Knowledge Persistence**: Important information is preserved across mode transitions
-5. **Reduced Cognitive Overhead**: Developers can focus on the current phase without being distracted by irrelevant guidance
-
-### Potential Future Enhancements
-
-If this approach proves successful through testing, it could potentially inspire several enhancements to how custom modes are used:
-
-1. **Formalized Mode Transitions**: More explicit handoffs between development phases
-2. **Enhanced Visual Guidance**: More sophisticated process maps and decision trees
-3. **Deeper Integration with Memory Bank**: More specialized document types for different development phases
-4. **Custom Mode Templates**: Pre-configured mode sequences for different project types
-5. **Team Collaboration**: Coordinated use of modes across multiple team members
-
-While this implementation introduces more complexity in setup compared to standard custom modes, it offers significantly more powerful capabilities for structured development processes. The system transforms custom modes from isolated AI behaviors into components of a comprehensive development methodology.
-
-## Real-World Benefits: Evidence from Projects
-
-My testing with real-world projects (including a complex Todo application) demonstrated significant benefits from the new system:
-
-1. **Enforced Development Discipline**: Mode switching created natural phase separations, reducing the tendency to jump directly to implementation
-2. **Comprehensive Documentation**: Each mode produced specialized documentation with explicit design decisions
-3. **Systematic Development**: Components were built according to plan in logical dependency order
-4. **Flexibility When Needed**: Hybrid approaches (like QA in IMPLEMENT) worked effectively without losing structure
-
-From the analysis document:
-
-> "I observed tangible differences in development approach between modes. Each mode successfully optimized for its specific phase of development. The quality of the final application benefited from this structured approach."
-
-## Comparison: Old vs. New System
-
-| Aspect | Old System | New System |
-|--------|------------|------------|
-| **Structure** | Single file | Multiple specialized files |
-| **Context Usage** | Loads everything at once | Just-in-time loading |
-| **Guidance** | Text-based instructions | Visual process maps + text |
-| **Decision Making** | Basic decision points | Comprehensive decision trees |
-| **Technical Validation** | Basic verification | Dedicated QA processes |
-| **Platform Awareness** | Limited | Comprehensive adaptation |
-| **Memory Bank** | Same core files | Same core files with improved organization |
-| **Documentation** | Standardized formats | Mode-specific specialized formats |
-| **Complexity Levels** | 4-level scale | Same 4-level scale with enhanced process flows |
-
-## When to Use Each System
-
-```mermaid
-graph TD
-    Start["Which system<br>should I use?"] --> Question{"What's your<br>experience level?"}
-    
-    Question -->|"Beginner"| Old["Start with Old System<br>• Simpler to understand<br>• All in one place<br>• Easier learning curve"]
-    Question -->|"Intermediate/<br>Advanced"| New["Use New System<br>• More powerful capabilities<br>• Better for complex projects<br>• Optimized context usage"]
-    
-    Old --> Progress["As you gain experience..."]
-    Progress --> New
-    
-    style Start fill:#f8d486,stroke:#e8b84d
-    style Question fill:#4da6ff,stroke:#0066cc,color:white
-    style Old fill:#4dbb5f,stroke:#36873f,color:white
-    style New fill:#ffa64d,stroke:#cc7a30,color:white
-    style Progress fill:#d9b3ff,stroke:#b366ff
-```
-
-### Guidelines for Trying the New System
-
-- **New Projects**: The new system works best when starting fresh projects rather than converting existing ones
-- **Testing Approach**: If you want to try it with an existing project, make a backup first and experiment in a safe environment
-- **No Formal Migration Path**: I haven't developed a formal migration path from old to new systems - it's currently designed for new implementations
-- **Learning Projects**: Use the old system for simpler projects if you're still getting comfortable with the Memory Bank concept
-- **Complex Projects**: The new system shines with multi-component projects requiring careful planning
-
-## Getting Started with the New System
-
-### Basic Commands
-
-To activate different modes in the new system:
-
-```
-VAN - Initialize project and determine complexity
-PLAN - Create detailed implementation plan
-CREATIVE - Explore design options for complex components
-IMPLEMENT - Systematically build planned components
-QA - Validate technical implementation
-```
-
-### Example Workflow
-
-1. Begin with `VAN` to initialize the project and determine complexity
-2. For Level 2-4 tasks, transition to `PLAN` to create a comprehensive implementation plan
-3. For components requiring design decisions, use `CREATIVE` to explore options
-4. Implement the planned changes with `IMPLEMENT`
-5. Validate the implementation with `QA` before completing
-
-The complexity level (1-4) determined during the VAN mode will significantly influence your path through the workflow:
-- **Level 1 tasks** may proceed directly to IMPLEMENT after VAN
-- **Level 2-4 tasks** follow the full workflow with increasingly comprehensive planning and documentation
-
-## Deep Dive: The Technical Architecture
-
-For those interested in the technical details, the new system uses a graph-based approach with isolated rule files loaded just-in-time:
-
-```mermaid
-graph TD
-    Main["main.mdc<br>Core Rules"] --> Platform["platform-awareness.mdc<br>OS Detection"]
-    Main --> FileV["file-verification.mdc<br>File Structure"]
-    Main --> ComplexityDT["complexity-decision-tree.mdc<br>Task Classification"]
-    
-    subgraph "Mode-Specific Maps"
-        VanMap["van-mode-map.mdc"]
-        PlanMap["plan-mode-map.mdc"]
-        CreativeMap["creative-mode-map.mdc"]
-        ImplementMap["implement-mode-map.mdc"]
-        QAMap["qa-mode-map.mdc"]
-    end
-    
-    Main --> VanMap & PlanMap & CreativeMap & ImplementMap & QAMap
-    
-    VanMap --> VanFiles["Platform Detection<br>File Verification<br>Complexity Determination"]
-    PlanMap --> PlanFiles["Task Tracking<br>Planning Process<br>Component Identification"]
-    CreativeMap --> CreativeFiles["Design Patterns<br>Creative Phase Enforcement<br>Options Analysis"]
-    ImplementMap --> ImplementFiles["Command Execution<br>Implementation Guide<br>Testing Strategy"]
-    QAMap --> QAFiles["Dependency Verification<br>Configuration Validation<br>Build Testing"]
-    
-    style Main fill:#f8d486,stroke:#e8b84d,stroke-width:2px
-    style VanMap fill:#80bfff,stroke:#4da6ff,stroke-width:2px
-    style PlanMap fill:#80ffaa,stroke:#4dbb5f,stroke-width:2px
-    style CreativeMap fill:#d9b3ff,stroke:#b366ff,stroke-width:2px
-    style ImplementMap fill:#ffcc80,stroke:#ffaa33,stroke-width:2px
-    style QAMap fill:#ff8080,stroke:#ff5555,stroke-width:2px
-```
-
-### Memory Bank Continuity
-
-While the rules are modularized, the Memory Bank files maintain continuity across modes:
-
-```mermaid
-graph LR
-    subgraph "Memory Bank Files"
-        Tasks["tasks.md<br>Source of Truth"]
-        Active["activeContext.md<br>Current Focus"]
-        Progress["progress.md<br>Implementation Status"]
-        Creative["creative-*.md<br>Design Decisions"]
-    end
-    
-    VAN["VAN MODE"] -.-> Tasks & Active
-    PLAN["PLAN MODE"] -.-> Tasks & Active
-    CREATIVE["CREATIVE MODE"] -.-> Tasks & Creative
-    IMPLEMENT["IMPLEMENT MODE"] -.-> Tasks & Progress
-    QA["QA MODE"] -.-> Tasks & Progress
-    
-    style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px
-    style Active fill:#a8d5ff,stroke:#88b5e0
-    style Progress fill:#c5e8b7,stroke:#a5c897
-    style Creative fill:#f4b8c4,stroke:#d498a4
-    
-    style VAN fill:#80bfff,stroke:#4da6ff
-    style PLAN fill:#80ffaa,stroke:#4dbb5f
-    style CREATIVE fill:#d9b3ff,stroke:#b366ff
-    style IMPLEMENT fill:#ffcc80,stroke:#ffaa33
-    style QA fill:#ff8080,stroke:#ff5555
-```
-
-## Practical Example: Todo App Development
-
-Here's how I used the new system to develop a complex Todo application:
-
-1. **VAN Mode**: Analyzed requirements, set up project structure, determined Level 3 complexity
-2. **PLAN Mode**: Created comprehensive component hierarchy, identified dependencies, flagged components for creative exploration
-3. **CREATIVE Mode**: Explored multiple options for state management and filtering implementation, documented pros/cons
-4. **IMPLEMENT Mode**: Built components in logical sequence following the plan, with integrated QA validation
-5. **Results**: More disciplined development process, better documentation, and higher quality final product
-
-## Future Plans and Development Roadmap
-
-This Memory Bank system is a personal hobby project that brings me joy to build and develop. I plan to continue evolving it based on user needs and my own experiments. Here are some areas I'm exploring for future development:
-
-### Near-Term Improvements
-
-1. **Further Optimization of JIT Rules**: Refining the rule loading system to provide even more efficient context utilization and faster response times
-2. **User Feedback Integration**: Establishing a structured feedback loop to gather insights from early adopters and refine the system based on real-world usage patterns
-3. **PRD Mode Development**: Creating a dedicated Product Requirements Document mode that leverages Cursor's advanced AI models to help users construct comprehensive product specifications within the same environment as their development work
-
-### Additional Possibilities Under Consideration
-
-4. **Team Collaboration Features**: Enhancing Memory Bank to support multiple users working simultaneously with shared context and coordinated mode transitions
-5. **Customizable Modes**: Providing tools for users to create their own specialized modes beyond the current set, with custom rule configurations and process maps
-6. **Cross-Project Memory**: Enabling the Memory Bank system to maintain relevant context across different projects, improving knowledge transfer and consistency
-7. **Analytics Dashboard**: Developing tools to analyze development patterns, mode usage, and project progression to provide insights and suggest process improvements
-8. **Integration with Version Control**: Creating deeper connections between Memory Bank documentation and code version history for better traceability
-
-### Development Philosophy
-
-As I develop these new features, I remain committed to these core principles:
-- Creating enjoyable, powerful tools for structured development
-- Focusing on new implementations rather than migration paths
-- Balancing power and complexity with appropriate learning resources
-- Preserving the foundational 4-level complexity scale that has proven effective
-
-I welcome community input on which of these potential directions would be most valuable to prioritize in the development roadmap.
-
-## Conclusion: The Path Forward
-
-The new isolation-focused Memory Bank system represents a significant evolution in my approach to structured development. While it introduces a steeper learning curve, the benefits in terms of efficiency, guidance, and scalability make it worthwhile for complex projects.
-
-My recommendations:
-- **Beginners**: Start with the old system until comfortable with the core concepts
-- **New Projects**: Use the new system primarily for new projects rather than trying to migrate existing ones
-- **Testing**: If you want to try the new system with an existing project, make a backup first and experiment in a safe environment
-- **Advanced Users**: Consider the new system for substantial development work on complex projects
-
-This is an experimental system that I've created as a personal hobby project. I encourage you to try it, provide feedback, and adapt it to your own workflows. By leveraging Cursor's custom modes and visual process maps, the new Memory Bank system provides a powerful framework for disciplined, systematic development that scales with project complexity.
+6. **Verification**: Verify process completion and suggest next steps
 
 ---
 
-## Resources
-
-- [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
-- Memory Bank Reference Files (in .cursor/rules/isolation_rules/)
-- Mode-specific instruction files (van_instructions.md, plan_instructions.md, etc.)
-- [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
-
-## The Need for Change
-
-The previous Memory Bank implementation had several limitations:
-
-- **Limited Context Capacity**: All rules and commands were loaded into a single context, reducing the available tokens for productive work
-- **Fixed Workflow**: Little flexibility for adapting to different project complexities
-- **Redundant Rule Loading**: Even simple tasks loaded the full ruleset, inefficient use of context
-- **No Visual Guidance**: Difficult to understand the system's decision-making process
-- **Limited Platform Awareness**: Platform-specific commands required manual adaptation
-
-## Key Architectural Improvements
-
-The new Memory Bank system addresses these limitations through:
-
-![Architectural Changes](/path-to-diagram.png)
-
-### 1. Just-In-Time (JIT) Rule Loading
-
-Instead of loading all rules upfront, the system now:
-
-- Loads only the rules relevant to the current development phase
-- Uses visual maps to determine which rules to load at what time
-- Dynamically adjusts rule complexity based on task requirements
-- Preserves valuable context space for productive work
-
-```mermaid
-graph TD
-    subgraph "Old System"
-        OldMain[All Rules Loaded at Start]
-    end
-    
-    subgraph "New System"
-        Entry[Entry Point]
-        Core[Core Rules]
-        Phase1[Phase 1 Rules]
-        Phase2[Phase 2 Rules]
-        Phase3[Phase 3 Rules]
-        
-        Entry --> Core
-        Core --> Phase1
-        Core --> Phase2
-        Core --> Phase3
-    end
-    
-    style OldMain fill:#ffcccc,stroke:#ff9999
-    style Entry fill:#ccffcc,stroke:#99ff99
-    style Core fill:#ccffcc,stroke:#99ff99
-    style Phase1 fill:#ccffcc,stroke:#99ff99
-    style Phase2 fill:#ccffcc,stroke:#99ff99
-    style Phase3 fill:#ccffcc,stroke:#99ff99
-```
-
-**Before**: All 25+ rules were loaded at initialization, consuming approximately 70% of the available context.
-
-**After**: Only 3-7 rules are loaded at any given time, reducing context usage to approximately 15-20%.
-
-### 2. Graph-Based Efficiency
-
-The graph-based structure is a fundamental efficiency enabler in the new system:
-
-- **Optimized Path Navigation**: The system uses directed graphs to navigate complex decision trees with minimal overhead
-- **Contextual Relationships**: Graph structures explicitly model relationships between development phases and components, enabling smarter transitions
-- **Resource Optimization**: Each node in the graph loads only the resources needed for that specific step
-- **Parallel Processing Potential**: The graph structure makes it easier to identify components that can be addressed in parallel
-
-```mermaid
-graph TD
-    Start[Entry Point] --> A[Decision Node]
-    A -->|Condition 1| B[Process B]
-    A -->|Condition 2| C[Process C]
-    B --> D[Next Step]
-    C --> D
-    
-    style Start fill:#f9d77e,stroke:#d9b95c
-    style A fill:#a8d5ff,stroke:#88b5e0
-    style B fill:#c5e8b7,stroke:#a5c897
-    style C fill:#ffcccc,stroke:#ff9999
-    style D fill:#d9b3ff,stroke:#b366ff
-```
-
-**Before**: Linear execution paths with redundant rule evaluations.
-
-**After**: Optimized traversal through decision points with clear conditionals and merge points.
-
-### 3. Mode-Specific Visual Process Maps
-
-Each mode now has its own visual process map that:
-
-- Clearly illustrates the workflow for that specific development phase
-- Provides explicit decision points and conditional branches
-- Adapts to project complexity levels
-- Offers visual checkpoints to track progress
-
-```mermaid
-graph TD
-    Start[Start] --> Assess[Assess Project]
-    Assess --> Complexity{Complexity Level?}
-    Complexity -->|Simple| SimplePath[Simple Path]
-    Complexity -->|Complex| ComplexPath[Complex Path]
-    
-    style Start fill:#c5e8b7,stroke:#a5c897
-    style Assess fill:#a8d5ff,stroke:#88b5e0
-    style Complexity fill:#f9d77e,stroke:#d9b95c
-    style SimplePath fill:#f4b8c4,stroke:#d498a4
-    style ComplexPath fill:#f4b8c4,stroke:#d498a4
-```
-
-### 4. Technical Validation and Platform Awareness
-
-The system now includes:
-
-- **Automated Platform Detection**: Automatically adapts commands for Windows, MacOS, or Linux
-- **File Structure Verification**: Validates project structure before proceeding
-- **QA Checkpoints**: Dedicated technical validation phase with specific validation criteria
-- **More Accurate Command Generation**: Platform-specific commands with higher success rates 
-```
-
-`README.md`
-
-```md
-# Memory Bank System v0.7-beta
-
-A token-optimized, hierarchical task management system that integrates with Cursor custom modes for efficient development workflows.
-
-```mermaid
-graph TD
-    Main["Memory Bank System"] --> Modes["Custom Modes"]
-    Main --> Rules["Hierarchical Rule Loading"]
-    Main --> Visual["Visual Process Maps"]
-    Main --> Token["Token Optimization"]
-    
-    Modes --> VAN["VAN: Initialization"]
-    Modes --> PLAN["PLAN: Task Planning"]
-    Modes --> CREATIVE["CREATIVE: Design"]
-    Modes --> IMPLEMENT["IMPLEMENT: Building"]
-    Modes --> REFLECT["REFLECT: Review"]
-    Modes --> ARCHIVE["ARCHIVE: Documentation"]
-    
-    style Main fill:#4da6ff,stroke:#0066cc,color:white
-    style Modes fill:#f8d486,stroke:#e8b84d,color:black
-    style Rules fill:#80ffaa,stroke:#4dbb5f,color:black
-    style Visual fill:#d9b3ff,stroke:#b366ff,color:black
-    style Token fill:#ff9980,stroke:#ff5533,color:black
-```
-
-> **Personal Note**: Memory Bank is my personal hobby project that I develop for my own use in coding projects. As this is a personal project, I don't maintain an issues tracker or actively collect feedback. However, if you're using these rules and encounter issues, one of the great advantages is that you can ask the Cursor AI directly to modify or update the rules to better suit your specific workflow. The system is designed to be adaptable by the AI, allowing you to customize it for your own needs without requiring external support.
-
-## About Memory Bank
-
-Memory Bank is a personal project that provides a structured approach to development using specialized modes for different phases of the development process. It uses a hierarchical rule loading architecture that loads only the rules needed for each phase, optimizing token usage and providing tailored guidance.
-
-### Token-Optimized Architecture
-
-Version 0.7-beta introduces significant token optimization improvements:
-
-- **Hierarchical Rule Loading**: Only loads essential rules initially with specialized lazy-loading
-- **Progressive Documentation**: Implements concise templates that scale with task complexity
-- **Optimized Mode Transitions**: Preserves critical context efficiently between modes
-- **Level-Specific Workflows**: Adapts documentation requirements to task complexity
-
-See the [Memory Bank Optimizations](MEMORY_BANK_OPTIMIZATIONS.md) document for detailed information about all optimization approaches.
-
-### Beyond Basic Custom Modes
-
-While Cursor's documentation describes custom modes as primarily standalone configurations with basic prompts and tool selections, Memory Bank significantly extends this concept:
-
-- **Graph-Based Mode Integration**: Modes are interconnected nodes in a development workflow rather than isolated tools
-- **Workflow Progression**: Modes are designed to transition from one to another in a logical sequence (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
-- **Shared Memory**: Persistent state maintained across mode transitions via Memory Bank files
-- **Adaptive Behavior**: Each mode adjusts its recommendations based on project complexity
-- **Built-in QA Functions**: QA capabilities can be called from any mode for technical validation
-
-This approach transforms custom modes from simple AI personalities into components of a coordinated development system with specialized phases working together.
-
-### CREATIVE Mode and Claude's "Think" Tool
-
-The CREATIVE mode in Memory Bank is conceptually based on Anthropic's Claude "Think" tool methodology, as described in their [engineering blog](https://www.anthropic.com/engineering/claude-think-tool). The v0.7-beta implements an optimized version with:
-
-- Progressive documentation with tabular option comparison
-- "Detail-on-demand" approach that preserves token efficiency
-- Structured templates that scale with complexity level
-- Efficient context preservation for implementation phases
-
-For a detailed explanation of how Memory Bank implements these principles, see the [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md) document.
-
-## Key Features
-
-- **Hierarchical Rule Loading**: Load only the essential rules with specialized lazy-loading
-- **Progressive Documentation**: Concise templates that scale with task complexity
-- **Unified Context Transfer**: Efficient context preservation between modes
-- **Mode-Specific Visual Maps**: Clear visual representations for each development phase
-- **Level-Specific Workflows**: Adapted processes based on complexity (Levels 1-4)
-- **Platform-Aware Commands**: Automatically adapts commands to your operating system
-
-## Installation Instructions
-
-### Prerequisites
-
-- **Cursor Editor**: Version 0.48 or higher is required.
-- **Custom Modes**: Feature must be enabled in Cursor (Settings → Features → Chat → Custom modes).
-<img src="assets/open_custom_modes.png" alt="Opening Custom Modes Menu"/>
-
-- **AI Model**: Claude 4 Sonnet or Claude 4 Opus is recommended for best results, especially for CREATIVE mode's "Think" tool methodology.
-
-### Step 1: Get the Files
-
-Simply clone this repository into your project directory:
-
-```
-git clone https://github.com/vanzan01/cursor-memory-bank.git
-```
-
-#### Alternative (Manual)
-
-After extracting it from the ZIP file, follow the steps below.
-
-- Copy the `.cursor` and `custom_modes` folders to the project directory
-
-Note: other documents are not necessary for memory bank operation, they are explanatory documents. You can copy them to a folder like `memory_bank_documents`.
-
-### Step 2: Setting Up Custom Modes in Cursor
-
-**This is the most critical and challenging part of the setup.** You'll need to manually create six custom modes in Cursor and copy the instruction content from the provided files:
-
-#### How to Add a Custom Mode in Cursor
-
-1. Open Cursor and click on the mode selector in the chat panel
-2. Select "Add custom mode"
-<img src="assets/add_custom_mode.png" alt="Add Custom Mode"/>
-
-3. In the configuration screen:
-   - Enter the mode name (you can include emoji icons like 🔍, 📋, 🎨, ⚒️ by copy-pasting them at the beginning of the name)
-   - Select an icon from Cursor's limited predefined options
-   - Add a shortcut (optional)
-   - Check the required tools
-   - Click on **Advanced options**
-   - In the empty text box that appears at the bottom, paste the custom instruction content from the corresponding file
-
-#### Mode Configuration
-
-For each mode, configure as follows (If MCPs are showing, you can keep them on, they probably won't work):
-
-1. **VAN MODE** (Initialization)
-   - **Name**: 🔍 VAN
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/van_instructions.md`
-
-
-<img src="assets/van_mode_1.png" height="300" style="display: inline-block;"/> <img src="assets/van_mode_2.png" height="300" style="display: inline-block;"/>
-
-2. **PLAN MODE** (Task Planning)
-   - **Name**: 📋 PLAN
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/plan_instructions.md`
-
-<img src="assets/plan_mode_1.png" height="300"/> <img src="assets/plan_mode_2.png" height="300" style="display: inline-block;"/>
-
-3. **CREATIVE MODE** (Design Decisions)
-   - **Name**: 🎨 CREATIVE
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
-   - **Advanced options**: Paste from `custom_modes/creative_instructions.md`
-
-<img src="assets/creative_mode_1.png" height="300"/> <img src="assets/creative_mode_2.png" height="300" style="display: inline-block;"/>
-
-4. **IMPLEMENT MODE** (Code Implementation)
-   - **Name**: ⚒️ IMPLEMENT
-   - **Tools**: Enable all tools
-   - **Advanced options**: Paste from `custom_modes/implement_instructions.md`
-
-<img src="assets/implement_mode_1.png" height="300"/> <img src="assets/implement_mode_2.png" height="300" style="display: inline-block;"/>
-
-5. **REFLECT & ARHIVE MODE** (Review)
-   - **Name**: 🔍 REFLECT or ARCHIVE
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md`
-
-<img src="assets/reflect_mode_1.png" height="300"/> <img src="assets/reflect_mode_2.png" height="300" style="display: inline-block;"/>
-   
-
-> **Note**: REFLECT and ARCHIVE instructions are combined in a single file and mode to optimize for Cursor's character and custom mode limits  while maintaining functionality. Thanks to GitHub user @joshmac007 for implementing this optimization.
-
-For additional help on setting up custom modes in Cursor, refer to the [official Cursor documentation on custom modes](https://docs.cursor.com/chat/custom-modes).
-
-### QA Functionality
-
-QA is not a separate custom mode but rather a set of validation functions that can be called from any mode. You can invoke QA capabilities by typing "QA" in any mode when you need to perform technical validation. This approach provides flexibility to conduct verification at any point in the development process.
-
-## Basic Usage
-
-1. **Start with VAN Mode**:
-   - Switch to VAN mode in Cursor
-   - Type "VAN" to initiate the initialization process
-   - VAN will analyze your project structure and determine complexity
-
-2. **Follow the Workflow Based on Complexity**:
-   - **Level 1 tasks**: May proceed directly to IMPLEMENT after VAN
-   - **Level 2 tasks**: Simplified workflow (VAN → PLAN → IMPLEMENT → REFLECT)
-   - **Level 3-4 tasks**: Full workflow (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
-   - **At any point**: Type "QA" to perform technical validation
-
-
-<img src="assets/chat_van.png" height="50"/> <img src="assets/chat_plan.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_creative.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_reflect.png" height="50" style="display: inline-block;"/> <img src="assets/chat_archive.png" height="50" style="display: inline-block;"/>
-
-3. **Mode-Specific Commands**:
-   ```
-   VAN - Initialize project and determine complexity
-   PLAN - Create detailed implementation plan
-   CREATIVE - Explore design options for complex components
-   IMPLEMENT - Systematically build planned components
-   REFLECT - Review and document lessons learned
-   ARCHIVE - Create comprehensive documentation
-   QA - Validate technical implementation (can be called from any mode)
-   ```
-
-4. **Starting to work with your project**:
-   
-After successfully installing Memory Bank...
-
-## Core Files and Their Purposes
-
-```mermaid
-graph LR
-    subgraph "Memory Bank Files"
-        Tasks["tasks.md<br>Source of Truth"]
-        Active["activeContext.md<br>Current Focus"]
-        Progress["progress.md<br>Implementation Status"]
-        Creative["creative-*.md<br>Design Decisions"]
-        Reflect["reflect-*.md<br>Review Documents"]
-    end
-    
-    style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px
-    style Active fill:#a8d5ff,stroke:#88b5e0
-    style Progress fill:#c5e8b7,stroke:#a5c897
-    style Creative fill:#f4b8c4,stroke:#d498a4
-    style Reflect fill:#b3e6cc,stroke:#66c999
-```
-
-- **tasks.md**: Central source of truth for task tracking
-- **activeContext.md**: Maintains focus of current development phase
-- **progress.md**: Tracks implementation status
-- **creative-*.md**: Design decision documents generated during CREATIVE mode
-- **reflect-*.md**: Review documents created during REFLECT mode
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Mode not responding correctly**:
-   - Verify custom instructions were copied completely (this is the most common issue)
-   - Ensure the correct tools are enabled for each mode
-   - Check that you've switched to the correct mode before issuing commands
-   - Make sure you pasted the instructions in the "Advanced options" text box
-
-2. **Rules not loading**:
-   - Make sure the `.cursor/rules/isolation_rules/` directory is in the correct location
-   - Verify file permissions allow reading the rule files
-
-3. **Command execution issues**:
-   - Ensure you're running commands from the correct directory
-   - Verify platform-specific commands are being used correctly
-
-## Version Information
-
-This is version v0.7-beta of the Memory Bank system. It introduces significant token optimization improvements over v0.6-beta while maintaining all functionality. See the [Release Notes](RELEASE_NOTES.md) for detailed information about the changes.
-
-### Ongoing Development
-
-The Memory Bank system is actively being developed and improved. Key points to understand:
-
-- **Work in Progress**: This is a beta version with ongoing development. Expect regular updates, optimizations, and new features.
-- **Feature Optimization**: The modular architecture enables continuous refinement without breaking existing functionality.
-- **Previous Version Available**: If you prefer the stability of the previous version (v0.1-legacy), you can continue using it while this version matures.
-- **Architectural Benefits**: Before deciding which version to use, please read the [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md) to understand the significant benefits of the new architecture.
-
-## Resources
-
-- [Memory Bank Optimizations](MEMORY_BANK_OPTIMIZATIONS.md) - Detailed overview of token efficiency improvements
-- [Release Notes](RELEASE_NOTES.md) - Information about the latest changes
-- [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
-- [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md)
-- [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
-- Mode-specific instruction files in the `custom_modes/` directory
+## 🔄 TASK CONTINUITY INTEGRATION
+
+### Migration Processing (Standard VAN Mode)
+When VAN mode is activated, I will:
+
+1. **Check for migration.md**: Look for existing migration document
+2. **Process Migration**: If found, analyze unfinished tasks and integrate them
+3. **Update tasks.md**: Merge migrated tasks with current task structure
+4. **Archive Migration**: Move processed migration.md to archive
+5. **Continue Standard Flow**: Proceed with normal VAN process
+
+### Task Status Categories
+- ✅ **COMPLETED**: Fully implemented and tested
+- 🔄 **IN_PROGRESS**: Currently being worked on
+- 📋 **PLANNED**: Planned but not started
+- ⛔ **BLOCKED**: Blocked by dependencies
+- 📦 **MIGRATED**: Migrated from previous cycle
 
 ---
 
-*Note: This README is for v0.7-beta and subject to change as the system evolves.*
+## 📋 MEMORY BANK INTEGRATION
 
-```
+All VAN modes integrate with the Memory Bank system:
 
-`RELEASE_NOTES.md`
+### Core Files
+- `memory-bank/tasks.md` - Source of truth for task tracking
+- `memory-bank/migration.md` - Task migration document
+- `memory-bank/activeContext.md` - Current focus and context
+- `memory-bank/progress.md` - Implementation status
+- `memory-bank/systemPatterns.md` - System patterns and rules
+- `memory-bank/techContext.md` - Technical architecture
 
-```md
-# Memory Bank System Release Notes
+### Rules Integration
+- `.cursor/rules/` - Original Cursor rules (via fetch_rules)
+- `memory-bank/rules/` - Integrated Memory Bank rules
+- `rules/changing_the_rules.md` - Rules modification guide
 
-> **Personal Note**: Memory Bank is my personal hobby project that I develop for my own use in coding projects. As this is a personal project, I don't maintain an issues tracker or actively collect feedback. However, if you're using these rules and encounter issues, one of the great advantages is that you can ask the Cursor AI directly to modify or update the rules to better suit your specific workflow. The system is designed to be adaptable by the AI, allowing you to customize it for your own needs without requiring external support.
-
-## Version 0.7-beta - Token-Optimized Workflows
-
-> Building upon the architectural foundations established in v0.6-beta.1, this release introduces significant token efficiency optimizations and enhanced workflow capabilities with substantial improvements in context management.
-
-### 🌟 Major Features
-
-#### Hierarchical Rule Loading System _(New)_
-- Just-In-Time (JIT) loading of specialized rules
-- Core rule caching across mode transitions
-- Complexity-based rule selection
-- Significant reduction in rule-related token usage
-
-#### Progressive Documentation Framework _(New)_
-- Concise templates that scale with task complexity
-- Tabular formats for efficient option comparison
-- "Detail-on-demand" approach for creative phases
-- Streamlined documentation without sacrificing quality
-
-#### Optimized Mode Transitions _(Enhanced)_
-- Unified context transfer protocol
-- Standardized transition documents
-- Selective context preservation
-- Improved context retention between modes
-
-#### Enhanced Multi-Level Workflow System _(Enhanced)_
-- **Level 1: Quick Bug Fix Pipeline**
-  - Ultra-compact documentation templates
-  - Consolidated memory bank updates
-  - Streamlined 3-phase workflow
-
-- **Level 2: Enhancement Pipeline**
-  - Balanced 4-phase workflow
-  - Simplified planning templates
-  - Faster documentation process
-
-- **Level 3: Feature Development Pipeline**
-  - Comprehensive planning system
-  - Optimized creative phase exploration
-  - Improved context efficiency
-
-- **Level 4: Enterprise Pipeline**
-  - Advanced 6-phase workflow
-  - Tiered documentation templates
-  - Enhanced governance controls
-
-### 🔄 Process Improvements
-
-#### Token-Optimized Architecture
-- Reduced context usage for system rules
-- More context available for actual development tasks
-- Adaptive complexity scaling based on task requirements
-- Differential memory bank updates to minimize token waste
-
-#### Mode-Based Optimization
-- **VAN Mode**: Efficient complexity determination with minimal overhead
-- **PLAN Mode**: Complexity-appropriate planning templates
-- **CREATIVE Mode**: Progressive documentation with tabular comparisons
-- **IMPLEMENT Mode**: Streamlined implementation guidance
-- **REFLECT Mode**: Context-aware review mechanisms
-- **ARCHIVE Mode**: Efficient knowledge preservation
-
-#### Advanced Workflow Optimization
-- Intelligent level transition system
-- Clear complexity assessment criteria
-- Streamlined mode switching
-- Enhanced task tracking capabilities
-
-### 📚 Documentation Enhancements
-- Level-specific documentation templates
-- Progressive disclosure model for complex documentation
-- Standardized comparison formats for design decisions
-- Enhanced context preservation between documentation phases
-
-### 🛠 Technical Improvements
-- Graph-based rule architecture for efficient navigation
-- Rule dependency tracking for optimal loading
-- Context compression techniques for memory bank files
-- Adaptive rule partitioning for targeted loading
-
-### 📋 Known Issues
-- None reported in current release
-
-### 🧠 The Determinism Challenge in AI Workflows
-
-While Memory Bank provides robust structure through visual maps and process flows, it's important to acknowledge an inherent limitation: the non-deterministic nature of AI agents. Despite our best efforts to create well-defined pathways and structured processes, language models fundamentally operate on probability distributions rather than fixed rules.
-
-This creates what I call the "determinism paradox" – we need structure for reliability, but rigidity undermines the adaptability that makes AI valuable. Memory Bank addresses this through:
-
-- **Guiding rather than forcing**: Using visual maps that shape behavior without rigid constraints
-- **Bounded flexibility**: Creating structured frameworks within which creative problem-solving can occur
-- **Adaptive complexity**: Adjusting guidance based on task requirements rather than enforcing one-size-fits-all processes
-
-As a companion to Memory Bank, I'm developing an MCP Server (Model-Context-Protocol) project that aims to further address this challenge by integrating deterministic code checkpoints with probabilistic language model capabilities. This hybrid approach creates a system where AI can operate flexibly while still following predictable workflows – maintaining the balance between structure and adaptability that makes Memory Bank effective.
-
-When using Memory Bank, you may occasionally need to guide the agent back to the intended workflow. This isn't a failure of the system but rather a reflection of the fundamental tension between structure and flexibility in AI systems.
-
-### 🔜 Upcoming Features
-- Dynamic template generation based on task characteristics
-- Automatic context summarization for long-running tasks
-- Cross-task knowledge preservation
-- Partial rule loading within specialized rule files
-- MCP integration for improved workflow adherence
-
-### 📝 Notes
-- This release builds upon v0.6-beta.1's architectural foundation
-- Significantly enhances JIT Rule Loading efficiency 
-- No manual migration required
-- New files added to `.cursor/rules/isolation_rules/` directory
-
-### 🔧 Requirements
-- Requires Cursor version 0.48 or higher
-- Compatible with Claude 3.7 Sonnet (recommended) and newer models
-- Compatible with all existing Memory Bank v0.6-beta.1 installations
-
-### 📈 Optimization Approaches
-- **Rule Loading**: Hierarchical loading with core caching and specialized lazy-loading
-- **Creative Phase**: Progressive documentation with tabular comparisons
-- **Mode Transitions**: Unified context transfer with selective preservation
-- **Level 1 Workflow**: Ultra-compact templates with consolidated updates
-- **Memory Bank**: Differential updates and context compression
+### System Integration
+- `memory-bank/system/current-date.txt` - Real date management
+- `memory-bank/system/interaction-mode.txt` - AUTO/MANUAL mode control
+- `memory-bank/config/system.yaml` - System configuration
+- `memory-bank/backup/` - System backup directory
 
 ---
-Released on: May 7, 2025
+
+## 💡 USAGE EXAMPLES
+
+### Standard VAN with Task Continuity
+```
+User: VAN
+Assistant: OK VAN
+
+Activating unified VAN mode...
+🔄 Checking task continuity...
+📦 Found migration.md - processing unfinished tasks...
+📋 Integrating 3 unfinished tasks into current cycle...
+✅ Task continuity established
+📚 Loading VAN mode rules...
+🧩 Determining complexity level...
+[Proceeds with standard VAN process]
+```
+
+### Rules Integration
+```
+User: VAN.RULES.INTEGRATE
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES integration submode...
+📚 Loading rules management guidelines...
+🔍 Analyzing .cursor/rules structure...
+📋 Planning integration strategy...
+🔗 Integrating rules with Memory Bank...
+✅ Rules integration completed
+[Updates Memory Bank with integration status]
+```
+
+### System Health Check
+```
+User: VAN.SYSTEM.HEALTH
+Assistant: OK VAN.SYSTEM
+
+Activating VAN.SYSTEM health check submode...
+🏥 Loading system administration rules...
+📁 Verifying file structure...
+⚡ Analyzing system performance...
+📊 Generating health report...
+✅ System health check completed
+[Updates system status in Memory Bank]
+```
+
+---
+
+## 🔧 DETAILED PROCESSES
+
+For detailed workflow processes, see:
+
+- **[Core Workflow](van_core_workflow.md)** - Complete VAN workflow with full mermaid diagrams, task continuity, and error handling
+- **[Rules Submode](van_rules_submode.md)** - Comprehensive VAN.RULES functionality with Cursor workaround procedures
+- **[System Submode](van_system_submode.md)** - Complete VAN.SYSTEM administration with backup/restore and health checks
+
+---
+
+## ✅ VERIFICATION COMMITMENT
+
+```
+┌─────────────────────────────────────────────────────┐
+│ I WILL follow the unified visual process map         │
+│ I WILL run all verification checkpoints              │
+│ I WILL maintain tasks.md as the single source of     │
+│ truth for all task tracking                          │
+│ I WILL process task continuity in standard VAN mode  │
+│ I WILL use VAN.RULES for all rule management         │
+│ I WILL use VAN.SYSTEM for system administration      │
+│ I WILL use fetch_rules for loading rule references   │
+│ I WILL follow the Cursor workaround process          │
+│ I WILL maintain system and rules integrity           │
+│ I WILL preserve task migration functionality         │
+│ I WILL integrate all enhanced capabilities seamlessly│
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 UNIFIED FEATURE SUMMARY
+
+### ✅ Task Continuity Features (Integrated)
+- **Migration Processing**: Automatic detection and processing of migration.md
+- **Task Integration**: Seamless integration of unfinished tasks into new cycles
+- **Status Management**: Enhanced task status categorization system
+- **Context Preservation**: Maintains task context across development cycles
+
+### ✅ Enhanced VAN.RULES Features (Integrated)
+- **Rules Integration**: Integrate .cursor rules with Memory Bank using fetch_rules
+- **Rules Modification**: Modify existing rules using Cursor workaround
+- **Rules Creation**: Create new custom rules with proper validation
+- **Rules Validation**: Comprehensive rules validation and status checking
+
+### ✅ Enhanced VAN.SYSTEM Features (Integrated)
+- **System Optimization**: Optimize Memory Bank performance and structure
+- **Backup Management**: Create and restore Memory Bank backups
+- **Health Monitoring**: Comprehensive system health checks and diagnostics
+- **Configuration Management**: System configuration and state management
+
+---
+
+**Next**: See [Core Workflow](van_core_workflow.md) for detailed process diagrams and implementation steps.
+```
+
+`custom_modes/van_rules_submode.md`
+
+```md
+# VAN.RULES SUBMODE - RULES MANAGEMENT
+
+> **TL;DR:** Comprehensive VAN.RULES submode for managing .cursor rules integration with Memory Bank system, including Cursor workaround procedures and validation.
+
+## 🧭 NAVIGATION
+- 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
+- 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** ← You are here
+- ⚙️ **[System Submode](van_system_submode.md)** - VAN.SYSTEM administration functionality
+
+---
+
+## 🎯 VAN.RULES COMMANDS
+
+### Available Commands
+- **`VAN.RULES`** - Activate rules management submode
+- **`VAN.RULES.INTEGRATE`** - Integrate .cursor rules with Memory Bank
+- **`VAN.RULES.MODIFY`** - Modify existing rules using Cursor workaround
+- **`VAN.RULES.CREATE`** - Create new custom rules
+- **`VAN.RULES.VALIDATE`** - Validate all rules for correctness
+- **`VAN.RULES.STATUS`** - Check current rules integration status
+
+---
+
+## 🔄 VAN.RULES WORKFLOW
+
+```mermaid
+graph TD
+    Start["VAN.RULES Command"] --> CommandType{"Command<br>Type?"}
+
+    CommandType -->|"INTEGRATE"| Integrate["VAN.RULES.INTEGRATE<br>Process"]
+    CommandType -->|"MODIFY"| Modify["VAN.RULES.MODIFY<br>Process"]
+    CommandType -->|"CREATE"| Create["VAN.RULES.CREATE<br>Process"]
+    CommandType -->|"VALIDATE"| Validate["VAN.RULES.VALIDATE<br>Process"]
+    CommandType -->|"STATUS"| Status["VAN.RULES.STATUS<br>Process"]
+    CommandType -->|"General"| General["General Rules<br>Management"]
+
+    %% Integration Process
+    Integrate --> LoadGuides["Load Rules Guides:<br>changing_the_rules.md<br>rules_instructions.md"]
+    LoadGuides --> AnalyzeStructure["Analyze .cursor/rules<br>Structure"]
+    AnalyzeStructure --> PlanIntegration["Plan Integration<br>Strategy"]
+    PlanIntegration --> ExecuteIntegration["Execute Rules<br>Integration"]
+    ExecuteIntegration --> UpdateIntegration["Update Memory Bank<br>Integration Status"]
+
+    %% Modification Process
+    Modify --> LoadWorkaround["Load Cursor<br>Workaround Process"]
+    LoadWorkaround --> BackupRules["Create Rules<br>Backup"]
+    BackupRules --> ApplyWorkaround["Apply Cursor<br>Workaround"]
+    ApplyWorkaround --> ModifyRules["Modify Rules<br>Content"]
+    ModifyRules --> RestoreRules["Restore Rules<br>Structure"]
+    RestoreRules --> UpdateModification["Update Memory Bank<br>Modification Status"]
+
+    %% Creation Process
+    Create --> DefineRequirements["Define New Rule<br>Requirements"]
+    DefineRequirements --> DesignRule["Design Rule<br>Structure"]
+    DesignRule --> CreateRule["Create Rule<br>File"]
+    CreateRule --> ValidateNewRule["Validate New<br>Rule"]
+    ValidateNewRule --> UpdateCreation["Update Memory Bank<br>Creation Status"]
+
+    %% Validation Process
+    Validate --> ScanRules["Scan All<br>Rule Files"]
+    ScanRules --> CheckFormat["Check Rule<br>Format"]
+    CheckFormat --> CheckLinks["Check Internal<br>Links"]
+    CheckLinks --> CheckSyntax["Check Rule<br>Syntax"]
+    CheckSyntax --> GenerateReport["Generate Validation<br>Report"]
+    GenerateReport --> UpdateValidation["Update Memory Bank<br>Validation Status"]
+
+    %% Status Process
+    Status --> CheckIntegration["Check Integration<br>Status"]
+    CheckIntegration --> CheckHealth["Check Rules<br>Health"]
+    CheckHealth --> CheckUsage["Check Rules<br>Usage"]
+    CheckUsage --> GenerateStatus["Generate Status<br>Report"]
+    GenerateStatus --> UpdateStatus["Update Memory Bank<br>Status"]
+
+    %% General Process
+    General --> LoadRulesMap["Load Rules via fetch_rules:<br>git-workflow/branch-management<br>implementation/dependency-checking<br>hierarchical-rule-loading"]
+    LoadRulesMap --> ExecuteGeneral["Execute General<br>Rules Management"]
+    ExecuteGeneral --> UpdateGeneral["Update Memory Bank<br>General Status"]
+
+    %% Completion
+    UpdateIntegration & UpdateModification & UpdateCreation & UpdateValidation & UpdateStatus & UpdateGeneral --> VerifyComplete["Verify Rules<br>Operation Complete"]
+    VerifyComplete --> Complete["VAN.RULES<br>Complete"]
+
+    style Start fill:#ffcc80,stroke:#ff9900,color:white
+    style CommandType fill:#ffe6cc,stroke:#ffb366,color:black
+    style Integrate fill:#d4e6f1,stroke:#85c1e9,color:black
+    style Modify fill:#fadbd8,stroke:#f1948a,color:black
+    style Create fill:#d5f4e6,stroke:#82e0aa,color:black
+    style Validate fill:#fdeaa7,stroke:#f7dc6f,color:black
+    style Status fill:#e8daef,stroke:#d2b4de,color:black
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+---
+
+## 🔗 VAN.RULES.INTEGRATE PROCESS
+
+### Integration Workflow
+
+```mermaid
+graph TD
+    IntegrateStart["VAN.RULES.INTEGRATE<br>Start"] --> ReadGuides["Read Integration Guides"]
+    ReadGuides --> AnalyzeCursor["Analyze .cursor/rules<br>Directory Structure"]
+    AnalyzeCursor --> IdentifyRules["Identify Rules<br>for Integration"]
+    IdentifyRules --> PlanStrategy["Plan Integration<br>Strategy"]
+
+    PlanStrategy --> CreateMapping["Create Rules<br>Mapping"]
+    CreateMapping --> ValidateMapping["Validate Rule<br>Dependencies"]
+    ValidateMapping --> ExecuteIntegration["Execute Integration<br>Process"]
+    ExecuteIntegration --> TestIntegration["Test Integrated<br>Rules"]
+    TestIntegration --> DocumentIntegration["Document Integration<br>Results"]
+    DocumentIntegration --> IntegrateComplete["Integration<br>Complete"]
+
+    style IntegrateStart fill:#d4e6f1,stroke:#85c1e9,color:black
+    style ReadGuides fill:#ebf5fb,stroke:#aed6f1,color:black
+    style AnalyzeCursor fill:#ebf5fb,stroke:#aed6f1,color:black
+    style IdentifyRules fill:#ebf5fb,stroke:#aed6f1,color:black
+    style PlanStrategy fill:#ebf5fb,stroke:#aed6f1,color:black
+    style CreateMapping fill:#ebf5fb,stroke:#aed6f1,color:black
+    style ValidateMapping fill:#ebf5fb,stroke:#aed6f1,color:black
+    style ExecuteIntegration fill:#ebf5fb,stroke:#aed6f1,color:black
+    style TestIntegration fill:#ebf5fb,stroke:#aed6f1,color:black
+    style DocumentIntegration fill:#ebf5fb,stroke:#aed6f1,color:black
+    style IntegrateComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Integration Rules Loading
+
+```
+fetch_rules([
+  "isolation_rules/CustomWorkflow/git-workflow/branch-management",
+  "isolation_rules/CustomWorkflow/implementation/dependency-checking",
+  "isolation_rules/Core/hierarchical-rule-loading"
+])
+```
+
+---
+
+## 🔧 VAN.RULES.MODIFY PROCESS
+
+### Cursor Workaround Procedure
+
+```mermaid
+graph TD
+    ModifyStart["VAN.RULES.MODIFY<br>Start"] --> LoadWorkaround["Load Cursor<br>Workaround Guide"]
+    LoadWorkaround --> CreateBackup["Create Backup:<br>backup-rules-YYYYMMDD-HHMM"]
+    CreateBackup --> RenameDir["Rename Directory:<br>.cursor → _cursor"]
+    RenameDir --> RenameFiles["Rename Files:<br>.mdc → .mdc.md"]
+
+    RenameFiles --> ModifyContent["Modify Rule<br>Content"]
+    ModifyContent --> ValidateChanges["Validate<br>Changes"]
+    ValidateChanges --> RestoreFiles["Restore Files:<br>.mdc.md → .mdc"]
+    RestoreFiles --> RestoreDir["Restore Directory:<br>_cursor → .cursor"]
+    RestoreDir --> TestModified["Test Modified<br>Rules"]
+    TestModified --> DocumentChanges["Document<br>Changes"]
+    DocumentChanges --> ModifyComplete["Modification<br>Complete"]
+
+    style ModifyStart fill:#fadbd8,stroke:#f1948a,color:black
+    style LoadWorkaround fill:#fdf2e9,stroke:#f8c471,color:black
+    style CreateBackup fill:#fdf2e9,stroke:#f8c471,color:black
+    style RenameDir fill:#fdf2e9,stroke:#f8c471,color:black
+    style RenameFiles fill:#fdf2e9,stroke:#f8c471,color:black
+    style ModifyContent fill:#fdf2e9,stroke:#f8c471,color:black
+    style ValidateChanges fill:#fdf2e9,stroke:#f8c471,color:black
+    style RestoreFiles fill:#fdf2e9,stroke:#f8c471,color:black
+    style RestoreDir fill:#fdf2e9,stroke:#f8c471,color:black
+    style TestModified fill:#fdf2e9,stroke:#f8c471,color:black
+    style DocumentChanges fill:#fdf2e9,stroke:#f8c471,color:black
+    style ModifyComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Cursor Workaround Commands
+
+```bash
+# Step 1: Create backup
+git checkout -b "backup-rules-$(date +%Y%m%d-%H%M)"
+
+# Step 2: Rename directory
+mv .cursor _cursor
+
+# Step 3: Rename files
+find _cursor -name "*.mdc" -exec mv {} {}.md \;
+
+# Step 4: Modify content (manual step)
+# Edit files as needed
+
+# Step 5: Restore files
+find _cursor -name "*.mdc.md" -exec sh -c 'mv "$1" "${1%.md}"' _ {} \;
+
+# Step 6: Restore directory
+mv _cursor .cursor
+
+# Step 7: Commit changes
+git add .cursor/
+git commit -m "Modified rules via Cursor workaround"
+```
+
+---
+
+## ✅ VAN.RULES.VALIDATE PROCESS
+
+### Validation Workflow
+
+```mermaid
+graph TD
+    ValidateStart["VAN.RULES.VALIDATE<br>Start"] --> ScanFiles["Scan All<br>.mdc Files"]
+    ScanFiles --> CheckExtensions["Check File<br>Extensions"]
+    CheckExtensions --> CheckCase["Check Case<br>Sensitivity"]
+    CheckCase --> CheckLinks["Check Internal<br>Links"]
+    CheckLinks --> CheckSyntax["Check Rule<br>Syntax"]
+
+    CheckSyntax --> CheckDependencies["Check Rule<br>Dependencies"]
+    CheckDependencies --> CheckIntegrity["Check System<br>Integrity"]
+    CheckIntegrity --> GenerateReport["Generate Validation<br>Report"]
+    GenerateReport --> IdentifyIssues["Identify<br>Issues"]
+    IdentifyIssues --> SuggestFixes["Suggest<br>Fixes"]
+    SuggestFixes --> ValidateComplete["Validation<br>Complete"]
+
+    style ValidateStart fill:#fdeaa7,stroke:#f7dc6f,color:black
+    style ScanFiles fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckExtensions fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckCase fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckLinks fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckSyntax fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckDependencies fill:#fef9e7,stroke:#f4d03f,color:black
+    style CheckIntegrity fill:#fef9e7,stroke:#f4d03f,color:black
+    style GenerateReport fill:#fef9e7,stroke:#f4d03f,color:black
+    style IdentifyIssues fill:#fef9e7,stroke:#f4d03f,color:black
+    style SuggestFixes fill:#fef9e7,stroke:#f4d03f,color:black
+    style ValidateComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Validation Checklist
+
+```
+✓ RULES VALIDATION CHECKLIST
+- All .mdc files have correct extensions? [YES/NO]
+- File names follow naming conventions? [YES/NO]
+- Internal links are valid? [YES/NO]
+- Rule syntax is correct? [YES/NO]
+- Dependencies are satisfied? [YES/NO]
+- No circular dependencies? [YES/NO]
+- Integration points are valid? [YES/NO]
+- fetch_rules references are correct? [YES/NO]
+
+→ If all YES: Rules validation passed
+→ If any NO: Address identified issues
+```
+
+---
+
+## 📊 VAN.RULES.STATUS PROCESS
+
+### Status Monitoring
+
+```mermaid
+graph TD
+    StatusStart["VAN.RULES.STATUS<br>Start"] --> CheckIntegration["Check Integration<br>Status"]
+    CheckIntegration --> CheckHealth["Check Rules<br>Health"]
+    CheckHealth --> CheckUsage["Check Rules<br>Usage Statistics"]
+    CheckUsage --> CheckPerformance["Check Rules<br>Performance"]
+
+    CheckPerformance --> CheckErrors["Check Error<br>Logs"]
+    CheckErrors --> CheckUpdates["Check Update<br>Status"]
+    CheckUpdates --> GenerateStatus["Generate Status<br>Report"]
+    GenerateStatus --> DisplayMetrics["Display<br>Metrics"]
+    DisplayMetrics --> StatusComplete["Status Check<br>Complete"]
+
+    style StatusStart fill:#e8daef,stroke:#d2b4de,color:black
+    style CheckIntegration fill:#f4ecf7,stroke:#bb8fce,color:black
+    style CheckHealth fill:#f4ecf7,stroke:#bb8fce,color:black
+    style CheckUsage fill:#f4ecf7,stroke:#bb8fce,color:black
+    style CheckPerformance fill:#f4ecf7,stroke:#bb8fce,color:black
+    style CheckErrors fill:#f4ecf7,stroke:#bb8fce,color:black
+    style CheckUpdates fill:#f4ecf7,stroke:#bb8fce,color:black
+    style GenerateStatus fill:#f4ecf7,stroke:#bb8fce,color:black
+    style DisplayMetrics fill:#f4ecf7,stroke:#bb8fce,color:black
+    style StatusComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Status Report Format
+
+```
+## VAN.RULES STATUS REPORT
+
+### Integration Status
+- Rules Integrated: X/Y (Z%)
+- Last Integration: YYYY-MM-DD HH:MM
+- Integration Health: [EXCELLENT/GOOD/NEEDS_ATTENTION]
+
+### Rules Health
+- Total Rules: X files
+- Valid Rules: Y files
+- Invalid Rules: Z files
+- Health Score: X/100
+
+### Usage Statistics
+- Rules Loaded Today: X
+- Most Used Rules: [list]
+- Least Used Rules: [list]
+- Average Load Time: X ms
+
+### Performance Metrics
+- Load Success Rate: X%
+- Error Rate: Y%
+- Average Response Time: Z ms
+
+### Recent Issues
+- [List of recent issues and resolutions]
+
+### Recommendations
+- [Actionable recommendations for improvement]
+```
+
+---
+
+## 🔧 MEMORY BANK INTEGRATION
+
+### Rules Integration Files
+
+- **`memory-bank/rules/integration-status.md`** - Current integration status
+- **`memory-bank/rules/validation-reports/`** - Validation report archive
+- **`memory-bank/rules/modification-log.md`** - Modification history
+- **`memory-bank/backup/rules/`** - Rules backup directory
+
+### Integration with Other Modes
+
+```
+fetch_rules([
+  "isolation_rules/CustomWorkflow/git-workflow/branch-management",
+  "isolation_rules/CustomWorkflow/git-workflow/backup-verification",
+  "isolation_rules/CustomWorkflow/git-workflow/change-documentation",
+  "isolation_rules/CustomWorkflow/implementation/dependency-checking",
+  "isolation_rules/Core/hierarchical-rule-loading"
+])
+```
+
+---
+
+## 💡 USAGE EXAMPLES
+
+### Example 1: Rules Integration
+```
+User: VAN.RULES.INTEGRATE
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES integration submode...
+📚 Loading rules management guidelines...
+🔍 Analyzing .cursor/rules structure...
+📋 Found 37 .mdc files for integration...
+⚡ Planning integration strategy...
+🔗 Executing integration process...
+✅ Rules integration completed successfully
+📊 Integration status: 37/37 rules integrated (100%)
+```
+
+### Example 2: Rules Modification
+```
+User: VAN.RULES.MODIFY
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES modification submode...
+🔧 Loading Cursor workaround procedure...
+💾 Creating backup: backup-rules-20250610-1430...
+📁 Applying Cursor workaround (.cursor → _cursor)...
+📝 Ready for rule modifications...
+[User makes modifications]
+🔄 Restoring structure (_cursor → .cursor)...
+✅ Rules modification completed successfully
+```
+
+### Example 3: Rules Validation
+```
+User: VAN.RULES.VALIDATE
+Assistant: OK VAN.RULES
+
+Activating VAN.RULES validation submode...
+🔍 Scanning all .mdc files...
+✅ File extensions: 37/37 correct
+✅ Naming conventions: 37/37 valid
+✅ Internal links: 156/156 valid
+✅ Rule syntax: 37/37 correct
+✅ Dependencies: All satisfied
+📊 Validation score: 100/100 (EXCELLENT)
+```
+
+---
+
+## ✅ VERIFICATION COMMITMENT
+
+```
+┌─────────────────────────────────────────────────────┐
+│ I WILL use fetch_rules for all rule loading          │
+│ I WILL follow the Cursor workaround process exactly  │
+│ I WILL create backups before any modifications       │
+│ I WILL validate all rules after changes              │
+│ I WILL document all rules operations                 │
+│ I WILL maintain rules integration integrity          │
+│ I WILL update Memory Bank with all status changes    │
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Previous: [Core Workflow](van_core_workflow.md) | Next: [System Submode](van_system_submode.md)
+```
+
+`custom_modes/van_system_submode.md`
+
+```md
+# VAN.SYSTEM SUBMODE - SYSTEM ADMINISTRATION
+
+> **TL;DR:** Comprehensive VAN.SYSTEM submode for Memory Bank system administration, including optimization, backup/restore, health monitoring, and configuration management.
+
+## 🧭 NAVIGATION
+- 🏠 **[Main Instructions](van_instructions.md)** - Return to main VAN instructions
+- 🔄 **[Core Workflow](van_core_workflow.md)** - Detailed VAN workflow with full diagrams
+- 📋 **[Rules Submode](van_rules_submode.md)** - VAN.RULES management functionality
+- ⚙️ **[System Submode](van_system_submode.md)** ← You are here
+
+---
+
+## 🎯 VAN.SYSTEM COMMANDS
+
+### Available Commands
+- **`VAN.SYSTEM`** - Activate system administration submode
+- **`VAN.SYSTEM.OPTIMIZE`** - Optimize Memory Bank performance and structure
+- **`VAN.SYSTEM.BACKUP`** - Create comprehensive Memory Bank backup
+- **`VAN.SYSTEM.RESTORE`** - Restore Memory Bank from backup
+- **`VAN.SYSTEM.HEALTH`** - Comprehensive system health check and diagnostics
+- **`VAN.SYSTEM.CONFIG`** - System configuration management
+
+---
+
+## 🔄 VAN.SYSTEM WORKFLOW
+
+```mermaid
+graph TD
+    Start["VAN.SYSTEM Command"] --> CommandType{"Command<br>Type?"}
+
+    CommandType -->|"OPTIMIZE"| Optimize["VAN.SYSTEM.OPTIMIZE<br>Process"]
+    CommandType -->|"BACKUP"| Backup["VAN.SYSTEM.BACKUP<br>Process"]
+    CommandType -->|"RESTORE"| Restore["VAN.SYSTEM.RESTORE<br>Process"]
+    CommandType -->|"HEALTH"| Health["VAN.SYSTEM.HEALTH<br>Process"]
+    CommandType -->|"CONFIG"| Config["VAN.SYSTEM.CONFIG<br>Process"]
+    CommandType -->|"General"| General["General System<br>Administration"]
+
+    %% Optimization Process
+    Optimize --> AnalyzePerformance["Analyze System<br>Performance"]
+    AnalyzePerformance --> IdentifyBottlenecks["Identify<br>Bottlenecks"]
+    IdentifyBottlenecks --> OptimizeStructure["Optimize File<br>Structure"]
+    OptimizeStructure --> OptimizeMemory["Optimize Memory<br>Usage"]
+    OptimizeMemory --> UpdateOptimization["Update Memory Bank<br>Optimization Status"]
+
+    %% Backup Process
+    Backup --> CreateBackupPlan["Create Backup<br>Plan"]
+    CreateBackupPlan --> BackupFiles["Backup Core<br>Files"]
+    BackupFiles --> BackupRules["Backup Rules<br>& Configuration"]
+    BackupRules --> BackupArchive["Create Backup<br>Archive"]
+    BackupArchive --> UpdateBackup["Update Memory Bank<br>Backup Status"]
+
+    %% Restore Process
+    Restore --> SelectBackup["Select Backup<br>to Restore"]
+    SelectBackup --> ValidateBackup["Validate Backup<br>Integrity"]
+    ValidateBackup --> RestoreFiles["Restore Core<br>Files"]
+    RestoreFiles --> RestoreConfig["Restore Configuration<br>& Rules"]
+    RestoreConfig --> UpdateRestore["Update Memory Bank<br>Restore Status"]
+
+    %% Health Check Process
+    Health --> CheckFileIntegrity["Check File<br>Integrity"]
+    CheckFileIntegrity --> CheckPerformance["Check System<br>Performance"]
+    CheckPerformance --> CheckConfiguration["Check<br>Configuration"]
+    CheckConfiguration --> GenerateHealthReport["Generate Health<br>Report"]
+    GenerateHealthReport --> UpdateHealth["Update Memory Bank<br>Health Status"]
+
+    %% Configuration Process
+    Config --> LoadCurrentConfig["Load Current<br>Configuration"]
+    LoadCurrentConfig --> ValidateConfig["Validate<br>Configuration"]
+    ValidateConfig --> UpdateConfig["Update<br>Configuration"]
+    UpdateConfig --> ApplyConfig["Apply Configuration<br>Changes"]
+    ApplyConfig --> UpdateConfigStatus["Update Memory Bank<br>Config Status"]
+
+    %% General Process
+    General --> LoadSystemMap["Load Rules via fetch_rules:<br>optimization-integration<br>platform-awareness<br>debugging/systematic-debugging"]
+    LoadSystemMap --> ExecuteGeneral["Execute General<br>System Administration"]
+    ExecuteGeneral --> UpdateGeneral["Update Memory Bank<br>General Status"]
+
+    %% Completion
+    UpdateOptimization & UpdateBackup & UpdateRestore & UpdateHealth & UpdateConfigStatus & UpdateGeneral --> VerifyComplete["Verify System<br>Operation Complete"]
+    VerifyComplete --> Complete["VAN.SYSTEM<br>Complete"]
+
+    style Start fill:#9c88ff,stroke:#6a4c93,color:white
+    style CommandType fill:#c8b5ff,stroke:#9c88ff,color:black
+    style Optimize fill:#ffb3ba,stroke:#ff8a95,color:black
+    style Backup fill:#bae1ff,stroke:#87ceeb,color:black
+    style Restore fill:#ffffba,stroke:#ffff87,color:black
+    style Health fill:#baffc9,stroke:#87ff96,color:black
+    style Config fill:#ffdfba,stroke:#ffcc87,color:black
+    style Complete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+---
+
+## ⚡ VAN.SYSTEM.OPTIMIZE PROCESS
+
+### System Optimization Workflow
+
+```mermaid
+graph TD
+    OptimizeStart["VAN.SYSTEM.OPTIMIZE<br>Start"] --> AnalyzeSystem["Analyze Current<br>System State"]
+    AnalyzeSystem --> CheckPerformance["Check Performance<br>Metrics"]
+    CheckPerformance --> IdentifyIssues["Identify Performance<br>Issues"]
+    IdentifyIssues --> PlanOptimization["Plan Optimization<br>Strategy"]
+
+    PlanOptimization --> OptimizeFiles["Optimize File<br>Structure"]
+    OptimizeFiles --> OptimizeMemory["Optimize Memory<br>Usage"]
+    OptimizeMemory --> OptimizeRules["Optimize Rules<br>Loading"]
+    OptimizeRules --> CleanupTemp["Cleanup Temporary<br>Files"]
+    CleanupTemp --> ValidateOptimization["Validate<br>Optimization"]
+    ValidateOptimization --> OptimizeComplete["Optimization<br>Complete"]
+
+    style OptimizeStart fill:#ffb3ba,stroke:#ff8a95,color:black
+    style AnalyzeSystem fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style CheckPerformance fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style IdentifyIssues fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style PlanOptimization fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style OptimizeFiles fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style OptimizeMemory fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style OptimizeRules fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style CleanupTemp fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style ValidateOptimization fill:#ffe6e8,stroke:#ffb3ba,color:black
+    style OptimizeComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Optimization Rules Loading
+
+```
+fetch_rules([
+  "isolation_rules/Core/optimization-integration",
+  "isolation_rules/Core/platform-awareness",
+  "isolation_rules/CustomWorkflow/debugging/systematic-debugging"
+])
+```
+
+### Optimization Checklist
+
+```
+✓ SYSTEM OPTIMIZATION CHECKLIST
+- File structure optimized? [YES/NO]
+- Memory usage optimized? [YES/NO]
+- Rules loading optimized? [YES/NO]
+- Temporary files cleaned? [YES/NO]
+- Performance metrics improved? [YES/NO]
+- System responsiveness improved? [YES/NO]
+- Error rates reduced? [YES/NO]
+- Resource usage optimized? [YES/NO]
+
+→ If all YES: System optimization successful
+→ If any NO: Address optimization issues
+```
+
+---
+
+## 💾 VAN.SYSTEM.BACKUP PROCESS
+
+### Backup Creation Workflow
+
+```mermaid
+graph TD
+    BackupStart["VAN.SYSTEM.BACKUP<br>Start"] --> CreateBackupPlan["Create Backup<br>Plan"]
+    CreateBackupPlan --> BackupCore["Backup Core<br>Memory Bank Files"]
+    BackupCore --> BackupRules["Backup Rules<br>& Configuration"]
+    BackupRules --> BackupArchive["Backup Archive<br>Directory"]
+
+    BackupArchive --> BackupSystem["Backup System<br>Configuration"]
+    BackupSystem --> CreateArchive["Create Compressed<br>Archive"]
+    CreateArchive --> ValidateBackup["Validate Backup<br>Integrity"]
+    ValidateBackup --> StoreBackup["Store Backup<br>Safely"]
+    StoreBackup --> DocumentBackup["Document Backup<br>Details"]
+    DocumentBackup --> BackupComplete["Backup<br>Complete"]
+
+    style BackupStart fill:#bae1ff,stroke:#87ceeb,color:black
+    style CreateBackupPlan fill:#e6f7ff,stroke:#bae1ff,color:black
+    style BackupCore fill:#e6f7ff,stroke:#bae1ff,color:black
+    style BackupRules fill:#e6f7ff,stroke:#bae1ff,color:black
+    style BackupArchive fill:#e6f7ff,stroke:#bae1ff,color:black
+    style BackupSystem fill:#e6f7ff,stroke:#bae1ff,color:black
+    style CreateArchive fill:#e6f7ff,stroke:#bae1ff,color:black
+    style ValidateBackup fill:#e6f7ff,stroke:#bae1ff,color:black
+    style StoreBackup fill:#e6f7ff,stroke:#bae1ff,color:black
+    style DocumentBackup fill:#e6f7ff,stroke:#bae1ff,color:black
+    style BackupComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Backup Components
+
+```
+## MEMORY BANK BACKUP COMPONENTS
+
+### Core Files
+- memory-bank/tasks.md
+- memory-bank/activeContext.md
+- memory-bank/progress.md
+- memory-bank/projectbrief.md
+- memory-bank/productContext.md
+- memory-bank/systemPatterns.md
+- memory-bank/techContext.md
+
+### System Configuration
+- memory-bank/system/current-date.txt
+- memory-bank/system/interaction-mode.txt
+- memory-bank/config/system.yaml
+- memory-bank/config/questions.yaml
+
+### Rules & Templates
+- memory-bank/rules/ (all files)
+- memory-bank/templates/ (all files)
+- .cursor/rules/ (reference only)
+
+### Archive & History
+- memory-bank/archive/ (all directories)
+- memory-bank/backup/ (previous backups)
+- memory-bank/creative/ (all files)
+- memory-bank/reflection/ (all files)
+```
+
+---
+
+## 🔄 VAN.SYSTEM.RESTORE PROCESS
+
+### Restore Workflow
+
+```mermaid
+graph TD
+    RestoreStart["VAN.SYSTEM.RESTORE<br>Start"] --> ListBackups["List Available<br>Backups"]
+    ListBackups --> SelectBackup["Select Backup<br>to Restore"]
+    SelectBackup --> ValidateBackup["Validate Backup<br>Integrity"]
+    ValidateBackup --> CreateSafetyBackup["Create Safety<br>Backup"]
+
+    CreateSafetyBackup --> ExtractBackup["Extract Backup<br>Archive"]
+    ExtractBackup --> RestoreCore["Restore Core<br>Files"]
+    RestoreCore --> RestoreConfig["Restore System<br>Configuration"]
+    RestoreConfig --> RestoreRules["Restore Rules<br>& Templates"]
+    RestoreRules --> ValidateRestore["Validate<br>Restoration"]
+    ValidateRestore --> RestoreComplete["Restore<br>Complete"]
+
+    style RestoreStart fill:#ffffba,stroke:#ffff87,color:black
+    style ListBackups fill:#fffde6,stroke:#ffffba,color:black
+    style SelectBackup fill:#fffde6,stroke:#ffffba,color:black
+    style ValidateBackup fill:#fffde6,stroke:#ffffba,color:black
+    style CreateSafetyBackup fill:#fffde6,stroke:#ffffba,color:black
+    style ExtractBackup fill:#fffde6,stroke:#ffffba,color:black
+    style RestoreCore fill:#fffde6,stroke:#ffffba,color:black
+    style RestoreConfig fill:#fffde6,stroke:#ffffba,color:black
+    style RestoreRules fill:#fffde6,stroke:#ffffba,color:black
+    style ValidateRestore fill:#fffde6,stroke:#ffffba,color:black
+    style RestoreComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Restore Safety Procedures
+
+```bash
+# Step 1: List available backups
+ls -la memory-bank/backup/system/
+
+# Step 2: Create safety backup before restore
+tar -czf "memory-bank/backup/safety-backup-$(date +%Y%m%d-%H%M%S).tar.gz" memory-bank/
+
+# Step 3: Extract selected backup
+tar -xzf "memory-bank/backup/system/backup-YYYYMMDD-HHMM.tar.gz"
+
+# Step 4: Validate extracted files
+find memory-bank/ -name "*.md" -exec wc -l {} \;
+
+# Step 5: Test system functionality
+# Verify all core files are accessible and valid
+```
+
+---
+
+## 🏥 VAN.SYSTEM.HEALTH PROCESS
+
+### Health Check Workflow
+
+```mermaid
+graph TD
+    HealthStart["VAN.SYSTEM.HEALTH<br>Start"] --> CheckFiles["Check File<br>Integrity"]
+    CheckFiles --> CheckStructure["Check Directory<br>Structure"]
+    CheckStructure --> CheckPermissions["Check File<br>Permissions"]
+    CheckPermissions --> CheckContent["Check Content<br>Validity"]
+
+    CheckContent --> CheckPerformance["Check System<br>Performance"]
+    CheckPerformance --> CheckMemory["Check Memory<br>Usage"]
+    CheckMemory --> CheckRules["Check Rules<br>Health"]
+    CheckRules --> CheckIntegration["Check Integration<br>Status"]
+    CheckIntegration --> GenerateReport["Generate Health<br>Report"]
+    GenerateReport --> HealthComplete["Health Check<br>Complete"]
+
+    style HealthStart fill:#baffc9,stroke:#87ff96,color:black
+    style CheckFiles fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckStructure fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckPermissions fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckContent fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckPerformance fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckMemory fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckRules fill:#e6ffe9,stroke:#baffc9,color:black
+    style CheckIntegration fill:#e6ffe9,stroke:#baffc9,color:black
+    style GenerateReport fill:#e6ffe9,stroke:#baffc9,color:black
+    style HealthComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Health Report Format
+
+```
+## VAN.SYSTEM HEALTH REPORT
+
+### File System Health
+- Core Files: ✅ All present and valid
+- Directory Structure: ✅ Correct structure
+- File Permissions: ✅ Appropriate permissions
+- Content Validity: ✅ All content valid
+
+### Performance Metrics
+- System Response Time: X ms (Target: <100ms)
+- Memory Usage: X MB (Target: <50MB)
+- File Access Speed: X ms (Target: <10ms)
+- Rules Loading Time: X ms (Target: <500ms)
+
+### Integration Status
+- Rules Integration: ✅ Healthy
+- Memory Bank Integration: ✅ Healthy
+- Mode Transitions: ✅ Working correctly
+- Task Continuity: ✅ Functioning properly
+
+### System Configuration
+- Interaction Mode: [AUTO/MANUAL]
+- Current Date: YYYY-MM-DD
+- System Version: X.Y.Z
+- Last Optimization: YYYY-MM-DD HH:MM
+
+### Recommendations
+- [List of actionable recommendations]
+
+### Overall Health Score: X/100 ([EXCELLENT/GOOD/NEEDS_ATTENTION])
+```
+
+---
+
+## ⚙️ VAN.SYSTEM.CONFIG PROCESS
+
+### Configuration Management
+
+```mermaid
+graph TD
+    ConfigStart["VAN.SYSTEM.CONFIG<br>Start"] --> LoadConfig["Load Current<br>Configuration"]
+    LoadConfig --> ValidateConfig["Validate<br>Configuration"]
+    ValidateConfig --> IdentifyIssues["Identify Configuration<br>Issues"]
+    IdentifyIssues --> PlanUpdates["Plan Configuration<br>Updates"]
+
+    PlanUpdates --> UpdateSystem["Update System<br>Configuration"]
+    UpdateSystem --> UpdateInteraction["Update Interaction<br>Mode Settings"]
+    UpdateInteraction --> UpdateRules["Update Rules<br>Configuration"]
+    UpdateRules --> ApplyChanges["Apply Configuration<br>Changes"]
+    ApplyChanges --> ValidateChanges["Validate<br>Changes"]
+    ValidateChanges --> ConfigComplete["Configuration<br>Complete"]
+
+    style ConfigStart fill:#ffdfba,stroke:#ffcc87,color:black
+    style LoadConfig fill:#fff5e6,stroke:#ffdfba,color:black
+    style ValidateConfig fill:#fff5e6,stroke:#ffdfba,color:black
+    style IdentifyIssues fill:#fff5e6,stroke:#ffdfba,color:black
+    style PlanUpdates fill:#fff5e6,stroke:#ffdfba,color:black
+    style UpdateSystem fill:#fff5e6,stroke:#ffdfba,color:black
+    style UpdateInteraction fill:#fff5e6,stroke:#ffdfba,color:black
+    style UpdateRules fill:#fff5e6,stroke:#ffdfba,color:black
+    style ApplyChanges fill:#fff5e6,stroke:#ffdfba,color:black
+    style ValidateChanges fill:#fff5e6,stroke:#ffdfba,color:black
+    style ConfigComplete fill:#5fd94d,stroke:#3da336,color:white
+```
+
+### Configuration Files
+
+```
+## SYSTEM CONFIGURATION FILES
+
+### Core Configuration
+- memory-bank/config/system.yaml
+- memory-bank/config/questions.yaml
+- memory-bank/system/interaction-mode.txt
+- memory-bank/system/current-date.txt
+
+### Mode Configuration
+- memory-bank/config/van-mode.yaml
+- memory-bank/config/plan-mode.yaml
+- memory-bank/config/creative-mode.yaml
+- memory-bank/config/implement-mode.yaml
+
+### Integration Configuration
+- memory-bank/config/rules-integration.yaml
+- memory-bank/config/backup-settings.yaml
+- memory-bank/config/optimization-settings.yaml
+```
+
+---
+
+## 🔧 MEMORY BANK INTEGRATION
+
+### System Administration Files
+
+- **`memory-bank/system/health-reports/`** - Health check report archive
+- **`memory-bank/system/optimization-logs/`** - Optimization history
+- **`memory-bank/backup/system/`** - System backup directory
+- **`memory-bank/config/`** - System configuration files
+
+### Integration with Other Modes
+
+```
+fetch_rules([
+  "isolation_rules/Core/optimization-integration",
+  "isolation_rules/Core/platform-awareness",
+  "isolation_rules/CustomWorkflow/debugging/systematic-debugging",
+  "isolation_rules/CustomWorkflow/git-workflow/backup-verification"
+])
+```
+
+---
+
+## 💡 USAGE EXAMPLES
+
+### Example 1: System Optimization
+```
+User: VAN.SYSTEM.OPTIMIZE
+Assistant: OK VAN.SYSTEM
+
+Activating VAN.SYSTEM optimization submode...
+🏥 Loading system administration rules...
+📊 Analyzing current system performance...
+🔍 Identifying optimization opportunities...
+⚡ Optimizing file structure and memory usage...
+🧹 Cleaning up temporary files...
+✅ System optimization completed successfully
+📈 Performance improvement: 23% faster response time
+```
+
+### Example 2: System Backup
+```
+User: VAN.SYSTEM.BACKUP
+Assistant: OK VAN.SYSTEM
+
+Activating VAN.SYSTEM backup submode...
+💾 Creating comprehensive system backup...
+📁 Backing up core Memory Bank files...
+⚙️ Backing up system configuration...
+📋 Backing up rules and templates...
+🗜️ Creating compressed archive...
+✅ System backup completed successfully
+📦 Backup saved: memory-bank/backup/system/backup-20250610-1445.tar.gz
+```
+
+### Example 3: Health Check
+```
+User: VAN.SYSTEM.HEALTH
+Assistant: OK VAN.SYSTEM
+
+Activating VAN.SYSTEM health check submode...
+🏥 Performing comprehensive system health check...
+📁 Checking file integrity: ✅ All files valid
+⚡ Checking performance: ✅ Response time 45ms
+🔧 Checking configuration: ✅ All settings valid
+📊 Generating health report...
+✅ System health check completed
+🎯 Overall health score: 95/100 (EXCELLENT)
+```
+
+---
+
+## ✅ VERIFICATION COMMITMENT
+
+```
+┌─────────────────────────────────────────────────────┐
+│ I WILL use fetch_rules for system rule loading       │
+│ I WILL create backups before major system changes    │
+│ I WILL validate all system operations                │
+│ I WILL monitor system health continuously            │
+│ I WILL optimize system performance regularly         │
+│ I WILL maintain system configuration integrity       │
+│ I WILL document all system administration activities │
+│ I WILL ensure system reliability and stability       │
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+**Navigation**: Return to [Main Instructions](van_instructions.md) | Previous: [Rules Submode](van_rules_submode.md) | [Core Workflow](van_core_workflow.md)
 ```
 
 
@@ -19004,5 +37022,5 @@ Released on: May 7, 2025
 ## Сгенерировано командой:
 
 ```
-prompt-fs-to-ai ./ -p "**/*.*" -e "assets/**" ".git/**" -o "undefined"
+prompt-fs-to-ai ./ -p "{.cursor,custom_modes}/**" -o "undefined"
 ```

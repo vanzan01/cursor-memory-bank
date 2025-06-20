@@ -17,11 +17,19 @@ memory-bank/
 ├── creative/           # Документы творческой фазы
 ├── reflection/         # Документы рефлексии
 ├── archive/           # Архив завершенных задач
-└── development/       # НОВАЯ ДИРЕКТОРИЯ для правил разработки
-    ├── phase-tracking.md    # Отслеживание фаз разработки
-    ├── test-reports.md      # Отчеты по тестированию
-    ├── debug-traces.md      # Трассировки отладки
-    └── integration-maps.md  # Карты интеграции компонентов
+├── development/       # НОВАЯ ДИРЕКТОРИЯ для правил разработки
+│   ├── phase-tracking.md    # Отслеживание фаз разработки
+│   ├── test-reports.md      # Отчеты по тестированию
+│   ├── debug-traces.md      # Трассировки отладки
+│   └── integration-maps.md  # Карты интеграции компонентов
+├── rules/             # НОВАЯ ДИРЕКТОРИЯ для правил управления
+│   ├── date-update-command.md     # Команда UPDATE_DATE
+│   └── real-date-enforcement.md   # Правило принудительного использования дат
+├── scripts/           # НОВАЯ ДИРЕКТОРИЯ для исполняемых скриптов
+│   └── update-date.sh             # Скрипт обновления дат
+└── system/            # Системные файлы
+    ├── current-date.txt           # Текущая дата системы
+    └── interaction-mode.txt       # Режим взаимодействия
 ```
 
 ### 2. Mode System (ОБНОВЛЕННЫЙ)
@@ -56,6 +64,14 @@ memory-bank/
 - **Debugging Methodology**: Systematic trace → log → debug → fix
 - **Quality Assurance**: Multi-level validation and performance testing
 
+### 6. Date Management Patterns (НОВОЕ)
+- **Централизованное управление датами**: Через файл `memory-bank/system/current-date.txt`
+- **Автоматическая синхронизация**: UPDATE_DATE команда для обновления всех документов
+- **Backup и верификация**: Автоматические backup перед изменениями дат
+- **Интеграция с git workflow**: Временные метки в коммитах и версиях
+- **Консистентность**: Проверка и исправление жестко закодированных дат
+- **Мониторинг**: Логирование и статистика обновлений дат
+
 ## Current Implementation Status
 - [x] Basic Memory Bank structure
 - [x] Core file creation
@@ -65,6 +81,8 @@ memory-bank/
 - [ ] **Extended Progress Tracking** (В ПРОЦЕССЕ)
 - [ ] **Comprehensive Testing Framework** (В ПРОЦЕССЕ)
 - [ ] **Advanced Debugging Support** (В ПРОЦЕССЕ)
+- [x] **Date Management System** (ЗАВЕРШЕНО)
+- [ ] **Date Management Integration** (В ПРОЦЕССЕ)
 
 ## Development Rules Categories
 
@@ -110,6 +128,11 @@ memory-bank/
 - **Rule #27**: Постепенный рефакторинг
 - **Rule #28**: Сохранение обратной совместимости
 - **Rule #29**: Метрики качества кода
+
+### Category H: Date Management (Rules #30-32) - НОВОЕ
+- **Rule #30**: Принудительное использование реальной даты из current-date.txt
+- **Rule #31**: Автоматическое обновление дат в документах через UPDATE_DATE
+- **Rule #32**: Консистентность временных меток и backup при изменениях
 
 ## TASK MANAGEMENT PATTERNS (CRITICAL UPDATE)
 

@@ -1,0 +1,429 @@
+---
+description: "Система фонового выполнения серверных команд для предотвращения блокировки системы"
+globs: "**/**"
+alwaysApply: true
+---
+
+# BACKGROUND SERVER EXECUTION SYSTEM
+
+> **TL;DR:** Система фонового выполнения обеспечивает запуск серверных команд в background режиме, предотвращая блокировку системы и обеспечивая продолжение работы с другими задачами.
+
+## 🚀 ПРИНЦИПЫ ФОНОВОГО ВЫПОЛНЕНИЯ
+
+### Основные требования
+**Обязательный background режим**
+- Все серверные команды должны запускаться в фоне
+- Система должна продолжать работу после запуска сервера
+- Мониторинг состояния серверов должен быть автоматическим
+- Возможность управления фоновыми процессами
+
+**Типы серверных команд**
+- Web серверы (npm start, yarn dev, bun dev)
+- API серверы (Express, FastAPI, Spring Boot)
+- База данных серверы (PostgreSQL, MongoDB, Redis)
+- Микросервисы и контейнеры
+
+## 🔧 СТРАТЕГИИ ФОНОВОГО ЗАПУСКА
+
+### Базовый фоновый запуск
+```bash
+# Запуск сервера в фоне с мониторингом
+start_server_background() {
+  local server_command="$1"
+  local server_name="${2:-server}"
+  local port="${3:-3000}"
+  local log_file="${4:-/tmp/${server_name}.log}"
+
+  echo "🚀 Запуск $server_name в фоновом режиме"
+  echo "📋 Команда: $server_command"
+  echo "🌐 Порт: $port"
+  echo "📝 Лог файл: $log_file"
+
+  # Запуск в фоне с перенаправлением логов
+  nohup $server_command > "$log_file" 2>&1 &
+  local server_pid=$!
+
+  # Сохранение PID для управления
+  echo "$server_pid" > "/tmp/${server_name}.pid"
+
+  echo "✅ Сервер запущен в фоне (PID: $server_pid)"
+  echo "📋 Для остановки используйте: stop_server_background $server_name"
+
+  # Проверка готовности сервера
+  check_server_readiness "$server_name" "$port" 30
+
+  return 0
+}
+```
+
+### Умный запуск с проверкой порта
+```bash
+# Запуск с проверкой занятости порта
+smart_server_start() {
+  local server_command="$1"
+  local server_name="$2"
+  local port="$3"
+
+  echo "🔍 Проверка доступности порта $port"
+
+  # Проверка занятости порта
+  if lsof -i ":$port" >/dev/null 2>&1; then
+    echo "⚠️ Порт $port уже занят"
+    echo "📋 Процессы на порту $port:"
+    lsof -i ":$port"
+
+    read -p "Остановить существующий процесс? (y/N): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      echo "🛑 Остановка процесса на порту $port"
+      kill $(lsof -t -i ":$port") 2>/dev/null || true
+      sleep 2
+    else
+      echo "❌ Отменяем запуск сервера"
+      return 1
+    fi
+  fi
+
+  # Запуск сервера в фоне
+  start_server_background "$server_command" "$server_name" "$port"
+}
+```
+
+### Мониторинг фоновых серверов
+```bash
+# Проверка готовности сервера
+check_server_readiness() {
+  local server_name="$1"
+  local port="$2"
+  local timeout="${3:-30}"
+  local check_url="${4:-http://localhost:$port}"
+
+  echo "⏳ Ожидание готовности сервера $server_name (timeout: $timeout сек)"
+
+  local elapsed=0
+  local check_interval=2
+
+  while [ $elapsed -lt $timeout ]; do
+    # Проверка HTTP ответа
+    if curl -s "$check_url" >/dev/null 2>&1; then
+      echo "✅ Сервер $server_name готов к работе"
+      echo "🌐 Доступен по адресу: $check_url"
+      return 0
+    fi
+
+    # Проверка что процесс еще работает
+    local pid_file="/tmp/${server_name}.pid"
+    if [ -f "$pid_file" ]; then
+      local server_pid=$(cat "$pid_file")
+      if ! kill -0 "$server_pid" 2>/dev/null; then
+        echo "❌ Процесс сервера $server_name завершился неожиданно"
+        echo "📝 Проверьте логи: /tmp/${server_name}.log"
+        return 1
+      fi
+    fi
+
+    sleep $check_interval
+    elapsed=$((elapsed + check_interval))
+    printf "."
+  done
+
+  echo ""
+  echo "⏰ Timeout: Сервер $server_name не ответил в течение $timeout секунд"
+  echo "📝 Проверьте логи: /tmp/${server_name}.log"
+  return 124
+}
+```
+
+## 📋 УПРАВЛЕНИЕ ФОНОВЫМИ ПРОЦЕССАМИ
+
+### Остановка фоновых серверов
+```bash
+# Остановка сервера по имени
+stop_server_background() {
+  local server_name="$1"
+  local pid_file="/tmp/${server_name}.pid"
+
+  if [ ! -f "$pid_file" ]; then
+    echo "❌ PID файл для $server_name не найден"
+    return 1
+  fi
+
+  local server_pid=$(cat "$pid_file")
+  echo "🛑 Остановка сервера $server_name (PID: $server_pid)"
+
+  # Мягкая остановка
+  if kill -TERM "$server_pid" 2>/dev/null; then
+    echo "📤 Отправлен сигнал TERM"
+
+    # Ожидание завершения
+    local timeout=10
+    local elapsed=0
+
+    while [ $elapsed -lt $timeout ] && kill -0 "$server_pid" 2>/dev/null; do
+      sleep 1
+      elapsed=$((elapsed + 1))
+      printf "."
+    done
+    echo ""
+
+    # Проверка завершения
+    if kill -0 "$server_pid" 2>/dev/null; then
+      echo "⚠️ Процесс не завершился, принудительная остановка"
+      kill -KILL "$server_pid" 2>/dev/null || true
+    fi
+
+    echo "✅ Сервер $server_name остановлен"
+  else
+    echo "❌ Не удалось остановить процесс $server_pid"
+    return 1
+  fi
+
+  # Очистка файлов
+  rm -f "$pid_file"
+  rm -f "/tmp/${server_name}.log"
+}
+
+# Остановка всех фоновых серверов
+stop_all_servers() {
+  echo "🛑 Остановка всех фоновых серверов"
+
+  local pid_files=$(find /tmp -name "*.pid" -type f 2>/dev/null)
+
+  if [ -z "$pid_files" ]; then
+    echo "ℹ️ Нет активных фоновых серверов"
+    return 0
+  fi
+
+  for pid_file in $pid_files; do
+    local server_name=$(basename "$pid_file" .pid)
+    echo "🔄 Остановка: $server_name"
+    stop_server_background "$server_name"
+  done
+
+  echo "✅ Все серверы остановлены"
+}
+```
+
+### Статус фоновых серверов
+```bash
+# Показать статус всех фоновых серверов
+show_servers_status() {
+  echo "📊 СТАТУС ФОНОВЫХ СЕРВЕРОВ"
+  echo "=========================="
+
+  local pid_files=$(find /tmp -name "*.pid" -type f 2>/dev/null)
+
+  if [ -z "$pid_files" ]; then
+    echo "ℹ️ Нет активных фоновых серверов"
+    return 0
+  fi
+
+  printf "%-15s %-8s %-10s %-20s\n" "СЕРВЕР" "PID" "СТАТУС" "ВРЕМЯ РАБОТЫ"
+  printf "%-15s %-8s %-10s %-20s\n" "-------" "---" "------" "------------"
+
+  for pid_file in $pid_files; do
+    local server_name=$(basename "$pid_file" .pid)
+    local server_pid=$(cat "$pid_file" 2>/dev/null)
+
+    if [ -n "$server_pid" ] && kill -0 "$server_pid" 2>/dev/null; then
+      local uptime=$(ps -o etime= -p "$server_pid" 2>/dev/null | tr -d ' ')
+      printf "%-15s %-8s %-10s %-20s\n" "$server_name" "$server_pid" "RUNNING" "$uptime"
+    else
+      printf "%-15s %-8s %-10s %-20s\n" "$server_name" "$server_pid" "STOPPED" "N/A"
+      # Очистка мертвого PID файла
+      rm -f "$pid_file"
+    fi
+  done
+}
+```
+
+## 🔄 АВТОМАТИЧЕСКОЕ УПРАВЛЕНИЕ
+
+### Автоматический перезапуск
+```bash
+# Мониторинг и автоматический перезапуск серверов
+monitor_and_restart() {
+  local server_name="$1"
+  local server_command="$2"
+  local port="$3"
+  local check_interval="${4:-30}"
+
+  echo "👁️ Запуск мониторинга для $server_name (проверка каждые $check_interval сек)"
+
+  while true; do
+    local pid_file="/tmp/${server_name}.pid"
+
+    if [ -f "$pid_file" ]; then
+      local server_pid=$(cat "$pid_file")
+
+      # Проверка что процесс работает
+      if kill -0 "$server_pid" 2>/dev/null; then
+        # Проверка что сервер отвечает
+        if ! curl -s "http://localhost:$port" >/dev/null 2>&1; then
+          echo "⚠️ Сервер $server_name не отвечает, перезапуск..."
+          stop_server_background "$server_name"
+          sleep 5
+          start_server_background "$server_command" "$server_name" "$port"
+        fi
+      else
+        echo "⚠️ Процесс $server_name завершился, перезапуск..."
+        rm -f "$pid_file"
+        start_server_background "$server_command" "$server_name" "$port"
+      fi
+    else
+      echo "⚠️ Сервер $server_name не запущен, запуск..."
+      start_server_background "$server_command" "$server_name" "$port"
+    fi
+
+    sleep "$check_interval"
+  done
+}
+```
+
+### Graceful shutdown
+```bash
+# Корректное завершение всех серверов при выходе
+setup_graceful_shutdown() {
+  echo "🔧 Настройка корректного завершения серверов"
+
+  # Обработчик сигналов
+  trap 'graceful_shutdown' EXIT INT TERM
+
+  graceful_shutdown() {
+    echo ""
+    echo "🛑 Получен сигнал завершения, остановка всех серверов..."
+    stop_all_servers
+    echo "👋 Завершение работы"
+    exit 0
+  }
+}
+```
+
+## 📊 ЛОГИРОВАНИЕ И МОНИТОРИНГ
+
+### Централизованное логирование
+```bash
+# Настройка логирования для фоновых серверов
+setup_server_logging() {
+  local server_name="$1"
+  local log_level="${2:-info}"
+  local log_dir="/tmp/server_logs"
+
+  mkdir -p "$log_dir"
+
+  local log_file="$log_dir/${server_name}.log"
+  local error_log="$log_dir/${server_name}.error.log"
+
+  echo "📝 Настройка логирования для $server_name"
+  echo "   📄 Основной лог: $log_file"
+  echo "   ❌ Лог ошибок: $error_log"
+
+  # Ротация логов
+  if [ -f "$log_file" ] && [ $(stat -f%z "$log_file" 2>/dev/null || stat -c%s "$log_file") -gt 10485760 ]; then
+    mv "$log_file" "${log_file}.old"
+    echo "🔄 Выполнена ротация лога $server_name"
+  fi
+
+  echo "$log_file"
+}
+
+# Просмотр логов сервера
+show_server_logs() {
+  local server_name="$1"
+  local lines="${2:-50}"
+  local log_file="/tmp/server_logs/${server_name}.log"
+
+  if [ ! -f "$log_file" ]; then
+    echo "❌ Лог файл для $server_name не найден"
+    return 1
+  fi
+
+  echo "📝 Последние $lines строк лога для $server_name:"
+  echo "=============================================="
+  tail -n "$lines" "$log_file"
+}
+```
+
+## 🎯 СПЕЦИАЛИЗИРОВАННЫЕ ЗАПУСКИ
+
+### Запуск разных типов серверов
+```bash
+# Запуск Node.js/npm сервера
+start_npm_server() {
+  local project_dir="$1"
+  local script_name="${2:-start}"
+  local port="${3:-3000}"
+
+  cd "$project_dir" || return 1
+
+  echo "📦 Запуск npm сервера в $project_dir"
+  start_server_background "npm run $script_name" "npm-server" "$port"
+}
+
+# Запуск Python сервера
+start_python_server() {
+  local script_path="$1"
+  local port="${2:-8000}"
+
+  echo "🐍 Запуск Python сервера"
+  start_server_background "python $script_path" "python-server" "$port"
+}
+
+# Запуск статического сервера
+start_static_server() {
+  local directory="$1"
+  local port="${2:-8080}"
+
+  echo "📁 Запуск статического сервера для $directory"
+  start_server_background "python -m http.server $port" "static-server" "$port"
+}
+```
+
+## 🚨 ОБРАБОТКА ОШИБОК
+
+### Диагностика проблем
+```bash
+# Диагностика проблем с фоновыми серверами
+diagnose_server_issues() {
+  local server_name="$1"
+
+  echo "🔍 ДИАГНОСТИКА СЕРВЕРА: $server_name"
+  echo "==================================="
+
+  local pid_file="/tmp/${server_name}.pid"
+  local log_file="/tmp/server_logs/${server_name}.log"
+
+  # Проверка PID файла
+  if [ ! -f "$pid_file" ]; then
+    echo "❌ PID файл не найден: $pid_file"
+    echo "💡 Сервер возможно не был запущен или завершился"
+    return 1
+  fi
+
+  local server_pid=$(cat "$pid_file")
+  echo "📋 PID сервера: $server_pid"
+
+  # Проверка процесса
+  if kill -0 "$server_pid" 2>/dev/null; then
+    echo "✅ Процесс активен"
+
+    # Проверка использования ресурсов
+    echo "📊 Использование ресурсов:"
+    ps -p "$server_pid" -o pid,ppid,%cpu,%mem,etime,cmd
+  else
+    echo "❌ Процесс не найден"
+
+    # Анализ логов
+    if [ -f "$log_file" ]; then
+      echo "📝 Последние строки лога:"
+      tail -n 10 "$log_file"
+    fi
+  fi
+
+  # Проверка портов
+  echo "🌐 Статус портов:"
+  netstat -tulpn 2>/dev/null | grep "$server_pid" || echo "Нет открытых портов"
+}
+```
+
+Эта система фонового выполнения обеспечивает надежный запуск и управление серверными процессами, позволяя Memory Bank системе продолжать работу без блокировки на серверных командах.
