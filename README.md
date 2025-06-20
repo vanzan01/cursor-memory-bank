@@ -1,8 +1,8 @@
-# Cursor Memory Bank v1.1
+# Cursor Memory Bank v1.1.1
 
-> **AI-Powered Context Management System with CONTINUE Support**
+> **AI-Powered Context Management System with Enhanced QA & Cleanup**
 
-A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, persistent context across development sessions, and seamless work resumption with the revolutionary CONTINUE command.
+A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, persistent context across development sessions, seamless work resumption with the revolutionary CONTINUE command, and advanced QA processes for system maintenance and documentation consistency.
 
 **📖 [Русская документация / Russian Documentation](README_ru.md)**
 
@@ -86,9 +86,11 @@ Get up and running in under 5 minutes:
 ### 📊 Advanced Task Management
 - **Automatic Complexity Detection**: AI determines optimal workflow
 - **Progress Tracking**: Real-time status monitoring with persistent state
-- **Quality Assurance**: Built-in verification processes
+- **Quality Assurance**: Built-in verification processes with automated cleanup
 - **Task Discovery**: Automatic detection of TODO/FIXME items and incomplete tasks
 - **Multi-language Task Detection**: Supports English and Russian task markers
+- **File Management QA**: Git-based auditing and automated reference cleanup
+- **Documentation Consistency**: Automated validation and cleanup of dead references
 
 ### 🌐 Multi-Language Support
 - **Bilingual Documentation**: English and Russian
@@ -108,7 +110,9 @@ Get up and running in under 5 minutes:
 - **Project Planning**: Collaborative planning workflows
 - **Code Reviews**: Structured review processes
 - **Knowledge Sharing**: Team memory and context sharing
-- **Quality Assurance**: Consistent QA processes
+- **Quality Assurance**: Consistent QA processes with automated cleanup
+- **Documentation Maintenance**: Automated reference validation and cleanup
+- **System Cleanup**: Git-based auditing for file management and consistency
 
 ### For Enterprise
 - **Large-Scale Projects**: Complex system development
