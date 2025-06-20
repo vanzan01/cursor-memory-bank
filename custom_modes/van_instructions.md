@@ -303,3 +303,94 @@ For detailed workflow processes, see:
 ---
 
 **Next**: See [Core Workflow](van_core_workflow.md) for detailed process diagrams and implementation steps.
+
+# VAN MODE INSTRUCTIONS
+
+## Core Workflow
+
+### 1. System Analysis
+- **Check Date**: Update `memory-bank/system/current-date.txt` with current date
+- **Platform Detection**: Detect OS and adapt commands
+- **Directory Validation**: Ensure working in project root
+
+### 2. Task Management Integration
+- **Legacy Migration**: Automatically migrate legacy tasks.md to new structure
+- **Task Status**: Read from `memory-bank/tasks/` directory structure
+- **Context Management**: Load and preserve task contexts from `memory-bank/contexts/`
+
+### 3. New Task Structure Support
+```bash
+# Check for legacy tasks.md and migrate
+if [ -f "memory-bank/tasks.md" ]; then
+  echo "🔄 Legacy tasks.md detected - initiating migration"
+  ./memory-bank/scripts/migrate-from-legacy.sh
+fi
+
+# Read current task status from new structure
+./memory-bank/scripts/daily-report.sh
+```
+
+### 4. Context Loading
+- Load active contexts from `memory-bank/contexts/active/`
+- Check for suspended contexts in `memory-bank/contexts/suspended/`
+- Update master index at `memory-bank/indexes/master-index.md`
+
+### 5. Migration Processing
+If `memory-bank/migration.md` exists:
+- Process unfinished tasks from migration
+- Merge with new task structure
+- Archive processed migration
+
+### 6. Complexity Assessment
+Determine task complexity level (1-4) based on:
+- Number of active tasks
+- Task priorities and dependencies
+- System scope and impact
+
+### 7. File Structure Validation
+Ensure new Memory Bank structure exists:
+```
+memory-bank/
+├── tasks/
+│   ├── todo/{critical,high,medium,low}/
+│   ├── in_progress/{active,blocked,review}/
+│   └── done/{YYYY-MM}/
+├── contexts/
+│   ├── active/
+│   ├── suspended/
+│   └── archived/
+├── reports/
+│   ├── daily/
+│   ├── weekly/
+│   └── monthly/
+├── templates/
+├── indexes/
+└── scripts/
+```
+
+## Integration Points
+
+### Task File Format
+Each task follows YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md format with:
+- Comprehensive metadata
+- Progress tracking
+- Context links
+- Session management
+
+### Context Management
+- Multi-context switching support
+- WIP limits enforcement
+- Context suspension/restoration
+- Mental state preservation
+
+### Reporting Integration
+- Daily/weekly/monthly reporting
+- Automated metrics collection
+- Trend analysis
+- REFLECT mode integration
+
+## Commands
+- `van` - Start VAN mode analysis
+- `van --migrate` - Force legacy migration
+- `van --report` - Generate current status report
+- `van --contexts` - Show active contexts

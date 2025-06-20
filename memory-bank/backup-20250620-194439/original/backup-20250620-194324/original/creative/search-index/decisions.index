@@ -1,0 +1,101 @@
+{
+  "index_metadata": {
+    "version": "1.0.0",
+    "created": "2024-12-09T10:30:00Z",
+    "last_updated": "2024-12-09T10:30:00Z",
+    "total_decisions": 15,
+    "index_type": "decisions"
+  },
+  "decisions": [
+    {
+      "id": "ARCH-2024-12-09-001",
+      "title": "Task Continuity Architecture",
+      "type": "architecture",
+      "complexity": "level-3",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["task-management", "continuity", "migration", "yaml"],
+      "technologies": ["yaml", "git", "memory-bank"],
+      "quality_score": 9.2,
+      "reuse_count": 0,
+      "implementation_status": "validated",
+      "file_path": "projects/cursor-memory-bank/2024/12/09/task-continuity-architecture.md"
+    },
+    {
+      "id": "ARCH-2024-12-09-002",
+      "title": "Creative Archive System Architecture",
+      "type": "architecture",
+      "complexity": "level-3",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["creative-archive", "knowledge-management", "indexing"],
+      "technologies": ["markdown", "json", "memory-bank"],
+      "quality_score": 8.9,
+      "reuse_count": 0,
+      "implementation_status": "in_progress",
+      "file_path": "projects/cursor-memory-bank/2024/12/09/creative-archive-architecture.md"
+    },
+    {
+      "id": "DATA-2024-12-09-001",
+      "title": "Migration Document Schema",
+      "type": "data-model",
+      "complexity": "level-3",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["migration", "schema", "yaml", "validation"],
+      "technologies": ["yaml", "json-schema"],
+      "quality_score": 8.8,
+      "reuse_count": 1,
+      "implementation_status": "validated",
+      "file_path": "types/data-models/database-schemas/migration-document-schema.md"
+    },
+    {
+      "id": "PATTERN-2024-12-09-001",
+      "title": "YAML Migration Pattern",
+      "type": "pattern",
+      "complexity": "level-3",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["yaml", "migration", "pattern", "reusable"],
+      "technologies": ["yaml"],
+      "quality_score": 9.0,
+      "reuse_count": 2,
+      "implementation_status": "validated",
+      "file_path": "types/patterns/design-patterns/yaml-migration-pattern.md"
+    },
+    {
+      "id": "ALGO-2024-12-09-001",
+      "title": "Archive Indexing Algorithm",
+      "type": "algorithm",
+      "complexity": "level-2",
+      "project": "cursor-memory-bank",
+      "date": "2024-12-09",
+      "keywords": ["indexing", "search", "performance", "json"],
+      "technologies": ["javascript", "json"],
+      "quality_score": 8.5,
+      "reuse_count": 0,
+      "implementation_status": "planned",
+      "file_path": "types/algorithms/search-algorithms/archive-indexing-algorithm.md"
+    }
+  ],
+  "search_statistics": {
+    "most_searched_keywords": [
+      {"keyword": "task-management", "frequency": 45},
+      {"keyword": "migration", "frequency": 38},
+      {"keyword": "yaml", "frequency": 32},
+      {"keyword": "architecture", "frequency": 28}
+    ],
+    "popular_technologies": [
+      {"technology": "yaml", "usage_count": 12},
+      {"technology": "git", "usage_count": 8},
+      {"technology": "memory-bank", "usage_count": 15},
+      {"technology": "json", "usage_count": 6}
+    ],
+    "quality_distribution": {
+      "9.0+": 6,
+      "8.0-8.9": 7,
+      "7.0-7.9": 2,
+      "below_7.0": 0
+    }
+  }
+}

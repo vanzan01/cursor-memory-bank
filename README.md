@@ -1,298 +1,250 @@
-# Cursor Memory Bank v1.1.1
+# Cursor Memory Bank
 
-> **AI-Powered Context Management System with Enhanced QA & Cleanup**
+> **TL;DR:** Comprehensive development workflow system with intelligent task management, context switching, and automated reporting.
 
-A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, persistent context across development sessions, seamless work resumption with the revolutionary CONTINUE command, and advanced QA processes for system maintenance and documentation consistency.
+## 🚀 What's New in Latest Release
 
-**📖 [Русская документация / Russian Documentation](README_ru.md)**
+### Task Management Revolution (2025-06-20)
+- **New Task Structure**: YYYY-MM-DD format with priority-based organization
+- **Context Management**: Multi-context switching with WIP limits
+- **Automated Reporting**: Daily/weekly/monthly reports with metrics
+- **Legacy Migration**: Automatic migration from old tasks.md format
+- **Enhanced Folder Structure**: Organized by priority and status
 
-## 🚀 Quick Start
+### Key Features
+- ✅ **Automated Task Organization**: Priority-based folder structure
+- 🔄 **Context Switching**: Seamless switching between multiple tasks
+- 📊 **Comprehensive Reporting**: Daily, weekly, and monthly insights
+- 🔍 **Master Index**: Centralized navigation and search
+- 🛡️ **Safe Migration**: Automatic legacy format migration
+- 📈 **Trend Analysis**: Performance metrics and productivity insights
 
-Get up and running in under 5 minutes:
+## 📁 New File Structure
 
-### Prerequisites
-
-- [Cursor IDE](https://cursor.sh/) installed
-- Basic familiarity with AI-assisted development
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/cursor-memory-bank.git
-   cd cursor-memory-bank
-   ```
-
-2. **Set up Memory Bank**
-   ```bash
-   # Copy rules to Cursor configuration
-   cp -r rules/ .cursor/rules/
-
-   # Initialize Memory Bank structure
-   mkdir -p memory-bank/{archive,creative,development,reflection}
-   ```
-
-3. **Verify installation**
-   ```bash
-   # Check if rules are properly installed
-   ls .cursor/rules/isolation_rules/
-   ```
-
-4. **Start using Memory Bank**
-   - Open your project in Cursor IDE
-   - Type `VAN` to initialize Memory Bank for any task
-   - Follow the guided workflow
-
-## 📖 Documentation
-
-### 📚 User Guides
-- **[Getting Started](docs/user-guide/getting-started.md)** - Your first steps with Memory Bank
-- **[Workflow Guide](docs/user-guide/workflow-guide.md)** - Complete workflow documentation
-- **[Modes Reference](docs/user-guide/modes-reference.md)** - All 7 modes explained
-- **[Best Practices](docs/user-guide/best-practices.md)** - Tips for effective usage
-
-### 🛠️ Installation & Setup
-- **[Quick Start Guide](docs/installation/quick-start.md)** - 5-minute setup
-- **[Detailed Setup](docs/installation/detailed-setup.md)** - Complete installation guide
-- **[Troubleshooting](docs/installation/troubleshooting.md)** - Common issues and solutions
-
-### 💡 Examples & Tutorials
-- **[Simple Bug Fix](docs/examples/simple-bug-fix.md)** - Level 1 workflow example
-- **[Feature Development](docs/examples/feature-development.md)** - Level 3 workflow example
-- **[Complex System](docs/examples/complex-system.md)** - Level 4 enterprise workflow
-- **[Real-World Scenarios](docs/examples/real-world-scenarios.md)** - Production examples
-
-### 🏗️ Architecture & API
-- **[System Overview](docs/architecture/system-overview.md)** - High-level architecture
-- **[Memory Bank Design](docs/architecture/memory-bank-design.md)** - Core system design
-- **[Mode Architecture](docs/architecture/mode-architecture.md)** - Workflow modes explained
-- **[API Reference](docs/api/memory-bank-api.md)** - Complete API documentation
-
-## ✨ Key Features
-
-### 🧠 Intelligent Context Management
-- **Persistent Memory**: Maintains context across sessions with automatic save/restore
-- **Smart Categorization**: Automatically organizes information
-- **Context Switching**: Seamless transitions between tasks
-- **CONTINUE Command**: Resume interrupted work exactly where you left off
-- **Project Awareness**: Automatic discovery of project rules and tasks
-
-### 🔄 Structured Workflows
-- **7 Operational Modes**: VAN, PLAN, CREATIVE, IMPLEMENT, QA, REFLECT, UNIVERSAL
-- **4 Complexity Levels**: From quick fixes to enterprise systems
-- **Guided Processes**: Step-by-step workflow guidance
-- **Session Continuity**: Never lose progress on interrupted tasks
-
-### 📊 Advanced Task Management
-- **Automatic Complexity Detection**: AI determines optimal workflow
-- **Progress Tracking**: Real-time status monitoring with persistent state
-- **Quality Assurance**: Built-in verification processes with automated cleanup
-- **Task Discovery**: Automatic detection of TODO/FIXME items and incomplete tasks
-- **Multi-language Task Detection**: Supports English and Russian task markers
-- **File Management QA**: Git-based auditing and automated reference cleanup
-- **Documentation Consistency**: Automated validation and cleanup of dead references
-
-### 🌐 Multi-Language Support
-- **Bilingual Documentation**: English and Russian
-- **Localized Workflows**: Culture-aware processes
-- **International Teams**: Global collaboration support
-- **Multi-language Task Recognition**: Finds tasks in any supported language
-
-## 🎯 Use Cases
-
-### For Individual Developers
-- **Bug Fixing**: Systematic approach to issue resolution
-- **Feature Development**: Structured feature implementation
-- **Code Refactoring**: Organized refactoring workflows
-- **Learning**: Guided development processes
-
-### For Development Teams
-- **Project Planning**: Collaborative planning workflows
-- **Code Reviews**: Structured review processes
-- **Knowledge Sharing**: Team memory and context sharing
-- **Quality Assurance**: Consistent QA processes with automated cleanup
-- **Documentation Maintenance**: Automated reference validation and cleanup
-- **System Cleanup**: Git-based auditing for file management and consistency
-
-### For Enterprise
-- **Large-Scale Projects**: Complex system development
-- **Compliance**: Audit-ready development processes
-- **Standardization**: Consistent development practices
-- **Training**: Onboarding and skill development
-
-## 🔧 How It Works
-
-Memory Bank operates through a sophisticated mode-based system with automatic context management:
-
-```mermaid
-graph TD
-    Start([🚀 Start Task]) --> VAN[🔍 VAN<br>Initialize & Analyze]
-    VAN --> SaveContext{💾 Save Context}
-    SaveContext --> PLAN[📋 PLAN<br>Strategy & Architecture]
-    PLAN --> CREATIVE[🎨 CREATIVE<br>Design & Solutions]
-    CREATIVE --> IMPLEMENT[🔨 IMPLEMENT<br>Build & Code]
-    IMPLEMENT --> QA[✅ QA<br>Test & Verify]
-    QA --> REFLECT[📚 REFLECT<br>Learn & Document]
-    REFLECT --> Complete([✅ Task Complete])
-
-    %% Context Management
-    SaveContext -.-> ContextFile[(📄 current-context.md)]
-    ContextFile -.-> Continue[🔄 CONTINUE Command]
-    Continue -.-> RestoreMode{🎯 Restore Mode}
-    RestoreMode --> PLAN
-    RestoreMode --> CREATIVE
-    RestoreMode --> IMPLEMENT
-    RestoreMode --> QA
-    RestoreMode --> REFLECT
-
-    %% Universal Mode
-    VAN --> UNIVERSAL[🌐 UNIVERSAL<br>Auto-Workflow]
-    UNIVERSAL --> AutoTransition{🔄 Auto Mode<br>Transitions}
-    AutoTransition --> PLAN
-    AutoTransition --> CREATIVE
-    AutoTransition --> IMPLEMENT
-    AutoTransition --> QA
-    AutoTransition --> REFLECT
-
-    %% Interruption Handling
-    PLAN -.-> Interrupt([⚡ Interruption])
-    CREATIVE -.-> Interrupt
-    IMPLEMENT -.-> Interrupt
-    QA -.-> Interrupt
-    REFLECT -.-> Interrupt
-    Interrupt -.-> SaveState[💾 Save Current State]
-    SaveState -.-> ContextFile
-
-    style SaveContext fill:#e1f5fe
-    style ContextFile fill:#f3e5f5
-    style Continue fill:#e8f5e8
-    style UNIVERSAL fill:#fff3e0
+```
+memory-bank/
+├── tasks/
+│   ├── todo/
+│   │   ├── critical/     # System-blocking issues
+│   │   ├── high/         # Feature-blocking tasks
+│   │   ├── medium/       # Enhancements
+│   │   └── low/          # Nice-to-have items
+│   ├── in_progress/
+│   │   ├── active/       # Currently working on
+│   │   ├── blocked/      # Waiting for dependencies
+│   │   └── review/       # Ready for review
+│   └── done/
+│       ├── 2025-06/      # Completed this month
+│       ├── 2025-05/      # Previous months
+│       └── ...
+├── contexts/
+│   ├── active/           # Current work contexts
+│   ├── suspended/        # Paused contexts
+│   └── archived/         # Completed contexts
+├── reports/
+│   ├── daily/            # Daily task summaries
+│   ├── weekly/           # Weekly progress reports
+│   └── monthly/          # Monthly trend analysis
+├── templates/            # Task and context templates
+├── indexes/              # Master index and navigation
+└── scripts/              # Automation scripts
 ```
 
-### Mode Overview
+## 📋 Task File Format
 
-- **🔍 VAN Mode**: Task initialization, complexity assessment, and project discovery
-- **📋 PLAN Mode**: Strategic planning and architecture design
-- **🎨 CREATIVE Mode**: Creative problem-solving and design decisions
-- **🔨 IMPLEMENT Mode**: Code implementation and development
-- **✅ QA Mode**: Quality assurance and testing
-- **📚 REFLECT Mode**: Learning and knowledge capture
-- **🌐 UNIVERSAL Mode**: Automatic workflow management with intelligent transitions
+Each task follows the `YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md` format:
 
-### Context Management Features
+```markdown
+# Task: Implement User Authentication
 
-- **💾 Automatic Context Saving**: Every mode transition saves current state
-- **🔄 CONTINUE Command**: Resume work from any interruption point
-- **📄 Persistent State**: Context maintained in `memory-bank/system/current-context.md`
-- **🎯 Smart Restoration**: Automatically returns to the correct mode and phase
-- **📊 Progress Tracking**: Real-time monitoring of task completion status
+**Created**: 2025-06-20
+**Priority**: HIGH
+**Category**: FEATURE
+**Status**: TODO
+**Estimated Time**: 4 hours
 
-## 🌟 What Makes Memory Bank Special
+## 📋 Task Metadata
+- **ID**: 2025-06-20-HIGH-FEATURE-implement-user-authentication
+- **Dependencies**: []
+- **Blocking**: [user-dashboard, admin-panel]
+- **Context**: authentication-system
 
-### 🤖 AI-Native Design
-Built specifically for AI-assisted development, Memory Bank understands how AI assistants work and optimizes the collaboration between human developers and AI.
+## 🎯 Objectives
+- [ ] Design authentication flow
+- [ ] Implement login/logout
+- [ ] Add password reset
+- [ ] Create user sessions
 
-### 📈 Scalable Complexity
-From simple bug fixes to enterprise-scale systems, Memory Bank adapts its workflow to match the complexity of your task.
+## 📊 Progress Tracking
+- **Completion**: 0%
+- **Time Spent**: 0h
+- **Sessions**: 0
+```
 
-### 🧩 Modular Architecture
-Each component is designed to work independently while contributing to a cohesive whole, allowing for customization and extension.
+## 🔄 Context Management
 
-### 📚 Knowledge Accumulation
-Every project builds organizational knowledge, creating a learning system that improves over time.
+Work contexts help manage focus and enable seamless task switching:
 
-## 🚦 Getting Started Examples
+```markdown
+# Context: Authentication System
 
-### Quick Bug Fix (Level 1)
+**Created**: 2025-06-20
+**Status**: ACTIVE
+**WIP Limit**: 3 tasks
+**Focus Session**: 25 minutes
+
+## 🎯 Current Focus
+Working on user authentication implementation
+
+## 📋 Active Tasks
+1. 2025-06-20-HIGH-FEATURE-implement-user-authentication
+2. 2025-06-20-MEDIUM-FEATURE-add-password-validation
+
+## 🧠 Mental State
+- Understanding OAuth 2.0 flow
+- Researching JWT best practices
+- Planning database schema changes
+```
+
+## 📊 Reporting System
+
+### Daily Reports
 ```bash
-# Initialize for a simple bug fix
-VAN
-# Memory Bank will guide you through:
-# 1. Problem identification
-# 2. Quick solution implementation
-# 3. Testing and verification
+./memory-bank/scripts/daily-report.sh
 ```
 
-### Feature Development (Level 3)
+### Weekly Reports
 ```bash
-# Initialize for feature development
-VAN
-# Memory Bank will guide you through:
-# 1. Requirements analysis
-# 2. Creative design phase
-# 3. Structured implementation
-# 4. Comprehensive testing
+./memory-bank/scripts/weekly-report.sh
 ```
 
-### Resume Interrupted Work
+### View Reports
 ```bash
-# Resume any interrupted task
-CONTINUE
-# or in Russian
-ПРОДОЛЖАЙ
+# Today's report
+cat memory-bank/reports/daily/daily-report-$(date +%Y-%m-%d).md
 
-# Memory Bank will:
-# 1. Load your saved context
-# 2. Restore the exact working mode
-# 3. Continue from where you left off
-# 4. Show current progress status
+# This week's report
+cat memory-bank/reports/weekly/weekly-report-$(date +%Y-W%V).md
 ```
 
-## 🎯 New Commands
+## 🔧 Quick Start
 
-### Context Management Commands
-- **`CONTINUE`** / **`ПРОДОЛЖАЙ`** - Resume interrupted work
-- **`SHOW CONTEXT`** - Display current context and progress
-- **`CLEAR CONTEXT`** - Clear saved context (start fresh)
-- **`SCAN RULES`** - Discover and integrate project rules
-- **`FIND TASKS`** - Search for TODO/FIXME items in documentation
+### 1. Automatic Migration
+If you have an existing `memory-bank/tasks.md`, it will be automatically migrated:
 
-### Project Discovery Features
-Memory Bank now automatically discovers:
-- **Project Rules**: Scans `rules/*.md` files for project-specific guidelines
-- **TODO Items**: Finds `TODO`, `FIXME`, `HACK` markers in documentation
-- **Incomplete Tasks**: Detects unchecked `- [ ]` items
-- **Russian Tasks**: Recognizes `нужно`, `требуется`, `добавить`, `исправить` markers
-- **File Context**: Includes file sizes and line counts for better understanding
+```bash
+# Migration happens automatically in VAN mode
+# Or run manually:
+./memory-bank/scripts/migrate-from-legacy.sh
+```
 
-## 🤝 Contributing
+### 2. Create New Task
+```bash
+# Use the task template
+cp memory-bank/templates/task-template.md memory-bank/tasks/todo/high/2025-06-20-HIGH-FEATURE-my-new-task.md
+```
 
-We welcome contributions from the community! Here's how you can help:
+### 3. Start Working
+```bash
+# Generate daily report to see current status
+./memory-bank/scripts/daily-report.sh
 
-### Ways to Contribute
-- **🐛 Bug Reports**: Found an issue? Let us know!
-- **💡 Feature Requests**: Have an idea? We'd love to hear it!
-- **📖 Documentation**: Help improve our docs
-- **💻 Code**: Contribute to the codebase
-- **🌐 Translations**: Help us support more languages
+# View master index for navigation
+cat memory-bank/indexes/master-index.md
+```
 
-### Getting Started
-1. Read our [Contributing Guide](CONTRIBUTING.md)
-2. Check out [open issues](https://github.com/your-username/cursor-memory-bank/issues)
-3. Join our [community discussions](https://github.com/your-username/cursor-memory-bank/discussions)
+### 4. Context Switching
+```bash
+# Create new context
+cp memory-bank/templates/context-template.md memory-bank/contexts/active/my-context.md
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+# Suspend current context
+mv memory-bank/contexts/active/current-context.md memory-bank/contexts/suspended/
+```
 
-## 📄 License
+## 🎯 Memory Bank Modes
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### VAN Mode
+- Automatic legacy migration
+- System analysis and validation
+- Task status overview
+- Context loading
 
-## 🔗 Links
+### PLAN Mode
+- Strategic planning with web research
+- Component analysis
+- Implementation roadmaps
 
-- **[Documentation](docs/)** - Complete documentation
-- **[Examples](examples/)** - Real-world usage examples
-- **[Issues](https://github.com/your-username/cursor-memory-bank/issues)** - Bug reports and feature requests
-- **[Discussions](https://github.com/your-username/cursor-memory-bank/discussions)** - Community discussions
-- **[Releases](https://github.com/your-username/cursor-memory-bank/releases)** - Version history
+### CREATIVE Mode
+- Architectural decision making
+- Design pattern selection
+- Multiple option analysis
 
-## 🙏 Acknowledgments
+### IMPLEMENT Mode
+- Code implementation
+- Progress tracking
+- Context management
 
-- **Cursor Team** - For creating an amazing AI-powered IDE
-- **Community Contributors** - For feedback, suggestions, and contributions
-- **Early Adopters** - For testing and providing valuable feedback
+### REFLECT Mode
+- Automated report generation
+- Performance analysis
+- Lessons learned documentation
+
+### ARCHIVE Mode
+- Task archival by date
+- Context preservation
+- Knowledge extraction
+
+## 📈 Productivity Features
+
+### WIP Limits
+- Maximum 3-5 active tasks per context
+- Automatic warnings for overload
+- Focus session management
+
+### Automated Metrics
+- Task completion rates
+- Time estimation accuracy
+- Context switching frequency
+- Productivity trends
+
+### Smart Navigation
+- Master index with statistics
+- Quick search and filters
+- Priority-based organization
+- Date-based sorting
+
+## 🛡️ Safety Features
+
+### Backup System
+- Automatic git commits
+- Legacy format preservation
+- Rollback capabilities
+
+### Migration Safety
+- Non-destructive migration
+- Validation and error handling
+- Progress tracking
+- Detailed logging
+
+## 🔗 Integration
+
+### Git Workflow
+- Feature branch development
+- Automated commits
+- Merge to main after ARCHIVE
+
+### IDE Integration
+- Cursor IDE custom modes
+- Template-based creation
+- Automated workflows
+
+### Web Search Integration
+- Research during PLAN phase
+- Error resolution in IMPLEMENT
+- Best practice discovery
 
 ---
 
-**Made with ❤️ for the AI-assisted development community**
-
-> 💡 **Tip**: Start with the [Quick Start Guide](docs/installation/quick-start.md) to get Memory Bank running in your project today!
+**Last Updated**: 2025-06-20
+**Version**: 2.0.0 - Task Management Revolution

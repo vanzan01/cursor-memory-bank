@@ -4,6 +4,126 @@ Your role is to facilitate the **reflection** on the completed task and then, up
 
 > **TL;DR:** Start by guiding the reflection process based on the completed implementation. Once reflection is documented, wait for the `ARCHIVE NOW` command to initiate the archiving process.
 
+# REFLECT & ARCHIVE MODE INSTRUCTIONS
+
+## REFLECT Mode
+
+### Enhanced Reporting Integration
+
+#### Daily Reports
+```bash
+# Generate daily report
+./memory-bank/scripts/daily-report.sh
+
+# View today's metrics
+cat memory-bank/reports/daily/daily-report-$(date +%Y-%m-%d).md
+```
+
+#### Weekly Reports
+```bash
+# Generate weekly report
+./memory-bank/scripts/weekly-report.sh
+
+# View current week's summary
+cat memory-bank/reports/weekly/weekly-report-$(date +%Y-W%V).md
+```
+
+#### Monthly Reports
+```bash
+# Generate monthly report (coming soon)
+./memory-bank/scripts/monthly-report.sh
+
+# View current month's summary
+cat memory-bank/reports/monthly/monthly-report-$(date +%Y-%m).md
+```
+
+### Task Analysis Integration
+
+#### Task Completion Analysis
+- Read completed tasks from `memory-bank/tasks/done/YYYY-MM/`
+- Analyze completion patterns and trends
+- Identify productivity insights
+
+#### Context Performance Review
+- Review context switching efficiency
+- Analyze WIP limits effectiveness
+- Evaluate focus session quality
+
+#### Process Improvement Identification
+- Compare planned vs actual completion times
+- Identify bottlenecks and blockers
+- Document lessons learned
+
+### Reflection Document Structure
+```markdown
+# Reflection - YYYY-MM-DD
+
+## 📊 Metrics Summary
+[Include daily/weekly report data]
+
+## 🎯 Goal Achievement
+[Analysis of completed tasks vs planned]
+
+## 💡 Lessons Learned
+[Key insights from task execution]
+
+## 🔄 Process Improvements
+[Identified optimizations]
+
+## 📈 Performance Trends
+[Analysis from reports]
+```
+
+## ARCHIVE Mode
+
+### Enhanced Archival Process
+
+#### Task Archival
+- Move completed tasks to `memory-bank/tasks/done/YYYY-MM/`
+- Archive associated contexts to `memory-bank/contexts/archived/`
+- Update master index with archival information
+
+#### Report Archival
+- Consolidate daily reports into weekly summaries
+- Archive weekly reports into monthly summaries
+- Maintain historical trend data
+
+#### Knowledge Preservation
+- Extract key insights from completed tasks
+- Document reusable patterns and solutions
+- Update system documentation
+
+### Archive Structure
+```
+memory-bank/archive/
+├── tasks/
+│   └── YYYY-MM/
+├── contexts/
+│   └── YYYY-MM/
+├── reports/
+│   ├── daily/YYYY-MM/
+│   ├── weekly/YYYY/
+│   └── monthly/YYYY/
+└── knowledge/
+    ├── patterns/
+    ├── solutions/
+    └── insights/
+```
+
+## Integration Commands
+
+### REFLECT Commands
+- `reflect --daily` - Generate and analyze daily report
+- `reflect --weekly` - Generate and analyze weekly report
+- `reflect --tasks` - Analyze task completion patterns
+- `reflect --contexts` - Review context switching efficiency
+
+### ARCHIVE Commands
+- `archive --tasks` - Archive completed tasks
+- `archive --reports` - Consolidate and archive reports
+- `archive --knowledge` - Extract and preserve insights
+- `archive --cleanup` - Clean up temporary files
+
 ```mermaid
 graph TD
     Start["🚀 START REFLECT+ARCHIVE MODE"] --> ReadDocs["📚 Read tasks.md, progress.md<br>.cursor/rules/isolation_rules/main.mdc"]
