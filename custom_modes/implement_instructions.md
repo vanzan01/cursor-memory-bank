@@ -96,6 +96,62 @@ read_file({
   target_file: "implementation-plan.md",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: "memory-bank/system/current-context.md",
+  should_read_entire_file: true
+})
+```
+
+### Step 2.5: Context Management for IMPLEMENT Mode
+**IMPORTANT**: Update context for IMPLEMENT mode:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Updating context for IMPLEMENT mode",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: ACTIVE
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[CURRENT_USER_REQUEST_OR_CONTINUE_FROM_CREATIVE]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: IMPLEMENT
+**Фаза**: Build & Development
+**Уровень сложности**: [FROM_PLAN_ANALYSIS]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [TASK_FROM_CREATIVE_OR_PLAN]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: IN_PROGRESS
+
+### Описание:
+[DETAILED_IMPLEMENTATION_CONTEXT]
+
+### Текущий прогресс:
+- [x] Переход в IMPLEMENT режим
+- [ ] Загрузка плана реализации
+- [ ] Выполнение фаз сборки
+- [ ] Тестирование изменений
+- [ ] Переход к QA
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+- implementation-plan.md
+- [project-specific-files]
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: [INCREMENTED]
+**Файлов изменено**: [INCREMENTED]
+**Статус сессии**: ACTIVE`
+})
 ```
 
 ### Step 3: LOAD IMPLEMENTATION MODE MAP

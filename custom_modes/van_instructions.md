@@ -54,6 +54,11 @@ read_file({
 - **`@web compare: [option1] vs [option2]`** - Compare alternatives
 - **`@web analyze: [problem]`** - VAN-specific research
 
+### 🔄 Context Continuity Commands
+- **`CONTINUE`** / **`ПРОДОЛЖАЙ`** - Restore and continue interrupted task
+- **`CLEAR CONTEXT`** - Clear saved context
+- **`SHOW CONTEXT`** - Display current saved context
+
 ---
 
 ## 🔄 UNIFIED COMMAND PROCESSING FLOW
@@ -62,7 +67,90 @@ When user sends any VAN command, I will:
 
 1. **Immediate Response**: Respond with "OK [COMMAND]" (e.g., "OK VAN", "OK VAN.RULES", "OK VAN.SYSTEM")
 
-2. **Command Routing**: Route to appropriate processing flow:
+2. **Project Initialization**: Check for project rules and tasks:
+```
+# Scan for project rules
+run_terminal_cmd({
+  command: "find rules/ -name '*.md' -type f | head -20",
+  explanation: "Scanning for project rules files"
+})
+
+# Search for TODO/FIXME/HACK tasks
+run_terminal_cmd({
+  command: "grep -r -n -i 'TODO\\|FIXME\\|HACK' --include='*.md' . | head -30",
+  explanation: "Searching for TODO tasks in documentation"
+})
+
+# Search for incomplete checkboxes
+run_terminal_cmd({
+  command: "grep -r -n -E '\\- \\[ \\]' --include='*.md' . | head -20",
+  explanation: "Searching for incomplete tasks in documentation"
+})
+
+# Search for Russian task markers
+run_terminal_cmd({
+  command: "grep -r -n -i 'нужно\\|требуется\\|добавить\\|исправить' --include='*.md' . | head -20",
+  explanation: "Searching for Russian task markers in documentation"
+})
+```
+
+3. **Context Management**: ALWAYS save current user request and context:
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Saving current user request and VAN mode context",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: ACTIVE
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[FULL_USER_REQUEST_TEXT]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: VAN
+**Фаза**: [Problem Analysis|Rules Management|System Administration]
+**Уровень сложности**: [TO_BE_DETERMINED]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [BRIEF_TASK_DESCRIPTION]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: IN_PROGRESS
+
+### Описание:
+[DETAILED_TASK_CONTEXT]
+
+### Текущий прогресс:
+- [x] Запрос получен и сохранен
+- [ ] Анализ сложности
+- [ ] Определение следующего режима
+- [ ] Обновление tasks.md
+
+## 📋 ПРАВИЛА ПРОЕКТА
+[СПИСОК_НАЙДЕННЫХ_ПРАВИЛ_ИЗ_RULES_ДИРЕКТОРИИ]
+
+## 📝 НАЙДЕННЫЕ ЗАДАЧИ
+### TODO/FIXME из документации:
+[СПИСОК_TODO_ЗАДАЧ_С_ФАЙЛАМИ_И_СТРОКАМИ]
+
+### Незавершенные чекбоксы:
+[СПИСОК_НЕЗАВЕРШЕННЫХ_ЧЕКБОКСОВ]
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: 0
+**Файлов изменено**: 1
+**Статус сессии**: ACTIVE`
+})
+```
+
+3. **Command Routing**: Route to appropriate processing flow:
    - `VAN` → Standard VAN with task continuity
    - `VAN.RULES.*` → Rules management flow
    - `VAN.SYSTEM.*` → System administration flow
@@ -194,6 +282,32 @@ Activating VAN.SYSTEM health check submode...
 📊 Generating health report...
 ✅ System health check completed
 [Updates system status in Memory Bank]
+```
+
+### Context Restoration
+```
+User: CONTINUE
+Assistant: OK CONTINUE
+
+🔄 Checking saved context...
+📖 Loading current-context.md...
+✅ Found active task: [TASK_NAME]
+📋 Resuming [MODE] mode at [PHASE] phase...
+🎯 Continuing from: [LAST_USER_REQUEST]
+[Restores full context and continues from where left off]
+```
+
+### Context Management
+```
+User: SHOW CONTEXT
+Assistant: OK SHOW CONTEXT
+
+📖 Current saved context:
+- **Mode**: [CURRENT_MODE]
+- **Task**: [TASK_DESCRIPTION]
+- **Status**: [ACTIVE|COMPLETED|PAUSED]
+- **Progress**: [X/Y steps completed]
+- **Last Request**: [LAST_USER_REQUEST]
 ```
 
 ---

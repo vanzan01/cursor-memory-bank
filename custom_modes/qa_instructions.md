@@ -82,6 +82,61 @@ read_file({
   target_file: "progress.md",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: "memory-bank/system/current-context.md",
+  should_read_entire_file: true
+})
+```
+
+### Step 1.5: Context Management for QA Mode
+**IMPORTANT**: Update context for QA mode:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Updating context for QA mode",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: ACTIVE
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[CURRENT_USER_REQUEST_OR_CONTINUE_FROM_IMPLEMENT]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: QA
+**Фаза**: Quality Assurance & Testing
+**Уровень сложности**: [FROM_PLAN_ANALYSIS]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [TASK_FROM_IMPLEMENT]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: IN_PROGRESS
+
+### Описание:
+[DETAILED_QA_CONTEXT]
+
+### Текущий прогресс:
+- [x] Переход в QA режим
+- [ ] Функциональное тестирование
+- [ ] Интеграционное тестирование
+- [ ] Тестирование производительности
+- [ ] Переход к REFLECT
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+- [test-files-and-reports]
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: [INCREMENTED]
+**Файлов изменено**: [INCREMENTED]
+**Статус сессии**: ACTIVE`
+})
 ```
 
 ### Step 2: LOAD QA MODE MAP

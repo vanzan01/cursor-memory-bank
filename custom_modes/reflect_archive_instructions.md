@@ -90,6 +90,101 @@ read_file({
   target_file: ".cursor/rules/isolation_rules/Core/web-search-integration.mdc",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: "memory-bank/system/current-context.md",
+  should_read_entire_file: true
+})
+```
+
+### Step 1.5: Context Management for REFLECT Mode
+**IMPORTANT**: Update context for REFLECT mode and handle completion:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Updating context for REFLECT mode - final phase",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: COMPLETING
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[CURRENT_USER_REQUEST_OR_CONTINUE_FROM_QA]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: REFLECT
+**Фаза**: Review & Learning
+**Уровень сложности**: [FROM_PLAN_ANALYSIS]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [TASK_FROM_QA]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: COMPLETING
+
+### Описание:
+[DETAILED_REFLECTION_CONTEXT]
+
+### Текущий прогресс:
+- [x] Переход в REFLECT режим
+- [ ] Анализ результатов проекта
+- [ ] Выявление уроков
+- [ ] Создание рекомендаций
+- [ ] Очистка контекста (при завершении)
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+- memory-bank/reflection/[reflection-files]
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: [INCREMENTED]
+**Файлов изменено**: [INCREMENTED]
+**Статус сессии**: COMPLETING`
+})
+```
+
+### Step 1.6: Context Completion Handler
+**IMPORTANT**: At the end of REFLECT mode, clear the context:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Clearing context after task completion",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: COMPLETED
+
+## 🎯 ПОСЛЕДНИЙ ЗАВЕРШЕННЫЙ ЗАПРОС
+\`\`\`
+[COMPLETED_USER_REQUEST]
+\`\`\`
+
+## 🔧 ЗАВЕРШЕННЫЙ РЕЖИМ РАБОТЫ
+**Последний режим**: REFLECT
+**Фаза**: Completed
+**Уровень сложности**: [COMPLETED_LEVEL]
+
+## 📋 ЗАВЕРШЕННАЯ ЗАДАЧА
+**Задача**: [COMPLETED_TASK]
+**Статус**: COMPLETED
+**Дата завершения**: [CURRENT_DATE]
+
+### Краткая сводка:
+[BRIEF_COMPLETION_SUMMARY]
+
+## 📊 ИТОГОВЫЕ МЕТРИКИ
+**Общее время**: [TOTAL_TIME]
+**Команд выполнено**: [TOTAL_COMMANDS]
+**Файлов изменено**: [TOTAL_FILES]
+
+---
+*Контекст очищен. Готов к новой задаче.*`
+})
 ```
 
 ### Step 2: LOAD REFLECT+ARCHIVE MODE MAPS

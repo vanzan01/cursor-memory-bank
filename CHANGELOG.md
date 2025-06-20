@@ -5,7 +5,111 @@ All notable changes to Cursor Memory Bank will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2024-12-20
+## [1.1.0] - 2025-06-20
+
+### 🚀 Major Features Added
+
+#### Context Management System
+- **NEW**: Complete context management system with automatic save/restore functionality
+- **NEW**: `CONTINUE` / `ПРОДОЛЖАЙ` command to resume interrupted work exactly where you left off
+- **NEW**: Persistent state management across all Memory Bank modes
+- **NEW**: Automatic project discovery and rule integration
+
+#### Enhanced Commands
+- **NEW**: `SHOW CONTEXT` - Display current context and progress
+- **NEW**: `CLEAR CONTEXT` - Clear saved context (start fresh)
+- **NEW**: `SCAN RULES` - Discover and integrate project rules
+- **NEW**: `FIND TASKS` - Search for TODO/FIXME items in documentation
+
+#### Project Discovery Features
+- **NEW**: Automatic scanning of `rules/*.md` files for project-specific guidelines
+- **NEW**: Intelligent detection of TODO, FIXME, HACK markers in documentation
+- **NEW**: Discovery of incomplete checkbox items `- [ ]`
+- **NEW**: Recognition of Russian task markers (`нужно`, `требуется`, `добавить`, `исправить`)
+- **NEW**: File context analysis including sizes and line counts
+
+#### UNIVERSAL Mode
+- **NEW**: UNIVERSAL mode for automatic workflow management with intelligent transitions
+- **ENHANCED**: All 7 modes now support context management integration
+- **ENHANCED**: Seamless mode transitions with state preservation
+
+### 🏗️ Architecture Improvements
+
+#### File Structure Updates
+- **NEW**: `memory-bank/system/current-context.md` - Active task context storage
+- **NEW**: `memory-bank/system/interaction-mode.txt` - Current mode state tracking
+- **NEW**: `.cursor/rules/isolation_rules/Core/context-management.mdc` - Core context rules
+- **UPDATED**: All mode instruction files with context management integration
+
+#### Rule System Integration
+- **NEW**: Proper integration with `.cursor/rules/` system following `changing_the_rules.md` procedures
+- **NEW**: Context management rules with appropriate metadata and glob patterns
+- **NEW**: Automatic rule loading and application across all modes
+
+### 📚 Documentation Updates
+
+#### README Updates
+- **UPDATED**: Main README.md with new features and enhanced workflow diagrams
+- **UPDATED**: Russian README_ru.md with complete translation of new features
+- **NEW**: Comprehensive mermaid diagrams showing context management flow
+- **NEW**: Examples of CONTINUE command usage and project discovery
+
+#### New Documentation
+- **NEW**: `docs/architecture/context-management-architecture.md` - Detailed system architecture
+- **NEW**: Comprehensive diagrams for context lifecycle and command processing
+- **NEW**: Error handling and recovery procedures documentation
+
+### 🔄 Mode Enhancements
+
+#### All Modes Updated
+- **VAN Mode**: Added project initialization and discovery capabilities
+- **PLAN Mode**: Enhanced with context-aware planning and state preservation
+- **CREATIVE Mode**: Integrated creative decision tracking and context management
+- **IMPLEMENT Mode**: Added build progress tracking and error context preservation
+- **QA Mode**: Enhanced with test result preservation and context-aware quality assurance
+- **REFLECT Mode**: Added automatic context clearing on task completion
+- **UNIVERSAL Mode**: Complete workflow automation with context continuity
+
+### 🌐 Multi-Language Support
+
+#### Enhanced Language Features
+- **ENHANCED**: Improved Russian language support for task detection
+- **NEW**: Multi-language task marker recognition
+- **UPDATED**: Bilingual documentation with latest features
+- **NEW**: Localized command support (`ПРОДОЛЖАЙ` for Russian users)
+
+### 🛡️ Reliability & Error Handling
+
+#### Robust Context Management
+- **NEW**: Interruption detection and emergency state preservation
+- **NEW**: Context validation and integrity checking
+- **NEW**: Automatic recovery from session interruptions
+- **NEW**: Error handling with graceful degradation
+
+### 🎯 User Experience Improvements
+
+#### Seamless Workflow Continuity
+- **NEW**: Never lose progress on interrupted tasks
+- **NEW**: Intelligent project awareness from session start
+- **NEW**: Automatic discovery of existing work and rules
+- **NEW**: Smart restoration to exact working context
+
+### 📊 Performance Optimizations
+
+#### Efficient Context Operations
+- **NEW**: Incremental context saving for better performance
+- **NEW**: Lazy loading of context data
+- **NEW**: Optimized file operations and resource management
+
+### 🔧 Technical Improvements
+
+#### System Integration
+- **NEW**: Proper integration with Cursor IDE rule system
+- **NEW**: Automated project analysis and context building
+- **NEW**: Intelligent file discovery and categorization
+- **NEW**: Session metrics tracking and reporting
+
+## [1.0.0] - 2025-06-10
 
 ### 🎉 Major Release - Production Ready
 

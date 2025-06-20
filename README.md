@@ -1,8 +1,8 @@
-# Cursor Memory Bank v1.0
+# Cursor Memory Bank v1.1
 
-> **AI-Powered Context Management System for Cursor IDE**
+> **AI-Powered Context Management System with CONTINUE Support**
 
-A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, and persistent context across development sessions.
+A comprehensive memory and context management system that transforms how AI assistants work in Cursor IDE. Memory Bank provides structured workflows, intelligent task management, persistent context across development sessions, and seamless work resumption with the revolutionary CONTINUE command.
 
 **📖 [Русская документация / Russian Documentation](README_ru.md)**
 
@@ -71,24 +71,30 @@ Get up and running in under 5 minutes:
 ## ✨ Key Features
 
 ### 🧠 Intelligent Context Management
-- **Persistent Memory**: Maintains context across sessions
+- **Persistent Memory**: Maintains context across sessions with automatic save/restore
 - **Smart Categorization**: Automatically organizes information
 - **Context Switching**: Seamless transitions between tasks
+- **CONTINUE Command**: Resume interrupted work exactly where you left off
+- **Project Awareness**: Automatic discovery of project rules and tasks
 
 ### 🔄 Structured Workflows
-- **7 Operational Modes**: VAN, PLAN, CREATIVE, IMPLEMENT, QA, REFLECT, ARCHIVE
+- **7 Operational Modes**: VAN, PLAN, CREATIVE, IMPLEMENT, QA, REFLECT, UNIVERSAL
 - **4 Complexity Levels**: From quick fixes to enterprise systems
 - **Guided Processes**: Step-by-step workflow guidance
+- **Session Continuity**: Never lose progress on interrupted tasks
 
 ### 📊 Advanced Task Management
 - **Automatic Complexity Detection**: AI determines optimal workflow
-- **Progress Tracking**: Real-time status monitoring
+- **Progress Tracking**: Real-time status monitoring with persistent state
 - **Quality Assurance**: Built-in verification processes
+- **Task Discovery**: Automatic detection of TODO/FIXME items and incomplete tasks
+- **Multi-language Task Detection**: Supports English and Russian task markers
 
 ### 🌐 Multi-Language Support
 - **Bilingual Documentation**: English and Russian
 - **Localized Workflows**: Culture-aware processes
 - **International Teams**: Global collaboration support
+- **Multi-language Task Recognition**: Finds tasks in any supported language
 
 ## 🎯 Use Cases
 
@@ -112,27 +118,70 @@ Get up and running in under 5 minutes:
 
 ## 🔧 How It Works
 
-Memory Bank operates through a sophisticated mode-based system:
+Memory Bank operates through a sophisticated mode-based system with automatic context management:
 
 ```mermaid
-graph LR
-    VAN[🔍 VAN<br>Initialize] --> PLAN[📋 PLAN<br>Strategy]
-    PLAN --> CREATIVE[🎨 CREATIVE<br>Design]
-    CREATIVE --> IMPLEMENT[🔨 IMPLEMENT<br>Build]
-    IMPLEMENT --> QA[✅ QA<br>Verify]
-    QA --> REFLECT[📚 REFLECT<br>Learn]
-    REFLECT --> ARCHIVE[📁 ARCHIVE<br>Store]
+graph TD
+    Start([🚀 Start Task]) --> VAN[🔍 VAN<br>Initialize & Analyze]
+    VAN --> SaveContext{💾 Save Context}
+    SaveContext --> PLAN[📋 PLAN<br>Strategy & Architecture]
+    PLAN --> CREATIVE[🎨 CREATIVE<br>Design & Solutions]
+    CREATIVE --> IMPLEMENT[🔨 IMPLEMENT<br>Build & Code]
+    IMPLEMENT --> QA[✅ QA<br>Test & Verify]
+    QA --> REFLECT[📚 REFLECT<br>Learn & Document]
+    REFLECT --> Complete([✅ Task Complete])
+
+    %% Context Management
+    SaveContext -.-> ContextFile[(📄 current-context.md)]
+    ContextFile -.-> Continue[🔄 CONTINUE Command]
+    Continue -.-> RestoreMode{🎯 Restore Mode}
+    RestoreMode --> PLAN
+    RestoreMode --> CREATIVE
+    RestoreMode --> IMPLEMENT
+    RestoreMode --> QA
+    RestoreMode --> REFLECT
+
+    %% Universal Mode
+    VAN --> UNIVERSAL[🌐 UNIVERSAL<br>Auto-Workflow]
+    UNIVERSAL --> AutoTransition{🔄 Auto Mode<br>Transitions}
+    AutoTransition --> PLAN
+    AutoTransition --> CREATIVE
+    AutoTransition --> IMPLEMENT
+    AutoTransition --> QA
+    AutoTransition --> REFLECT
+
+    %% Interruption Handling
+    PLAN -.-> Interrupt([⚡ Interruption])
+    CREATIVE -.-> Interrupt
+    IMPLEMENT -.-> Interrupt
+    QA -.-> Interrupt
+    REFLECT -.-> Interrupt
+    Interrupt -.-> SaveState[💾 Save Current State]
+    SaveState -.-> ContextFile
+
+    style SaveContext fill:#e1f5fe
+    style ContextFile fill:#f3e5f5
+    style Continue fill:#e8f5e8
+    style UNIVERSAL fill:#fff3e0
 ```
 
 ### Mode Overview
 
-- **🔍 VAN Mode**: Task initialization and complexity assessment
+- **🔍 VAN Mode**: Task initialization, complexity assessment, and project discovery
 - **📋 PLAN Mode**: Strategic planning and architecture design
 - **🎨 CREATIVE Mode**: Creative problem-solving and design decisions
 - **🔨 IMPLEMENT Mode**: Code implementation and development
 - **✅ QA Mode**: Quality assurance and testing
 - **📚 REFLECT Mode**: Learning and knowledge capture
-- **📁 ARCHIVE Mode**: Documentation and knowledge storage
+- **🌐 UNIVERSAL Mode**: Automatic workflow management with intelligent transitions
+
+### Context Management Features
+
+- **💾 Automatic Context Saving**: Every mode transition saves current state
+- **🔄 CONTINUE Command**: Resume work from any interruption point
+- **📄 Persistent State**: Context maintained in `memory-bank/system/current-context.md`
+- **🎯 Smart Restoration**: Automatically returns to the correct mode and phase
+- **📊 Progress Tracking**: Real-time monitoring of task completion status
 
 ## 🌟 What Makes Memory Bank Special
 
@@ -170,6 +219,37 @@ VAN
 # 3. Structured implementation
 # 4. Comprehensive testing
 ```
+
+### Resume Interrupted Work
+```bash
+# Resume any interrupted task
+CONTINUE
+# or in Russian
+ПРОДОЛЖАЙ
+
+# Memory Bank will:
+# 1. Load your saved context
+# 2. Restore the exact working mode
+# 3. Continue from where you left off
+# 4. Show current progress status
+```
+
+## 🎯 New Commands
+
+### Context Management Commands
+- **`CONTINUE`** / **`ПРОДОЛЖАЙ`** - Resume interrupted work
+- **`SHOW CONTEXT`** - Display current context and progress
+- **`CLEAR CONTEXT`** - Clear saved context (start fresh)
+- **`SCAN RULES`** - Discover and integrate project rules
+- **`FIND TASKS`** - Search for TODO/FIXME items in documentation
+
+### Project Discovery Features
+Memory Bank now automatically discovers:
+- **Project Rules**: Scans `rules/*.md` files for project-specific guidelines
+- **TODO Items**: Finds `TODO`, `FIXME`, `HACK` markers in documentation
+- **Incomplete Tasks**: Detects unchecked `- [ ]` items
+- **Russian Tasks**: Recognizes `нужно`, `требуется`, `добавить`, `исправить` markers
+- **File Context**: Includes file sizes and line counts for better understanding
 
 ## 🤝 Contributing
 

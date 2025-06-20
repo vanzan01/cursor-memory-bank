@@ -82,6 +82,60 @@ read_file({
   target_file: "tasks.md",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: "memory-bank/system/current-context.md",
+  should_read_entire_file: true
+})
+```
+
+### Step 1.5: Context Management for PLAN Mode
+**IMPORTANT**: Update context for PLAN mode:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Updating context for PLAN mode",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: ACTIVE
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[CURRENT_USER_REQUEST_OR_CONTINUE_FROM_VAN]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: PLAN
+**Фаза**: Strategic Planning
+**Уровень сложности**: [FROM_VAN_ANALYSIS]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [TASK_FROM_VAN_OR_NEW]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: IN_PROGRESS
+
+### Описание:
+[DETAILED_PLANNING_CONTEXT]
+
+### Текущий прогресс:
+- [x] Переход в PLAN режим
+- [ ] Анализ требований
+- [ ] Создание плана реализации
+- [ ] Определение следующего режима
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+- implementation-plan.md
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: [INCREMENTED]
+**Файлов изменено**: [INCREMENTED]
+**Статус сессии**: ACTIVE`
+})
 ```
 
 ### Step 2: LOAD PLAN MODE MAP & WEB SEARCH

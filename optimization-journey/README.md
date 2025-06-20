@@ -20,6 +20,8 @@
 | [11-methodological-integration.md](11-methodological-integration.md) | Integration with Claude's Think Methodology |
 | [12-key-lessons.md](12-key-lessons.md) | Key Lessons Learned |
 | [13-future-directions.md](13-future-directions.md) | Future Directions and Scaling Vision |
+| [14-web-search-integration.md](14-web-search-integration.md) | Optimization Round 14: Comprehensive Web Search Integration |
+| [15-visual-workflow-diagrams.md](15-visual-workflow-diagrams.md) | Optimization Round 15: Visual Workflow Diagrams |
 
 ## 📋 OPTIMIZATION JOURNEY OVERVIEW
 
@@ -38,16 +40,21 @@ This documentation details the evolution of the Memory Bank System through sever
 8. **Creative Phase Enforcement**: Implementing hard gateways and quality metrics
 9. **Context Optimization**: Adding selective document loading and visual navigation
 
-### Latest Developments (Rounds 10-13)
+### Latest Developments (Rounds 10-15)
 10. **System State Assessment**: Comprehensive evaluation of optimizations
 11. **Methodological Integration**: Alignment with Claude's Think tool methodology
 12. **Key Lessons Consolidation**: Synthesis of critical insights
 13. **Future Directions**: Vision for scaling and collaboration
+14. **Web Search Integration**: Comprehensive research capabilities across all modes
+15. **Visual Workflow Diagrams**: Complete visual documentation of all mode workflows
 
 ## 🔍 LATEST SYSTEM ACHIEVEMENTS
 
 The most recent developments have yielded significant improvements:
 
+- **Visual Workflow Diagrams**: Complete visual documentation of all 6 Memory Bank modes with detailed process flows
+- **Web Search Integration**: Comprehensive research capabilities across all 6 Memory Bank modes
+- **Universal & QA Modes**: Complete end-to-end workflow automation with testing integration
 - **Methodological Integration**: Alignment with Claude's "Think" tool methodology
 - **Mode Isolation**: Strict containment of rules within specific modes
 - **Visual Process Maps**: Comprehensive guidance through development phases
@@ -69,11 +76,11 @@ graph BT
     %% Early Phase Nodes
     E1["🔍 01-03: Foundation<br>• Initial Optimization<br>• Self Assessment<br>• Redundancy Elimination"]
     E2["⚙️ 04-05: Architecture<br>• Single Source of Truth<br>• Adaptive Complexity<br>• 4-Level Scale"]
-    
+
     %% Middle Phase Nodes
     M1["🎨 06-08: Creative Evolution<br>• Process Refinement<br>• Structured Thinking<br>• Phase Enforcement"]
     M2["🧩 09-10: System Maturity<br>• Context Optimization<br>• Visual Navigation<br>• State Management"]
-    
+
     %% Latest Phase Nodes
     L1["🤔 11: Think Integration<br>• Claude Methodology<br>• Mode Isolation<br>• Visual Process Maps"]
     L2["📚 12: Key Insights<br>• JIT Rule Loading<br>• Graph Architecture<br>• Mode Separation"]
@@ -98,7 +105,7 @@ graph BT
     LC1["❌ Avoided:<br>Global Rules<br>Manual Tracking"]
     LC2["✅ Worked Well:<br>Visual Maps<br>JIT Loading"]
     LC3["🔄 Evolved:<br>Creative Process<br>Mode Transitions"]
-    
+
     %% Theme Connections
     E1 --- KT1
     E2 --- KT2
@@ -114,20 +121,20 @@ graph BT
     %% Styling
     style E1 fill:#f9d77e,stroke:#d9b95c,color:black
     style E2 fill:#f9d77e,stroke:#d9b95c,color:black
-    
+
     style M1 fill:#a8d5ff,stroke:#88b5e0,color:black
     style M2 fill:#a8d5ff,stroke:#88b5e0,color:black
-    
+
     style L1 fill:#c5e8b7,stroke:#a5c897,color:black
     style L2 fill:#c5e8b7,stroke:#a5c897,color:black
     style L3 fill:#c5e8b7,stroke:#a5c897,color:black
-    
+
     style KT1 fill:#ffcccc,stroke:#ff9999,color:black
     style KT2 fill:#ffcccc,stroke:#ff9999,color:black
     style KT3 fill:#ffcccc,stroke:#ff9999,color:black
     style KT4 fill:#ffcccc,stroke:#ff9999,color:black
     style KT5 fill:#ffcccc,stroke:#ff9999,color:black
-    
+
     style LC1 fill:#ffd9b3,stroke:#ffb366,color:black
     style LC2 fill:#d9f2d9,stroke:#97d097,color:black
     style LC3 fill:#d9b3ff,stroke:#b366ff,color:black
@@ -138,12 +145,12 @@ graph BT
         L2
         L3
     end
-    
+
     subgraph "🔄 Middle Phase: Process & Validation"
         M1
         M2
     end
-    
+
     subgraph "🎯 Early Phase: Efficiency & Structure"
         E1
         E2

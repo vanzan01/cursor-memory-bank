@@ -138,6 +138,113 @@ read_file({
   target_file: "progress.md",
   should_read_entire_file: true
 })
+
+read_file({
+  target_file: "memory-bank/system/current-context.md",
+  should_read_entire_file: true
+})
+```
+
+### Step 2.5: Project Initialization for UNIVERSAL Mode
+**IMPORTANT**: Scan project for rules and tasks before starting workflow:
+
+```
+# Scan for project rules
+run_terminal_cmd({
+  command: "find rules/ -name '*.md' -type f | head -20",
+  explanation: "Scanning for project rules files in UNIVERSAL mode"
+})
+
+# Search for TODO/FIXME/HACK tasks
+run_terminal_cmd({
+  command: "grep -r -n -i 'TODO\\|FIXME\\|HACK' --include='*.md' . | head -30",
+  explanation: "Searching for TODO tasks in documentation for UNIVERSAL workflow"
+})
+
+# Search for incomplete checkboxes
+run_terminal_cmd({
+  command: "grep -r -n -E '\\- \\[ \\]' --include='*.md' . | head -20",
+  explanation: "Searching for incomplete tasks in documentation"
+})
+```
+
+### Step 2.6: Context Management for UNIVERSAL Mode
+**IMPORTANT**: Initialize or restore context for UNIVERSAL mode:
+
+```
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Initializing context for UNIVERSAL mode - full workflow",
+  code_edit: `# CURRENT CONTEXT STATE
+
+**Последнее обновление**: [CURRENT_DATE]
+**Статус**: ACTIVE
+
+## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
+\`\`\`
+[FULL_USER_REQUEST_TEXT]
+\`\`\`
+
+## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
+**Активный режим**: UNIVERSAL
+**Фаза**: [VAN|PLAN|CREATIVE|IMPLEMENT|QA|REFLECT|ARCHIVE]
+**Уровень сложности**: [TO_BE_DETERMINED]
+
+## 📋 КОНТЕКСТ ЗАДАЧИ
+**Задача**: [TASK_DESCRIPTION]
+**Приоритет**: [HIGH|MEDIUM|LOW]
+**Статус**: IN_PROGRESS
+
+### Описание:
+[DETAILED_UNIVERSAL_CONTEXT]
+
+### Workflow Progress:
+- [ ] 🚀 VAN: Problem Analysis
+- [ ] 📋 PLAN: Strategic Planning
+- [ ] 🎨 CREATIVE: Design & Architecture (if needed)
+- [ ] ⚙️ IMPLEMENT: Build & Development
+- [ ] 🧪 QA: Quality Assurance
+- [ ] 🤔 REFLECT: Review & Learning
+- [ ] 📦 ARCHIVE: Knowledge Storage
+
+### Current Phase Progress:
+- [x] Инициализация UNIVERSAL режима
+- [ ] [Phase-specific steps will be updated by each mode]
+
+## 📋 ПРАВИЛА ПРОЕКТА
+[СПИСОК_НАЙДЕННЫХ_ПРАВИЛ_ИЗ_RULES_ДИРЕКТОРИИ]
+
+## 📝 НАЙДЕННЫЕ ЗАДАЧИ
+### TODO/FIXME из документации:
+[СПИСОК_TODO_ЗАДАЧ_С_ФАЙЛАМИ_И_СТРОКАМИ]
+
+### Незавершенные чекбоксы:
+[СПИСОК_НЕЗАВЕРШЕННЫХ_ЧЕКБОКСОВ]
+
+## 🗂️ ФАЙЛЫ В РАБОТЕ
+- memory-bank/system/current-context.md
+- memory-bank/tasks.md
+- [files-will-be-added-by-each-phase]
+
+## 📊 МЕТРИКИ СЕССИИ
+**Время начала**: [CURRENT_DATE]
+**Команды выполнено**: 0
+**Файлов изменено**: 1
+**Статус сессии**: ACTIVE
+**Автоматические переходы**: 0`
+})
+```
+
+### Step 2.7: Context Update During Phase Transitions
+**IMPORTANT**: Update context when transitioning between phases:
+
+```
+# During each phase transition, update the context:
+edit_file({
+  target_file: "memory-bank/system/current-context.md",
+  instructions: "Updating context for phase transition in UNIVERSAL mode",
+  code_edit: `[Update the current phase, progress checklist, and metrics]`
+})
 ```
 
 ### Step 3: LOAD MODE-SPECIFIC REFERENCES
