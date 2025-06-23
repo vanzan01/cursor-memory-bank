@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: Bun Testing Framework Integration for Memory Bank 2.0.0
+globs: "**/*.test.ts", "**/tests/**/*.ts", "**/__test__/**/*.ts", "**/test/**/*.ts", "**/memory-bank/**"
 alwaysApply: false
 ---
 # BUN TESTING FRAMEWORK INTEGRATION
@@ -123,7 +123,7 @@ describe("User Authentication Feature", () => {
     test("should accept strong password", () => {
       expect(validatePassword("StrongP@ss123")).toBe(true);
     });
-    
+
     test("should reject weak password", () => {
       expect(validatePassword("weak")).toBe(false);
     });
@@ -221,22 +221,22 @@ import { test, expect } from "bun:test";
 describe("Performance tests", () => {
   test("should process large dataset within time limit", async () => {
     const largeDataset = generateLargeDataset(10000);
-    
+
     const start = performance.now();
     const result = await processLargeDataset(largeDataset);
     const duration = performance.now() - start;
-    
+
     expect(result).toBeDefined();
     expect(duration).toBeLessThan(1000); // Should complete within 1 second
   });
 
   test("should handle concurrent requests efficiently", async () => {
     const requests = Array(100).fill(0).map(() => makeRequest());
-    
+
     const start = performance.now();
     const results = await Promise.all(requests);
     const duration = performance.now() - start;
-    
+
     expect(results).toHaveLength(100);
     expect(duration).toBeLessThan(5000); // Should complete within 5 seconds
   });
@@ -262,7 +262,7 @@ test("should measure operation timing precisely", () => {
     // Operation to measure
     return expensiveCalculation();
   });
-  
+
   expect(result).toBeDefined();
   expect(duration).toBeGreaterThan(0);
   console.log(`Operation took ${duration.toFixed(3)}ms`);
@@ -294,13 +294,13 @@ describe("ID Generation", () => {
   });
 
   test("should handle concurrent ID generation", async () => {
-    const promises = Array(1000).fill(0).map(() => 
+    const promises = Array(1000).fill(0).map(() =>
       Promise.resolve(generateSecureId())
     );
-    
+
     const ids = await Promise.all(promises);
     const uniqueIds = new Set(ids);
-    
+
     expect(uniqueIds.size).toBe(1000); // All IDs should be unique
   });
 });
@@ -330,7 +330,7 @@ describe("Concurrency tests", () => {
     // Start multiple concurrent operations
     const promises = Array(100).fill(0).map(() => increment());
     await Promise.all(promises);
-    
+
     // With proper synchronization, counter should be 100
     expect(counter).toBe(100);
   });
@@ -386,7 +386,7 @@ import { mock, spyOn } from "bun:test";
 
 test("should mock external dependencies", () => {
   const mockFetch = mock(() => Promise.resolve({ json: () => ({ data: "test" }) }));
-  
+
   // Use mock in test
   const result = await fetchData();
   expect(mockFetch).toHaveBeenCalled();
@@ -394,9 +394,9 @@ test("should mock external dependencies", () => {
 
 test("should spy on method calls", () => {
   const spy = spyOn(console, "log");
-  
+
   logMessage("test");
-  
+
   expect(spy).toHaveBeenCalledWith("test");
   spy.mockRestore();
 });

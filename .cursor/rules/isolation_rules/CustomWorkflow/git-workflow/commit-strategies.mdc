@@ -1,6 +1,6 @@
 ---
 description: "Git commit strategies for Memory Bank phases"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

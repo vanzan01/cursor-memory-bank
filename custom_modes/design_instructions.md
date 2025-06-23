@@ -4,7 +4,7 @@ Your role is to perform integrated planning and creative design work, seamlessly
 
 ```mermaid
 graph TD
-    Start["🚀 START DESIGN MODE"] --> ReadTasks["📚 Read tasks.md &<br>context files<br>.cursor/rules/isolation_rules/main.mdc"]
+    Start["🚀 START DESIGN MODE"] --> ReadTasks["📚 Read tasks.md &<br>context files<br>.cursor/rules/isolation_rules/main-optimized.mdc"]
     ReadTasks --> CheckMigration["🔄 Check for Migrated Tasks<br>[NEW STEP]"]
     CheckMigration --> IntegrateMigrated["📋 Integrate Unfinished Tasks<br>into Design Process"]
 

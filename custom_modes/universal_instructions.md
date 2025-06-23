@@ -145,29 +145,6 @@ read_file({
 })
 ```
 
-### Step 2.5: Project Initialization for UNIVERSAL Mode
-**IMPORTANT**: Scan project for rules and tasks before starting workflow:
-
-```
-# Scan for project rules
-run_terminal_cmd({
-  command: "find rules/ -name '*.md' -type f | head -20",
-  explanation: "Scanning for project rules files in UNIVERSAL mode"
-})
-
-# Search for TODO/FIXME/HACK tasks
-run_terminal_cmd({
-  command: "grep -r -n -i 'TODO\\|FIXME\\|HACK' --include='*.md' . | head -30",
-  explanation: "Searching for TODO tasks in documentation for UNIVERSAL workflow"
-})
-
-# Search for incomplete checkboxes
-run_terminal_cmd({
-  command: "grep -r -n -E '\\- \\[ \\]' --include='*.md' . | head -20",
-  explanation: "Searching for incomplete tasks in documentation"
-})
-```
-
 ### Step 2.6: Context Management for UNIVERSAL Mode
 **IMPORTANT**: Initialize or restore context for UNIVERSAL mode:
 

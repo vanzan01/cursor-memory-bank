@@ -1,8 +1,9 @@
 ---
 description: Optimized main rule for improved token efficiency
-globs: main-optimized.mdc
+globs:
 alwaysApply: false
 ---
+
 # 🔍 OPTIMIZED MEMORY BANK SYSTEM
 
 🚨 CRITICAL RULE: MEMORY BANK CREATION IS MANDATORY 🚨
@@ -21,7 +22,7 @@ graph TD
         FileIO["File Manager"]
         Transition["Mode Transition"]
     end
-    
+
     subgraph "Custom Modes"
         VAN["VAN<br>Initialization"]
         PLAN["PLAN<br>Planning"]
@@ -30,18 +31,18 @@ graph TD
         REFLECT["REFLECT<br>Review"]
         ARCHIVE["ARCHIVE<br>Documentation"]
     end
-    
+
     Context --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
     Rules --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
     FileIO --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
     Transition --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
-    
+
     VAN --> PLAN
     PLAN --> CREATIVE
     CREATIVE --> IMPLEMENT
     IMPLEMENT --> REFLECT
     REFLECT --> ARCHIVE
-    
+
     style Context fill:#4da6ff,stroke:#0066cc,color:white
     style Rules fill:#ffa64d,stroke:#cc7a30,color:white
     style FileIO fill:#4dbb5f,stroke:#36873f,color:white
@@ -53,17 +54,17 @@ graph TD
 ```mermaid
 graph TD
     Task["Task Creation"] --> Complexity{"Complexity<br>Level?"}
-    
+
     Complexity -->|"Level 1<br>Quick Fix"| L1["3-Phase<br>Streamlined Process"]
     Complexity -->|"Level 2<br>Enhancement"| L2["4-Phase<br>Balanced Process"]
     Complexity -->|"Level 3<br>Feature"| L3["5-Phase<br>Comprehensive Process"]
     Complexity -->|"Level 4<br>Enterprise"| L4["6-Phase<br>Governance Process"]
-    
+
     L1 --> L1_Process["VAN → IMPLEMENT → REFLECT"]
     L2 --> L2_Process["VAN → PLAN → IMPLEMENT → REFLECT"]
     L3 --> L3_Process["VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT"]
     L4 --> L4_Process["VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE"]
-    
+
     style Complexity fill:#d94dbb,stroke:#a3378a,color:white
     style L1 fill:#4dbb5f,stroke:#36873f,color:white
     style L2 fill:#ffa64d,stroke:#cc7a30,color:white
@@ -78,23 +79,23 @@ Rules are loaded hierarchically to optimize context usage:
 ```mermaid
 graph TD
     Root["Memory Bank<br>Common Rules"] --> Core["Core Rules<br>Shared Across Modes"]
-    
+
     Core --> L1["Level 1<br>Rules"]
     Core --> L2["Level 2<br>Rules"]
     Core --> L3["Level 3<br>Rules"]
     Core --> L4["Level 4<br>Rules"]
-    
+
     Core --> VM["Mode<br>Visual Maps"]
-    
+
     Core --> Phase["Phase-Specific<br>Rules"]
-    
+
     Phase --> VAN_Rules["VAN Mode<br>Rules"]
     Phase --> PLAN_Rules["PLAN Mode<br>Rules"]
     Phase --> CREATIVE_Rules["CREATIVE Mode<br>Rules"]
     Phase --> IMPLEMENT_Rules["IMPLEMENT Mode<br>Rules"]
     Phase --> REFLECT_Rules["REFLECT Mode<br>Rules"]
     Phase --> ARCHIVE_Rules["ARCHIVE Mode<br>Rules"]
-    
+
     style Root fill:#4da6ff,stroke:#0066cc,color:white
     style Core fill:#ffa64d,stroke:#cc7a30,color:white
     style Phase fill:#4dbb5f,stroke:#36873f,color:white
@@ -111,9 +112,9 @@ graph TD
     P2 --> P3["3️⃣ ANALYSIS<br>Compare options"]
     P3 --> P4["4️⃣ DECISION<br>Select approach"]
     P4 --> P5["5️⃣ GUIDELINES<br>Document implementation"]
-    
+
     P3 -.->|"On Demand"| Details["Detailed Option<br>Analysis"]
-    
+
     style Start fill:#d971ff,stroke:#a33bc2,color:white
     style P1 fill:#4da6ff,stroke:#0066cc,color:white
     style P2 fill:#ffa64d,stroke:#cc7a30,color:white
@@ -132,7 +133,7 @@ sequenceDiagram
     participant Current as Current Mode
     participant Context as Context Manager
     participant Next as Next Mode
-    
+
     Current->>Context: Create transition document
     Current->>Context: Store critical context
     Context->>Context: Prepare rule cache
@@ -154,16 +155,16 @@ graph TD
         progress["progress.md<br>Implementation Status"]
         transition["transition.md<br>Mode Transitions"]
     end
-    
+
     Update["Update Request"] --> Diff{"Changed?"}
     Diff -->|"No"| Skip["Skip Update"]
     Diff -->|"Yes"| Section{"Section<br>Change?"}
     Section -->|"Yes"| Partial["Update Changed<br>Sections Only"]
     Section -->|"No"| Full["Full File<br>Update"]
-    
+
     Partial --> tasks
     Full --> tasks
-    
+
     style Update fill:#4da6ff,stroke:#0066cc,color:white
     style Diff fill:#ffa64d,stroke:#cc7a30,color:white
     style Section fill:#4dbb5f,stroke:#36873f,color:white

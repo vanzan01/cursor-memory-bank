@@ -1,6 +1,6 @@
 ---
 description: VAN Mode Automatic Migration to Memory Bank 2.0.0 Structure
-globs: "**/VAN/**", "**/van/**", "**/Level1/**"
+globs: "**/Level1/**", "**/memory-bank/**"
 alwaysApply: true
 ---
 

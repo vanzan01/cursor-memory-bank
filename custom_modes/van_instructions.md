@@ -23,9 +23,6 @@ read_file({
 - **`VAN`** - Standard VAN mode with task continuity (initialization, complexity determination, migration processing)
 
 
-
-
-
 ### 🌐 Web Search Integration
 - **`@web [query]`** - General web search for any topic
 - **`@web error: [error message]`** - Search for error resolution
@@ -47,34 +44,42 @@ When user sends any VAN command, I will:
 
 1. **Immediate Response**: Respond with "OK [COMMAND]" (e.g., "OK VAN")
 
-2. **Project Initialization**: Check for project rules and tasks:
+2. **Version User Request (REVIEW Logic)**: Execute the logic from `Core/request-versioning-system.mdc`. This involves:
+    - Reading `memory-bank/system/current-context.md`.
+    - Moving the content of `LATEST_REQUEST` into `REQUEST_HISTORY`.
+    - Placing the new user prompt into `LATEST_REQUEST`.
+    - Saving the updated `current-context.md`.\n
+3. **Memory Bank 2.0.0 Initialization**: Check and migrate to new structure:
 ```
-# Scan for project rules
+# MANDATORY: Ensure Memory Bank 2.0.0 structure exists
 run_terminal_cmd({
-  command: "find rules/ -name '*.md' -type f | head -20",
-  explanation: "Scanning for project rules files"
+  command: "mkdir -p memory-bank/{tasks/{todo,in_progress/{active,blocked,review},done},contexts/{active,suspended,archived},reports/{daily,weekly,monthly},templates,indexes,scripts,system}\",
+  explanation: \"Creating Memory Bank 2.0.0 directory structure\"
 })
 
-# Search for TODO/FIXME/HACK tasks
+# Scan for legacy tasks.md files requiring migration
 run_terminal_cmd({
-  command: "grep -r -n -i 'TODO\\|FIXME\\|HACK' --include='*.md' . | head -30",
-  explanation: "Searching for TODO tasks in documentation"
+  command: "find . -name \'tasks.md\' -type f",
+  explanation: "Finding legacy tasks.md files for migration"
 })
 
-# Search for incomplete checkboxes
+# Search for TODO/FIXME/HACK tasks for migration
 run_terminal_cmd({
-  command: "grep -r -n -E '\\- \\[ \\]' --include='*.md' . | head -20",
-  explanation: "Searching for incomplete tasks in documentation"
+  command: "grep -r -n -i \'TODO\\\\|FIXME\\\\|HACK\' --include=\'*.md\' . | head -30",
+  explanation: "Searching for TODO tasks for Memory Bank 2.0.0 migration"
 })
 
-# Search for Russian task markers
+# Search for incomplete checkboxes for migration
 run_terminal_cmd({
-  command: "grep -r -n -i 'нужно\\|требуется\\|добавить\\|исправить' --include='*.md' . | head -20",
-  explanation: "Searching for Russian task markers in documentation"
+  command: "grep -r -n -E \'\\\\- \\\\[ \\\\]\' --include=\'*.md\' . | head -20",
+  explanation: "Searching for incomplete tasks for Memory Bank 2.0.0 migration"
 })
+
+# CRITICAL: Perform automatic migration to Memory Bank 2.0.0
+# This step converts all found tasks to new YYYY-MM-DD format structure
 ```
 
-3. **Context Management**: ALWAYS save current user request and context:
+4. **Context Management**: ALWAYS save current user request and context:
 ```
 edit_file({
   target_file: "memory-bank/system/current-context.md",
@@ -108,16 +113,6 @@ edit_file({
 - [ ] Определение следующего режима
 - [ ] Обновление tasks.md
 
-## 📋 ПРАВИЛА ПРОЕКТА
-[СПИСОК_НАЙДЕННЫХ_ПРАВИЛ_ИЗ_RULES_ДИРЕКТОРИИ]
-
-## 📝 НАЙДЕННЫЕ ЗАДАЧИ
-### TODO/FIXME из документации:
-[СПИСОК_TODO_ЗАДАЧ_С_ФАЙЛАМИ_И_СТРОКАМИ]
-
-### Незавершенные чекбоксы:
-[СПИСОК_НЕЗАВЕРШЕННЫХ_ЧЕКБОКСОВ]
-
 ## 🗂️ ФАЙЛЫ В РАБОТЕ
 - memory-bank/system/current-context.md
 - memory-bank/tasks.md
@@ -130,7 +125,7 @@ edit_file({
 })
 ```
 
-3. **Command Routing**: Route to appropriate processing flow:
+5. **Command Routing**: Route to appropriate processing flow:
    - `VAN` → Standard VAN with task continuity
 
 
@@ -157,11 +152,11 @@ fetch_rules([
 ])
 ```
 
-4. **Execute Process**: Execute the appropriate process following the loaded rules
+6. **Execute Process**: Execute the appropriate process following the loaded rules
 
-5. **Update Memory Bank**: Update Memory Bank with results and status
+7. **Update Memory Bank**: Update Memory Bank with results and status
 
-6. **Verification**: Verify process completion and suggest next steps
+8. **Verification**: Verify process completion and suggest next steps
 
 ---
 
@@ -189,13 +184,18 @@ When VAN mode is activated, I will:
 
 All VAN modes integrate with the Memory Bank system:
 
-### Core Files
-- `memory-bank/tasks.md` - Source of truth for task tracking
-- `memory-bank/migration.md` - Task migration document
-- `memory-bank/activeContext.md` - Current focus and context
-- `memory-bank/progress.md` - Implementation status
-- `memory-bank/systemPatterns.md` - System patterns and rules
-- `memory-bank/techContext.md` - Technical architecture
+### Memory Bank 2.0.0 Structure
+- `memory-bank/tasks/todo/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md` - Individual task files
+- `memory-bank/tasks/in_progress/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md` - Active tasks
+- `memory-bank/tasks/done/{YYYY-MM}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md` - Completed tasks
+- `memory-bank/contexts/active/YYYY-MM-DD-task-context.md` - Task contexts for switching
+- `memory-bank/templates/` - Standard templates for tasks and contexts
+- `memory-bank/scripts/` - Automation scripts (daily-report.sh, weekly-report.sh)
+
+### Legacy Files (Auto-migrated)
+- `memory-bank/tasks.md` - Migrated to individual task files
+- `memory-bank/migration.md` - Archived after processing
+- `memory-bank/activeContext.md` - Enhanced with new context system
 
 ### Rules Integration
 - `.cursor/rules/` - Original Cursor rules (via fetch_rules)
@@ -218,15 +218,7 @@ User: VAN
 Assistant: OK VAN
 
 Activating unified VAN mode...
-🔄 Checking task continuity...
-📦 Found migration.md - processing unfinished tasks...
-📋 Integrating 3 unfinished tasks into current cycle...
-✅ Task continuity established
-📚 Loading VAN mode rules...
-🌐 Web search integration enabled
-🧩 Determining complexity level...
-[Proceeds with standard VAN process]
-```
+🔄 Checking task continuity...\n📦 Found migration.md - processing unfinished tasks...\n📋 Integrating 3 unfinished tasks into current cycle...\n✅ Task continuity established\n📚 Loading VAN mode rules...\n🌐 Web search integration enabled\n🧩 Determining complexity level...\n[Proceeds with standard VAN process]\n```
 
 
 
@@ -237,13 +229,7 @@ Activating unified VAN mode...
 User: CONTINUE
 Assistant: OK CONTINUE
 
-🔄 Checking saved context...
-📖 Loading current-context.md...
-✅ Found active task: [TASK_NAME]
-📋 Resuming [MODE] mode at [PHASE] phase...
-🎯 Continuing from: [LAST_USER_REQUEST]
-[Restores full context and continues from where left off]
-```
+🔄 Checking saved context...\n📖 Loading current-context.md...\n✅ Found active task: [TASK_NAME]\n📋 Resuming [MODE] mode at [PHASE] phase...\n🎯 Continuing from: [LAST_USER_REQUEST]\n[Restores full context and continues from where left off]\n```
 
 ### Context Management
 ```
@@ -257,16 +243,6 @@ Assistant: OK SHOW CONTEXT
 - **Progress**: [X/Y steps completed]
 - **Last Request**: [LAST_USER_REQUEST]
 ```
-
----
-
-## 🔧 DETAILED PROCESSES
-
-For detailed workflow processes, see:
-
-- **[Core Workflow](van_core_workflow.md)** - Complete VAN workflow with full mermaid diagrams, task continuity, and error handling
-
-
 
 ---
 
@@ -352,19 +328,11 @@ Ensure new Memory Bank structure exists:
 ```
 memory-bank/
 ├── tasks/
-│   ├── todo/{critical,high,medium,low}/
-│   ├── in_progress/{active,blocked,review}/
-│   └── done/{YYYY-MM}/
+│   ├── todo/
+│   ├── in_progress/
+│   └── done/
 ├── contexts/
-│   ├── active/
-│   ├── suspended/
-│   └── archived/
-├── reports/
-│   ├── daily/
-│   ├── weekly/
-│   └── monthly/
 ├── templates/
-├── indexes/
 └── scripts/
 ```
 
@@ -394,3 +362,6 @@ Each task follows YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md format with:
 - `van --migrate` - Force legacy migration
 - `van --report` - Generate current status report
 - `van --contexts` - Show active contexts
+
+
+

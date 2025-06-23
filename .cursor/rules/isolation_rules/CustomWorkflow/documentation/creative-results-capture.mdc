@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: Creative Results Capture System for Memory Bank
+globs: "**/creative-results-capture.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 # CREATIVE RESULTS CAPTURE SYSTEM

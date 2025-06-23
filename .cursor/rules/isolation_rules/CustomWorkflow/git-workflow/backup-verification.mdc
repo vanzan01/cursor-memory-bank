@@ -1,6 +1,6 @@
 ---
 description: "Backup verification and recovery procedures for git workflow"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

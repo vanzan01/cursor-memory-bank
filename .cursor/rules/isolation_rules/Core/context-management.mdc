@@ -10,6 +10,8 @@ alwaysApply: true
 
 **CRITICAL REQUIREMENT**: Each task MUST have separate context preservation to enable multi-task switching and parallel work on non-overlapping tasks.
 
+**MANDATORY RULE**: NO static context files (like current-context.md). ALL contexts MUST be task-specific and follow YYYY-MM-DD-task-name-context.md format.
+
 ## CONTEXT ARCHITECTURE
 
 ### Context File Structure

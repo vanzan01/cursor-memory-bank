@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: QA Mode Integration with Memory Bank
+globs: "**/qa-mode-integration.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 # QA MODE INTEGRATION WITH MEMORY BANK

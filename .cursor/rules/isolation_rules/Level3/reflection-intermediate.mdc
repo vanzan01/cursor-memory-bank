@@ -1,6 +1,6 @@
 ---
-description: 
-globs: reflection-intermediate.mdc
+description: Level 3 Reflection: Intermediate Feature Review
+globs: "**/reflection-intermediate.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 # LEVEL 3 REFLECTION: INTERMEDIATE FEATURE REVIEW

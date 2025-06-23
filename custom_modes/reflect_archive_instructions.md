@@ -8,33 +8,48 @@ Your role is to facilitate the **reflection** on the completed task and then, up
 
 ## REFLECT Mode
 
-### Enhanced Reporting Integration
+### Memory Bank 2.0.0 Reporting Integration
 
-#### Daily Reports
+#### MANDATORY: Generate Automated Reports
 ```bash
-# Generate daily report
-./memory-bank/scripts/daily-report.sh
+# MANDATORY: Generate daily report for current date
+run_terminal_cmd({
+  command: "./memory-bank/scripts/daily-report.sh",
+  explanation: "Generating Memory Bank 2.0.0 daily report"
+})
 
-# View today's metrics
-cat memory-bank/reports/daily/daily-report-$(date +%Y-%m-%d).md
+# MANDATORY: Generate weekly report for current week
+run_terminal_cmd({
+  command: "./memory-bank/scripts/weekly-report.sh",
+  explanation: "Generating Memory Bank 2.0.0 weekly report"
+})
+
+# View generated reports
+run_terminal_cmd({
+  command: "find memory-bank/reports -name '*.md' -mtime -1 | head -5",
+  explanation: "Finding recently generated reports"
+})
 ```
 
-#### Weekly Reports
+#### Task Completion Analysis (Memory Bank 2.0.0)
 ```bash
-# Generate weekly report
-./memory-bank/scripts/weekly-report.sh
+# Analyze completed tasks by priority
+run_terminal_cmd({
+  command: "find memory-bank/tasks/done -name '*CRITICAL*.md' | wc -l",
+  explanation: "Counting completed CRITICAL tasks"
+})
 
-# View current week's summary
-cat memory-bank/reports/weekly/weekly-report-$(date +%Y-W%V).md
-```
+# Analyze tasks in progress
+run_terminal_cmd({
+  command: "find memory-bank/tasks/in_progress -name '*.md' | wc -l",
+  explanation: "Counting active tasks"
+})
 
-#### Monthly Reports
-```bash
-# Generate monthly report (coming soon)
-./memory-bank/scripts/monthly-report.sh
-
-# View current month's summary
-cat memory-bank/reports/monthly/monthly-report-$(date +%Y-%m).md
+# Context efficiency analysis
+run_terminal_cmd({
+  command: "find memory-bank/contexts/active -name '*.md' | wc -l",
+  explanation: "Counting active contexts"
+})
 ```
 
 ### Task Analysis Integration
@@ -126,7 +141,7 @@ memory-bank/archive/
 
 ```mermaid
 graph TD
-    Start["🚀 START REFLECT+ARCHIVE MODE"] --> ReadDocs["📚 Read tasks.md, progress.md<br>.cursor/rules/isolation_rules/main.mdc"]
+    Start["🚀 START REFLECT+ARCHIVE MODE"] --> ReadDocs["📚 Read tasks.md, progress.md<br>.cursor/rules/isolation_rules/main-optimized.mdc"]
 
     %% Initialization & Default Behavior (Reflection)
     ReadDocs --> VerifyImplement{"✅ Verify Implementation<br>Complete in tasks.md?"}
@@ -192,7 +207,7 @@ graph TD
 ### Step 1: READ MAIN RULE & CONTEXT FILES
 ```
 read_file({
-  target_file: ".cursor/rules/isolation_rules/main.mdc",
+  target_file: ".cursor/rules/isolation_rules/main-optimized.mdc",
   should_read_entire_file: true
 })
 

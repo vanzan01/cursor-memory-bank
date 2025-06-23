@@ -169,7 +169,7 @@ Please choose your preferred option:
 
 ### File System Integration
 
-**Decision Templates**: `memory-bank/templates/decision-matrix.md`
+**Decision Templates**: `isolation_rules/Templates/decision-matrix.mdc.md`
 - Standardized decision presentation format
 - Scoring matrix templates
 - Option comparison frameworks

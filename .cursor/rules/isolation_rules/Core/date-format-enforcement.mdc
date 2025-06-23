@@ -17,6 +17,9 @@ alwaysApply: true
 2025-06-20-daily-report.md
 2025-W25-weekly-report.md
 2025-06-monthly-report.md
+2025-06-20-qa-audit-memory-bank.md
+2025-06-20-research-user-requirements.md
+2025-06-20-analysis-performance-metrics.md
 ```
 
 ### ❌ INCORRECT FORMATS (FORBIDDEN)
@@ -34,7 +37,10 @@ task-2025-06-20.md          # Date not at beginning
 1. **Task Files**: `YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md`
 2. **Context Files**: `YYYY-MM-DD-task-context.md`
 3. **Report Files**: `YYYY-MM-DD-report-type.md` or `YYYY-W##-weekly-report.md`
-4. **Archive Files**: Must be organized in `YYYY-MM/` folders
+4. **QA Files**: `YYYY-MM-DD-qa-type-description.md` (in memory-bank/qa/)
+5. **Research Files**: `YYYY-MM-DD-research-topic.md` (in memory-bank/qa/research/)
+6. **Analysis Files**: `YYYY-MM-DD-analysis-subject.md` (in memory-bank/qa/analysis/)
+7. **Archive Files**: Must be organized in `YYYY-MM/` folders
 
 ### Validation Patterns
 ```regex
@@ -52,6 +58,15 @@ task-2025-06-20.md          # Date not at beginning
 
 # Monthly Reports
 ^(\d{4}-\d{2})-monthly-report\.md$
+
+# QA Files
+^(\d{4}-\d{2}-\d{2})-qa-(audit|test|review|analysis)-[a-z0-9-]+\.md$
+
+# Research Files
+^(\d{4}-\d{2}-\d{2})-research-[a-z0-9-]+\.md$
+
+# Analysis Files
+^(\d{4}-\d{2}-\d{2})-analysis-[a-z0-9-]+\.md$
 ```
 
 ## BENEFITS OF YYYY-MM-DD FORMAT
@@ -76,6 +91,12 @@ task-2025-06-20.md          # Date not at beginning
 - No Y2K-style problems
 - Internationally recognized standard
 
+### 5. **QA and Research Organization**
+- Research files chronologically organized
+- QA audits traceable by date
+- Analysis reports time-stamped
+- Easy correlation between research and implementation
+
 ## MIGRATION REQUIREMENTS
 
 ### Legacy File Handling
@@ -92,11 +113,15 @@ When encountering files with incorrect date formats:
 task-user-auth-20-06-2025.md
 daily_report_06_20_2025.md
 context-shopping-cart-2025.06.20.md
+qa_audit_memory_bank.md
+research-user-requirements.md
 
 # After Migration
 2025-06-20-HIGH-FEATURE-user-auth.md
 2025-06-20-daily-report.md
 2025-06-20-shopping-cart-context.md
+2025-06-20-qa-audit-memory-bank.md
+2025-06-20-research-user-requirements.md
 ```
 
 ## ENFORCEMENT MECHANISMS

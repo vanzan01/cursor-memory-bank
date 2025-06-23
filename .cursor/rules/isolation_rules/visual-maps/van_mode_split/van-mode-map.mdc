@@ -40,8 +40,12 @@ graph TD
     BatchCheck --> BatchCreate["Batch Create Essential Structure"]
     BatchCreate --> BasicFileCP["⛔ BASIC FILE CHECKPOINT"]
 
-    %% Early Complexity Determination
-    BasicFileCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
+    %% ---> НАЧАЛО НОВОГО ШАГА <---
+    BasicFileCP --> GitSetup["🌿 GIT SETUP & VALIDATION<br>Load: Core/git-setup-validation.mdc"]
+    GitSetup --> GitCP["⛔ GIT CHECKPOINT"]
+    %% ---> КОНЕЦ НОВОГО ШАГА <---
+
+    GitCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
     EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
 
@@ -81,6 +85,10 @@ graph TD
     style QAProcess fill:#4da6ff,stroke:#0066cc,color:white
     style QACheck fill:#4da6ff,stroke:#0066cc,color:white
     style FixIssues fill:#ff5555,stroke:#dd3333,color:white
+
+    %% Style for new Git Setup nodes
+    style GitSetup fill:#2dd4bf,stroke:#047857,color:black,stroke-width:2px
+    style GitCP fill:#f55,stroke:#d44,color:white
 ```
 
 ## 🌐 PLATFORM DETECTION PROCESS

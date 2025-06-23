@@ -1,6 +1,6 @@
 ---
 description: "Usage examples and practical scenarios for Memory Bank development"
-globs: "**/documentation/**", "**/examples/**", "**/tutorials/**"
+globs: "**/documentation/**", "**/examples/**", "**/tutorials/**", "**/memory-bank/**"
 alwaysApply: false
 ---
 

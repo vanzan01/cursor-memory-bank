@@ -1,6 +1,6 @@
 ---
 description: Visual process map for VAN QA mode (Technical Validation Entry Point)
-globs: van-qa-main.mdc
+globs: van-qa-main-optimized.mdc
 alwaysApply: false
 ---
 # VAN MODE: QA TECHNICAL VALIDATION (Main Entry)
@@ -28,12 +28,12 @@ graph TD
     CurrentTask --> LoadQA["Load QA Main Map (This File)"]
     LoadQA --> RunQA["Execute QA Validation Process"]
     RunQA --> QAResults{"QA Results"}
-    
+
     QAResults -->|"PASS"| ResumeFlow["Resume Prior Process Flow"]
     QAResults -->|"FAIL"| FixIssues["Fix Identified Issues"]
     FixIssues --> ReRunQA["Re-run QA Validation"]
     ReRunQA --> QAResults
-    
+
     style UserQA fill:#f8d486,stroke:#e8b84d,color:black
     style HighPriority fill:#ff0000,stroke:#cc0000,color:white,stroke-width:3px
     style LoadQA fill:#4da6ff,stroke:#0066cc,color:white
@@ -44,7 +44,7 @@ graph TD
 ### QA Interruption Rules
 
 1. **Immediate Precedence:** `QA` command interrupts everything.
-2. **Load & Execute:** Load this map (`van-qa-main.mdc`) and its components (see below).
+2. **Load & Execute:** Load this map (`van-qa-main-optimized.mdc`) and its components (see below).
 3. **Remediation Priority:** Fixes take priority over pending mode switches.
 4. **Resume:** On PASS, resume the previous flow.
 
@@ -62,7 +62,7 @@ Four-point validation process with selective loading:
 ```mermaid
 graph TD
     VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
-    
+
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION
     Load: van-qa-checks/dependency-check.mdc"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION
@@ -71,20 +71,20 @@ graph TD
     Load: van-qa-checks/environment-check.mdc"]
     EnvCheck --> MinBuildCheck["4️⃣ MINIMAL BUILD TEST
     Load: van-qa-checks/build-test.mdc"]
-    
+
     MinBuildCheck --> ValidationResults{"All Checks<br>Passed?"}
     ValidationResults -->|"Yes"| SuccessReport["GENERATE SUCCESS REPORT
     Load: van-qa-utils/reports.mdc"]
     ValidationResults -->|"No"| FailureReport["GENERATE FAILURE REPORT
     Load: van-qa-utils/reports.mdc"]
-    
+
     SuccessReport --> BUILD_Transition["Trigger BUILD Mode
     Load: van-qa-utils/mode-transitions.mdc"]
     FailureReport --> FixIssues["Fix Technical Issues
     Load: van-qa-utils/common-fixes.mdc"]
     FixIssues --> ReValidate["Re-validate (Re-run VAN QA)"]
     ReValidate --> FourChecks
-    
+
     style VANQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
@@ -103,7 +103,7 @@ graph TD
     ExtractTech --> ExtractDeps["Extract Required<br>Dependencies"]
     ExtractDeps --> BuildValidationPlan["Build Validation<br>Plan"]
     BuildValidationPlan --> StartValidation["Start Four-Point<br>Validation Process"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ExtractTech fill:#f6546a,stroke:#c30052,color:white
     style BuildValidationPlan fill:#10b981,stroke:#059669,color:white
@@ -114,7 +114,7 @@ graph TD
 
 The QA validation process follows this selective loading sequence:
 
-1. **Main Entry (This File)**: `van-qa-main.mdc`
+1. **Main Entry (This File)**: `van-qa-main-optimized.mdc`
 2. **Validation Checks**:
    - `van-qa-checks/dependency-check.mdc`
    - `van-qa-checks/config-check.mdc`
@@ -139,4 +139,4 @@ The QA validation process follows this selective loading sequence:
 ```
 
 **Next Step (on PASS):** Trigger BUILD mode (load `van-qa-utils/mode-transitions.mdc`).
-**Next Step (on FAIL):** Address issues (load `van-qa-utils/common-fixes.mdc`) and re-run `VAN QA`. 
+**Next Step (on FAIL):** Address issues (load `van-qa-utils/common-fixes.mdc`) and re-run `VAN QA`.

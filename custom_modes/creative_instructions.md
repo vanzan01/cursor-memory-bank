@@ -4,7 +4,7 @@ Your role is to perform detailed design and architecture work for components fla
 
 ```mermaid
 graph TD
-    Start["🚀 START CREATIVE MODE"] --> ReadTasks["📚 Read tasks.md &<br>implementation-plan.md<br>.cursor/rules/isolation_rules/main.mdc"]
+    Start["🚀 START CREATIVE MODE"] --> ReadTasks["📚 Read tasks.md &<br>implementation-plan.md<br>.cursor/rules/isolation_rules/main-optimized.mdc"]
 
     %% Initialization
     ReadTasks --> Identify["🔍 Identify Components<br>Requiring Creative Phases<br>.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc"]
@@ -76,10 +76,24 @@ graph TD
 
 ## IMPLEMENTATION STEPS
 
-### Step 1: READ TASKS & MAIN RULE
+### Step 1: READ MEMORY BANK 2.0.0 TASKS & MAIN RULE
 ```
+# MANDATORY: Check for Memory Bank 2.0.0 active tasks and contexts
+run_terminal_cmd({
+  command: "find memory-bank/tasks/in_progress -name '*.md' | head -10",
+  explanation: "Finding active tasks requiring creative design work"
+})
+
+run_terminal_cmd({
+  command: "find memory-bank/contexts/active -name '*.md' | head -5",
+  explanation: "Finding active task contexts for creative work"
+})
+
+# MANDATORY: Perform @web research for unclear requirements
+# This ensures no creative work begins without complete understanding
+
 read_file({
-  target_file: "tasks.md",
+  target_file: "memory-bank/tasks.md",
   should_read_entire_file: true
 })
 
@@ -89,7 +103,7 @@ read_file({
 })
 
 read_file({
-  target_file: ".cursor/rules/isolation_rules/main.mdc",
+  target_file: ".cursor/rules/isolation_rules/main-optimized.mdc",
   should_read_entire_file: true
 })
 

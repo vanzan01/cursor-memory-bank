@@ -1,7 +1,7 @@
 ---
-description:
-globs:
-alwaysApply: false
+description: Date Management System for Memory Bank
+globs: "**/date-management.mdc", "**/memory-bank/**"
+alwaysApply: true
 ---
 # DATE MANAGEMENT SYSTEM
 

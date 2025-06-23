@@ -1,7 +1,6 @@
 ---
----
 description: "Система автоматического управления датами с проверкой и обновлением в VAN режиме"
-globs: "**/**"
+globs: "**/memory-bank/**
 alwaysApply: true
 ---
 

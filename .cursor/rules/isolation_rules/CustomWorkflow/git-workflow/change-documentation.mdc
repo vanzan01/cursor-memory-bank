@@ -1,6 +1,6 @@
 ---
 description: "Change documentation and tracking in git workflow"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

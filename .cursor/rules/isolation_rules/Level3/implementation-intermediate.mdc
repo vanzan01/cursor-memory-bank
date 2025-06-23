@@ -1,6 +1,6 @@
 ---
-description: 
-globs: implementation-intermediate.mdc
+description: Level 3 Implementation: Building Intermediate Features
+globs: "**/implementation-intermediate.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 # LEVEL 3 IMPLEMENTATION: BUILDING INTERMEDIATE FEATURES

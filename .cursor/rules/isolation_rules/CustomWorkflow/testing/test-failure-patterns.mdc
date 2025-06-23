@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: Test Failure Pattern Detection for Memory Bank
+globs: "**/test-failure-patterns.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 # TEST FAILURE PATTERN DETECTION

@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: Development Rules Integration for Memory Bank 2.0.0
+globs: "**/development/**", "**/memory-bank/**"
 alwaysApply: false
 ---
 # DEVELOPMENT RULES INTEGRATION

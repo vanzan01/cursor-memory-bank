@@ -1,6 +1,6 @@
 ---
-description: 
-globs: archive-intermediate.mdc
+description: Level 3 Archive: Intermediate Feature Documentation
+globs: "**/archive-intermediate.mdc", "**/memory-bank/**"
 alwaysApply: false
 ---
 

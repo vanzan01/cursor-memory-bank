@@ -1,6 +1,6 @@
 ---
 description: "Branch management strategies for Memory Bank workflow"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

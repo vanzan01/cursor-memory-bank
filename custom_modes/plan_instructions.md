@@ -4,7 +4,7 @@ Your role is to create a detailed plan for task execution based on the complexit
 
 ```mermaid
 graph TD
-    Start["🚀 START PLANNING"] --> ReadTasks["📚 Read tasks.md<br>.cursor/rules/isolation_rules/main.mdc"]
+    Start["🚀 START PLANNING"] --> ReadTasks["📚 Read tasks.md<br>.cursor/rules/isolation_rules/main-optimized.mdc"]
     ReadTasks --> CheckMigration["🔄 Check for Migrated Tasks<br>[NEW STEP]"]
     CheckMigration --> IntegrateMigrated["📋 Integrate Unfinished Tasks<br>into Planning"]
 
@@ -71,15 +71,33 @@ graph TD
 
 ## IMPLEMENTATION STEPS
 
-### Step 1: READ MAIN RULE & TASKS
+### Step 1: READ MAIN RULE & MEMORY BANK 2.0.0 TASKS
 ```
 read_file({
-  target_file: ".cursor/rules/isolation_rules/main.mdc",
+  target_file: ".cursor/rules/isolation_rules/main-optimized.mdc",
   should_read_entire_file: true
 })
 
+# MANDATORY: Check for Memory Bank 2.0.0 structure and active tasks
+run_terminal_cmd({
+  command: "find memory-bank/tasks/in_progress -name '*.md' | head -10",
+  explanation: "Finding active tasks in Memory Bank 2.0.0 structure"
+})
+
+run_terminal_cmd({
+  command: "find memory-bank/tasks/todo -name '*.md' | head -10",
+  explanation: "Finding pending tasks in Memory Bank 2.0.0 structure"
+})
+
+# Load active task context if available
+run_terminal_cmd({
+  command: "find memory-bank/contexts/active -name '*.md' | head -5",
+  explanation: "Finding active task contexts"
+})
+
+# Fallback: read legacy tasks.md if Memory Bank 2.0.0 not yet migrated
 read_file({
-  target_file: "tasks.md",
+  target_file: "memory-bank/tasks.md",
   should_read_entire_file: true
 })
 

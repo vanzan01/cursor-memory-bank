@@ -1,6 +1,6 @@
 ---
 description: Mandatory @web Search Requirement for PLAN/CREATIVE Modes
-globs: "**/Level2/**", "**/Level3/**", "**/workflow/**", "**/creative/**"
+globs: "**/Level2/**", "**/Level3/**", "**/workflow/**", "**/creative-*"
 alwaysApply: true
 ---
 

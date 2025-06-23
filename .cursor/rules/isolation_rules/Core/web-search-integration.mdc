@@ -1,3 +1,9 @@
+---
+description: Web Search Integration for Memory Bank 2.0.0
+globs: "**/memory-bank/**"
+alwaysApply: true
+---
+
 # WEB SEARCH INTEGRATION RULE
 
 ## OVERVIEW

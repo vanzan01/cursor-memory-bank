@@ -1,0 +1,294 @@
+# MEMORY BANK SYSTEM CONFIGURATION
+# Последнее обновление: 2025-06-20
+# Режим: UNIVERSAL (IMPLEMENT фаза)
+
+system:
+  version: "2.0.0"
+  name: "cursor-memory-bank"
+  description: "Advanced Memory Bank System for Cursor IDE"
+  created: "2025-06-20"
+  updated: "2025-06-20"
+
+# Настройки взаимодействия
+interaction:
+  mode: "MANUAL"  # AUTO или MANUAL
+  timeout:
+    user_response: 900  # 15 минут
+    decision_wait: 300   # 5 минут
+  defaults:
+    fallback_mode: "MANUAL"
+    auto_switch_threshold: 3  # Переключение на AUTO после 3 таймаутов
+
+# Поведение режимов
+behavior:
+  auto_mode:
+    documentation_level: "comprehensive"
+    decision_rationale: true
+    user_notifications: "summary"
+
+  manual_mode:
+    question_detail_level: "detailed"
+    option_presentation: "comprehensive"
+    confirmation_required: true
+
+# Настройки режимов Memory Bank
+modes:
+  VAN:
+    enabled: true
+    auto_migration: true
+    complexity_detection: true
+    backup_before_migration: true
+    settings:
+      analysis_depth: "comprehensive"
+      migration_validation: true
+      legacy_support: true
+
+  PLAN:
+    enabled: true
+    web_search_required: true
+    strategy_validation: true
+    settings:
+      planning_depth: "detailed"
+      component_analysis: true
+      creative_flagging: true
+
+  CREATIVE:
+    enabled: true
+    option_generation: "multiple"
+    decision_documentation: true
+    settings:
+      options_count: 3
+      analysis_depth: "comprehensive"
+      recommendation_required: true
+
+  IMPLEMENT:
+    enabled: true
+    progress_tracking: true
+    quality_checks: true
+    settings:
+      backup_frequency: "high"
+      validation_level: "strict"
+      testing_required: true
+
+  QA:
+    enabled: true
+    comprehensive_testing: true
+    report_generation: true
+    settings:
+      test_coverage: "high"
+      performance_testing: true
+      integration_testing: true
+
+  REFLECT:
+    enabled: true
+    learning_extraction: true
+    improvement_identification: true
+    settings:
+      analysis_depth: "comprehensive"
+      documentation_required: true
+      metrics_tracking: true
+
+  ARCHIVE:
+    enabled: true
+    knowledge_preservation: true
+    organization_structure: "hierarchical"
+    settings:
+      compression: true
+      indexing: true
+      search_optimization: true
+
+  UNIVERSAL:
+    enabled: true
+    auto_transitions: true
+    phase_validation: true
+    settings:
+      transition_documentation: true
+      progress_tracking: "real_time"
+      error_recovery: true
+
+# Настройки файловой системы
+storage:
+  base_directory: "memory-bank"
+  backup_directory: "memory-bank/backup"
+  archive_directory: "memory-bank/archive"
+  temp_directory: "memory-bank/temp"
+
+  # Структура директорий
+  directories:
+    tasks: "memory-bank/tasks"
+    contexts: "memory-bank/contexts"
+    progress: "memory-bank/progress"
+    system: "memory-bank/system"
+    config: "memory-bank/config"
+    scripts: "memory-bank/scripts"
+    templates: "memory-bank/templates"
+
+# Настройки резервного копирования
+backup:
+  enabled: true
+  frequency: "auto"  # auto, manual, scheduled
+  retention_days: 30
+  compression: true
+
+  triggers:
+    - "mode_transition"
+    - "critical_operation"
+    - "user_request"
+    - "error_recovery"
+
+  exclude_patterns:
+    - "*.tmp"
+    - "*.log"
+    - ".DS_Store"
+    - "node_modules/"
+
+# Настройки валидации
+validation:
+  enabled: true
+  strict_mode: true
+
+  file_integrity:
+    enabled: true
+    checksum_validation: true
+
+  task_validation:
+    enabled: true
+    dependency_checking: true
+    status_validation: true
+
+  system_validation:
+    enabled: true
+    config_validation: true
+    permission_checking: true
+
+# Настройки производительности
+performance:
+  cache_enabled: true
+  cache_size: "100MB"
+
+  optimization:
+    file_compression: true
+    index_optimization: true
+    memory_management: "auto"
+
+  monitoring:
+    enabled: true
+    metrics_collection: true
+    performance_alerts: true
+
+# Настройки безопасности
+security:
+  file_permissions:
+    strict_mode: true
+    backup_permissions: "600"
+    config_permissions: "644"
+
+  data_protection:
+    encryption: false  # Для будущего использования
+    secure_deletion: true
+    access_logging: true
+
+# Настройки интеграции
+integration:
+  cursor_ide:
+    enabled: true
+    custom_modes: true
+    auto_detection: true
+
+  git:
+    enabled: true
+    auto_commit: false
+    backup_integration: true
+
+  external_tools:
+    web_search: true
+    documentation_tools: true
+
+# Настройки отчетности
+reporting:
+  enabled: true
+
+  metrics:
+    performance: true
+    usage_statistics: true
+    error_tracking: true
+
+  formats:
+    - "markdown"
+    - "yaml"
+    - "json"
+
+  frequency:
+    daily: true
+    weekly: true
+    monthly: true
+
+# Настройки уведомлений
+notifications:
+  enabled: true
+
+  types:
+    success: true
+    warnings: true
+    errors: true
+    info: true
+
+  channels:
+    console: true
+    file: true
+    system: false
+
+# Настройки разработки
+development:
+  debug_mode: false
+  verbose_logging: false
+
+  testing:
+    enabled: true
+    unit_tests: true
+    integration_tests: true
+
+  profiling:
+    enabled: false
+    performance_monitoring: true
+
+# Настройки пользователя
+user_preferences:
+  default_mode: "VAN"
+  auto_save: true
+  confirmation_prompts: true
+
+  ui:
+    theme: "default"
+    language: "ru"
+    date_format: "YYYY-MM-DD"
+
+  workflow:
+    auto_transitions: false
+    progress_notifications: true
+    completion_alerts: true
+
+# Экспериментальные функции
+experimental:
+  enabled: false
+
+  features:
+    ai_assistance: false
+    predictive_analysis: false
+    smart_recommendations: false
+
+# Метаданные конфигурации
+metadata:
+  config_version: "1.0"
+  last_modified: "2025-06-20T12:00:00Z"
+  modified_by: "UNIVERSAL_MODE_IMPLEMENT"
+
+  validation:
+    schema_version: "1.0"
+    validated: true
+    validation_date: "2025-06-20T12:00:00Z"
+
+  compatibility:
+    min_system_version: "2.0.0"
+    max_system_version: "3.0.0"
+    cursor_ide_version: ">=0.40.0"

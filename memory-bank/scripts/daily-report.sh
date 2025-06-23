@@ -1,0 +1,143 @@
+#!/bin/bash
+
+# Daily Report Generator for Memory Bank 2.0.0
+# Usage: ./daily-report.sh [YYYY-MM-DD]
+
+set -e
+
+# Get target date (default: today)
+TARGET_DATE="${1:-$(date +%Y-%m-%d)}"
+REPORT_FILE="memory-bank/reports/daily/daily-report-${TARGET_DATE}.md"
+
+echo "📊 Generating Daily Report for $TARGET_DATE"
+
+# Ensure reports directory exists
+mkdir -p "memory-bank/reports/daily"
+
+# Generate report
+cat > "$REPORT_FILE" << EOF
+# Daily Report - $TARGET_DATE
+
+**Generated**: $(date '+%Y-%m-%d %H:%M:%S')
+**Period**: $TARGET_DATE
+
+## 📊 Task Summary
+
+### Completed Tasks
+$(find memory-bank/tasks/done -name "${TARGET_DATE}-*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        title=$(grep "^title:" "$file" | sed 's/title: //')
+        priority=$(grep "^priority:" "$file" | sed 's/priority: //')
+        category=$(grep "^category:" "$file" | sed 's/category: //')
+        echo "- [$priority] [$category] $title"
+        echo "  - File: [\$(basename "$file")]($file)"
+    fi
+done)
+
+### Tasks in Progress
+$(find memory-bank/tasks/in_progress -name "${TARGET_DATE}-*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        title=$(grep "^title:" "$file" | sed 's/title: //')
+        priority=$(grep "^priority:" "$file" | sed 's/priority: //')
+        category=$(grep "^category:" "$file" | sed 's/category: //')
+        progress=$(grep "Overall Progress" "$file" | grep -o "[0-9]*%" || echo "0%")
+        echo "- [$priority] [$category] $title - $progress"
+        echo "  - File: [\$(basename "$file")]($file)"
+    fi
+done)
+
+### New Tasks Created
+$(find memory-bank/tasks/todo -name "${TARGET_DATE}-*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        title=$(grep "^title:" "$file" | sed 's/title: //')
+        priority=$(grep "^priority:" "$file" | sed 's/priority: //')
+        category=$(grep "^category:" "$file" | sed 's/category: //')
+        echo "- [$priority] [$category] $title"
+        echo "  - File: [\$(basename "$file")]($file)"
+    fi
+done)
+
+## 📈 Productivity Metrics
+
+### Task Statistics
+- **Completed Today**: $(find memory-bank/tasks/done -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l)
+- **In Progress**: $(find memory-bank/tasks/in_progress -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l)
+- **New Tasks**: $(find memory-bank/tasks/todo -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l)
+- **Total Active**: $(find memory-bank/tasks -name "*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+
+### Priority Breakdown
+- **CRITICAL**: $(find memory-bank/tasks -name "*CRITICAL*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **HIGH**: $(find memory-bank/tasks -name "*HIGH*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **MEDIUM**: $(find memory-bank/tasks -name "*MEDIUM*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **LOW**: $(find memory-bank/tasks -name "*LOW*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+
+### Category Breakdown
+- **FEATURE**: $(find memory-bank/tasks -name "*FEATURE*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **BUGFIX**: $(find memory-bank/tasks -name "*BUGFIX*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **ENHANCEMENT**: $(find memory-bank/tasks -name "*ENHANCEMENT*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **RESEARCH**: $(find memory-bank/tasks -name "*RESEARCH*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+- **ADMIN**: $(find memory-bank/tasks -name "*ADMIN*.md" -not -path "*/done/*" 2>/dev/null | wc -l)
+
+## 🎯 Focus Areas
+
+### Top Priorities for Tomorrow
+$(find memory-bank/tasks -name "*CRITICAL*.md" -not -path "*/done/*" 2>/dev/null | head -3 | while read file; do
+    if [ -f "$file" ]; then
+        title=$(grep "^title:" "$file" | sed 's/title: //')
+        echo "- $title"
+    fi
+done)
+
+### Blocked Tasks Requiring Attention
+$(find memory-bank/tasks/in_progress/blocked -name "*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        title=$(grep "^title:" "$file" | sed 's/title: //')
+        echo "- $title"
+    fi
+done)
+
+## 🔄 Context Activity
+
+### Active Contexts
+$(find memory-bank/contexts/active -name "*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        echo "- [\$(basename "$file")]($file)"
+    fi
+done)
+
+### Context Switches Today
+$(grep -r "Context created\|Context updated" memory-bank/contexts/ 2>/dev/null | grep "$TARGET_DATE" | wc -l || echo "0")
+
+## 📝 Notes and Observations
+
+### What Went Well
+- [Add manual observations about successful patterns]
+
+### Challenges Encountered
+- [Add manual observations about difficulties]
+
+### Lessons Learned
+- [Add manual insights and improvements]
+
+## 🔗 Archive Links
+
+### Completed Task Archive
+$(find memory-bank/archive -name "*${TARGET_DATE}*.md" 2>/dev/null | while read file; do
+    if [ -f "$file" ]; then
+        echo "- [\$(basename "$file")]($file)"
+    fi
+done)
+
+---
+*Report generated by Memory Bank 2.0.0 Daily Report System*
+*Next report: $(date -d "$TARGET_DATE + 1 day" +%Y-%m-%d)*
+EOF
+
+echo "✅ Daily report generated: $REPORT_FILE"
+
+# Optional: Display summary
+echo ""
+echo "📊 DAILY SUMMARY for $TARGET_DATE:"
+echo "   Completed: $(find memory-bank/tasks/done -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l) tasks"
+echo "   In Progress: $(find memory-bank/tasks/in_progress -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l) tasks"
+echo "   New Tasks: $(find memory-bank/tasks/todo -name "${TARGET_DATE}-*.md" 2>/dev/null | wc -l) tasks"

@@ -16,22 +16,22 @@ graph TD
     Root --> Common["Common Rules<br>(Mode Independent)"]
     Root --> Mode["Mode-Specific<br>Rules"]
     Root --> Level["Complexity Level<br>Rules"]
-    
+
     Core --> Platform["Platform<br>Detection"]
     Core --> File["File<br>Operations"]
     Core --> Transition["Mode<br>Transitions"]
-    
+
     Mode --> VAN["VAN Mode<br>Rules"]
     Mode --> PLAN["PLAN Mode<br>Rules"]
     Mode --> CREATIVE["CREATIVE Mode<br>Rules"]
     Mode --> IMPLEMENT["IMPLEMENT Mode<br>Rules"]
     Mode --> REFLECT["REFLECT Mode<br>Rules"]
-    
+
     Level --> Level1["Level 1<br>Rules"]
     Level --> Level2["Level 2<br>Rules"]
     Level --> Level3["Level 3<br>Rules"]
     Level --> Level4["Level 4<br>Rules"]
-    
+
     style Root fill:#4da6ff,stroke:#0066cc,color:white
     style Core fill:#ffa64d,stroke:#cc7a30,color:white
     style Common fill:#4dbb5f,stroke:#36873f,color:white
@@ -47,27 +47,27 @@ sequenceDiagram
     participant LoadManager
     participant RuleCache
     participant FileSystem
-    
+
     User->>LoadManager: Request mode activation
     LoadManager->>RuleCache: Check cached core rules
     RuleCache-->>LoadManager: Return cached rules if available
-    
+
     LoadManager->>FileSystem: Load essential mode rules
     FileSystem-->>LoadManager: Return essential rules
-    
+
     LoadManager->>LoadManager: Register lazy loaders for specialized rules
     LoadManager->>User: Return initialized mode
-    
+
     User->>LoadManager: Request specialized functionality
     LoadManager->>RuleCache: Check specialized rule cache
     RuleCache-->>LoadManager: Return cached rule if available
-    
+
     alt Rule not in cache
         LoadManager->>FileSystem: Load specialized rule
         FileSystem-->>LoadManager: Return specialized rule
         LoadManager->>RuleCache: Cache specialized rule
     end
-    
+
     LoadManager->>User: Execute specialized functionality
 ```
 
@@ -85,31 +85,31 @@ class RuleLoadManager {
     };
     this.lazyLoaders = {};
   }
-  
+
   // Initialize a mode with only essential rules
   initializeMode(modeName, complexityLevel) {
     // Always load core rules
     this.loadCoreRules();
-    
+
     // Load common rules
     this.loadCommonRules();
-    
+
     // Load essential mode-specific rules
     this.loadEssentialModeRules(modeName);
-    
+
     // Load complexity level rules
     this.loadComplexityRules(complexityLevel);
-    
+
     // Register lazy loaders for specialized functionality
     this.registerLazyLoaders(modeName, complexityLevel);
-    
+
     return {
       modeName,
       complexityLevel,
       status: "initialized"
     };
   }
-  
+
   // Load only when specialized functionality is needed
   loadSpecializedRule(ruleType) {
     if (this.lazyLoaders[ruleType]) {
@@ -121,12 +121,12 @@ class RuleLoadManager {
     }
     return null;
   }
-  
+
   // Register specialized rule loaders based on mode and complexity
   registerLazyLoaders(modeName, complexityLevel) {
     // Clear existing lazy loaders
     this.lazyLoaders = {};
-    
+
     // Register mode-specific lazy loaders
     if (modeName === "CREATIVE") {
       this.lazyLoaders["architecture"] = () => this.loadRule("creative-phase-architecture.mdc");
@@ -136,7 +136,7 @@ class RuleLoadManager {
       this.lazyLoaders["testing"] = () => this.loadRule("implementation-testing.mdc");
       this.lazyLoaders["deployment"] = () => this.loadRule("implementation-deployment.mdc");
     }
-    
+
     // Register complexity-specific lazy loaders
     if (complexityLevel >= 3) {
       this.lazyLoaders["comprehensive-planning"] = () => this.loadRule("planning-comprehensive.mdc");
@@ -150,21 +150,21 @@ class RuleLoadManager {
 
 ```mermaid
 graph TD
-    Main["main.mdc"] --> Core1["platform-awareness.mdc"]
+    Main["main-optimized.mdc"] --> Core1["platform-awareness.mdc"]
     Main --> Core2["file-verification.mdc"]
     Main --> Core3["command-execution.mdc"]
-    
+
     subgraph "VAN Mode"
         VanMap["van-mode-map.mdc"] --> Van1["van-complexity-determination.mdc"]
         VanMap --> Van2["van-file-verification.mdc"]
         VanMap --> Van3["van-platform-detection.mdc"]
     end
-    
+
     subgraph "PLAN Mode"
         PlanMap["plan-mode-map.mdc"] --> Plan1["task-tracking-basic.mdc"]
         PlanMap --> Plan2["planning-comprehensive.mdc"]
     end
-    
+
     subgraph "CREATIVE Mode"
         CreativeMap["creative-mode-map.mdc"] --> Creative1["creative-phase-enforcement.mdc"]
         CreativeMap --> Creative2["creative-phase-metrics.mdc"]
@@ -173,7 +173,7 @@ graph TD
         CreativeSpecialized --> CAlgo["creative-phase-algorithm.mdc"]
         CreativeSpecialized --> CUIUX["creative-phase-uiux.mdc"]
     end
-    
+
     subgraph "IMPLEMENT Mode"
         ImplementMap["implement-mode-map.mdc"] --> Impl1["implementation-guide.mdc"]
         ImplementMap --> Impl2["testing-strategy.mdc"]
@@ -184,7 +184,7 @@ graph TD
 
 ### VAN Mode Essential Rules
 ```markdown
-- main.mdc (Core)
+- main-optimized.mdc (Core)
 - platform-awareness.mdc (Core)
 - file-verification.mdc (Core)
 - van-mode-map.mdc (Mode)
@@ -192,14 +192,14 @@ graph TD
 
 ### PLAN Mode Essential Rules
 ```markdown
-- main.mdc (Core)
+- main-optimized.mdc (Core)
 - plan-mode-map.mdc (Mode)
 - task-tracking-[complexity].mdc (Level)
 ```
 
 ### CREATIVE Mode Essential Rules
 ```markdown
-- main.mdc (Core)
+- main-optimized.mdc (Core)
 - creative-mode-map.mdc (Mode)
 - creative-phase-enforcement.mdc (Mode)
 ```
@@ -213,7 +213,7 @@ graph TD
 
 ### IMPLEMENT Mode Essential Rules
 ```markdown
-- main.mdc (Core)
+- main-optimized.mdc (Core)
 - command-execution.mdc (Core)
 - implement-mode-map.mdc (Mode)
 ```
@@ -243,7 +243,7 @@ The hierarchical loading system provides:
 // Initialize the CREATIVE mode with only essential rules
 const mode = ruleManager.initializeMode("CREATIVE", 3);
 
-// Core and essential mode rules are loaded 
+// Core and essential mode rules are loaded
 // Architecture rules are NOT loaded yet
 
 // Later, when architecture design is needed:
