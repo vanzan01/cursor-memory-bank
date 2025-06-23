@@ -1,12 +1,31 @@
 ---
 description: Visual process map for REFLECT mode (Task Reflection)
-globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**"
+globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc"
 alwaysApply: false
 ---
 
 # REFLECT MODE: TASK REVIEW PROCESS MAP
 
 > **TL;DR:** This visual map guides the REFLECT mode process, focusing on structured review of the implementation, documenting lessons learned, and preparing insights for future reference.
+
+## 🔧 REFACTORING & ADVANCED REPORTING
+
+For Level 3-4 tasks, this map now includes:
+
+### **Quality-Driven Refactoring**:
+- **Quality Metrics Analysis**: Automated quality assessment using established metrics
+- **Conditional Refactoring**: Refactoring is triggered only when metrics indicate necessity
+- **Gradual Refactoring**: Structured approach to incremental improvements
+- **Legacy Support**: Maintains backward compatibility during refactoring
+- **Backward Compatibility**: Ensures existing functionality remains intact
+
+### **Advanced Creative Reporting**:
+- **Creative Analysis**: Comprehensive analysis of creative phase results
+- **Statistics Tracking**: Detailed tracking of creative decision effectiveness
+- **Creative Results Capture**: Systematic capture of creative outputs
+- **Decision Recording**: Structured documentation of design decisions
+- **Usage Examples**: Generation of practical usage examples
+- **Creative Versioning**: Version control for creative archives
 
 ## 🧭 REFLECT MODE PROCESS FLOW
 
@@ -57,13 +76,27 @@ graph TD
     L34Review --> L34Plan["Compare Against<br>Original Plan"]
     L34Plan --> L34CreativeAnalysis["🎨 CREATIVE ARCHIVE ANALYSIS<br>Analyze Creative Phase Results"]
     L34CreativeAnalysis --> L34QualityAssess["📊 Quality Assessment<br>Score Creative Decisions"]
-    L34QualityAssess --> L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
+    L34QualityAssess --> L34QualityRefactor["🔧 Analyze Quality & Refactor<br>CustomWorkflow/refactoring/"]
+    L34QualityRefactor --> L34QualityMetrics["📈 Load Quality Metrics<br>fetch_rules(quality-metrics.mdc)"]
+    L34QualityMetrics --> L34RefactorDecision{"Quality Metrics<br>Indicate Refactoring?"}
+    L34RefactorDecision -->|"Yes"| L34RefactorPatterns["🔄 Analyze Refactoring<br>fetch_rules(refactoring-patterns.mdc)"]
+    L34RefactorDecision -->|"No"| L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
+    L34RefactorPatterns --> L34GradualRefactor["📈 Gradual Refactoring<br>fetch_rules(gradual-refactoring.mdc)"]
+    L34GradualRefactor --> L34LegacySupport["🔧 Legacy Support<br>fetch_rules(legacy-support.mdc)"]
+    L34LegacySupport --> L34BackwardCompat["⬅️ Backward Compatibility<br>fetch_rules(backward-compatibility.mdc)"]
+    L34BackwardCompat --> L34PatternExtract
     L34PatternExtract --> L34WWW["Document<br>What Went Well"]
     L34WWW --> L34Challenges["Document<br>Challenges"]
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
     L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
     L34ImproveProcess --> L34ArchiveCreative["📚 Archive Creative Results<br>Store in Creative Archive"]
-    L34ArchiveCreative --> L34Update["Update<br>tasks.md"]
+    L34ArchiveCreative --> L34Reports["📊 Generate Advanced Reports<br>fetch_rules(creative-analysis-reporting.mdc)<br>fetch_rules(statistics-tracking.mdc)"]
+    L34Reports --> L34CreativeResults["📋 Capture Creative Results<br>fetch_rules(creative-results-capture.mdc)"]
+    L34CreativeResults --> L34DecisionRecord["📝 Record Decisions<br>fetch_rules(decision-recording.mdc)"]
+    L34DecisionRecord --> L34UsageExamples["📚 Generate Usage Examples<br>fetch_rules(usage-examples.mdc)"]
+    L34UsageExamples --> L34CreativeVersioning["🏷️ Version Creative Archive<br>fetch_rules(creative-versioning-system.mdc)"]
+    L34CreativeVersioning --> L34ReportsComplete["✅ Advanced Reports Complete"]
+    L34ReportsComplete --> L34Update["Update<br>tasks.md"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
@@ -84,6 +117,21 @@ graph TD
     style AnalyzeUnfinished fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
     style CategorizeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
     style CreateMigration fill:#b3ffb3,stroke:#80ff80,color:black
+
+    %% Refactoring Phase Styling
+    style L34QualityAssess fill:#80deea,stroke:#0097a7
+    style L34RefactorDecision fill:#ffb74d,stroke:#f57c00
+    style L34RefactorPatterns fill:#a1887f,stroke:#5d4037
+    style L34GradualRefactor fill:#a1887f,stroke:#5d4037
+    style L34BackwardCompat fill:#a1887f,stroke:#5d4037
+    style L34LegacySupport fill:#a1887f,stroke:#5d4037
+
+    %% Advanced Reporting Styling
+    style L34Reports fill:#ba68c8,stroke:#8e24aa
+    style L34CreativeResults fill:#ba68c8,stroke:#8e24aa
+    style L34DecisionRecord fill:#ba68c8,stroke:#8e24aa
+    style L34UsageExamples fill:#ba68c8,stroke:#8e24aa
+    style L34CreativeVersioning fill:#ba68c8,stroke:#8e24aa
 ```
 
 ## 📋 REFLECTION STRUCTURE

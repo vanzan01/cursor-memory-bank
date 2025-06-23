@@ -28,7 +28,6 @@
     │           │   ├── optimization-integration.mdc
     │           │   ├── platform-awareness.mdc
     │           │   ├── request-versioning-system.mdc
-    │           │   ├── review-mode-integration.mdc
     │           │   ├── task-management-2-0.mdc
     │           │   ├── timeout-protection.mdc
     │           │   ├── universal-mode-integration.mdc
@@ -180,7 +179,7 @@
 ```mdc
 ---
 description: "Система автоматического управления датами с проверкой и обновлением в VAN режиме"
-globs: "**/memory-bank/**"
+globs: "**/memory-bank/**
 alwaysApply: true
 ---
 
@@ -3439,7 +3438,7 @@ Memory Bank system ready for use.
 ```mdc
 ---
 description: "Система проверки и настройки Git-ветки в начале VAN-цикла."
-globs: "**/van-mode-map.mdc.md"
+globs: "**/van-mode-map.mdc"
 alwaysApply: true
 ---
 # GIT SETUP VALIDATION & BRANCH MANAGEMENT
@@ -4910,39 +4909,6 @@ edit_file("memory-bank/system/current-context.md", updated_content)
 ```
 
 **Эта операция гарантирует, что ни один запрос пользователя не будет утерян.**
-
-```
-
-`.cursor/rules/isolation_rules/Core/review-mode-integration.mdc`
-
-```mdc
----
-description: "REVIEW режим для сохранения и анализа изначальных запросов пользователя"
-globs: "**/**"
-alwaysApply: true
----
-
-# REVIEW MODE INTEGRATION SYSTEM
-
-> **TL;DR:** REVIEW режим сохраняет изначальные формулировки пользователя, отслеживает изменения и уточнения, анализирует качество запросов для обеспечения кросс-модельной совместимости.
-
-## 📝 ПРИНЦИПЫ REVIEW РЕЖИМА
-
-### Сохранение оригиналов
-**Версионирование запросов**
-- Сохранение изначальной формулировки пользователя
-- Отслеживание всех уточнений и изменений
-- Создание истории эволюции запроса
-- Анализ качества формулировок
-
-### Кросс-модельная совместимость
-**Оптимизация для разных ИИ**
-- Анализ понятности для различных моделей
-- Выявление неоднозначностей в формулировках
-- Предложения по улучшению запросов
-- База знаний успешных формулировок
-
-Эта система REVIEW обеспечивает сохранение, анализ и улучшение пользовательских запросов для максимальной эффективности взаимодействия с Memory Bank.
 
 ```
 
@@ -34460,13 +34426,22 @@ When all creative phases are complete, notify user with:
 ```mdc
 ---
 description: Visual process map for BUILD mode (Code Implementation)
-globs: implementation-mode-map.mdc
+globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc
 alwaysApply: false
 ---
 
 # BUILD MODE: CODE EXECUTION PROCESS MAP
 
 > **TL;DR:** This visual map guides the BUILD mode process, focusing on efficient code implementation based on the planning and creative phases, with proper command execution and progress tracking.
+
+## 🔗 INTEGRATION WORKFLOW
+
+For Level 3-4 tasks, this map now includes a comprehensive **Integration Phase** that automatically activates after main implementation phases are complete. The integration workflow includes:
+
+- **Integration Planning**: Structured approach to component integration
+- **Isolated Design Validation**: Ensures components maintain proper isolation
+- **Integration Testing**: Comprehensive testing of component interactions
+- **Dependency Documentation**: Automatic documentation of component dependencies
 
 ## 🧭 BUILD MODE PROCESS FLOW
 
@@ -34517,10 +34492,12 @@ graph TD
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
 
-    L34Next1 -->|"No"| L34Integration["Integration Testing<br>(Rules #17-20)"]
-    L34Integration --> L34Performance["Performance Testing<br>(Rule #13)"]
-    L34Performance --> L34Document["Document Integration<br>Points (Rule #20)"]
-    L34Document --> L34Update["Update tasks.md<br>+ All Reports"]
+    L34Next1 -->|"No"| L34IntegrationPlan["📋 <b>Integration Planning</b><br>fetch_rules(CustomWorkflow/integration/integration-planning.mdc)"]
+    L34IntegrationPlan --> L34DesignCheck["🏗️ <b>Validate Isolated Design</b><br>fetch_rules(CustomWorkflow/planning/isolated-design.mdc)"]
+    L34DesignCheck --> L34IntegrationTest["🧪 <b>Perform Integration Tests</b><br>fetch_rules(CustomWorkflow/integration/integration-testing.mdc)"]
+    L34IntegrationTest --> L34IntegrationDoc["📚 <b>Document Dependencies</b><br>fetch_rules(CustomWorkflow/integration/dependency-documentation.mdc)"]
+    L34IntegrationDoc --> L34Performance["⚡ Performance Testing<br>(Rule #13)"]
+    L34Performance --> L34Update["📝 Update tasks.md<br>+ All Reports"]
 
     %% Command Execution
     L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
@@ -34530,6 +34507,12 @@ graph TD
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
     VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
     UpdateProgress --> Transition["NEXT MODE:<br>REFLECT MODE"]
+
+    %% Integration Phase Styling
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
 ```
 
 ## 📋 REQUIRED FILE STATE VERIFICATION
@@ -35078,50 +35061,64 @@ When planning is complete, notify user with:
 ```mdc
 ---
 description: QA Mode
-globs: qa-mode-map.mdc
+globs: qa-mode-map.mdc, CustomWorkflow/testing/*.mdc
 alwaysApply: false
 ---
 
 
 > **TL;DR:** This enhanced QA mode provides comprehensive validation at any stage of development. It automatically detects the current phase, validates Memory Bank consistency, verifies task tracking, and performs phase-specific technical validation to ensure project quality throughout the development lifecycle.
 
+## 🧪 ADVANCED TEST ANALYSIS
+
+The QA mode now includes comprehensive **Test Failure Pattern Analysis** that activates during IMPLEMENT phase validation:
+
+### **Enhanced Testing Workflow**:
+- **Test Failure Pattern Analysis**: Systematic analysis of test failures to identify recurring patterns
+- **Test Organization**: Structured approach to test suite organization and maintenance
+- **Edge Case Analysis**: Comprehensive analysis of edge cases and boundary conditions
+- **Large Test Analysis**: Specialized analysis for complex test suites
+- **Performance Testing**: Integrated performance validation
+- **Pattern-Based Solutions**: Automated suggestions based on identified failure patterns
+
+This integration ensures that test failures are not just reported, but analyzed for patterns that can inform better testing strategies and code quality improvements.
+
 ## 🔍 ENHANCED QA MODE PROCESS FLOW
 
 ```mermaid
 graph TD
     Start["🚀 START QA MODE"] --> DetectPhase["🧭 PHASE DETECTION<br>Determine current project phase"]
-    
+
     %% Phase detection decision path
     DetectPhase --> PhaseDetermination{"Current Phase?"}
     PhaseDetermination -->|"VAN"| VANChecks["VAN Phase Validation"]
     PhaseDetermination -->|"PLAN"| PLANChecks["PLAN Phase Validation"]
-    PhaseDetermination -->|"CREATIVE"| CREATIVEChecks["CREATIVE Phase Validation"] 
+    PhaseDetermination -->|"CREATIVE"| CREATIVEChecks["CREATIVE Phase Validation"]
     PhaseDetermination -->|"IMPLEMENT"| IMPLEMENTChecks["IMPLEMENT Phase Validation"]
-    
+
     %% Universal checks that apply to all phases
     DetectPhase --> UniversalChecks["🔍 UNIVERSAL VALIDATION"]
     UniversalChecks --> MemoryBankCheck["1️⃣ MEMORY BANK VERIFICATION<br>Check consistency & updates"]
     MemoryBankCheck --> TaskTrackingCheck["2️⃣ TASK TRACKING VERIFICATION<br>Validate tasks.md as source of truth"]
     TaskTrackingCheck --> ReferenceCheck["3️⃣ REFERENCE VALIDATION<br>Verify cross-references between docs"]
-    
+
     %% Phase-specific validations feed into comprehensive report
     VANChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
     ReferenceCheck & PhaseSpecificResults --> ValidationResults{"✅ All Checks<br>Passed?"}
-    
+
     %% Results Processing
     ValidationResults -->|"Yes"| SuccessReport["📝 GENERATE SUCCESS REPORT<br>All validations passed"]
     ValidationResults -->|"No"| FailureReport["⚠️ GENERATE FAILURE REPORT<br>With specific fix instructions"]
-    
+
     %% Success Path
     SuccessReport --> UpdateMB["📚 Update Memory Bank<br>Record successful validation"]
     UpdateMB --> ContinueProcess["🚦 CONTINUE: Phase processes<br>can proceed"]
-    
+
     %% Failure Path
     FailureReport --> IdentifyFixes["🔧 IDENTIFY REQUIRED FIXES"]
     IdentifyFixes --> ApplyFixes["🛠️ APPLY FIXES"]
     ApplyFixes --> Revalidate["🔄 Re-run validation"]
     Revalidate --> ValidationResults
-    
+
     %% Style nodes for clarity
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style DetectPhase fill:#f6ad55,stroke:#c27022,color:white
@@ -35146,15 +35143,15 @@ graph TD
     CheckMB --> CheckActive["Check activeContext.md<br>for current phase"]
     CheckActive --> CheckProgress["Check progress.md<br>for recent activities"]
     CheckProgress --> CheckTasks["Check tasks.md<br>for task status"]
-    
+
     CheckTasks --> PhaseResult{"Determine<br>Current Phase"}
     PhaseResult -->|"VAN"| VAN["VAN Phase<br>Initialization"]
     PhaseResult -->|"PLAN"| PLAN["PLAN Phase<br>Task Planning"]
     PhaseResult -->|"CREATIVE"| CREATIVE["CREATIVE Phase<br>Design Decisions"]
     PhaseResult -->|"IMPLEMENT"| IMPLEMENT["IMPLEMENT Phase<br>Implementation"]
-    
+
     VAN & PLAN & CREATIVE & IMPLEMENT --> LoadChecks["Load Phase-Specific<br>Validation Checks"]
-    
+
     style PD fill:#4da6ff,stroke:#0066cc,color:white
     style PhaseResult fill:#f6546a,stroke:#c30052,color:white
     style LoadChecks fill:#10b981,stroke:#059669,color:white
@@ -35168,17 +35165,17 @@ This process ensures Memory Bank files are consistent and up-to-date regardless 
 graph TD
     MBVS["Memory Bank<br>Verification"] --> CoreCheck["Check Core Files Exist"]
     CoreCheck --> CoreFiles["Verify Required Files:<br>projectbrief.md<br>activeContext.md<br>tasks.md<br>progress.md"]
-    
+
     CoreFiles --> ContentCheck["Verify Content<br>Consistency"]
     ContentCheck --> LastModified["Check Last Modified<br>Timestamps"]
     LastModified --> CrossRef["Validate Cross-<br>References"]
-    
+
     CrossRef --> ConsistencyCheck{"All Files<br>Consistent?"}
     ConsistencyCheck -->|"Yes"| PassMB["✅ Memory Bank<br>Verification Passed"]
     ConsistencyCheck -->|"No"| FailMB["❌ Memory Bank<br>Inconsistencies Found"]
-    
+
     FailMB --> FixSuggestions["Generate Fix<br>Suggestions"]
-    
+
     style MBVS fill:#4da6ff,stroke:#0066cc,color:white
     style ConsistencyCheck fill:#f6546a,stroke:#c30052,color:white
     style PassMB fill:#10b981,stroke:#059669,color:white
@@ -35195,13 +35192,13 @@ graph TD
     CheckTasksFile --> VerifyReferences["Verify Task References<br>in Other Documents"]
     VerifyReferences --> ProgressCheck["Check Consistency with<br>progress.md"]
     ProgressCheck --> StatusCheck["Verify Task Status<br>Accuracy"]
-    
+
     StatusCheck --> TaskConsistency{"Tasks Properly<br>Tracked?"}
     TaskConsistency -->|"Yes"| PassTasks["✅ Task Tracking<br>Verification Passed"]
     TaskConsistency -->|"No"| FailTasks["❌ Task Tracking<br>Issues Found"]
-    
+
     FailTasks --> TaskFixSuggestions["Generate Task Tracking<br>Fix Suggestions"]
-    
+
     style TTV fill:#4da6ff,stroke:#0066cc,color:white
     style TaskConsistency fill:#f6546a,stroke:#c30052,color:white
     style PassTasks fill:#10b981,stroke:#059669,color:white
@@ -35217,13 +35214,13 @@ graph TD
     RV["Reference<br>Validation"] --> FindRefs["Find Cross-References<br>in Documents"]
     FindRefs --> VerifyRefs["Verify Reference<br>Accuracy"]
     VerifyRefs --> CheckBackRefs["Check Bidirectional<br>References"]
-    
+
     CheckBackRefs --> RefConsistency{"References<br>Consistent?"}
     RefConsistency -->|"Yes"| PassRefs["✅ Reference Validation<br>Passed"]
     RefConsistency -->|"No"| FailRefs["❌ Reference<br>Issues Found"]
-    
+
     FailRefs --> RefFixSuggestions["Generate Reference<br>Fix Suggestions"]
-    
+
     style RV fill:#4da6ff,stroke:#0066cc,color:white
     style RefConsistency fill:#f6546a,stroke:#c30052,color:white
     style PassRefs fill:#10b981,stroke:#059669,color:white
@@ -35239,11 +35236,11 @@ graph TD
     VAN["VAN Phase<br>Validation"] --> InitCheck["Check Initialization<br>Completeness"]
     InitCheck --> PlatformCheck["Verify Platform<br>Detection"]
     PlatformCheck --> ComplexityCheck["Validate Complexity<br>Determination"]
-    
+
     ComplexityCheck --> VANConsistency{"VAN Phase<br>Complete?"}
     VANConsistency -->|"Yes"| PassVAN["✅ VAN Phase<br>Validation Passed"]
     VANConsistency -->|"No"| FailVAN["❌ VAN Phase<br>Issues Found"]
-    
+
     style VAN fill:#4da6ff,stroke:#0066cc,color:white
     style VANConsistency fill:#f6546a,stroke:#c30052,color:white
     style PassVAN fill:#10b981,stroke:#059669,color:white
@@ -35257,11 +35254,11 @@ graph TD
     PLAN["PLAN Phase<br>Validation"] --> PlanCheck["Check Planning<br>Documentation"]
     PlanCheck --> TaskBreakdown["Verify Task<br>Breakdown"]
     TaskBreakdown --> ScopeCheck["Validate Scope<br>Definition"]
-    
+
     ScopeCheck --> PLANConsistency{"PLAN Phase<br>Complete?"}
     PLANConsistency -->|"Yes"| PassPLAN["✅ PLAN Phase<br>Validation Passed"]
     PLANConsistency -->|"No"| FailPLAN["❌ PLAN Phase<br>Issues Found"]
-    
+
     style PLAN fill:#4da6ff,stroke:#0066cc,color:white
     style PLANConsistency fill:#f6546a,stroke:#c30052,color:white
     style PassPLAN fill:#10b981,stroke:#059669,color:white
@@ -35275,11 +35272,11 @@ graph TD
     CREATIVE["CREATIVE Phase<br>Validation"] --> DesignCheck["Check Design<br>Documents"]
     DesignCheck --> ArchCheck["Verify Architectural<br>Decisions"]
     ArchCheck --> PatternCheck["Validate Design<br>Patterns"]
-    
+
     PatternCheck --> CREATIVEConsistency{"CREATIVE Phase<br>Complete?"}
     CREATIVEConsistency -->|"Yes"| PassCREATIVE["✅ CREATIVE Phase<br>Validation Passed"]
     CREATIVEConsistency -->|"No"| FailCREATIVE["❌ CREATIVE Phase<br>Issues Found"]
-    
+
     style CREATIVE fill:#4da6ff,stroke:#0066cc,color:white
     style CREATIVEConsistency fill:#f6546a,stroke:#c30052,color:white
     style PassCREATIVE fill:#10b981,stroke:#059669,color:white
@@ -35294,21 +35291,59 @@ This retains the original QA validation from the previous version:
 graph TD
     IMPLEMENT["IMPLEMENT Phase<br>Validation"] --> ReadDesign["Read Design Decisions"]
     ReadDesign --> FourChecks["Four-Point Technical<br>Validation"]
-    
+
     FourChecks --> DepCheck["1️⃣ Dependency<br>Verification"]
     DepCheck --> ConfigCheck["2️⃣ Configuration<br>Validation"]
     ConfigCheck --> EnvCheck["3️⃣ Environment<br>Validation"]
     EnvCheck --> MinBuildCheck["4️⃣ Minimal Build<br>Test"]
-    
-    MinBuildCheck --> IMPLEMENTConsistency{"Technical<br>Prerequisites Met?"}
-    IMPLEMENTConsistency -->|"Yes"| PassIMPLEMENT["✅ IMPLEMENT Phase<br>Validation Passed"]
-    IMPLEMENTConsistency -->|"No"| FailIMPLEMENT["❌ IMPLEMENT Phase<br>Issues Found"]
-    
-    style IMPLEMENT fill:#4da6ff,stroke:#0066cc,color:white
-    style FourChecks fill:#f6546a,stroke:#c30052,color:white
-    style IMPLEMENTConsistency fill:#f6546a,stroke:#c30052,color:white
-    style PassIMPLEMENT fill:#10b981,stroke:#059669,color:white
-    style FailIMPLEMENT fill:#ff5555,stroke:#dd3333,color:white
+    MinBuildCheck --> ImplementTest["Run Tests<br>fetch_rules(bun-core-rules.mdc)<br>fetch_rules(bun-features.mdc)"]
+    ImplementTest --> TestAnalysis["🔍 Analyze Test Results<br>fetch_rules(test-failure-patterns.mdc)"]
+    TestAnalysis --> TestOrganization["📋 Test Organization<br>fetch_rules(test-organization.mdc)"]
+    TestOrganization --> EdgeCaseAnalysis["🎯 Edge Case Analysis<br>fetch_rules(edge-cases.mdc)"]
+    EdgeCaseAnalysis --> LargeTestAnalysis["📊 Large Test Analysis<br>fetch_rules(large-test-analysis.mdc)"]
+    LargeTestAnalysis --> PerformanceTest["⚡ Performance Testing<br>fetch_rules(performance-testing.mdc)"]
+    PerformanceTest --> TestFailurePatterns["🔄 Pattern Analysis<br>Identify failure patterns & solutions"]
+    TestFailurePatterns --> ImplementConsistency{"IMPLEMENT Phase<br>Complete?"}
+    ImplementConsistency -->|"Yes"| PassIMPLEMENT["✅ IMPLEMENT Phase<br>Validation Passed"]
+    ImplementConsistency -->|"No"| FailIMPLEMENT["❌ IMPLEMENT Phase<br>Issues Found"]
+
+    TestAnalysis --> PhaseSpecificResults["Phase-Specific Results"]
+    ReferenceCheck & PhaseSpecificResults --> ValidationResults{"✅ All Checks<br>Passed?"}
+
+    %% Results Processing
+    ValidationResults -->|"Yes"| SuccessReport["📝 GENERATE SUCCESS REPORT<br>All validations passed"]
+    ValidationResults -->|"No"| FailureReport["⚠️ GENERATE FAILURE REPORT<br>With specific fix instructions"]
+
+    %% Success Path
+    SuccessReport --> UpdateMB["📚 Update Memory Bank<br>Record successful validation"]
+    UpdateMB --> ContinueProcess["🚦 CONTINUE: Phase processes<br>can proceed"]
+
+    %% Failure Path
+    FailureReport --> IdentifyFixes["🔧 IDENTIFY REQUIRED FIXES"]
+    IdentifyFixes --> ApplyFixes["🛠️ APPLY FIXES"]
+    ApplyFixes --> Revalidate["🔄 Re-run validation"]
+    Revalidate --> ValidationResults
+
+    %% Style nodes for clarity
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style DetectPhase fill:#f6ad55,stroke:#c27022,color:white
+    style UniversalChecks fill:#f6546a,stroke:#c30052,color:white
+    style MemoryBankCheck fill:#10b981,stroke:#059669,color:white
+    style TaskTrackingCheck fill:#10b981,stroke:#059669,color:white
+    style ReferenceCheck fill:#10b981,stroke:#059669,color:white
+    style ValidationResults fill:#f6546a,stroke:#c30052,color:white
+    style SuccessReport fill:#10b981,stroke:#059669,color:white
+    style FailureReport fill:#f6ad55,stroke:#c27022,color:white
+    style ContinueProcess fill:#10b981,stroke:#059669,color:white,stroke-width:2px
+    style IdentifyFixes fill:#f6ad55,stroke:#c27022,color:white
+
+    %% Test Analysis Styling
+    style TestAnalysis fill:#ff8a65,stroke:#e64a19
+    style TestOrganization fill:#ff8a65,stroke:#e64a19
+    style EdgeCaseAnalysis fill:#ff8a65,stroke:#e64a19
+    style LargeTestAnalysis fill:#ff8a65,stroke:#e64a19
+    style PerformanceTest fill:#ff8a65,stroke:#e64a19
+    style TestFailurePatterns fill:#ff8a65,stroke:#e64a19
 ```
 
 ## 📋 UNIVERSAL VALIDATION COMMAND EXECUTION
@@ -35416,7 +35451,7 @@ This validation point ensures the development environment is correctly set up.
 ### Command Execution:
 
 ```bash
-# Check build tools 
+# Check build tools
 npm run --help
 
 # Verify node version compatibility
@@ -35469,6 +35504,35 @@ grep -i "script.*src=" index.html
 - Correct import paths in JavaScript
 - Fix build configuration errors
 - Update incorrect paths or references
+
+## 🧪 5️⃣ TEST FAILURE ANALYSIS PROCESS
+
+This validation point analyzes test failures using patterns from CustomWorkflow/testing/test-failure-patterns.mdc.
+
+### Command Execution:
+
+```bash
+# Run tests and capture output
+npm test 2>&1 | tee test-output.log
+
+# Analyze test failure patterns
+grep -i "error\|fail\|timeout" test-output.log
+
+# Check for common test issues
+grep -E "(ECONNREFUSED|timeout|assertion|undefined)" test-output.log
+```
+
+### Validation Criteria:
+- All tests must pass or have documented expected failures
+- Test failure patterns must be analyzed against known patterns
+- Common test issues must be identified and categorized
+- Test environment must be properly configured
+
+### Common Fixes:
+- Fix test environment configuration
+- Update test dependencies
+- Resolve timing issues in async tests
+- Fix assertion errors based on pattern analysis
 
 ## 📊 ENHANCED COMPREHENSIVE QA REPORT FORMAT
 
@@ -35559,18 +35623,18 @@ graph TD
     DetectContext --> RunQA["Run QA with Context-Aware Checks"]
     RunQA --> GenerateReport["Generate Appropriate QA Report"]
     GenerateReport --> UserResponse["Present Report to User"]
-    
+
     UserResponse --> FixNeeded{"Fixes<br>Needed?"}
     FixNeeded -->|"Yes"| SuggestFixes["Display Fix Instructions"]
     FixNeeded -->|"No"| ContinueWork["Continue Current Phase Work"]
-    
+
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style FixNeeded fill:#f6546a,stroke:#c30052,color:white
     style SuggestFixes fill:#ff5555,stroke:#dd3333,color:white
     style ContinueWork fill:#10b981,stroke:#059669,color:white
 ```
 
-This enhanced QA mode serves as a "quality guardian" throughout the development process, ensuring documentation is consistently maintained and all phase requirements are met before proceeding to the next phase. 
+This enhanced QA mode serves as a "quality guardian" throughout the development process, ensuring documentation is consistently maintained and all phase requirements are met before proceeding to the next phase.
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc`
@@ -35578,13 +35642,32 @@ This enhanced QA mode serves as a "quality guardian" throughout the development 
 ```mdc
 ---
 description: Visual process map for REFLECT mode (Task Reflection)
-globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**"
+globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc"
 alwaysApply: false
 ---
 
 # REFLECT MODE: TASK REVIEW PROCESS MAP
 
 > **TL;DR:** This visual map guides the REFLECT mode process, focusing on structured review of the implementation, documenting lessons learned, and preparing insights for future reference.
+
+## 🔧 REFACTORING & ADVANCED REPORTING
+
+For Level 3-4 tasks, this map now includes:
+
+### **Quality-Driven Refactoring**:
+- **Quality Metrics Analysis**: Automated quality assessment using established metrics
+- **Conditional Refactoring**: Refactoring is triggered only when metrics indicate necessity
+- **Gradual Refactoring**: Structured approach to incremental improvements
+- **Legacy Support**: Maintains backward compatibility during refactoring
+- **Backward Compatibility**: Ensures existing functionality remains intact
+
+### **Advanced Creative Reporting**:
+- **Creative Analysis**: Comprehensive analysis of creative phase results
+- **Statistics Tracking**: Detailed tracking of creative decision effectiveness
+- **Creative Results Capture**: Systematic capture of creative outputs
+- **Decision Recording**: Structured documentation of design decisions
+- **Usage Examples**: Generation of practical usage examples
+- **Creative Versioning**: Version control for creative archives
 
 ## 🧭 REFLECT MODE PROCESS FLOW
 
@@ -35635,13 +35718,27 @@ graph TD
     L34Review --> L34Plan["Compare Against<br>Original Plan"]
     L34Plan --> L34CreativeAnalysis["🎨 CREATIVE ARCHIVE ANALYSIS<br>Analyze Creative Phase Results"]
     L34CreativeAnalysis --> L34QualityAssess["📊 Quality Assessment<br>Score Creative Decisions"]
-    L34QualityAssess --> L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
+    L34QualityAssess --> L34QualityRefactor["🔧 Analyze Quality & Refactor<br>CustomWorkflow/refactoring/"]
+    L34QualityRefactor --> L34QualityMetrics["📈 Load Quality Metrics<br>fetch_rules(quality-metrics.mdc)"]
+    L34QualityMetrics --> L34RefactorDecision{"Quality Metrics<br>Indicate Refactoring?"}
+    L34RefactorDecision -->|"Yes"| L34RefactorPatterns["🔄 Analyze Refactoring<br>fetch_rules(refactoring-patterns.mdc)"]
+    L34RefactorDecision -->|"No"| L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
+    L34RefactorPatterns --> L34GradualRefactor["📈 Gradual Refactoring<br>fetch_rules(gradual-refactoring.mdc)"]
+    L34GradualRefactor --> L34LegacySupport["🔧 Legacy Support<br>fetch_rules(legacy-support.mdc)"]
+    L34LegacySupport --> L34BackwardCompat["⬅️ Backward Compatibility<br>fetch_rules(backward-compatibility.mdc)"]
+    L34BackwardCompat --> L34PatternExtract
     L34PatternExtract --> L34WWW["Document<br>What Went Well"]
     L34WWW --> L34Challenges["Document<br>Challenges"]
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
     L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
     L34ImproveProcess --> L34ArchiveCreative["📚 Archive Creative Results<br>Store in Creative Archive"]
-    L34ArchiveCreative --> L34Update["Update<br>tasks.md"]
+    L34ArchiveCreative --> L34Reports["📊 Generate Advanced Reports<br>fetch_rules(creative-analysis-reporting.mdc)<br>fetch_rules(statistics-tracking.mdc)"]
+    L34Reports --> L34CreativeResults["📋 Capture Creative Results<br>fetch_rules(creative-results-capture.mdc)"]
+    L34CreativeResults --> L34DecisionRecord["📝 Record Decisions<br>fetch_rules(decision-recording.mdc)"]
+    L34DecisionRecord --> L34UsageExamples["📚 Generate Usage Examples<br>fetch_rules(usage-examples.mdc)"]
+    L34UsageExamples --> L34CreativeVersioning["🏷️ Version Creative Archive<br>fetch_rules(creative-versioning-system.mdc)"]
+    L34CreativeVersioning --> L34ReportsComplete["✅ Advanced Reports Complete"]
+    L34ReportsComplete --> L34Update["Update<br>tasks.md"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
@@ -35662,6 +35759,21 @@ graph TD
     style AnalyzeUnfinished fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
     style CategorizeUnfinished fill:#b3ffb3,stroke:#80ff80,color:black
     style CreateMigration fill:#b3ffb3,stroke:#80ff80,color:black
+
+    %% Refactoring Phase Styling
+    style L34QualityAssess fill:#80deea,stroke:#0097a7
+    style L34RefactorDecision fill:#ffb74d,stroke:#f57c00
+    style L34RefactorPatterns fill:#a1887f,stroke:#5d4037
+    style L34GradualRefactor fill:#a1887f,stroke:#5d4037
+    style L34BackwardCompat fill:#a1887f,stroke:#5d4037
+    style L34LegacySupport fill:#a1887f,stroke:#5d4037
+
+    %% Advanced Reporting Styling
+    style L34Reports fill:#ba68c8,stroke:#8e24aa
+    style L34CreativeResults fill:#ba68c8,stroke:#8e24aa
+    style L34DecisionRecord fill:#ba68c8,stroke:#8e24aa
+    style L34UsageExamples fill:#ba68c8,stroke:#8e24aa
+    style L34CreativeVersioning fill:#ba68c8,stroke:#8e24aa
 ```
 
 ## 📋 REFLECTION STRUCTURE

@@ -1,12 +1,21 @@
 ---
 description: Visual process map for BUILD mode (Code Implementation)
-globs: implementation-mode-map.mdc
+globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc
 alwaysApply: false
 ---
 
 # BUILD MODE: CODE EXECUTION PROCESS MAP
 
 > **TL;DR:** This visual map guides the BUILD mode process, focusing on efficient code implementation based on the planning and creative phases, with proper command execution and progress tracking.
+
+## 🔗 INTEGRATION WORKFLOW
+
+For Level 3-4 tasks, this map now includes a comprehensive **Integration Phase** that automatically activates after main implementation phases are complete. The integration workflow includes:
+
+- **Integration Planning**: Structured approach to component integration
+- **Isolated Design Validation**: Ensures components maintain proper isolation
+- **Integration Testing**: Comprehensive testing of component interactions
+- **Dependency Documentation**: Automatic documentation of component dependencies
 
 ## 🧭 BUILD MODE PROCESS FLOW
 
@@ -57,10 +66,12 @@ graph TD
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
 
-    L34Next1 -->|"No"| L34Integration["Integration Testing<br>(Rules #17-20)"]
-    L34Integration --> L34Performance["Performance Testing<br>(Rule #13)"]
-    L34Performance --> L34Document["Document Integration<br>Points (Rule #20)"]
-    L34Document --> L34Update["Update tasks.md<br>+ All Reports"]
+    L34Next1 -->|"No"| L34IntegrationPlan["📋 <b>Integration Planning</b><br>fetch_rules(CustomWorkflow/integration/integration-planning.mdc)"]
+    L34IntegrationPlan --> L34DesignCheck["🏗️ <b>Validate Isolated Design</b><br>fetch_rules(CustomWorkflow/planning/isolated-design.mdc)"]
+    L34DesignCheck --> L34IntegrationTest["🧪 <b>Perform Integration Tests</b><br>fetch_rules(CustomWorkflow/integration/integration-testing.mdc)"]
+    L34IntegrationTest --> L34IntegrationDoc["📚 <b>Document Dependencies</b><br>fetch_rules(CustomWorkflow/integration/dependency-documentation.mdc)"]
+    L34IntegrationDoc --> L34Performance["⚡ Performance Testing<br>(Rule #13)"]
+    L34Performance --> L34Update["📝 Update tasks.md<br>+ All Reports"]
 
     %% Command Execution
     L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
@@ -70,6 +81,12 @@ graph TD
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
     VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
     UpdateProgress --> Transition["NEXT MODE:<br>REFLECT MODE"]
+
+    %% Integration Phase Styling
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
 ```
 
 ## 📋 REQUIRED FILE STATE VERIFICATION
