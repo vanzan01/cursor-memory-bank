@@ -34,6 +34,7 @@
     │           │   ├── van-mode-migration.mdc
     │           │   ├── web-search-integration.mdc
     │           │   ├── web-search-requirement.mdc
+    │           │   ├── workflow-state-manager.mdc
     │           │   └── working-directory-control.mdc
     │           ├── CustomWorkflow/
     │           │   ├── debugging/
@@ -6272,6 +6273,38 @@ generate_research_report() {
 5. **Continuous Learning**: Build knowledge base through systematic research
 
 This rule ensures that all PLAN and CREATIVE mode tasks begin with complete understanding, leading to higher quality implementations and reduced errors.
+```
+
+`.cursor/rules/isolation_rules/Core/workflow-state-manager.mdc`
+
+```mdc
+---
+description: "Управляет состоянием пошагового рабочего процесса (STEP_BY_STEP)."
+globs: "**/step_by_step_instructions.md"
+alwaysApply: true
+---
+
+# WORKFLOW STATE MANAGER
+
+> **TL;DR:** Этот модуль определяет механизм отслеживания состояния для режима `STEP_BY_STEP` с помощью файла `memory-bank/system/workflow-state.txt`.
+
+## ⚙️ Файл состояния
+
+-   **Путь:** `memory-bank/system/workflow-state.txt`
+-   **Назначение:** Хранит идентификатор последней успешно завершенной фазы.
+
+## 🚦 Возможные состояния
+
+-   `START`: Начальное состояние перед запуском `VAN`.
+-   `VAN_COMPLETE`: Фаза `VAN` завершена.
+-   `PLAN_COMPLETE`: Фаза `PLAN` завершена.
+-   `CREATIVE_COMPLETE`: Фаза `CREATIVE` завершена.
+-   `IMPLEMENT_COMPLETE`: Фаза `IMPLEMENT` завершена.
+-   `QA_COMPLETE`: Фаза `QA` завершена.
+-   `REFLECT_COMPLETE`: Фаза `REFLECT` завершена.
+-   `ARCHIVE_COMPLETE`: Полный цикл завершен, готов к новому запуску.
+
+Режим `STEP_BY_STEP` должен читать этот файл, чтобы определить, какую фазу выполнять следующей, и обновлять его после успешного завершения.
 ```
 
 `.cursor/rules/isolation_rules/Core/working-directory-control.mdc`
@@ -38283,62 +38316,112 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 `custom_modes/step_by_step_instructions.md`
 
 ```md
-# MEMORY BANK STEP_BY_STEP MODE
+# MEMORY BANK STEP_BY_STEP MODE (STATEFUL CONTROLLER)
 
-> **TL;DR:** Этот режим проведет вас через полный цикл разработки пошагово. После каждой фазы я буду останавливаться и ждать вашей команды `NEXT` для перехода к следующему этапу. Этот режим полностью соблюдает `interaction-mode`.
+> **TL;DR:** Я — диспетчер пошагового выполнения. Я прочитаю текущее состояние из `workflow-state.txt`, выполню СЛЕДУЮЩУЮ фазу, обновлю состояние и буду ждать вашей команды `NEXT`.
 
-## 🚶 ПОШАГОВЫЙ ЦИКЛ РАЗРАБОТКИ
+## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ
 
 ```mermaid
 graph TD
-    Start["▶️ START STEP-BY-STEP"] --> SetDate["1. Установить дату<br>datetime-manager.mdc"]
+    Start["▶️ START STEP-BY_STEP / 'NEXT'"] --> ReadState["1. Прочитать `workflow-state.txt`"]
+    ReadState --> DecidePhase{"Какая фаза следующая?"}
 
-    SetDate --> VAN["2. VAN Phase"]
-    VAN --> Wait1["⏸️ Жду команду 'NEXT'"]
+    DecidePhase -- "START" --> VAN_Phase["🚀 **VAN Phase**<br>fetch_rules(van-mode-map)"]
+    DecidePhase -- "VAN_COMPLETE" --> PLAN_Phase["📋 **PLAN Phase**<br>fetch_rules(plan-mode-map)"]
+    DecidePhase -- "PLAN_COMPLETE" --> CREATIVE_Phase["🎨 **CREATIVE Phase**<br>fetch_rules(creative-mode-map)"]
+    DecidePhase -- "CREATIVE_COMPLETE" --> IMPLEMENT_Phase["⚙️ **IMPLEMENT Phase**<br>fetch_rules(implement-mode-map)"]
+    DecidePhase -- "IMPLEMENT_COMPLETE" --> QA_Phase["🧪 **QA Phase**<br>fetch_rules(qa-mode-map)"]
+    DecidePhase -- "QA_COMPLETE" --> REFLECT_Phase["🤔 **REFLECT Phase**<br>fetch_rules(reflect-mode-map)"]
+    DecidePhase -- "REFLECT_COMPLETE" --> ARCHIVE_Phase["📦 **ARCHIVE Phase**<br>fetch_rules(archive-mode-map)"]
+    DecidePhase -- "ARCHIVE_COMPLETE" --> Finish["🎉 Цикл завершен!"]
 
-    Wait1 -- "NEXT" --> PLAN["3. PLAN Phase"]
-    PLAN --> Wait2["⏸️ Жду команду 'NEXT'"]
+    VAN_Phase --> WriteState_VAN["2. Записать 'VAN_COMPLETE'<br>в `workflow-state.txt`"]
+    PLAN_Phase --> WriteState_PLAN["2. Записать 'PLAN_COMPLETE'"]
+    CREATIVE_Phase --> WriteState_CREATIVE["2. Записать 'CREATIVE_COMPLETE'"]
+    IMPLEMENT_Phase --> WriteState_IMPLEMENT["2. Записать 'IMPLEMENT_COMPLETE'"]
+    QA_Phase --> WriteState_QA["2. Записать 'QA_COMPLETE'"]
+    REFLECT_Phase --> WriteState_REFLECT["2. Записать 'REFLECT_COMPLETE'"]
+    ARCHIVE_Phase --> WriteState_ARCHIVE["2. Записать 'ARCHIVE_COMPLETE'"]
 
-    Wait2 -- "NEXT" --> CreativeCheck{"Креативная фаза<br>необходима?"}
+    WriteState_VAN & WriteState_PLAN & WriteState_CREATIVE & WriteState_IMPLEMENT & WriteState_QA & WriteState_REFLECT & WriteState_ARCHIVE --> Pause["3. ⏸️ Сообщить о результате и ждать 'NEXT'"]
 
-    CreativeCheck -- "Да" --> CREATIVE["4. CREATIVE Phase"]
-    CreativeCheck -- "Нет" --> IMPLEMENT
-
-    CREATIVE --> Wait3["⏸️ Жду команду 'NEXT'"]
-    Wait3 -- "NEXT" --> IMPLEMENT
-
-    IMPLEMENT["5. IMPLEMENT Phase"] --> Wait4["⏸️ Жду команду 'NEXT'"]
-    Wait4 -- "NEXT" --> QA["6. QA Phase"]
-    QA --> Wait5["⏸️ Жду команду 'NEXT'"]
-    Wait5 -- "NEXT" --> REFLECT["7. REFLECT Phase"]
-    REFLECT --> Wait6["⏸️ Жду команду 'NEXT'"]
-    Wait6 -- "NEXT" --> ARCHIVE["8. ARCHIVE Phase"]
-    ARCHIVE --> Done["✅ WORKFLOW COMPLETE"]
-
-    style Wait1 fill:#ffb74d,stroke:#f57c00
-    style Wait2 fill:#ffb74d,stroke:#f57c00
-    style Wait3 fill:#ffb74d,stroke:#f57c00
-    style Wait4 fill:#ffb74d,stroke:#f57c00
-    style Wait5 fill:#ffb74d,stroke:#f57c00
-    style Wait6 fill:#ffb74d,stroke:#f57c00
+    style Pause fill:#ffb74d,stroke:#f57c00
 ```
 
-## 🛠️ ШАГИ ВЫПОЛНЕНИЯ
+## 🛠️ ШАГИ ВЫПОЛНЕНИЯ (ИСПОЛНЯЕМЫЙ ПСЕВДОКОД)
 
-### 1. Инициализация
-- Я начну с вызова `initialize_system_date()` из `Core/datetime-manager.mdc`.
-- Затем я выполню **VAN Phase**.
+Я буду выполнять следующий алгоритм при каждом вызове `STEP_BY_STEP` или команды `NEXT`.
 
-### 2. Ожидание команды
-- После завершения каждой фазы я буду предоставлять отчет и останавливаться с сообщением: **"✅ [Имя фазы] Phase Complete. Type `NEXT` to proceed to the [Имя следующей фазы] phase."**
+```bash
+# 0. Инициализация даты
+initialize_system_date() # Вызов функции из Core/datetime-manager.mdc
 
-### 3. Соблюдение `interaction-mode`
-- **Принципиально важно:** В этом режиме каждая фаза будет выполняться в соответствии с настройкой в `memory-bank/system/interaction-mode.txt`.
-- **Если `MANUAL`**: на фазе `PLAN` я буду задавать уточняющие вопросы; на фазе `CREATIVE` я буду предлагать варианты на выбор.
-- **Если `AUTO`**: я буду выполнять каждую фазу автономно, предоставляя только итоговый отчет.
+# 1. Определить текущее состояние
+local state_file="memory-bank/system/workflow-state.txt"
+local current_state=$(cat "$state_file" 2>/dev/null || echo "START")
+echo "ℹ️ Текущее состояние: $current_state"
 
-### 4. Продвинутые рабочие процессы
-- Как и в `UNIVERSAL` режиме, я буду автоматически включать **Integration Workflow**, **Refactoring Workflow** и другие продвинутые процессы для задач уровня L3/L4.
+# 2. Выполнить следующую фазу
+case "$current_state" in
+    "START" | "ARCHIVE_COMPLETE")
+        echo "--- 🚀 Запуск VAN Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты VAN) ...
+        echo "VAN_COMPLETE" > "$state_file"
+        echo "✅ VAN Phase Complete. Type `NEXT` to proceed to the PLAN phase."
+        ;;
+    "VAN_COMPLETE")
+        echo "--- 📋 Запуск PLAN Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/plan-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты PLAN) ...
+        echo "PLAN_COMPLETE" > "$state_file"
+        echo "✅ PLAN Phase Complete. Type `NEXT` to proceed to the CREATIVE phase."
+        ;;
+    "PLAN_COMPLETE")
+        echo "--- 🎨 Запуск CREATIVE Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/creative-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты CREATIVE) ...
+        echo "CREATIVE_COMPLETE" > "$state_file"
+        echo "✅ CREATIVE Phase Complete. Type `NEXT` to proceed to the IMPLEMENT phase."
+        ;;
+    "CREATIVE_COMPLETE")
+        echo "--- ⚙️ Запуск IMPLEMENT Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/implement-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты IMPLEMENT) ...
+        echo "IMPLEMENT_COMPLETE" > "$state_file"
+        echo "✅ IMPLEMENT Phase Complete. Type `NEXT` to proceed to the QA phase."
+        ;;
+    "IMPLEMENT_COMPLETE")
+        echo "--- 🧪 Запуск QA Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/qa-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты QA) ...
+        echo "QA_COMPLETE" > "$state_file"
+        echo "✅ QA Phase Complete. Type `NEXT` to proceed to the REFLECT phase."
+        ;;
+    "QA_COMPLETE")
+        echo "--- 🤔 Запуск REFLECT Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/reflect-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты REFLECT) ...
+        echo "REFLECT_COMPLETE" > "$state_file"
+        echo "✅ REFLECT Phase Complete. Type `NEXT` to proceed to the ARCHIVE phase."
+        ;;
+    "REFLECT_COMPLETE")
+        echo "--- 📦 Запуск ARCHIVE Phase ---"
+        fetch_rules(["isolation_rules/visual-maps/archive-mode-map.mdc"])
+        # ... (Здесь ИИ выполнит логику из карты ARCHIVE) ...
+        echo "ARCHIVE_COMPLETE" > "$state_file"
+        echo "🎉 Полный цикл разработки завершен! Можно начинать новый проект, запустив STEP_BY_STEP еще раз."
+        ;;
+    *)
+        echo "⚠️ Неизвестное состояние '$current_state'. Сбрасываю на START."
+        echo "START" > "$state_file"
+        # Рекурсивный вызов или повторный запуск для выполнения VAN
+        ;;
+esac
+```
+
+Я БУДУ строго следовать этой логике, загружая и **ВЫПОЛНЯЯ** правила для каждой фазы, а не просто сообщая о них.
 ```
 
 `custom_modes/universal_instructions.md`

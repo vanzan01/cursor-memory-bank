@@ -55,7 +55,8 @@ graph TD
 
     %% Phase-specific validations feed into comprehensive report
     VANChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
-    ReferenceCheck & PhaseSpecificResults --> ValidationResults{"✅ All Checks<br>Passed?"}
+    PhaseSpecificResults --> TestAnalysis["🔍 <b>Analyze Test Results & Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc)"]
+    TestAnalysis & ReferenceCheck --> ValidationResults{"✅ All Checks<br>Passed?"}
 
     %% Results Processing
     ValidationResults -->|"Yes"| SuccessReport["📝 GENERATE SUCCESS REPORT<br>All validations passed"]

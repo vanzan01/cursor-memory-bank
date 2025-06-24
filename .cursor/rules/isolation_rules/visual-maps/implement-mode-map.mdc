@@ -75,11 +75,17 @@ graph TD
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
 
-    L34Next1 -->|"No"| L34IntegrationPlan["📋 <b>Integration Planning</b><br>fetch_rules(CustomWorkflow/integration/integration-planning.mdc)"]
-    L34IntegrationPlan --> L34DesignCheck["🏗️ <b>Validate Isolated Design</b><br>fetch_rules(CustomWorkflow/planning/isolated-design.mdc)"]
-    L34DesignCheck --> L34IntegrationTest["🧪 <b>Perform Integration Tests</b><br>fetch_rules(CustomWorkflow/integration/integration-testing.mdc)"]
-    L34IntegrationTest --> L34IntegrationDoc["📚 <b>Document Dependencies</b><br>fetch_rules(CustomWorkflow/integration/dependency-documentation.mdc)"]
-    L34IntegrationDoc --> L34Performance["⚡ Performance Testing<br>(Rule #13)"]
+    L34Next1 -->|"No"| L34IntegrationPlan
+    L34IntegrationPlan --> L34DesignCheck
+    L34DesignCheck --> L34IntegrationTest
+    L34IntegrationTest --> L34IntegrationDoc
+    L34IntegrationDoc --> L34Performance
+
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
+
     L34Performance --> L34Update["📝 Update tasks.md<br>+ All Reports"]
 
     %% Command Execution

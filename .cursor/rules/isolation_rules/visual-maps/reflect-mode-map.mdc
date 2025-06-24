@@ -95,30 +95,51 @@ graph TD
 
     %% Level 3-4 Reflection (Comprehensive)
     L3Reflect & L4Reflect --> L34Review["Review Implementation<br>& Creative Phases"]
-    L34Review --> L34Plan["Compare Against<br>Original Plan"]
-    L34Plan --> L34CreativeAnalysis["🎨 CREATIVE ARCHIVE ANALYSIS<br>Analyze Creative Phase Results"]
-    L34CreativeAnalysis --> L34QualityAssess["📊 Quality Assessment<br>Score Creative Decisions"]
-    L34QualityAssess --> L34QualityRefactor["🔧 Analyze Quality & Refactor<br>CustomWorkflow/refactoring/"]
-    L34QualityRefactor --> L34QualityMetrics["📈 Load Quality Metrics<br>fetch_rules(quality-metrics.mdc)"]
-    L34QualityMetrics --> L34RefactorDecision{"Quality Metrics<br>Indicate Refactoring?"}
-    L34RefactorDecision -->|"Yes"| L34RefactorPatterns["🔄 Analyze Refactoring<br>fetch_rules(refactoring-patterns.mdc)"]
-    L34RefactorDecision -->|"No"| L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
-    L34RefactorPatterns --> L34GradualRefactor["📈 Gradual Refactoring<br>fetch_rules(gradual-refactoring.mdc)"]
-    L34GradualRefactor --> L34LegacySupport["🔧 Legacy Support<br>fetch_rules(legacy-support.mdc)"]
-    L34LegacySupport --> L34BackwardCompat["⬅️ Backward Compatibility<br>fetch_rules(backward-compatibility.mdc)"]
-    L34BackwardCompat --> L34PatternExtract
-    L34PatternExtract --> L34WWW["Document<br>What Went Well"]
+
+    subgraph "Начало рефлексии"
+        L34Review
+    end
+
+    subgraph "НОВАЯ ФАЗА: ОЦЕНКА КАЧЕСТВА И РЕФАКТОРИНГ (L3/L4)"
+        L34QualityAssess["📊 <b>Quality Assessment</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc)"]
+        L34RefactorDecision{"Refactoring<br>Needed?"}
+
+        subgraph "Refactoring Sub-Workflow"
+            direction LR
+            L34RefactorPatterns["🔄 <b>Analyze Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc)"]
+            L34GradualRefactor["📈 <b>Gradual Refactoring</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc)"]
+            L34LegacySupport["🔧 <b>Ensure Legacy Support</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc)"]
+            L34BackwardCompat["⬅️ <b>Check Compatibility</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc)"]
+        end
+    end
+
+    subgraph "Продолжение рефлексии"
+        L34Plan["Compare Against Plan"]
+    end
+
+    subgraph "НОВАЯ ФАЗА: ПРОДВИНУТЫЕ ОТЧЕТЫ (L3/L4)"
+        L34ImproveProcess["Document Process Improvements"]
+        L34Reports["📊 <b>Generate Advanced Reports</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc, isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc)"]
+        L34UsageExamples["📚 <b>Generate Usage Examples</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/usage-examples.mdc)"]
+    end
+
+    L34Review --> L34QualityAssess
+    L34QualityAssess --> L34RefactorDecision
+    L34RefactorDecision -- "Yes" --> L34RefactorPatterns
+    L34RefactorPatterns --> L34GradualRefactor
+    L34GradualRefactor --> L34LegacySupport
+    L34LegacySupport --> L34BackwardCompat
+    L34BackwardCompat --> L34Plan
+    L34RefactorDecision -- "No" --> L34Plan
+
+    L34Plan --> L34WWW["Document<br>What Went Well"]
     L34WWW --> L34Challenges["Document<br>Challenges"]
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
-    L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
-    L34ImproveProcess --> L34ArchiveCreative["📚 Archive Creative Results<br>Store in Creative Archive"]
-    L34ArchiveCreative --> L34Reports["📊 Generate Advanced Reports<br>fetch_rules(creative-analysis-reporting.mdc)<br>fetch_rules(statistics-tracking.mdc)"]
-    L34Reports --> L34CreativeResults["📋 Capture Creative Results<br>fetch_rules(creative-results-capture.mdc)"]
-    L34CreativeResults --> L34DecisionRecord["📝 Record Decisions<br>fetch_rules(decision-recording.mdc)"]
-    L34DecisionRecord --> L34UsageExamples["📚 Generate Usage Examples<br>fetch_rules(usage-examples.mdc)"]
-    L34UsageExamples --> L34CreativeVersioning["🏷️ Version Creative Archive<br>fetch_rules(creative-versioning-system.mdc)"]
-    L34CreativeVersioning --> L34ReportsComplete["✅ Advanced Reports Complete"]
-    L34ReportsComplete --> L34Update["Update<br>tasks.md"]
+    L34Lessons --> L34ImproveProcess
+
+    L34ImproveProcess --> L34Reports
+    L34Reports --> L34UsageExamples
+    L34UsageExamples --> L34Update["Update<br>tasks.md"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
