@@ -1,6 +1,6 @@
 ---
 description: "Phased development approach for complex tasks"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

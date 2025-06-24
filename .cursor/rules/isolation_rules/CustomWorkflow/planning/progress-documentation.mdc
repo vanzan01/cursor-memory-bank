@@ -1,6 +1,6 @@
 ---
 description: "Progress documentation and tracking rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

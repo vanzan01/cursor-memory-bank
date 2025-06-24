@@ -1,6 +1,6 @@
 ---
 description: Visual process map for ARCHIVE mode (Task Documentation)
-globs: "**/archive*/**", "**/document*/**", "**/complete*/**"
+globs: "**/archive*/**", "**/document*/**", "**/complete*/**", "**/active-task-manager.mdc"
 alwaysApply: false
 ---
 # ARCHIVE MODE: TASK DOCUMENTATION PROCESS MAP
@@ -19,11 +19,11 @@ graph TD
     CheckReflection -->|"Yes"| CheckDeliverables{"All Deliverables<br>Ready?"}
 
     CheckDeliverables -->|"No"| WarnMissing["⚠️ WARN: Missing<br>Deliverables"]
-    CheckDeliverables -->|"Yes"| ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
+    CheckDeliverables -->|"Yes"| ReadTasks["Read _task.md and<br>_reflection.md of active task"]
 
     WarnMissing --> UserChoice{"User Wants to<br>Continue?"}
     UserChoice -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
-    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive"]
+    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive (manual)"]
 
     CreatePartialArchive --> ReadTasks
     BlockArchive --> ReturnReflect
@@ -40,61 +40,62 @@ graph TD
     AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.mdc"]
 
     %% Level 1 Archiving (Minimal)
-    L1Archive --> L1Summary["Create Quick<br>Summary"]
-    L1Summary --> L1Task["Update<br>tasks.md"]
-    L1Task --> L1Complete["Mark Task<br>Complete"]
+    L1Archive --> L1Summary["Create Quick<br>Summary in _task.md"]
+    L1Summary --> L1Complete["Mark Task<br>Complete in _task.md"]
 
     %% Level 2 Archiving (Basic)
-    L2Archive --> L2Summary["Create Basic<br>Archive Document"]
-    L2Summary --> L2Doc["Document<br>Changes"]
-    L2Doc --> L2Task["Update<br>tasks.md"]
-    L2Task --> L2Progress["Update<br>progress.md"]
-    L2Progress --> L2Complete["Mark Task<br>Complete"]
+    L2Archive --> L2Summary["Create Basic<br>Archive Document in _archive.md"]
+    L2Summary --> L2Doc["Document<br>Changes in _archive.md"]
+    L2Doc --> L2Complete["Mark Task<br>Complete in _task.md"]
 
     %% Level 3-4 Archiving (Comprehensive)
-    L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document"]
-    L34Summary --> L34Doc["Document<br>Implementation"]
-    L34Doc --> L34Creative["Archive Creative<br>Phase Documents"]
-    L34Creative --> L34Code["Document Code<br>Changes"]
-    L34Code --> L34Test["Document<br>Testing"]
-    L34Test --> L34Lessons["Summarize<br>Lessons Learned"]
-    L34Lessons --> L34Task["Update<br>tasks.md"]
-    L34Task --> L34Progress["Update<br>progress.md"]
-    L34Progress --> L34System["Update System<br>Documentation"]
-    L34System --> L34Complete["Mark Task<br>Complete"]
+    L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document in _archive.md"]
+    L34Summary --> L34Doc["Document<br>Implementation in _archive.md"]
+    L34Doc --> L34Creative["Link Creative<br>Phase Documents in _archive.md"]
+    L34Creative --> L34Code["Document Code<br>Changes in _archive.md"]
+    L34Code --> L34Test["Document<br>Testing in _archive.md"]
+    L34Test --> L34Lessons["Summarize<br>Lessons Learned in _archive.md"]
+    L34Lessons --> L34System["Update System<br>Documentation (if any)"]
+    L34System --> L34Complete["Mark Task<br>Complete in _task.md"]
 
     %% Completion
     L1Complete & L2Complete & L34Complete --> PreserveMigration["📦 PRESERVE MIGRATION<br>[TASK CONTINUITY]"]
     PreserveMigration --> VerifyMigration{"migration.md<br>Exists?"}
-    VerifyMigration -->|"Yes"| ArchiveMigration["📁 Archive migration.md<br>to archive/"]
-    VerifyMigration -->|"No"| CreateArchive["Create Archive<br>Document in<br>docs/archive/"]
-    ArchiveMigration --> CreateArchive
-    CreateArchive --> UpdateActive["Update<br>activeContext.md"]
-    UpdateActive --> ClearTasks["🔄 Clear tasks.md<br>for Next Cycle"]
-    ClearTasks --> Reset["Reset for<br>Next Task"]
+    VerifyMigration -->|"Yes"| ArchiveMigrationFile["📁 Archive migration.md<br>to archive/"]
+    VerifyMigration -->|"No"| FinalArchiveStep["MOVE ACTIVE TASK<br>DIRECTORY TO 'done'"]
+    ArchiveMigrationFile --> FinalArchiveStep
+    FinalArchiveStep --> GenerateCommit
+
+    subgraph "НОВАЯ ФАЗА: ФИНАЛЬНЫЕ АРТЕФАКТЫ"
+        GenerateCommit["📝 <b>Generate Commit Message</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc)"]
+        GenerateReleaseNotes["📄 <b>Generate Release Notes</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc)"]
+    end
+
+    GenerateCommit --> GenerateReleaseNotes
+    GenerateReleaseNotes --> ARCHIVE_FINAL["✅ ARCHIVE COMPLETE<br>Task directory moved to done/"]
 
     %% Task Continuity Styling
     style PreserveMigration fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
     style VerifyMigration fill:#b3ffb3,stroke:#80ff80,color:black
-    style ArchiveMigration fill:#b3ffb3,stroke:#80ff80,color:black
-    style ClearTasks fill:#ffcc80,stroke:#ff9900,color:black
+    style ArchiveMigrationFile fill:#b3ffb3,stroke:#80ff80,color:black
+    style FinalArchiveStep fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
 ```
 
 ## 📋 ARCHIVE DOCUMENT STRUCTURE
 
-The archive document should follow this structured format:
+The archive document should follow this structured format (created as _archive.md within task directory):
 
 ```mermaid
 graph TD
-    subgraph "Archive Document Structure"
+    subgraph "Archive Document Structure (within task directory)"
         Header["# TASK ARCHIVE: [Task Name]"]
         Meta["## METADATA<br>Task info, dates, complexity"]
-        Summary["## SUMMARY<br>Brief overview of the task"]
+        Summary["## SUMMARY<br>Brief overview of completed task"]
         Requirements["## REQUIREMENTS<br>What the task needed to accomplish"]
         Implementation["## IMPLEMENTATION<br>How the task was implemented"]
         Testing["## TESTING<br>How the solution was verified"]
         Lessons["## LESSONS LEARNED<br>Key takeaways from the task"]
-        Refs["## REFERENCES<br>Links to related documents"]
+        Refs["## REFERENCES<br>Links to related documents (within task directory)"]
     end
 
     Header --> Meta --> Summary --> Requirements --> Implementation --> Testing --> Lessons --> Refs
@@ -106,36 +107,33 @@ Before archiving can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>reflection<br>complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>reflection<br>complete?"}
 
     CheckTasks -->|"No"| ErrorReflect["ERROR:<br>Return to REFLECT Mode"]
-    CheckTasks -->|"Yes"| CheckReflection{"reflection.md<br>exists?"}
+    CheckTasks -->|"Yes"| CheckReflection{"_reflection.md<br>exists?"}
 
-    CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create reflection.md first"]
-    CheckReflection -->|"Yes"| CheckProgress{"progress.md<br>updated?"}
-
-    CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
-    CheckProgress -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
+    CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create _reflection.md first"]
+    CheckReflection -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
 ```
 
 ## 🔍 ARCHIVE TYPES BY COMPLEXITY
 
 ```mermaid
 graph TD
-    subgraph "Level 1: Minimal Archive"
+    subgraph "Level 1: Minimal Archive (Summary in _task.md)"
         L1A["Basic Bug<br>Description"]
         L1B["Solution<br>Summary"]
         L1C["Affected<br>Files"]
     end
 
-    subgraph "Level 2: Basic Archive"
+    subgraph "Level 2: Basic Archive (as _archive.md)"
         L2A["Enhancement<br>Description"]
         L2B["Implementation<br>Summary"]
         L2C["Testing<br>Results"]
         L2D["Lessons<br>Learned"]
     end
 
-    subgraph "Level 3-4: Comprehensive Archive"
+    subgraph "Level 3-4: Comprehensive Archive (as _archive.md)"
         L3A["Detailed<br>Requirements"]
         L3B["Architecture/<br>Design Decisions"]
         L3C["Implementation<br>Details"]
@@ -154,7 +152,7 @@ graph TD
 
 ## 📝 ARCHIVE DOCUMENT TEMPLATES
 
-### Level 1 (Minimal) Archive
+### Level 1 (Minimal) Archive (Applies to _task.md)
 ```
 # Bug Fix Archive: [Bug Name]
 
@@ -172,7 +170,7 @@ graph TD
 - [File 2]
 ```
 
-### Levels 2-4 (Comprehensive) Archive
+### Levels 2-4 (Comprehensive) Archive (Applies to _archive.md)
 ```
 # Task Archive: [Task Name]
 
@@ -216,52 +214,19 @@ graph TD
 - [Future enhancement 2]
 
 ## References
-- [Link to reflection document]
-- [Link to creative phase documents]
+- [Link to _reflection.md]
+- [Link to creative phase documents (within task directory)]
 - [Other relevant references]
 ```
 
 ## 📋 ARCHIVE LOCATION AND NAMING
 
-Archive documents should be organized following this pattern:
+Archiving now involves moving the entire task directory to `memory-bank/tasks/done/`.
 
 ```mermaid
 graph TD
-    subgraph "Archive Structure"
-        Root["docs/archive/"]
-        Tasks["tasks/"]
-        Features["features/"]
-        Systems["systems/"]
-
-        Root --> Tasks
-        Root --> Features
-        Root --> Systems
-
-        Tasks --> Bug["bug-fix-name-YYYYMMDD.md"]
-        Tasks --> Enhancement["enhancement-name-YYYYMMDD.md"]
-        Features --> Feature["feature-name-YYYYMMDD.md"]
-        Systems --> System["system-name-YYYYMMDD.md"]
-    end
-```
-
-## 📊 TASKS.MD FINAL UPDATE
-
-When archiving is complete, update tasks.md with:
-
-```
-## Status
-- [x] Initialization complete
-- [x] Planning complete
-[For Level 3-4:]
-- [x] Creative phases complete
-- [x] Implementation complete
-- [x] Reflection complete
-- [x] Archiving complete
-
-## Archive
-- **Date**: [Completion date]
-- **Archive Document**: [Link to archive document]
-- **Status**: COMPLETED
+    ActiveTaskDir["Active Task Directory<br>memory-bank/tasks/{todo|in_progress}/YYYY-MM-DD_ID-XXX_task-name/"] --> MoveToDone["MOVE TO<br>memory-bank/tasks/done/YYYY-MM-DD_ID-XXX_task-name/"]
+    MoveToDone --> ArchiveComplete["✅ ARCHIVE COMPLETE"]
 ```
 
 ## 📋 ARCHIVE VERIFICATION CHECKLIST
@@ -271,8 +236,8 @@ When archiving is complete, update tasks.md with:
 - Reflection document reviewed? [YES/NO]
 - Archive document created with all sections? [YES/NO]
 - Archive document placed in correct location? [YES/NO]
-- tasks.md marked as completed? [YES/NO]
-- progress.md updated with archive reference? [YES/NO]
+- _task.md marked as completed? [YES/NO]
+- _reflection.md updated with archive reference? [YES/NO]
 - activeContext.md updated for next task? [YES/NO]
 - Creative phase documents archived (Level 3-4)? [YES/NO/NA]
 
@@ -295,3 +260,8 @@ When archiving is complete, notify user with:
 → Memory Bank is ready for the next task
 → To start a new task, use VAN MODE
 ```
+
+### Commit Message & Release Notes Generation
+After creating the main archive document, but before updating _task.md, perform the following steps:
+1.  `fetch_rules(["isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc"])` to generate the final commit message. Display it to the user.
+2.  `fetch_rules(["isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc"])` to generate the release notes and save them to the `release_notes/` directory.

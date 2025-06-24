@@ -1,6 +1,6 @@
 ---
 description: Visual process map for BUILD mode (Code Implementation)
-globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc
+globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -33,7 +33,7 @@ graph TD
     Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.mdc"]
 
     %% Initialization
-    ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from tasks.md"}
+    ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from _task.md"}
 
     %% Level 1 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/workflow-level1.mdc"]
@@ -43,7 +43,7 @@ graph TD
     L1Examine --> L1Fix["Implement<br>Targeted Fix + Rule #2 ✅/❌"]
     L1Fix --> L1Test["Test Fix<br>(Rules #8-10)"]
     L1Test --> L1Validate["Validate No<br>Regression (Rule #11)"]
-    L1Validate --> L1Update["Update tasks.md<br>+ Debug Traces"]
+    L1Validate --> L1Update["Update _task.md<br>+ Debug Traces"]
 
     %% Level 2 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/workflow-level2.mdc"]
@@ -53,7 +53,7 @@ graph TD
     L2Examine --> L2Implement["Implement Changes<br>+ Rule #2 ✅/❌ Tracking"]
     L2Implement --> L2Test["Test Changes<br>(Rules #8-12)"]
     L2Test --> L2Coverage["Check Coverage<br>(Rule #11)"]
-    L2Coverage --> L2Update["Update tasks.md<br>+ Test Reports"]
+    L2Coverage --> L2Update["Update _task.md<br>+ Test Reports"]
 
     %% Level 3-4 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/workflow-level3.mdc<br>Level4/workflow-level4.mdc"]
@@ -62,7 +62,7 @@ graph TD
 
     L34Phase -->|"No"| L34Error["ERROR:<br>Return to CREATIVE Mode"]
     L34Phase -->|"Yes"| L34PhaseStart["Start Phase<br>(Rule #1 Phased Approach)"]
-    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure"]
+    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure (within task dir)"]
     L34DirSetup --> L34VerifyDirs["VERIFY Directories<br>Created Successfully"]
     L34VerifyDirs --> L34Implementation["Build<br>Phase"]
 
@@ -71,7 +71,7 @@ graph TD
     L34Phase1 --> L34VerifyFiles["VERIFY Files<br>Created Successfully"]
     L34VerifyFiles --> L34Test1["Test Phase 1<br>(Rules #8-16)"]
     L34Test1 --> L34Coverage1["Check Coverage<br>& Performance (Rules #11,13)"]
-    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24)"]
+    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24) in task dir"]
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
 
@@ -86,15 +86,15 @@ graph TD
     style L34IntegrationTest fill:#81c784,stroke:#388e3c
     style L34IntegrationDoc fill:#81c784,stroke:#388e3c
 
-    L34Performance --> L34Update["📝 Update tasks.md<br>+ All Reports"]
+    L34Performance --> L34Update["📝 Update _task.md<br>+ All Reports"]
 
     %% Command Execution
     L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
-    CommandExec --> DocCommands["Document Commands<br>& Results"]
+    CommandExec --> DocCommands["Document Commands<br>& Results in task dir"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
-    VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
+    VerifyComplete --> UpdateProgress["Update _task.md<br>with Status"]
     UpdateProgress --> Transition["NEXT MODE:<br>REFLECT MODE"]
 
     %% Integration Phase Styling
@@ -110,7 +110,7 @@ Before implementation can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>planning complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>planning complete?"}
 
     CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
     CheckTasks -->|"Yes"| CheckLevel{"Task<br>Complexity?"}
@@ -132,11 +132,12 @@ graph TD
 
 ```mermaid
 graph TD
-    Start["Start File<br>Verification"] --> CheckDir["Check Directory<br>Structure"]
+    Start["Start File<br>Verification"] --> GetActiveTaskPath["Get Active Task Path<br>Using get_active_task_path()"]
+    GetActiveTaskPath --> CheckDir["Check Directory<br>Structure (within task dir)"]
     CheckDir --> DirResult{"Directories<br>Exist?"}
 
     DirResult -->|"No"| ErrorDir["❌ ERROR:<br>Missing Directories"]
-    DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File"]
+    DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File (within task dir)"]
 
     ErrorDir --> FixDir["Fix Directory<br>Structure"]
     FixDir --> CheckDir
@@ -155,12 +156,12 @@ Before beginning any file creation:
 
 ```
 ✓ DIRECTORY VERIFICATION PROCEDURE
-1. Create all directories first before any files
-2. Use ABSOLUTE paths: /full/path/to/directory
+1. Ensure current active task directory is set via get_active_task_path()
+2. Create all directories first before any files relative to active task path
 3. Verify each directory after creation:
-   ls -la /full/path/to/directory     # Linux/Mac
-   dir "C:\full\path\to\directory"    # Windows
-4. Document directory structure in progress.md
+   ls -la "$(get_active_task_path)/path/to/directory"     # Linux/Mac
+   # Use appropriate command for Windows
+4. Document directory structure in _task.md (or relevant task-specific documentation)
 5. Only proceed to file creation AFTER verifying ALL directories exist
 ```
 
@@ -170,16 +171,16 @@ After creating files:
 
 ```
 ✓ FILE VERIFICATION PROCEDURE
-1. Use ABSOLUTE paths for all file operations: /full/path/to/file.ext
+1. Use paths relative to the active task directory for all file operations.
 2. Verify each file creation was successful:
-   ls -la /full/path/to/file.ext     # Linux/Mac
-   dir "C:\full\path\to\file.ext"    # Windows
+   ls -la "$(get_active_task_path)/path/to/file.ext"     # Linux/Mac
+   # Use appropriate command for Windows
 3. If verification fails:
    a. Check for path resolution issues
-   b. Verify directory exists
+   b. Verify directory exists (relative to active task path)
    c. Try creating with corrected path
    d. Recheck file exists after correction
-4. Document all file paths in progress.md
+4. Document all file paths in _task.md (or relevant task-specific documentation)
 ```
 
 ## 🔄 COMMAND EXECUTION WORKFLOW
@@ -194,7 +195,7 @@ graph TD
     Complexity -->|"Complex"| Break["Break Into<br>Logical Steps"]
 
     Simple & Chain & Break --> Verify["Verify<br>Results"]
-    Verify --> Document["Document<br>Command & Result"]
+    Verify --> Document["Document Commands<br>& Results in active task dir"]
     Document --> Next["Next<br>Command"]
 ```
 
@@ -232,7 +233,7 @@ graph TD
 
 ## 📝 BUILD DOCUMENTATION FORMAT
 
-Document builds with:
+Document builds within the active task directory with:
 
 ```
 ## Build: [Component/Feature]
@@ -240,13 +241,13 @@ Document builds with:
 ### Approach
 [Brief description of build approach]
 
-### Directory Structure
-- [/absolute/path/to/dir1/]: [Purpose]
-- [/absolute/path/to/dir2/]: [Purpose]
+### Directory Structure (relative to task root)
+- [path/to/dir1/]: [Purpose]
+- [path/to/dir2/]: [Purpose]
 
 ### Code Changes
-- [/absolute/path/to/file1.ext]: [Description of changes]
-- [/absolute/path/to/file2.ext]: [Description of changes]
+- [path/to/file1.ext]: [Description of changes]
+- [path/to/file2.ext]: [Description of changes]
 
 ### Verification Steps
 - [✓] Directory structure created and verified

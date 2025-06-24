@@ -1,6 +1,6 @@
 ---
 description: "Problem prioritization and triage rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

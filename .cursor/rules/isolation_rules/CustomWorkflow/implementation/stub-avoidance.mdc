@@ -1,6 +1,6 @@
 ---
 description: "Rules for avoiding stubs and implementing complete functionality"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

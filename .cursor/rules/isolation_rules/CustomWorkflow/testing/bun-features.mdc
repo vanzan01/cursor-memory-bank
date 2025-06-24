@@ -1,6 +1,6 @@
 ---
 description: "Advanced Bun testing features and capabilities"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

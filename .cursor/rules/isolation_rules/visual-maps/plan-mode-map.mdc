@@ -1,6 +1,6 @@
 ---
 description: Visual process map for PLAN mode (Code Implementation)
-globs: plan-mode-map.mdc
+globs: plan-mode-map.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -12,7 +12,7 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START PLANNING"] --> ReadTasks["Read tasks.md<br>Core/task-tracking.md"]
+    Start["START PLANNING"] --> ReadTasks["Read _task.md<br>of active task"]
 
     %% Complexity Level Determination
     ReadTasks --> CheckLevel{"Determine<br>Complexity Level"}
@@ -25,7 +25,7 @@ graph TD
     L2Review --> L2Document["Document<br>Planned Changes"]
     L2Document --> L2Challenges["Identify<br>Challenges"]
     L2Challenges --> L2Checklist["Create Task<br>Checklist"]
-    L2Checklist --> L2Update["Update tasks.md<br>with Plan"]
+    L2Checklist --> L2Update["Update _task.md<br>with Plan"]
     L2Update --> L2Tech["TECHNOLOGY<br>VALIDATION"]
     L2Tech --> L2Verify["Verify Plan<br>Completeness"]
 
@@ -35,7 +35,7 @@ graph TD
     L3Requirements --> L3Components["Identify Affected<br>Components"]
     L3Components --> L3Plan["Create Comprehensive<br>Implementation Plan"]
     L3Plan --> L3Challenges["Document Challenges<br>& Solutions"]
-    L3Challenges --> L3Update["Update tasks.md<br>with Plan"]
+    L3Challenges --> L3Update["Update _task.md<br>with Plan"]
     L3Update --> L3Tech["TECHNOLOGY<br>VALIDATION"]
     L3Tech --> L3Flag["Flag Components<br>Requiring Creative"]
     L3Flag --> L3Verify["Verify Plan<br>Completeness"]
@@ -47,7 +47,7 @@ graph TD
     L4Diagrams --> L4Subsystems["Identify Affected<br>Subsystems"]
     L4Subsystems --> L4Dependencies["Document Dependencies<br>& Integration Points"]
     L4Dependencies --> L4Plan["Create Phased<br>Implementation Plan"]
-    L4Plan --> L4Update["Update tasks.md<br>with Plan"]
+    L4Plan --> L4Update["Update _task.md<br>with Plan"]
     L4Update --> L4Tech["TECHNOLOGY<br>VALIDATION"]
     L4Tech --> L4Flag["Flag Components<br>Requiring Creative"]
     L4Flag --> L4Verify["Verify Plan<br>Completeness"]
@@ -146,18 +146,18 @@ Before planning can begin, verify the file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md<br>initialized?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md<br>initialized?"}
 
     CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to VAN Mode"]
-    CheckTasks -->|"Yes"| CheckActive{"activeContext.md<br>exists?"}
+    CheckTasks -->|"Yes"| CheckActive["_context.md<br>exists and active?"Using get_active_task_path()]"
 
     CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to VAN Mode"]
     CheckActive -->|"Yes"| ReadyPlan["Ready for<br>Planning"]
 ```
 
-## 📝 TASKS.MD UPDATE FORMAT
+## 📝 _TASK.MD UPDATE FORMAT
 
-During planning, update tasks.md with this structure:
+During planning, update _task.md with this structure:
 
 ```
 # Task: [Task name]
@@ -210,71 +210,32 @@ Type: [Enhancement/Feature/Complex System]
 - [Challenge 2]: [Mitigation strategy]
 ```
 
-## 📋 CREATIVE PHASE IDENTIFICATION
-
-For Level 3-4 tasks, identify components requiring creative phases:
-
-```mermaid
-graph TD
-    Start["Creative Phase<br>Identification"] --> CheckComp{"Component<br>Analysis"}
-
-    CheckComp --> UI["UI/UX<br>Components"]
-    CheckComp --> Data["Data Model<br>Components"]
-    CheckComp --> Arch["Architecture<br>Components"]
-    CheckComp --> Algo["Algorithm<br>Components"]
-
-    UI & Data & Arch & Algo --> Decision{"Design Decisions<br>Required?"}
-
-    Decision -->|"Yes"| Flag["Flag for<br>Creative Phase"]
-    Decision -->|"No"| Skip["Standard<br>Implementation"]
-
-    Flag --> Document["Document in<br>tasks.md"]
-```
-
-## 📊 TECHNOLOGY VALIDATION CHECKLIST
+## 📋 CREATIVE PHASE VERIFICATION CHECKLIST
 
 ```
-✓ TECHNOLOGY VALIDATION CHECKLIST
-- Technology stack clearly defined? [YES/NO]
-- Project initialization command documented? [YES/NO]
-- Required dependencies identified? [YES/NO]
-- Minimal proof of concept created? [YES/NO]
-- Hello world build/run successful? [YES/NO]
-- Configuration files validated? [YES/NO]
-- Test build completes successfully? [YES/NO]
+✓ CREATIVE PHASE VERIFICATION
+- Problem clearly defined? [YES/NO]
+- Multiple options considered (3+)? [YES/NO]
+- Pros/cons documented for each option? [YES/NO]
+- Decision made with clear rationale? [YES/NO]
+- Implementation plan included? [YES/NO]
+- Visualization/diagrams created? [YES/NO]
+- _task.md updated with decision? [YES/NO]
 
-→ If all YES: Technology validation complete - ready for next phase
-→ If any NO: Resolve technology issues before proceeding
-```
-
-## 📊 PLAN VERIFICATION CHECKLIST
-
-```
-✓ PLAN VERIFICATION CHECKLIST
-- Requirements clearly documented? [YES/NO]
-- Technology stack validated? [YES/NO]
-- Affected components identified? [YES/NO]
-- Implementation steps detailed? [YES/NO]
-- Dependencies documented? [YES/NO]
-- Challenges & mitigations addressed? [YES/NO]
-- Creative phases identified (Level 3-4)? [YES/NO/NA]
-- tasks.md updated with plan? [YES/NO]
-
-→ If all YES: Planning complete - ready for next mode
-→ If any NO: Complete missing plan elements
+→ If all YES: Creative phase complete
+→ If any NO: Complete missing elements
 ```
 
 ## 🔄 MODE TRANSITION NOTIFICATION
 
-When planning is complete, notify user with:
+When all creative phases are complete, notify user with:
 
 ```
-## PLANNING COMPLETE
+## CREATIVE PHASES COMPLETE
 
-✅ Implementation plan created
-✅ Technology stack validated
-✅ tasks.md updated with plan
-✅ Challenges and mitigations documented
-[✅ Creative phases identified (for Level 3-4)]
+✅ All required design decisions made
+✅ Creative phase documents created
+✅ _task.md updated with decisions
+✅ Implementation plan updated
 
-→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE
+→ NEXT RECOMMENDED MODE: IMPLEMENT MODE

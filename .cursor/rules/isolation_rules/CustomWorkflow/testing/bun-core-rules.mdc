@@ -1,6 +1,6 @@
 ---
 description: "Core Bun testing rules and patterns"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

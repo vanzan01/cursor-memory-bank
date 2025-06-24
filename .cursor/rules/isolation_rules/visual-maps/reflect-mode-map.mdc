@@ -1,6 +1,6 @@
 ---
 description: Visual process map for REFLECT mode (Task Reflection)
-globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc"
+globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc", "**/active-task-manager.mdc"
 alwaysApply: false
 ---
 
@@ -61,7 +61,7 @@ graph TD
     CheckImplementation -->|"Yes"| CheckSubtasks{"All Subtasks<br>Complete?"}
 
     CheckSubtasks -->|"No"| WarnIncomplete["⚠️ WARN: Incomplete<br>Subtasks Found"]
-    CheckSubtasks -->|"Yes"| ReadTasks["Read tasks.md<br>and progress.md"]
+    CheckSubtasks -->|"Yes"| ReadTasks["Read _task.md<br>of active task"]
 
     WarnIncomplete --> UserDecision{"User Wants to<br>Continue?"}
     UserDecision -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
@@ -84,14 +84,14 @@ graph TD
     %% Level 1 Reflection (Quick)
     L1Reflect --> L1Review["Review<br>Bug Fix"]
     L1Review --> L1Document["Document<br>Solution"]
-    L1Document --> L1Update["Update<br>tasks.md"]
+    L1Document --> L1Update["Update<br>_task.md"]
 
     %% Level 2 Reflection (Standard)
     L2Reflect --> L2Review["Review<br>Enhancement"]
     L2Review --> L2WWW["Document<br>What Went Well"]
     L2WWW --> L2Challenges["Document<br>Challenges"]
     L2Challenges --> L2Lessons["Document<br>Lessons Learned"]
-    L2Lessons --> L2Update["Update<br>tasks.md"]
+    L2Lessons --> L2Update["Update<br>_task.md"]
 
     %% Level 3-4 Reflection (Comprehensive)
     L3Reflect & L4Reflect --> L34Review["Review Implementation<br>& Creative Phases"]
@@ -139,15 +139,24 @@ graph TD
 
     L34ImproveProcess --> L34Reports
     L34Reports --> L34UsageExamples
-    L34UsageExamples --> L34Update["Update<br>tasks.md"]
+    L34UsageExamples --> L34Update["Update<br>_task.md"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
     AnalyzeUnfinished --> CategorizeUnfinished["📊 Categorize Unfinished Tasks<br>by Status & Priority"]
     CategorizeUnfinished --> CreateMigration["📦 Create migration.md<br>for Next Cycle"]
-    CreateMigration --> CreateReflection["Create<br>reflection.md"]
-    CreateReflection --> UpdateSystem["Update System<br>Documentation"]
-    UpdateSystem --> Transition["NEXT MODE:<br>ARCHIVE MODE"]
+    CreateMigration --> CreateReflection["Create<br>_reflection.md"]
+
+    subgraph "НОВАЯ ФАЗА: ПРОДВИНУТАЯ АНАЛИТИКА И ОТЧЕТЫ"
+        GenerateCreativeReport["📊 <b>Generate Creative Analysis Report</b><br>fetch_rules(.../documentation/creative-analysis-reporting.mdc)"]
+        TrackStats["📈 <b>Track & Report Statistics</b><br>fetch_rules(.../documentation/statistics-tracking.mdc)"]
+        GenerateExamples["📖 <b>Generate Usage Examples</b><br>fetch_rules(.../documentation/usage-examples.mdc)"]
+    end
+
+    CreateReflection --> GenerateCreativeReport
+    GenerateCreativeReport --> TrackStats
+    TrackStats --> GenerateExamples
+    GenerateExamples --> PromptArchive["💬 Prompt: 'ARCHIVE NOW'"]
 
     %% Task Continuity Styling
     style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
@@ -175,6 +184,9 @@ graph TD
     style L34DecisionRecord fill:#ba68c8,stroke:#8e24aa
     style L34UsageExamples fill:#ba68c8,stroke:#8e24aa
     style L34CreativeVersioning fill:#ba68c8,stroke:#8e24aa
+    style GenerateCreativeReport fill:#ba68c8,stroke:#8e24aa
+    style TrackStats fill:#ba68c8,stroke:#8e24aa
+    style GenerateExamples fill:#ba68c8,stroke:#8e24aa
 ```
 
 ## 📋 REFLECTION STRUCTURE
@@ -203,13 +215,10 @@ Before reflection can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>implementation<br>complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>implementation<br>complete?"}
 
     CheckTasks -->|"No"| ErrorImplement["ERROR:<br>Return to IMPLEMENT Mode"]
-    CheckTasks -->|"Yes"| CheckProgress{"progress.md<br>has implementation<br>details?"}
-
-    CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
-    CheckProgress -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
+    CheckTasks -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
 ```
 
 ## 🔍 IMPLEMENTATION REVIEW APPROACH

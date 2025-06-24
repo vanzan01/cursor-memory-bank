@@ -11,7 +11,8 @@ alwaysApply: true
 
 ```mermaid
 graph TD
-    Start["▶️ Новый запрос от пользователя"] --> ReadContext["1. Прочитать `current-context.md`"]
+    Start["▶️ Новый запрос от пользователя"] --> GetTaskPath["0. Получить путь к активной задаче"]
+    GetTaskPath --> ReadContext["1. Прочитать `_context.md` активной задачи"]
     ReadContext --> ExtractLatest["2. Извлечь текст из `LATEST_REQUEST`"]
 
     ExtractLatest --> HasHistory{"В `REQUEST_HISTORY`<br>уже есть записи?"}
@@ -21,7 +22,7 @@ graph TD
     PrependToHistory --> UpdateLatest["4. Поместить новый<br>запрос пользователя<br>в `LATEST_REQUEST`"]
     CreateHistory --> UpdateLatest
 
-    UpdateLatest --> SaveContext["5. Сохранить обновленный<br>`current-context.md`"]
+    UpdateLatest --> SaveContext["5. Сохранить обновленный<br>`_context.md` активной задачи"]
     SaveContext --> Proceed["✅ Контекст обновлен.<br>Продолжить выполнение основной команды."]
 
     style Start fill:#f8d486,stroke:#e8b84d,color:black
@@ -32,7 +33,7 @@ graph TD
 
 Эта логика должна выполняться **до** основной логики любого режима (`VAN`, `PLAN` и т.д.).
 
-### Пример логики обновления `current-context.md`:
+### Пример логики обновления `_context.md`:
 
 ```bash
 # Псевдокод для ИИ-ассистента
@@ -40,25 +41,38 @@ graph TD
 # 1. Получаем новый запрос от пользователя
 new_request = get_user_prompt()
 
-# 2. Читаем текущий контекст
-context_content = read_file("memory-bank/system/current-context.md")
+# 2. Получаем путь к активной задаче
+active_task_path=$(get_active_task_path)
+if [ -z "$active_task_path" ]; then
+  echo "❌ No active task found. Cannot save request history." >&2
+  exit 1
+fi
 
-# 3. Извлекаем последний запрос
+context_file=$(get_context_file_path)
+if [ -z "$context_file" ]; then
+  echo "❌ No active task. Cannot version request." >&2
+  exit 1
+fi
+
+# 3. Читаем текущий контекст
+context_content = read_file("$context_file")
+
+# 4. Извлекаем последний запрос
 # (Используем регулярные выражения для поиска между ```)
 last_request_text = extract_between_markers(context_content, "LATEST_REQUEST", "```")
 
-# 4. Формируем запись для истории
+# 5. Формируем запись для истории
 timestamp = get_current_datetime()
 history_entry = f"- **v1.X ({timestamp}):**\\n  \`\`\`\\n  {last_request_text}\\n  \`\`\`"
 
-# 5. Обновляем контент
+# 6. Обновляем контент
 # Заменяем LATEST_REQUEST на новый запрос
 updated_content = replace_section(context_content, "LATEST_REQUEST", new_request)
 # Добавляем запись в REQUEST_HISTORY
 updated_content = prepend_to_section(updated_content, "REQUEST_HISTORY", history_entry)
 
-# 6. Сохраняем файл
-edit_file("memory-bank/system/current-context.md", updated_content)
+# 7. Сохраняем файл
+edit_file("$context_file", updated_content)
 ```
 
 **Эта операция гарантирует, что ни один запрос пользователя не будет утерян.**

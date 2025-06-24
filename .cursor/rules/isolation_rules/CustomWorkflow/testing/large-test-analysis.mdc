@@ -1,6 +1,6 @@
 ---
 description: "Large test suite analysis and pattern detection"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

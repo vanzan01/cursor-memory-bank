@@ -16,18 +16,11 @@ alwaysApply: true
 
 ### Context File Structure
 ```
-memory-bank/contexts/
-├── active/
-│   ├── 2025-06-20-user-auth-context.md
-│   ├── 2025-06-20-payment-system-context.md
-│   └── 2025-06-20-dashboard-redesign-context.md
-├── suspended/
-│   ├── 2025-06-15-legacy-migration-context.md
-│   └── 2025-06-18-api-optimization-context.md
-└── archived/
-    └── 2025-06/
-        ├── 2025-06-10-bug-fix-123-context.md
-        └── 2025-06-12-feature-abc-context.md
+New Structure:
+memory-bank/tasks/
+├── todo/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
+├── in_progress/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
+└── done/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
 ```
 
 ### Context Naming Convention
@@ -129,16 +122,19 @@ Context States:
 ```bash
 # When suspending a context
 suspend_context() {
-    local context_file="$1"
-    local reason="$2"
+    local context_file=$(get_context_file_path)
+    if [ -z "$context_file" ]; then
+      echo "❌ No active task found. Cannot suspend context." >&2
+      return 1
+    fi
+    local reason="$1"
 
     echo "## 🔄 CONTEXT SUSPENSION" >> "$context_file"
     echo "**Suspended At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
     echo "**Reason**: $reason" >> "$context_file"
     echo "**Recovery Notes**: [Add specific notes for resuming]" >> "$context_file"
 
-    # Move to suspended directory
-    mv "memory-bank/contexts/active/$context_file" "memory-bank/contexts/suspended/"
+    # No longer moving directories, just updating the content
 }
 ```
 
@@ -146,14 +142,17 @@ suspend_context() {
 ```bash
 # When restoring a suspended context
 restore_context() {
-    local context_file="$1"
+    local context_file=$(get_context_file_path)
+    if [ -z "$context_file" ]; then
+      echo "❌ No active task found. Cannot restore context." >&2
+      return 1
+    fi
 
     echo "## ▶️ CONTEXT RESTORATION" >> "$context_file"
     echo "**Restored At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
     echo "**Recovery Time**: [Time taken to get back into flow]" >> "$context_file"
 
-    # Move back to active directory
-    mv "memory-bank/contexts/suspended/$context_file" "memory-bank/contexts/active/"
+    # No longer moving directories, just updating the content
 }
 ```
 
@@ -163,34 +162,32 @@ restore_context() {
 ## 📊 ACTIVE CONTEXTS DASHBOARD
 
 **Last Updated**: 2025-06-20 19:45:00
-**Active Contexts**: 2/3
+**Active Contexts**: Dynamic (based on current-task.txt)
 
-### 🟢 Active Contexts
+### 🟢 Active Context
 | Context | Priority | Progress | Last Updated | Next Action |
 |---------|----------|----------|--------------|-------------|
-| [user-auth](contexts/active/2025-06-20-user-auth-context.md) | HIGH | 60% | 19:30 | Implement JWT validation |
-| [payment-system](contexts/active/2025-06-20-payment-context.md) | MEDIUM | 30% | 18:45 | Research Stripe integration |
+| [Current Task Context](_context.md) | N/A | N/A | N/A | N/A |
 
 ### ⏸️ Suspended Contexts
 | Context | Reason | Suspended Since | Resume Priority |
 |---------|--------|-----------------|-----------------|
-| [legacy-migration](contexts/suspended/2025-06-15-legacy-context.md) | Waiting for DB access | 2 days | LOW |
+| *No longer managed via separate files, review task directory for status.* |
 
 ### ⚠️ Context Health Alerts
-- [ ] No contexts over WIP limit ✅
-- [ ] All active contexts updated within 2 hours ⚠️
-- [ ] No contexts suspended over 1 week ✅
+- [ ] Active context exists if a task is active ✅
+- [ ] Active context updated regularly (manual check) ✅
 ```
 
 ## INTEGRATION WITH TASK MANAGEMENT
 
 ### Task-Context Linking
 ```markdown
-# In task files:
-**Related Context**: [contexts/active/2025-06-20-task-name-context.md](../contexts/active/2025-06-20-task-name-context.md)
+# In task files (_task.md):
+**Related Context**: [_context.md](_context.md)
 
-# In context files:
-**Related Task**: [tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md](../tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md)
+# In context files (_context.md):
+**Related Task**: [_task.md](_task.md)
 ```
 
 ### Context Lifecycle Management
@@ -198,23 +195,30 @@ restore_context() {
 # Context lifecycle automation
 manage_context_lifecycle() {
     local task_status="$1"
-    local context_file="$2"
+    local task_path=$(get_active_task_path)
+    if [ -z "$task_path" ]; then
+      echo "❌ No active task found. Cannot manage context lifecycle." >&2
+      return 1
+    fi
+    local context_file="$task_path/_context.md"
 
     case "$task_status" in
         "started")
-            create_active_context "$context_file"
+            # For a new task, _context.md is created during task directory setup
+            # We just need to ensure it's loaded implicitly by active-task-manager
+            echo "New task started, context at $context_file initialized."
             ;;
         "suspended")
-            suspend_context "$context_file" "Task suspended"
+            suspend_context "Task suspended for manual review"
             ;;
         "resumed")
-            restore_context "$context_file"
+            restore_context
             ;;
         "completed")
-            archive_context "$context_file"
+            echo "Context for $task_path marked as completed (manual archival needed)" # Context remains in task directory, manual archival of entire task directory
             ;;
         "cancelled")
-            archive_context "$context_file" "Task cancelled"
+            echo "Context for $task_path marked as cancelled (manual archival needed)" # Context remains in task directory, manual archival of entire task directory
             ;;
     esac
 }

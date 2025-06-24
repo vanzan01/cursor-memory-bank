@@ -1,6 +1,58 @@
 # UNIFIED VAN MODE SYSTEM - MAIN ENTRY POINT
 
-> **TL;DR:** I am an AI assistant implementing a structured Memory Bank system with unified VAN mode that includes task continuity, rules management, and system administration through hierarchical submode architecture.
+> **TL;DR:** Я — AI-ассистент, реализующий структурированную систему Memory Bank. Перед началом работы я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать новую.
+
+## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ VAN
+
+```mermaid
+graph TD
+    Start["▶️ `VAN`"] --> InitDate["1. Установить дату<br>Core/datetime-manager.mdc"]
+    InitDate --> GetActiveTask["2. Проверить активную задачу<br>Core/active-task-manager.mdc"]
+
+    GetActiveTask --> IsTaskActive{"Задача активна?"}
+
+    IsTaskActive -- "Да" --> VAN_Flow["✅ **Продолжить стандартный VAN-поток**<br>Загрузить van-mode-map и т.д."]
+
+    IsTaskActive -- "Нет 🔴" --> NoTaskFlow["3. <b>Нет активной задачи!</b><br>Запустить логику SWITCH TASK"]
+    NoTaskFlow --> ListTasks["Показать список задач<br>(todo, in_progress)"]
+    ListTasks --> UserPrompt["Запросить у пользователя<br>выбор или создание новой задачи"]
+    UserPrompt --> UserChoice{"Что выбрал пользователь?"}
+
+    UserChoice -- "Выбрал существующую" --> SetTask["Вызвать `set_active_task()`"]
+    UserChoice -- "Создать новую" --> CreateTask["Запустить процесс создания<br>новой задачи (Core/task-management-2-0.mdc)"]
+
+    SetTask --> VAN_Flow
+    CreateTask --> VAN_Flow
+
+    style NoTaskFlow fill:#ffad42,stroke:#f57c00
+```
+
+### 🛠️ ИСПОЛНЯЕМЫЕ ШАГИ
+
+#### Шаг 1: Инициализация и проверка активной задачи
+- `initialize_system_date()`
+- `active_task_path=$(get_active_task_path)`
+- Если `$active_task_path` **не пуст**, переходим к **Шагу 3**.
+- Если `$active_task_path` **пуст**, переходим к **Шагу 2**.
+
+#### Шаг 2: Процесс выбора задачи (если ни одна не активна)
+1.  **Сообщить пользователю:** "No active task selected. Please choose a task to work on or create a new one."
+2.  **Показать списки задач:**
+    ```bash
+    run_terminal_cmd({
+      command: "echo '--- TODO ---' && ls -1 memory-bank/tasks/todo/ && echo '--- IN PROGRESS ---' && ls -1 memory-bank/tasks/in_progress/",
+      explanation: "Displaying available tasks."
+    })
+    ```
+3.  **Запросить выбор:** "Please enter the name of the task directory to activate, or type `NEW` to create a new task."
+4.  **Обработать выбор пользователя:**
+    -   Если пользователь ввел имя директории, выполнить `set_active_task("memory-bank/tasks/in_progress/[имя директории]")` (или `todo`).
+    -   Если пользователь ввел `NEW`, запустить логику создания новой задачи из правила `Core/task-management-2-0.mdc`.
+5.  **Перейти к Шагу 3.**
+
+#### Шаг 3: Стандартный VAN-поток
+- `fetch_rules(["isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc"])`
+- ... (и далее по существующей логике `VAN`, включая проверку Git, определение сложности и т.д.)
 
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** ← You are here

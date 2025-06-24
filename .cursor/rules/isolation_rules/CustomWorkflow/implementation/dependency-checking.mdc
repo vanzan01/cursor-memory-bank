@@ -1,6 +1,6 @@
 ---
 description: "Dependency checking and validation rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

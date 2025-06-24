@@ -21,30 +21,39 @@ alwaysApply: true
 - Cross-platform compatibility
 - Future-proof date handling
 
-### 2. INDIVIDUAL TASK FILES
-**Rule**: Each task MUST be in separate file, NO monolithic tasks.md
-```
-Structure:
-memory-bank/tasks/
-├── todo/{priority}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-├── in_progress/{status}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-└── done/{YYYY-MM}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-```
+### 2. INDIVIDUAL TASK DIRECTORIES
+**Rule**: Each task MUST be encapsulated within its own directory, serving as a single source of truth for all task-related artifacts.
 
-**Priority Levels**: CRITICAL, HIGH, MEDIUM, LOW
-**Categories**: FEATURE, BUGFIX, ENHANCEMENT, RESEARCH, ADMIN
+```
+New Structure:
+└── memory-bank/
+    ├── tasks/
+    │   ├── todo/
+    │   │   └── YYYY-MM-DD_ID-XXX_task-name/  <-- Task Directory
+    │   │       ├── _task.md                     <-- Main task file
+    │   │       ├── _context.md                  <-- Task-specific context
+    │   │       ├── _reflection.md               <-- Task reflection
+    │   │       ├── _archive.md                  <-- Archival document
+    │   │       ├── creative/                    <-- Creative phase artifacts
+    │   │       ├── reports/                     <-- Task-specific reports
+    │   │       └── release/                     <-- Release artifacts
+    ├── in_progress/
+    │   └── YYYY-MM-DD_ID-XXX_task-name/
+    │       └── ... (same structure)
+    └── done/
+        └── YYYY-MM-DD_ID-XXX_task-name/
+            └── ... (same structure)
+```
 
 ### 3. FOLDER HIERARCHY ARCHITECTURE
 ```
 memory-bank/
 ├── tasks/
-│   ├── todo/{critical,high,medium,low}/
-│   ├── in_progress/{active,blocked,review}/
-│   └── done/{YYYY-MM}/
-├── contexts/
-│   ├── active/
-│   ├── suspended/
-│   └── archived/
+│   ├── todo/{YYYY-MM-DD_ID-XXX_task-name}/  <-- New task directory structure
+│   ├── in_progress/{YYYY-MM-DD_ID-XXX_task-name}/
+│   └── done/{YYYY-MM-DD_ID-XXX_task-name}/
+├── system/
+│   └── current-task.txt  <-- NEW: Active task pointer
 ├── reports/
 │   ├── daily/
 │   ├── weekly/
@@ -55,10 +64,13 @@ memory-bank/
 ```
 
 ### 4. CONTEXT MANAGEMENT PER TASK
-**Rule**: Each task MUST have separate context preservation
+**Rule**: Each task MUST have its context encapsulated within its dedicated task directory.
+
 ```
 Context Structure:
-contexts/active/YYYY-MM-DD-task-context.md
+memory-bank/tasks/{todo|in_progress|done}/YYYY-MM-DD_ID-XXX_task-name/_context.md
+- LATEST_REQUEST
+- REQUEST_HISTORY
 - Mental state preservation
 - Working state tracking
 - Session planning
@@ -169,8 +181,9 @@ Mode Updates Required:
 
 ### File Naming Validation
 ```regex
-Task Files: ^\d{4}-\d{2}-\d{2}-(CRITICAL|HIGH|MEDIUM|LOW)-(FEATURE|BUGFIX|ENHANCEMENT|RESEARCH|ADMIN)-[a-z0-9-]+\.md$
-Context Files: ^\d{4}-\d{2}-\d{2}-[a-z0-9-]+-context\.md$
+Task Directory: ^\d{4}-\d{2}-\d{2}_ID-\d{3}_[a-z0-9-]+$ # For the task directory (e.g., 2025-06-25_ID-001_implement-user-auth)
+Internal Task File: ^_task\.md$
+Internal Context File: ^_context\.md$
 Report Files: ^(daily|weekly|monthly)-report-\d{4}-.*\.md$
 ```
 

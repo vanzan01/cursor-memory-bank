@@ -1,6 +1,6 @@
 ---
 description: "System coordination and integration patterns"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

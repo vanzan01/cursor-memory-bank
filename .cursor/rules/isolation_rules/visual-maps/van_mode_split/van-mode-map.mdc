@@ -1,6 +1,6 @@
 ---
 description: Visual process map for VAN mode (Index/Entry Point)
-globs: van-mode-map.mdc
+globs: van-mode-map.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 # VAN MODE: INITIALIZATION PROCESS MAP
@@ -46,7 +46,7 @@ graph TD
     %% ---> КОНЕЦ НОВОГО ШАГА <---
 
     GitCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
-    EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
+    EarlyComplexity --> AnalyzeTask["Analyze Task Requirements<br>(using _task.md)"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
 
     %% Level handling paths
@@ -55,7 +55,7 @@ graph TD
     CRITICALGATE --> ForceExit["Exit to PLAN mode"]
 
     %% Level 1 continues normally
-    ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK"]
+    ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK<br>(for Level 1 tasks)"]
     InitSystem --> Complete1["LEVEL 1 INITIALIZATION COMPLETE"]
 
     %% For Level 2+ tasks after PLAN and CREATIVE modes
@@ -124,11 +124,11 @@ graph TD
 ```mermaid
 graph TD
     FV["File Verification"] --> CheckFiles["Check Essential Files"]
-    CheckFiles --> CheckMB["Check Memory Bank<br>Structure"]
-    CheckMB --> MBExists{"Memory Bank<br>Exists?"}
+    CheckFiles --> CheckMB["Check Active Task<br>Structure"]
+    CheckMB --> MBExists{"Active Task Directory<br>Exists?"}
 
-    MBExists -->|"Yes"| VerifyMB["Verify Memory Bank<br>Contents"]
-    MBExists -->|"No"| CreateMB["Create Memory Bank<br>Structure"]
+    MBExists -->|"Yes"| VerifyMB["Verify _task.md & _context.md<br>Contents"]
+    MBExists -->|"No"| CreateMB["Create New Active Task<br>Directory and Core Files"]
 
     CheckFiles --> CheckDocs["Check Documentation<br>Files"]
     CheckDocs --> DocsExist{"Docs<br>Exist?"}
@@ -136,7 +136,7 @@ graph TD
     DocsExist -->|"Yes"| VerifyDocs["Verify Documentation<br>Structure"]
     DocsExist -->|"No"| CreateDocs["Create Documentation<br>Structure"]
 
-    VerifyMB & CreateMB --> MBCP["Memory Bank<br>Checkpoint"]
+    VerifyMB & CreateMB --> MBCP["Active Task<br>Checkpoint"]
     VerifyDocs & CreateDocs --> DocsCP["Documentation<br>Checkpoint"]
 
     MBCP & DocsCP --> FileComplete["File Verification<br>Complete"]
@@ -151,7 +151,7 @@ graph TD
 
 ```mermaid
 graph TD
-    CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements"]
+    CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements (from _task.md)"]
 
     AnalyzeTask --> CheckKeywords["Check Task<br>Keywords"]
     CheckKeywords --> ScopeCheck["Assess<br>Scope Impact"]

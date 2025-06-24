@@ -1,6 +1,6 @@
 ---
 description: QA Mode
-globs: qa-mode-map.mdc, CustomWorkflow/testing/*.mdc
+globs: qa-mode-map.mdc, CustomWorkflow/testing/*.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -50,12 +50,13 @@ graph TD
     %% Universal checks that apply to all phases
     DetectPhase --> UniversalChecks["🔍 UNIVERSAL VALIDATION"]
     UniversalChecks --> MemoryBankCheck["1️⃣ MEMORY BANK VERIFICATION<br>Check consistency & updates"]
-    MemoryBankCheck --> TaskTrackingCheck["2️⃣ TASK TRACKING VERIFICATION<br>Validate tasks.md as source of truth"]
+    MemoryBankCheck --> TaskTrackingCheck["2️⃣ TASK TRACKING VERIFICATION<br>Validate _task.md as source of truth"]
     TaskTrackingCheck --> ReferenceCheck["3️⃣ REFERENCE VALIDATION<br>Verify cross-references between docs"]
 
     %% Phase-specific validations feed into comprehensive report
     VANChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
-    PhaseSpecificResults --> TestAnalysis["🔍 <b>Analyze Test Results & Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc)"]
+    TestAnalysis["🔍 <b>Analyze Test Results & Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc)"]
+    PhaseSpecificResults --> TestAnalysis
     TestAnalysis & ReferenceCheck --> ValidationResults{"✅ All Checks<br>Passed?"}
 
     %% Results Processing
@@ -92,12 +93,11 @@ The enhanced QA mode first determines which phase the project is currently in:
 
 ```mermaid
 graph TD
-    PD["Phase Detection"] --> CheckMB["Analyze Memory Bank Files"]
-    CheckMB --> CheckActive["Check activeContext.md<br>for current phase"]
-    CheckActive --> CheckProgress["Check progress.md<br>for recent activities"]
-    CheckProgress --> CheckTasks["Check tasks.md<br>for task status"]
+    PD["Phase Detection"] --> GetActiveTask["Get Active Task Path<br>Using get_active_task_path()"]
+    GetActiveTask --> CheckActiveContext["Check _context.md in active task<br>directory for current phase"]
+    CheckActiveContext --> CheckTaskFile["Check _task.md in active task<br>directory for task status"]
 
-    CheckTasks --> PhaseResult{"Determine<br>Current Phase"}
+    CheckTaskFile --> PhaseResult{"Determine<br>Current Phase"}
     PhaseResult -->|"VAN"| VAN["VAN Phase<br>Initialization"]
     PhaseResult -->|"PLAN"| PLAN["PLAN Phase<br>Task Planning"]
     PhaseResult -->|"CREATIVE"| CREATIVE["CREATIVE Phase<br>Design Decisions"]
@@ -117,7 +117,7 @@ This process ensures Memory Bank files are consistent and up-to-date regardless 
 ```mermaid
 graph TD
     MBVS["Memory Bank<br>Verification"] --> CoreCheck["Check Core Files Exist"]
-    CoreCheck --> CoreFiles["Verify Required Files:<br>projectbrief.md<br>activeContext.md<br>tasks.md<br>progress.md"]
+    CoreCheck --> CoreFiles["Verify Required Files:<br>projectbrief.md<br>_task.md<br>_context.md"]
 
     CoreFiles --> ContentCheck["Verify Content<br>Consistency"]
     ContentCheck --> LastModified["Check Last Modified<br>Timestamps"]
@@ -137,14 +137,13 @@ graph TD
 
 ## 📋 TASK TRACKING VERIFICATION
 
-This process validates tasks.md as the single source of truth:
+This process validates _task.md as the single source of truth:
 
 ```mermaid
 graph TD
-    TTV["Task Tracking<br>Verification"] --> CheckTasksFile["Check tasks.md<br>Existence & Format"]
+    TTV["Task Tracking<br>Verification"] --> CheckTasksFile["Check _task.md<br>Existence & Format"]
     CheckTasksFile --> VerifyReferences["Verify Task References<br>in Other Documents"]
-    VerifyReferences --> ProgressCheck["Check Consistency with<br>progress.md"]
-    ProgressCheck --> StatusCheck["Verify Task Status<br>Accuracy"]
+    VerifyReferences --> StatusCheck["Verify Task Status<br>Accuracy"]
 
     StatusCheck --> TaskConsistency{"Tasks Properly<br>Tracked?"}
     TaskConsistency -->|"Yes"| PassTasks["✅ Task Tracking<br>Verification Passed"]

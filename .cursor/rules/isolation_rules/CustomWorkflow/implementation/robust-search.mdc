@@ -1,6 +1,6 @@
 ---
 description: "Robust search and discovery patterns for development"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 

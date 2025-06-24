@@ -8,6 +8,7 @@
     │   └── rules/
     │       └── isolation_rules/
     │           ├── Core/
+    │           │   ├── active-task-manager.mdc
     │           │   ├── background-server-execution.mdc
     │           │   ├── command-execution.mdc
     │           │   ├── complexity-decision-tree.mdc
@@ -28,6 +29,7 @@
     │           │   ├── optimization-integration.mdc
     │           │   ├── platform-awareness.mdc
     │           │   ├── request-versioning-system.mdc
+    │           │   ├── task-artifact-manager.mdc
     │           │   ├── task-management-2-0.mdc
     │           │   ├── timeout-protection.mdc
     │           │   ├── universal-mode-integration.mdc
@@ -42,11 +44,13 @@
     │           │   │   ├── invariant-validation.mdc
     │           │   │   └── systematic-debugging.mdc
     │           │   ├── documentation/
+    │           │   │   ├── commit-message-generator.mdc
     │           │   │   ├── creative-analysis-reporting.mdc
     │           │   │   ├── creative-archive-structure.mdc
     │           │   │   ├── creative-results-capture.mdc
     │           │   │   ├── creative-versioning-system.mdc
     │           │   │   ├── decision-recording.mdc
+    │           │   │   ├── release-notes-generator.mdc
     │           │   │   ├── statistics-tracking.mdc
     │           │   │   └── usage-examples.mdc
     │           │   ├── git-workflow/
@@ -77,7 +81,6 @@
     │           │   │   └── refactoring-patterns.mdc
     │           │   ├── system/
     │           │   │   ├── creative-decision-control.mdc
-    │           │   │   ├── date-management.mdc
     │           │   │   ├── interaction-mode-control.mdc
     │           │   │   ├── interactive-planning.mdc
     │           │   │   └── real-date-enforcement.mdc
@@ -169,12 +172,55 @@
         ├── qa_instructions.md
         ├── reflect_archive_instructions.md
         ├── step_by_step_instructions.md
+        ├── switch_task_instructions.md
         ├── universal_instructions.md
         ├── van_core_workflow.md
         └── van_instructions.md
 ```
 
 ## Список файлов
+
+`.cursor/rules/isolation_rules/Core/active-task-manager.mdc`
+
+```mdc
+---
+description: "Управляет активной задачей, читая и записывая путь в current-task.txt."
+globs: "**/**"
+alwaysApply: true
+---
+
+# ACTIVE TASK MANAGER
+
+> **TL;DR:** Этот модуль определяет текущую активную задачу, читая путь из `memory-bank/system/current-task.txt`. Все операции (чтение/запись контекста, задач и т.д.) должны использовать этот путь для определения рабочей директории.
+
+## ⚙️ Основные функции
+
+### 1. Получение пути к активной задаче
+
+```bash
+# Эта функция должна использоваться всеми правилами для доступа к файлам задачи
+function get_active_task_path() {
+  local state_file="memory-bank/system/current-task.txt"
+  if [ -f "$state_file" ]; then
+    cat "$state_file"
+  else
+    echo "" # Нет активной задачи
+  fi
+}
+```
+
+### 2. Установка новой активной задачи
+
+```bash
+# Эта функция вызывается при создании новой задачи или переключении на существующую
+function set_active_task() {
+  local task_path="$1" # e.g., memory-bank/tasks/in_progress/2025-06-25_ID-001...
+  local state_file="memory-bank/system/current-task.txt"
+  echo "$task_path" > "$state_file"
+  echo "✅ Active task set to: $task_path"
+}
+```
+```
 
 `.cursor/rules/isolation_rules/Core/background-server-execution.mdc`
 
@@ -688,18 +734,11 @@ alwaysApply: true
 
 ### Context File Structure
 ```
-memory-bank/contexts/
-├── active/
-│   ├── 2025-06-20-user-auth-context.md
-│   ├── 2025-06-20-payment-system-context.md
-│   └── 2025-06-20-dashboard-redesign-context.md
-├── suspended/
-│   ├── 2025-06-15-legacy-migration-context.md
-│   └── 2025-06-18-api-optimization-context.md
-└── archived/
-    └── 2025-06/
-        ├── 2025-06-10-bug-fix-123-context.md
-        └── 2025-06-12-feature-abc-context.md
+New Structure:
+memory-bank/tasks/
+├── todo/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
+├── in_progress/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
+└── done/{YYYY-MM-DD_ID-XXX_task-name}/_context.md
 ```
 
 ### Context Naming Convention
@@ -801,16 +840,19 @@ Context States:
 ```bash
 # When suspending a context
 suspend_context() {
-    local context_file="$1"
-    local reason="$2"
+    local context_file=$(get_context_file_path)
+    if [ -z "$context_file" ]; then
+      echo "❌ No active task found. Cannot suspend context." >&2
+      return 1
+    fi
+    local reason="$1"
 
     echo "## 🔄 CONTEXT SUSPENSION" >> "$context_file"
     echo "**Suspended At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
     echo "**Reason**: $reason" >> "$context_file"
     echo "**Recovery Notes**: [Add specific notes for resuming]" >> "$context_file"
 
-    # Move to suspended directory
-    mv "memory-bank/contexts/active/$context_file" "memory-bank/contexts/suspended/"
+    # No longer moving directories, just updating the content
 }
 ```
 
@@ -818,14 +860,17 @@ suspend_context() {
 ```bash
 # When restoring a suspended context
 restore_context() {
-    local context_file="$1"
+    local context_file=$(get_context_file_path)
+    if [ -z "$context_file" ]; then
+      echo "❌ No active task found. Cannot restore context." >&2
+      return 1
+    fi
 
     echo "## ▶️ CONTEXT RESTORATION" >> "$context_file"
     echo "**Restored At**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$context_file"
     echo "**Recovery Time**: [Time taken to get back into flow]" >> "$context_file"
 
-    # Move back to active directory
-    mv "memory-bank/contexts/suspended/$context_file" "memory-bank/contexts/active/"
+    # No longer moving directories, just updating the content
 }
 ```
 
@@ -835,34 +880,32 @@ restore_context() {
 ## 📊 ACTIVE CONTEXTS DASHBOARD
 
 **Last Updated**: 2025-06-20 19:45:00
-**Active Contexts**: 2/3
+**Active Contexts**: Dynamic (based on current-task.txt)
 
-### 🟢 Active Contexts
+### 🟢 Active Context
 | Context | Priority | Progress | Last Updated | Next Action |
 |---------|----------|----------|--------------|-------------|
-| [user-auth](contexts/active/2025-06-20-user-auth-context.md) | HIGH | 60% | 19:30 | Implement JWT validation |
-| [payment-system](contexts/active/2025-06-20-payment-context.md) | MEDIUM | 30% | 18:45 | Research Stripe integration |
+| [Current Task Context](_context.md) | N/A | N/A | N/A | N/A |
 
 ### ⏸️ Suspended Contexts
 | Context | Reason | Suspended Since | Resume Priority |
 |---------|--------|-----------------|-----------------|
-| [legacy-migration](contexts/suspended/2025-06-15-legacy-context.md) | Waiting for DB access | 2 days | LOW |
+| *No longer managed via separate files, review task directory for status.* |
 
 ### ⚠️ Context Health Alerts
-- [ ] No contexts over WIP limit ✅
-- [ ] All active contexts updated within 2 hours ⚠️
-- [ ] No contexts suspended over 1 week ✅
+- [ ] Active context exists if a task is active ✅
+- [ ] Active context updated regularly (manual check) ✅
 ```
 
 ## INTEGRATION WITH TASK MANAGEMENT
 
 ### Task-Context Linking
 ```markdown
-# In task files:
-**Related Context**: [contexts/active/2025-06-20-task-name-context.md](../contexts/active/2025-06-20-task-name-context.md)
+# In task files (_task.md):
+**Related Context**: [_context.md](_context.md)
 
-# In context files:
-**Related Task**: [tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md](../tasks/in_progress/active/2025-06-20-HIGH-FEATURE-task-name.md)
+# In context files (_context.md):
+**Related Task**: [_task.md](_task.md)
 ```
 
 ### Context Lifecycle Management
@@ -870,23 +913,30 @@ restore_context() {
 # Context lifecycle automation
 manage_context_lifecycle() {
     local task_status="$1"
-    local context_file="$2"
+    local task_path=$(get_active_task_path)
+    if [ -z "$task_path" ]; then
+      echo "❌ No active task found. Cannot manage context lifecycle." >&2
+      return 1
+    fi
+    local context_file="$task_path/_context.md"
 
     case "$task_status" in
         "started")
-            create_active_context "$context_file"
+            # For a new task, _context.md is created during task directory setup
+            # We just need to ensure it's loaded implicitly by active-task-manager
+            echo "New task started, context at $context_file initialized."
             ;;
         "suspended")
-            suspend_context "$context_file" "Task suspended"
+            suspend_context "Task suspended for manual review"
             ;;
         "resumed")
-            restore_context "$context_file"
+            restore_context
             ;;
         "completed")
-            archive_context "$context_file"
+            echo "Context for $task_path marked as completed (manual archival needed)" # Context remains in task directory, manual archival of entire task directory
             ;;
         "cancelled")
-            archive_context "$context_file" "Task cancelled"
+            echo "Context for $task_path marked as cancelled (manual archival needed)" # Context remains in task directory, manual archival of entire task directory
             ;;
     esac
 }
@@ -4404,7 +4454,8 @@ alwaysApply: true
 
 ```mermaid
 graph TD
-    Start["▶️ Новый запрос от пользователя"] --> ReadContext["1. Прочитать `current-context.md`"]
+    Start["▶️ Новый запрос от пользователя"] --> GetTaskPath["0. Получить путь к активной задаче"]
+    GetTaskPath --> ReadContext["1. Прочитать `_context.md` активной задачи"]
     ReadContext --> ExtractLatest["2. Извлечь текст из `LATEST_REQUEST`"]
 
     ExtractLatest --> HasHistory{"В `REQUEST_HISTORY`<br>уже есть записи?"}
@@ -4414,7 +4465,7 @@ graph TD
     PrependToHistory --> UpdateLatest["4. Поместить новый<br>запрос пользователя<br>в `LATEST_REQUEST`"]
     CreateHistory --> UpdateLatest
 
-    UpdateLatest --> SaveContext["5. Сохранить обновленный<br>`current-context.md`"]
+    UpdateLatest --> SaveContext["5. Сохранить обновленный<br>`_context.md` активной задачи"]
     SaveContext --> Proceed["✅ Контекст обновлен.<br>Продолжить выполнение основной команды."]
 
     style Start fill:#f8d486,stroke:#e8b84d,color:black
@@ -4425,7 +4476,7 @@ graph TD
 
 Эта логика должна выполняться **до** основной логики любого режима (`VAN`, `PLAN` и т.д.).
 
-### Пример логики обновления `current-context.md`:
+### Пример логики обновления `_context.md`:
 
 ```bash
 # Псевдокод для ИИ-ассистента
@@ -4433,29 +4484,138 @@ graph TD
 # 1. Получаем новый запрос от пользователя
 new_request = get_user_prompt()
 
-# 2. Читаем текущий контекст
-context_content = read_file("memory-bank/system/current-context.md")
+# 2. Получаем путь к активной задаче
+active_task_path=$(get_active_task_path)
+if [ -z "$active_task_path" ]; then
+  echo "❌ No active task found. Cannot save request history." >&2
+  exit 1
+fi
 
-# 3. Извлекаем последний запрос
+context_file=$(get_context_file_path)
+if [ -z "$context_file" ]; then
+  echo "❌ No active task. Cannot version request." >&2
+  exit 1
+fi
+
+# 3. Читаем текущий контекст
+context_content = read_file("$context_file")
+
+# 4. Извлекаем последний запрос
 # (Используем регулярные выражения для поиска между ```)
 last_request_text = extract_between_markers(context_content, "LATEST_REQUEST", "```")
 
-# 4. Формируем запись для истории
+# 5. Формируем запись для истории
 timestamp = get_current_datetime()
 history_entry = f"- **v1.X ({timestamp}):**\\n  \`\`\`\\n  {last_request_text}\\n  \`\`\`"
 
-# 5. Обновляем контент
+# 6. Обновляем контент
 # Заменяем LATEST_REQUEST на новый запрос
 updated_content = replace_section(context_content, "LATEST_REQUEST", new_request)
 # Добавляем запись в REQUEST_HISTORY
 updated_content = prepend_to_section(updated_content, "REQUEST_HISTORY", history_entry)
 
-# 6. Сохраняем файл
-edit_file("memory-bank/system/current-context.md", updated_content)
+# 7. Сохраняем файл
+edit_file("$context_file", updated_content)
 ```
 
 **Эта операция гарантирует, что ни один запрос пользователя не будет утерян.**
 
+```
+
+`.cursor/rules/isolation_rules/Core/task-artifact-manager.mdc`
+
+```mdc
+---
+description: "Централизованно управляет путями к артефактам внутри директории активной задачи."
+globs: "**/**"
+alwaysApply: true
+---
+
+# TASK ARTIFACT MANAGER
+
+> **TL;DR:** Этот модуль является единым источником правды для всех путей *внутри* директории активной задачи. Вместо того чтобы конструировать пути вручную, другие правила должны вызывать функции этого менеджера для получения канонических путей.
+
+## 🗺️ Каноническая структура директории задачи
+
+```mermaid
+graph TD
+    TaskDir["<b>Активная задача</b><br>(.../ID-001_task/)"] --> TaskFile["_task.md"]
+    TaskDir --> ContextFile["_context.md"]
+    TaskDir --> ReflectionFile["_reflection.md"]
+    TaskDir --> ArchiveFile["_archive.md"]
+    TaskDir --> CreativeDir["creative/"]
+    TaskDir --> ReportsDir["reports/"]
+    TaskDir --> ReleaseDir["release/"]
+
+    ReleaseDir --> CommitMsg["_commit_message.txt"]
+    ReleaseDir --> ReleaseNotes["_release_notes.md"]
+
+    style TaskDir fill:#ffad42,stroke:#f57c00
+```
+
+## ⚙️ Функции-хелперы для получения путей
+
+**ВАЖНО:** Эти функции предполагают, что правило `Core/active-task-manager.mdc` уже загружено и функция `get_active_task_path()` доступна.
+
+```bash
+# Эта функция из active-task-manager.mdc, от которой мы зависим
+function get_active_task_path() { ... }
+
+# ===== НОВЫЕ ФУНКЦИИ-ХЕЛПЕРЫ =====
+
+# Получить путь к основному файлу задачи (_task.md)
+function get_task_file_path() {
+  local active_path
+  active_path=$(get_active_task_path)
+  if [ -n "$active_path" ]; then
+    echo "$active_path/_task.md"
+  fi
+}
+
+# Получить путь к файлу контекста задачи (_context.md)
+function get_context_file_path() {
+  local active_path
+  active_path=$(get_active_task_path)
+  if [ -n "$active_path" ]; then
+    echo "$active_path/_context.md"
+  fi
+}
+
+# Получить путь к файлу рефлексии задачи (_reflection.md)
+function get_reflection_file_path() {
+  local active_path
+  active_path=$(get_active_task_path)
+  if [ -n "$active_path" ]; then
+    echo "$active_path/_reflection.md"
+  fi
+}
+
+# Получить путь к директории с артефактами релиза (release/)
+function get_release_path() {
+  local active_path
+  active_path=$(get_active_task_path)
+  if [ -n "$active_path" ]; then
+    echo "$active_path/release"
+  fi
+}
+
+# Получить путь к файлу с сообщением для коммита
+function get_commit_message_file_path() {
+  local release_path
+  release_path=$(get_release_path)
+  if [ -n "$release_path" ]; then
+    echo "$release_path/_commit_message.txt"
+  fi
+}
+
+# Получить путь к файлу с заметками для релиза
+function get_release_notes_file_path() {
+  local release_path
+  release_path=$(get_release_path)
+  if [ -n "$release_path" ]; then
+    echo "$release_path/_release_notes.md"
+  fi
+}
 ```
 
 `.cursor/rules/isolation_rules/Core/task-management-2-0.mdc`
@@ -4484,30 +4644,39 @@ alwaysApply: true
 - Cross-platform compatibility
 - Future-proof date handling
 
-### 2. INDIVIDUAL TASK FILES
-**Rule**: Each task MUST be in separate file, NO monolithic tasks.md
-```
-Structure:
-memory-bank/tasks/
-├── todo/{priority}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-├── in_progress/{status}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-└── done/{YYYY-MM}/YYYY-MM-DD-PRIORITY-CATEGORY-task-name.md
-```
+### 2. INDIVIDUAL TASK DIRECTORIES
+**Rule**: Each task MUST be encapsulated within its own directory, serving as a single source of truth for all task-related artifacts.
 
-**Priority Levels**: CRITICAL, HIGH, MEDIUM, LOW
-**Categories**: FEATURE, BUGFIX, ENHANCEMENT, RESEARCH, ADMIN
+```
+New Structure:
+└── memory-bank/
+    ├── tasks/
+    │   ├── todo/
+    │   │   └── YYYY-MM-DD_ID-XXX_task-name/  <-- Task Directory
+    │   │       ├── _task.md                     <-- Main task file
+    │   │       ├── _context.md                  <-- Task-specific context
+    │   │       ├── _reflection.md               <-- Task reflection
+    │   │       ├── _archive.md                  <-- Archival document
+    │   │       ├── creative/                    <-- Creative phase artifacts
+    │   │       ├── reports/                     <-- Task-specific reports
+    │   │       └── release/                     <-- Release artifacts
+    ├── in_progress/
+    │   └── YYYY-MM-DD_ID-XXX_task-name/
+    │       └── ... (same structure)
+    └── done/
+        └── YYYY-MM-DD_ID-XXX_task-name/
+            └── ... (same structure)
+```
 
 ### 3. FOLDER HIERARCHY ARCHITECTURE
 ```
 memory-bank/
 ├── tasks/
-│   ├── todo/{critical,high,medium,low}/
-│   ├── in_progress/{active,blocked,review}/
-│   └── done/{YYYY-MM}/
-├── contexts/
-│   ├── active/
-│   ├── suspended/
-│   └── archived/
+│   ├── todo/{YYYY-MM-DD_ID-XXX_task-name}/  <-- New task directory structure
+│   ├── in_progress/{YYYY-MM-DD_ID-XXX_task-name}/
+│   └── done/{YYYY-MM-DD_ID-XXX_task-name}/
+├── system/
+│   └── current-task.txt  <-- NEW: Active task pointer
 ├── reports/
 │   ├── daily/
 │   ├── weekly/
@@ -4518,10 +4687,13 @@ memory-bank/
 ```
 
 ### 4. CONTEXT MANAGEMENT PER TASK
-**Rule**: Each task MUST have separate context preservation
+**Rule**: Each task MUST have its context encapsulated within its dedicated task directory.
+
 ```
 Context Structure:
-contexts/active/YYYY-MM-DD-task-context.md
+memory-bank/tasks/{todo|in_progress|done}/YYYY-MM-DD_ID-XXX_task-name/_context.md
+- LATEST_REQUEST
+- REQUEST_HISTORY
 - Mental state preservation
 - Working state tracking
 - Session planning
@@ -4632,8 +4804,9 @@ Mode Updates Required:
 
 ### File Naming Validation
 ```regex
-Task Files: ^\d{4}-\d{2}-\d{2}-(CRITICAL|HIGH|MEDIUM|LOW)-(FEATURE|BUGFIX|ENHANCEMENT|RESEARCH|ADMIN)-[a-z0-9-]+\.md$
-Context Files: ^\d{4}-\d{2}-\d{2}-[a-z0-9-]+-context\.md$
+Task Directory: ^\d{4}-\d{2}-\d{2}_ID-\d{3}_[a-z0-9-]+$ # For the task directory (e.g., 2025-06-25_ID-001_implement-user-auth)
+Internal Task File: ^_task\.md$
+Internal Context File: ^_context\.md$
 Report Files: ^(daily|weekly|monthly)-report-\d{4}-.*\.md$
 ```
 
@@ -7060,6 +7233,85 @@ graph TD
 This systematic approach ensures thorough debugging while maintaining documentation for future reference and continuous improvement.
 ```
 
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc`
+
+```mdc
+---
+description: "Генерирует структурированное сообщение для коммита на основе завершенной задачи."
+globs: "**/archive-mode-map.mdc", "**/active-task-manager.mdc"
+alwaysApply: false
+---
+
+# COMMIT MESSAGE GENERATOR
+
+> **TL;DR:** Этот модуль анализирует `reflection.md` и `tasks.md` для автоматического создания коммита по стандарту Conventional Commits.
+
+## 📝 Процесс генерации
+
+```mermaid
+graph TD
+    Start["▶️ Start Commit Generation"] --> ReadDocs["1. Прочитать reflection.md и tasks.md"]
+    ReadDocs --> Analyze["2. Извлечь: тип, название, итоги"]
+    Analyze --> DetermineType{"3. Определить тип<br>(feat, fix, docs, chore, refactor)"}
+    DetermineType --> Construct["4. Сконструировать сообщение"]
+    Construct --> Output["5. Вывести готовый коммит"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Output fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📋 Шаблон сообщения для коммита
+
+Я буду использовать следующий шаблон:
+
+```
+[type]([scope]): [Краткое описание на английском]
+
+[Более подробное описание изменений на русском языке. Описывает, ЧТО было сделано и ПОЧЕМУ. Основывается на `reflection.md`.]
+
+- Ключевое изменение 1
+- Ключевое изменение 2
+- Ключевое изменение 3
+
+BREAKING CHANGE: [Описание, если есть обратно несовместимые изменения]
+
+Closes #[Номер задачи в трекере, если есть]
+```
+
+### Пример сгенерированного сообщения:
+
+```
+feat(auth): add step-by-step and universal modes
+
+Реализованы два новых режима управления рабочим процессом:
+- `UNIVERSAL`: Полностью автономный режим ("автопилот") для выполнения всего цикла разработки.
+- `STEP_BY_STEP`: Контролируемый пошаговый режим, ожидающий подтверждения пользователя после каждой фазы.
+
+Оба режима интегрированы с системой управления состоянием, `interaction-mode` и менеджером даты/времени. Это нововведение значительно повышает гибкость и уровень автоматизации системы.
+```
+
+## Сохранение сгенерированного сообщения
+
+После генерации сообщения коммита, оно должно быть сохранено в файл `_commit_message.txt` в поддиректории `release` активной задачи.
+
+```bash
+# Псевдокод для ИИ-ассистента
+
+commit_message_file=$(get_commit_message_file_path)
+if [ -z "$commit_message_file" ]; then
+  echo "❌ No active task. Cannot save commit message." >&2
+  exit 1
+fi
+
+mkdir -p "$(dirname "$commit_message_file")"
+
+# Предположим, что `generated_commit_message` содержит сгенерированное сообщение
+# edit_file("$commit_message_file", generated_commit_message)
+
+echo "✅ Commit message saved to: $commit_message_file"
+```
+```
+
 `.cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc`
 
 ```mdc
@@ -9281,6 +9533,77 @@ This decision recording methodology ensures that all important decisions in Memo
 
 ```
 
+`.cursor/rules/isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc`
+
+```mdc
+---
+description: "Генерирует заметки для релиза (Release Notes) для завершенной задачи."
+globs: "**/archive-mode-map.mdc", "**/active-task-manager.mdc"
+alwaysApply: false
+---
+
+# RELEASE NOTES GENERATOR
+
+> **TL;DR:** Этот модуль создает файл с заметками для релиза в директории `/release_notes`, основываясь на итогах задачи.
+
+## 🚀 Процесс генерации Release Notes
+
+```mermaid
+graph TD
+    Start["▶️ Start Release Notes"] --> ReadDocs["1. Прочитать reflection.md и archive документацию"]
+    ReadDocs --> ExtractChanges["2. Извлечь изменения (Added, Changed, Fixed)"]
+    ExtractChanges --> FormatNotes["3. Отформатировать по стандарту 'Keep a Changelog'"]
+    FormatNotes --> CreateFile["4. Создать файл<br>`active_task_path/release/_release_notes.md`"]
+    CreateFile --> Done["✅ Готово"]
+
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style Done fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📋 Шаблон Release Notes
+
+```markdown
+# Release Notes - [Название фичи/задачи] - [YYYY-MM-DD]
+
+## ✨ Added (Добавлено)
+- [Описание новой функциональности 1.]
+- [Описание новой функциональности 2.]
+
+## 🔄 Changed (Изменено)
+- [Описание изменения в существующей функциональности.]
+
+## 🐛 Fixed (Исправлено)
+- [Описание исправленной ошибки.]
+
+## ⚠️ BREAKING CHANGES (Критические изменения)
+- [Описание изменений, которые могут нарушить обратную совместимость.]
+```
+
+## Сохранение сгенерированных заметок о выпуске
+
+После генерации заметок о выпуске, они должны быть сохранены в файл `_release_notes.md` в поддиректории `release` активной задачи.
+
+```bash
+# Псевдокод для ИИ-ассистента
+
+release_notes_file=$(get_release_notes_file_path)
+if [ -z "$release_notes_file" ]; then
+  echo "❌ No active task. Cannot save release notes." >&2
+  exit 1
+fi
+
+mkdir -p "$(dirname "$release_notes_file")"
+
+# Предположим, что `generated_release_notes` содержит сгенерированные заметки
+# edit_file("$release_notes_file", generated_release_notes)
+
+echo "✅ Release notes saved to: $release_notes_file"
+```
+
+### Место сохранения:
+Сгенерированные заметки будут сохранены в новую директорию в корне проекта: `release_notes/`.
+```
+
 `.cursor/rules/isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc`
 
 ```mdc
@@ -10990,7 +11313,7 @@ This structured approach ensures clear development history and enables effective
 ```mdc
 ---
 description: "Dependency checking and validation rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -11057,7 +11380,7 @@ This systematic approach prevents dependency-related issues and ensures reliable
 ```mdc
 ---
 description: "Robust search and discovery patterns for development"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -11135,7 +11458,7 @@ This systematic approach ensures thorough and reliable search results.
 ```mdc
 ---
 description: "Rules for avoiding stubs and implementing complete functionality"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -11391,7 +11714,7 @@ This approach ensures robust, complete implementations that don't accumulate tec
 ```mdc
 ---
 description: "System coordination and integration patterns"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -12983,7 +13306,7 @@ This isolated design methodology ensures Memory Bank components remain maintaina
 ```mdc
 ---
 description: "Isolated design principles for maintainable systems"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -13204,7 +13527,7 @@ This approach ensures components remain maintainable, testable, and evolvable ov
 ```mdc
 ---
 description: "Phased development approach for complex tasks"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -13300,7 +13623,7 @@ This approach ensures systematic progress while maintaining flexibility for adju
 ```mdc
 ---
 description: "Problem prioritization and triage rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -13487,7 +13810,7 @@ This systematic approach ensures critical issues get immediate attention while m
 ```mdc
 ---
 description: "Progress documentation and tracking rules"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -17198,312 +17521,6 @@ Please choose your preferred option:
 This creative decision control system ensures users maintain control over architectural and design decisions while benefiting from comprehensive AI analysis and recommendations.
 ```
 
-`.cursor/rules/isolation_rules/CustomWorkflow/system/date-management.mdc`
-
-```mdc
----
-description: Date Management System for Memory Bank
-globs: "**/date-management.mdc", "**/memory-bank/**"
-alwaysApply: true
----
-# DATE MANAGEMENT SYSTEM
-
-> **TL;DR:** Dynamic date management system that uses real command-line dates instead of hardcoded values, with mode-based access control ensuring IMPLEMENT mode cannot modify dates while other modes can update them as needed.
-
-## 🚨 CRITICAL FIX
-
-**PROBLEM SOLVED**: AI was using hardcoded date "2024-12-09" instead of real current date
-**SOLUTION**: Dynamic date system using command-line `date` command with proper access control
-
-## 📅 DATE SYSTEM ARCHITECTURE
-
-### Current Date Storage
-- **File**: `memory-bank/system/current-date.txt`
-- **Format**: YYYY-MM-DD (ISO 8601)
-- **Source**: Command line `date +%Y-%m-%d`
-- **Initialization**: System startup with real current date
-
-### Access Control by Mode
-
-**✅ WRITABLE MODES** (can update date):
-- **VAN Mode**: Can update date when starting new analysis
-- **PLAN Mode**: Can update date when planning new features
-- **CREATIVE Mode**: Can update date during creative sessions
-- **REFLECT Mode**: Can update date during reflection
-- **ARCHIVE Mode**: Can update date during archival
-
-**❌ READ-ONLY MODE** (cannot update date):
-- **IMPLEMENT Mode**: Uses stored date, cannot modify (prevents inconsistency during implementation)
-
-## 🔧 IMPLEMENTATION FUNCTIONS
-
-### Core Date Functions
-
-```bash
-# Get current system date
-get_system_date() {
-  if [[ -f "memory-bank/system/current-date.txt" ]]; then
-    cat memory-bank/system/current-date.txt
-  else
-    date +%Y-%m-%d
-  fi
-}
-
-# Update system date (with mode check)
-update_system_date() {
-  local current_mode="$1"
-
-  # Check if current mode can update date
-  if [[ "$current_mode" == "IMPLEMENT" ]]; then
-    echo "WARNING: IMPLEMENT mode cannot update system date"
-    return 1
-  fi
-
-  # Update date with real current date
-  local new_date=$(date +%Y-%m-%d)
-  echo "$new_date" > memory-bank/system/current-date.txt
-  echo "System date updated to: $new_date"
-  return 0
-}
-
-# Initialize date system
-init_date_system() {
-  mkdir -p memory-bank/system
-  local current_date=$(date +%Y-%m-%d)
-  echo "$current_date" > memory-bank/system/current-date.txt
-  echo "Date system initialized with: $current_date"
-}
-
-# Validate date format
-validate_date() {
-  local date_string="$1"
-  if [[ "$date_string" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
-    return 0
-  else
-    return 1
-  fi
-}
-```
-
-### Mode Integration
-
-**VAN Mode Integration**:
-```bash
-# At VAN mode start
-update_system_date "VAN"
-CURRENT_DATE=$(get_system_date)
-echo "VAN Mode started on: $CURRENT_DATE"
-```
-
-**PLAN Mode Integration**:
-```bash
-# At PLAN mode start
-update_system_date "PLAN"
-CURRENT_DATE=$(get_system_date)
-echo "Planning session started on: $CURRENT_DATE"
-```
-
-**CREATIVE Mode Integration**:
-```bash
-# At CREATIVE mode start
-update_system_date "CREATIVE"
-CURRENT_DATE=$(get_system_date)
-echo "Creative session started on: $CURRENT_DATE"
-```
-
-**IMPLEMENT Mode Integration**:
-```bash
-# At IMPLEMENT mode start (READ-ONLY)
-CURRENT_DATE=$(get_system_date)
-echo "Implementation using date: $CURRENT_DATE (read-only)"
-# NO update_system_date call - prevents date changes during implementation
-```
-
-**REFLECT Mode Integration**:
-```bash
-# At REFLECT mode start
-update_system_date "REFLECT"
-CURRENT_DATE=$(get_system_date)
-echo "Reflection session started on: $CURRENT_DATE"
-```
-
-**ARCHIVE Mode Integration**:
-```bash
-# At ARCHIVE mode start
-update_system_date "ARCHIVE"
-CURRENT_DATE=$(get_system_date)
-echo "Archive session started on: $CURRENT_DATE"
-```
-
-## 📝 USAGE IN DOCUMENTATION
-
-### File Naming with Real Dates
-```bash
-# Instead of hardcoded dates
-CURRENT_DATE=$(get_system_date)
-FILENAME="arch-${CURRENT_DATE}-cursor-memory-bank-001-task-continuity.md"
-
-# Decision IDs with real dates
-DECISION_ID="ARCH-${CURRENT_DATE}-001"
-```
-
-### Metadata with Real Dates
-```yaml
-decision_metadata:
-  id: "ARCH-$(get_system_date)-001"
-  created: "$(date -Iseconds)"
-  last_updated: "$(get_system_date)"
-
-version_history:
-  - version: "1.0"
-    date: "$(date -Iseconds)"
-    changes: "Initial decision"
-```
-
-### Archive Organization with Real Dates
-```bash
-# Create date-based archive structure
-CURRENT_DATE=$(get_system_date)
-YEAR=$(echo $CURRENT_DATE | cut -d'-' -f1)
-MONTH=$(echo $CURRENT_DATE | cut -d'-' -f2)
-DAY=$(echo $CURRENT_DATE | cut -d'-' -f3)
-
-ARCHIVE_PATH="memory-bank/creative/projects/cursor-memory-bank/$YEAR/$MONTH/$DAY"
-mkdir -p "$ARCHIVE_PATH"
-```
-
-## 🔍 VALIDATION AND MONITORING
-
-### Date Consistency Checks
-```bash
-# Check date system health
-check_date_system() {
-  local stored_date=$(get_system_date)
-  local current_date=$(date +%Y-%m-%d)
-
-  if validate_date "$stored_date"; then
-    echo "✅ Stored date format valid: $stored_date"
-  else
-    echo "❌ Invalid stored date format: $stored_date"
-    return 1
-  fi
-
-  # Check if date is reasonable (not too old)
-  local days_diff=$(( ($(date -d "$current_date" +%s) - $(date -d "$stored_date" +%s)) / 86400 ))
-
-  if [[ $days_diff -gt 7 ]]; then
-    echo "⚠️  Stored date is $days_diff days old: $stored_date"
-    echo "Consider updating with: update_system_date <mode>"
-  else
-    echo "✅ Date freshness OK: $stored_date (${days_diff} days old)"
-  fi
-}
-
-# Monitor date usage
-log_date_access() {
-  local mode="$1"
-  local action="$2"  # "read" or "update"
-  local date_used=$(get_system_date)
-
-  echo "$(date -Iseconds) | $mode | $action | $date_used" >> memory-bank/logs/date-access.log
-}
-```
-
-### Error Handling
-```bash
-# Safe date operations with fallback
-safe_get_date() {
-  local stored_date=$(get_system_date)
-
-  if validate_date "$stored_date"; then
-    echo "$stored_date"
-  else
-    echo "ERROR: Invalid stored date, using current date"
-    date +%Y-%m-%d
-  fi
-}
-
-# Recovery from corrupted date file
-recover_date_system() {
-  echo "Recovering date system..."
-  local current_date=$(date +%Y-%m-%d)
-  echo "$current_date" > memory-bank/system/current-date.txt
-  echo "Date system recovered with: $current_date"
-}
-```
-
-## 🎯 INTEGRATION POINTS
-
-### Memory Bank Workflow Integration
-
-**System Initialization**:
-- Initialize date system on first run
-- Validate date system health on each mode start
-- Log date access for audit trail
-
-**Mode Transitions**:
-- Update date when entering writable modes
-- Preserve date when entering IMPLEMENT mode
-- Validate date consistency across transitions
-
-**Documentation Generation**:
-- Use real dates in all generated files
-- Ensure consistent date format across all documents
-- Archive with proper date-based organization
-
-### Configuration Integration
-
-**System Configuration** (`memory-bank/config/system.yaml`):
-```yaml
-date_management:
-  source: "command_line"
-  update_command: "date +%Y-%m-%d"
-  storage_file: "memory-bank/system/current-date.txt"
-  readonly_modes: ["IMPLEMENT"]
-  validation:
-    format: "YYYY-MM-DD"
-    max_age_days: 7
-```
-
-**Mode Configuration**:
-```yaml
-modes:
-  IMPLEMENT:
-    can_update_date: false
-    date_access: "readonly"
-  PLAN:
-    can_update_date: true
-    date_access: "readwrite"
-```
-
-## ✅ VERIFICATION CHECKLIST
-
-**System Health Checks**:
-- [ ] Date file exists and is readable
-- [ ] Date format is valid (YYYY-MM-DD)
-- [ ] Date is reasonably current (< 7 days old)
-- [ ] IMPLEMENT mode cannot update date
-- [ ] Other modes can update date successfully
-
-**Integration Checks**:
-- [ ] All modes use get_system_date() function
-- [ ] No hardcoded dates in documentation
-- [ ] Archive structure uses real dates
-- [ ] Decision IDs include real dates
-- [ ] Metadata timestamps are accurate
-
-**Functionality Checks**:
-- [ ] Date updates work in VAN/PLAN/CREATIVE/REFLECT/ARCHIVE modes
-- [ ] Date updates are blocked in IMPLEMENT mode
-- [ ] Date validation prevents invalid formats
-- [ ] Recovery works if date file is corrupted
-- [ ] Logging captures all date operations
-
-This date management system ensures all Memory Bank operations use accurate, real-world dates while maintaining consistency and preventing unauthorized modifications during implementation phases.
-
-
-```
-
 `.cursor/rules/isolation_rules/CustomWorkflow/system/interaction-mode-control.mdc`
 
 ```mdc
@@ -18190,7 +18207,7 @@ Command: `grep -r "2024-12-09" memory-bank/`
 ```mdc
 ---
 description: "Core Bun testing rules and patterns"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -18280,7 +18297,7 @@ This ensures fast, reliable testing with Bun's optimized test runner.
 ```mdc
 ---
 description: "Advanced Bun testing features and capabilities"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -18649,7 +18666,7 @@ This edge case testing framework ensures Memory Bank system robustness by system
 ```mdc
 ---
 description: "Large test suite analysis and pattern detection"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
@@ -32369,7 +32386,7 @@ Memory Bank system ready for use.
 ```mdc
 ---
 description: Visual process map for VAN mode (Index/Entry Point)
-globs: van-mode-map.mdc
+globs: van-mode-map.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 # VAN MODE: INITIALIZATION PROCESS MAP
@@ -32415,7 +32432,7 @@ graph TD
     %% ---> КОНЕЦ НОВОГО ШАГА <---
 
     GitCP --> EarlyComplexity["EARLY COMPLEXITY DETERMINATION"]
-    EarlyComplexity --> AnalyzeTask["Analyze Task Requirements"]
+    EarlyComplexity --> AnalyzeTask["Analyze Task Requirements<br>(using _task.md)"]
     AnalyzeTask --> EarlyLevelCheck{"Complexity Level?"}
 
     %% Level handling paths
@@ -32424,7 +32441,7 @@ graph TD
     CRITICALGATE --> ForceExit["Exit to PLAN mode"]
 
     %% Level 1 continues normally
-    ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK"]
+    ComplexityCP --> InitSystem["INITIALIZE MEMORY BANK<br>(for Level 1 tasks)"]
     InitSystem --> Complete1["LEVEL 1 INITIALIZATION COMPLETE"]
 
     %% For Level 2+ tasks after PLAN and CREATIVE modes
@@ -32493,11 +32510,11 @@ graph TD
 ```mermaid
 graph TD
     FV["File Verification"] --> CheckFiles["Check Essential Files"]
-    CheckFiles --> CheckMB["Check Memory Bank<br>Structure"]
-    CheckMB --> MBExists{"Memory Bank<br>Exists?"}
+    CheckFiles --> CheckMB["Check Active Task<br>Structure"]
+    CheckMB --> MBExists{"Active Task Directory<br>Exists?"}
 
-    MBExists -->|"Yes"| VerifyMB["Verify Memory Bank<br>Contents"]
-    MBExists -->|"No"| CreateMB["Create Memory Bank<br>Structure"]
+    MBExists -->|"Yes"| VerifyMB["Verify _task.md & _context.md<br>Contents"]
+    MBExists -->|"No"| CreateMB["Create New Active Task<br>Directory and Core Files"]
 
     CheckFiles --> CheckDocs["Check Documentation<br>Files"]
     CheckDocs --> DocsExist{"Docs<br>Exist?"}
@@ -32505,7 +32522,7 @@ graph TD
     DocsExist -->|"Yes"| VerifyDocs["Verify Documentation<br>Structure"]
     DocsExist -->|"No"| CreateDocs["Create Documentation<br>Structure"]
 
-    VerifyMB & CreateMB --> MBCP["Memory Bank<br>Checkpoint"]
+    VerifyMB & CreateMB --> MBCP["Active Task<br>Checkpoint"]
     VerifyDocs & CreateDocs --> DocsCP["Documentation<br>Checkpoint"]
 
     MBCP & DocsCP --> FileComplete["File Verification<br>Complete"]
@@ -32520,7 +32537,7 @@ graph TD
 
 ```mermaid
 graph TD
-    CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements"]
+    CD["Complexity<br>Determination"] --> AnalyzeTask["Analyze Task<br>Requirements (from _task.md)"]
 
     AnalyzeTask --> CheckKeywords["Check Task<br>Keywords"]
     CheckKeywords --> ScopeCheck["Assess<br>Scope Impact"]
@@ -33511,7 +33528,7 @@ The QA validation process follows this selective loading sequence:
 ```mdc
 ---
 description: Visual process map for ARCHIVE mode (Task Documentation)
-globs: "**/archive*/**", "**/document*/**", "**/complete*/**"
+globs: "**/archive*/**", "**/document*/**", "**/complete*/**", "**/active-task-manager.mdc"
 alwaysApply: false
 ---
 # ARCHIVE MODE: TASK DOCUMENTATION PROCESS MAP
@@ -33530,11 +33547,11 @@ graph TD
     CheckReflection -->|"Yes"| CheckDeliverables{"All Deliverables<br>Ready?"}
 
     CheckDeliverables -->|"No"| WarnMissing["⚠️ WARN: Missing<br>Deliverables"]
-    CheckDeliverables -->|"Yes"| ReadTasks["Read tasks.md<br>reflection.md and<br>progress.md"]
+    CheckDeliverables -->|"Yes"| ReadTasks["Read _task.md and<br>_reflection.md of active task"]
 
     WarnMissing --> UserChoice{"User Wants to<br>Continue?"}
     UserChoice -->|"No"| ReturnReflect["Return to<br>REFLECT Mode"]
-    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive"]
+    UserChoice -->|"Yes"| CreatePartialArchive["Create Partial<br>Archive (manual)"]
 
     CreatePartialArchive --> ReadTasks
     BlockArchive --> ReturnReflect
@@ -33551,61 +33568,62 @@ graph TD
     AssessLevel -->|"Level 4"| L4Archive["LEVEL 4 ARCHIVING<br>Level4/archive-comprehensive.mdc"]
 
     %% Level 1 Archiving (Minimal)
-    L1Archive --> L1Summary["Create Quick<br>Summary"]
-    L1Summary --> L1Task["Update<br>tasks.md"]
-    L1Task --> L1Complete["Mark Task<br>Complete"]
+    L1Archive --> L1Summary["Create Quick<br>Summary in _task.md"]
+    L1Summary --> L1Complete["Mark Task<br>Complete in _task.md"]
 
     %% Level 2 Archiving (Basic)
-    L2Archive --> L2Summary["Create Basic<br>Archive Document"]
-    L2Summary --> L2Doc["Document<br>Changes"]
-    L2Doc --> L2Task["Update<br>tasks.md"]
-    L2Task --> L2Progress["Update<br>progress.md"]
-    L2Progress --> L2Complete["Mark Task<br>Complete"]
+    L2Archive --> L2Summary["Create Basic<br>Archive Document in _archive.md"]
+    L2Summary --> L2Doc["Document<br>Changes in _archive.md"]
+    L2Doc --> L2Complete["Mark Task<br>Complete in _task.md"]
 
     %% Level 3-4 Archiving (Comprehensive)
-    L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document"]
-    L34Summary --> L34Doc["Document<br>Implementation"]
-    L34Doc --> L34Creative["Archive Creative<br>Phase Documents"]
-    L34Creative --> L34Code["Document Code<br>Changes"]
-    L34Code --> L34Test["Document<br>Testing"]
-    L34Test --> L34Lessons["Summarize<br>Lessons Learned"]
-    L34Lessons --> L34Task["Update<br>tasks.md"]
-    L34Task --> L34Progress["Update<br>progress.md"]
-    L34Progress --> L34System["Update System<br>Documentation"]
-    L34System --> L34Complete["Mark Task<br>Complete"]
+    L3Archive & L4Archive --> L34Summary["Create Comprehensive<br>Archive Document in _archive.md"]
+    L34Summary --> L34Doc["Document<br>Implementation in _archive.md"]
+    L34Doc --> L34Creative["Link Creative<br>Phase Documents in _archive.md"]
+    L34Creative --> L34Code["Document Code<br>Changes in _archive.md"]
+    L34Code --> L34Test["Document<br>Testing in _archive.md"]
+    L34Test --> L34Lessons["Summarize<br>Lessons Learned in _archive.md"]
+    L34Lessons --> L34System["Update System<br>Documentation (if any)"]
+    L34System --> L34Complete["Mark Task<br>Complete in _task.md"]
 
     %% Completion
     L1Complete & L2Complete & L34Complete --> PreserveMigration["📦 PRESERVE MIGRATION<br>[TASK CONTINUITY]"]
     PreserveMigration --> VerifyMigration{"migration.md<br>Exists?"}
-    VerifyMigration -->|"Yes"| ArchiveMigration["📁 Archive migration.md<br>to archive/"]
-    VerifyMigration -->|"No"| CreateArchive["Create Archive<br>Document in<br>docs/archive/"]
-    ArchiveMigration --> CreateArchive
-    CreateArchive --> UpdateActive["Update<br>activeContext.md"]
-    UpdateActive --> ClearTasks["🔄 Clear tasks.md<br>for Next Cycle"]
-    ClearTasks --> Reset["Reset for<br>Next Task"]
+    VerifyMigration -->|"Yes"| ArchiveMigrationFile["📁 Archive migration.md<br>to archive/"]
+    VerifyMigration -->|"No"| FinalArchiveStep["MOVE ACTIVE TASK<br>DIRECTORY TO 'done'"]
+    ArchiveMigrationFile --> FinalArchiveStep
+    FinalArchiveStep --> GenerateCommit
+
+    subgraph "НОВАЯ ФАЗА: ФИНАЛЬНЫЕ АРТЕФАКТЫ"
+        GenerateCommit["📝 <b>Generate Commit Message</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc)"]
+        GenerateReleaseNotes["📄 <b>Generate Release Notes</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc)"]
+    end
+
+    GenerateCommit --> GenerateReleaseNotes
+    GenerateReleaseNotes --> ARCHIVE_FINAL["✅ ARCHIVE COMPLETE<br>Task directory moved to done/"]
 
     %% Task Continuity Styling
     style PreserveMigration fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
     style VerifyMigration fill:#b3ffb3,stroke:#80ff80,color:black
-    style ArchiveMigration fill:#b3ffb3,stroke:#80ff80,color:black
-    style ClearTasks fill:#ffcc80,stroke:#ff9900,color:black
+    style ArchiveMigrationFile fill:#b3ffb3,stroke:#80ff80,color:black
+    style FinalArchiveStep fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
 ```
 
 ## 📋 ARCHIVE DOCUMENT STRUCTURE
 
-The archive document should follow this structured format:
+The archive document should follow this structured format (created as _archive.md within task directory):
 
 ```mermaid
 graph TD
-    subgraph "Archive Document Structure"
+    subgraph "Archive Document Structure (within task directory)"
         Header["# TASK ARCHIVE: [Task Name]"]
         Meta["## METADATA<br>Task info, dates, complexity"]
-        Summary["## SUMMARY<br>Brief overview of the task"]
+        Summary["## SUMMARY<br>Brief overview of completed task"]
         Requirements["## REQUIREMENTS<br>What the task needed to accomplish"]
         Implementation["## IMPLEMENTATION<br>How the task was implemented"]
         Testing["## TESTING<br>How the solution was verified"]
         Lessons["## LESSONS LEARNED<br>Key takeaways from the task"]
-        Refs["## REFERENCES<br>Links to related documents"]
+        Refs["## REFERENCES<br>Links to related documents (within task directory)"]
     end
 
     Header --> Meta --> Summary --> Requirements --> Implementation --> Testing --> Lessons --> Refs
@@ -33617,36 +33635,33 @@ Before archiving can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>reflection<br>complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>reflection<br>complete?"}
 
     CheckTasks -->|"No"| ErrorReflect["ERROR:<br>Return to REFLECT Mode"]
-    CheckTasks -->|"Yes"| CheckReflection{"reflection.md<br>exists?"}
+    CheckTasks -->|"Yes"| CheckReflection{"_reflection.md<br>exists?"}
 
-    CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create reflection.md first"]
-    CheckReflection -->|"Yes"| CheckProgress{"progress.md<br>updated?"}
-
-    CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
-    CheckProgress -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
+    CheckReflection -->|"No"| ErrorCreate["ERROR:<br>Create _reflection.md first"]
+    CheckReflection -->|"Yes"| ReadyArchive["Ready for<br>Archiving"]
 ```
 
 ## 🔍 ARCHIVE TYPES BY COMPLEXITY
 
 ```mermaid
 graph TD
-    subgraph "Level 1: Minimal Archive"
+    subgraph "Level 1: Minimal Archive (Summary in _task.md)"
         L1A["Basic Bug<br>Description"]
         L1B["Solution<br>Summary"]
         L1C["Affected<br>Files"]
     end
 
-    subgraph "Level 2: Basic Archive"
+    subgraph "Level 2: Basic Archive (as _archive.md)"
         L2A["Enhancement<br>Description"]
         L2B["Implementation<br>Summary"]
         L2C["Testing<br>Results"]
         L2D["Lessons<br>Learned"]
     end
 
-    subgraph "Level 3-4: Comprehensive Archive"
+    subgraph "Level 3-4: Comprehensive Archive (as _archive.md)"
         L3A["Detailed<br>Requirements"]
         L3B["Architecture/<br>Design Decisions"]
         L3C["Implementation<br>Details"]
@@ -33665,7 +33680,7 @@ graph TD
 
 ## 📝 ARCHIVE DOCUMENT TEMPLATES
 
-### Level 1 (Minimal) Archive
+### Level 1 (Minimal) Archive (Applies to _task.md)
 ```
 # Bug Fix Archive: [Bug Name]
 
@@ -33683,7 +33698,7 @@ graph TD
 - [File 2]
 ```
 
-### Levels 2-4 (Comprehensive) Archive
+### Levels 2-4 (Comprehensive) Archive (Applies to _archive.md)
 ```
 # Task Archive: [Task Name]
 
@@ -33727,52 +33742,19 @@ graph TD
 - [Future enhancement 2]
 
 ## References
-- [Link to reflection document]
-- [Link to creative phase documents]
+- [Link to _reflection.md]
+- [Link to creative phase documents (within task directory)]
 - [Other relevant references]
 ```
 
 ## 📋 ARCHIVE LOCATION AND NAMING
 
-Archive documents should be organized following this pattern:
+Archiving now involves moving the entire task directory to `memory-bank/tasks/done/`.
 
 ```mermaid
 graph TD
-    subgraph "Archive Structure"
-        Root["docs/archive/"]
-        Tasks["tasks/"]
-        Features["features/"]
-        Systems["systems/"]
-
-        Root --> Tasks
-        Root --> Features
-        Root --> Systems
-
-        Tasks --> Bug["bug-fix-name-YYYYMMDD.md"]
-        Tasks --> Enhancement["enhancement-name-YYYYMMDD.md"]
-        Features --> Feature["feature-name-YYYYMMDD.md"]
-        Systems --> System["system-name-YYYYMMDD.md"]
-    end
-```
-
-## 📊 TASKS.MD FINAL UPDATE
-
-When archiving is complete, update tasks.md with:
-
-```
-## Status
-- [x] Initialization complete
-- [x] Planning complete
-[For Level 3-4:]
-- [x] Creative phases complete
-- [x] Implementation complete
-- [x] Reflection complete
-- [x] Archiving complete
-
-## Archive
-- **Date**: [Completion date]
-- **Archive Document**: [Link to archive document]
-- **Status**: COMPLETED
+    ActiveTaskDir["Active Task Directory<br>memory-bank/tasks/{todo|in_progress}/YYYY-MM-DD_ID-XXX_task-name/"] --> MoveToDone["MOVE TO<br>memory-bank/tasks/done/YYYY-MM-DD_ID-XXX_task-name/"]
+    MoveToDone --> ArchiveComplete["✅ ARCHIVE COMPLETE"]
 ```
 
 ## 📋 ARCHIVE VERIFICATION CHECKLIST
@@ -33782,8 +33764,8 @@ When archiving is complete, update tasks.md with:
 - Reflection document reviewed? [YES/NO]
 - Archive document created with all sections? [YES/NO]
 - Archive document placed in correct location? [YES/NO]
-- tasks.md marked as completed? [YES/NO]
-- progress.md updated with archive reference? [YES/NO]
+- _task.md marked as completed? [YES/NO]
+- _reflection.md updated with archive reference? [YES/NO]
 - activeContext.md updated for next task? [YES/NO]
 - Creative phase documents archived (Level 3-4)? [YES/NO/NA]
 
@@ -33806,6 +33788,11 @@ When archiving is complete, notify user with:
 → Memory Bank is ready for the next task
 → To start a new task, use VAN MODE
 ```
+
+### Commit Message & Release Notes Generation
+After creating the main archive document, but before updating _task.md, perform the following steps:
+1.  `fetch_rules(["isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc"])` to generate the final commit message. Display it to the user.
+2.  `fetch_rules(["isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc"])` to generate the release notes and save them to the `release_notes/` directory.
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc`
@@ -33813,7 +33800,7 @@ When archiving is complete, notify user with:
 ```mdc
 ---
 description: Visual process map for CREATIVE mode (Design Decisions)
-globs: "**/creative*/**", "**/design*/**", "**/decision*/**"
+globs: "**/creative*/**", "**/design*/**", "**/decision*/**", "**/active-task-manager.mdc"
 alwaysApply: false
 ---
 
@@ -33825,31 +33812,30 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START CREATIVE MODE"] --> ReadTasks["Read tasks.md<br>For Creative Requirements"]
-    
+    Start["START CREATIVE MODE"] --> ReadTasks["Read _task.md<br>For Creative Requirements"]
+
     %% Initial Assessment
     ReadTasks --> VerifyPlan{"Plan Complete<br>& Creative Phases<br>Identified?"}
     VerifyPlan -->|"No"| ReturnPlan["Return to<br>PLAN Mode"]
     VerifyPlan -->|"Yes"| IdentifyPhases["Identify Creative<br>Phases Required"]
-    
+
     %% Creative Phase Selection
     IdentifyPhases --> SelectPhase["Select Next<br>Creative Phase"]
     SelectPhase --> PhaseType{"Creative<br>Phase Type?"}
-    
+
     %% Creative Phase Types
     PhaseType -->|"UI/UX<br>Design"| UIPhase["UI/UX CREATIVE PHASE<br>Core/creative-phase-uiux.md"]
     PhaseType -->|"Architecture<br>Design"| ArchPhase["ARCHITECTURE CREATIVE PHASE<br>Core/creative-phase-architecture.md"]
     PhaseType -->|"Data Model<br>Design"| DataPhase["DATA MODEL CREATIVE PHASE<br>Core/creative-phase-data.md"]
     PhaseType -->|"Algorithm<br>Design"| AlgoPhase["ALGORITHM CREATIVE PHASE<br>Core/creative-phase-algorithm.md"]
-    
+
     %% UI/UX Creative Phase
     UIPhase --> UI_Problem["Define UI/UX<br>Problem"]
     UI_Problem --> UI_Research["Research UI<br>Patterns"]
     UI_Research --> UI_Options["Explore UI<br>Options"]
     UI_Options --> UI_Evaluate["Evaluate User<br>Experience"]
-    UI_Evaluate --> UI_Decision["Make Design<br>Decision"]
-    UI_Decision --> UI_Document["Document UI<br>Design"]
-    
+    UI_Evaluate --> Decision["✅ Make Design Decision"]
+
     %% Architecture Creative Phase
     ArchPhase --> Arch_Problem["Define Architecture<br>Challenge"]
     Arch_Problem --> Arch_Options["Explore Architecture<br>Options"]
@@ -33857,29 +33843,49 @@ graph TD
     Arch_Analyze --> Arch_Decision["Make Architecture<br>Decision"]
     Arch_Decision --> Arch_Document["Document<br>Architecture"]
     Arch_Document --> Arch_Diagram["Create Architecture<br>Diagram"]
-    
+
     %% Data Model Creative Phase
     DataPhase --> Data_Requirements["Define Data<br>Requirements"]
     Data_Requirements --> Data_Structure["Design Data<br>Structure"]
     Data_Structure --> Data_Relations["Define<br>Relationships"]
     Data_Relations --> Data_Validation["Design<br>Validation"]
     Data_Validation --> Data_Document["Document<br>Data Model"]
-    
+
     %% Algorithm Creative Phase
     AlgoPhase --> Algo_Problem["Define Algorithm<br>Problem"]
     Algo_Problem --> Algo_Options["Explore Algorithm<br>Approaches"]
     Algo_Options --> Algo_Evaluate["Evaluate Time/Space<br>Complexity"]
     Algo_Evaluate --> Algo_Decision["Make Algorithm<br>Decision"]
     Algo_Decision --> Algo_Document["Document<br>Algorithm"]
-    
-    %% Documentation & Completion
-    UI_Document & Arch_Diagram & Data_Document & Algo_Document --> CreateDoc["Create Creative<br>Phase Document"]
-    CreateDoc --> UpdateTasks["Update tasks.md<br>with Decision"]
-    UpdateTasks --> MorePhases{"More Creative<br>Phases?"}
-    MorePhases -->|"Yes"| SelectPhase
-    MorePhases -->|"No"| VerifyComplete["Verify All<br>Phases Complete"]
-    VerifyComplete --> NotifyComplete["Signal Creative<br>Phases Complete"]
+
+    %% NEW PHASE: DOCUMENTATION AND VERSIONING
+    subgraph "НОВАЯ ФАЗА: ДОКУМЕНТИРОВАНИЕ И ВЕРСИОНИРОВАНИЕ"
+        RecordDecision["📝 <b>Record Decision (ADR)</b><br>fetch_rules(.../documentation/decision-recording.mdc)"]
+        CaptureResults["📸 <b>Capture Creative Results</b><br>fetch_rules(.../documentation/creative-results-capture.mdc)"]
+        VersionCreativeDoc["🔖 <b>Version Creative Document</b><br>fetch_rules(.../documentation/creative-versioning-system.mdc)"]
+    end
+
+    Decision --> RecordDecision
+    RecordDecision --> CaptureResults
+    CaptureResults --> VersionCreativeDoc
+    VersionCreativeDoc --> UpdateTasks["📝 Update _task.md<br>with Decision & Version"]
+
+    style RecordDecision fill:#80deea,stroke:#0097a7
+    style CaptureResults fill:#80deea,stroke:#0097a7
+    style VersionCreativeDoc fill:#80deea,stroke:#0097a7
 ```
+
+### Decision Recording and Versioning
+After a design decision is made, but before updating `_task.md`, the following steps are mandatory:
+
+1.  **Record the Decision**: Use the Architecture Decision Record (ADR) template to formalize the choice.
+    -   `fetch_rules(["isolation_rules/CustomWorkflow/documentation/decision-recording.mdc"])`
+2.  **Capture the Results**: Structure the output of the creative phase, including diagrams, rationale, and alternatives considered.
+    -   `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc"])`
+3.  **Version the Document**: Assign a version number to the creative document to track its evolution.
+    -   `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc"])`
+
+Only after these steps are completed can you proceed to update `_task.md` and check for more creative phases.
 
 ## 📋 CREATIVE PHASE DOCUMENT FORMAT
 
@@ -33896,7 +33902,7 @@ graph TD
         Impl["IMPLEMENTATION PLAN<br>Steps to implement the decision"]
         Diagram["VISUALIZATION<br>Diagrams of the solution"]
     end
-    
+
     Header --> Problem --> Options --> Pros --> Decision --> Impl --> Diagram
 ```
 
@@ -33910,21 +33916,21 @@ graph TD
         UI3["Interaction<br>Patterns"]
         UI4["Visual Design<br>Principles"]
     end
-    
+
     subgraph "Architecture Design"
         A1["Component<br>Structure"]
         A2["Data Flow<br>Patterns"]
         A3["Interface<br>Design"]
         A4["System<br>Integration"]
     end
-    
+
     subgraph "Data Model Design"
         D1["Entity<br>Relationships"]
         D2["Schema<br>Design"]
         D3["Validation<br>Rules"]
         D4["Query<br>Optimization"]
     end
-    
+
     subgraph "Algorithm Design"
         AL1["Complexity<br>Analysis"]
         AL2["Efficiency<br>Optimization"]
@@ -33939,11 +33945,11 @@ Before creative phase work can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>planning complete?"}
-    
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>planning complete?"}
+
     CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
     CheckTasks -->|"Yes"| CheckCreative{"Creative phases<br>identified?"}
-    
+
     CheckCreative -->|"No"| ErrorCreative["ERROR:<br>Return to PLAN Mode"]
     CheckCreative -->|"Yes"| ReadyCreative["Ready for<br>Creative Phase"]
 ```
@@ -34015,7 +34021,7 @@ Use these visual markers for creative phases:
 - Decision made with clear rationale? [YES/NO]
 - Implementation plan included? [YES/NO]
 - Visualization/diagrams created? [YES/NO]
-- tasks.md updated with decision? [YES/NO]
+- _task.md updated with decision? [YES/NO]
 
 → If all YES: Creative phase complete
 → If any NO: Complete missing elements
@@ -34030,11 +34036,11 @@ When all creative phases are complete, notify user with:
 
 ✅ All required design decisions made
 ✅ Creative phase documents created
-✅ tasks.md updated with decisions
+✅ _task.md updated with decisions
 ✅ Implementation plan updated
 
 → NEXT RECOMMENDED MODE: IMPLEMENT MODE
-``` 
+```
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc`
@@ -34042,7 +34048,7 @@ When all creative phases are complete, notify user with:
 ```mdc
 ---
 description: Visual process map for BUILD mode (Code Implementation)
-globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc
+globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -34075,7 +34081,7 @@ graph TD
     Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.mdc"]
 
     %% Initialization
-    ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from tasks.md"}
+    ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from _task.md"}
 
     %% Level 1 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/workflow-level1.mdc"]
@@ -34085,7 +34091,7 @@ graph TD
     L1Examine --> L1Fix["Implement<br>Targeted Fix + Rule #2 ✅/❌"]
     L1Fix --> L1Test["Test Fix<br>(Rules #8-10)"]
     L1Test --> L1Validate["Validate No<br>Regression (Rule #11)"]
-    L1Validate --> L1Update["Update tasks.md<br>+ Debug Traces"]
+    L1Validate --> L1Update["Update _task.md<br>+ Debug Traces"]
 
     %% Level 2 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/workflow-level2.mdc"]
@@ -34095,7 +34101,7 @@ graph TD
     L2Examine --> L2Implement["Implement Changes<br>+ Rule #2 ✅/❌ Tracking"]
     L2Implement --> L2Test["Test Changes<br>(Rules #8-12)"]
     L2Test --> L2Coverage["Check Coverage<br>(Rule #11)"]
-    L2Coverage --> L2Update["Update tasks.md<br>+ Test Reports"]
+    L2Coverage --> L2Update["Update _task.md<br>+ Test Reports"]
 
     %% Level 3-4 Implementation (Enhanced with Development Rules)
     CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/workflow-level3.mdc<br>Level4/workflow-level4.mdc"]
@@ -34104,7 +34110,7 @@ graph TD
 
     L34Phase -->|"No"| L34Error["ERROR:<br>Return to CREATIVE Mode"]
     L34Phase -->|"Yes"| L34PhaseStart["Start Phase<br>(Rule #1 Phased Approach)"]
-    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure"]
+    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure (within task dir)"]
     L34DirSetup --> L34VerifyDirs["VERIFY Directories<br>Created Successfully"]
     L34VerifyDirs --> L34Implementation["Build<br>Phase"]
 
@@ -34113,24 +34119,30 @@ graph TD
     L34Phase1 --> L34VerifyFiles["VERIFY Files<br>Created Successfully"]
     L34VerifyFiles --> L34Test1["Test Phase 1<br>(Rules #8-16)"]
     L34Test1 --> L34Coverage1["Check Coverage<br>& Performance (Rules #11,13)"]
-    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24)"]
+    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24) in task dir"]
     L34Document1 --> L34Next1{"Next<br>Phase?"}
     L34Next1 -->|"Yes"| L34Implementation
 
-    L34Next1 -->|"No"| L34IntegrationPlan["📋 <b>Integration Planning</b><br>fetch_rules(CustomWorkflow/integration/integration-planning.mdc)"]
-    L34IntegrationPlan --> L34DesignCheck["🏗️ <b>Validate Isolated Design</b><br>fetch_rules(CustomWorkflow/planning/isolated-design.mdc)"]
-    L34DesignCheck --> L34IntegrationTest["🧪 <b>Perform Integration Tests</b><br>fetch_rules(CustomWorkflow/integration/integration-testing.mdc)"]
-    L34IntegrationTest --> L34IntegrationDoc["📚 <b>Document Dependencies</b><br>fetch_rules(CustomWorkflow/integration/dependency-documentation.mdc)"]
-    L34IntegrationDoc --> L34Performance["⚡ Performance Testing<br>(Rule #13)"]
-    L34Performance --> L34Update["📝 Update tasks.md<br>+ All Reports"]
+    L34Next1 -->|"No"| L34IntegrationPlan
+    L34IntegrationPlan --> L34DesignCheck
+    L34DesignCheck --> L34IntegrationTest
+    L34IntegrationTest --> L34IntegrationDoc
+    L34IntegrationDoc --> L34Performance
+
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
+
+    L34Performance --> L34Update["📝 Update _task.md<br>+ All Reports"]
 
     %% Command Execution
     L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
-    CommandExec --> DocCommands["Document Commands<br>& Results"]
+    CommandExec --> DocCommands["Document Commands<br>& Results in task dir"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
-    VerifyComplete --> UpdateProgress["Update progress.md<br>with Status"]
+    VerifyComplete --> UpdateProgress["Update _task.md<br>with Status"]
     UpdateProgress --> Transition["NEXT MODE:<br>REFLECT MODE"]
 
     %% Integration Phase Styling
@@ -34146,7 +34158,7 @@ Before implementation can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>planning complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>planning complete?"}
 
     CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
     CheckTasks -->|"Yes"| CheckLevel{"Task<br>Complexity?"}
@@ -34168,11 +34180,12 @@ graph TD
 
 ```mermaid
 graph TD
-    Start["Start File<br>Verification"] --> CheckDir["Check Directory<br>Structure"]
+    Start["Start File<br>Verification"] --> GetActiveTaskPath["Get Active Task Path<br>Using get_active_task_path()"]
+    GetActiveTaskPath --> CheckDir["Check Directory<br>Structure (within task dir)"]
     CheckDir --> DirResult{"Directories<br>Exist?"}
 
     DirResult -->|"No"| ErrorDir["❌ ERROR:<br>Missing Directories"]
-    DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File"]
+    DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File (within task dir)"]
 
     ErrorDir --> FixDir["Fix Directory<br>Structure"]
     FixDir --> CheckDir
@@ -34191,12 +34204,12 @@ Before beginning any file creation:
 
 ```
 ✓ DIRECTORY VERIFICATION PROCEDURE
-1. Create all directories first before any files
-2. Use ABSOLUTE paths: /full/path/to/directory
+1. Ensure current active task directory is set via get_active_task_path()
+2. Create all directories first before any files relative to active task path
 3. Verify each directory after creation:
-   ls -la /full/path/to/directory     # Linux/Mac
-   dir "C:\full\path\to\directory"    # Windows
-4. Document directory structure in progress.md
+   ls -la "$(get_active_task_path)/path/to/directory"     # Linux/Mac
+   # Use appropriate command for Windows
+4. Document directory structure in _task.md (or relevant task-specific documentation)
 5. Only proceed to file creation AFTER verifying ALL directories exist
 ```
 
@@ -34206,16 +34219,16 @@ After creating files:
 
 ```
 ✓ FILE VERIFICATION PROCEDURE
-1. Use ABSOLUTE paths for all file operations: /full/path/to/file.ext
+1. Use paths relative to the active task directory for all file operations.
 2. Verify each file creation was successful:
-   ls -la /full/path/to/file.ext     # Linux/Mac
-   dir "C:\full\path\to\file.ext"    # Windows
+   ls -la "$(get_active_task_path)/path/to/file.ext"     # Linux/Mac
+   # Use appropriate command for Windows
 3. If verification fails:
    a. Check for path resolution issues
-   b. Verify directory exists
+   b. Verify directory exists (relative to active task path)
    c. Try creating with corrected path
    d. Recheck file exists after correction
-4. Document all file paths in progress.md
+4. Document all file paths in _task.md (or relevant task-specific documentation)
 ```
 
 ## 🔄 COMMAND EXECUTION WORKFLOW
@@ -34230,7 +34243,7 @@ graph TD
     Complexity -->|"Complex"| Break["Break Into<br>Logical Steps"]
 
     Simple & Chain & Break --> Verify["Verify<br>Results"]
-    Verify --> Document["Document<br>Command & Result"]
+    Verify --> Document["Document Commands<br>& Results in active task dir"]
     Document --> Next["Next<br>Command"]
 ```
 
@@ -34268,7 +34281,7 @@ graph TD
 
 ## 📝 BUILD DOCUMENTATION FORMAT
 
-Document builds with:
+Document builds within the active task directory with:
 
 ```
 ## Build: [Component/Feature]
@@ -34276,13 +34289,13 @@ Document builds with:
 ### Approach
 [Brief description of build approach]
 
-### Directory Structure
-- [/absolute/path/to/dir1/]: [Purpose]
-- [/absolute/path/to/dir2/]: [Purpose]
+### Directory Structure (relative to task root)
+- [path/to/dir1/]: [Purpose]
+- [path/to/dir2/]: [Purpose]
 
 ### Code Changes
-- [/absolute/path/to/file1.ext]: [Description of changes]
-- [/absolute/path/to/file2.ext]: [Description of changes]
+- [path/to/file1.ext]: [Description of changes]
+- [path/to/file2.ext]: [Description of changes]
 
 ### Verification Steps
 - [✓] Directory structure created and verified
@@ -34401,7 +34414,7 @@ When the build is complete, notify user with:
 ```mdc
 ---
 description: Visual process map for PLAN mode (Code Implementation)
-globs: plan-mode-map.mdc
+globs: plan-mode-map.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -34413,7 +34426,7 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    Start["START PLANNING"] --> ReadTasks["Read tasks.md<br>Core/task-tracking.md"]
+    Start["START PLANNING"] --> ReadTasks["Read _task.md<br>of active task"]
 
     %% Complexity Level Determination
     ReadTasks --> CheckLevel{"Determine<br>Complexity Level"}
@@ -34426,7 +34439,7 @@ graph TD
     L2Review --> L2Document["Document<br>Planned Changes"]
     L2Document --> L2Challenges["Identify<br>Challenges"]
     L2Challenges --> L2Checklist["Create Task<br>Checklist"]
-    L2Checklist --> L2Update["Update tasks.md<br>with Plan"]
+    L2Checklist --> L2Update["Update _task.md<br>with Plan"]
     L2Update --> L2Tech["TECHNOLOGY<br>VALIDATION"]
     L2Tech --> L2Verify["Verify Plan<br>Completeness"]
 
@@ -34436,7 +34449,7 @@ graph TD
     L3Requirements --> L3Components["Identify Affected<br>Components"]
     L3Components --> L3Plan["Create Comprehensive<br>Implementation Plan"]
     L3Plan --> L3Challenges["Document Challenges<br>& Solutions"]
-    L3Challenges --> L3Update["Update tasks.md<br>with Plan"]
+    L3Challenges --> L3Update["Update _task.md<br>with Plan"]
     L3Update --> L3Tech["TECHNOLOGY<br>VALIDATION"]
     L3Tech --> L3Flag["Flag Components<br>Requiring Creative"]
     L3Flag --> L3Verify["Verify Plan<br>Completeness"]
@@ -34448,7 +34461,7 @@ graph TD
     L4Diagrams --> L4Subsystems["Identify Affected<br>Subsystems"]
     L4Subsystems --> L4Dependencies["Document Dependencies<br>& Integration Points"]
     L4Dependencies --> L4Plan["Create Phased<br>Implementation Plan"]
-    L4Plan --> L4Update["Update tasks.md<br>with Plan"]
+    L4Plan --> L4Update["Update _task.md<br>with Plan"]
     L4Update --> L4Tech["TECHNOLOGY<br>VALIDATION"]
     L4Tech --> L4Flag["Flag Components<br>Requiring Creative"]
     L4Flag --> L4Verify["Verify Plan<br>Completeness"]
@@ -34547,18 +34560,18 @@ Before planning can begin, verify the file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md<br>initialized?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md<br>initialized?"}
 
     CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to VAN Mode"]
-    CheckTasks -->|"Yes"| CheckActive{"activeContext.md<br>exists?"}
+    CheckTasks -->|"Yes"| CheckActive["_context.md<br>exists and active?"Using get_active_task_path()]"
 
     CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to VAN Mode"]
     CheckActive -->|"Yes"| ReadyPlan["Ready for<br>Planning"]
 ```
 
-## 📝 TASKS.MD UPDATE FORMAT
+## 📝 _TASK.MD UPDATE FORMAT
 
-During planning, update tasks.md with this structure:
+During planning, update _task.md with this structure:
 
 ```
 # Task: [Task name]
@@ -34611,74 +34624,35 @@ Type: [Enhancement/Feature/Complex System]
 - [Challenge 2]: [Mitigation strategy]
 ```
 
-## 📋 CREATIVE PHASE IDENTIFICATION
-
-For Level 3-4 tasks, identify components requiring creative phases:
-
-```mermaid
-graph TD
-    Start["Creative Phase<br>Identification"] --> CheckComp{"Component<br>Analysis"}
-
-    CheckComp --> UI["UI/UX<br>Components"]
-    CheckComp --> Data["Data Model<br>Components"]
-    CheckComp --> Arch["Architecture<br>Components"]
-    CheckComp --> Algo["Algorithm<br>Components"]
-
-    UI & Data & Arch & Algo --> Decision{"Design Decisions<br>Required?"}
-
-    Decision -->|"Yes"| Flag["Flag for<br>Creative Phase"]
-    Decision -->|"No"| Skip["Standard<br>Implementation"]
-
-    Flag --> Document["Document in<br>tasks.md"]
-```
-
-## 📊 TECHNOLOGY VALIDATION CHECKLIST
+## 📋 CREATIVE PHASE VERIFICATION CHECKLIST
 
 ```
-✓ TECHNOLOGY VALIDATION CHECKLIST
-- Technology stack clearly defined? [YES/NO]
-- Project initialization command documented? [YES/NO]
-- Required dependencies identified? [YES/NO]
-- Minimal proof of concept created? [YES/NO]
-- Hello world build/run successful? [YES/NO]
-- Configuration files validated? [YES/NO]
-- Test build completes successfully? [YES/NO]
+✓ CREATIVE PHASE VERIFICATION
+- Problem clearly defined? [YES/NO]
+- Multiple options considered (3+)? [YES/NO]
+- Pros/cons documented for each option? [YES/NO]
+- Decision made with clear rationale? [YES/NO]
+- Implementation plan included? [YES/NO]
+- Visualization/diagrams created? [YES/NO]
+- _task.md updated with decision? [YES/NO]
 
-→ If all YES: Technology validation complete - ready for next phase
-→ If any NO: Resolve technology issues before proceeding
-```
-
-## 📊 PLAN VERIFICATION CHECKLIST
-
-```
-✓ PLAN VERIFICATION CHECKLIST
-- Requirements clearly documented? [YES/NO]
-- Technology stack validated? [YES/NO]
-- Affected components identified? [YES/NO]
-- Implementation steps detailed? [YES/NO]
-- Dependencies documented? [YES/NO]
-- Challenges & mitigations addressed? [YES/NO]
-- Creative phases identified (Level 3-4)? [YES/NO/NA]
-- tasks.md updated with plan? [YES/NO]
-
-→ If all YES: Planning complete - ready for next mode
-→ If any NO: Complete missing plan elements
+→ If all YES: Creative phase complete
+→ If any NO: Complete missing elements
 ```
 
 ## 🔄 MODE TRANSITION NOTIFICATION
 
-When planning is complete, notify user with:
+When all creative phases are complete, notify user with:
 
 ```
-## PLANNING COMPLETE
+## CREATIVE PHASES COMPLETE
 
-✅ Implementation plan created
-✅ Technology stack validated
-✅ tasks.md updated with plan
-✅ Challenges and mitigations documented
-[✅ Creative phases identified (for Level 3-4)]
+✅ All required design decisions made
+✅ Creative phase documents created
+✅ _task.md updated with decisions
+✅ Implementation plan updated
 
-→ NEXT RECOMMENDED MODE: [CREATIVE/IMPLEMENT] MODE
+→ NEXT RECOMMENDED MODE: IMPLEMENT MODE
 ```
 
 `.cursor/rules/isolation_rules/visual-maps/qa-mode-map.mdc`
@@ -34686,7 +34660,7 @@ When planning is complete, notify user with:
 ```mdc
 ---
 description: QA Mode
-globs: qa-mode-map.mdc, CustomWorkflow/testing/*.mdc
+globs: qa-mode-map.mdc, CustomWorkflow/testing/*.mdc, **/active-task-manager.mdc
 alwaysApply: false
 ---
 
@@ -34736,12 +34710,14 @@ graph TD
     %% Universal checks that apply to all phases
     DetectPhase --> UniversalChecks["🔍 UNIVERSAL VALIDATION"]
     UniversalChecks --> MemoryBankCheck["1️⃣ MEMORY BANK VERIFICATION<br>Check consistency & updates"]
-    MemoryBankCheck --> TaskTrackingCheck["2️⃣ TASK TRACKING VERIFICATION<br>Validate tasks.md as source of truth"]
+    MemoryBankCheck --> TaskTrackingCheck["2️⃣ TASK TRACKING VERIFICATION<br>Validate _task.md as source of truth"]
     TaskTrackingCheck --> ReferenceCheck["3️⃣ REFERENCE VALIDATION<br>Verify cross-references between docs"]
 
     %% Phase-specific validations feed into comprehensive report
     VANChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
-    ReferenceCheck & PhaseSpecificResults --> ValidationResults{"✅ All Checks<br>Passed?"}
+    TestAnalysis["🔍 <b>Analyze Test Results & Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc)"]
+    PhaseSpecificResults --> TestAnalysis
+    TestAnalysis & ReferenceCheck --> ValidationResults{"✅ All Checks<br>Passed?"}
 
     %% Results Processing
     ValidationResults -->|"Yes"| SuccessReport["📝 GENERATE SUCCESS REPORT<br>All validations passed"]
@@ -34777,12 +34753,11 @@ The enhanced QA mode first determines which phase the project is currently in:
 
 ```mermaid
 graph TD
-    PD["Phase Detection"] --> CheckMB["Analyze Memory Bank Files"]
-    CheckMB --> CheckActive["Check activeContext.md<br>for current phase"]
-    CheckActive --> CheckProgress["Check progress.md<br>for recent activities"]
-    CheckProgress --> CheckTasks["Check tasks.md<br>for task status"]
+    PD["Phase Detection"] --> GetActiveTask["Get Active Task Path<br>Using get_active_task_path()"]
+    GetActiveTask --> CheckActiveContext["Check _context.md in active task<br>directory for current phase"]
+    CheckActiveContext --> CheckTaskFile["Check _task.md in active task<br>directory for task status"]
 
-    CheckTasks --> PhaseResult{"Determine<br>Current Phase"}
+    CheckTaskFile --> PhaseResult{"Determine<br>Current Phase"}
     PhaseResult -->|"VAN"| VAN["VAN Phase<br>Initialization"]
     PhaseResult -->|"PLAN"| PLAN["PLAN Phase<br>Task Planning"]
     PhaseResult -->|"CREATIVE"| CREATIVE["CREATIVE Phase<br>Design Decisions"]
@@ -34802,7 +34777,7 @@ This process ensures Memory Bank files are consistent and up-to-date regardless 
 ```mermaid
 graph TD
     MBVS["Memory Bank<br>Verification"] --> CoreCheck["Check Core Files Exist"]
-    CoreCheck --> CoreFiles["Verify Required Files:<br>projectbrief.md<br>activeContext.md<br>tasks.md<br>progress.md"]
+    CoreCheck --> CoreFiles["Verify Required Files:<br>projectbrief.md<br>_task.md<br>_context.md"]
 
     CoreFiles --> ContentCheck["Verify Content<br>Consistency"]
     ContentCheck --> LastModified["Check Last Modified<br>Timestamps"]
@@ -34822,14 +34797,13 @@ graph TD
 
 ## 📋 TASK TRACKING VERIFICATION
 
-This process validates tasks.md as the single source of truth:
+This process validates _task.md as the single source of truth:
 
 ```mermaid
 graph TD
-    TTV["Task Tracking<br>Verification"] --> CheckTasksFile["Check tasks.md<br>Existence & Format"]
+    TTV["Task Tracking<br>Verification"] --> CheckTasksFile["Check _task.md<br>Existence & Format"]
     CheckTasksFile --> VerifyReferences["Verify Task References<br>in Other Documents"]
-    VerifyReferences --> ProgressCheck["Check Consistency with<br>progress.md"]
-    ProgressCheck --> StatusCheck["Verify Task Status<br>Accuracy"]
+    VerifyReferences --> StatusCheck["Verify Task Status<br>Accuracy"]
 
     StatusCheck --> TaskConsistency{"Tasks Properly<br>Tracked?"}
     TaskConsistency -->|"Yes"| PassTasks["✅ Task Tracking<br>Verification Passed"]
@@ -35280,7 +35254,7 @@ This enhanced QA mode serves as a "quality guardian" throughout the development 
 ```mdc
 ---
 description: Visual process map for REFLECT mode (Task Reflection)
-globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc"
+globs: "**/reflect*/**", "**/review*/**", "**/retrospect*/**", "CustomWorkflow/refactoring/*.mdc", "CustomWorkflow/documentation/*.mdc", "**/active-task-manager.mdc"
 alwaysApply: false
 ---
 
@@ -35341,7 +35315,7 @@ graph TD
     CheckImplementation -->|"Yes"| CheckSubtasks{"All Subtasks<br>Complete?"}
 
     CheckSubtasks -->|"No"| WarnIncomplete["⚠️ WARN: Incomplete<br>Subtasks Found"]
-    CheckSubtasks -->|"Yes"| ReadTasks["Read tasks.md<br>and progress.md"]
+    CheckSubtasks -->|"Yes"| ReadTasks["Read _task.md<br>of active task"]
 
     WarnIncomplete --> UserDecision{"User Wants to<br>Continue?"}
     UserDecision -->|"No"| ReturnImplement["Return to<br>IMPLEMENT Mode"]
@@ -35364,49 +35338,79 @@ graph TD
     %% Level 1 Reflection (Quick)
     L1Reflect --> L1Review["Review<br>Bug Fix"]
     L1Review --> L1Document["Document<br>Solution"]
-    L1Document --> L1Update["Update<br>tasks.md"]
+    L1Document --> L1Update["Update<br>_task.md"]
 
     %% Level 2 Reflection (Standard)
     L2Reflect --> L2Review["Review<br>Enhancement"]
     L2Review --> L2WWW["Document<br>What Went Well"]
     L2WWW --> L2Challenges["Document<br>Challenges"]
     L2Challenges --> L2Lessons["Document<br>Lessons Learned"]
-    L2Lessons --> L2Update["Update<br>tasks.md"]
+    L2Lessons --> L2Update["Update<br>_task.md"]
 
     %% Level 3-4 Reflection (Comprehensive)
     L3Reflect & L4Reflect --> L34Review["Review Implementation<br>& Creative Phases"]
-    L34Review --> L34Plan["Compare Against<br>Original Plan"]
-    L34Plan --> L34CreativeAnalysis["🎨 CREATIVE ARCHIVE ANALYSIS<br>Analyze Creative Phase Results"]
-    L34CreativeAnalysis --> L34QualityAssess["📊 Quality Assessment<br>Score Creative Decisions"]
-    L34QualityAssess --> L34QualityRefactor["🔧 Analyze Quality & Refactor<br>CustomWorkflow/refactoring/"]
-    L34QualityRefactor --> L34QualityMetrics["📈 Load Quality Metrics<br>fetch_rules(quality-metrics.mdc)"]
-    L34QualityMetrics --> L34RefactorDecision{"Quality Metrics<br>Indicate Refactoring?"}
-    L34RefactorDecision -->|"Yes"| L34RefactorPatterns["🔄 Analyze Refactoring<br>fetch_rules(refactoring-patterns.mdc)"]
-    L34RefactorDecision -->|"No"| L34PatternExtract["🔍 Pattern Extraction<br>Identify Reusable Patterns"]
-    L34RefactorPatterns --> L34GradualRefactor["📈 Gradual Refactoring<br>fetch_rules(gradual-refactoring.mdc)"]
-    L34GradualRefactor --> L34LegacySupport["🔧 Legacy Support<br>fetch_rules(legacy-support.mdc)"]
-    L34LegacySupport --> L34BackwardCompat["⬅️ Backward Compatibility<br>fetch_rules(backward-compatibility.mdc)"]
-    L34BackwardCompat --> L34PatternExtract
-    L34PatternExtract --> L34WWW["Document<br>What Went Well"]
+
+    subgraph "Начало рефлексии"
+        L34Review
+    end
+
+    subgraph "НОВАЯ ФАЗА: ОЦЕНКА КАЧЕСТВА И РЕФАКТОРИНГ (L3/L4)"
+        L34QualityAssess["📊 <b>Quality Assessment</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc)"]
+        L34RefactorDecision{"Refactoring<br>Needed?"}
+
+        subgraph "Refactoring Sub-Workflow"
+            direction LR
+            L34RefactorPatterns["🔄 <b>Analyze Patterns</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc)"]
+            L34GradualRefactor["📈 <b>Gradual Refactoring</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc)"]
+            L34LegacySupport["🔧 <b>Ensure Legacy Support</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc)"]
+            L34BackwardCompat["⬅️ <b>Check Compatibility</b><br>fetch_rules(isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc)"]
+        end
+    end
+
+    subgraph "Продолжение рефлексии"
+        L34Plan["Compare Against Plan"]
+    end
+
+    subgraph "НОВАЯ ФАЗА: ПРОДВИНУТЫЕ ОТЧЕТЫ (L3/L4)"
+        L34ImproveProcess["Document Process Improvements"]
+        L34Reports["📊 <b>Generate Advanced Reports</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc, isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc)"]
+        L34UsageExamples["📚 <b>Generate Usage Examples</b><br>fetch_rules(isolation_rules/CustomWorkflow/documentation/usage-examples.mdc)"]
+    end
+
+    L34Review --> L34QualityAssess
+    L34QualityAssess --> L34RefactorDecision
+    L34RefactorDecision -- "Yes" --> L34RefactorPatterns
+    L34RefactorPatterns --> L34GradualRefactor
+    L34GradualRefactor --> L34LegacySupport
+    L34LegacySupport --> L34BackwardCompat
+    L34BackwardCompat --> L34Plan
+    L34RefactorDecision -- "No" --> L34Plan
+
+    L34Plan --> L34WWW["Document<br>What Went Well"]
     L34WWW --> L34Challenges["Document<br>Challenges"]
     L34Challenges --> L34Lessons["Document<br>Lessons Learned"]
-    L34Lessons --> L34ImproveProcess["Document Process<br>Improvements"]
-    L34ImproveProcess --> L34ArchiveCreative["📚 Archive Creative Results<br>Store in Creative Archive"]
-    L34ArchiveCreative --> L34Reports["📊 Generate Advanced Reports<br>fetch_rules(creative-analysis-reporting.mdc)<br>fetch_rules(statistics-tracking.mdc)"]
-    L34Reports --> L34CreativeResults["📋 Capture Creative Results<br>fetch_rules(creative-results-capture.mdc)"]
-    L34CreativeResults --> L34DecisionRecord["📝 Record Decisions<br>fetch_rules(decision-recording.mdc)"]
-    L34DecisionRecord --> L34UsageExamples["📚 Generate Usage Examples<br>fetch_rules(usage-examples.mdc)"]
-    L34UsageExamples --> L34CreativeVersioning["🏷️ Version Creative Archive<br>fetch_rules(creative-versioning-system.mdc)"]
-    L34CreativeVersioning --> L34ReportsComplete["✅ Advanced Reports Complete"]
-    L34ReportsComplete --> L34Update["Update<br>tasks.md"]
+    L34Lessons --> L34ImproveProcess
+
+    L34ImproveProcess --> L34Reports
+    L34Reports --> L34UsageExamples
+    L34UsageExamples --> L34Update["Update<br>_task.md"]
 
     %% Completion & Transition
     L1Update & L2Update & L34Update --> AnalyzeUnfinished["🔍 ANALYZE UNFINISHED TASKS<br>[TASK CONTINUITY]"]
     AnalyzeUnfinished --> CategorizeUnfinished["📊 Categorize Unfinished Tasks<br>by Status & Priority"]
     CategorizeUnfinished --> CreateMigration["📦 Create migration.md<br>for Next Cycle"]
-    CreateMigration --> CreateReflection["Create<br>reflection.md"]
-    CreateReflection --> UpdateSystem["Update System<br>Documentation"]
-    UpdateSystem --> Transition["NEXT MODE:<br>ARCHIVE MODE"]
+    CreateMigration --> CreateReflection["Create<br>_reflection.md"]
+
+    subgraph "НОВАЯ ФАЗА: ПРОДВИНУТАЯ АНАЛИТИКА И ОТЧЕТЫ"
+        GenerateCreativeReport["📊 <b>Generate Creative Analysis Report</b><br>fetch_rules(.../documentation/creative-analysis-reporting.mdc)"]
+        TrackStats["📈 <b>Track & Report Statistics</b><br>fetch_rules(.../documentation/statistics-tracking.mdc)"]
+        GenerateExamples["📖 <b>Generate Usage Examples</b><br>fetch_rules(.../documentation/usage-examples.mdc)"]
+    end
+
+    CreateReflection --> GenerateCreativeReport
+    GenerateCreativeReport --> TrackStats
+    TrackStats --> GenerateExamples
+    GenerateExamples --> PromptArchive["💬 Prompt: 'ARCHIVE NOW'"]
 
     %% Task Continuity Styling
     style TaskContinuityCheck fill:#80ff80,stroke:#40cc40,color:black,stroke-width:2px
@@ -35434,6 +35438,9 @@ graph TD
     style L34DecisionRecord fill:#ba68c8,stroke:#8e24aa
     style L34UsageExamples fill:#ba68c8,stroke:#8e24aa
     style L34CreativeVersioning fill:#ba68c8,stroke:#8e24aa
+    style GenerateCreativeReport fill:#ba68c8,stroke:#8e24aa
+    style TrackStats fill:#ba68c8,stroke:#8e24aa
+    style GenerateExamples fill:#ba68c8,stroke:#8e24aa
 ```
 
 ## 📋 REFLECTION STRUCTURE
@@ -35462,13 +35469,10 @@ Before reflection can begin, verify file state:
 
 ```mermaid
 graph TD
-    Start["File State<br>Verification"] --> CheckTasks{"tasks.md has<br>implementation<br>complete?"}
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>implementation<br>complete?"}
 
     CheckTasks -->|"No"| ErrorImplement["ERROR:<br>Return to IMPLEMENT Mode"]
-    CheckTasks -->|"Yes"| CheckProgress{"progress.md<br>has implementation<br>details?"}
-
-    CheckProgress -->|"No"| ErrorProgress["ERROR:<br>Update progress.md first"]
-    CheckProgress -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
+    CheckTasks -->|"Yes"| ReadyReflect["Ready for<br>Reflection"]
 ```
 
 ## 🔍 IMPLEMENTATION REVIEW APPROACH
@@ -38318,42 +38322,65 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 ```md
 # MEMORY BANK STEP_BY_STEP MODE (STATEFUL CONTROLLER)
 
-> **TL;DR:** Я — диспетчер пошагового выполнения. Я прочитаю текущее состояние из `workflow-state.txt`, выполню СЛЕДУЮЩУЮ фазу, обновлю состояние и буду ждать вашей команды `NEXT`.
+> **TL;DR:** Я — диспетчер пошагового выполнения. Перед началом я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать. И только потом мы начнем пошаговый цикл.
 
-## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ
+## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ STEP_BY_STEP
 
 ```mermaid
 graph TD
-    Start["▶️ START STEP-BY_STEP / 'NEXT'"] --> ReadState["1. Прочитать `workflow-state.txt`"]
-    ReadState --> DecidePhase{"Какая фаза следующая?"}
+    Start["▶️ `STEP_BY_STEP`"] --> InitDate["1. Установить дату<br>Core/datetime-manager.mdc"]
+    InitDate --> GetActiveTask["2. Проверить активную задачу<br>Core/active-task-manager.mdc"]
 
-    DecidePhase -- "START" --> VAN_Phase["🚀 **VAN Phase**<br>fetch_rules(van-mode-map)"]
-    DecidePhase -- "VAN_COMPLETE" --> PLAN_Phase["📋 **PLAN Phase**<br>fetch_rules(plan-mode-map)"]
-    DecidePhase -- "PLAN_COMPLETE" --> CREATIVE_Phase["🎨 **CREATIVE Phase**<br>fetch_rules(creative-mode-map)"]
-    DecidePhase -- "CREATIVE_COMPLETE" --> IMPLEMENT_Phase["⚙️ **IMPLEMENT Phase**<br>fetch_rules(implement-mode-map)"]
-    DecidePhase -- "IMPLEMENT_COMPLETE" --> QA_Phase["🧪 **QA Phase**<br>fetch_rules(qa-mode-map)"]
-    DecidePhase -- "QA_COMPLETE" --> REFLECT_Phase["🤔 **REFLECT Phase**<br>fetch_rules(reflect-mode-map)"]
-    DecidePhase -- "REFLECT_COMPLETE" --> ARCHIVE_Phase["📦 **ARCHIVE Phase**<br>fetch_rules(archive-mode-map)"]
-    DecidePhase -- "ARCHIVE_COMPLETE" --> Finish["🎉 Цикл завершен!"]
+    GetActiveTask --> IsTaskActive{"Задача активна?"}
 
-    VAN_Phase --> WriteState_VAN["2. Записать 'VAN_COMPLETE'<br>в `workflow-state.txt`"]
-    PLAN_Phase --> WriteState_PLAN["2. Записать 'PLAN_COMPLETE'"]
-    CREATIVE_Phase --> WriteState_CREATIVE["2. Записать 'CREATIVE_COMPLETE'"]
-    IMPLEMENT_Phase --> WriteState_IMPLEMENT["2. Записать 'IMPLEMENT_COMPLETE'"]
-    QA_Phase --> WriteState_QA["2. Записать 'QA_COMPLETE'"]
-    REFLECT_Phase --> WriteState_REFLECT["2. Записать 'REFLECT_COMPLETE'"]
-    ARCHIVE_Phase --> WriteState_ARCHIVE["2. Записать 'ARCHIVE_COMPLETE'"]
+    IsTaskActive -- "Да" --> STEP_BY_STEP_Flow["✅ <b>Начать пошаговый цикл</b><br>Прочитать workflow-state.txt..."]
 
-    WriteState_VAN & WriteState_PLAN & WriteState_CREATIVE & WriteState_IMPLEMENT & WriteState_QA & WriteState_REFLECT & WriteState_ARCHIVE --> Pause["3. ⏸️ Сообщить о результате и ждать 'NEXT'"]
+    IsTaskActive -- "Нет 🔴" --> NoTaskFlow["3. <b>Нет активной задачи!</b><br>Запустить логику SWITCH TASK"]
+    NoTaskFlow --> ListTasks["Показать список задач<br>(todo, in_progress)"]
+    ListTasks --> UserPrompt["Запросить выбор или создание<br>новой задачи"]
+    UserPrompt --> UserChoice{"Что выбрал пользователь?"}
 
-    style Pause fill:#ffb74d,stroke:#f57c00
+    UserChoice -- "Выбрал существующую" --> SetTask["Вызвать `set_active_task()`"]
+    UserChoice -- "Создать новую" --> CreateTask["Запустить процесс создания<br>новой задачи (Core/task-management-2-0.mdc)"]
+
+    SetTask --> STEP_BY_STEP_Flow
+    CreateTask --> STEP_BY_STEP_Flow
+
+    style NoTaskFlow fill:#ffad42,stroke:#f57c00
+    style STEP_BY_STEP_Flow fill:#5fd94d,stroke:#3da336,color:white
 ```
 
-## 🛠️ ШАГИ ВЫПОЛНЕНИЯ (ИСПОЛНЯЕМЫЙ ПСЕВДОКОД)
+### 🛠️ ИСПОЛНЯЕМЫЙ АЛГОРИТМ
 
-Я буду выполнять следующий алгоритм при каждом вызове `STEP_BY_STEP` или команды `NEXT`.
+При каждом вызове `STEP_BY_STEP` или команды `NEXT`, я буду выполнять следующий алгоритм:
+
+#### Шаг 1: Инициализация и пре-флайт проверка
+- `initialize_system_date()` (из `Core/datetime-manager.mdc`).
+- `active_task_path=$(get_active_task_path)` (из `Core/active-task-manager.mdc`).
+- Если переменная `$active_task_path` **не пуста**, я немедленно перейду к **Шагу 3**.
+- Если переменная `$active_task_path` **пуста**, я перейду к **Шагу 2**.
+
+#### Шаг 2: Процесс выбора задачи (если ни одна не активна)
+1.  **Сообщить пользователю:** "No active task selected. Please choose a task to work on or create a new one."
+2.  **Показать списки задач:**
+    ```bash
+    run_terminal_cmd({
+      command: "echo '--- TODO ---' && ls -1 memory-bank/tasks/todo/ && echo '--- IN PROGRESS ---' && ls -1 memory-bank/tasks/in_progress/",
+      explanation: "Displaying available tasks."
+    })
+    ```
+3.  **Запросить выбор:** "Please enter the name of the task directory to activate, or type `NEW` to create a new task."
+4.  **Обработать выбор пользователя:**
+    -   Если пользователь ввел имя существующей директории, я выполню `set_active_task("memory-bank/tasks/.../[имя директории]")`.
+    -   Если пользователь ввел `NEW`, я запущу логику создания новой задачи из правила `Core/task-management-2-0.mdc`.
+5.  После успешного выбора или создания задачи я **перейду к Шагу 3**.
+
+#### Шаг 3: Стандартный пошаговый цикл (если задача активна)
+- Я прочитаю текущее состояние из файла `memory-bank/system/workflow-state.txt`.
+- На основе этого состояния я выполню **следующую** фазу разработки, загрузив соответствующую карту процесса.
 
 ```bash
+# Исполняемый псевдокод для основного цикла STEP_BY_STEP
 # 0. Инициализация даты
 initialize_system_date() # Вызов функции из Core/datetime-manager.mdc
 
@@ -38424,12 +38451,108 @@ esac
 Я БУДУ строго следовать этой логике, загружая и **ВЫПОЛНЯЯ** правила для каждой фазы, а не просто сообщая о них.
 ```
 
+`custom_modes/switch_task_instructions.md`
+
+```md
+# MEMORY BANK TASK SWITCHING MODE
+
+> **TL;DR:** Этот режим позволяет вам просматривать все задачи и переключаться на любую из них.
+
+## 🚀 Процесс переключения задачи
+
+```mermaid
+graph TD
+    Start["▶️ `SWITCH TASK`"] --> ListTasks["1. Показать списки задач<br>(todo, in_progress)"]
+    ListTasks --> UserSelect["2. Запросить у пользователя<br>ID задачи для переключения"]
+    UserSelect --> UpdateState["3. Вызвать set_active_task()<br>с путем к выбранной задаче"]
+    UpdateState --> LoadContext["4. Загрузить _context.md<br>новой активной задачи"]
+    LoadContext --> Done["✅ Переключение завершено!"]
+```
+
+## 🛠️ Команды
+
+### 1. Показать все задачи
+```bash
+echo "--- TODO ---"
+ls -1 memory-bank/tasks/todo/
+echo "--- IN PROGRESS ---"
+ls -1 memory-bank/tasks/in_progress/
+```
+
+### 2. Переключиться на задачу
+```bash
+# Псевдокод
+user_input_id = prompt_user("Enter Task ID to switch to (e.g., ID-001):")
+task_dir = find_directory_by_id(user_input_id)
+if [ -n "$task_dir" ]; then
+  set_active_task("$task_dir")
+  load_file("$task_dir/_context.md")
+else
+  echo "❌ Задача с ID $user_input_id не найдена."
+fi
+```
+```
+
 `custom_modes/universal_instructions.md`
 
 ```md
 # MEMORY BANK UNIVERSAL MODE (ENHANCED AUTOPILOT)
 
-> **TL;DR:** Этот режим выполняет полный цикл разработки от анализа до архивации автономно. Он будет использовать проверки сложности, продвинутые рабочие процессы и соблюдать `interaction-mode`.
+> **TL;DR:** Этот режим выполняет полный цикл разработки. Перед запуском я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать.
+
+## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ UNIVERSAL
+
+```mermaid
+graph TD
+    Start["▶️ `UNIVERSAL`"] --> InitDate["1. Установить дату"]
+    InitDate --> GetActiveTask["2. Проверить активную задачу"]
+
+    GetActiveTask --> IsTaskActive{"Задача активна?"}
+
+    IsTaskActive -- "Да" --> UNIVERSAL_Flow["✅ **Начать автономный цикл**<br>VAN -> PLAN -> ... -> ARCHIVE"]
+
+    IsTaskActive -- "Нет 🔴" --> NoTaskFlow["3. <b>Нет активной задачи!</b><br>Запустить логику SWITCH TASK"]
+    NoTaskFlow --> ListTasks["Показать список задач"]
+    ListTasks --> UserPrompt["Запросить выбор или создание"]
+    UserPrompt --> UserChoice{"Что выбрал пользователь?"}
+
+    UserChoice -- "Выбрал существующую" --> SetTask["Установить активную задачу"]
+    UserChoice -- "Создать новую" --> CreateTask["Создать новую задачу"]
+
+    SetTask --> UNIVERSAL_Flow
+    CreateTask --> UNIVERSAL_Flow
+
+    style NoTaskFlow fill:#ffad42,stroke:#f57c00
+```
+
+### 🛠️ ИСПОЛНЯЕМЫЕ ШАГИ
+
+#### Шаг 1: Инициализация и проверка активной задачи
+- `initialize_system_date()`
+- `active_task_path=$(get_active_task_path)`
+- Если `$active_task_path` **не пуст**, переходим к **Шагу 3**.
+- Если `$active_task_path` **пуст**, переходим к **Шагу 2**.
+
+#### Шаг 2: Процесс выбора задачи (если ни одна не активна)
+1.  **Сообщить пользователю:** "No active task selected. Please choose a task to work on or create a new one."
+2.  **Показать списки задач:**
+    ```bash
+    run_terminal_cmd({
+      command: "echo '--- TODO ---' && ls -1 memory-bank/tasks/todo/ && echo '--- IN PROGRESS ---' && ls -1 memory-bank/tasks/in_progress/",
+      explanation: "Displaying available tasks."
+    })
+    ```
+3.  **Запросить выбор:** "Please enter the name of the task directory to activate, or type `NEW` to create a new task."
+4.  **Обработать выбор пользователя:**
+    -   Если пользователь ввел имя директории, выполнить `set_active_task("memory-bank/tasks/in_progress/[имя директории]")` (или `todo`).
+    -   Если пользователь ввел `NEW`, запустить логику создания новой задачи из правила `Core/task-management-2-0.mdc`.
+5.  **Перейти к Шагу 3.**
+
+#### Шаг 3: Стандартный UNIVERSAL-поток
+- После того как задача выбрана, начинается основной автономный цикл, который мы уже проектировали:
+- **VAN**: Загрузить `van-mode-map.mdc`...
+- **PLAN**: Загрузить `plan-mode-map.mdc`...
+- ... (и так далее)
 
 ## 🚀 ПОЛНЫЙ АВТОНОМНЫЙ ЦИКЛ
 
@@ -39308,7 +39431,59 @@ graph TD
 ```md
 # UNIFIED VAN MODE SYSTEM - MAIN ENTRY POINT
 
-> **TL;DR:** I am an AI assistant implementing a structured Memory Bank system with unified VAN mode that includes task continuity, rules management, and system administration through hierarchical submode architecture.
+> **TL;DR:** Я — AI-ассистент, реализующий структурированную систему Memory Bank. Перед началом работы я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать новую.
+
+## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ VAN
+
+```mermaid
+graph TD
+    Start["▶️ `VAN`"] --> InitDate["1. Установить дату<br>Core/datetime-manager.mdc"]
+    InitDate --> GetActiveTask["2. Проверить активную задачу<br>Core/active-task-manager.mdc"]
+
+    GetActiveTask --> IsTaskActive{"Задача активна?"}
+
+    IsTaskActive -- "Да" --> VAN_Flow["✅ **Продолжить стандартный VAN-поток**<br>Загрузить van-mode-map и т.д."]
+
+    IsTaskActive -- "Нет 🔴" --> NoTaskFlow["3. <b>Нет активной задачи!</b><br>Запустить логику SWITCH TASK"]
+    NoTaskFlow --> ListTasks["Показать список задач<br>(todo, in_progress)"]
+    ListTasks --> UserPrompt["Запросить у пользователя<br>выбор или создание новой задачи"]
+    UserPrompt --> UserChoice{"Что выбрал пользователь?"}
+
+    UserChoice -- "Выбрал существующую" --> SetTask["Вызвать `set_active_task()`"]
+    UserChoice -- "Создать новую" --> CreateTask["Запустить процесс создания<br>новой задачи (Core/task-management-2-0.mdc)"]
+
+    SetTask --> VAN_Flow
+    CreateTask --> VAN_Flow
+
+    style NoTaskFlow fill:#ffad42,stroke:#f57c00
+```
+
+### 🛠️ ИСПОЛНЯЕМЫЕ ШАГИ
+
+#### Шаг 1: Инициализация и проверка активной задачи
+- `initialize_system_date()`
+- `active_task_path=$(get_active_task_path)`
+- Если `$active_task_path` **не пуст**, переходим к **Шагу 3**.
+- Если `$active_task_path` **пуст**, переходим к **Шагу 2**.
+
+#### Шаг 2: Процесс выбора задачи (если ни одна не активна)
+1.  **Сообщить пользователю:** "No active task selected. Please choose a task to work on or create a new one."
+2.  **Показать списки задач:**
+    ```bash
+    run_terminal_cmd({
+      command: "echo '--- TODO ---' && ls -1 memory-bank/tasks/todo/ && echo '--- IN PROGRESS ---' && ls -1 memory-bank/tasks/in_progress/",
+      explanation: "Displaying available tasks."
+    })
+    ```
+3.  **Запросить выбор:** "Please enter the name of the task directory to activate, or type `NEW` to create a new task."
+4.  **Обработать выбор пользователя:**
+    -   Если пользователь ввел имя директории, выполнить `set_active_task("memory-bank/tasks/in_progress/[имя директории]")` (или `todo`).
+    -   Если пользователь ввел `NEW`, запустить логику создания новой задачи из правила `Core/task-management-2-0.mdc`.
+5.  **Перейти к Шагу 3.**
+
+#### Шаг 3: Стандартный VAN-поток
+- `fetch_rules(["isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc"])`
+- ... (и далее по существующей логике `VAN`, включая проверку Git, определение сложности и т.д.)
 
 ## 🧭 NAVIGATION
 - 🏠 **[Main Instructions](van_instructions.md)** ← You are here

@@ -1,6 +1,6 @@
 ---
 description: "Isolated design principles for maintainable systems"
-globs: ["**/*"]
+globs: "**/*"
 alwaysApply: false
 ---
 
