@@ -17,6 +17,15 @@ For Level 3-4 tasks, this map now includes a comprehensive **Integration Phase**
 - **Integration Testing**: Comprehensive testing of component interactions
 - **Dependency Documentation**: Automatic documentation of component dependencies
 
+### Integration Phase Rules Loading
+
+На фазе интеграции для задач L3/L4 последовательно загрузите и выполните правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-planning.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/planning/isolated-design.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-testing.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc"])`
+
 ## 🧭 BUILD MODE PROCESS FLOW
 
 ```mermaid

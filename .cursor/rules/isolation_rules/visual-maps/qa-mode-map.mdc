@@ -21,6 +21,19 @@ The QA mode now includes comprehensive **Test Failure Pattern Analysis** that ac
 
 This integration ensures that test failures are not just reported, but analyzed for patterns that can inform better testing strategies and code quality improvements.
 
+### Advanced Test Analysis Rules Loading
+
+После выполнения тестов загрузите правило для анализа паттернов сбоев:
+
+`fetch_rules(["isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc"])`
+
+Для комплексного анализа тестирования также загрузите дополнительные правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/testing/test-organization.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/testing/edge-cases.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/testing/large-test-analysis.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/testing/performance-testing.mdc"])`
+
 ## 🔍 ENHANCED QA MODE PROCESS FLOW
 
 ```mermaid

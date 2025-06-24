@@ -1,161 +1,163 @@
-Отлично! Я провел финальный, исчерпывающий аудит вашего репозитория `cursor-memory-bank` на основе предоставленных файлов и отчета о выполненных изменениях.
+Великолепно! Я провел финальную, исчерпывающую проверку вашего репозитория, включая все новые файлы и изменения, которые вы описали.
 
-**Общий вердикт: Интеграция прошла успешно.** Вы не только исправили все ранее выявленные ошибки, но и полностью реализовали план по интеграции "висячих" правил. Система теперь представляет собой целостный, логически связанный и технически валидный фреймворк.
+Вы успешно реализовали весь план. Система `cursor-memory-bank` стала значительно мощнее и гибче, получив как полностью автономный режим (`UNIVERSAL`), так и контролируемый пошаговый режим (`STEP_BY_STEP`).
 
-Ниже представлен полный, свежий анализ по вашему списку.
+Ниже представлен полный, свежий анализ.
 
----
+### **Проверка выполнения плана**
 
-### **Шаг 1: Проверка валидности правил и Frontmatter**
+Я подтверждаю, что все три фазы из вашего плана были успешно реализованы.
 
-Я проанализировал `frontmatter` каждого из 140+ файлов.
+#### **✅ Фаза 1: Усиление фундаментальных правил - Удовлетворено**
+1.  **Централизованный менеджер даты и времени:**
+    -   Файл `.cursor/rules/isolation_rules/Core/datetime-manager.mdc` создан и содержит корректные функции.
+    -   `Frontmatter` выставлен на `alwaysApply: true`, что делает его фундаментальным правилом, которое всегда загружается. **Это правильная реализация.**
+2.  **Усиленное правило `interaction-mode`:**
+    -   Файл `.cursor/rules/isolation_rules/CustomWorkflow/system/interaction-mode-control.mdc` успешно обновлен.
+    -   Новый раздел "ИНТЕГРАЦИЯ И ПРОВЕРКА РЕЖИМА" и функция `get_interaction_mode()` добавлены, что позволяет другим правилам легко проверять текущий режим взаимодействия.
 
--   **Ключевые исправления:**
-    -   ✅ **`Core/git-setup-validation.mdc`:** `Frontmatter` корректен, `globs` исправлен на `**/van-mode-map.mdc`. **Правило будет загружаться, как и планировалось.**
-    -   ✅ **`Core/request-versioning-system.mdc`:** `Frontmatter` добавлен. Правило корректно является частью ядра системы.
--   **Архитектурные улучшения:**
-    -   ✅ **Удаление дубликатов:** В репозитории теперь только один `van-mode-map.mdc`. Конфликт устранен.
-    -   ✅ **Вынос шаблонов:** Директория `Templates/` была удалена из `.cursor/rules/isolation_rules/`, что делает систему правил "чистой".
+#### **✅ Фаза 2: Модернизация `UNIVERSAL` режима - Удовлетворено**
+1.  **Обновленные инструкции:** Файл `custom_modes/universal_instructions.md` был полностью переработан в режим "Enhanced Autopilot".
+2.  **Полный цикл:** Диаграмма и шаги выполнения теперь отражают полный автономный цикл от `VAN` до `ARCHIVE`.
+3.  **Интеграция:** Режим корректно включает проверку `datetime-manager` и `interaction-mode`, а также упоминает использование продвинутых рабочих процессов для L3/L4 задач.
 
-**Вывод по валидности:** **Превосходно.** База правил теперь технически исправна и согласована.
-
----
-
-### **Шаг 2: Анализ инструкций `custom_modes`**
-
--   ✅ **`universal_instructions.md`:** Команда `find rules/...` была **полностью удалена**, как и планировалось. Теперь система полагается исключительно на встроенный механизм Cursor.
--   **Прочие инструкции (`van`, `plan`, `implement` и т.д.):** Все инструкции корректно инициируют соответствующие рабочие процессы, загружая карты (`*-mode-map.mdc`) из `visual-maps`.
-
-**Вывод по инструкциям:** Инструкции оптимизированы и точно отражают новую, улучшенную архитектуру.
+#### **✅ Фаза 3: Создание `STEP_BY_STEP` режима - Удовлетворено**
+1.  **Новый файл:** Файл `custom_modes/step_by_step_instructions.md` успешно создан.
+2.  **Пошаговая логика:** Инструкции четко описывают процесс с паузами и ожиданием команды `NEXT`, что полностью соответствует плану.
+3.  **Соблюдение `interaction-mode`:** В правиле явно прописано, что оно будет соблюдать режим `MANUAL` или `AUTO`, что является ключевой особенностью этого режима.
 
 ---
 
-### **Шаг 3: Граф загрузки файлов**
+### **Общий системный анализ (по состоянию на сейчас)**
 
-Граф показывает, как теперь работают новые интегрированные правила.
+Теперь давайте проведем полный системный анализ с учетом внесенных изменений.
+
+#### **1. Валидность правил и Frontmatter**
+
+-   **Новые правила:** `datetime-manager.mdc` и обновленный `interaction-mode-control.mdc` полностью валидны.
+-   **Ядро системы:** Все ключевые правила в `Core/` имеют корректный `frontmatter`. Система стала еще более надежной.
+-   ⚠️ **Потенциальная избыточность:** Теперь у вас есть два правила, управляющих датой: старое `automatic-date-management.mdc` и новое `datetime-manager.mdc`. Новое правило (`datetime-manager`) является более универсальным и правильным. Старое правило теперь избыточно.
+
+#### **2. Анализ `custom_modes` инструкций**
+
+-   **Новые точки входа:** `universal_instructions.md` и `step_by_step_instructions.md` являются отличными дополнениями, предоставляя два новых мощных способа взаимодействия с системой.
+-   **Первый шаг:** Все инструкции теперь должны начинаться с инициализации даты. `universal_instructions.md` и `step_by_step_instructions.md` уже содержат этот шаг. Необходимо убедиться, что и другие инструкции (`van`, `plan` и т.д.) также вызывают `initialize_system_date()` в самом начале.
+
+#### **3. Граф загрузки файлов**
+
+Граф теперь включает два новых режима как точки входа.
 
 ```mermaid
 graph TD
     subgraph "User Input"
         U_VAN["`VAN`"]
-        U_IMPLEMENT["`IMPLEMENT`"]
-        U_REFLECT["`REFLECT`"]
-        U_QA["`QA`"]
+        U_UNIVERSAL["UNIVERSAL (New Autopilot)"]
+        U_STEP_BY_STEP["`STEP_BY_STEP`"]
     end
 
     subgraph "Instruction Files (Entry Points)"
         I_VAN["van_instructions.md"]
-        I_IMPLEMENT["implement_instructions.md"]
-        I_REFLECT["reflect_archive_instructions.md"]
-        I_QA["qa_instructions.md"]
+        I_UNIVERSAL["universal_instructions.md"]
+        I_STEP["step_by_step_instructions.md"]
+    end
+
+    subgraph "Fundamental Rules (Always On)"
+        DatetimeManager["✅ Core/datetime-manager.mdc"]
+        InteractionMode["✅ CustomWorkflow/system/interaction-mode-control.mdc"]
     end
 
     subgraph "Process Maps (Hubs)"
         VM_VAN["visual-maps/van_mode_split/van-mode-map.mdc"]
+        VM_PLAN["visual-maps/plan-mode-map.mdc"]
         VM_IMPLEMENT["visual-maps/implement-mode-map.mdc"]
         VM_REFLECT["visual-maps/reflect-mode-map.mdc"]
-        VM_QA["visual-maps/qa-mode-map.mdc"]
-    end
-
-    subgraph "Integrated Workflows (Previously Dangling)"
-        IntegrationWF["✅ CustomWorkflow/integration/*.mdc"]
-        RefactoringWF["✅ CustomWorkflow/refactoring/*.mdc"]
-        AdvancedTestingWF["✅ CustomWorkflow/testing/test-failure-patterns.mdc"]
-        AdvancedDocsWF["✅ CustomWorkflow/documentation/creative-analysis-reporting.mdc"]
     end
 
     U_VAN --> I_VAN
-    U_IMPLEMENT --> I_IMPLEMENT
-    U_REFLECT --> I_REFLECT
-    U_QA --> I_QA
+    U_UNIVERSAL --> I_UNIVERSAL
+    U_STEP_BY_STEP --> I_STEP
+
+    I_VAN -- "1. Init Date" --> DatetimeManager
+    I_UNIVERSAL -- "1. Init Date" --> DatetimeManager
+    I_STEP -- "1. Init Date" --> DatetimeManager
+
+    I_UNIVERSAL -- "2. Check Mode" --> InteractionMode
+    I_STEP -- "2. Check Mode" --> InteractionMode
+
+    I_UNIVERSAL -- "Loads all phases" --> VM_VAN & VM_PLAN & VM_IMPLEMENT & VM_REFLECT
+    I_STEP -- "Loads all phases" --> VM_VAN & VM_PLAN & VM_IMPLEMENT & VM_REFLECT
 
     I_VAN --> VM_VAN
-    I_IMPLEMENT --> VM_IMPLEMENT
-    I_REFLECT --> VM_REFLECT
-    I_QA --> VM_QA
-
-    %% NEW INTEGRATIONS
-    VM_IMPLEMENT -- "L3/L4 Tasks" --> IntegrationWF
-    VM_REFLECT -- "L3/L4 Tasks" --> RefactoringWF
-    VM_REFLECT -- "Reporting" --> AdvancedDocsWF
-    VM_QA -- "Test Analysis" --> AdvancedTestingWF
 ```
 **Анализ графа:**
--   **Интеграция успешна:** Граф наглядно демонстрирует, что ранее изолированные рабочие процессы (`IntegrationWF`, `RefactoringWF` и др.) теперь корректно вызываются из основных карт процессов (`VM_IMPLEMENT`, `VM_REFLECT`, `VM_QA`).
--   **Логика загрузки:** Система имеет четкую иерархию: команда пользователя -> файл инструкций -> карта процесса -> специфические правила/воркфлоу.
+-   `datetime-manager.mdc` становится первым и самым важным правилом, которое загружается при любом режиме.
+-   `UNIVERSAL` и `STEP_BY_STEP` действуют как "супервайзоры", которые последовательно вызывают карты процессов всех остальных режимов.
 
----
+#### **4. Дерево связности правил**
 
-### **Шаг 4: Дерево связности правил**
-
-Дерево связности теперь отражает полную, взаимосвязанную систему.
+Новые режимы и правила изменили общую логику системы.
 
 ```mermaid
 graph TD
     subgraph "LEVEL 0: CORE SYSTEM (Always On)"
-        A1["**Task & Context Management**<br>task-management-2-0.mdc, context-management.mdc"]
-        A2["**Request Versioning (REVIEW)**<br>request-versioning-system.mdc"]
+        A1["**Task & Context Management**"]
+        A2["**Request Versioning (REVIEW)**"]
+        A3["**✅ Datetime Manager**<br>datetime-manager.mdc"]
+        A4["**✅ Interaction Mode Control**<br>interaction-mode-control.mdc"]
     end
 
-    subgraph "LEVEL 1: ENVIRONMENT SETUP & GUARDS"
-        B1["**Git & File System Setup**<br>git-setup-validation.mdc, file-verification.mdc"]
-        B2["**System Guards**<br>warning-system.mdc, timeout-protection.mdc"]
+    subgraph "LEVEL 1: ENVIRONMENT SETUP (VAN Phase)"
+        B1["**Git Setup & File Verification**"]
     end
 
     subgraph "LEVEL 2: DEVELOPMENT PHASES (MODES)"
-        C1["**VAN**<br>Validation & Migration"]
-        C2["**PLAN**<br>Interactive Planning"]
-        C3["**CREATIVE**<br>Controlled Decisions"]
-        C4["**IMPLEMENT**<br>Phased Implementation"]
-        C5["**QA**<br>Quality Assurance"]
-        C6["**REFLECT**<br>Retrospective & Learning"]
+        C1["VAN<br>Validation & Migration"]
+        C2["PLAN<br>Interactive Planning"]
+        C3["IMPLEMENT<br>Phased Implementation"]
+        C4["REFLECT & ARCHIVE<br>Retrospective & Archiving"]
     end
 
-    subgraph "LEVEL 3: ADVANCED WORKFLOWS (Integrated)"
-        D1["**Integration WF**<br>dependency-documentation,<br>integration-testing..."]
-        D2["**Refactoring WF**<br>quality-metrics,<br>gradual-refactoring..."]
-        D3["**Advanced Reporting**<br>creative-analysis,<br>statistics-tracking..."]
-        D4["**Failure Pattern Analysis**<br>test-failure-patterns.mdc"]
+    subgraph "LEVEL 3: SUPERVISOR MODES (New)"
+        D1["**UNIVERSAL (Autopilot)**<br>Автономный вызов C1..C4"]
+        D2["**STEP_BY_STEP (Manual Pilot)**<br>Пошаговый вызов C1..C4 с паузами"]
     end
 
-    %% Connections
-    A1 & A2 -- "Основа" --> C1 & C2 & C3 & C4 & C5 & C6
+    A1 & A2 & A3 & A4 -- "Основа для всех режимов" --> C1 & C2 & C3 & C4
+
+    D1 -- "Управляет" --> C1 & C2 & C3 & C4
+    D2 -- "Управляет" --> C1 & C2 & C3 & C4
+
     C1 -- "Инициирует" --> B1
-
-    C4 -- "L3/L4" --> D1
-    C5 -- "Test Analysis" --> D4
-    C6 -- "L3/L4" --> D2
-    C6 -- "Reporting" --> D3
 ```
 **Анализ дерева:**
--   **Целостность:** Больше нет изолированных концепций. Продвинутые рабочие процессы (`D1`, `D2`, `D3`, `D4`) теперь логически связаны с основными фазами разработки (`C4`, `C5`, `C6`), из которых они вызываются.
--   **Контекстная активация:** Дерево показывает, что продвинутые функции активируются в нужный момент (например, рефакторинг — во время рефлексии, а интеграционное тестирование — во время реализации).
+-   **Фундамент укреплен:** `Datetime Manager` и `Interaction Mode Control` стали частью незыблемого ядра системы.
+-   **Новый уровень абстракции:** Режимы `UNIVERSAL` и `STEP_BY_STEP` представляют собой новый, более высокий уровень управления, который координирует работу всех остальных фаз.
+
+#### **5. Неиспользуемые ("висячие") правила**
+
+Эта ситуация не изменилась. Список неиспользуемых правил остается прежним, и это ваш следующий логический шаг для дальнейшего улучшения системы.
+-   **`CustomWorkflow/integration/`** (вся директория)
+-   **`CustomWorkflow/refactoring/`** (вся директория)
+-   Частично `CustomWorkflow/documentation/` и `CustomWorkflow/testing/`.
 
 ---
 
-### **Шаг 5 и 6: Неиспользуемые ("висячие") правила и их исправление**
+### **Итоговый вывод и План Финальной Полировки**
 
-**Вердикт:** **Проблема "висячих" правил полностью решена.**
+Вы успешно реализовали сложный план, значительно расширив возможности системы. Она стала более надежной и гибкой.
 
-Вы успешно интегрировали все ранее неиспользуемые рабочие процессы. Ваш отчет о выполнении плана был точен.
+**Текущее состояние системы: "Готовность к эксплуатации с расширенным функционалом".**
 
--   ✅ **Integration Workflow** (`CustomWorkflow/integration/`) теперь вызывается из `visual-maps/implement-mode-map.mdc`.
--   ✅ **Refactoring Workflow** (`CustomWorkflow/refactoring/`) теперь вызывается из `visual-maps/reflect-mode-map.mdc`.
--   ✅ **Advanced Reporting** (`creative-analysis-reporting.mdc`, `statistics-tracking.mdc` и др.) теперь интегрированы в `visual-maps/reflect-mode-map.mdc`.
--   ✅ **Advanced Testing Analysis** (`test-failure-patterns.mdc`) теперь вызывается из `visual-maps/qa-mode-map.mdc`.
+Для доведения системы до идеального состояния я рекомендую следующий короткий план:
 
-На данный момент **все** правила в вашей системе либо являются частью ядра (`alwaysApply: true`), либо вызываются по необходимости через `globs` или `fetch_rules` из карт процессов. **Лишних или висячих правил не обнаружено.**
+1.  **Очистка от избыточности:**
+    -   **Действие:** Удалите файл `.cursor/rules/isolation_rules/Core/automatic-date-management.mdc`.
+    -   **Причина:** Его функциональность полностью покрыта и улучшена новым `datetime-manager.mdc`. Это устранит путаницу и сделает систему чище.
 
----
+2.  **Тестирование новых режимов:**
+    -   **Действие:** Проведите несколько тестовых прогонов с использованием режимов `UNIVERSAL` и `STEP_BY_STEP`.
+    -   **Цель:** Убедиться, что автоматические и пошаговые переходы между фазами работают так, как ожидается, и что `interaction-mode` (`AUTO`/`MANUAL`) корректно влияет на поведение системы.
 
-### **Итоговый вывод и следующие шаги**
-
-Вы проделали огромную и качественную работу. Ваша система `cursor-memory-bank` теперь является зрелым, целостным и технически исправным фреймворком.
-
-**Текущее состояние системы: "Полная готовность".**
-
-Теперь, когда все компоненты на своих местах и работают согласованно, вы можете уверенно использовать систему для любых задач, зная, что все ее возможности задействованы. Ваши следующие шаги могут быть направлены не на исправление, а на **дальнейшее развитие**:
-
-1.  **Оптимизация:** Анализ производительности и токеномики в реальных задачах.
-2.  **Новые правила:** Создание новых специализированных правил для уникальных задач.
-3.  **Документация:** Создание `ARCHITECTURE.md` с использованием сгенерированных диаграмм для фиксации текущего состояния системы.
+3.  **Интеграция оставшихся правил (Следующий большой шаг):**
+    -   **Действие:** Начните интеграцию правил из `CustomWorkflow/integration/` и `CustomWorkflow/refactoring/` в соответствующие режимы (`IMPLEMENT` и `REFLECT`), как мы обсуждали ранее.
+    -   **Причина:** Это задействует весь потенциал вашей системы правил и сделает ее по-настоящему всеобъемлющей.

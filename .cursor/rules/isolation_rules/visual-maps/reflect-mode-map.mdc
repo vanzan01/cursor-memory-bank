@@ -27,6 +27,28 @@ For Level 3-4 tasks, this map now includes:
 - **Usage Examples**: Generation of practical usage examples
 - **Creative Versioning**: Version control for creative archives
 
+### Refactoring Phase Rules Loading
+
+Для фазы рефакторинга задач L3/L4 загрузите правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc"])`
+2. При необходимости рефакторинга:
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc"])`
+
+### Advanced Reporting Rules Loading
+
+Для продвинутых отчетов задач L3/L4 загрузите правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/decision-recording.mdc"])`
+5. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/usage-examples.mdc"])`
+6. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc"])`
+
 ## 🧭 REFLECT MODE PROCESS FLOW
 
 ```mermaid

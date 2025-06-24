@@ -8,7 +8,6 @@
     │   └── rules/
     │       └── isolation_rules/
     │           ├── Core/
-    │           │   ├── automatic-date-management.mdc
     │           │   ├── background-server-execution.mdc
     │           │   ├── command-execution.mdc
     │           │   ├── complexity-decision-tree.mdc
@@ -17,6 +16,7 @@
     │           │   ├── creative-phase-enforcement.mdc
     │           │   ├── creative-phase-metrics.mdc
     │           │   ├── date-format-enforcement.mdc
+    │           │   ├── datetime-manager.mdc
     │           │   ├── deep-validation-system.mdc
     │           │   ├── development-rules-integration.mdc
     │           │   ├── file-verification.mdc
@@ -167,530 +167,13 @@
         ├── plan_instructions.md
         ├── qa_instructions.md
         ├── reflect_archive_instructions.md
+        ├── step_by_step_instructions.md
         ├── universal_instructions.md
         ├── van_core_workflow.md
         └── van_instructions.md
 ```
 
 ## Список файлов
-
-`.cursor/rules/isolation_rules/Core/automatic-date-management.mdc`
-
-```mdc
----
-description: "Система автоматического управления датами с проверкой и обновлением в VAN режиме"
-globs: "**/memory-bank/**
-alwaysApply: true
----
-
-# AUTOMATIC DATE MANAGEMENT SYSTEM
-
-> **TL;DR:** Система автоматического управления датами обеспечивает проверку и обновление текущей даты в системных файлах при входе в VAN режим, поддерживая актуальность временных меток во всех операциях Memory Bank.
-
-## 📅 ПРИНЦИПЫ УПРАВЛЕНИЯ ДАТАМИ
-
-### Основные требования
-**Автоматическое обновление в VAN режиме**
-- Проверка актуальности системной даты при входе в VAN
-- Автоматическое обновление файла current-date.txt
-- Валидация формата даты (YYYY-MM-DD)
-- Синхронизация с системным временем
-
-**Использование реальных дат**
-- Запрет на использование hardcoded дат
-- Динамическое получение текущей даты
-- Обнаружение и замена устаревших дат
-- Консистентность дат во всех файлах
-
-## 🔄 VAN РЕЖИМ: АВТОМАТИЧЕСКАЯ ПРОВЕРКА
-
-### Проверка и обновление даты при входе
-```bash
-# Автоматическая проверка даты в VAN режиме
-van_check_and_update_date() {
-  echo "📅 ПРОВЕРКА И ОБНОВЛЕНИЕ ДАТЫ В VAN РЕЖИМЕ"
-  echo "========================================="
-
-  local current_system_date=$(date +%Y-%m-%d)
-  local date_file="memory-bank/system/current-date.txt"
-
-  echo "🕒 Системная дата: $current_system_date"
-
-  # Проверка существования файла даты
-  if [ ! -f "$date_file" ]; then
-    echo "❌ Файл даты не найден: $date_file"
-    echo "🔧 Создание файла с текущей датой"
-    mkdir -p "$(dirname "$date_file")"
-    echo "$current_system_date" > "$date_file"
-    echo "✅ Файл даты создан: $date_file"
-    return 0
-  fi
-
-  # Чтение сохраненной даты
-  local stored_date=$(cat "$date_file" 2>/dev/null | tr -d '\n\r' | head -1)
-  echo "💾 Сохраненная дата: $stored_date"
-
-  # Валидация формата сохраненной даты
-  if ! validate_date_format "$stored_date"; then
-    echo "❌ Неверный формат сохраненной даты: $stored_date"
-    echo "🔧 Обновление до корректного формата"
-    echo "$current_system_date" > "$date_file"
-    echo "✅ Дата обновлена до: $current_system_date"
-    return 0
-  fi
-
-  # Сравнение дат
-  if [ "$stored_date" = "$current_system_date" ]; then
-    echo "✅ Дата актуальна: $stored_date"
-  else
-    echo "🔄 Дата устарела, обновление: $stored_date → $current_system_date"
-
-    # Создание backup старой даты
-    backup_old_date "$stored_date" "$date_file"
-
-    # Обновление даты
-    echo "$current_system_date" > "$date_file"
-    echo "✅ Дата обновлена: $current_system_date"
-
-    # Обновление дат в связанных файлах
-    update_related_dates "$stored_date" "$current_system_date"
-  fi
-}
-```
-
-### Валидация формата даты
-```bash
-# Валидация формата даты YYYY-MM-DD
-validate_date_format() {
-  local date_string="$1"
-
-  # Проверка базового формата
-  if ! echo "$date_string" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
-    return 1
-  fi
-
-  # Проверка валидности даты
-  if date -d "$date_string" >/dev/null 2>&1; then
-    return 0
-  elif date -j -f "%Y-%m-%d" "$date_string" >/dev/null 2>&1; then
-    # Для macOS
-    return 0
-  else
-    return 1
-  fi
-}
-
-# Получение текущей даты в стандартном формате
-get_current_date() {
-  date +%Y-%m-%d
-}
-
-# Получение даты с временем
-get_current_datetime() {
-  date +"%Y-%m-%d %H:%M:%S"
-}
-
-# Получение даты для имен файлов
-get_date_for_filename() {
-  date +%Y%m%d
-}
-```
-
-## 🔍 ОБНАРУЖЕНИЕ УСТАРЕВШИХ ДАТ
-
-### Поиск hardcoded дат
-```bash
-# Поиск и замена hardcoded дат в проекте
-find_and_replace_hardcoded_dates() {
-  local old_date="$1"
-  local new_date="$2"
-  local project_root="${3:-.}"
-
-  echo "🔍 ПОИСК УСТАРЕВШИХ ДАТ В ПРОЕКТЕ"
-  echo "================================"
-
-  # Поиск файлов с устаревшими датами
-  local files_with_old_dates=$(grep -r "$old_date" "$project_root" --include="*.md" --include="*.txt" --include="*.yaml" --include="*.yml" --include="*.json" 2>/dev/null | cut -d: -f1 | sort -u)
-
-  if [ -z "$files_with_old_dates" ]; then
-    echo "✅ Устаревших дат не найдено"
-    return 0
-  fi
-
-  echo "📋 Файлы с устаревшими датами:"
-  echo "$files_with_old_dates"
-  echo ""
-
-  # Подтверждение замены
-  echo "🔄 Заменить $old_date на $new_date во всех найденных файлах?"
-  read -p "Продолжить? (Y/n): " -n 1 -r
-  echo
-
-  if [[ ! $REPLY =~ ^[Nn]$ ]]; then
-    local updated_files=0
-
-    while IFS= read -r file; do
-      if [ -f "$file" ]; then
-        # Создание backup
-        cp "$file" "${file}.backup.$(date +%Y%m%d_%H%M%S)"
-
-        # Замена дат
-        if sed -i.tmp "s/$old_date/$new_date/g" "$file" 2>/dev/null; then
-          rm -f "${file}.tmp"
-          echo "✅ Обновлен: $file"
-          ((updated_files++))
-        else
-          # Для систем где sed -i работает по-другому
-          sed "s/$old_date/$new_date/g" "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
-          echo "✅ Обновлен: $file"
-          ((updated_files++))
-        fi
-      fi
-    done <<< "$files_with_old_dates"
-
-    echo "🎯 Обновлено файлов: $updated_files"
-  else
-    echo "❌ Замена отменена"
-  fi
-}
-```
-
-### Поиск паттернов дат
-```bash
-# Поиск различных паттернов дат в проекте
-scan_date_patterns() {
-  local project_root="${1:-.}"
-
-  echo "🔍 СКАНИРОВАНИЕ ПАТТЕРНОВ ДАТ"
-  echo "============================="
-
-  # Различные форматы дат для поиска
-  local date_patterns=(
-    '[0-9]{4}-[0-9]{2}-[0-9]{2}'          # YYYY-MM-DD
-    '[0-9]{2}/[0-9]{2}/[0-9]{4}'          # MM/DD/YYYY
-    '[0-9]{2}\.[0-9]{2}\.[0-9]{4}'        # DD.MM.YYYY
-    '[0-9]{4}[0-9]{2}[0-9]{2}'            # YYYYMMDD
-    '20[0-9]{2}-[0-9]{2}-[0-9]{2}'        # 2024-12-09 (более специфичный)
-  )
-
-  for pattern in "${date_patterns[@]}"; do
-    echo "🔍 Поиск паттерна: $pattern"
-    local matches=$(grep -r -E "$pattern" "$project_root" --include="*.md" --include="*.txt" --include="*.yaml" --include="*.yml" --include="*.json" 2>/dev/null | head -10)
-
-    if [ -n "$matches" ]; then
-      echo "📋 Найденные совпадения:"
-      echo "$matches"
-      echo ""
-    fi
-  done
-}
-```
-
-## 📝 ОБНОВЛЕНИЕ СВЯЗАННЫХ ФАЙЛОВ
-
-### Обновление дат в системных файлах
-```bash
-# Обновление дат в связанных файлах Memory Bank
-update_related_dates() {
-  local old_date="$1"
-  local new_date="$2"
-
-  echo "🔄 ОБНОВЛЕНИЕ ДАТ В СВЯЗАННЫХ ФАЙЛАХ"
-  echo "===================================="
-
-  # Список файлов для обновления
-  local files_to_update=(
-    "memory-bank/tasks.md"
-    "memory-bank/progress.md"
-    "memory-bank/activeContext.md"
-    "memory-bank/projectbrief.md"
-  )
-
-  local updated_count=0
-
-  for file in "${files_to_update[@]}"; do
-    if [ -f "$file" ]; then
-      # Проверка наличия старой даты в файле
-      if grep -q "$old_date" "$file" 2>/dev/null; then
-        echo "🔄 Обновление: $file"
-
-        # Создание backup
-        cp "$file" "${file}.backup.$(date +%Y%m%d_%H%M%S)"
-
-        # Замена дат
-        sed -i.tmp "s/$old_date/$new_date/g" "$file" 2>/dev/null || {
-          sed "s/$old_date/$new_date/g" "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
-        }
-        rm -f "${file}.tmp"
-
-        echo "✅ Обновлен: $file"
-        ((updated_count++))
-      fi
-    fi
-  done
-
-  echo "📊 Обновлено файлов: $updated_count"
-}
-```
-
-### Обновление дат в архивных файлах
-```bash
-# Обновление дат в архивных документах
-update_archive_dates() {
-  local old_date="$1"
-  local new_date="$2"
-
-  echo "📚 ОБНОВЛЕНИЕ ДАТ В АРХИВНЫХ ФАЙЛАХ"
-  echo "=================================="
-
-  # Поиск архивных файлов
-  local archive_files=$(find memory-bank/archive -name "*.md" 2>/dev/null)
-
-  if [ -z "$archive_files" ]; then
-    echo "ℹ️ Архивные файлы не найдены"
-    return 0
-  fi
-
-  local updated_archives=0
-
-  while IFS= read -r file; do
-    if grep -q "$old_date" "$file" 2>/dev/null; then
-      echo "🔄 Обновление архива: $file"
-
-      # Создание backup
-      cp "$file" "${file}.backup.$(date +%Y%m%d_%H%M%S)"
-
-      # Замена дат
-      sed -i.tmp "s/$old_date/$new_date/g" "$file" 2>/dev/null || {
-        sed "s/$old_date/$new_date/g" "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
-      }
-      rm -f "${file}.tmp"
-
-      ((updated_archives++))
-    fi
-  done <<< "$archive_files"
-
-  echo "📊 Обновлено архивных файлов: $updated_archives"
-}
-```
-
-## 🔧 УТИЛИТЫ РАБОТЫ С ДАТАМИ
-
-### Вычисления с датами
-```bash
-# Получение даты N дней назад
-get_date_days_ago() {
-  local days_ago="$1"
-
-  if date -v -"${days_ago}d" +%Y-%m-%d 2>/dev/null; then
-    # macOS
-    return 0
-  elif date -d "$days_ago days ago" +%Y-%m-%d 2>/dev/null; then
-    # Linux
-    return 0
-  else
-    echo "Ошибка: Не удалось вычислить дату" >&2
-    return 1
-  fi
-}
-
-# Получение даты N дней вперед
-get_date_days_ahead() {
-  local days_ahead="$1"
-
-  if date -v +"${days_ahead}d" +%Y-%m-%d 2>/dev/null; then
-    # macOS
-    return 0
-  elif date -d "$days_ahead days" +%Y-%m-%d 2>/dev/null; then
-    # Linux
-    return 0
-  else
-    echo "Ошибка: Не удалось вычислить дату" >&2
-    return 1
-  fi
-}
-
-# Разность между датами в днях
-get_date_difference() {
-  local date1="$1"
-  local date2="$2"
-
-  local timestamp1 timestamp2
-
-  if timestamp1=$(date -j -f "%Y-%m-%d" "$date1" +%s 2>/dev/null); then
-    # macOS
-    timestamp2=$(date -j -f "%Y-%m-%d" "$date2" +%s 2>/dev/null)
-  elif timestamp1=$(date -d "$date1" +%s 2>/dev/null); then
-    # Linux
-    timestamp2=$(date -d "$date2" +%s 2>/dev/null)
-  else
-    echo "Ошибка: Неверный формат даты" >&2
-    return 1
-  fi
-
-  local diff_seconds=$((timestamp2 - timestamp1))
-  local diff_days=$((diff_seconds / 86400))
-
-  echo "$diff_days"
-}
-```
-
-### Форматирование дат
-```bash
-# Форматирование даты для различных целей
-format_date_for_purpose() {
-  local date_string="$1"
-  local purpose="$2"
-
-  case "$purpose" in
-    "filename")
-      echo "$date_string" | tr -d '-'
-      ;;
-    "display")
-      if date -j -f "%Y-%m-%d" "$date_string" "+%d %B %Y" 2>/dev/null; then
-        # macOS
-        return 0
-      elif date -d "$date_string" "+%d %B %Y" 2>/dev/null; then
-        # Linux
-        return 0
-      fi
-      ;;
-    "iso")
-      echo "${date_string}T00:00:00Z"
-      ;;
-    "timestamp")
-      if date -j -f "%Y-%m-%d" "$date_string" +%s 2>/dev/null; then
-        # macOS
-        return 0
-      elif date -d "$date_string" +%s 2>/dev/null; then
-        # Linux
-        return 0
-      fi
-      ;;
-    *)
-      echo "$date_string"
-      ;;
-  esac
-}
-```
-
-## 📊 МОНИТОРИНГ И ОТЧЕТЫ
-
-### Отчет о датах в проекте
-```bash
-# Генерация отчета о датах в проекте
-generate_date_report() {
-  local project_root="${1:-.}"
-  local output_file="${2:-date_report.md}"
-
-  echo "📊 ГЕНЕРАЦИЯ ОТЧЕТА О ДАТАХ"
-  echo "=========================="
-
-  cat > "$output_file" << EOF
-# Отчет о датах в проекте
-
-**Дата создания отчета**: $(get_current_datetime)
-**Системная дата**: $(get_current_date)
-**Сохраненная дата**: $(cat memory-bank/system/current-date.txt 2>/dev/null || echo "Не найдена")
-
-## Найденные даты в проекте
-
-EOF
-
-  # Поиск всех дат в проекте
-  echo "🔍 Поиск дат в файлах проекта..."
-
-  local all_dates=$(grep -r -h -E '[0-9]{4}-[0-9]{2}-[0-9]{2}' "$project_root" --include="*.md" --include="*.txt" --include="*.yaml" --include="*.yml" --include="*.json" 2>/dev/null | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | sort | uniq -c | sort -nr)
-
-  if [ -n "$all_dates" ]; then
-    echo "### Статистика дат" >> "$output_file"
-    echo "" >> "$output_file"
-    echo "\`\`\`" >> "$output_file"
-    echo "$all_dates" >> "$output_file"
-    echo "\`\`\`" >> "$output_file"
-  fi
-
-  # Поиск устаревших дат
-  local current_date=$(get_current_date)
-  local outdated_dates=$(echo "$all_dates" | awk -v current="$current_date" '$2 < current {print $2}')
-
-  if [ -n "$outdated_dates" ]; then
-    echo "" >> "$output_file"
-    echo "### ⚠️ Потенциально устаревшие даты" >> "$output_file"
-    echo "" >> "$output_file"
-    echo "$outdated_dates" | while read date; do
-      echo "- $date" >> "$output_file"
-    done
-  fi
-
-  echo "✅ Отчет сохранен: $output_file"
-}
-```
-
-### Backup старых дат
-```bash
-# Создание backup старой даты
-backup_old_date() {
-  local old_date="$1"
-  local date_file="$2"
-  local backup_dir="memory-bank/backup/dates"
-
-  mkdir -p "$backup_dir"
-
-  local backup_file="$backup_dir/date_backup_$(date +%Y%m%d_%H%M%S).txt"
-
-  cat > "$backup_file" << EOF
-# Backup даты
-Старая дата: $old_date
-Новая дата: $(get_current_date)
-Время backup: $(get_current_datetime)
-Исходный файл: $date_file
-EOF
-
-  echo "💾 Backup создан: $backup_file"
-}
-```
-
-## 🚨 ОБРАБОТКА ОШИБОК
-
-### Восстановление поврежденных дат
-```bash
-# Восстановление поврежденного файла даты
-recover_date_file() {
-  local date_file="memory-bank/system/current-date.txt"
-  local backup_dir="memory-bank/backup/dates"
-
-  echo "🔧 ВОССТАНОВЛЕНИЕ ФАЙЛА ДАТЫ"
-  echo "============================"
-
-  # Поиск последнего backup
-  local latest_backup=$(find "$backup_dir" -name "date_backup_*.txt" 2>/dev/null | sort | tail -1)
-
-  if [ -n "$latest_backup" ]; then
-    echo "📁 Найден backup: $latest_backup"
-    local backup_date=$(grep "Старая дата:" "$latest_backup" | cut -d' ' -f3)
-
-    if validate_date_format "$backup_date"; then
-      echo "✅ Восстановление из backup: $backup_date"
-      echo "$backup_date" > "$date_file"
-    else
-      echo "❌ Backup содержит некорректную дату"
-      echo "🔧 Использование текущей системной даты"
-      echo "$(get_current_date)" > "$date_file"
-    fi
-  else
-    echo "❌ Backup не найден"
-    echo "🔧 Создание нового файла с текущей датой"
-    mkdir -p "$(dirname "$date_file")"
-    echo "$(get_current_date)" > "$date_file"
-  fi
-
-  echo "✅ Файл даты восстановлен"
-}
-```
-
-Эта система автоматического управления датами обеспечивает актуальность временных меток во всех операциях Memory Bank и предотвращает использование устаревших hardcoded дат.
-```
 
 `.cursor/rules/isolation_rules/Core/background-server-execution.mdc`
 
@@ -2725,6 +2208,68 @@ generate_compliance_report() {
 5. **Tool Integration**: IDE and script support for format
 
 This rule ensures consistent, sortable, and future-proof date handling across the entire Memory Bank system.
+```
+
+`.cursor/rules/isolation_rules/Core/datetime-manager.mdc`
+
+```mdc
+---
+description: "Централизованная система управления датой и временем. Обеспечивает корректное получение и установку системной даты."
+globs: "**/**"
+alwaysApply: true
+---
+
+# DATETIME MANAGER SYSTEM
+
+> **TL;DR:** Этот модуль является единым источником правды для всех операций с датой и временем. Он гарантирует, что система всегда работает с актуальной, полученной через командную строку датой.
+
+## ⚙️ Основные функции
+
+### 1. Установка и верификация системной даты
+
+Эта функция должна вызываться в САМОМ НАЧАЛЕ любого режима (`VAN`, `UNIVERSAL`, `STEP_BY_STEP` и т.д.).
+
+```bash
+# Псевдокод для ИИ-ассистента
+
+function initialize_system_date() {
+  # 1. Получаем текущую дату и время из командной строки
+  local current_datetime=$(date +"%Y-%m-%d %H:%M:%S")
+  local current_date=$(echo "$current_datetime" | cut -d' ' -f1)
+
+  # 2. Указываем путь к файлу
+  local date_file="memory-bank/system/current-date.txt"
+
+  # 3. Создаем директорию, если она не существует
+  mkdir -p "$(dirname "$date_file")"
+
+  # 4. Записываем актуальную дату в файл
+  echo "$current_date" > "$date_file"
+
+  # 5. Выводим подтверждение
+  echo "✅ System date initialized to: $current_date"
+}
+```
+
+### 2. Функции для получения даты и времени
+
+Эти функции должны использоваться во всех остальных правилах вместо прямого вызова `date`.
+
+```bash
+# Получить только дату (YYYY-MM-DD)
+function get_current_date() {
+  cat memory-bank/system/current-date.txt
+}
+
+# Получить полное время (YYYY-MM-DD HH:MM:SS)
+function get_current_datetime() {
+  date +"%Y-%m-%d %H:%M:%S"
+}
+```
+
+## ✅ Интеграция
+
+Все файлы инструкций (`custom_modes/*.md`) должны начинаться с вызова `initialize_system_date()`.
 ```
 
 `.cursor/rules/isolation_rules/Core/deep-validation-system.mdc`
@@ -18269,6 +17814,44 @@ behavior:
 - Mode changes are logged and tracked
 
 This interaction mode control system provides flexible operation modes that adapt to user preferences and task requirements while maintaining consistent behavior across all Memory Bank phases.
+
+## ⚙️ ИНТЕГРАЦИЯ И ПРОВЕРКА РЕЖИМА
+
+Все режимы работы (`VAN`, `PLAN`, `STEP_BY_STEP` и т.д.) **ДОЛЖНЫ** проверять текущий режим взаимодействия перед выполнением ключевых операций.
+
+### Функция для получения текущего режима
+
+```bash
+function get_interaction_mode() {
+  local mode_file="memory-bank/system/interaction-mode.txt"
+  if [ -f "$mode_file" ]; then
+    cat "$mode_file"
+  else
+    # По умолчанию используется MANUAL для безопасности
+    echo "MANUAL"
+  fi
+}
+```
+
+### Пример использования в другом правиле
+
+```bash
+# Псевдокод для ИИ-ассистента в режиме PLAN
+
+# ... начало логики планирования ...
+
+local interaction_mode=$(get_interaction_mode)
+
+if [ "$interaction_mode" = "MANUAL" ]; then
+  # Задаем уточняющие вопросы пользователю
+  echo "У меня есть несколько вариантов реализации. Какой предпочитаете?"
+  # ... логика для интерактивного планирования ...
+else # AUTO
+  # Принимаем решение автономно
+  echo "Выбран оптимальный вариант реализации на основе лучших практик."
+  # ... логика для автоматического планирования ...
+fi
+```
 ```
 
 `.cursor/rules/isolation_rules/CustomWorkflow/system/interactive-planning.mdc`
@@ -34443,6 +34026,15 @@ For Level 3-4 tasks, this map now includes a comprehensive **Integration Phase**
 - **Integration Testing**: Comprehensive testing of component interactions
 - **Dependency Documentation**: Automatic documentation of component dependencies
 
+### Integration Phase Rules Loading
+
+На фазе интеграции для задач L3/L4 последовательно загрузите и выполните правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-planning.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/planning/isolated-design.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-testing.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc"])`
+
 ## 🧭 BUILD MODE PROCESS FLOW
 
 ```mermaid
@@ -35082,6 +34674,19 @@ The QA mode now includes comprehensive **Test Failure Pattern Analysis** that ac
 
 This integration ensures that test failures are not just reported, but analyzed for patterns that can inform better testing strategies and code quality improvements.
 
+### Advanced Test Analysis Rules Loading
+
+После выполнения тестов загрузите правило для анализа паттернов сбоев:
+
+`fetch_rules(["isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc"])`
+
+Для комплексного анализа тестирования также загрузите дополнительные правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/testing/test-organization.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/testing/edge-cases.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/testing/large-test-analysis.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/testing/performance-testing.mdc"])`
+
 ## 🔍 ENHANCED QA MODE PROCESS FLOW
 
 ```mermaid
@@ -35668,6 +35273,28 @@ For Level 3-4 tasks, this map now includes:
 - **Decision Recording**: Structured documentation of design decisions
 - **Usage Examples**: Generation of practical usage examples
 - **Creative Versioning**: Version control for creative archives
+
+### Refactoring Phase Rules Loading
+
+Для фазы рефакторинга задач L3/L4 загрузите правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc"])`
+2. При необходимости рефакторинга:
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc"])`
+   - `fetch_rules(["isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc"])`
+
+### Advanced Reporting Rules Loading
+
+Для продвинутых отчетов задач L3/L4 загрузите правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/decision-recording.mdc"])`
+5. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/usage-examples.mdc"])`
+6. `fetch_rules(["isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc"])`
 
 ## 🧭 REFLECT MODE PROCESS FLOW
 
@@ -38653,12 +38280,115 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 
 ```
 
+`custom_modes/step_by_step_instructions.md`
+
+```md
+# MEMORY BANK STEP_BY_STEP MODE
+
+> **TL;DR:** Этот режим проведет вас через полный цикл разработки пошагово. После каждой фазы я буду останавливаться и ждать вашей команды `NEXT` для перехода к следующему этапу. Этот режим полностью соблюдает `interaction-mode`.
+
+## 🚶 ПОШАГОВЫЙ ЦИКЛ РАЗРАБОТКИ
+
+```mermaid
+graph TD
+    Start["▶️ START STEP-BY-STEP"] --> SetDate["1. Установить дату<br>datetime-manager.mdc"]
+
+    SetDate --> VAN["2. VAN Phase"]
+    VAN --> Wait1["⏸️ Жду команду 'NEXT'"]
+
+    Wait1 -- "NEXT" --> PLAN["3. PLAN Phase"]
+    PLAN --> Wait2["⏸️ Жду команду 'NEXT'"]
+
+    Wait2 -- "NEXT" --> CreativeCheck{"Креативная фаза<br>необходима?"}
+
+    CreativeCheck -- "Да" --> CREATIVE["4. CREATIVE Phase"]
+    CreativeCheck -- "Нет" --> IMPLEMENT
+
+    CREATIVE --> Wait3["⏸️ Жду команду 'NEXT'"]
+    Wait3 -- "NEXT" --> IMPLEMENT
+
+    IMPLEMENT["5. IMPLEMENT Phase"] --> Wait4["⏸️ Жду команду 'NEXT'"]
+    Wait4 -- "NEXT" --> QA["6. QA Phase"]
+    QA --> Wait5["⏸️ Жду команду 'NEXT'"]
+    Wait5 -- "NEXT" --> REFLECT["7. REFLECT Phase"]
+    REFLECT --> Wait6["⏸️ Жду команду 'NEXT'"]
+    Wait6 -- "NEXT" --> ARCHIVE["8. ARCHIVE Phase"]
+    ARCHIVE --> Done["✅ WORKFLOW COMPLETE"]
+
+    style Wait1 fill:#ffb74d,stroke:#f57c00
+    style Wait2 fill:#ffb74d,stroke:#f57c00
+    style Wait3 fill:#ffb74d,stroke:#f57c00
+    style Wait4 fill:#ffb74d,stroke:#f57c00
+    style Wait5 fill:#ffb74d,stroke:#f57c00
+    style Wait6 fill:#ffb74d,stroke:#f57c00
+```
+
+## 🛠️ ШАГИ ВЫПОЛНЕНИЯ
+
+### 1. Инициализация
+- Я начну с вызова `initialize_system_date()` из `Core/datetime-manager.mdc`.
+- Затем я выполню **VAN Phase**.
+
+### 2. Ожидание команды
+- После завершения каждой фазы я буду предоставлять отчет и останавливаться с сообщением: **"✅ [Имя фазы] Phase Complete. Type `NEXT` to proceed to the [Имя следующей фазы] phase."**
+
+### 3. Соблюдение `interaction-mode`
+- **Принципиально важно:** В этом режиме каждая фаза будет выполняться в соответствии с настройкой в `memory-bank/system/interaction-mode.txt`.
+- **Если `MANUAL`**: на фазе `PLAN` я буду задавать уточняющие вопросы; на фазе `CREATIVE` я буду предлагать варианты на выбор.
+- **Если `AUTO`**: я буду выполнять каждую фазу автономно, предоставляя только итоговый отчет.
+
+### 4. Продвинутые рабочие процессы
+- Как и в `UNIVERSAL` режиме, я буду автоматически включать **Integration Workflow**, **Refactoring Workflow** и другие продвинутые процессы для задач уровня L3/L4.
+```
+
 `custom_modes/universal_instructions.md`
 
 ```md
-# MEMORY BANK UNIVERSAL MODE
+# MEMORY BANK UNIVERSAL MODE (ENHANCED AUTOPILOT)
 
-Your role is to execute a complete end-to-end workflow with seamless transitions between all Memory Bank modes without user intervention.
+> **TL;DR:** Этот режим выполняет полный цикл разработки от анализа до архивации автономно. Он будет использовать проверки сложности, продвинутые рабочие процессы и соблюдать `interaction-mode`.
+
+## 🚀 ПОЛНЫЙ АВТОНОМНЫЙ ЦИКЛ
+
+```mermaid
+graph TD
+    Start["▶️ START UNIVERSAL"] --> SetDate["1. Установить дату<br>datetime-manager.mdc"]
+    SetDate --> CheckInteractionMode["2. Проверить interaction-mode"]
+    CheckInteractionMode --> VAN["3. VAN Phase<br>Анализ, сложность, миграция"]
+
+    VAN --> PLAN["4. PLAN Phase<br>Детальное планирование"]
+    PLAN --> CreativeCheck{"Креативная фаза<br>необходима?"}
+
+    CreativeCheck -- "Да" --> CREATIVE["5. CREATIVE Phase<br>Дизайн и архитектура"]
+    CreativeCheck -- "Нет" --> IMPLEMENT
+
+    CREATIVE --> IMPLEMENT["6. IMPLEMENT Phase<br>Реализация + Интеграция"]
+    IMPLEMENT --> QA["7. QA Phase<br>Тестирование + Анализ ошибок"]
+    QA --> REFLECT["8. REFLECT Phase<br>Рефлексия + Рефакторинг"]
+    REFLECT --> ARCHIVE["9. ARCHIVE Phase<br>Архивация"]
+    ARCHIVE --> Done["✅ WORKFLOW COMPLETE"]
+
+    style Done fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 🛠️ ШАГИ ВЫПОЛНЕНИЯ
+
+### 1. Инициализация
+- Выполнить `initialize_system_date()` из `Core/datetime-manager.mdc`.
+- Проверить `interaction-mode.txt`. Если `MANUAL`, вывести предупреждение: "UNIVERSAL mode is running, but you are in MANUAL interaction mode. I will proceed autonomously. To switch, set interaction mode to AUTO."
+
+### 2. Последовательный вызов режимов
+Я буду последовательно загружать и выполнять логику из каждой соответствующей карты процесса (`*-mode-map.mdc`), автоматически переходя к следующей фазе после успешного завершения предыдущей.
+
+- **VAN**: Загрузить `van-mode-map.mdc`, выполнить полный анализ, включая определение сложности (L1-L4) и миграцию задач.
+- **PLAN**: Загрузить `plan-mode-map.mdc`, создать детальный план.
+- **CREATIVE (условно)**: Если план содержит задачи, требующие креатива, загрузить `creative-mode-map.mdc`.
+- **IMPLEMENT**: Загрузить `implement-mode-map.mdc`, выполнить реализацию. **Включить вызов `Integration Workflow` для задач L3/L4.**
+- **QA**: Загрузить `qa-mode-map.mdc`, выполнить тесты. **Включить вызов `Failure Pattern Analysis` при сбоях.**
+- **REFLECT**: Загрузить `reflect-mode-map.mdc`. **Включить вызов `Refactoring Workflow` и `Advanced Reporting` для задач L3/L4.**
+- **ARCHIVE**: Загрузить `archive-mode-map.mdc`, завершить цикл.
+
+Я буду предоставлять краткие отчеты о завершении каждой фазы перед переходом к следующей.
 
 ```mermaid
 graph TD

@@ -338,3 +338,41 @@ behavior:
 - Mode changes are logged and tracked
 
 This interaction mode control system provides flexible operation modes that adapt to user preferences and task requirements while maintaining consistent behavior across all Memory Bank phases.
+
+## ⚙️ ИНТЕГРАЦИЯ И ПРОВЕРКА РЕЖИМА
+
+Все режимы работы (`VAN`, `PLAN`, `STEP_BY_STEP` и т.д.) **ДОЛЖНЫ** проверять текущий режим взаимодействия перед выполнением ключевых операций.
+
+### Функция для получения текущего режима
+
+```bash
+function get_interaction_mode() {
+  local mode_file="memory-bank/system/interaction-mode.txt"
+  if [ -f "$mode_file" ]; then
+    cat "$mode_file"
+  else
+    # По умолчанию используется MANUAL для безопасности
+    echo "MANUAL"
+  fi
+}
+```
+
+### Пример использования в другом правиле
+
+```bash
+# Псевдокод для ИИ-ассистента в режиме PLAN
+
+# ... начало логики планирования ...
+
+local interaction_mode=$(get_interaction_mode)
+
+if [ "$interaction_mode" = "MANUAL" ]; then
+  # Задаем уточняющие вопросы пользователю
+  echo "У меня есть несколько вариантов реализации. Какой предпочитаете?"
+  # ... логика для интерактивного планирования ...
+else # AUTO
+  # Принимаем решение автономно
+  echo "Выбран оптимальный вариант реализации на основе лучших практик."
+  # ... логика для автоматического планирования ...
+fi
+```

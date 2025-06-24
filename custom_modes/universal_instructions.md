@@ -1,6 +1,48 @@
-# MEMORY BANK UNIVERSAL MODE
+# MEMORY BANK UNIVERSAL MODE (ENHANCED AUTOPILOT)
 
-Your role is to execute a complete end-to-end workflow with seamless transitions between all Memory Bank modes without user intervention.
+> **TL;DR:** Этот режим выполняет полный цикл разработки от анализа до архивации автономно. Он будет использовать проверки сложности, продвинутые рабочие процессы и соблюдать `interaction-mode`.
+
+## 🚀 ПОЛНЫЙ АВТОНОМНЫЙ ЦИКЛ
+
+```mermaid
+graph TD
+    Start["▶️ START UNIVERSAL"] --> SetDate["1. Установить дату<br>datetime-manager.mdc"]
+    SetDate --> CheckInteractionMode["2. Проверить interaction-mode"]
+    CheckInteractionMode --> VAN["3. VAN Phase<br>Анализ, сложность, миграция"]
+
+    VAN --> PLAN["4. PLAN Phase<br>Детальное планирование"]
+    PLAN --> CreativeCheck{"Креативная фаза<br>необходима?"}
+
+    CreativeCheck -- "Да" --> CREATIVE["5. CREATIVE Phase<br>Дизайн и архитектура"]
+    CreativeCheck -- "Нет" --> IMPLEMENT
+
+    CREATIVE --> IMPLEMENT["6. IMPLEMENT Phase<br>Реализация + Интеграция"]
+    IMPLEMENT --> QA["7. QA Phase<br>Тестирование + Анализ ошибок"]
+    QA --> REFLECT["8. REFLECT Phase<br>Рефлексия + Рефакторинг"]
+    REFLECT --> ARCHIVE["9. ARCHIVE Phase<br>Архивация"]
+    ARCHIVE --> Done["✅ WORKFLOW COMPLETE"]
+
+    style Done fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 🛠️ ШАГИ ВЫПОЛНЕНИЯ
+
+### 1. Инициализация
+- Выполнить `initialize_system_date()` из `Core/datetime-manager.mdc`.
+- Проверить `interaction-mode.txt`. Если `MANUAL`, вывести предупреждение: "UNIVERSAL mode is running, but you are in MANUAL interaction mode. I will proceed autonomously. To switch, set interaction mode to AUTO."
+
+### 2. Последовательный вызов режимов
+Я буду последовательно загружать и выполнять логику из каждой соответствующей карты процесса (`*-mode-map.mdc`), автоматически переходя к следующей фазе после успешного завершения предыдущей.
+
+- **VAN**: Загрузить `van-mode-map.mdc`, выполнить полный анализ, включая определение сложности (L1-L4) и миграцию задач.
+- **PLAN**: Загрузить `plan-mode-map.mdc`, создать детальный план.
+- **CREATIVE (условно)**: Если план содержит задачи, требующие креатива, загрузить `creative-mode-map.mdc`.
+- **IMPLEMENT**: Загрузить `implement-mode-map.mdc`, выполнить реализацию. **Включить вызов `Integration Workflow` для задач L3/L4.**
+- **QA**: Загрузить `qa-mode-map.mdc`, выполнить тесты. **Включить вызов `Failure Pattern Analysis` при сбоях.**
+- **REFLECT**: Загрузить `reflect-mode-map.mdc`. **Включить вызов `Refactoring Workflow` и `Advanced Reporting` для задач L3/L4.**
+- **ARCHIVE**: Загрузить `archive-mode-map.mdc`, завершить цикл.
+
+Я буду предоставлять краткие отчеты о завершении каждой фазы перед переходом к следующей.
 
 ```mermaid
 graph TD
