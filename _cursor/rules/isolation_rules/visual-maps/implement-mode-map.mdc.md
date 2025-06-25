@@ -1,0 +1,371 @@
+---
+description: Visual process map for BUILD mode (Code Implementation)
+globs: implementation-mode-map.mdc, CustomWorkflow/integration/*.mdc, **/active-task-manager.mdc
+alwaysApply: false
+---
+
+# BUILD MODE: CODE EXECUTION PROCESS MAP
+
+> **TL;DR:** This visual map defines the BUILD mode process for project initialization, task analysis, and technical validation. It guides users through platform detection, file verification, complexity determination, and technical validation to ensure proper setup before implementation.
+
+## 📋 REQUIRED RULES LOADING
+
+Before starting BUILD mode, load the following rules:
+
+1. `fetch_rules(["isolation_rules/Core/command-execution.mdc"])` - Core command execution patterns
+2. `fetch_rules(["isolation_rules/Level1/workflow-level1.mdc"])` - Level 1 workflow patterns
+3. `fetch_rules(["isolation_rules/Level2/workflow-level2.mdc"])` - Level 2 workflow patterns
+4. `fetch_rules(["isolation_rules/Level3/workflow-level3.mdc"])` - Level 3 workflow patterns
+5. `fetch_rules(["isolation_rules/Level4/workflow-level4.mdc"])` - Level 4 workflow patterns
+
+## 🔗 INTEGRATION WORKFLOW
+
+For Level 3-4 tasks, this map now includes a comprehensive **Integration Phase** that automatically activates after main implementation phases are complete. The integration workflow includes:
+
+- **Integration Planning**: Structured approach to component integration
+- **Isolated Design Validation**: Ensures components maintain proper isolation
+- **Integration Testing**: Comprehensive testing of component interactions
+- **Dependency Documentation**: Automatic documentation of component dependencies
+
+### Integration Phase Rules Loading
+
+На фазе интеграции для задач L3/L4 последовательно загрузите и выполните правила:
+
+1. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-planning.mdc"])`
+2. `fetch_rules(["isolation_rules/CustomWorkflow/planning/isolated-design.mdc"])`
+3. `fetch_rules(["isolation_rules/CustomWorkflow/integration/integration-testing.mdc"])`
+4. `fetch_rules(["isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc"])`
+
+## 🧭 BUILD MODE PROCESS FLOW
+
+```mermaid
+graph TD
+    Start["START BUILD MODE"] --> ReadDocs["Read Reference Documents<br>Core/command-execution.mdc"]
+
+    %% Initialization
+    ReadDocs --> CheckLevel{"Determine<br>Complexity Level<br>from _task.md"}
+
+    %% Level 1 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["LEVEL 1 PROCESS<br>Level1/workflow-level1.mdc"]
+    L1Process --> L1Review["Review Bug<br>Report + Rule #3 Priority"]
+    L1Review --> L1Trace["Debug Trace<br>Collection (Rule #21)"]
+    L1Trace --> L1Examine["Examine<br>Relevant Code"]
+    L1Examine --> L1Fix["Implement<br>Targeted Fix + Rule #2 ✅/❌"]
+    L1Fix --> L1Test["Test Fix<br>(Rules #8-10)"]
+    L1Test --> L1Validate["Validate No<br>Regression (Rule #11)"]
+    L1Validate --> L1Update["Update _task.md<br>+ Debug Traces"]
+
+    %% Level 2 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 2<br>Simple Enhancement"| L2Process["LEVEL 2 PROCESS<br>Level2/workflow-level2.mdc"]
+    L2Process --> L2Review["Review Build<br>Plan + Phase Tracking"]
+    L2Review --> L2Phase["Execute Phase<br>(Rule #1 Phased Approach)"]
+    L2Phase --> L2Examine["Examine Relevant<br>Code Areas"]
+    L2Examine --> L2Implement["Implement Changes<br>+ Rule #2 ✅/❌ Tracking"]
+    L2Implement --> L2Test["Test Changes<br>(Rules #8-12)"]
+    L2Test --> L2Coverage["Check Coverage<br>(Rule #11)"]
+    L2Coverage --> L2Update["Update _task.md<br>+ Test Reports"]
+
+    %% Level 3-4 Implementation (Enhanced with Development Rules)
+    CheckLevel -->|"Level 3-4<br>Feature/System"| L34Process["LEVEL 3-4 PROCESS<br>Level3/workflow-level3.mdc<br>Level4/workflow-level4.mdc"]
+    L34Process --> L34Review["Review Plan &<br>Creative Decisions + Rule #17"]
+    L34Review --> L34Phase{"Creative Phase<br>Documents<br>Complete?"}
+
+    L34Phase -->|"No"| L34Error["ERROR:<br>Return to CREATIVE Mode"]
+    L34Phase -->|"Yes"| L34PhaseStart["Start Phase<br>(Rule #1 Phased Approach)"]
+    L34PhaseStart --> L34DirSetup["Create Directory<br>Structure (within task dir)"]
+    L34DirSetup --> L34VerifyDirs["VERIFY Directories<br>Created Successfully"]
+    L34VerifyDirs --> L34Implementation["Build<br>Phase"]
+
+    %% Implementation Phases (Enhanced)
+    L34Implementation --> L34Phase1["Phase 1 Build<br>+ Rule #2 ✅/❌ Tracking"]
+    L34Phase1 --> L34VerifyFiles["VERIFY Files<br>Created Successfully"]
+    L34VerifyFiles --> L34Test1["Test Phase 1<br>(Rules #8-16)"]
+    L34Test1 --> L34Coverage1["Check Coverage<br>& Performance (Rules #11,13)"]
+    L34Coverage1 --> L34Document1["Document Phase 1<br>(Rule #24) in task dir"]
+    L34Document1 --> L34Next1{"Next<br>Phase?"}
+    L34Next1 -->|"Yes"| L34Implementation
+
+    L34Next1 -->|"No"| L34IntegrationPlan
+    L34IntegrationPlan --> L34DesignCheck
+    L34DesignCheck --> L34IntegrationTest
+    L34IntegrationTest --> L34IntegrationDoc
+    L34IntegrationDoc --> L34Performance
+
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
+
+    L34Performance --> L34Update["📝 Update _task.md<br>+ All Reports"]
+
+    %% Command Execution
+    L1Fix & L2Implement & L34Phase1 --> CommandExec["COMMAND EXECUTION<br>Core/command-execution.mdc"]
+    CommandExec --> DocCommands["Document Commands<br>& Results in task dir"]
+
+    %% Completion & Transition
+    L1Update & L2Update & L34Update --> VerifyComplete["Verify Build<br>Complete"]
+    VerifyComplete --> UpdateProgress["Update _task.md<br>with Status"]
+    UpdateProgress --> Transition["NEXT MODE:<br>REFLECT MODE"]
+
+    %% Integration Phase Styling
+    style L34IntegrationPlan fill:#81c784,stroke:#388e3c
+    style L34DesignCheck fill:#81c784,stroke:#388e3c
+    style L34IntegrationTest fill:#81c784,stroke:#388e3c
+    style L34IntegrationDoc fill:#81c784,stroke:#388e3c
+```
+
+## 📋 REQUIRED FILE STATE VERIFICATION
+
+Before implementation can begin, verify file state:
+
+```mermaid
+graph TD
+    Start["File State<br>Verification"] --> CheckTasks{"_task.md has<br>planning complete?"}
+
+    CheckTasks -->|"No"| ErrorPlan["ERROR:<br>Return to PLAN Mode"]
+    CheckTasks -->|"Yes"| CheckLevel{"Task<br>Complexity?"}
+
+    CheckLevel -->|"Level 1"| L1Ready["Ready for<br>Implementation"]
+
+    CheckLevel -->|"Level 2"| L2Ready["Ready for<br>Implementation"]
+
+    CheckLevel -->|"Level 3-4"| CheckCreative{"Creative phases<br>required?"}
+
+    CheckCreative -->|"No"| L34Ready["Ready for<br>Implementation"]
+    CheckCreative -->|"Yes"| VerifyCreative{"Creative phases<br>completed?"}
+
+    VerifyCreative -->|"No"| ErrorCreative["ERROR:<br>Return to CREATIVE Mode"]
+    VerifyCreative -->|"Yes"| L34Ready
+```
+
+## 🔄 FILE SYSTEM VERIFICATION PROCESS
+
+```mermaid
+graph TD
+    Start["Start File<br>Verification"] --> GetActiveTaskPath["Get Active Task Path<br>Using get_active_task_path()"]
+    GetActiveTaskPath --> CheckDir["Check Directory<br>Structure (within task dir)"]
+    CheckDir --> DirResult{"Directories<br>Exist?"}
+
+    DirResult -->|"No"| ErrorDir["❌ ERROR:<br>Missing Directories"]
+    DirResult -->|"Yes"| CheckFiles["Check Each<br>Created File (within task dir)"]
+
+    ErrorDir --> FixDir["Fix Directory<br>Structure"]
+    FixDir --> CheckDir
+
+    CheckFiles --> FileResult{"All Files<br>Exist?"}
+    FileResult -->|"No"| ErrorFile["❌ ERROR:<br>Missing/Wrong Path Files"]
+    FileResult -->|"Yes"| Complete["✅ Verification<br>Complete"]
+
+    ErrorFile --> FixFile["Fix File Paths<br>or Recreate Files"]
+    FixFile --> CheckFiles
+```
+
+## 📋 DIRECTORY VERIFICATION STEPS
+
+Before beginning any file creation:
+
+```
+✓ DIRECTORY VERIFICATION PROCEDURE
+1. Ensure current active task directory is set via get_active_task_path()
+2. Create all directories first before any files relative to active task path
+3. Verify each directory after creation:
+   ls -la "$(get_active_task_path)/path/to/directory"     # Linux/Mac
+   # Use appropriate command for Windows
+4. Document directory structure in _task.md (or relevant task-specific documentation)
+5. Only proceed to file creation AFTER verifying ALL directories exist
+```
+
+## 📋 FILE CREATION VERIFICATION
+
+After creating files:
+
+```
+✓ FILE VERIFICATION PROCEDURE
+1. Use paths relative to the active task directory for all file operations.
+2. Verify each file creation was successful:
+   ls -la "$(get_active_task_path)/path/to/file.ext"     # Linux/Mac
+   # Use appropriate command for Windows
+3. If verification fails:
+   a. Check for path resolution issues
+   b. Verify directory exists (relative to active task path)
+   c. Try creating with corrected path
+   d. Recheck file exists after correction
+4. Document all file paths in _task.md (or relevant task-specific documentation)
+```
+
+## 🔄 COMMAND EXECUTION WORKFLOW
+
+```mermaid
+graph TD
+    Start["Command<br>Execution"] --> Analyze["Analyze Command<br>Requirements"]
+    Analyze --> Complexity{"Command<br>Complexity?"}
+
+    Complexity -->|"Simple"| Simple["Execute<br>Single Command"]
+    Complexity -->|"Moderate"| Chain["Use Efficient<br>Command Chaining"]
+    Complexity -->|"Complex"| Break["Break Into<br>Logical Steps"]
+
+    Simple & Chain & Break --> Verify["Verify<br>Results"]
+    Verify --> Document["Document Commands<br>& Results in active task dir"]
+    Document --> Next["Next<br>Command"]
+```
+
+## 📋 LEVEL-SPECIFIC BUILD APPROACHES
+
+```mermaid
+graph TD
+    subgraph "Level 1: Quick Bug Fix"
+        L1A["Targeted Code<br>Examination"]
+        L1B["Minimal<br>Change Scope"]
+        L1C["Direct<br>Fix"]
+        L1D["Verify<br>Fix"]
+    end
+
+    subgraph "Level 2: Enhancement"
+        L2A["Sequential<br>Build"]
+        L2B["Contained<br>Changes"]
+        L2C["Standard<br>Testing"]
+        L2D["Component<br>Documentation"]
+    end
+
+    subgraph "Level 3-4: Feature/System"
+        L3A["Directory<br>Structure First"]
+        L3B["Verify Dirs<br>Before Files"]
+        L3C["Phased<br>Build"]
+        L3D["Verify Files<br>After Creation"]
+        L3E["Integration<br>Testing"]
+        L3F["Detailed<br>Documentation"]
+    end
+
+    L1A --> L1B --> L1C --> L1D
+    L2A --> L2B --> L2C --> L2D
+    L3A --> L3B --> L3C --> L3D --> L3E --> L3F
+```
+
+## 📝 BUILD DOCUMENTATION FORMAT
+
+Document builds within the active task directory with:
+
+```
+## Build: [Component/Feature]
+
+### Approach
+[Brief description of build approach]
+
+### Directory Structure (relative to task root)
+- [path/to/dir1/]: [Purpose]
+- [path/to/dir2/]: [Purpose]
+
+### Code Changes
+- [path/to/file1.ext]: [Description of changes]
+- [path/to/file2.ext]: [Description of changes]
+
+### Verification Steps
+- [✓] Directory structure created and verified
+- [✓] All files created in correct locations
+- [✓] File content verified
+
+### Commands Executed
+```
+[Command 1]
+[Result]
+```
+
+```
+[Command 2]
+[Result]
+```
+
+### Testing
+- [Test 1]: [Result]
+- [Test 2]: [Result]
+
+### Status
+- [x] Build complete
+- [x] Testing performed
+- [x] File verification completed
+- [ ] Documentation updated
+```
+
+## 📊 TASKS.MD UPDATE FORMAT
+
+During the build process, update tasks.md with progress:
+
+```
+## Status
+- [x] Initialization complete
+- [x] Planning complete
+[For Level 3-4:]
+- [x] Creative phases complete
+- [x] Directory structure created and verified
+- [x] [Built component 1]
+- [x] [Built component 2]
+- [ ] [Remaining component]
+
+## Build Progress
+- [Component 1]: Complete
+  - Files: [/absolute/path/to/files]
+  - [Details about implementation]
+- [Component 2]: Complete
+  - Files: [/absolute/path/to/files]
+  - [Details about implementation]
+- [Component 3]: In Progress
+  - [Current status]
+```
+
+## 📋 PROGRESS.MD UPDATE FORMAT
+
+Update progress.md with:
+
+```
+# Build Progress
+
+## Directory Structure
+- [/absolute/path/to/dir1/]: Created and verified
+- [/absolute/path/to/dir2/]: Created and verified
+
+## [Date]: [Component/Feature] Built
+- **Files Created**:
+  - [/absolute/path/to/file1.ext]: Verified
+  - [/absolute/path/to/file2.ext]: Verified
+- **Key Changes**:
+  - [Change 1]
+  - [Change 2]
+- **Testing**: [Test results]
+- **Next Steps**: [What comes next]
+```
+
+## 📊 BUILD VERIFICATION CHECKLIST
+
+```
+✓ BUILD VERIFICATION
+- Directory structure created correctly? [YES/NO]
+- All files created in correct locations? [YES/NO]
+- All file paths verified with absolute paths? [YES/NO]
+- All planned changes implemented? [YES/NO]
+- Testing performed for all changes? [YES/NO]
+- Code follows project standards? [YES/NO]
+- Edge cases handled appropriately? [YES/NO]
+- Build documented with absolute paths? [YES/NO]
+- tasks.md updated with progress? [YES/NO]
+- progress.md updated with details? [YES/NO]
+
+→ If all YES: Build complete - ready for REFLECT mode
+→ If any NO: Complete missing build elements
+```
+
+## 🔄 MODE TRANSITION NOTIFICATION
+
+When the build is complete, notify user with:
+
+```
+## BUILD COMPLETE
+
+✅ Directory structure verified
+✅ All files created in correct locations
+✅ All planned changes implemented
+✅ Testing performed successfully
+✅ tasks.md updated with status
+✅ progress.md updated with details
+
+→ NEXT RECOMMENDED MODE: REFLECT MODE
+```

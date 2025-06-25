@@ -1,1 +1,1 @@
-memory-bank/tasks/in_progress/2025-06-25_ID-999_test-artifact-manager
+memory-bank/tasks/in_progress/2025-06-21_ID-001_fetch-rules-validation
