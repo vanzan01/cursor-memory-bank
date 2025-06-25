@@ -7,6 +7,23 @@ alwaysApply: true
 
 > **TL;DR:** Эта система гарантирует, что любая работа начинается в изолированной feature-ветке. Она проверяет текущую ветку, чистоту рабочего каталога и автоматически предлагает создать и переключиться на новую ветку, названную в соответствии с текущей задачей. **Этот шаг является обязательным для продолжения работы.**
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+This rule MUST use the centralized Git Workflow Controller for all git operations:
+
+```bash
+# Load Git Workflow Controller before any git operations
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions instead of direct git commands
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for branch creation
+- Comprehensive logging of git setup operations
+- Consistent error handling across setup process
+
 ## 🌳 Процесс проверки и создания ветки
 
 ```mermaid
@@ -41,16 +58,16 @@ graph TD
 ### 1. Проверка текущего состояния
 
 ```bash
-# 1. Проверить чистоту рабочего каталога
-git_status=$(git status --porcelain)
+# 1. Проверить чистоту рабочего каталога используя controller
+git_status=$(git_status_check)
 if [[ -n "$git_status" ]]; then
   echo "⚠️ Внимание: У вас есть незакоммиченные изменения."
   echo "$git_status"
-  # На более поздних этапах здесь можно добавить запрос на git stash
+  # На более поздних этапах здесь можно добавить запрос на git_stash
 fi
 
-# 2. Проверить текущую ветку
-current_branch=$(git rev-parse --abbrev-ref HEAD)
+# 2. Проверить текущую ветку используя controller
+current_branch=$(git_current_branch)
 echo "ℹ️ Текущая ветка: $current_branch"
 
 if [[ "$current_branch" == "main" || "$current_branch" == "master" ]]; then
@@ -85,9 +102,9 @@ propose_new_branch() {
   read -p "Создать и переключиться на эту ветку? (Y/n): " -n 1 -r
   echo
   if [[ ! $REPLY =~ ^[Nn]$ ]]; then
-    git checkout -b "$proposed_branch"
+    git_branch_create "$proposed_branch"
     # Опционально: сразу отправить ветку на удаленный сервер
-    # git push -u origin "$proposed_branch"
+    # git_push origin "$proposed_branch"
     echo "✅ Успешно переключились на новую ветку: $proposed_branch"
   else
     echo "🔴 КРИТИЧЕСКАЯ ОШИБКА: Работа в ветках 'main' или 'master' не рекомендуется. Пожалуйста, создайте новую ветку для продолжения."

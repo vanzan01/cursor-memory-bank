@@ -8,6 +8,25 @@ alwaysApply: false
 
 > **TL;DR:** Structured commit strategies aligned with Memory Bank phases for clear development history and easy rollback.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git commit operations MUST use the centralized Git Workflow Controller for consistency and user control:
+
+```bash
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for all commits
+git_commit "[PHASE]: [Description] - [Status]"
+```
+
+**Benefits of using controller:**
+- User approval in MANUAL mode
+- Comprehensive logging of all commits
+- Consistent error handling
+- Force operation protection
+
 ## 🔄 PHASE-ORIENTED COMMIT WORKFLOW
 
 ```mermaid

@@ -2,6 +2,26 @@
 
 > **TL;DR:** Режим для стратегического планирования задач. Анализирует требования, создает детальный план реализации и определяет необходимость творческих фаз.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in PLAN mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for plan-related git operations:
+# - git_commit() for plan completion commits
+# - git_branch_create() for feature planning branches
+# - git_push() for plan backups
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all git operations
+- Comprehensive logging of planning-related commits
+- Safe branch management for complex planning tasks
+
 ## 📋 REQUIRED RULES LOADING
 
 Before starting PLAN mode, load the following rules:

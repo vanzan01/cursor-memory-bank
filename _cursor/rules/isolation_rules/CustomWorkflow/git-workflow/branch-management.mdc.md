@@ -8,6 +8,23 @@ alwaysApply: false
 
 > **TL;DR:** Structured branch management aligned with Memory Bank phases for safe development and easy collaboration.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller before any git operations
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions instead of direct git commands
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for branch operations
+- Comprehensive logging of branch management
+- Consistent error handling across branch operations
+
 ## 🌳 BRANCH STRATEGY OVERVIEW
 
 ```mermaid
@@ -80,46 +97,69 @@ hotfix/memory-leak-resolution
 
 ### 1. Pre-Task Backup Creation:
 ```bash
-# Create backup branch from current main
-git checkout main
-git pull origin main
-git checkout -b backup/pre-[task-id]-$(date +%Y%m%d)
-git push origin backup/pre-[task-id]-$(date +%Y%m%d)
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Create backup branch from current main using controller
+git_checkout "main"
+git_pull "origin" "main"
+local backup_branch="backup/pre-[task-id]-$(date +%Y%m%d)"
+git_branch_create "$backup_branch" "main"
+git_push "origin" "$backup_branch"
 ```
 
 ### 2. Feature Branch Creation:
 ```bash
-# Create feature branch from main
-git checkout main
-git checkout -b feature/[task-id]-[description]
-git push -u origin feature/[task-id]-[description]
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Create feature branch from main using controller
+git_checkout "main"
+local feature_branch="feature/[task-id]-[description]"
+git_branch_create "$feature_branch" "main"
+git_push "origin" "$feature_branch"
 ```
 
 ### 3. Phase Branch Creation (for complex tasks):
 ```bash
-# Create phase branch from feature branch
-git checkout feature/[task-id]-[description]
-git checkout -b phase/[task-id]-[phase-name]
-git push -u origin phase/[task-id]-[phase-name]
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Create phase branch from feature branch using controller
+git_checkout "feature/[task-id]-[description]"
+local phase_branch="phase/[task-id]-[phase-name]"
+git_branch_create "$phase_branch" "feature/[task-id]-[description]"
+git_push "origin" "$phase_branch"
 ```
 
 ### 4. Phase Merge Back:
 ```bash
-# Merge phase back to feature
-git checkout feature/[task-id]-[description]
-git merge phase/[task-id]-[phase-name]
-git push origin feature/[task-id]-[description]
-git branch -d phase/[task-id]-[phase-name]
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Merge phase back to feature using controller
+git_checkout "feature/[task-id]-[description]"
+git_merge "phase/[task-id]-[phase-name]"
+git_push "origin" "feature/[task-id]-[description]"
+git_branch_delete "phase/[task-id]-[phase-name]"
 ```
 
 ### 5. Feature Completion:
 ```bash
-# Merge feature to main
-git checkout main
-git pull origin main
-git merge feature/[task-id]-[description]
-git push origin main
-git branch -d feature/[task-id]-[description]
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Merge feature to main using controller
+git_checkout "main"
+git_pull "origin" "main"
+git_merge "feature/[task-id]-[description]"
+git_push "origin" "main"
+git_branch_delete "feature/[task-id]-[description]"
 ```
 
 ## 📊 MEMORY BANK PHASE BRANCHING
@@ -152,33 +192,42 @@ git branch -d feature/[task-id]-[description]
 
 ### Hotfix Workflow:
 ```bash
-# Create hotfix from main
-git checkout main
-git pull origin main
-git checkout -b hotfix/[issue-description]
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Create hotfix from main using controller
+git_checkout "main"
+git_pull "origin" "main"
+local hotfix_branch="hotfix/[issue-description]"
+git_branch_create "$hotfix_branch" "main"
 
 # Make fix and test
 # ... fix code ...
 
-# Merge back to main
-git checkout main
-git merge hotfix/[issue-description]
-git push origin main
+# Merge back to main using controller
+git_checkout "main"
+git_merge "$hotfix_branch"
+git_push "origin" "main"
 
 # Also merge to current feature branches if needed
-git checkout feature/[current-task]
-git merge main
+git_checkout "feature/[current-task]"
+git_merge "main"
 ```
 
 ### Rollback Procedure:
 ```bash
-# If feature branch has issues, rollback to backup
-git checkout main
-git reset --hard backup/pre-[task-id]-[date]
-git push --force-with-lease origin main
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
 
-# Or rollback specific commits
-git revert [commit-hash]
+# If feature branch has issues, rollback to backup using controller
+git_checkout "main"
+git_reset_hard "backup/pre-[task-id]-[date]"
+git_push "origin" "main" true  # Force push with additional confirmation
+
+# Or rollback specific commits using controller
+git_revert "[commit-hash]"
 ```
 
 ## 🔍 BRANCH HEALTH MONITORING

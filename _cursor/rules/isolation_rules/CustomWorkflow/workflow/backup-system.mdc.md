@@ -32,20 +32,27 @@ The Backup System provides multiple layers of data protection for Memory Bank op
 
 **Automatic Commits**
 ```bash
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
 # Before mode transitions
-git add memory-bank/
-git commit -m "AUTO-BACKUP: Before $(echo $MODE) mode transition - $(date)"
+git_commit "AUTO-BACKUP: Before $(echo $MODE) mode transition - $(date)" "memory-bank/"
 
 # Before critical operations
-git add .
-git commit -m "AUTO-BACKUP: Before critical operation - $(date)"
+git_commit "AUTO-BACKUP: Before critical operation - $(date)"
 ```
 
 **Branch Protection**
 ```bash
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
 # Create backup branch before major changes
-git checkout -b "backup-$(date +%Y%m%d-%H%M%S)"
-git push origin "backup-$(date +%Y%m%d-%H%M%S)"
+local backup_branch="backup-$(date +%Y%m%d-%H%M%S)"
+git_branch_create "$backup_branch"
+git_push "origin" "$backup_branch"
 ```
 
 ### 2. File System Backups (Secondary)
@@ -133,14 +140,18 @@ backup_check() {
 ```bash
 # Verify git backup integrity
 git_backup_check() {
+  # Load Git Workflow Controller
+  fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+  git_controller_init
+
   # Check if backup branch exists
-  git branch -r | grep "backup-$(date +%Y%m%d)" || echo "WARNING: No backup branch today"
+  git_branch_list "remote" | grep "backup-$(date +%Y%m%d)" || echo "WARNING: No backup branch today"
 
-  # Verify recent commits
-  git log --oneline -5 | grep "AUTO-BACKUP" || echo "WARNING: No recent auto-backups"
+  # Verify recent commits using controller
+  git_log_check "AUTO-BACKUP" 5 || echo "WARNING: No recent auto-backups"
 
-  # Check working directory is clean
-  git status --porcelain | wc -l | xargs -I {} echo "Uncommitted files: {}"
+  # Check working directory status using controller
+  git_status true | wc -l | xargs -I {} echo "Uncommitted files: {}"
 }
 ```
 
@@ -150,9 +161,13 @@ git_backup_check() {
 
 **Recent Work Recovery**
 ```bash
-# Recover from last auto-backup
-git reset --hard HEAD~1  # Go back one commit
-git checkout memory-bank/tasks.md  # Restore specific file
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Recover from last auto-backup (requires user approval in MANUAL mode)
+git_reset_hard "HEAD~1"  # Go back one commit with user approval
+git_checkout "memory-bank/tasks.md"  # Restore specific file
 ```
 
 **File-Specific Recovery**
@@ -195,15 +210,20 @@ restore_system() {
 git_recovery() {
   local backup_branch="$1"
 
+  # Load Git Workflow Controller
+  fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+  git_controller_init
+
   # Create safety branch
-  git checkout -b "before-recovery-$(date +%Y%m%d-%H%M%S)"
+  local safety_branch="before-recovery-$(date +%Y%m%d-%H%M%S)"
+  git_branch_create "$safety_branch"
 
   # Switch to backup branch
-  git checkout "$backup_branch"
+  git_checkout "$backup_branch"
 
-  # Merge or cherry-pick specific changes
-  git checkout main
-  git merge "$backup_branch"
+  # Merge or cherry-pick specific changes using controller
+  git_checkout "main"
+  git_merge "$backup_branch"
 }
 ```
 
@@ -231,7 +251,7 @@ git_recovery() {
 **Missing Backups**
 ```bash
 # Alert if no backup in last 4 hours
-last_backup=$(git log --grep="AUTO-BACKUP" --format="%ct" -1)
+  last_backup=$(git_log_last_backup)
 current_time=$(date +%s)
 time_diff=$((current_time - last_backup))
 

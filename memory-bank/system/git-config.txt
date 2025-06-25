@@ -1,0 +1,35 @@
+# Git Workflow Controller Configuration
+# Memory Bank 2.0.0 System Configuration
+
+# Core Settings
+GIT_CONTROLLER_ENABLED=true
+GIT_INTERACTION_MODE=manual
+GIT_LOG_LEVEL=info
+GIT_TIMEOUT=30
+GIT_RETRY_COUNT=3
+
+# Security Settings
+GIT_FORCE_CONFIRMATION=true
+GIT_DANGEROUS_OPERATIONS_LOG=true
+GIT_AUTO_STASH=false
+
+# Logging Settings
+GIT_LOG_OPERATIONS=true
+GIT_LOG_MODE_CHANGES=true
+GIT_LOG_ERRORS=true
+GIT_LOG_DIRECTORY=memory-bank/system/logs/git
+
+# User Experience Settings
+GIT_PROMPT_TIMEOUT=30
+GIT_SHOW_OPERATION_INFO=true
+GIT_ALLOW_MODE_SWITCHING=true
+
+# Default Behavior
+GIT_DEFAULT_REMOTE=origin
+GIT_DEFAULT_BRANCH_SOURCE=main
+GIT_COMMIT_REQUIRE_MESSAGE=true
+
+# Advanced Settings
+GIT_VALIDATE_ENVIRONMENT=true
+GIT_CHECK_REPOSITORY=true
+GIT_BACKUP_BEFORE_DANGEROUS_OPS=false

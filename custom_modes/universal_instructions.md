@@ -2,6 +2,27 @@
 
 > **TL;DR:** Этот режим выполняет полный цикл разработки. Перед запуском я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in UNIVERSAL mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# All phases will use controller functions:
+# - git_commit() for phase completions
+# - git_push() for backups
+# - git_branch_create() for feature branches
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode
+- Comprehensive logging of all git operations
+- Consistent error handling across all phases
+- Force operation protection
+
 ## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ UNIVERSAL
 
 ```mermaid

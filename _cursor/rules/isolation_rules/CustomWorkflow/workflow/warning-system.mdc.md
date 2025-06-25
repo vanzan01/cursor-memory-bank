@@ -116,7 +116,7 @@ The Warning System acts as a safety net for Memory Bank operations, detecting po
 ║ Benefit: Additional safety for your work                     ║
 ║                                                               ║
 ║ Recommended Actions:                                          ║
-║ • Create git commit with current progress                    ║
+║ • Create git commit with current progress (use git_commit()) ║
 ║ • Update documentation                                        ║
 ║ • Review task priorities                                      ║
 ╠═══════════════════════════════════════════════════════════════╣

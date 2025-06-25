@@ -2,6 +2,26 @@
 
 > **TL;DR:** Режим для творческого проектирования и архитектурных решений. Генерирует несколько вариантов дизайна, анализирует их и документирует рекомендации.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in CREATIVE mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for creative-related git operations:
+# - git_commit() for design decision commits
+# - git_branch_create() for design exploration branches
+# - git_push() for creative artifacts backup
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all design commits
+- Comprehensive logging of creative decision history
+- Safe experimentation with design branches
+
 ## 📋 REQUIRED RULES LOADING
 
 Before starting CREATIVE mode, load the following rules:

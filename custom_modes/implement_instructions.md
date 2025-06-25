@@ -2,6 +2,28 @@
 
 Your role is to build the planned changes following the implementation plan and creative phase decisions.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in IMPLEMENT mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for implementation-related git operations:
+# - git_commit() for implementation commits
+# - git_branch_create() for feature branches
+# - git_push() for code backups
+# - git_pull() for latest updates
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all implementation commits
+- Comprehensive logging of all code changes
+- Safe branch management for feature development
+- Automatic backup protection
+
 ```mermaid
 graph TD
     Start["🚀 START BUILD MODE"] --> ReadDocs["📚 Read Reference Documents<br>fetch_rules([command-execution.mdc])"]

@@ -8,6 +8,16 @@ alwaysApply: false
 
 > **TL;DR:** Comprehensive backup verification and recovery procedures to ensure safe development and quick recovery from issues.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+```
+
 ## 🔒 BACKUP VERIFICATION WORKFLOW
 
 ```mermaid
@@ -47,8 +57,8 @@ graph TD
 
 ### Step 1: Git Status Verification
 ```bash
-# Check current git status
-git status
+# Check current git status using controller
+git_status_check
 
 # Expected: Clean working tree or known changes
 # If unexpected changes exist, investigate before proceeding
@@ -56,48 +66,48 @@ git status
 
 ### Step 2: Working Tree Cleanup
 ```bash
-# If working tree is dirty, stash changes
-git stash push -m "Pre-backup stash: $(date)"
+# If working tree is dirty, stash changes using controller
+git_stash_push "Pre-backup stash: $(date)"
 
 # Verify working tree is now clean
-git status
+git_status_check
 # Expected: "nothing to commit, working tree clean"
 ```
 
 ### Step 3: Backup Branch Creation
 ```bash
-# Ensure we're on main branch
-git checkout main
-git pull origin main
+# Ensure we're on main branch using controller
+git_checkout main
+git_pull origin main
 
-# Create backup branch with timestamp
+# Create backup branch with timestamp using controller
 BACKUP_NAME="backup/pre-$(date +%Y%m%d-%H%M)-$(git rev-parse --short HEAD)"
-git checkout -b "$BACKUP_NAME"
-git push origin "$BACKUP_NAME"
+git_branch_create "$BACKUP_NAME"
+git_push origin "$BACKUP_NAME"
 
-# Return to main
-git checkout main
+# Return to main using controller
+git_checkout main
 ```
 
 ### Step 4: Backup Verification
 ```bash
-# Verify backup branch exists locally
-git branch | grep "backup/pre-$(date +%Y%m%d)"
+# Verify backup branch exists locally using controller
+git_branch_list | grep "backup/pre-$(date +%Y%m%d)"
 
-# Verify backup branch exists remotely
-git ls-remote origin | grep "backup/pre-$(date +%Y%m%d)"
+# Verify backup branch exists remotely using controller
+git_remote_list origin | grep "backup/pre-$(date +%Y%m%d)"
 
-# Verify backup branch content matches main
-git diff main "$BACKUP_NAME"
+# Verify backup branch content matches main using controller
+git_diff main "$BACKUP_NAME"
 # Expected: No differences
 ```
 
 ### Step 5: Tag Creation
 ```bash
-# Create annotated tag for backup point
+# Create annotated tag for backup point using controller
 TAG_NAME="backup-$(date +%Y%m%d-%H%M)"
-git tag -a "$TAG_NAME" -m "Backup before task: [TASK-ID]"
-git push origin "$TAG_NAME"
+git_tag_create "$TAG_NAME" "Backup before task: [TASK-ID]"
+git_push origin "$TAG_NAME"
 ```
 
 ## 🔍 BACKUP INTEGRITY VERIFICATION
@@ -112,22 +122,17 @@ echo "Date: $(date)"
 
 # Check for recent backup branches
 echo "Recent backup branches:"
-git branch -r | grep "backup/" | tail -5
+git_branch_list "remote" | grep "backup/" | tail -5
 
 # Verify backup branches are accessible
-for branch in $(git branch -r | grep "backup/" | tail -3); do
+for branch in $(git_branch_list "remote" | grep "backup/" | tail -3); do
     echo "Checking $branch..."
-    git show "$branch" --stat > /dev/null
-    if [ $? -eq 0 ]; then
-        echo "✅ $branch is accessible"
-    else
-        echo "❌ $branch is NOT accessible"
-    fi
+    git_show "$branch" --stat > /dev/null
 done
 
 # Check backup tags
 echo "Recent backup tags:"
-git tag | grep "backup-" | tail -5
+git_tag_list | grep "backup-" | tail -5
 
 # Verify disk space for git objects
 echo "Git repository size:"
@@ -142,17 +147,17 @@ du -sh .git/
 echo "=== Weekly Deep Backup Verification ==="
 
 # Verify all backup branches
-for branch in $(git branch -r | grep "backup/"); do
+for branch in $(git_branch_list "remote" | grep "backup/"); do
     echo "Deep checking $branch..."
 
     # Check branch integrity
-    git fsck --connectivity-only "$branch"
+    git_fsck_check "$branch"
 
     # Verify branch can be checked out
-    git checkout "$branch" --quiet
+    git_checkout "$branch" --quiet
     if [ $? -eq 0 ]; then
         echo "✅ $branch checkout successful"
-        git checkout main --quiet
+        git_checkout "main" --quiet
     else
         echo "❌ $branch checkout failed"
     fi
@@ -160,15 +165,8 @@ done
 
 # Clean up old backup branches (older than 30 days)
 echo "Cleaning up old backup branches..."
-git for-each-ref --format='%(refname:short) %(committerdate)' refs/remotes/origin/backup/ | \
-while read branch date; do
-    if [[ $(date -d "$date" +%s) -lt $(date -d "30 days ago" +%s) ]]; then
-        echo "Archiving old backup: $branch"
-        # Archive instead of delete for safety
-        git tag "archived-$(basename $branch)" "$branch"
-        git push origin "archived-$(basename $branch)"
-    fi
-done
+git_tag_create "archived-$(basename $branch)" "Archived backup: $branch"
+git_push origin "archived-$(basename $branch)"
 ```
 
 ## 🚨 RECOVERY PROCEDURES
@@ -182,7 +180,7 @@ BACKUP_BRANCH="$1"
 if [ -z "$BACKUP_BRANCH" ]; then
     echo "Usage: emergency-rollback.sh <backup-branch-name>"
     echo "Available backups:"
-    git branch -r | grep "backup/"
+    git_branch_list "remote" | grep "backup/"
     exit 1
 fi
 
@@ -199,14 +197,14 @@ fi
 
 # Create emergency backup of current state
 EMERGENCY_BACKUP="emergency-backup-$(date +%Y%m%d-%H%M%S)"
-git checkout -b "$EMERGENCY_BACKUP"
-git push origin "$EMERGENCY_BACKUP"
+git_branch_create "$EMERGENCY_BACKUP"
+git_push origin "$EMERGENCY_BACKUP"
 echo "Current state backed up to: $EMERGENCY_BACKUP"
 
 # Perform rollback
-git checkout main
-git reset --hard "origin/$BACKUP_BRANCH"
-git push --force-with-lease origin main
+git_checkout main
+git_reset_hard "origin/$BACKUP_BRANCH"
+git_push origin main --force
 
 echo "✅ Rollback completed"
 echo "Emergency backup available at: $EMERGENCY_BACKUP"
@@ -228,7 +226,7 @@ fi
 echo "Recovering $FILE_PATH from $BACKUP_BRANCH"
 
 # Verify file exists in backup
-git show "$BACKUP_BRANCH:$FILE_PATH" > /dev/null 2>&1
+git_show "$BACKUP_BRANCH:$FILE_PATH" > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "❌ File not found in backup branch"
     exit 1
@@ -241,7 +239,7 @@ if [ -f "$FILE_PATH" ]; then
 fi
 
 # Recover file from backup
-git show "$BACKUP_BRANCH:$FILE_PATH" > "$FILE_PATH"
+git_show "$BACKUP_BRANCH:$FILE_PATH" > "$FILE_PATH"
 echo "✅ File recovered from backup"
 ```
 
@@ -255,11 +253,11 @@ echo "✅ File recovered from backup"
 echo "=== Backup Health Report ==="
 
 # Count backup branches
-BACKUP_COUNT=$(git branch -r | grep -c "backup/")
+BACKUP_COUNT=$(git_branch_list "remote" | grep -c "backup/")
 echo "Total backup branches: $BACKUP_COUNT"
 
 # Check backup frequency
-RECENT_BACKUPS=$(git branch -r | grep "backup/" | xargs -I {} git log --format="%ci" -1 {} | sort -r | head -5)
+RECENT_BACKUPS=$(git_branch_list "remote" | grep "backup/" | xargs -I {} git_log --format="%ci" -1 {} | sort -r | head -5)
 echo "Recent backup dates:"
 echo "$RECENT_BACKUPS"
 
@@ -292,8 +290,8 @@ if [ "$2" = "refs/heads/main" ]; then
 
     # Create backup branch
     BACKUP_NAME="auto-backup-$(date +%Y%m%d-%H%M)"
-    git branch "$BACKUP_NAME"
-    git push origin "$BACKUP_NAME"
+    git_branch_create "$BACKUP_NAME"
+    git_push origin "$BACKUP_NAME"
 
     echo "Automatic backup created: $BACKUP_NAME"
 fi
@@ -317,11 +315,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create Daily Backup
+              - name: Create Daily Backup
         run: |
           BACKUP_NAME="daily-backup-$(date +%Y%m%d)"
-          git checkout -b "$BACKUP_NAME"
-          git push origin "$BACKUP_NAME"
+          git_branch_create "$BACKUP_NAME"
+          git_push origin "$BACKUP_NAME"
 
       - name: Verify Backup Integrity
         run: |

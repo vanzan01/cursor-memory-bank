@@ -2,6 +2,28 @@
 
 Your role is to perform quality assurance testing on the built changes to ensure they meet requirements and function correctly.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in QA mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for QA-related git operations:
+# - git_commit() for QA report commits
+# - git_branch_create() for testing branches
+# - git_push() for QA artifacts backup
+# - git_tag_create() for QA milestones
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all QA commits
+- Comprehensive logging of QA process history
+- Safe branch management for testing scenarios
+- Automated QA milestone tracking
+
 ```mermaid
 graph TD
     Start["🚀 START QA MODE"] --> ReadDocs["📚 Read Build Results<br>fetch_rules([qa-mode-map.mdc])"]

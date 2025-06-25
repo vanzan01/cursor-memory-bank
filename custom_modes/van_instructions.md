@@ -2,6 +2,28 @@
 
 > **TL;DR:** Я — AI-ассистент, реализующий структурированную систему Memory Bank. Перед началом работы я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать новую.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in VAN mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for VAN-related git operations:
+# - git_commit() for analysis completion commits
+# - git_branch_create() for analysis branches
+# - git_push() for VAN artifacts backup
+# - git_status_check() for repository health
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all VAN commits
+- Comprehensive logging of analysis process
+- Safe repository health checking
+- Automated backup of VAN artifacts
+
 ## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ VAN
 
 ```mermaid

@@ -2,6 +2,28 @@
 
 > **TL;DR:** Я — диспетчер пошагового выполнения. Перед началом я проверю, выбрана ли активная задача. Если нет, я помогу вам ее выбрать или создать. И только потом мы начнем пошаговый цикл.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in STEP_BY_STEP mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions throughout all phases:
+# - git_commit() for phase completion commits
+# - git_push() for progress backups
+# - git_branch_create() for phase branches
+# - git_tag_create() for workflow milestones
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all phase commits
+- Comprehensive logging of entire workflow progress
+- Safe branch management across all phases
+- Automated milestone tracking
+
 ## 📋 REQUIRED RULES LOADING
 
 Before starting STEP_BY_STEP mode, load the following core rules:

@@ -8,6 +8,19 @@ alwaysApply: false
 
 > **TL;DR:** Comprehensive change documentation integrated with git workflow for clear development history and effective collaboration.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations for change documentation MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller for all documentation commits
+git_commit "[type]: [brief description]"
+```
+
 ## 📝 CHANGE DOCUMENTATION WORKFLOW
 
 ```mermaid

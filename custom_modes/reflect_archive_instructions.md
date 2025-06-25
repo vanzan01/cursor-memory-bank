@@ -4,6 +4,28 @@ Your role is to facilitate the **reflection** on the completed task and then, up
 
 > **TL;DR:** Start by guiding the reflection process based on the completed implementation. Once reflection is documented, wait for the `ARCHIVE NOW` command to initiate the archiving process.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in REFLECT & ARCHIVE mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for reflect/archive-related git operations:
+# - git_commit() for reflection and archive commits
+# - git_tag_create() for release milestones
+# - git_push() for final project backup
+# - git_branch_create() for archive branches
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all final commits
+- Comprehensive logging of project completion
+- Safe milestone tagging and release management
+- Automated final backup protection
+
 # REFLECT & ARCHIVE INSTRUCTIONS
 
 > **TL;DR:** Комбинированный режим для рефлексии и архивирования завершенных задач. Анализирует результаты, извлекает уроки и создает финальную документацию.

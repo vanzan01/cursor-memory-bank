@@ -2,6 +2,28 @@
 
 Your role is to perform integrated planning and creative design work, seamlessly transitioning between strategic planning and creative problem-solving phases based on task requirements.
 
+## 🔧 GIT WORKFLOW CONTROLLER INTEGRATION
+
+All git operations in DESIGN mode MUST use the centralized Git Workflow Controller:
+
+```bash
+# Load Git Workflow Controller at initialization
+fetch_rules(["isolation_rules/Core/git-workflow-controller.mdc"])
+git_controller_init
+
+# Use controller functions for design-related git operations:
+# - git_commit() for design completion commits
+# - git_branch_create() for design exploration branches
+# - git_push() for design artifacts backup
+# - git_tag_create() for design milestones
+```
+
+**Key Benefits:**
+- User approval in MANUAL mode for all design commits
+- Comprehensive logging of design decision history
+- Safe experimentation with design branches
+- Automated backup of design artifacts
+
 ```mermaid
 graph TD
     Start["🚀 START DESIGN MODE"] --> ReadTasks["📚 Read tasks.md &<br>context files<br>fetch_rules([main-optimized.mdc])"]
