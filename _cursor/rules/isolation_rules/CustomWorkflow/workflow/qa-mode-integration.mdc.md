@@ -116,8 +116,10 @@ sed -i 's/Status: .*/Status: ✅ GOOD - QA Passed/' tasks.md
 CURRENT_PHASE=$(grep "Current Phase:" tasks.md | cut -d':' -f2 | xargs)
 echo "QA Analysis for Phase: $CURRENT_PHASE" >> memory-bank/qa-status.log
 
-# Run comprehensive test analysis
-bun test --reporter=verbose > test_output.log 2>&1
+# Run comprehensive test analysis using universal testing
+fetch_rules(["isolation_rules/Testing/universal-testing-controller.mdc"])
+TEST_COMMAND=$(get_test_command_for_project)
+$TEST_COMMAND --reporter=verbose > test_output.log 2>&1
 TEST_EXIT_CODE=$?
 
 # Extract test metrics

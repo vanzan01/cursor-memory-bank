@@ -35,6 +35,8 @@ git_controller_init
 Before starting REFLECT & ARCHIVE mode, load the following rules:
 
 1. `fetch_rules(["isolation_rules/main-optimized.mdc"])` - Core workflow optimization patterns
+2. `fetch_rules(["isolation_rules/Testing/universal-testing-controller.mdc"])` - Universal testing framework controller
+3. `fetch_rules(["isolation_rules/Testing/universal-testing-principles.mdc"])` - Universal testing principles
 
 ## REFLECT Mode
 

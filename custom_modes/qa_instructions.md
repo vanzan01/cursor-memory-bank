@@ -179,7 +179,8 @@ edit_file({
 ### Step 3: LOAD TESTING FRAMEWORK REFERENCES
 ```
 fetch_rules([
-  "isolation_rules/Testing/bun-testing-framework.mdc",
+          "isolation_rules/Testing/universal-testing-controller.mdc",
+        "isolation_rules/Testing/universal-testing-principles.mdc",
   "isolation_rules/Core/web-search-integration.mdc"
 ])
 ```

@@ -74,6 +74,8 @@ graph TD
 
 #### Шаг 3: Стандартный VAN-поток
 - `fetch_rules(["isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc"])`
+- `fetch_rules(["isolation_rules/Testing/universal-testing-controller.mdc"])`
+- `fetch_rules(["isolation_rules/Testing/universal-testing-principles.mdc"])`
 - ... (и далее по существующей логике `VAN`, включая проверку Git, определение сложности и т.д.)
 
 ## 🧭 NAVIGATION

@@ -72,14 +72,32 @@ This file integrates comprehensive development rules based on real project exper
 - Plan integration points and data flow
 - Test system boundaries and error handling
 
-## TESTING & VALIDATION RULES (Bun-based)
+## TESTING & VALIDATION RULES (Universal Testing Framework)
+
+> **Note**: This section integrates with the Universal Testing Framework that supports 8 programming languages and 20+ testing frameworks.
+>
+> **Integration**:
+> ```bash
+> fetch_rules([
+>   "isolation_rules/Testing/universal-testing-controller.mdc",
+>   "isolation_rules/Testing/universal-testing-principles.mdc"
+> ])
+> ```
 
 ### Rule #8: Высокогранулированные тесты
 **Implementation**: Test structure guidelines
 ```bash
-# Test command pattern for Memory Bank
-bun test --reporter=verbose --coverage
+# Universal test command pattern for Memory Bank
+# Framework automatically detected based on project configuration
+$(get_test_command_for_project) --reporter=verbose --coverage
 ```
+**Examples by framework**:
+- **Bun**: `bun test --reporter=verbose --coverage`
+- **Jest**: `npx jest --verbose --coverage`
+- **Vitest**: `npx vitest --reporter=verbose --coverage`
+- **PyTest**: `pytest -v --cov`
+- **JUnit**: `mvn test -Dtest.verbose=true`
+
 - Each function/method should have dedicated tests
 - Test individual behaviors, not just happy paths
 - Separate tests for different input scenarios
@@ -87,9 +105,16 @@ bun test --reporter=verbose --coverage
 ### Rule #9: Изоляция контекста между тестами
 **Implementation**: Test isolation patterns
 ```bash
-# Clean test environment between runs
-bun test --clean-cache
+# Universal clean test environment pattern
+$(get_test_clean_command_for_project)
 ```
+**Examples by framework**:
+- **Bun**: `bun test --clean-cache`
+- **Jest**: `npx jest --clearCache`
+- **Vitest**: `npx vitest --run --reporter=verbose`
+- **PyTest**: `pytest --cache-clear`
+- **Go**: `go clean -testcache`
+
 - Each test must be independent and isolated
 - No shared state between test cases
 - Clean setup and teardown for each test
@@ -103,9 +128,16 @@ bun test --clean-cache
 ### Rule #11: Проверка покрытия функционала на каждом этапе
 **Implementation**: Coverage tracking
 ```bash
-# Coverage reporting
-bun test --coverage --coverage-reporter=text-summary
+# Universal coverage reporting pattern
+$(get_coverage_command_for_project)
 ```
+**Examples by framework**:
+- **Bun**: `bun test --coverage --coverage-reporter=text-summary`
+- **Jest**: `npx jest --coverage --coverageReporters=text-summary`
+- **Vitest**: `npx vitest --coverage --reporter=text-summary`
+- **PyTest**: `pytest --cov --cov-report=term-missing`
+- **Go**: `go test -cover ./...`
+
 - Monitor test coverage throughout development
 - Aim for high coverage of critical paths
 - Document coverage gaps and plans to address them
@@ -119,9 +151,16 @@ bun test --coverage --coverage-reporter=text-summary
 ### Rule #13: Тестирование производительности
 **Implementation**: Performance testing integration
 ```bash
-# Performance testing with Bun
-bun test --timeout=30000 performance/*.test.ts
+# Universal performance testing pattern
+$(get_performance_test_command_for_project)
 ```
+**Examples by framework**:
+- **Bun**: `bun test --timeout=30000 performance/*.test.ts`
+- **Jest**: `npx jest --testTimeout=30000 performance/`
+- **Vitest**: `npx vitest --testTimeout=30000 performance/`
+- **PyTest**: `pytest --timeout=30 performance/`
+- **Go**: `go test -timeout=30s -bench=. ./performance/`
+
 - Include performance tests for critical operations
 - Set performance benchmarks and monitor regression
 - Test with realistic data volumes
@@ -292,10 +331,10 @@ const duration = performance.now() - start;
 
 ## INTEGRATION STATUS
 - [x] Core principles integrated into Memory Bank structure
-- [x] Testing rules adapted for Bun environment
+- [x] Testing rules adapted for Universal Testing Framework (8 languages, 20+ frameworks)
 - [x] Progress tracking enhanced with rule compliance
 - [x] Phase tracking system created
-- [ ] .cursor/rules files updated with specific rule implementations
-- [ ] Mode-specific rule integration completed
-- [ ] Testing framework integration completed
+- [x] .cursor/rules files updated with specific rule implementations
+- [x] Mode-specific rule integration completed
+- [x] Testing framework integration completed
 - [ ] Documentation templates created

@@ -41,11 +41,11 @@ graph TD
 - **Error Rate**: Failed requests percentage
 - **Scalability**: Performance under load
 
-## BUN TESTING INTEGRATION
+## UNIVERSAL TESTING INTEGRATION
 
-### Bun Performance Features:
+### Performance Testing Framework:
 ```javascript
-// Performance timing with Bun
+// Universal performance timing (works with any framework)
 import { performance } from "perf_hooks";
 
 test("performance benchmark", async () => {
@@ -59,7 +59,7 @@ test("performance benchmark", async () => {
 
 ### Memory Usage Testing:
 ```javascript
-// Memory usage monitoring
+// Universal memory usage monitoring
 test("memory usage", () => {
   const initialMemory = process.memoryUsage();
   performMemoryIntensiveOperation();

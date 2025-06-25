@@ -12,7 +12,7 @@ alwaysApply: false
 
 ```mermaid
 graph TD
-    TestRun["bun test > test_output.log"] --> Count{"Test Count > 100?"}
+    TestRun["npm test > test_output.log"] --> Count{"Test Count > 100?"}
     Count -->|No| SimpleQA["Simple QA Process"]
     Count -->|Yes| BasicAnalysis["Basic Pipeline Analysis"]
 

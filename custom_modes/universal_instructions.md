@@ -104,6 +104,7 @@ graph TD
 
 ### 1. Инициализация
 - Выполнить `initialize_system_date()` из `Core/datetime-manager.mdc`.
+- Загрузить универсальную систему тестирования: `fetch_rules(["isolation_rules/Testing/universal-testing-controller.mdc", "isolation_rules/Testing/universal-testing-principles.mdc"])`
 - Проверить `interaction-mode.txt`. Если `MANUAL`, вывести предупреждение: "UNIVERSAL mode is running, but you are in MANUAL interaction mode. I will proceed autonomously. To switch, set interaction mode to AUTO."
 
 ### 2. Последовательный вызов режимов

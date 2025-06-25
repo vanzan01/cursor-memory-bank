@@ -31,6 +31,8 @@ Before starting STEP_BY_STEP mode, load the following core rules:
 1. `fetch_rules(["isolation_rules/Core/datetime-manager.mdc"])` - System date initialization
 2. `fetch_rules(["isolation_rules/Core/active-task-manager.mdc"])` - Active task management
 3. `fetch_rules(["isolation_rules/Core/task-management-2-0.mdc"])` - Task creation and management
+4. `fetch_rules(["isolation_rules/Testing/universal-testing-controller.mdc"])` - Universal testing framework controller
+5. `fetch_rules(["isolation_rules/Testing/universal-testing-principles.mdc"])` - Universal testing principles
 
 ## 🚶 ЛОГИКА ВЫПОЛНЕНИЯ STEP_BY_STEP
 

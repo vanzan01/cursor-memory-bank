@@ -140,7 +140,9 @@ read_file({
 fetch_rules([
   "isolation_rules/main",
   "isolation_rules/Core/command-execution",
-  "isolation_rules/Core/web-search-integration"
+  "isolation_rules/Core/web-search-integration",
+  "isolation_rules/Testing/universal-testing-controller",
+  "isolation_rules/Testing/universal-testing-principles"
 ])
 ```
 

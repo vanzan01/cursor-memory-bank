@@ -98,7 +98,9 @@ graph TD
 ```
 fetch_rules([
   "isolation_rules/Core/command-execution",
-  "isolation_rules/Core/web-search-integration"
+  "isolation_rules/Core/web-search-integration",
+  "isolation_rules/Testing/universal-testing-controller",
+  "isolation_rules/Testing/universal-testing-principles"
 ])
 ```
 
