@@ -144,7 +144,7 @@ edit_file({
 ## 🗂️ ФАЙЛЫ В РАБОТЕ
 - memory-bank/system/current-context.md
 - memory-bank/tasks.md
-- memory-bank/qa/[task-name]-qa-report.md
+- $active_task_path/qa/qa-report.md
 
 ## 📊 МЕТРИКИ СЕССИИ
 **Время начала**: [CURRENT_DATE]
@@ -288,14 +288,39 @@ Before completing the QA phase, you MUST verify that all planned tests have been
 
 ## MANDATORY ARTIFACT CREATION
 
+### ACTIVE TASK VALIDATION:
+```bash
+echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
+active_task_path=$(get_active_task_path)
+
+if [ -z "$active_task_path" ]; then
+    echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
+    echo ""
+    echo "🔧 РЕШЕНИЕ:"
+    echo "1. Выберите существующую задачу:"
+    echo "   ls memory-bank/tasks/todo/"
+    echo "   ls memory-bank/tasks/in_progress/"
+    echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
+    echo ""
+    echo "2. Или создайте новую задачу в VAN режиме"
+    echo ""
+    echo "❌ QA режим не может продолжить без активной задачи"
+    exit 1
+fi
+
+echo "✅ Активная задача: $active_task_path"
+echo "📁 Создание папки qa..."
+mkdir -p "$active_task_path/qa"
+```
+
 You MUST create and update the following artifacts during QA mode:
 
 ### REQUIRED FILES:
 1. **memory-bank/system/current-context.md** - MUST be updated with QA mode context
 2. **memory-bank/tasks.md** - MUST be updated with QA results and status
-3. **memory-bank/qa/[task-name]-qa-report.md** - MUST be created with comprehensive test results
-4. **memory-bank/qa/[task-name]-test-log.md** - MUST be created with detailed test execution logs
-5. **memory-bank/qa/[task-name]-issues.md** - MUST be created if issues are found
+3. **$active_task_path/qa/qa-report.md** - MUST be created with comprehensive test results
+4. **$active_task_path/qa/test-log.md** - MUST be created with detailed test execution logs
+5. **$active_task_path/qa/issues.md** - MUST be created if issues are found
 
 ### MANDATORY DOCUMENTATION:
 - All test cases MUST be documented with expected vs actual results

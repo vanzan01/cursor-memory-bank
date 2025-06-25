@@ -162,7 +162,7 @@ edit_file({
 - memory-bank/system/current-context.md
 - memory-bank/tasks.md
 - implementation-plan.md
-- memory-bank/creative/[project-specific-files]
+- $active_task_path/creative/[project-specific-files]
 
 ## 📊 МЕТРИКИ СЕССИИ
 **Время начала**: [CURRENT_DATE]

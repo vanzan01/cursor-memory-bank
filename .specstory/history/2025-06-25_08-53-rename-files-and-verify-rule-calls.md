@@ -5604,7 +5604,1804 @@ PLAN
 
 _**Assistant**_
 
-Активирую PLAN режим для детального планирования задачи унификации пут
+Активирую PLAN режим для детального планирования задачи унификации путей артефактов.
+
+---
+
+```bash
+echo "=== АКТИВАЦИЯ PLAN РЕЖИМА ===" && echo "" && echo "🎯 ЗАДАЧА: 2025-06-25_ID-002_artifact-paths-unification" && echo "📋 ПЕРЕХОД: UNIVERSAL → PLAN" && echo "🚨 ПРИОРИТЕТ: HIGH (критическая проблема системы)" && echo "" && echo "📊 УРОВЕНЬ СЛОЖНОСТИ: Level 3" && echo "- Требует обновления всех 6 режимов" && echo "- Критически важно для целостности системы" && echo "- Влияет на все будущие задачи" && echo "" && echo "🔄 ИНИЦИАЛИЗАЦИЯ PLAN РЕЖИМА..."
+```
+
+```
+<&& echo "" && echo "🔄 ИНИЦИАЛИЗАЦИЯ PLAN РЕЖИМА..."
+=== АКТИВАЦИЯ PLAN РЕЖИМА ===
+
+🎯 ЗАДАЧА: 2025-06-25_ID-002_artifact-paths-unification
+📋 ПЕРЕХОД: UNIVERSAL → PLAN
+🚨 ПРИОРИТЕТ: HIGH (критическая проблема системы)
+
+📊 УРОВЕНЬ СЛОЖНОСТИ: Level 3
+- Требует обновления всех 6 режимов
+- Критически важно для целостности системы
+- Влияет на все будущие задачи
+
+🔄 ИНИЦИАЛИЗАЦИЯ PLAN РЕЖИМА...
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗
+```
+
+---
+
+```bash
+date
+```
+
+```
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗ date
+среда, 25 июня 2025 г. 12:47:12 (MSK)
+?➜  cursor-memory-bank git:(backup-rules-20250620-2303) ?✗
+```
+
+---
+
+Read file: memory-bank/tasks.md
+
+---
+
+Read file: memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/_task.md
+
+---
+
+Could not find file 'memory-bank/system/current-context.md' in the workspace.
+
+---
+
+```diff
+- 
++ # CURRENT CONTEXT STATE
++ 
++ **Последнее обновление**: 2025-06-25
++ **Статус**: ACTIVE
++ 
++ ## 🎯 ТЕКУЩИЙ ЗАПРОС ПОЛЬЗОВАТЕЛЯ
++ ```
++ PLAN
++ ```
++ 
++ ## 🔧 ТЕКУЩИЙ РЕЖИМ РАБОТЫ
++ **Активный режим**: PLAN
++ **Фаза**: Strategic Planning
++ **Уровень сложности**: Level 3
++ 
++ ## 📋 КОНТЕКСТ ЗАДАЧИ
++ **Задача**: 2025-06-25_ID-002_artifact-paths-unification
++ **Приоритет**: HIGH
++ **Статус**: IN_PROGRESS
++ 
++ ### Описание:
++ Критическая задача унификации путей артефактов в Memory Bank системе. Все режимы создают артефакты в неправильных местах, нарушая целостность Memory Bank 2.0.0 структуры. Требуется обновление всех 6 режимов для использования активной задачи.
++ 
++ ### Текущий прогресс:
++ - [x] Переход в PLAN режим
++ - [ ] Анализ требований
++ - [ ] Создание плана реализации
++ - [ ] Определение следующего режима
++ 
++ ## 🗂️ ФАЙЛЫ В РАБОТЕ
++ - memory-bank/system/current-context.md
++ - memory-bank/tasks.md
++ - memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/_task.md
++ - memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/_context.md
++ 
++ ## 📊 МЕТРИКИ СЕССИИ
++ **Время начала**: 2025-06-25 12:47:12
++ **Команды выполнено**: 5
++ **Файлов изменено**: 3
++ **Статус сессии**: ACTIVE
+```
+
+---
+
+Теперь начну детальное планирование Level 3 задачи. Сначала проанализирую все текущие пути в инструкциях:
+
+---
+
+<details>
+            <summary>Grep search for "memory-bank/creative/|memory-bank/planning/|memory-bank/implementation/|memory-bank/qa/|memory-bank/archive/|memory-bank/universal/" • **14** files</summary>
+        
+| File | Line | Match |
+|------|------|-------|
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L165 | `- memory-bank/creative/[project-specific-files]` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L367 | `4. **memory-bank/creative/[component-name].md** - MUST be created for each creative component` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/plan_instructions.md` | L315 | `4. **memory-bank/planning/[task-name]-requirements.md** - MUST be created for Level 3-4 tasks` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/plan_instructions.md` | L316 | `5. **memory-bank/planning/[task-name]-architecture.md** - MUST be created for Level 4 tasks` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L146 | `- memory-bank/qa/[task-name]-qa-report.md` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L295 | `3. **memory-bank/qa/[task-name]-qa-report.md** - MUST be created with comprehensive test results` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L296 | `4. **memory-bank/qa/[task-name]-test-log.md** - MUST be created with detailed test execution logs` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L297 | `5. **memory-bank/qa/[task-name]-issues.md** - MUST be created if issues are found` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/implement_instructions.md` | L310 | `4. **memory-bank/implementation/[task-name]-build-log.md** - MUST be created with build details` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/implement_instructions.md` | L311 | `5. **memory-bank/implementation/[task-name]-test-results.md** - MUST be created with test results` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/universal_instructions.md` | L817 | `3. **memory-bank/universal/[date]-request-log.md** - MUST be created to log handled requests` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/design_instructions.md` | L164 | `- memory-bank/creative/[project-specific-files]` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/reflect_archive_instructions.md` | L120 | `memory-bank/archive/` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L165 | `- memory-bank/creative/[project-specific-files]` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L367 | `4. **memory-bank/creative/[component-name].md** - MUST be created for each creative component` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/implement_instructions.md` | L310 | `4. **memory-bank/implementation/[task-name]-build-log.md** - MUST be created with build details` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/implement_instructions.md` | L311 | `5. **memory-bank/implementation/[task-name]-test-results.md** - MUST be created with test results` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L146 | `- memory-bank/qa/[task-name]-qa-report.md` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L295 | `3. **memory-bank/qa/[task-name]-qa-report.md** - MUST be created with comprehensive test results` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L296 | `4. **memory-bank/qa/[task-name]-test-log.md** - MUST be created with detailed test execution logs` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/qa_instructions.md` | L297 | `5. **memory-bank/qa/[task-name]-issues.md** - MUST be created if issues are found` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/reflect_archive_instructions.md` | L120 | `memory-bank/archive/` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/universal_instructions.md` | L817 | `3. **memory-bank/universal/[date]-request-log.md** - MUST be created to log handled requests` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/plan_instructions.md` | L315 | `4. **memory-bank/planning/[task-name]-requirements.md** - MUST be created for Level 3-4 tasks` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/plan_instructions.md` | L316 | `5. **memory-bank/planning/[task-name]-architecture.md** - MUST be created for Level 4 tasks` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/design_instructions.md` | L164 | `- memory-bank/creative/[project-specific-files]` |
+
+</details>
+
+---
+
+Теперь создам детальный план реализации:
+
+---
+
+```bash
+mkdir -p memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/planning
+```
+
+```
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗ 
+
+```
+
+---
+
+```diff
+- 
++ # ТРЕБОВАНИЯ: УНИФИКАЦИЯ ПУТЕЙ АРТЕФАКТОВ
++ 
++ **Задача:** 2025-06-25_ID-002_artifact-paths-unification
++ **Дата создания:** 2025-06-25
++ **Режим:** PLAN
++ **Сложность:** Level 3
++ 
++ ## 🎯 АНАЛИЗ ТЕКУЩИХ ПРОБЛЕМ
++ 
++ ### 📊 НАЙДЕННЫЕ ПРОБЛЕМНЫЕ ПУТИ:
++ 
++ #### 1. CREATIVE INSTRUCTIONS (2 файла)
++ - ❌ `memory-bank/creative/[project-specific-files]`
++ - ❌ `memory-bank/creative/[component-name].md`
++ - ❌ `memory-bank/style-guide.md`
++ 
++ #### 2. PLAN INSTRUCTIONS
++ - ❌ `memory-bank/planning/[task-name]-requirements.md`
++ - ❌ `memory-bank/planning/[task-name]-architecture.md`
++ 
++ #### 3. IMPLEMENT INSTRUCTIONS
++ - ❌ `memory-bank/implementation/[task-name]-build-log.md`
++ - ❌ `memory-bank/implementation/[task-name]-test-results.md`
++ 
++ #### 4. QA INSTRUCTIONS
++ - ❌ `memory-bank/qa/[task-name]-qa-report.md`
++ - ❌ `memory-bank/qa/[task-name]-test-log.md`
++ - ❌ `memory-bank/qa/[task-name]-issues.md`
++ 
++ #### 5. REFLECT & ARCHIVE INSTRUCTIONS
++ - ❌ `memory-bank/archive/[task-name]/`
++ 
++ #### 6. UNIVERSAL INSTRUCTIONS
++ - ❌ `memory-bank/universal/[date]-request-log.md`
++ 
++ #### 7. DESIGN INSTRUCTIONS (legacy)
++ - ❌ `memory-bank/creative/[project-specific-files]`
++ 
++ ## 🎯 ФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ
++ 
++ ### FR-001: Унификация путей задачных артефактов
++ **Приоритет:** HIGH
++ **Описание:** Все артефакты, связанные с конкретной задачей, ДОЛЖНЫ создаваться в папке этой задачи.
++ 
++ **Правило:** `$active_task_path/[subfolder]/[artifact]`
++ 
++ ### FR-002: Системные артефакты остаются системными
++ **Приоритет:** HIGH
++ **Описание:** Системные артефакты ДОЛЖНЫ оставаться в системной папке.
++ 
++ **Системные артефакты:**
++ - `memory-bank/system/current-context.md`
++ - `memory-bank/system/workflow-state.txt`
++ - `memory-bank/system/current-task.txt`
++ 
++ ### FR-003: Universal логи в системной папке
++ **Приоритет:** MEDIUM
++ **Описание:** Universal режим создает логи в системной папке, но в подпапке universal.
++ 
++ **Правило:** `memory-bank/system/universal/[date]-request-log.md`
++ 
++ ### FR-004: Использование активной задачи
++ **Приоритет:** HIGH
++ **Описание:** Все режимы ДОЛЖНЫ получать путь активной задачи через `get_active_task_path()`.
++ 
++ ### FR-005: Graceful fallback
++ **Приоритет:** MEDIUM
++ **Описание:** Если активная задача не определена, система ДОЛЖНА работать с legacy `tasks.md`.
++ 
++ ## 🔧 ТЕХНИЧЕСКИЕ ТРЕБОВАНИЯ
++ 
++ ### TR-001: Структура папок задачи
++ **Описание:** Каждая задача ДОЛЖНА иметь стандартную структуру папок.
++ 
++ ```
++ $active_task_path/
++ ├── _task.md                    # основная информация (существует)
++ ├── _context.md                 # контекст и состояние (существует)
++ ├── planning/                   # PLAN MODE артефакты
++ │   ├── requirements.md         # детальные требования
++ │   ├── architecture.md         # архитектурные решения
++ │   └── implementation-plan.md  # план реализации
++ ├── creative/                   # CREATIVE MODE артефакты
++ │   ├── [component-name].md     # творческие решения
++ │   └── style-guide.md          # руководство по стилю
++ ├── implementation/             # IMPLEMENT MODE артефакты
++ │   ├── build-log.md           # логи сборки
++ │   └── test-results.md        # результаты тестов
++ ├── qa/                        # QA MODE артефакты
++ │   ├── qa-report.md           # отчет QA
++ │   ├── test-log.md            # логи тестирования
++ │   └── issues.md              # найденные проблемы
++ ├── reflection/                # REFLECT MODE артефакты
++ │   └── reflection.md          # рефлексия проекта
++ └── release/                   # ARCHIVE MODE артефакты
++     ├── commit-message.txt     # сообщение коммита
++     ├── release-notes.md       # заметки к релизу
++     └── changelog.md           # список изменений
++ ```
++ 
++ ### TR-002: Обновление инструкций режимов
++ **Описание:** Все 6 режимов ДОЛЖНЫ быть обновлены для использования новых путей.
++ 
++ **Список режимов:**
++ 1. `custom_modes/creative_instructions.md`
++ 2. `custom_modes/plan_instructions.md`
++ 3. `custom_modes/implement_instructions.md`
++ 4. `custom_modes/qa_instructions.md`
++ 5. `custom_modes/reflect_archive_instructions.md`
++ 6. `custom_modes/universal_instructions.md`
++ 
++ ### TR-003: Использование переменных
++ **Описание:** Инструкции ДОЛЖНЫ использовать переменную `$active_task_path` вместо хардкода.
++ 
++ **Примеры замен:**
++ - `memory-bank/creative/` → `$active_task_path/creative/`
++ - `memory-bank/planning/` → `$active_task_path/planning/`
++ - `memory-bank/implementation/` → `$active_task_path/implementation/`
++ 
++ ### TR-004: Обратная совместимость
++ **Описание:** Система ДОЛЖНА поддерживать legacy режим для старых задач.
++ 
++ ## 🔒 НЕФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ
++ 
++ ### NFR-001: Производительность
++ **Описание:** Изменения НЕ ДОЛЖНЫ влиять на производительность системы.
++ 
++ ### NFR-002: Надежность
++ **Описание:** Система ДОЛЖНА gracefully обрабатывать отсутствие активной задачи.
++ 
++ ### NFR-003: Maintainability
++ **Описание:** Код ДОЛЖЕН быть легко поддерживаемым и понятным.
++ 
++ ### NFR-004: Совместимость
++ **Описание:** Изменения ДОЛЖНЫ быть совместимы с существующими задачами.
++ 
++ ## ⚠️ ОГРАНИЧЕНИЯ И РИСКИ
++ 
++ ### ОГРАНИЧЕНИЯ:
++ 1. **Активная задача:** Все режимы зависят от корректной работы `get_active_task_path()`
++ 2. **VAN зависимость:** Система зависит от инициализации Memory Bank 2.0.0 в VAN режиме
++ 3. **Legacy поддержка:** Нужно поддерживать старый формат `tasks.md`
++ 
++ ### РИСКИ:
++ 1. **Высокий:** Поломка существующих процессов
++ 2. **Средний:** Проблемы с получением активной задачи
++ 3. **Низкий:** Проблемы совместимости с legacy задачами
++ 
++ ## 🎯 КРИТЕРИИ ПРИЕМКИ
++ 
++ ### AC-001: Все режимы используют активную задачу
++ - [ ] CREATIVE режим создает артефакты в `$active_task_path/creative/`
++ - [ ] PLAN режим создает артефакты в `$active_task_path/planning/`
++ - [ ] IMPLEMENT режим создает артефакты в `$active_task_path/implementation/`
++ - [ ] QA режим создает артефакты в `$active_task_path/qa/`
++ - [ ] REFLECT режим создает артефакты в `$active_task_path/reflection/`
++ - [ ] ARCHIVE режим создает артефакты в `$active_task_path/release/`
++ 
++ ### AC-002: Системные артефакты остаются системными
++ - [ ] `memory-bank/system/current-context.md` остается в системной папке
++ - [ ] `memory-bank/system/workflow-state.txt` остается в системной папке
++ - [ ] `memory-bank/system/current-task.txt` остается в системной папке
++ 
++ ### AC-003: Universal логи в правильном месте
++ - [ ] Universal режим создает логи в `memory-bank/system/universal/`
++ 
++ ### AC-004: Graceful fallback работает
++ - [ ] Система работает без активной задачи (использует legacy режим)
++ - [ ] Корректные сообщения об ошибках при проблемах с активной задачей
++ 
++ ### AC-005: Документация обновлена
++ - [ ] Все инструкции режимов обновлены
++ - [ ] Создано руководство по новой структуре
++ - [ ] Документирован migration guide
++ 
++ ## 📋 ЗАВИСИМОСТИ
++ 
++ ### ВНЕШНИЕ ЗАВИСИМОСТИ:
++ 1. **VAN режим** - инициализация Memory Bank 2.0.0
++ 2. **Active Task Manager** - функции `get_active_task_path()` и `set_active_task()`
++ 
++ ### ВНУТРЕННИЕ ЗАВИСИМОСТИ:
++ 1. **Все режимы** - должны быть обновлены одновременно
++ 2. **Тестирование** - требует активной задачи для проверки
++ 
++ ---
++ 
++ **Создано:** 2025-06-25 в PLAN режиме
++ **Статус:** DRAFT → READY FOR ARCHITECTURE
+```
+
+---
+
+Теперь создам архитектурный план:
+
+---
+
+```diff
+- 
++ # АРХИТЕКТУРА: УНИФИКАЦИЯ ПУТЕЙ АРТЕФАКТОВ
++ 
++ **Задача:** 2025-06-25_ID-002_artifact-paths-unification
++ **Дата создания:** 2025-06-25
++ **Режим:** PLAN
++ **Сложность:** Level 3
++ 
++ ## 🏗️ АРХИТЕКТУРНЫЙ ОБЗОР
++ 
++ ### ТЕКУЩАЯ АРХИТЕКТУРА (ПРОБЛЕМНАЯ):
++ ```
++ memory-bank/
++ ├── creative/           ❌ Разрозненные артефакты
++ ├── planning/          ❌ Разрозненные артефакты
++ ├── implementation/    ❌ Разрозненные артефакты
++ ├── qa/               ❌ Разрозненные артефакты
++ ├── archive/          ❌ Разрозненные артефакты
++ ├── universal/        ❌ Разрозненные артефакты
++ └── system/           ✅ Системные файлы (правильно)
++ ```
++ 
++ ### ЦЕЛЕВАЯ АРХИТЕКТУРА (Memory Bank 2.0.0):
++ ```
++ memory-bank/
++ ├── tasks/
++ │   ├── todo/
++ │   ├── in_progress/
++ │   └── done/
++ │       └── [task-directory]/     ✅ Все артефакты задачи здесь
++ │           ├── _task.md
++ │           ├── _context.md
++ │           ├── planning/         ✅ PLAN артефакты
++ │           ├── creative/         ✅ CREATIVE артефакты
++ │           ├── implementation/   ✅ IMPLEMENT артефакты
++ │           ├── qa/              ✅ QA артефакты
++ │           ├── reflection/      ✅ REFLECT артефакты
++ │           └── release/         ✅ ARCHIVE артефакты
++ └── system/                      ✅ Системные артефакты
++     ├── current-context.md
++     ├── workflow-state.txt
++     ├── current-task.txt
++     └── universal/               ✅ Universal логи
++ ```
++ 
++ ## 🔧 АРХИТЕКТУРНЫЕ КОМПОНЕНТЫ
++ 
++ ### 1. ACTIVE TASK PATH RESOLVER
++ **Описание:** Компонент для получения пути активной задачи
++ **Функция:** `get_active_task_path()`
++ **Статус:** ✅ Существует (в Core/active-task-manager.mdc)
++ 
++ ```bash
++ # Пример использования:
++ active_task_path=$(get_active_task_path)
++ # Возвращает: memory-bank/tasks/[status]/[task-directory]
++ ```
++ 
++ ### 2. ARTIFACT PATH BUILDER
++ **Описание:** Построение путей для артефактов на основе активной задачи
++ **Паттерн:** `$active_task_path/[subfolder]/[artifact-name]`
++ 
++ ```bash
++ # Примеры построения путей:
++ planning_requirements="$active_task_path/planning/requirements.md"
++ creative_component="$active_task_path/creative/component-name.md"
++ qa_report="$active_task_path/qa/qa-report.md"
++ ```
++ 
++ ### 3. FALLBACK MECHANISM
++ **Описание:** Обработка случаев, когда активная задача не определена
++ **Логика:**
++ 1. Проверить `get_active_task_path()`
++ 2. Если пуст → использовать legacy `tasks.md`
++ 3. Если ошибка → сообщить пользователю
++ 
++ ### 4. MODE INSTRUCTION UPDATER
++ **Описание:** Обновление всех инструкций режимов для использования новых путей
++ **Компоненты:**
++ - Path replacement logic
++ - Variable substitution
++ - Validation checks
++ 
++ ## 📋 ДЕТАЛЬНЫЙ ПЛАН ЗАМЕН
++ 
++ ### MAPPING СТАРЫХ ПУТЕЙ НА НОВЫЕ:
++ 
++ #### CREATIVE MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/creative/[project-specific-files]
++ memory-bank/creative/[component-name].md
++ memory-bank/style-guide.md
++ 
++ # НОВЫЕ ПУТИ:
++ $active_task_path/creative/[component-name].md
++ $active_task_path/creative/style-guide.md
++ ```
++ 
++ #### PLAN MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/planning/[task-name]-requirements.md
++ memory-bank/planning/[task-name]-architecture.md
++ 
++ # НОВЫЕ ПУТИ:
++ $active_task_path/planning/requirements.md
++ $active_task_path/planning/architecture.md
++ $active_task_path/planning/implementation-plan.md
++ ```
++ 
++ #### IMPLEMENT MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/implementation/[task-name]-build-log.md
++ memory-bank/implementation/[task-name]-test-results.md
++ 
++ # НОВЫЕ ПУТИ:
++ $active_task_path/implementation/build-log.md
++ $active_task_path/implementation/test-results.md
++ ```
++ 
++ #### QA MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/qa/[task-name]-qa-report.md
++ memory-bank/qa/[task-name]-test-log.md
++ memory-bank/qa/[task-name]-issues.md
++ 
++ # НОВЫЕ ПУТИ:
++ $active_task_path/qa/qa-report.md
++ $active_task_path/qa/test-log.md
++ $active_task_path/qa/issues.md
++ ```
++ 
++ #### REFLECT & ARCHIVE MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/archive/[task-name]/
++ 
++ # НОВЫЕ ПУТИ:
++ $active_task_path/reflection/reflection.md
++ $active_task_path/release/commit-message.txt
++ $active_task_path/release/release-notes.md
++ $active_task_path/release/changelog.md
++ ```
++ 
++ #### UNIVERSAL MODE:
++ ```bash
++ # СТАРЫЕ ПУТИ:
++ memory-bank/universal/[date]-request-log.md
++ 
++ # НОВЫЕ ПУТИ:
++ memory-bank/system/universal/[date]-request-log.md
++ ```
++ 
++ ## 🔄 АЛГОРИТМ ОБНОВЛЕНИЯ
++ 
++ ### Phase 1: Подготовка
++ 1. **Backup текущих инструкций**
++ 2. **Анализ всех путей** (уже выполнено)
++ 3. **Создание mapping таблицы** (выполнено выше)
++ 
++ ### Phase 2: Обновление инструкций
++ ```bash
++ # Для каждого режима:
++ for mode in creative plan implement qa reflect_archive universal; do
++     echo "Updating ${mode}_instructions.md..."
++ 
++     # 1. Заменить старые пути на новые
++     # 2. Добавить проверку активной задачи
++     # 3. Добавить fallback логику
++     # 4. Обновить mandatory artifacts
++ done
++ ```
++ 
++ ### Phase 3: Валидация
++ ```bash
++ # Проверить все замены:
++ grep -r "memory-bank/creative/" custom_modes/     # Должно быть 0 результатов
++ grep -r "memory-bank/planning/" custom_modes/    # Должно быть 0 результатов
++ grep -r "memory-bank/implementation/" custom_modes/ # Должно быть 0 результатов
++ grep -r "memory-bank/qa/" custom_modes/          # Должно быть 0 результатов
++ grep -r "memory-bank/archive/" custom_modes/     # Должно быть 0 результатов
++ 
++ # Проверить использование переменных:
++ grep -r "\$active_task_path" custom_modes/       # Должно быть много результатов
++ ```
++ 
++ ## 🛠️ ТЕХНИЧЕСКИЕ ДЕТАЛИ
++ 
++ ### TEMPLATE ДЛЯ ОБНОВЛЕНИЯ РЕЖИМОВ:
++ 
++ ```bash
++ # В начале каждого режима добавить:
++ echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
++ active_task_path=$(get_active_task_path)
++ 
++ if [ -z "$active_task_path" ]; then
++     echo "⚠️  No active task selected. Using legacy mode."
++     echo "Please set active task with: set_active_task(path)"
++     # Fallback logic here
++     exit 1
++ fi
++ 
++ echo "✅ Active task: $active_task_path"
++ 
++ # Создание папок:
++ mkdir -p "$active_task_path/[mode-folder]"
++ 
++ # Создание артефактов:
++ artifact_path="$active_task_path/[mode-folder]/[artifact-name]"
++ ```
++ 
++ ### VALIDATION CHECKS:
++ ```bash
++ # В каждом режиме добавить проверки:
++ validate_active_task() {
++     if [ ! -d "$active_task_path" ]; then
++         echo "❌ Active task directory not found: $active_task_path"
++         return 1
++     fi
++ 
++     if [ ! -f "$active_task_path/_task.md" ]; then
++         echo "❌ Task file not found: $active_task_path/_task.md"
++         return 1
++     fi
++ 
++     echo "✅ Active task validated: $active_task_path"
++     return 0
++ }
++ ```
++ 
++ ## 🔒 БЕЗОПАСНОСТЬ И НАДЕЖНОСТЬ
++ 
++ ### ERROR HANDLING:
++ 1. **Проверка существования активной задачи**
++ 2. **Graceful fallback на legacy режим**
++ 3. **Валидация путей перед созданием файлов**
++ 4. **Информативные сообщения об ошибках**
++ 
++ ### BACKWARD COMPATIBILITY:
++ 1. **Поддержка legacy `tasks.md`**
++ 2. **Автоматическое обнаружение старой структуры**
++ 3. **Migration подсказки для пользователей**
++ 
++ ### TESTING STRATEGY:
++ 1. **Unit tests для каждого режима**
++ 2. **Integration tests для полного workflow**
++ 3. **Edge case testing (нет активной задачи)**
++ 4. **Performance regression testing**
++ 
++ ## 📊 МЕТРИКИ УСПЕХА
++ 
++ ### КОЛИЧЕСТВЕННЫЕ МЕТРИКИ:
++ - [ ] **0** старых путей в инструкциях режимов
++ - [ ] **6** обновленных режимов
++ - [ ] **100%** использование `$active_task_path`
++ - [ ] **0** ошибок при создании артефактов
++ 
++ ### КАЧЕСТВЕННЫЕ МЕТРИКИ:
++ - [ ] Все артефакты создаются в правильных местах
++ - [ ] Система gracefully обрабатывает отсутствие активной задачи
++ - [ ] Обратная совместимость работает
++ - [ ] Документация обновлена и понятна
++ 
++ ## 🚀 ПЛАН РАЗВЕРТЫВАНИЯ
++ 
++ ### ПОРЯДОК ОБНОВЛЕНИЯ:
++ 1. **UNIVERSAL** - самый простой (только логи)
++ 2. **PLAN** - средний (requirements + architecture)
++ 3. **CREATIVE** - средний (компоненты + стили)
++ 4. **IMPLEMENT** - средний (логи + результаты)
++ 5. **QA** - сложный (отчеты + логи + проблемы)
++ 6. **REFLECT & ARCHIVE** - сложный (рефлексия + релиз)
++ 
++ ### ROLLBACK PLAN:
++ 1. Backup всех оригинальных файлов
++ 2. Git commit после каждого режима
++ 3. Возможность отката к предыдущему состоянию
++ 4. Восстановление из backup при критических ошибках
++ 
++ ---
++ 
++ **Создано:** 2025-06-25 в PLAN режиме
++ **Статус:** ARCHITECTURE COMPLETE → READY FOR IMPLEMENTATION PLAN
+```
+
+---
+
+Теперь создам детальный план реализации:
+
+---
+
+```diff
+- 
++ # ПЛАН РЕАЛИЗАЦИИ: УНИФИКАЦИЯ ПУТЕЙ АРТЕФАКТОВ
++ 
++ **Задача:** 2025-06-25_ID-002_artifact-paths-unification
++ **Дата создания:** 2025-06-25
++ **Режим:** PLAN
++ **Сложность:** Level 3
++ 
++ ## 🎯 EXECUTIVE SUMMARY
++ 
++ **Цель:** Унифицировать все пути создания артефактов в Memory Bank системе для соответствия Memory Bank 2.0.0 структуре.
++ 
++ **Масштаб:** 6 режимов, 15+ файлов артефактов, критическая системная целостность.
++ 
++ **Временные рамки:** 1 сессия IMPLEMENT режима (высокий приоритет).
++ 
++ **Риски:** HIGH - может сломать существующие процессы.
++ 
++ ## 📋 ДЕТАЛЬНЫЙ ПЛАН РЕАЛИЗАЦИИ
++ 
++ ### PHASE 1: ПОДГОТОВКА И BACKUP (15 мин)
++ 
++ #### Step 1.1: Создание backup
++ ```bash
++ # Создать backup всех инструкций режимов
++ mkdir -p memory-bank/system/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M)
++ cp custom_modes/*.md memory-bank/system/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M)/
++ echo "✅ Backup created"
++ ```
++ 
++ #### Step 1.2: Git commit baseline
++ ```bash
++ git add .
++ git commit -m "BACKUP: Before artifact paths unification
++ 
++ - All mode instructions backed up
++ - Current state preserved
++ - Ready for artifact paths unification"
++ echo "✅ Git baseline created"
++ ```
++ 
++ #### Step 1.3: Валидация текущего состояния
++ ```bash
++ # Проверить количество проблемных путей
++ echo "=== CURRENT PROBLEMATIC PATHS ==="
++ grep -r "memory-bank/creative/" custom_modes/ | wc -l
++ grep -r "memory-bank/planning/" custom_modes/ | wc -l
++ grep -r "memory-bank/implementation/" custom_modes/ | wc -l
++ grep -r "memory-bank/qa/" custom_modes/ | wc -l
++ grep -r "memory-bank/archive/" custom_modes/ | wc -l
++ grep -r "memory-bank/universal/" custom_modes/ | wc -l
++ echo "✅ Current state documented"
++ ```
++ 
++ ### PHASE 2: ОБНОВЛЕНИЕ РЕЖИМОВ (45 мин)
++ 
++ **Порядок обновления:** От простого к сложному
++ 
++ #### Step 2.1: UNIVERSAL INSTRUCTIONS (5 мин)
++ **Файл:** `custom_modes/universal_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/universal/[date]-request-log.md`
++ - ✅ `memory-bank/system/universal/[date]-request-log.md`
++ 
++ **Детали:**
++ ```bash
++ # Заменить строку:
++ OLD: "memory-bank/universal/[date]-request-log.md"
++ NEW: "memory-bank/system/universal/[date]-request-log.md"
++ 
++ # Добавить создание папки:
++ mkdir -p memory-bank/system/universal
++ ```
++ 
++ #### Step 2.2: PLAN INSTRUCTIONS (10 мин)
++ **Файл:** `custom_modes/plan_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/planning/[task-name]-requirements.md`
++ - ❌ `memory-bank/planning/[task-name]-architecture.md`
++ - ✅ `$active_task_path/planning/requirements.md`
++ - ✅ `$active_task_path/planning/architecture.md`
++ - ✅ `$active_task_path/planning/implementation-plan.md`
++ 
++ **Template для добавления:**
++ ```bash
++ # В начало MANDATORY ARTIFACT CREATION добавить:
++ echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
++ active_task_path=$(get_active_task_path)
++ 
++ if [ -z "$active_task_path" ]; then
++     echo "⚠️  No active task selected. Please set active task first."
++     echo "Use: set_active_task(memory-bank/tasks/[status]/[task-directory])"
++     exit 1
++ fi
++ 
++ echo "✅ Active task: $active_task_path"
++ mkdir -p "$active_task_path/planning"
++ ```
++ 
++ #### Step 2.3: CREATIVE INSTRUCTIONS (10 mин)
++ **Файл:** `custom_modes/creative_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/creative/[project-specific-files]`
++ - ❌ `memory-bank/creative/[component-name].md`
++ - ❌ `memory-bank/style-guide.md`
++ - ✅ `$active_task_path/creative/[component-name].md`
++ - ✅ `$active_task_path/creative/style-guide.md`
++ 
++ #### Step 2.4: IMPLEMENT INSTRUCTIONS (10 мин)
++ **Файл:** `custom_modes/implement_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/implementation/[task-name]-build-log.md`
++ - ❌ `memory-bank/implementation/[task-name]-test-results.md`
++ - ✅ `$active_task_path/implementation/build-log.md`
++ - ✅ `$active_task_path/implementation/test-results.md`
++ 
++ #### Step 2.5: QA INSTRUCTIONS (10 мин)
++ **Файл:** `custom_modes/qa_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/qa/[task-name]-qa-report.md`
++ - ❌ `memory-bank/qa/[task-name]-test-log.md`
++ - ❌ `memory-bank/qa/[task-name]-issues.md`
++ - ✅ `$active_task_path/qa/qa-report.md`
++ - ✅ `$active_task_path/qa/test-log.md`
++ - ✅ `$active_task_path/qa/issues.md`
++ 
++ #### Step 2.6: REFLECT & ARCHIVE INSTRUCTIONS (10 мин)
++ **Файл:** `custom_modes/reflect_archive_instructions.md`
++ **Изменения:**
++ - ❌ `memory-bank/archive/[task-name]/`
++ - ✅ `$active_task_path/reflection/reflection.md`
++ - ✅ `$active_task_path/release/commit-message.txt`
++ - ✅ `$active_task_path/release/release-notes.md`
++ - ✅ `$active_task_path/release/changelog.md`
++ 
++ ### PHASE 3: ВАЛИДАЦИЯ И ТЕСТИРОВАНИЕ (20 мин)
++ 
++ #### Step 3.1: Автоматическая валидация
++ ```bash
++ echo "=== VALIDATION CHECKS ==="
++ 
++ # 1. Проверить отсутствие старых путей
++ echo "Checking for old paths..."
++ OLD_PATHS_COUNT=0
++ OLD_PATHS_COUNT=$((OLD_PATHS_COUNT + $(grep -r "memory-bank/creative/" custom_modes/ | wc -l)))
++ OLD_PATHS_COUNT=$((OLD_PATHS_COUNT + $(grep -r "memory-bank/planning/" custom_modes/ | wc -l)))
++ OLD_PATHS_COUNT=$((OLD_PATHS_COUNT + $(grep -r "memory-bank/implementation/" custom_modes/ | wc -l)))
++ OLD_PATHS_COUNT=$((OLD_PATHS_COUNT + $(grep -r "memory-bank/qa/" custom_modes/ | wc -l)))
++ OLD_PATHS_COUNT=$((OLD_PATHS_COUNT + $(grep -r "memory-bank/archive/" custom_modes/ | wc -l)))
++ 
++ if [ $OLD_PATHS_COUNT -eq 0 ]; then
++     echo "✅ No old paths found"
++ else
++     echo "❌ Found $OLD_PATHS_COUNT old paths - NEED TO FIX"
++     exit 1
++ fi
++ 
++ # 2. Проверить использование $active_task_path
++ ACTIVE_TASK_COUNT=$(grep -r "\$active_task_path" custom_modes/ | wc -l)
++ if [ $ACTIVE_TASK_COUNT -gt 10 ]; then
++     echo "✅ Active task path usage: $ACTIVE_TASK_COUNT occurrences"
++ else
++     echo "❌ Insufficient active task path usage: $ACTIVE_TASK_COUNT"
++     exit 1
++ fi
++ 
++ # 3. Проверить Universal системные пути
++ UNIVERSAL_SYSTEM_COUNT=$(grep -r "memory-bank/system/universal/" custom_modes/ | wc -l)
++ if [ $UNIVERSAL_SYSTEM_COUNT -gt 0 ]; then
++     echo "✅ Universal system paths found: $UNIVERSAL_SYSTEM_COUNT"
++ else
++     echo "❌ Universal system paths not found"
++     exit 1
++ fi
++ 
++ echo "✅ All validation checks passed"
++ ```
++ 
++ #### Step 3.2: Функциональное тестирование
++ ```bash
++ echo "=== FUNCTIONAL TESTING ==="
++ 
++ # 1. Тест получения активной задачи
++ echo "Testing active task resolution..."
++ active_task_path=$(get_active_task_path)
++ if [ -n "$active_task_path" ]; then
++     echo "✅ Active task resolved: $active_task_path"
++ else
++     echo "⚠️  No active task (expected for this test)"
++ fi
++ 
++ # 2. Тест создания папок
++ echo "Testing folder creation..."
++ test_path="memory-bank/tasks/todo/test-task"
++ mkdir -p "$test_path/planning"
++ mkdir -p "$test_path/creative"
++ mkdir -p "$test_path/implementation"
++ mkdir -p "$test_path/qa"
++ mkdir -p "$test_path/reflection"
++ mkdir -p "$test_path/release"
++ 
++ if [ -d "$test_path/planning" ] && [ -d "$test_path/creative" ]; then
++     echo "✅ Folder creation works"
++     rm -rf "$test_path"
++ else
++     echo "❌ Folder creation failed"
++     exit 1
++ fi
++ 
++ echo "✅ Functional testing passed"
++ ```
++ 
++ #### Step 3.3: Интеграционное тестирование
++ ```bash
++ echo "=== INTEGRATION TESTING ==="
++ 
++ # Симуляция каждого режима с текущей активной задачей
++ if [ -n "$active_task_path" ]; then
++     echo "Testing with active task: $active_task_path"
++ 
++     # Тест создания артефактов
++     mkdir -p "$active_task_path/planning"
++     echo "Test requirements" > "$active_task_path/planning/test-requirements.md"
++ 
++     if [ -f "$active_task_path/planning/test-requirements.md" ]; then
++         echo "✅ Artifact creation works"
++         rm "$active_task_path/planning/test-requirements.md"
++     else
++         echo "❌ Artifact creation failed"
++         exit 1
++     fi
++ else
++     echo "⚠️  No active task - skipping integration test"
++ fi
++ 
++ echo "✅ Integration testing completed"
++ ```
++ 
++ ### PHASE 4: ДОКУМЕНТАЦИЯ И ФИНАЛИЗАЦИЯ (10 мин)
++ 
++ #### Step 4.1: Обновление документации
++ ```bash
++ # Создать migration guide
++ echo "Creating migration guide..."
++ cat > memory-bank/system/artifact-paths-migration-guide.md << 'EOF'
++ # ARTIFACT PATHS MIGRATION GUIDE
++ 
++ ## Что изменилось:
++ - Все артефакты задач теперь создаются в папке активной задачи
++ - Системные артефакты остаются в memory-bank/system/
++ - Universal логи перенесены в memory-bank/system/universal/
++ 
++ ## Новая структура:
++ $active_task_path/
++ ├── planning/     # PLAN артефакты
++ ├── creative/     # CREATIVE артефакты
++ ├── implementation/ # IMPLEMENT артефакты
++ ├── qa/          # QA артефакты
++ ├── reflection/  # REFLECT артефакты
++ └── release/     # ARCHIVE артефакты
++ 
++ ## Как использовать:
++ 1. Убедитесь, что активная задача установлена
++ 2. Все режимы автоматически создают артефакты в правильных местах
++ 3. Если активная задача не установлена - система выдаст ошибку с инструкциями
++ EOF
++ 
++ echo "✅ Migration guide created"
++ ```
++ 
++ #### Step 4.2: Final commit
++ ```bash
++ git add .
++ git commit -m "IMPLEMENT: Artifact paths unification complete
++ 
++ ✅ ALL 6 MODES UPDATED:
++ - creative_instructions.md: Uses \$active_task_path/creative/
++ - plan_instructions.md: Uses \$active_task_path/planning/
++ - implement_instructions.md: Uses \$active_task_path/implementation/
++ - qa_instructions.md: Uses \$active_task_path/qa/
++ - reflect_archive_instructions.md: Uses \$active_task_path/reflection/ and release/
++ - universal_instructions.md: Uses memory-bank/system/universal/
++ 
++ ✅ VALIDATION PASSED:
++ - 0 old paths remaining
++ - Active task path integration complete
++ - Graceful fallback implemented
++ - Testing successful
++ 
++ ✅ SYSTEM INTEGRITY RESTORED:
++ - Memory Bank 2.0.0 compliance achieved
++ - All task artifacts properly grouped
++ - System artifacts remain in system folder
++ 
++ Fixes: #2025-06-25_ID-002_artifact-paths-unification"
++ 
++ echo "✅ Final commit created"
++ ```
++ 
++ ## 🔧 ТЕХНИЧЕСКИЕ ДЕТАЛИ РЕАЛИЗАЦИИ
++ 
++ ### ШАБЛОН ДЛЯ КАЖДОГО РЕЖИМА:
++ 
++ ```bash
++ # Добавить в начало MANDATORY ARTIFACT CREATION:
++ echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
++ active_task_path=$(get_active_task_path)
++ 
++ if [ -z "$active_task_path" ]; then
++     echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
++     echo ""
++     echo "🔧 РЕШЕНИЕ:"
++     echo "1. Выберите существующую задачу:"
++     echo "   ls memory-bank/tasks/todo/"
++     echo "   ls memory-bank/tasks/in_progress/"
++     echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
++     echo ""
++     echo "2. Или создайте новую задачу в VAN режиме"
++     echo ""
++     echo "❌ [MODE] режим не может продолжить без активной задачи"
++     exit 1
++ fi
++ 
++ echo "✅ Активная задача: $active_task_path"
++ echo "📁 Создание папки [mode-folder]..."
++ mkdir -p "$active_task_path/[mode-folder]"
++ ```
++ 
++ ### СПЕЦИФИЧНЫЕ ЗАМЕНЫ ПО РЕЖИМАМ:
++ 
++ #### CREATIVE:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/creative/" → "$active_task_path/creative/"
++ "memory-bank/style-guide.md" → "$active_task_path/creative/style-guide.md"
++ 
++ # Обязательные артефакты:
++ - $active_task_path/creative/[component-name].md
++ - $active_task_path/creative/style-guide.md
++ ```
++ 
++ #### PLAN:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/planning/" → "$active_task_path/planning/"
++ 
++ # Обязательные артефакты:
++ - $active_task_path/planning/requirements.md (Level 3-4)
++ - $active_task_path/planning/architecture.md (Level 4)
++ - $active_task_path/planning/implementation-plan.md (Level 3-4)
++ ```
++ 
++ #### IMPLEMENT:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/implementation/" → "$active_task_path/implementation/"
++ 
++ # Обязательные артефакты:
++ - $active_task_path/implementation/build-log.md
++ - $active_task_path/implementation/test-results.md
++ ```
++ 
++ #### QA:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/qa/" → "$active_task_path/qa/"
++ 
++ # Обязательные артефакты:
++ - $active_task_path/qa/qa-report.md
++ - $active_task_path/qa/test-log.md
++ - $active_task_path/qa/issues.md (если найдены проблемы)
++ ```
++ 
++ #### REFLECT & ARCHIVE:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/archive/" → "$active_task_path/reflection/" и "$active_task_path/release/"
++ 
++ # Обязательные артефакты:
++ - $active_task_path/reflection/reflection.md
++ - $active_task_path/release/commit-message.txt
++ - $active_task_path/release/release-notes.md
++ - $active_task_path/release/changelog.md
++ ```
++ 
++ #### UNIVERSAL:
++ ```bash
++ # Старые пути → Новые пути
++ "memory-bank/universal/" → "memory-bank/system/universal/"
++ 
++ # Обязательные артефакты:
++ - memory-bank/system/universal/[date]-request-log.md
++ ```
++ 
++ ## ⚠️ КРИТИЧЕСКИЕ МОМЕНТЫ
++ 
++ ### РИСКИ:
++ 1. **Поломка существующих процессов** - минимизируется тестированием
++ 2. **Проблемы с активной задачей** - решается graceful fallback
++ 3. **Потеря данных** - предотвращается backup'ом
++ 
++ ### МИТИГАЦИЯ:
++ 1. **Полный backup перед началом**
++ 2. **Поэтапные git commit'ы**
++ 3. **Автоматическая валидация на каждом шаге**
++ 4. **Rollback план готов**
++ 
++ ### SUCCESS CRITERIA:
++ - [ ] ✅ 0 старых путей в инструкциях
++ - [ ] ✅ 6 режимов обновлены
++ - [ ] ✅ Все тесты пройдены
++ - [ ] ✅ Git commits созданы
++ - [ ] ✅ Документация обновлена
++ 
++ ## 🎯 СЛЕДУЮЩИЕ ШАГИ
++ 
++ После завершения IMPLEMENT:
++ 1. **QA** - протестировать все режимы с реальными задачами
++ 2. **REFLECT** - проанализировать качество решения
++ 3. **ARCHIVE** - зафиксировать изменения и создать релиз
++ 
++ ---
++ 
++ **Создано:** 2025-06-25 в PLAN режиме
++ **Статус:** IMPLEMENTATION PLAN COMPLETE → READY FOR CREATIVE/IMPLEMENT
++ **Рекомендуемый следующий режим:** IMPLEMENT (немедленная реализация)
++ **Приоритет:** HIGH - критическая системная проблема
+```
+
+---
+
+Теперь обновлю контекст и подведу итоги PLAN режима:
+
+---
+
+
+
+---
+
+
+
+---
+
+```bash
+echo "=== PLAN РЕЖИМ ЗАВЕРШЕН ===" && echo "" && echo "✅ СОЗДАНО 3 АРТЕФАКТА ПЛАНИРОВАНИЯ:" && echo "1. requirements.md - Детальные требования и критерии приемки" && echo "2. architecture.md - Архитектурное решение и компоненты" && echo "3. implementation-plan.md - Пошаговый план реализации" && echo "" && echo "🎯 КЛЮЧЕВЫЕ РЕЗУЛЬТАТЫ ПЛАНИРОВАНИЯ:" && echo "- Найдено 15+ проблемных путей в 6 режимах" && echo "- Создан mapping старых путей на новые" && echo "- Определена архитектура с \$active_task_path" && echo "- Разработан план в 4 фазы с валидацией" && echo "- Подготовлены шаблоны для каждого режима" && echo "" && echo "🚀 СЛЕДУЮЩИЙ РЕЖИМ: IMPLEMENT" && echo "📋 ПРИОРИТЕТ: HIGH (критическая системная проблема)" && echo "⏰ ГОТОВО К НЕМЕДЛЕННОЙ РЕАЛИЗАЦИИ"
+```
+
+```
+<блема)" && echo "⏰ ГОТОВО К НЕМЕДЛЕННОЙ РЕАЛИЗАЦИИ"
+=== PLAN РЕЖИМ ЗАВЕРШЕН ===
+
+✅ СОЗДАНО 3 АРТЕФАКТА ПЛАНИРОВАНИЯ:
+1. requirements.md - Детальные требования и критерии приемки
+2. architecture.md - Архитектурное решение и компоненты
+3. implementation-plan.md - Пошаговый план реализации
+
+🎯 КЛЮЧЕВЫЕ РЕЗУЛЬТАТЫ ПЛАНИРОВАНИЯ:
+- Найдено 15+ проблемных путей в 6 режимах
+- Создан mapping старых путей на новые
+- Определена архитектура с $active_task_path
+- Разработан план в 4 фазы с валидацией
+- Подготовлены шаблоны для каждого режима
+
+🚀 СЛЕДУЮЩИЙ РЕЖИМ: IMPLEMENT
+📋 ПРИОРИТЕТ: HIGH (критическая системная проблема)
+⏰ ГОТОВО К НЕМЕДЛЕННОЙ РЕАЛИЗАЦИИ
+?➜  cursor-memory-bank git:(backup-rules-20250620-2303) ?✗
+```
+
+---
+
+## 🎯 ПЛАН РЕЖИМ ЗАВЕРШЕН УСПЕШНО
+
+Я успешно завершил детальное планирование критической задачи унификации путей артефактов. Создано **3 ключевых артефакта планирования** в соответствии с Memory Bank 2.0.0 структурой:
+
+### ✅ РЕЗУЛЬТАТЫ ПЛАНИРОВАНИЯ:
+
+**1. Детальные требования** (`requirements.md`):
+- Проанализированы все 15+ проблемных путей в 6 режимах
+- Определены функциональные и технические требования 
+- Созданы критерии приемки для валидации
+- Описаны риски и ограничения
+
+**2. Архитектурное решение** (`architecture.md`):
+- Спроектирована целевая архитектура Memory Bank 2.0.0
+- Создан mapping старых путей на новые
+- Определены компоненты: Active Task Path Resolver, Artifact Path Builder, Fallback Mechanism
+- Разработаны шаблоны для обновления каждого режима
+
+**3. План реализации** (`implementation-plan.md`):
+- Детальный план в 4 фазы с временными рамками
+- Пошаговые инструкции для каждого из 6 режимов
+- Автоматическая валидация и тестирование
+- Backup стратегия и rollback план
+
+### 🚨 КРИТИЧЕСКАЯ ВАЖНОСТЬ:
+
+Эта задача имеет **HIGH приоритет**, поскольку текущая система нарушает принципы Memory Bank 2.0.0 - все артефакты создаются в разрозненных местах вместо группировки по задачам. Это критически важно для:
+- Целостности системы
+- Эффективного управления задачами  
+- Правильной работы рефлексии и анализа
+
+### 🎯 СЛЕДУЮЩИЙ ШАГ:
+
+**РЕКОМЕНДАЦИЯ:** Немедленно перейти в **IMPLEMENT режим** для реализации разработанного плана. Все необходимые детали, шаблоны и инструкции готовы для выполнения.
+
+Задача готова к реализации! 🚀
+
+---
+*Response generated using Claude Sonnet 4*
+
+---
+
+_**User**_
+
+IMPLEMENT
+
+---
+
+_**Assistant**_
+
+Активирую IMPLEMENT режим для реализации унификации путей артефактов согласно разработанному плану.
+
+---
+
+```bash
+echo "=== АКТИВАЦИЯ IMPLEMENT РЕЖИМА ===" && echo "" && echo "🎯 ЗАДАЧА: 2025-06-25_ID-002_artifact-paths-unification" && echo "📋 ПЕРЕХОД: PLAN → IMPLEMENT" && echo "🚨 ПРИОРИТЕТ: HIGH (критическая системная проблема)" && echo "" && echo "📊 ПЛАН РЕАЛИЗАЦИИ:" && echo "- Phase 1: Подготовка и backup (15 мин)" && echo "- Phase 2: Обновление 6 режимов (45 мин)" && echo "- Phase 3: Валидация и тестирование (20 мин)" && echo "- Phase 4: Документация и финализация (10 мин)" && echo "" && echo "🔄 НАЧИНАЮ РЕАЛИЗАЦИЮ..."
+```
+
+```
+< мин)" && echo "" && echo "🔄 НАЧИНАЮ РЕАЛИЗАЦИЮ..."
+=== АКТИВАЦИЯ IMPLEMENT РЕЖИМА ===
+
+🎯 ЗАДАЧА: 2025-06-25_ID-002_artifact-paths-unification
+📋 ПЕРЕХОД: PLAN → IMPLEMENT
+🚨 ПРИОРИТЕТ: HIGH (критическая системная проблема)
+
+📊 ПЛАН РЕАЛИЗАЦИИ:
+- Phase 1: Подготовка и backup (15 мин)
+- Phase 2: Обновление 6 режимов (45 мин)
+- Phase 3: Валидация и тестирование (20 мин)
+- Phase 4: Документация и финализация (10 мин)
+
+🔄 НАЧИНАЮ РЕАЛИЗАЦИЮ...
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗
+```
+
+---
+
+```bash
+mkdir -p memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/implementation
+```
+
+```
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗ 
+
+```
+
+---
+
+## PHASE 1: ПОДГОТОВКА И BACKUP
+
+---
+
+```bash
+echo "=== PHASE 1: ПОДГОТОВКА И BACKUP ===" && echo "" && echo "Step 1.1: Создание backup..." && mkdir -p memory-bank/system/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M) && cp custom_modes/*.md memory-bank/system/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M)/ && echo "✅ Backup created in memory-bank/system/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M)/"
+```
+
+```
+<em/backups/artifact-paths-fix-$(date +%Y%m%d-%H%M)/"
+=== PHASE 1: ПОДГОТОВКА И BACKUP ===
+
+Step 1.1: Создание backup...
+✅ Backup created in memory-bank/system/backups/artifact-paths-fix-20250625-1253/
+➜  cursor-memory-bank git:(backup-rules-20250620-2303) ✗
+```
+
+---
+
+```bash
+echo "Step 1.2: Git commit baseline..." && git add . && git commit -m "BACKUP: Before artifact paths unification
+
+- All mode instructions backed up
+- Current state preserved  
+- Ready for artifact paths unification
+
+Task: 2025-06-25_ID-002_artifact-paths-unification
+Priority: HIGH (critical system integrity issue)" && echo "✅ Git baseline created"
+```
+
+```
+Step 1.2: Git commit baseline...
+[backup-rules-20250620-2303 4fecbee] BACKUP: Before artifact paths unification
+ 218 files changed, 15235 insertions(+), 6071 deletions(-)
+ delete mode 100644 .cursor/rules/isolation_rules/Core/intelligent-model-switching.mdc
+ create mode 100644 ".specstory/history/2025-06-25_05-53-\321\201\320\261\321\200\320\276\321\201-\320\277\3
+21\200\320\276\320\263\321\200\320\265\321\201\321\201\320\260-\320\262-\320\277\321\200\320\276\320\265\320
+\272\321\202\320\265.md"
+ create mode 100644 ".specstory/history/2025-06-25_07-55-\320\277\321\200\320\276\320\262\320\265\321\200\32
+0\272\320\260-\321\201\320\276\320\276\321\202\320\262\320\265\321\202\321\201\321\202\320\262\320\270\321\2
+17-\320\270-\320\270\320\275\321\202\320\265\320\263\321\200\320\260\321\206\320\270\321\217-\320\277\321\20
+0\320\260\320\262\320\270\320\273.md"
+ create mode 100644 .specstory/history/2025-06-25_08-45-discussion-about-vans.md
+ create mode 100644 .specstory/history/2025-06-25_08-53-rename-files-and-verify-rule-calls.md
+ rename .cursor/rules/isolation_rules/Core/active-task-manager.mdc => _cursor/rules/isolation_rules/Core/act
+ive-task-manager.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/background-server-execution.mdc => _cursor/rules/isolation_rules/
+Core/background-server-execution.mdc.md (94%)
+ rename .cursor/rules/isolation_rules/Core/command-execution.mdc => _cursor/rules/isolation_rules/Core/comma
+nd-execution.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/complexity-decision-tree.mdc => _cursor/rules/isolation_rules/Cor
+e/complexity-decision-tree.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/context-management.mdc => _cursor/rules/isolation_rules/Core/cont
+ext-management.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/continue-command-handler.mdc => _cursor/rules/isolation_rules/Cor
+e/continue-command-handler.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/creative-phase-enforcement.mdc => _cursor/rules/isolation_rules/C
+ore/creative-phase-enforcement.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/creative-phase-metrics.mdc => _cursor/rules/isolation_rules/Core/
+creative-phase-metrics.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/date-format-enforcement.mdc => _cursor/rules/isolation_rules/Core
+/date-format-enforcement.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/datetime-manager.mdc => _cursor/rules/isolation_rules/Core/dateti
+me-manager.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/deep-validation-system.mdc => _cursor/rules/isolation_rules/Core/
+deep-validation-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/development-rules-integration.mdc => _cursor/rules/isolation_rule
+s/Core/development-rules-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/file-verification.mdc => _cursor/rules/isolation_rules/Core/file-
+verification.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/git-setup-validation.mdc => _cursor/rules/isolation_rules/Core/gi
+t-setup-validation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/hierarchical-rule-loading.mdc => _cursor/rules/isolation_rules/Co
+re/hierarchical-rule-loading.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/memory-bank-paths.mdc => _cursor/rules/isolation_rules/Core/memor
+y-bank-paths.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/mode-transition-optimization.mdc => _cursor/rules/isolation_rules
+/Core/mode-transition-optimization.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/optimization-integration.mdc => _cursor/rules/isolation_rules/Cor
+e/optimization-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/platform-awareness.mdc => _cursor/rules/isolation_rules/Core/plat
+form-awareness.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/request-versioning-system.mdc => _cursor/rules/isolation_rules/Co
+re/request-versioning-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/task-artifact-manager.mdc => _cursor/rules/isolation_rules/Core/t
+ask-artifact-manager.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/task-management-2-0.mdc => _cursor/rules/isolation_rules/Core/tas
+k-management-2-0.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/timeout-protection.mdc => _cursor/rules/isolation_rules/Core/time
+out-protection.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/universal-mode-integration.mdc => _cursor/rules/isolation_rules/C
+ore/universal-mode-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/van-mode-migration.mdc => _cursor/rules/isolation_rules/Core/van-
+mode-migration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/web-search-integration.mdc => _cursor/rules/isolation_rules/Core/
+web-search-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/web-search-requirement.mdc => _cursor/rules/isolation_rules/Core/
+web-search-requirement.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/workflow-state-manager.mdc => _cursor/rules/isolation_rules/Core/
+workflow-state-manager.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Core/working-directory-control.mdc => _cursor/rules/isolation_rules/Co
+re/working-directory-control.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/debugging/detailed-logging.mdc => _cursor/rules/isolati
+on_rules/CustomWorkflow/debugging/detailed-logging.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/debugging/invariant-validation.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/debugging/invariant-validation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/debugging/systematic-debugging.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/debugging/systematic-debugging.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc => _cursor/r
+ules/isolation_rules/CustomWorkflow/documentation/commit-message-generator.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc => _curso
+r/rules/isolation_rules/CustomWorkflow/documentation/creative-analysis-reporting.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-archive-structure.mdc => _cursor
+/rules/isolation_rules/CustomWorkflow/documentation/creative-archive-structure.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc => _cursor/r
+ules/isolation_rules/CustomWorkflow/documentation/creative-results-capture.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc => _cursor
+/rules/isolation_rules/CustomWorkflow/documentation/creative-versioning-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/decision-recording.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/documentation/decision-recording.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc => _cursor/ru
+les/isolation_rules/CustomWorkflow/documentation/release-notes-generator.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc => _cursor/rules/
+isolation_rules/CustomWorkflow/documentation/statistics-tracking.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/documentation/usage-examples.mdc => _cursor/rules/isola
+tion_rules/CustomWorkflow/documentation/usage-examples.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/git-workflow/backup-verification.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/git-workflow/backup-verification.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/git-workflow/branch-management.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/git-workflow/branch-management.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/git-workflow/change-documentation.mdc => _cursor/rules/
+isolation_rules/CustomWorkflow/git-workflow/change-documentation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/git-workflow/commit-strategies.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/git-workflow/commit-strategies.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/implementation/dependency-checking.mdc => _cursor/rules
+/isolation_rules/CustomWorkflow/implementation/dependency-checking.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/implementation/robust-search.mdc => _cursor/rules/isola
+tion_rules/CustomWorkflow/implementation/robust-search.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/implementation/stub-avoidance.mdc => _cursor/rules/isol
+ation_rules/CustomWorkflow/implementation/stub-avoidance.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/implementation/system-coordination.mdc => _cursor/rules
+/isolation_rules/CustomWorkflow/implementation/system-coordination.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc => _cursor/rul
+es/isolation_rules/CustomWorkflow/integration/dependency-documentation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/integration/integration-planning.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/integration/integration-planning.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/integration/integration-testing.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/integration/integration-testing.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/integration/isolated-design-rules.mdc => _cursor/rules/
+isolation_rules/CustomWorkflow/integration/isolated-design-rules.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/planning/isolated-design.mdc => _cursor/rules/isolation
+_rules/CustomWorkflow/planning/isolated-design.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/planning/phased-approach.mdc => _cursor/rules/isolation
+_rules/CustomWorkflow/planning/phased-approach.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/planning/problem-prioritization.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/planning/problem-prioritization.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/planning/progress-documentation.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/planning/progress-documentation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc => _cursor/rules
+/isolation_rules/CustomWorkflow/refactoring/backward-compatibility.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/refactoring/gradual-refactoring.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/refactoring/legacy-support.mdc => _cursor/rules/isolati
+on_rules/CustomWorkflow/refactoring/legacy-support.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/refactoring/quality-metrics.mdc => _cursor/rules/isolat
+ion_rules/CustomWorkflow/refactoring/quality-metrics.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/refactoring/refactoring-patterns.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/system/creative-decision-control.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/system/creative-decision-control.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/system/interaction-mode-control.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/system/interaction-mode-control.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/system/interactive-planning.mdc => _cursor/rules/isolat
+ion_rules/CustomWorkflow/system/interactive-planning.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/system/real-date-enforcement.mdc => _cursor/rules/isola
+tion_rules/CustomWorkflow/system/real-date-enforcement.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/bun-core-rules.mdc => _cursor/rules/isolation_r
+ules/CustomWorkflow/testing/bun-core-rules.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/bun-features.mdc => _cursor/rules/isolation_rul
+es/CustomWorkflow/testing/bun-features.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/edge-cases.mdc => _cursor/rules/isolation_rules
+/CustomWorkflow/testing/edge-cases.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/large-test-analysis.mdc => _cursor/rules/isolat
+ion_rules/CustomWorkflow/testing/large-test-analysis.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/performance-testing.mdc => _cursor/rules/isolat
+ion_rules/CustomWorkflow/testing/performance-testing.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/test-failure-patterns.mdc => _cursor/rules/isol
+ation_rules/CustomWorkflow/testing/test-failure-patterns.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/testing/test-organization.mdc => _cursor/rules/isolatio
+n_rules/CustomWorkflow/testing/test-organization.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/backup-system.mdc => _cursor/rules/isolation_r
+ules/CustomWorkflow/workflow/backup-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/creative-archive-integration.mdc => _cursor/ru
+les/isolation_rules/CustomWorkflow/workflow/creative-archive-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/implement-mode-integration.mdc => _cursor/rule
+s/isolation_rules/CustomWorkflow/workflow/implement-mode-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/migration-system.mdc => _cursor/rules/isolatio
+n_rules/CustomWorkflow/workflow/migration-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/mode-transition-controller.mdc => _cursor/rule
+s/isolation_rules/CustomWorkflow/workflow/mode-transition-controller.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/plan-mode-integration.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/workflow/plan-mode-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/qa-mode-integration.mdc => _cursor/rules/isola
+tion_rules/CustomWorkflow/workflow/qa-mode-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/reflect-archive-integration.mdc => _cursor/rul
+es/isolation_rules/CustomWorkflow/workflow/reflect-archive-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/safe-mode-transitions.mdc => _cursor/rules/iso
+lation_rules/CustomWorkflow/workflow/safe-mode-transitions.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/task-continuity.mdc => _cursor/rules/isolation
+_rules/CustomWorkflow/workflow/task-continuity.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/task-preservation-rules.mdc => _cursor/rules/i
+solation_rules/CustomWorkflow/workflow/task-preservation-rules.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/task-status-validation.mdc => _cursor/rules/is
+olation_rules/CustomWorkflow/workflow/task-status-validation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/van-mode-integration.mdc => _cursor/rules/isol
+ation_rules/CustomWorkflow/workflow/van-mode-integration.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/CustomWorkflow/workflow/warning-system.mdc => _cursor/rules/isolation_
+rules/CustomWorkflow/workflow/warning-system.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc => _cursor/rules/isolation_rules/
+Level1/optimized-workflow-level1.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level1/quick-documentation.mdc => _cursor/rules/isolation_rules/Level1
+/quick-documentation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level1/workflow-level1.mdc => _cursor/rules/isolation_rules/Level1/wor
+kflow-level1.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level2/archive-basic.mdc => _cursor/rules/isolation_rules/Level2/archi
+ve-basic.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level2/reflection-basic.mdc => _cursor/rules/isolation_rules/Level2/re
+flection-basic.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc => _cursor/rules/isolation_rules/Level2
+/task-tracking-basic.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level2/workflow-level2.mdc => _cursor/rules/isolation_rules/Level2/wor
+kflow-level2.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/archive-intermediate.mdc => _cursor/rules/isolation_rules/Level
+3/archive-intermediate.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/implementation-intermediate.mdc => _cursor/rules/isolation_rule
+s/Level3/implementation-intermediate.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/planning-comprehensive.mdc => _cursor/rules/isolation_rules/Lev
+el3/planning-comprehensive.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/reflection-intermediate.mdc => _cursor/rules/isolation_rules/Le
+vel3/reflection-intermediate.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/task-tracking-intermediate.mdc => _cursor/rules/isolation_rules
+/Level3/task-tracking-intermediate.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level3/workflow-level3.mdc => _cursor/rules/isolation_rules/Level3/wor
+kflow-level3.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/architectural-planning.mdc => _cursor/rules/isolation_rules/Lev
+el4/architectural-planning.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/archive-comprehensive.mdc => _cursor/rules/isolation_rules/Leve
+l4/archive-comprehensive.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/phased-implementation.mdc => _cursor/rules/isolation_rules/Leve
+l4/phased-implementation.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc => _cursor/rules/isolation_rules/L
+evel4/reflection-comprehensive.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/task-tracking-advanced.mdc => _cursor/rules/isolation_rules/Lev
+el4/task-tracking-advanced.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Level4/workflow-level4.mdc => _cursor/rules/isolation_rules/Level4/wor
+kflow-level4.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-architecture.mdc => _cursor/rules/
+isolation_rules/Phases/CreativePhase/creative-phase-architecture.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-uiux.mdc => _cursor/rules/isolatio
+n_rules/Phases/CreativePhase/creative-phase-uiux.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc => _cursor/rules/
+isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/Testing/bun-testing-framework.mdc => _cursor/rules/isolation_rules/Tes
+ting/bun-testing-framework.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/main-optimized.mdc => _cursor/rules/isolation_rules/main-optimized.mdc
+.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc => _cursor/rules/isolation_rules/visu
+al-maps/archive-mode-map.mdc.md (92%)
+ rename .cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc => _cursor/rules/isolation_rules/vis
+ual-maps/creative-mode-map.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc => _cursor/rules/isolation_rules/vi
+sual-maps/implement-mode-map.mdc.md (93%)
+ rename .cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc => _cursor/rules/isolation_rules/visual-
+maps/plan-mode-map.mdc.md (93%)
+ rename .cursor/rules/isolation_rules/visual-maps/qa-mode-map.mdc => _cursor/rules/isolation_rules/visual-ma
+ps/qa-mode-map.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc => _cursor/rules/isolation_rules/visu
+al-maps/reflect-mode-map.mdc.md (95%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-complexity-determination.mdc => _cursor
+/rules/isolation_rules/visual-maps/van_mode_split/van-complexity-determination.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-file-verification.mdc => _cursor/rules/
+isolation_rules/visual-maps/van_mode_split/van-file-verification.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc => _cursor/rules/isolation
+_rules/visual-maps/van_mode_split/van-mode-map.mdc.md (99%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-platform-detection.mdc => _cursor/rules
+/isolation_rules/visual-maps/van_mode_split/van-platform-detection.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/build-test.mdc => _cursor/rul
+es/isolation_rules/visual-maps/van_mode_split/van-qa-checks/build-test.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/config-check.mdc => _cursor/r
+ules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/config-check.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/dependency-check.mdc => _curs
+or/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/dependency-check.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/environment-check.mdc => _cur
+sor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/environment-check.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-main.mdc => _cursor/rules/isolation_
+rules/visual-maps/van_mode_split/van-qa-main.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/common-fixes.mdc => _cursor/ru
+les/isolation_rules/visual-maps/van_mode_split/van-qa-utils/common-fixes.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/mode-transitions.mdc => _curso
+r/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/mode-transitions.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/reports.mdc => _cursor/rules/i
+solation_rules/visual-maps/van_mode_split/van-qa-utils/reports.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/rule-calling-guide.mdc => _cur
+sor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/rule-calling-guide.mdc.md (100%)
+ rename .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/rule-calling-help.mdc => _curs
+or/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/rule-calling-help.mdc.md (100%)
+ delete mode 100644 memory-bank/RELEASE-NOTES-2.0.0.md
+ delete mode 100644 memory-bank/activeContext.md
+ delete mode 100644 memory-bank/archive/2025-06-20-legacy-current-context.md
+ delete mode 100644 memory-bank/archive/archive-universal-init-2025-06-20.md
+ delete mode 100644 memory-bank/archive/legacy-tasks-backup-2025-06-20.md
+ delete mode 100644 memory-bank/config/system.yaml
+ delete mode 100644 memory-bank/contexts/active/2025-06-20-memory-bank-2-rules-update-context.md
+ delete mode 100644 memory-bank/contexts/active/2025-06-20-qa-context-rules-compliance-context.md
+ delete mode 100644 memory-bank/indexes/master-index.md
+ delete mode 100644 memory-bank/progress.md
+ delete mode 100644 memory-bank/projectbrief.md
+ delete mode 100644 memory-bank/qa/reports/2025-06-20-qa-report-context-rules-compliance.md
+ delete mode 100644 memory-bank/qa/reports/2025-06-20-qa-report-critical-fixes-completed.md
+ delete mode 100644 memory-bank/qa/reports/2025-06-20-qa-report-memory-bank-2-0.md
+ delete mode 100644 memory-bank/qa/reports/2025-06-20-qa-report-template-structure-compliance.md
+ delete mode 100644 memory-bank/reflection/reflection-2025-06-20.md
+ delete mode 100644 memory-bank/reports/daily/daily-report-2025-06-20.md
+ delete mode 100644 memory-bank/rules/mandatory-web-search.md
+ delete mode 100644 memory-bank/rules/memory-bank-2-task-management.md
+ delete mode 100644 memory-bank/rules/qa-files-naming-rules.md
+ delete mode 100644 memory-bank/rules/van-mode-auto-migration.md
+ delete mode 100644 memory-bank/rules/yyyy-mm-dd-date-format.md
+ delete mode 100755 memory-bank/scripts/daily-report.sh
+ delete mode 100644 memory-bank/scripts/migrate-to-encapsulated.sh
+ delete mode 100755 memory-bank/scripts/weekly-report.sh
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/creative_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/design_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/implement_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/migration_ru.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/mode_switching_analysis.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/mode_switching_analysis_ru.m
+d
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/plan_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/qa_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/reflect_archive_instructions
+.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/step_by_step_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/switch_task_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/universal_instructions.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/van_core_workflow.md
+ create mode 100644 memory-bank/system/backups/artifact-paths-fix-20250625-1253/van_instructions.md
+ delete mode 100644 memory-bank/system/current-date.txt
+ delete mode 100644 memory-bank/system/interaction-mode.txt
+ create mode 100644 memory-bank/tasks.md
+ create mode 100644 memory-bank/tasks/in_progress/2025-06-21_ID-001_fetch-rules-validation/_task.md
+ delete mode 100644 memory-bank/tasks/in_progress/active/.gitkeep
+ delete mode 100644 memory-bank/tasks/in_progress/active/2025-06-20-CRITICAL-ADMIN-memory-bank-2-rules-updat
+e.md
+ delete mode 100644 memory-bank/tasks/in_progress/blocked/.gitkeep
+ delete mode 100644 memory-bank/tasks/in_progress/review/.gitkeep
+ create mode 100644 memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/_context.md
+ create mode 100644 memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/_task.md
+ create mode 100644 memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/planning/architectur
+e.md
+ create mode 100644 memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/planning/implementat
+ion-plan.md
+ create mode 100644 memory-bank/tasks/todo/2025-06-25_ID-002_artifact-paths-unification/planning/requirement
+s.md
+ delete mode 100644 memory-bank/tasks/todo/critical/.gitkeep
+ delete mode 100644 memory-bank/tasks/todo/critical/2025-06-20-CRITICAL-ADMIN-fix-file-naming-compliance.md
+ delete mode 100644 memory-bank/tasks/todo/critical/2025-06-20-CRITICAL-QA-context-rules-compliance.md
+ delete mode 100644 memory-bank/tasks/todo/high/.gitkeep
+ delete mode 100644 memory-bank/tasks/todo/low/.gitkeep
+ delete mode 100644 memory-bank/tasks/todo/medium/.gitkeep
+ create mode 100644 migrations/000-prompt.md
+ create mode 100644 migrations/001-answer.md
+ create mode 100644 migrations/002-phase-1.md
+ create mode 100644 migrations/003.md
+ create mode 100644 migrations/004.md
+ create mode 100644 migrations/005.md
+ create mode 100644 migrations/PLAN.md
+ create mode 100644 migrations/PSE.md
+ create mode 100644 migrations/migration_en.md
+ create mode 100644 migrations/migration_ru.md
+ create mode 100644 migrations/plan_01.md
+ create mode 100644 specifics/writing-effective-clinerules.md
+✅ Git baseline created
+
+```
+
+---
+
+```bash
+echo "Step 1.3: Валидация текущего состояния..." && echo "=== CURRENT PROBLEMATIC PATHS ===" && echo "Creative paths: $(grep -r "memory-bank/creative/" custom_modes/ | wc -l)" && echo "Planning paths: $(grep -r "memory-bank/planning/" custom_modes/ | wc -l)" && echo "Implementation paths: $(grep -r "memory-bank/implementation/" custom_modes/ | wc -l)" && echo "QA paths: $(grep -r "memory-bank/qa/" custom_modes/ | wc -l)" && echo "Archive paths: $(grep -r "memory-bank/archive/" custom_modes/ | wc -l)" && echo "Universal paths: $(grep -r "memory-bank/universal/" custom_modes/ | wc -l)" && echo "✅ Current state documented"
+```
+
+```
+mplementation paths: $(grep -r "memory-bank/implementation/" custom_modes/ | wc -l)" && echo "QA paths: $(gr
+ep -r "memory-bank/qa/" custom_modes/ | wc -l)" && echo "Archive paths: $(grep -r "memory-bank/archive/" cus
+tom_modes/ | wc -l)" && echo "Universal paths: $(grep -r "memory-bank/universal/" custom_modes/ | wc -l)" &&
+ echo "✅ Current state documented"
+Step 1.3: Валидация текущего состояния...
+=== CURRENT PROBLEMATIC PATHS ===
+Creative paths:        3
+Planning paths:        2
+Implementation paths:        2
+QA paths:        4
+Archive paths:        1
+Universal paths:        1
+✅ Current state documented
+➜  cursor-memory-bank git:(backup-rules-20250620-2303)
+```
+
+---
+
+Отлично! Найдено **13 проблемных путей** для исправления. Теперь перехожу к Phase 2 - обновлению режимов.
+
+## PHASE 2: ОБНОВЛЕНИЕ РЕЖИМОВ
+
+Начну с самого простого - UNIVERSAL INSTRUCTIONS:
+
+---
+
+```bash
+echo "=== PHASE 2: ОБНОВЛЕНИЕ РЕЖИМОВ ===" && echo "" && echo "Step 2.1: UNIVERSAL INSTRUCTIONS (самый простой)..."
+```
+
+```
+=== PHASE 2: ОБНОВЛЕНИЕ РЕЖИМОВ ===
+
+Step 2.1: UNIVERSAL INSTRUCTIONS (самый простой)...
+
+```
+
+---
+
+
+
+---
+
+
+
+---
+
+<details>
+            <summary>Grep search for "request_log_path="memory-bank/universal/" • **0** files</summary>
+        
+No results found
+</details>
+
+---
+
+<details>
+            <summary>Grep search for "memory-bank/universal/" • **0** files</summary>
+        
+No results found
+</details>
+
+---
+
+```bash
+echo "✅ UNIVERSAL INSTRUCTIONS обновлен (1/1 путь исправлен)" && echo "" && echo "Step 2.2: PLAN INSTRUCTIONS..."
+```
+
+```
+✅ UNIVERSAL INSTRUCTIONS обновлен (1/1 путь исправлен)
+
+Step 2.2: PLAN INSTRUCTIONS...
+
+```
+
+---
+
+Теперь обновлю PLAN INSTRUCTIONS:
+
+---
+
+
+
+---
+
+Теперь добавлю шаблон для получения активной задачи в начало MANDATORY ARTIFACT CREATION:
+
+---
+
+
+
+---
+
+Read file: custom_modes/plan_instructions.md
+
+---
+
+
+
+---
+
+```bash
+echo "✅ PLAN INSTRUCTIONS обновлен (2/2 пути исправлены + активная задача)" && echo "" && echo "Step 2.3: CREATIVE INSTRUCTIONS..."
+```
+
+```
+✅ PLAN INSTRUCTIONS обновлен (2/2 пути исправлены + активная задача)
+
+Step 2.3: CREATIVE INSTRUCTIONS...
+
+```
+
+---
+
+Теперь обновлю CREATIVE INSTRUCTIONS:
+
+---
+
+
+
+---
+
+
+
+---
+
+<details>
+            <summary>Grep search for "memory-bank/creative/" • **2** files</summary>
+        
+| File | Line | Match |
+|------|------|-------|
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L165 | `- memory-bank/creative/[project-specific-files]` |
+| `file:///Users/vedmalex/work/cursor-memory-bank/custom_modes/creative_instructions.md` | L165 | `- memory-bank/creative/[project-specific-files]` |
+
+</details>
+
+---
+
+Read file: custom_modes/creative_instructions.md
+
+---
+
+
+
+---
+
+Теперь добавлю шаблон для активной задачи в CREATIVE INSTRUCTIONS:
+
+---
+
+
+
+---
+
+```bash
+echo "✅ CREATIVE INSTRUCTIONS обновлен (3/3 пути исправлены + активная задача)" && echo "" && echo "Step 2.4: IMPLEMENT INSTRUCTIONS..."
+```
+
+```
+✅ CREATIVE INSTRUCTIONS обновлен (3/3 пути исправлены + активная задача)
+
+Step 2.4: IMPLEMENT INSTRUCTIONS...
+
+```
+
+---
+
+Теперь обновлю IMPLEMENT INSTRUCTIONS:
+
+---
+
+
+
+---
+
+Теперь добавлю шаблон для активной задачи в IMPLEMENT INSTRUCTIONS:
+
+---
+
+
+
+---
+
+```bash
+echo "✅ IMPLEMENT INSTRUCTIONS обновлен (2/2 пути исправлены + активная задача)" && echo "" && echo "Step 2.5: QA INSTRUCTIONS..."
+```
+
+```
+✅ IMPLEMENT INSTRUCTIONS обновлен (2/2 пути исправлены + активная задача)
+
+Step 2.5: QA INSTRUCTIONS...
+
+```
+
+---
+
+
+
+
 
 ---
 

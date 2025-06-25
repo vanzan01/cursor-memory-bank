@@ -118,19 +118,13 @@ run_terminal_cmd({
 
 ### Archive Structure
 ```
-memory-bank/archive/
-├── tasks/
-│   └── YYYY-MM/
-├── contexts/
-│   └── YYYY-MM/
-├── reports/
-│   ├── daily/YYYY-MM/
-│   ├── weekly/YYYY/
-│   └── monthly/YYYY/
-└── knowledge/
-    ├── patterns/
-    ├── solutions/
-    └── insights/
+$active_task_path/
+├── reflection/
+│   └── reflection.md
+└── release/
+    ├── commit-message.txt
+    ├── release-notes.md
+    └── changelog.md
 ```
 
 ## Integration Commands
@@ -457,3 +451,49 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 │ truth for final task completion status.             │
 └─────────────────────────────────────────────────────┘
 ```
+
+## MANDATORY ARTIFACT CREATION
+
+### ACTIVE TASK VALIDATION:
+```bash
+echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
+active_task_path=$(get_active_task_path)
+
+if [ -z "$active_task_path" ]; then
+    echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
+    echo ""
+    echo "🔧 РЕШЕНИЕ:"
+    echo "1. Выберите существующую задачу:"
+    echo "   ls memory-bank/tasks/todo/"
+    echo "   ls memory-bank/tasks/in_progress/"
+    echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
+    echo ""
+    echo "2. Или создайте новую задачу в VAN режиме"
+    echo ""
+    echo "❌ REFLECT режим не может продолжить без активной задачи"
+    exit 1
+fi
+
+echo "✅ Активная задача: $active_task_path"
+echo "📁 Создание папок reflection и release..."
+mkdir -p "$active_task_path/reflection"
+mkdir -p "$active_task_path/release"
+```
+
+### REQUIRED FILES:
+1. **memory-bank/system/current-context.md** - MUST be updated with REFLECT mode context
+2. **memory-bank/tasks.md** - MUST be updated with reflection and archive status
+3. **$active_task_path/reflection/reflection.md** - MUST be created with detailed reflection
+4. **$active_task_path/release/commit-message.txt** - MUST be created for final commit
+5. **$active_task_path/release/release-notes.md** - MUST be created with release notes
+6. **$active_task_path/release/changelog.md** - MUST be created with change details
+
+### MANDATORY DOCUMENTATION:
+- All successes and challenges MUST be documented in reflection.md
+- Lessons learned MUST be clearly articulated with actionable insights
+- Process improvements MUST be identified for future tasks
+- Technical improvements MUST be documented with specific recommendations
+- Release documentation MUST be complete and professional
+- All web research findings MUST be documented with sources
+
+You are OBLIGATED to complete all these requirements before considering the task fully complete.

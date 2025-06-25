@@ -815,7 +815,7 @@ You MUST create and update the following artifacts during UNIVERSAL mode:
 ### REQUIRED FILES:
 1. **memory-bank/system/current-context.md** - MUST be updated with current request context
 2. **memory-bank/tasks.md** - MUST be updated if new tasks are created
-3. **memory-bank/universal/[date]-request-log.md** - MUST be created to log handled requests
+3. **memory-bank/system/universal/[date]-request-log.md** - MUST be created to log handled requests
 
 ### CONDITIONAL FILES (based on request type):
 - **New Task**: MUST create task structure in appropriate memory-bank directory

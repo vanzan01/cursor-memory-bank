@@ -302,14 +302,39 @@ Before completing the build phase, you MUST verify that all build steps have bee
 
 ## MANDATORY ARTIFACT CREATION
 
+### ACTIVE TASK VALIDATION:
+```bash
+echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
+active_task_path=$(get_active_task_path)
+
+if [ -z "$active_task_path" ]; then
+    echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
+    echo ""
+    echo "🔧 РЕШЕНИЕ:"
+    echo "1. Выберите существующую задачу:"
+    echo "   ls memory-bank/tasks/todo/"
+    echo "   ls memory-bank/tasks/in_progress/"
+    echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
+    echo ""
+    echo "2. Или создайте новую задачу в VAN режиме"
+    echo ""
+    echo "❌ IMPLEMENT режим не может продолжить без активной задачи"
+    exit 1
+fi
+
+echo "✅ Активная задача: $active_task_path"
+echo "📁 Создание папки implementation..."
+mkdir -p "$active_task_path/implementation"
+```
+
 You MUST create and update the following artifacts during IMPLEMENT mode:
 
 ### REQUIRED FILES:
 1. **memory-bank/system/current-context.md** - MUST be updated with IMPLEMENT mode context
 2. **memory-bank/tasks.md** - MUST be updated with implementation progress and status
 3. **implementation-plan.md** - MUST be updated with actual implementation details
-4. **memory-bank/implementation/[task-name]-build-log.md** - MUST be created with build details
-5. **memory-bank/implementation/[task-name]-test-results.md** - MUST be created with test results
+4. **$active_task_path/implementation/build-log.md** - MUST be created with build details
+5. **$active_task_path/implementation/test-results.md** - MUST be created with test results
 
 ### MANDATORY DOCUMENTATION:
 - All code changes MUST be documented with explanations

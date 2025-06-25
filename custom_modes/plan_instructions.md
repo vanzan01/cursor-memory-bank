@@ -307,14 +307,40 @@ Before completing the planning phase, you MUST verify that all requirements are 
 
 ## MANDATORY ARTIFACT CREATION
 
+### ACTIVE TASK VALIDATION:
+```bash
+echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
+active_task_path=$(get_active_task_path)
+
+if [ -z "$active_task_path" ]; then
+    echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
+    echo ""
+    echo "🔧 РЕШЕНИЕ:"
+    echo "1. Выберите существующую задачу:"
+    echo "   ls memory-bank/tasks/todo/"
+    echo "   ls memory-bank/tasks/in_progress/"
+    echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
+    echo ""
+    echo "2. Или создайте новую задачу в VAN режиме"
+    echo ""
+    echo "❌ PLAN режим не может продолжить без активной задачи"
+    exit 1
+fi
+
+echo "✅ Активная задача: $active_task_path"
+echo "📁 Создание папки planning..."
+mkdir -p "$active_task_path/planning"
+```
+
 You MUST create and update the following artifacts during PLAN mode:
 
 ### REQUIRED FILES:
 1. **memory-bank/system/current-context.md** - MUST be updated with PLAN mode context
 2. **memory-bank/tasks.md** - MUST be updated with complete plan and status
 3. **implementation-plan.md** - MUST be created with detailed implementation strategy
-4. **memory-bank/planning/[task-name]-requirements.md** - MUST be created for Level 3-4 tasks
-5. **memory-bank/planning/[task-name]-architecture.md** - MUST be created for Level 4 tasks
+4. **$active_task_path/planning/requirements.md** - MUST be created for Level 3-4 tasks
+5. **$active_task_path/planning/architecture.md** - MUST be created for Level 4 tasks
+6. **$active_task_path/planning/implementation-plan.md** - MUST be created for Level 3-4 tasks
 
 ### MANDATORY DOCUMENTATION:
 - All requirements MUST be clearly documented and prioritized

@@ -163,7 +163,7 @@ edit_file({
 ## 🗂️ ФАЙЛЫ В РАБОТЕ
 - memory-bank/system/current-context.md
 - memory-bank/tasks.md
-- memory-bank/creative/[project-specific-files]
+- $active_task_path/creative/[project-specific-files]
 
 ## 📊 МЕТРИКИ СЕССИИ
 **Время начала**: [CURRENT_DATE]
@@ -359,14 +359,39 @@ Before completing the creative phase, you MUST verify that all flagged component
 
 ## MANDATORY ARTIFACT CREATION
 
+### ACTIVE TASK VALIDATION:
+```bash
+echo "=== ПОЛУЧЕНИЕ АКТИВНОЙ ЗАДАЧИ ==="
+active_task_path=$(get_active_task_path)
+
+if [ -z "$active_task_path" ]; then
+    echo "⚠️  КРИТИЧЕСКАЯ ОШИБКА: Активная задача не выбрана!"
+    echo ""
+    echo "🔧 РЕШЕНИЕ:"
+    echo "1. Выберите существующую задачу:"
+    echo "   ls memory-bank/tasks/todo/"
+    echo "   ls memory-bank/tasks/in_progress/"
+    echo "   set_active_task(memory-bank/tasks/[status]/[task-directory])"
+    echo ""
+    echo "2. Или создайте новую задачу в VAN режиме"
+    echo ""
+    echo "❌ CREATIVE режим не может продолжить без активной задачи"
+    exit 1
+fi
+
+echo "✅ Активная задача: $active_task_path"
+echo "📁 Создание папки creative..."
+mkdir -p "$active_task_path/creative"
+```
+
 You MUST create and update the following artifacts during CREATIVE mode:
 
 ### REQUIRED FILES:
 1. **memory-bank/system/current-context.md** - MUST be updated with CREATIVE mode context
 2. **memory-bank/tasks.md** - MUST be updated with creative decisions and status
 3. **implementation-plan.md** - MUST be updated with creative guidelines
-4. **memory-bank/creative/[component-name].md** - MUST be created for each creative component
-5. **memory-bank/style-guide.md** - MUST be created/updated for UI/UX components
+4. **$active_task_path/creative/[component-name].md** - MUST be created for each creative component
+5. **$active_task_path/creative/style-guide.md** - MUST be created/updated for UI/UX components
 
 ### MANDATORY DOCUMENTATION:
 - Each creative phase MUST produce a structured document
