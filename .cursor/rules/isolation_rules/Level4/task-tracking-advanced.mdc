@@ -404,8 +404,8 @@ Level 4 task tracking is tightly integrated with the Memory Bank:
 2. **productContext.md**: Tasks are aligned with business context and objectives
 3. **systemPatterns.md**: Tasks respect and implement defined architectural patterns
 4. **techContext.md**: Tasks are aligned with the technology stack and constraints
-5. **activeContext.md**: Current focus and status from `tasks.md` informs the active context
-6. **progress.md**: System progress from `tasks.md` is reflected in overall progress
+5. **.cursor/memory-bank/activeContext.md**: Current focus and status from `.cursor/memory-bank/tasks.md` informs the active context, with decision tracking and lessons learned (5-30 entries per section based on complexity level)
+6. **.cursor/memory-bank/progress.md**: System progress from `.cursor/memory-bank/tasks.md` is reflected in overall progress
 
 ```mermaid
 flowchart TD

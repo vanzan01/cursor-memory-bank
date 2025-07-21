@@ -371,9 +371,9 @@ While the rules are modularized, the Memory Bank files maintain continuity acros
 
 ```mermaid
 graph LR
-    subgraph "Memory Bank Files"
+    subgraph ".cursor/memory-bank/ Files"
         Tasks["tasks.md<br>Source of Truth"]
-        Active["activeContext.md<br>Current Focus"]
+        Active["activeContext.md<br>Current Focus + Decision Tracking<br>(5-30 entries/section by complexity level)"]
         Progress["progress.md<br>Implementation Status"]
         Creative["creative-*.md<br>Design Decisions"]
     end

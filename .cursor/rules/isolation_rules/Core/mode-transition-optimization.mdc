@@ -65,6 +65,7 @@ Create a standardized transition document when switching modes:
 ## 🔍 MODE-SPECIFIC TRANSITION HANDLERS
 
 ### VAN → PLAN Transition
+*Note: Update .cursor/memory-bank/activeContext.md decision tracking sections (5-30 entries per section based on complexity level)*
 
 ```markdown
 ### VAN → PLAN

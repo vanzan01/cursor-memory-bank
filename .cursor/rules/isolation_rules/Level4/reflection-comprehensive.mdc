@@ -604,10 +604,12 @@ Specific updates to make to Memory Bank files:
    - Document market/user insights
    - Include value delivery insights
 
-3. **activeContext.md**
+3. **.cursor/memory-bank/activeContext.md**
    - Update with current status
    - Document action items
    - Include next steps
+   - Update decision tracking sections (5-30 entries per section based on complexity)
+   - Archive decision entries at major milestones to maintain focus
 
 4. **systemPatterns.md**
    - Update with architectural insights

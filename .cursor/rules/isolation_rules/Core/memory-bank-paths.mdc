@@ -6,18 +6,18 @@ alwaysApply: true
 
 # CORE MEMORY BANK FILE LOCATIONS
 
-**CRITICAL:** All core Memory Bank files reside within the `memory-bank/` directory at the project root. Do NOT create or modify these files outside this directory unless explicitly instructed for archiving purposes.
+**CRITICAL:** All core Memory Bank files reside within the `.cursor/memory-bank/` directory. Do NOT create or modify these files outside this directory unless explicitly instructed for archiving purposes.
 
-* **Tasks File:** `memory-bank/tasks.md` - This file is used for active, in-progress task tracking, detailing steps, checklists, and component lists. Its content, particularly the detailed checklists, is merged into the main archive document for the task upon completion. After archival, `tasks.md` is cleared to be ready for the next task. It is an ephemeral working document during a task's lifecycle, with its persistent record captured in the task's archive file.
-* **Active Context File:** `memory-bank/activeContext.md`
-* **Progress File:** `memory-bank/progress.md`
-* **Project Brief File:** `memory-bank/projectbrief.md`
-* **Product Context File:** `memory-bank/productContext.md`
-* **System Patterns File:** `memory-bank/systemPatterns.md`
-* **Tech Context File:** `memory-bank/techContext.md`
-* **Style Guide File:** `memory-bank/style-guide.md`
-* **Creative Phase Docs:** `memory-bank/creative/creative-[feature_name].md`
-* **Reflection Docs:** `memory-bank/reflection/reflection-[task_id].md`
-* **Archive Directory:** `memory-bank/archive/archive-[task_id].md`
+* **Tasks File:** `.cursor/memory-bank/tasks.md` - This file is used for active, in-progress task tracking, detailing steps, checklists, and component lists. Its content, particularly the detailed checklists, is merged into the main archive document for the task upon completion. After archival, `tasks.md` is cleared to be ready for the next task. It is an ephemeral working document during a task's lifecycle, with its persistent record captured in the task's archive file.
+* **Active Context File:** `.cursor/memory-bank/activeContext.md` - Current development focus with decision tracking and lessons learned (complexity-based scaling: 5-30 entries per section based on project level)
+* **Progress File:** `.cursor/memory-bank/progress.md`
+* **Project Brief File:** `.cursor/memory-bank/projectbrief.md`
+* **Product Context File:** `.cursor/memory-bank/productContext.md`
+* **System Patterns File:** `.cursor/memory-bank/systemPatterns.md`
+* **Tech Context File:** `.cursor/memory-bank/techContext.md`
+* **Style Guide File:** `.cursor/memory-bank/style-guide.md`
+* **Creative Phase Docs:** `.cursor/memory-bank/creative/creative-[feature_name].md`
+* **Reflection Docs:** `.cursor/memory-bank/reflection/reflection-[task_id].md`
+* **Archive Directory:** `.cursor/memory-bank/archive/archive-[task_id].md`
 
-**Verification Mandate:** Before any `create_file` or `edit_file` operation on these core files, verify the path starts with `memory-bank/`. If attempting to create a new core file (e.g., `tasks.md` at the start of a project), ensure it is created at `memory-bank/tasks.md`.
+**Verification Mandate:** Before any `create_file` or `edit_file` operation on these core files, verify the path starts with `.cursor/memory-bank/`. If attempting to create a new core file (e.g., `tasks.md` at the start of a project), ensure it is created at `.cursor/memory-bank/tasks.md`.

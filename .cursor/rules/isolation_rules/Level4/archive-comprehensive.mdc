@@ -531,10 +531,12 @@ Specific updates to make to Memory Bank files:
    - Document business value delivered
    - Include links to requirements documentation
 
-3. **activeContext.md**
+3. **.cursor/memory-bank/activeContext.md**
    - Update with system status (completed)
    - Document handover information
    - Include links to operational documentation
+   - Archive decision tracking sections to preserve key decisions and lessons for future reference
+   - Clear decision entries for next project (5-30 entries per section based on complexity)
 
 4. **systemPatterns.md**
    - Update with final architecture patterns

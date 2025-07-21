@@ -543,10 +543,12 @@ Update the following Memory Bank files during phased implementation:
    - Document phase-specific objectives
    - Link to phase plans
 
-2. **activeContext.md**
+2. **.cursor/memory-bank/activeContext.md**
    - Update with current implementation phase
    - Document active implementation tasks
    - Highlight current focus areas
+   - Maintain decision tracking sections (5-30 entries per section based on complexity)
+   - Track key implementation decisions and patterns in decision tracking sections
 
 3. **systemPatterns.md**
    - Document implementation patterns used

@@ -94,7 +94,8 @@ git clone https://github.com/vanzan01/cursor-memory-bank.git
 
 After extracting it from the ZIP file, follow the steps below.
 
-- Copy the `.cursor` and `custom_modes` folders to the project directory
+- Copy the `.cursor` folder to the project directory (contains rules, custom_modes, memory-bank, and optimization-journey)
+- The Memory Bank files will be created automatically in `.cursor/memory-bank/` when you first run VAN mode
 
 Note: other documents are not necessary for memory bank operation, they are explanatory documents. You can copy them to a folder like `memory_bank_documents`.
 
@@ -123,7 +124,7 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
 1. **VAN MODE** (Initialization)
    - **Name**: 🔍 VAN
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Fetch Rules"
-   - **Advanced options**: Paste from `custom_modes/van_instructions.md`
+   - **Advanced options**: Paste from `.cursor/custom_modes/van_instructions.md`
 
 
 <img src="assets/van_mode_1.png" height="300" style="display: inline-block;"/> <img src="assets/van_mode_2.png" height="300" style="display: inline-block;"/>
@@ -131,28 +132,28 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
 2. **PLAN MODE** (Task Planning)
    - **Name**: 📋 PLAN
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/plan_instructions.md`
+   - **Advanced options**: Paste from `.cursor/custom_modes/plan_instructions.md`
 
 <img src="assets/plan_mode_1.png" height="300"/> <img src="assets/plan_mode_2.png" height="300" style="display: inline-block;"/>
 
 3. **CREATIVE MODE** (Design Decisions)
    - **Name**: 🎨 CREATIVE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File", "Fetch Rules"
-   - **Advanced options**: Paste from `custom_modes/creative_instructions.md`
+   - **Advanced options**: Paste from `.cursor/custom_modes/creative_instructions.md`
 
 <img src="assets/creative_mode_1.png" height="300"/> <img src="assets/creative_mode_2.png" height="300" style="display: inline-block;"/>
 
 4. **IMPLEMENT MODE** (Code Implementation)
    - **Name**: ⚒️ IMPLEMENT
    - **Tools**: Enable all tools
-   - **Advanced options**: Paste from `custom_modes/implement_instructions.md`
+   - **Advanced options**: Paste from `.cursor/custom_modes/implement_instructions.md`
 
 <img src="assets/implement_mode_1.png" height="300"/> <img src="assets/implement_mode_2.png" height="300" style="display: inline-block;"/>
 
 5. **REFLECT & ARHIVE MODE** (Review)
    - **Name**: 🔍 REFLECT or ARCHIVE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md`
+   - **Advanced options**: Paste from `.cursor/custom_modes/reflect_archive_instructions.md`
 
 <img src="assets/reflect_mode_1.png" height="300"/> <img src="assets/reflect_mode_2.png" height="300" style="display: inline-block;"/>
    
@@ -200,7 +201,7 @@ After successfully installing Memory Bank...
 
 ```mermaid
 graph LR
-    subgraph "Memory Bank Files"
+    subgraph ".cursor/memory-bank/ Files"
         Tasks["tasks.md<br>Source of Truth"]
         Active["activeContext.md<br>Current Focus"]
         Progress["progress.md<br>Implementation Status"]
@@ -215,11 +216,11 @@ graph LR
     style Reflect fill:#b3e6cc,stroke:#66c999,color:black
 ```
 
-- **tasks.md**: Central source of truth for task tracking
-- **activeContext.md**: Maintains focus of current development phase
-- **progress.md**: Tracks implementation status
-- **creative-*.md**: Design decision documents generated during CREATIVE mode
-- **reflect-*.md**: Review documents created during REFLECT mode
+- **.cursor/memory-bank/tasks.md**: Central source of truth for task tracking
+- **.cursor/memory-bank/activeContext.md**: Maintains focus of current development phase with decision tracking and lessons learned (5-30 entries per section based on complexity level)
+- **.cursor/memory-bank/progress.md**: Tracks implementation status
+- **.cursor/memory-bank/creative-*.md**: Design decision documents generated during CREATIVE mode
+- **.cursor/memory-bank/reflect-*.md**: Review documents created during REFLECT mode
 
 ## Troubleshooting
 
@@ -259,7 +260,7 @@ The Memory Bank system is actively being developed and improved. Key points to u
 - [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
 - [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md)
 - [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
-- Mode-specific instruction files in the `custom_modes/` directory
+- Mode-specific instruction files in the `.cursor/custom_modes/` directory
 
 ---
 

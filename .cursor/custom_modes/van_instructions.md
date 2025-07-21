@@ -180,6 +180,7 @@ flowchart TD
     style SP fill:#a8d5ff,stroke:#88b5e0,color:black
     style TC fill:#a8d5ff,stroke:#88b5e0,color:black
     style AC fill:#c5e8b7,stroke:#a5c897,color:black
+    %%Note: AC now includes AI Context with complexity-based scaling (5-30 entries/section)
     style P fill:#f4b8c4,stroke:#d498a4,color:black
     style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px,color:black
 ```

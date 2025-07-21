@@ -35,16 +35,17 @@ graph TD
 #### Windows (PowerShell)
 ```powershell
 # Create all directories in one command
-mkdir memory-bank, docs, docs\archive -ErrorAction SilentlyContinue
+mkdir .cursor\memory-bank, docs, docs\archive -ErrorAction SilentlyContinue
 
 # Create all required files
-$files = @(".cursorrules", "tasks.md", 
-           "memory-bank\projectbrief.md", 
-           "memory-bank\productContext.md",
-           "memory-bank\systemPatterns.md",
-           "memory-bank\techContext.md",
-           "memory-bank\activeContext.md",
-           "memory-bank\progress.md")
+$files = @(".cursorrules", 
+           ".cursor\memory-bank\tasks.md",
+           ".cursor\memory-bank\projectbrief.md", 
+           ".cursor\memory-bank\productContext.md",
+           ".cursor\memory-bank\systemPatterns.md",
+           ".cursor\memory-bank\techContext.md",
+           ".cursor\memory-bank\activeContext.md",
+           ".cursor\memory-bank\progress.md")
 
 foreach ($file in $files) {
     if (-not (Test-Path $file)) {
@@ -56,16 +57,17 @@ foreach ($file in $files) {
 #### Mac/Linux (Bash)
 ```bash
 # Create all directories in one command
-mkdir -p memory-bank docs/archive
+mkdir -p .cursor/memory-bank docs/archive
 
 # Create all required files
-touch .cursorrules tasks.md \
-      memory-bank/projectbrief.md \
-      memory-bank/productContext.md \
-      memory-bank/systemPatterns.md \
-      memory-bank/techContext.md \
-      memory-bank/activeContext.md \
-      memory-bank/progress.md
+touch .cursorrules \
+      .cursor/memory-bank/tasks.md \
+      .cursor/memory-bank/projectbrief.md \
+      .cursor/memory-bank/productContext.md \
+      .cursor/memory-bank/systemPatterns.md \
+      .cursor/memory-bank/techContext.md \
+      .cursor/memory-bank/activeContext.md \
+      .cursor/memory-bank/progress.md
 ```
 
 ## 📝 STREAMLINED VERIFICATION PROCESS
@@ -74,14 +76,14 @@ Instead of checking each component separately, perform batch verification:
 
 ```powershell
 # Windows - PowerShell
-$requiredDirs = @("memory-bank", "docs", "docs\archive")
-$requiredFiles = @(".cursorrules", "tasks.md")
-$mbFiles = @("projectbrief.md", "productContext.md", "systemPatterns.md", 
+$requiredDirs = @(".cursor\memory-bank", "docs", "docs\archive")
+$requiredFiles = @(".cursorrules")
+$mbFiles = @("tasks.md", "projectbrief.md", "productContext.md", "systemPatterns.md", 
              "techContext.md", "activeContext.md", "progress.md")
 
 $missingDirs = $requiredDirs | Where-Object { -not (Test-Path $_) -or -not (Test-Path $_ -PathType Container) }
 $missingFiles = $requiredFiles | Where-Object { -not (Test-Path $_) -or (Test-Path $_ -PathType Container) }
-$missingMBFiles = $mbFiles | ForEach-Object { "memory-bank\$_" } | 
+$missingMBFiles = $mbFiles | ForEach-Object { ".cursor\memory-bank\$_" } | 
                   Where-Object { -not (Test-Path $_) -or (Test-Path $_ -PathType Container) }
 
 if ($missingDirs.Count -eq 0 -and $missingFiles.Count -eq 0 -and $missingMBFiles.Count -eq 0) {
@@ -105,7 +107,7 @@ Optimize template creation with a single script:
 ```powershell
 # Windows - PowerShell
 $templates = @{
-    "tasks.md" = @"
+    ".cursor\memory-bank\tasks.md" = @"
 # Memory Bank: Tasks
 
 ## Current Task
@@ -121,17 +123,59 @@ $templates = @{
 [No requirements defined yet]
 "@
 
-    "memory-bank\activeContext.md" = @"
+    ".cursor\memory-bank\activeContext.md" = @"
 # Memory Bank: Active Context
 
-## Current Focus
-[No active focus defined]
+## Current Development Focus
+- **Phase**: [Not set - use VAN to initialize]
+- **Active Task**: [No active task defined]
+- **Last Completed**: [No previous work recorded]
+- **Next Priority**: [Awaiting task definition]
+- **Complexity Level**: [To be determined during VAN phase]
 
-## Status
-[No status defined]
+## Technical Context
+- **Tech Stack**: [To be defined during project setup]
+- **Architecture Approach**: [Awaiting architectural decisions]
+- **Current Issues**: [No known issues at this time]
+- **Constraints**: [Project constraints to be identified]
 
-## Latest Changes
-[No changes recorded]
+### Decisions Made
+*Document important technical and architectural decisions*
+- **Decision**: [No major decisions recorded yet]
+- **Rationale**: [Why this choice was made]
+- **Impact**: [How this affects the project]
+- **Alternatives**: [What else was considered]
+
+### Lessons Learned
+*Capture problems encountered and their solutions*
+- **Issue**: [No issues encountered yet]
+- **Solution**: [How it was resolved]
+- **Prevention**: [How to avoid this in future]
+
+### Remember for Next Session
+*Key reminders for AI continuity across sessions*
+- **Avoid**: [Approaches that don't work for this project]
+- **Use**: [Approaches that work well for this project]
+- **Focus**: [Key areas requiring attention]
+
+---
+
+## Usage Notes
+**Keep all sections lean and relevant:**
+- **Maximum entries per section** (based on project complexity):
+  - **Level 1 (Quick Fix)**: 5 entries max
+  - **Level 2 (Enhancement)**: 10 entries max  
+  - **Level 3 (Feature)**: 20 entries max
+  - **Level 4 (System)**: 30 entries max
+- Replace outdated entries when at capacity limits
+- Focus on patterns and decisions that affect current work
+- Archive important but inactive decisions to separate archive files
+- Remove information that's no longer relevant to active development
+
+**Update frequency:**
+- **Current Development Focus**: Update when switching modes or major milestones
+- **Technical Context**: Update when making architectural decisions
+- **Decision/Lessons sections**: Update when encountering significant decisions, solutions, or lessons
 "@
 
     # Add other templates here

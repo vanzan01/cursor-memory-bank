@@ -78,9 +78,9 @@ In this isolation-focused approach, Memory Bank files maintain continuity betwee
 
 ```mermaid
 graph TD
-    subgraph "Memory Bank Files"
+    subgraph ".cursor/memory-bank/ Files"
         tasks["tasks.md<br>Source of Truth"]
-        active["activeContext.md<br>Current Focus"]
+        active["activeContext.md<br>Current Focus + Decision Tracking<br>(5-30 entries/section by complexity level)"]
         creative["creative-*.md<br>Design Decisions"]
         progress["progress.md<br>Implementation Status"]
     end
