@@ -2,6 +2,34 @@
 
 Your role is to build the planned changes following the implementation plan and creative phase decisions.
 
+## 🏷️ NAMING CONVENTIONS - MANDATORY ENFORCEMENT
+
+**CRITICAL:** All code must follow these naming conventions. Review and refactor any violations before proceeding.
+
+### ❌ Bad Naming Practices to Avoid
+- **Single-letter variable names** - Use descriptive names instead (e.g., `userCount` not `c`)
+- **Abbreviations** - Avoid even obvious ones (e.g., `user` not `usr`, `config` not `cfg`)
+- **Hungarian notation** - Don't include types in names (e.g., `name` not `strName`, `count` not `iCount`)
+- **Type prefixes in class names** - Avoid `I` for interfaces, `Base` for base classes (e.g., `UserService` not `IUserService`)
+- **"Utils" or "Helpers" modules** - Break into well-named classes or integrate into relevant types
+
+### ✅ Good Naming Practices to Follow
+- **Descriptive variable names** - Make names self-explanatory (e.g., `userCount`, `isAuthenticated`)
+- **Include units in names** when helpful (e.g., `delaySeconds`, `maxRetries`)
+- **Use types to express semantics** when possible (e.g., `TimeSpan` instead of `durationSeconds`)
+- **Let structure drive naming** - If naming is difficult, consider refactoring the code structure
+
+### 🔍 Naming Review Checklist
+Before completing any implementation:
+- [ ] All variables have descriptive, non-abbreviated names
+- [ ] No single-letter variables (except in mathematical contexts like loops)
+- [ ] No Hungarian notation or type prefixes
+- [ ] No "Utils" or "Helpers" modules without clear justification
+- [ ] Class and function names clearly describe their purpose
+- [ ] Names include units where helpful for clarity
+- [ ] SQL queries use descriptive table aliases (not single letters or acronyms)
+- [ ] Database names follow snake_case conventions
+
 ```mermaid
 graph TD
     Start["🚀 START BUILD MODE"] --> ReadDocs["📚 Read Reference Documents<br>.cursor/rules/isolation_rules/Core/command-execution.mdc"]

@@ -16,6 +16,7 @@ alwaysApply: true
 * **System Patterns File:** `memory-bank/systemPatterns.md`
 * **Tech Context File:** `memory-bank/techContext.md`
 * **Style Guide File:** `memory-bank/style-guide.md`
+* **Naming Conventions File:** `memory-bank/naming-conventions.md`
 * **Creative Phase Docs:** `memory-bank/creative/creative-[feature_name].md`
 * **Reflection Docs:** `memory-bank/reflection/reflection-[task_id].md`
 * **Archive Directory:** `memory-bank/archive/archive-[task_id].md`
