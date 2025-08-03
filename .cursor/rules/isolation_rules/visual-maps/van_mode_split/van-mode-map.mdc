@@ -1,20 +1,20 @@
 ---
-description: Visual process map for VAN mode (Index/Entry Point)
-globs: van-mode-map.mdc
+description: Visual process map for INITIALISE mode (Index/Entry Point)
+globs: initialise-mode-map.mdc
 alwaysApply: false
 ---
-# VAN MODE: INITIALIZATION PROCESS MAP
+# INITIALISE MODE: INITIALIZATION PROCESS MAP
 
 🚨 MANDATORY FIRST STEP: MEMORY BANK CREATION 🚨
 NO OPERATION CAN PROCEED WITHOUT MEMORY BANK STRUCTURE
 
-> **TL;DR:** This visual map defines the VAN mode process for project initialization, task analysis, and technical validation. It guides users through platform detection, file verification, complexity determination, and technical validation to ensure proper setup before implementation.
+> **TL;DR:** This visual map defines the INITIALISE mode process for project initialization, task analysis, and technical validation. It guides users through platform detection, file verification, complexity determination, and technical validation to ensure proper setup before implementation.
 
-## 🧭 VAN MODE PROCESS FLOW
+## 🧭 INITIALISE MODE PROCESS FLOW
 
 ```mermaid
 graph TD
-    Start["START VAN MODE"] --> PlatformDetect["PLATFORM DETECTION"]
+    Start["START INITIALISE MODE"] --> PlatformDetect["PLATFORM DETECTION"]
     PlatformDetect --> DetectOS["Detect Operating System"]
     DetectOS --> CheckPath["Check Path Separator Format"]
     CheckPath --> AdaptCmds["Adapt Commands if Needed"]
@@ -48,8 +48,8 @@ graph TD
     
     %% For Level 2+ tasks after PLAN and CREATIVE modes
     ForceExit -.-> OtherModes["PLAN → CREATIVE modes"]
-    OtherModes -.-> VANQA["VAN QA MODE"]
-    VANQA --> QAProcess["Technical Validation Process"]
+    OtherModes -.-> INITIALISEQA["INITIALISE QA MODE"]
+    INITIALISEQA --> QAProcess["Technical Validation Process"]
     QAProcess --> QACheck{"All Checks Pass?"}
     QACheck -->|"Yes"| BUILD["To BUILD MODE"]
     QACheck -->|"No"| FixIssues["Fix Technical Issues"]
@@ -64,7 +64,7 @@ graph TD
     style ComplexityCP fill:#f55,stroke:#d44,color:white
     style CRITICALGATE fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style ForceExit fill:#ff0000,stroke:#990000,color:white,stroke-width:2px
-    style VANQA fill:#4da6ff,stroke:#0066cc,color:white,stroke-width:3px
+    style INITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white,stroke-width:3px
     style QAProcess fill:#4da6ff,stroke:#0066cc,color:white
     style QACheck fill:#4da6ff,stroke:#0066cc,color:white
     style FixIssues fill:#ff5555,stroke:#dd3333,color:white
@@ -158,24 +158,24 @@ The full workflow includes technical validation before implementation:
 
 ```mermaid
 flowchart LR
-    VAN1["VAN MODE 
+    INITIALISE1["INITIALISE MODE 
     (Initial Analysis)"] --> PLAN["PLAN MODE
     (Task Planning)"]
     PLAN --> CREATIVE["CREATIVE MODE
     (Design Decisions)"]
-    CREATIVE --> VANQA["VAN QA MODE
+    CREATIVE --> INITIALISEQA["INITIALISE QA MODE
     (Technical Validation)"] 
-    VANQA --> BUILD["BUILD MODE
+    INITIALISEQA --> BUILD["BUILD MODE
     (Implementation)"]
 ```
 
 ## 🔍 TECHNICAL VALIDATION OVERVIEW
 
-The VAN QA technical validation process consists of four key validation points:
+The INITIALISE QA technical validation process consists of four key validation points:
 
 ```mermaid
 graph TD
-    VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
+    INITIALISEQA["INITIALISE QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
     
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION<br>Check all required packages"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION<br>Verify format & compatibility"]
@@ -191,7 +191,7 @@ graph TD
     FixIssues --> ReValidate["Re-validate"]
     ReValidate --> ValidationResults
     
-    style VANQA fill:#4da6ff,stroke:#0066cc,color:white
+    style INITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
     style BUILD fill:#10b981,stroke:#059669,color:white
@@ -214,24 +214,24 @@ The QA Validation step includes clear status indicators:
 
 ## 🚨 MODE TRANSITION TRIGGERS
 
-### VAN to PLAN Transition
+### INITIALISE to PLAN Transition
 For complexity levels 2-4:
 ```
 🚫 LEVEL [2-4] TASK DETECTED
-Implementation in VAN mode is BLOCKED
+Implementation in INITIALISE mode is BLOCKED
 This task REQUIRES PLAN mode
 You MUST switch to PLAN mode for proper documentation and planning
 Type 'PLAN' to switch to planning mode
 ```
 
-### CREATIVE to VAN QA Transition
+### CREATIVE to INITIALISE QA Transition
 After completing the CREATIVE mode:
 ```
-⏭️ NEXT MODE: VAN QA
-To validate technical requirements before implementation, please type 'VAN QA'
+⏭️ NEXT MODE: INITIALISE QA
+To validate technical requirements before implementation, please type 'INITIALISE QA'
 ```
 
-### VAN QA to BUILD Transition
+### INITIALISE QA to BUILD Transition
 After successful validation:
 ```
 ✅ TECHNICAL VALIDATION COMPLETE
@@ -250,12 +250,12 @@ graph TD
     CheckQA -->|"Yes and Passed"| AllowBuild["Allow BUILD Mode"]
     CheckQA -->|"No or Failed"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
-    Message --> ReturnToVANQA["Prompt: Type VAN QA"]
+    Message --> ReturnToINITIALISEQA["Prompt: Type INITIALISE QA"]
     
     style CheckQA fill:#f6546a,stroke:#c30052,color:white
     style BlockBuild fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style Message fill:#ff5555,stroke:#dd3333,color:white
-    style ReturnToVANQA fill:#4da6ff,stroke:#0066cc,color:white
+    style ReturnToINITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white
 ```
 
 ## 🔄 QA COMMAND PRECEDENCE
@@ -305,7 +305,7 @@ Any issues found MUST be remediated before continuing with normal process flow
 
 ## 📋 CHECKPOINT VERIFICATION TEMPLATE
 
-Each major checkpoint in VAN mode uses this format:
+Each major checkpoint in INITIALISE mode uses this format:
 
 ```
 ✓ SECTION CHECKPOINT: [SECTION NAME]
@@ -317,25 +317,25 @@ Each major checkpoint in VAN mode uses this format:
 → If any NO: Fix missing items before proceeding
 ```
 
-## 🚀 VAN MODE ACTIVATION
+## 🚀 INITIALISE MODE ACTIVATION
 
-When the user types "VAN", respond with a confirmation and start the process:
-
-```
-User: VAN
-
-Response: OK VAN - Beginning Initialization Process
-```
-
-After completing CREATIVE mode, when the user types "VAN QA", respond:
+When the user types "INITIALISE", respond with a confirmation and start the process:
 
 ```
-User: VAN QA
+User: INITIALISE
 
-Response: OK VAN QA - Beginning Technical Validation
+Response: OK INITIALISE - Beginning Initialization Process
 ```
 
-This ensures clear communication about which phase of VAN mode is active. 
+After completing CREATIVE mode, when the user types "INITIALISE QA", respond:
+
+```
+User: INITIALISE QA
+
+Response: OK INITIALISE QA - Beginning Technical Validation
+```
+
+This ensures clear communication about which phase of INITIALISE mode is active. 
 
 ## 🔍 DETAILED QA VALIDATION PROCESS
 
@@ -794,12 +794,12 @@ The following issues must be resolved before proceeding to BUILD mode:
 - [Recommended fix]
 
 ⚠️ BUILD MODE IS BLOCKED until these issues are resolved.
-Type 'VAN QA' after fixing the issues to re-validate.
+Type 'INITIALISE QA' after fixing the issues to re-validate.
 ```
 
 ## 🔄 INTEGRATION WITH DESIGN DECISIONS
 
-The VAN QA mode reads and validates design decisions from the CREATIVE phase:
+The INITIALISE QA mode reads and validates design decisions from the CREATIVE phase:
 
 ```mermaid
 graph TD
@@ -867,7 +867,7 @@ function Check-QAValidationStatus {
     Write-Output "⛔️ BUILD MODE BLOCKED: QA VALIDATION REQUIRED"
     Write-Output "⛔️ You must complete QA validation before proceeding to BUILD mode"
     Write-Output "`n"
-    Write-Output "Type 'VAN QA' to perform technical validation"
+    Write-Output "Type 'INITIALISE QA' to perform technical validation"
     Write-Output "`n"
     Write-Output "🚫 NO IMPLEMENTATION CAN PROCEED WITHOUT VALIDATION 🚫"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"

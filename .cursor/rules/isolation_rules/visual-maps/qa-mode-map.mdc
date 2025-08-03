@@ -15,7 +15,7 @@ graph TD
     
     %% Phase detection decision path
     DetectPhase --> PhaseDetermination{"Current Phase?"}
-    PhaseDetermination -->|"VAN"| VANChecks["VAN Phase Validation"]
+    PhaseDetermination -->|"INITIALISE"| INITIALISEChecks["INITIALISE Phase Validation"]
     PhaseDetermination -->|"PLAN"| PLANChecks["PLAN Phase Validation"]
     PhaseDetermination -->|"CREATIVE"| CREATIVEChecks["CREATIVE Phase Validation"] 
     PhaseDetermination -->|"IMPLEMENT"| IMPLEMENTChecks["IMPLEMENT Phase Validation"]
@@ -27,7 +27,7 @@ graph TD
     TaskTrackingCheck --> ReferenceCheck["3️⃣ REFERENCE VALIDATION<br>Verify cross-references between docs"]
     
     %% Phase-specific validations feed into comprehensive report
-    VANChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
+    INITIALISEChecks & PLANChecks & CREATIVEChecks & IMPLEMENTChecks --> PhaseSpecificResults["Phase-Specific Results"]
     ReferenceCheck & PhaseSpecificResults --> ValidationResults{"✅ All Checks<br>Passed?"}
     
     %% Results Processing
@@ -70,12 +70,12 @@ graph TD
     CheckProgress --> CheckTasks["Check tasks.md<br>for task status"]
     
     CheckTasks --> PhaseResult{"Determine<br>Current Phase"}
-    PhaseResult -->|"VAN"| VAN["VAN Phase<br>Initialization"]
+    PhaseResult -->|"INITIALISE"| INITIALISE["INITIALISE Phase<br>Initialization"]
     PhaseResult -->|"PLAN"| PLAN["PLAN Phase<br>Task Planning"]
     PhaseResult -->|"CREATIVE"| CREATIVE["CREATIVE Phase<br>Design Decisions"]
     PhaseResult -->|"IMPLEMENT"| IMPLEMENT["IMPLEMENT Phase<br>Implementation"]
     
-    VAN & PLAN & CREATIVE & IMPLEMENT --> LoadChecks["Load Phase-Specific<br>Validation Checks"]
+    INITIALISE & PLAN & CREATIVE & IMPLEMENT --> LoadChecks["Load Phase-Specific<br>Validation Checks"]
     
     style PD fill:#4da6ff,stroke:#0066cc,color:white
     style PhaseResult fill:#f6546a,stroke:#c30052,color:white
@@ -154,22 +154,22 @@ graph TD
 
 ## 🚨 PHASE-SPECIFIC VALIDATION PROCESSES
 
-### VAN Phase Validation
+### INITIALISE Phase Validation
 
 ```mermaid
 graph TD
-    VAN["VAN Phase<br>Validation"] --> InitCheck["Check Initialization<br>Completeness"]
+    INITIALISE["INITIALISE Phase<br>Validation"] --> InitCheck["Check Initialization<br>Completeness"]
     InitCheck --> PlatformCheck["Verify Platform<br>Detection"]
     PlatformCheck --> ComplexityCheck["Validate Complexity<br>Determination"]
     
-    ComplexityCheck --> VANConsistency{"VAN Phase<br>Complete?"}
-    VANConsistency -->|"Yes"| PassVAN["✅ VAN Phase<br>Validation Passed"]
-    VANConsistency -->|"No"| FailVAN["❌ VAN Phase<br>Issues Found"]
+    ComplexityCheck --> INITIALISEConsistency{"INITIALISE Phase<br>Complete?"}
+    INITIALISEConsistency -->|"Yes"| PassINITIALISE["✅ INITIALISE Phase<br>Validation Passed"]
+    INITIALISEConsistency -->|"No"| FailINITIALISE["❌ INITIALISE Phase<br>Issues Found"]
     
-    style VAN fill:#4da6ff,stroke:#0066cc,color:white
-    style VANConsistency fill:#f6546a,stroke:#c30052,color:white
-    style PassVAN fill:#10b981,stroke:#059669,color:white
-    style FailVAN fill:#ff5555,stroke:#dd3333,color:white
+    style INITIALISE fill:#4da6ff,stroke:#0066cc,color:white
+    style INITIALISEConsistency fill:#f6546a,stroke:#c30052,color:white
+    style PassINITIALISE fill:#10b981,stroke:#059669,color:white
+    style FailINITIALISE fill:#ff5555,stroke:#dd3333,color:white
 ```
 
 ### PLAN Phase Validation
@@ -418,7 +418,7 @@ grep -i "script.*src=" index.html
 │                                                                               │
 │ ━━━━━━━━━━━━━━━━━━━━━━━ PHASE-SPECIFIC VALIDATION ━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
 │                                                                               │
-│ [VAN/PLAN/CREATIVE/IMPLEMENT] PHASE VALIDATION                                │
+│ [INITIALISE/PLAN/CREATIVE/IMPLEMENT] PHASE VALIDATION                                │
 │    ✓ [Phase-specific check 1]: [Status]                                       │
 │    ✓ [Phase-specific check 2]: [Status]                                       │
 │    ✓ [Phase-specific check 3]: [Status]                                       │

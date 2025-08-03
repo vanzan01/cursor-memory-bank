@@ -1,6 +1,6 @@
 ---
-description: Visual process map for VAN mode file verification
-globs: van-file-verification.mdc
+description: Visual process map for INITIALISE mode file verification
+globs: initialise-file-verification.mdc
 alwaysApply: false
 ---
 # OPTIMIZED FILE VERIFICATION SYSTEM

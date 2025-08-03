@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document analyzes the effectiveness of the Memory Bank mode switching architecture based on development of a moderately complex application. We observed significant benefits from switching between specialized modes (VAN, PLAN, CREATIVE, IMPLEMENT) with some hybrid approaches also proving effective. The architecture demonstrated value in enforcing disciplined development practices while maintaining flexibility when needed.
+This document analyzes the effectiveness of the Memory Bank mode switching architecture based on development of a moderately complex application. We observed significant benefits from switching between specialized modes (INITIALISE, PLAN, CREATIVE, IMPLEMENT) with some hybrid approaches also proving effective. The architecture demonstrated value in enforcing disciplined development practices while maintaining flexibility when needed.
 
 ## Project Context
 
@@ -18,7 +18,7 @@ This Level 3 project provided an ideal test case for evaluating the Memory Bank 
 ## Mode Switching Implementation
 
 ### Modes Utilized
-1. **VAN Mode**: Initial analysis and project setup
+1. **INITIALISE Mode**: Initial analysis and project setup
 2. **PLAN Mode**: Comprehensive planning and component identification
 3. **CREATIVE Mode**: Design exploration for complex components
 4. **IMPLEMENT Mode**: Systematic implementation of planned components
@@ -38,7 +38,7 @@ This Level 3 project provided an ideal test case for evaluating the Memory Bank 
 - Established clear dependencies between components
 - Defined acceptance criteria for implementation
 
-**Observable difference**: Planning was significantly more comprehensive and structured than typical planning in general VAN mode.
+**Observable difference**: Planning was significantly more comprehensive and structured than typical planning in general INITIALISE mode.
 
 ### CREATIVE Mode Effects
 - Explored multiple architecture options for state management

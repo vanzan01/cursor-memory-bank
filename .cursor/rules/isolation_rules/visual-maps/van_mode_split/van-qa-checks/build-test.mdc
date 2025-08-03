@@ -1,9 +1,9 @@
 ---
-description: Process map for VAN QA minimal build test
-globs: van-qa-checks/build-test.mdc
+description: Process map for INITIALISE QA minimal build test
+globs: initialise-qa-checks/build-test.mdc
 alwaysApply: false
 ---
-# VAN QA: MINIMAL BUILD TEST
+# INITIALISE QA: MINIMAL BUILD TEST
 
 > **TL;DR:** This component performs a minimal build test to ensure core build functionality works properly.
 
@@ -113,5 +113,5 @@ console.log('Test successful');
 → If any NO: Fix build issues before continuing.
 ```
 
-**Next Step (on PASS):** Load `van-qa-utils/reports.mdc` to generate success report.
-**Next Step (on FAIL):** Check `van-qa-utils/common-fixes.mdc` for build test fixes. 
+**Next Step (on PASS):** Load `initialise-qa-utils/reports.mdc` to generate success report.
+**Next Step (on FAIL):** Check `initialise-qa-utils/common-fixes.mdc` for build test fixes. 

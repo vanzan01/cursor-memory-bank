@@ -1,9 +1,9 @@
 ---
-description: Utility for VAN QA validation reports
-globs: van-qa-utils/reports.mdc
+description: Utility for INITIALISE QA validation reports
+globs: initialise-qa-utils/reports.mdc
 alwaysApply: false
 ---
-# VAN QA: VALIDATION REPORTS
+# INITIALISE QA: VALIDATION REPORTS
 
 > **TL;DR:** This component contains the formats for comprehensive success and failure reports generated upon completion of the QA validation process.
 
@@ -81,7 +81,7 @@ The following issues must be resolved before proceeding to BUILD mode:
 - [Recommended fix]
 
 ⚠️ BUILD MODE IS BLOCKED until these issues are resolved.
-Type 'VAN QA' after fixing the issues to re-validate.
+Type 'INITIALISE QA' after fixing the issues to re-validate.
 ```
 
 ### Failure Report Generation Example:
@@ -135,7 +135,7 @@ $(($BuildIssues | ForEach-Object { "- $_" }) -join "`n")
     
     $report += @"
 ⚠️ BUILD MODE IS BLOCKED until these issues are resolved.
-Type 'VAN QA' after fixing the issues to re-validate.
+Type 'INITIALISE QA' after fixing the issues to re-validate.
 "@
     
     # Save validation status (used by BUILD mode prevention mechanism)
@@ -145,5 +145,5 @@ Type 'VAN QA' after fixing the issues to re-validate.
 }
 ```
 
-**Next Step (on SUCCESS):** Load `van-qa-utils/mode-transitions.mdc` to handle BUILD mode transition.
-**Next Step (on FAILURE):** Load `van-qa-utils/common-fixes.mdc` for issue remediation guidance. 
+**Next Step (on SUCCESS):** Load `initialise-qa-utils/mode-transitions.mdc` to handle BUILD mode transition.
+**Next Step (on FAILURE):** Load `initialise-qa-utils/common-fixes.mdc` for issue remediation guidance. 

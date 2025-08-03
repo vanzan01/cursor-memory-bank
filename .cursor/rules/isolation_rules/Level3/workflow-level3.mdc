@@ -14,7 +14,7 @@ Level 3 tasks represent a significant development effort, building a complete fe
 
 ```mermaid
 graph LR
-    Init["1. INITIALIZATION<br>(VAN Mode Output)"] -->
+    Init["1. INITIALIZATION<br>(INITIALISE Mode Output)"] -->
     DocSetup["2. DOCUMENTATION SETUP"] -->
     Plan["3. FEATURE PLANNING (PLAN Mode)"] -->
     Creative["4. CREATIVE PHASES (CREATIVE Mode)"] -->
@@ -55,7 +55,7 @@ graph TD
     Up --> L4Trigger["Triggers:<br>- Unforeseen system-wide impact<br>- Requires deep architectural changes<br>- Scope significantly larger than planned"]
     Down --> L2Trigger["Triggers:<br>- Feature simpler than anticipated<br>- Very limited component interaction<br>- No complex design decisions emerge"]
 
-    L4Trigger --> L4Switch["Stop L3 Workflow.<br>Re-initialize task as Level 4 (VAN).<br>Preserve existing docs as input."]
+    L4Trigger --> L4Switch["Stop L3 Workflow.<br>Re-initialize task as Level 4 (INITIALISE).<br>Preserve existing docs as input."]
     L2Trigger --> L2Switch["Adapt L3 Workflow:<br>Simplify remaining phases,<br>use L2 Reflection/Archive rules."]
     
     style Assess fill:#ffe082,stroke:#ffca28
@@ -66,12 +66,12 @@ graph TD
 
 ## 📋 WORKFLOW PHASES
 
-### Phase 1: INITIALIZATION (Output from VAN Mode)
+### Phase 1: INITIALIZATION (Output from INITIALISE Mode)
 
-This phase is largely completed in VAN mode, which identifies the task as Level 3.
+This phase is largely completed in INITIALISE mode, which identifies the task as Level 3.
 
   * **Input:** User request leading to an "Intermediate Feature" classification.
-  * **Key Existing Files (from VAN):**
+  * **Key Existing Files (from INITIALISE):**
       * `memory-bank/tasks.md`: Entry created, complexity set to Level 3.
       * `memory-bank/activeContext.md`: Initial context set.
       * Relevant Core Rules loaded (e.g., `Core/memory-bank-paths.mdc`, `Core/main-optimized.mdc`).
@@ -85,7 +85,7 @@ This phase is largely completed in VAN mode, which identifies the task as Level 
     - Core Memory Bank files (tasks.md, activeContext.md) accessible via canonical paths? [YES/NO]
 
     → If all YES: Proceed to Documentation Setup for L3.
-    → If any NO: Revisit VAN mode or core file setup.
+    → If any NO: Revisit INITIALISE mode or core file setup.
     ```
 
 ### Phase 2: DOCUMENTATION SETUP (L3 Specific)
@@ -303,7 +303,7 @@ graph TD
     - `tasks.md` shows the feature as COMPLETED and ARCHIVED with a link to the archive? [YES/NO]
     - `activeContext.md` cleared and ready for a new task? [YES/NO]
 
-    → If all YES: Level 3 Task Fully Completed. Suggest VAN Mode for next task.
+    → If all YES: Level 3 Task Fully Completed. Suggest INITIALISE Mode for next task.
     → If any NO: Complete archiving steps.
     ```
 

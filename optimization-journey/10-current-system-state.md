@@ -56,7 +56,7 @@ graph TD
     
     Core --> Phase["Phase-Specific<br>Rules"]
     
-    Phase --> VAN_Rules["VAN Mode<br>Rules"]
+    Phase --> INITIALISE_Rules["INITIALISE Mode<br>Rules"]
     Phase --> PLAN_Rules["PLAN Mode<br>Rules"]
     Phase --> CREATIVE_Rules["CREATIVE Mode<br>Rules"]
     Phase --> IMPLEMENT_Rules["IMPLEMENT Mode<br>Rules"]
@@ -71,7 +71,7 @@ graph TD
 ## 🔄 OPTIMIZATION EFFICIENCY
 
 ### Mode-Specific Optimizations
-1. **VAN Mode**
+1. **INITIALISE Mode**
    - Efficient complexity determination with minimal overhead
    - Platform-aware commands with reduced token usage
    - Streamlined file verification processes

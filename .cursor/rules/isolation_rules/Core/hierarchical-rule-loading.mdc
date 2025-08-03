@@ -21,7 +21,7 @@ graph TD
     Core --> File["File<br>Operations"]
     Core --> Transition["Mode<br>Transitions"]
     
-    Mode --> VAN["VAN Mode<br>Rules"]
+    Mode --> INITIALISE["INITIALISE Mode<br>Rules"]
     Mode --> PLAN["PLAN Mode<br>Rules"]
     Mode --> CREATIVE["CREATIVE Mode<br>Rules"]
     Mode --> IMPLEMENT["IMPLEMENT Mode<br>Rules"]
@@ -154,10 +154,10 @@ graph TD
     Main --> Core2["file-verification.mdc"]
     Main --> Core3["command-execution.mdc"]
     
-    subgraph "VAN Mode"
-        VanMap["van-mode-map.mdc"] --> Van1["van-complexity-determination.mdc"]
-        VanMap --> Van2["van-file-verification.mdc"]
-        VanMap --> Van3["van-platform-detection.mdc"]
+    subgraph "INITIALISE Mode"
+        VanMap["initialise-mode-map.mdc"] --> Van1["initialise-complexity-determination.mdc"]
+        VanMap --> Van2["initialise-file-verification.mdc"]
+        VanMap --> Van3["initialise-platform-detection.mdc"]
     end
     
     subgraph "PLAN Mode"
@@ -182,12 +182,12 @@ graph TD
 
 ## 🔍 MODE-SPECIFIC RULE LOADING
 
-### VAN Mode Essential Rules
+### INITIALISE Mode Essential Rules
 ```markdown
 - main.mdc (Core)
 - platform-awareness.mdc (Core)
 - file-verification.mdc (Core)
-- van-mode-map.mdc (Mode)
+- initialise-mode-map.mdc (Mode)
 ```
 
 ### PLAN Mode Essential Rules

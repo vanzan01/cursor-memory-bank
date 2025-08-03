@@ -56,7 +56,7 @@
 - Differential memory bank updates to minimize token waste
 
 #### Mode-Based Optimization
-- **VAN Mode**: Efficient complexity determination with minimal overhead
+- **INITIALISE Mode**: Efficient complexity determination with minimal overhead
 - **PLAN Mode**: Complexity-appropriate planning templates
 - **CREATIVE Mode**: Progressive documentation with tabular comparisons
 - **IMPLEMENT Mode**: Streamlined implementation guidance

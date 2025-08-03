@@ -1,9 +1,9 @@
 ---
-description: Process map for VAN QA dependency verification
-globs: van-qa-checks/dependency-check.mdc
+description: Process map for INITIALISE QA dependency verification
+globs: initialise-qa-checks/dependency-check.mdc
 alwaysApply: false
 ---
-# VAN QA: DEPENDENCY VERIFICATION
+# INITIALISE QA: DEPENDENCY VERIFICATION
 
 > **TL;DR:** This component verifies that all required dependencies are installed and compatible with the project requirements.
 
@@ -143,5 +143,5 @@ verify_dependencies() {
 → If any NO: Fix dependency issues before continuing.
 ```
 
-**Next Step (on PASS):** Load `van-qa-checks/config-check.mdc`.
-**Next Step (on FAIL):** Check `van-qa-utils/common-fixes.mdc` for dependency fixes. 
+**Next Step (on PASS):** Load `initialise-qa-checks/config-check.mdc`.
+**Next Step (on FAIL):** Check `initialise-qa-utils/common-fixes.mdc` for dependency fixes. 

@@ -143,10 +143,10 @@ Before planning can begin, verify the file state:
 graph TD
     Start["File State<br>Verification"] --> CheckTasks{"tasks.md<br>initialized?"}
     
-    CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to VAN Mode"]
+    CheckTasks -->|"No"| ErrorTasks["ERROR:<br>Return to INITIALISE Mode"]
     CheckTasks -->|"Yes"| CheckActive{"activeContext.md<br>exists?"}
     
-    CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to VAN Mode"]
+    CheckActive -->|"No"| ErrorActive["ERROR:<br>Return to INITIALISE Mode"]
     CheckActive -->|"Yes"| ReadyPlan["Ready for<br>Planning"]
 ```
 

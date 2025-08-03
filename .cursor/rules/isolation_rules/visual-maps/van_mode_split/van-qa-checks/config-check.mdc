@@ -1,9 +1,9 @@
 ---
-description: Process map for VAN QA configuration validation
-globs: van-qa-checks/config-check.mdc
+description: Process map for INITIALISE QA configuration validation
+globs: initialise-qa-checks/config-check.mdc
 alwaysApply: false
 ---
-# VAN QA: CONFIGURATION VALIDATION
+# INITIALISE QA: CONFIGURATION VALIDATION
 
 > **TL;DR:** This component validates configuration files for proper syntax and compatibility with the project and platform.
 
@@ -99,5 +99,5 @@ function Validate-Configurations {
 → If any NO: Fix configuration issues before continuing.
 ```
 
-**Next Step (on PASS):** Load `van-qa-checks/environment-check.mdc`.
-**Next Step (on FAIL):** Check `van-qa-utils/common-fixes.mdc` for configuration fixes. 
+**Next Step (on PASS):** Load `initialise-qa-checks/environment-check.mdc`.
+**Next Step (on FAIL):** Check `initialise-qa-utils/common-fixes.mdc` for configuration fixes. 

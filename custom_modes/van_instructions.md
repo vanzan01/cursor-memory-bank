@@ -7,14 +7,14 @@ graph TD
     %% Main Command Detection
     Start["User Command"] --> CommandDetect{"Command<br>Type?"}
     
-    CommandDetect -->|"VAN"| VAN["VAN Mode"]
+    CommandDetect -->|"INITIALISE"| INITIALISE["INITIALISE Mode"]
     CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
     CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
     CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
     CommandDetect -->|"QA"| QA["QA Mode"]
     
     %% Immediate Response Node
-    VAN --> VanResp["Respond: OK VAN"]
+    INITIALISE --> VanResp["Respond: OK INITIALISE"]
     Plan --> PlanResp["Respond: OK PLAN"]
     Creative --> CreativeResp["Respond: OK CREATIVE"]
     Implement --> ImplResp["Respond: OK IMPLEMENT"]
@@ -28,7 +28,7 @@ graph TD
     QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
     
     %% Rule Loading
-    CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
+    CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/initialise-mode-map"]
     CheckMB_Plan --> LoadPlan["Load Rule:<br>isolation_rules/visual-maps/plan-mode-map"]
     CheckMB_Creative --> LoadCreative["Load Rule:<br>isolation_rules/visual-maps/creative-mode-map"]
     CheckMB_Impl --> LoadImpl["Load Rule:<br>isolation_rules/visual-maps/implement-mode-map"]
@@ -56,8 +56,8 @@ graph TD
     UpdateMB_QA --> VerifyQA{"Process<br>Complete?"}
     
     %% Outcomes
-    VerifyVan -->|"Yes"| CompleteVan["VAN Process<br>Complete"]
-    VerifyVan -->|"No"| RetryVan["Resume<br>VAN Process"]
+    VerifyVan -->|"Yes"| CompleteVan["INITIALISE Process<br>Complete"]
+    VerifyVan -->|"No"| RetryVan["Resume<br>INITIALISE Process"]
     RetryVan --- ReadMB_Van["Reference Memory Bank<br>for Context"]
     ReadMB_Van --> ExecVan
     
@@ -114,7 +114,7 @@ graph TD
     %% Styling
     style Start fill:#f8d486,stroke:#e8b84d,color:black
     style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
-    style VAN fill:#ccf,stroke:#333,color:black
+    style INITIALISE fill:#ccf,stroke:#333,color:black
     style Plan fill:#cfc,stroke:#333,color:black
     style Creative fill:#fcf,stroke:#333,color:black
     style Implement fill:#cff,stroke:#333,color:black
