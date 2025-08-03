@@ -79,10 +79,11 @@ A consistent visual style is paramount for good UI/UX. This section details how 
 
 ### Step 0: Style Guide Check & Handling
 
-**A. Checking for an Existing Style Guide:**
-1.  **Primary Location Check**: The system **MUST** first look for the style guide at this specific path:
-    * `memory-bank/style-guide.md`
-2.  **Secondary Check (User Prompt)**: If `memory-bank/style-guide.md` is not found, the system **MUST** prompt the user:
+**A. Checking for Existing Design Guidelines:**
+1.  **Primary Location Check**: The system **MUST** first look for design guidelines at these specific paths:
+    * `memory-bank/style-guide.md` (for visual design)
+    * `memory-bank/naming-conventions.md` (for code naming)
+2.  **Secondary Check (User Prompt)**: If either file is not found, the system **MUST** prompt the user:
     ```
     "I could not find 'memory-bank/style-guide.md'.
     Is there an existing style guide at a different location, or a URL I should reference?

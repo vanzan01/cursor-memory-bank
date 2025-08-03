@@ -232,6 +232,8 @@ graph LR
         Tasks["tasks.md<br>Source of Truth"]
         Active["activeContext.md<br>Current Focus"]
         Progress["progress.md<br>Implementation Status"]
+        StyleGuide["style-guide.md<br>Visual Design"]
+        Naming["naming-conventions.md<br>Code Naming"]
         Creative["creative-*.md<br>Design Decisions"]
         Reflect["reflect-*.md<br>Review Documents"]
     end
@@ -239,6 +241,8 @@ graph LR
     style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px,color:black
     style Active fill:#a8d5ff,stroke:#88b5e0,color:black
     style Progress fill:#c5e8b7,stroke:#a5c897,color:black
+    style StyleGuide fill:#ffb3ba,stroke:#ff8a95,color:black
+    style Naming fill:#b3d9ff,stroke:#80bfff,color:black
     style Creative fill:#f4b8c4,stroke:#d498a4,color:black
     style Reflect fill:#b3e6cc,stroke:#66c999,color:black
 ```
@@ -246,6 +250,8 @@ graph LR
 - **tasks.md**: Central source of truth for task tracking
 - **activeContext.md**: Maintains focus of current development phase
 - **progress.md**: Tracks implementation status
+- **style-guide.md**: Visual design guidelines and UI/UX standards
+- **naming-conventions.md**: Code naming conventions and best practices
 - **creative-*.md**: Design decision documents generated during CREATIVE mode
 - **reflect-*.md**: Review documents created during REFLECT mode
 
