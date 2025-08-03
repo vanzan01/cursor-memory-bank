@@ -1,9 +1,9 @@
 ---
-description: Visual process map for VAN mode complexity determination
-globs: van-complexity-determination.mdc
+description: Visual process map for INITIALISE mode complexity determination
+globs: initialise-complexity-determination.mdc
 alwaysApply: false
 ---
-# VAN MODE: COMPLEXITY DETERMINATION
+# INITIALISE MODE: COMPLEXITY DETERMINATION
 
 > **TL;DR:** This component determines the appropriate complexity level (1-4) for the current task and directs the workflow accordingly.
 
@@ -110,18 +110,18 @@ graph TD
 ## 📋 WORKFLOW LOADING
 
 Based on determined level:
-- Level 1: Continue in VAN mode
+- Level 1: Continue in INITIALISE mode
 - Level 2-4: Transition to PLAN mode
 
 **Next Step:** Load appropriate level-specific workflow
 
-## 🚨 MODE TRANSITION TRIGGER (VAN to PLAN)
+## 🚨 MODE TRANSITION TRIGGER (INITIALISE to PLAN)
 
 If complexity is determined to be Level 2, 3, or 4:
 
 ```
 🚫 LEVEL [2-4] TASK DETECTED
-Implementation in VAN mode is BLOCKED
+Implementation in INITIALISE mode is BLOCKED
 This task REQUIRES PLAN mode
 You MUST switch to PLAN mode for proper documentation and planning
 Type 'PLAN' to switch to planning mode
@@ -134,9 +134,9 @@ Type 'PLAN' to switch to planning mode
 - Task Analyzed? [YES/NO]
 - Complexity Level Determined? [YES/NO]
 
-→ If Level 1: Proceed to VAN Mode Completion.
+→ If Level 1: Proceed to INITIALISE Mode Completion.
 → If Level 2-4: Trigger PLAN Mode transition.
 ```
 
-**Next Step (Level 1):** Complete VAN Initialization (e.g., initialize Memory Bank if needed).
-**Next Step (Level 2-4):** Exit VAN mode and initiate PLAN mode. 
+**Next Step (Level 1):** Complete INITIALISE Initialization (e.g., initialize Memory Bank if needed).
+**Next Step (Level 2-4):** Exit INITIALISE mode and initiate PLAN mode. 

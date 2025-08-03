@@ -1,9 +1,9 @@
 ---
-description: Visual process map for VAN QA mode (Technical Validation Entry Point)
-globs: van-qa-main.mdc
+description: Visual process map for INITIALISE QA mode (Technical Validation Entry Point)
+globs: initialise-qa-main.mdc
 alwaysApply: false
 ---
-# VAN MODE: QA TECHNICAL VALIDATION (Main Entry)
+# INITIALISE MODE: QA TECHNICAL VALIDATION (Main Entry)
 
 > **TL;DR:** This is the entry point for the QA validation process that executes *after* CREATIVE mode and *before* BUILD mode. It ensures technical requirements are met before implementation begins.
 
@@ -14,12 +14,12 @@ To access any QA validation rule or component, use the `fetch_rules` tool with e
 ```
 // CRITICAL: Always use fetch_rules to load validation components
 // For detailed examples and guidance, load:
-// isolation_rules/visual-maps/van-qa-utils/rule-calling-guide
+// isolation_rules/visual-maps/initialise-qa-utils/rule-calling-guide
 ```
 
-## 🚀 VAN QA MODE ACTIVATION
+## 🚀 INITIALISE QA MODE ACTIVATION
 
-After completing CREATIVE mode, when the user types "VAN QA", respond:
+After completing CREATIVE mode, when the user types "INITIALISE QA", respond:
 
 ```mermaid
 graph TD
@@ -44,7 +44,7 @@ graph TD
 ### QA Interruption Rules
 
 1. **Immediate Precedence:** `QA` command interrupts everything.
-2. **Load & Execute:** Load this map (`van-qa-main.mdc`) and its components (see below).
+2. **Load & Execute:** Load this map (`initialise-qa-main.mdc`) and its components (see below).
 3. **Remediation Priority:** Fixes take priority over pending mode switches.
 4. **Resume:** On PASS, resume the previous flow.
 
@@ -61,31 +61,31 @@ Four-point validation process with selective loading:
 
 ```mermaid
 graph TD
-    VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
+    INITIALISEQA["INITIALISE QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
     
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION
-    Load: van-qa-checks/dependency-check.mdc"]
+    Load: initialise-qa-checks/dependency-check.mdc"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION
-    Load: van-qa-checks/config-check.mdc"]
+    Load: initialise-qa-checks/config-check.mdc"]
     ConfigCheck --> EnvCheck["3️⃣ ENVIRONMENT VALIDATION
-    Load: van-qa-checks/environment-check.mdc"]
+    Load: initialise-qa-checks/environment-check.mdc"]
     EnvCheck --> MinBuildCheck["4️⃣ MINIMAL BUILD TEST
-    Load: van-qa-checks/build-test.mdc"]
+    Load: initialise-qa-checks/build-test.mdc"]
     
     MinBuildCheck --> ValidationResults{"All Checks<br>Passed?"}
     ValidationResults -->|"Yes"| SuccessReport["GENERATE SUCCESS REPORT
-    Load: van-qa-utils/reports.mdc"]
+    Load: initialise-qa-utils/reports.mdc"]
     ValidationResults -->|"No"| FailureReport["GENERATE FAILURE REPORT
-    Load: van-qa-utils/reports.mdc"]
+    Load: initialise-qa-utils/reports.mdc"]
     
     SuccessReport --> BUILD_Transition["Trigger BUILD Mode
-    Load: van-qa-utils/mode-transitions.mdc"]
+    Load: initialise-qa-utils/mode-transitions.mdc"]
     FailureReport --> FixIssues["Fix Technical Issues
-    Load: van-qa-utils/common-fixes.mdc"]
-    FixIssues --> ReValidate["Re-validate (Re-run VAN QA)"]
+    Load: initialise-qa-utils/common-fixes.mdc"]
+    FixIssues --> ReValidate["Re-validate (Re-run INITIALISE QA)"]
     ReValidate --> FourChecks
     
-    style VANQA fill:#4da6ff,stroke:#0066cc,color:white
+    style INITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
     style BUILD_Transition fill:#10b981,stroke:#059669,color:white
@@ -114,16 +114,16 @@ graph TD
 
 The QA validation process follows this selective loading sequence:
 
-1. **Main Entry (This File)**: `van-qa-main.mdc`
+1. **Main Entry (This File)**: `initialise-qa-main.mdc`
 2. **Validation Checks**:
-   - `van-qa-checks/dependency-check.mdc`
-   - `van-qa-checks/config-check.mdc`
-   - `van-qa-checks/environment-check.mdc`
-   - `van-qa-checks/build-test.mdc`
+   - `initialise-qa-checks/dependency-check.mdc`
+   - `initialise-qa-checks/config-check.mdc`
+   - `initialise-qa-checks/environment-check.mdc`
+   - `initialise-qa-checks/build-test.mdc`
 3. **Utilities (As Needed)**:
-   - `van-qa-utils/reports.mdc`
-   - `van-qa-utils/common-fixes.mdc`
-   - `van-qa-utils/mode-transitions.mdc`
+   - `initialise-qa-utils/reports.mdc`
+   - `initialise-qa-utils/common-fixes.mdc`
+   - `initialise-qa-utils/mode-transitions.mdc`
 
 ## 📋 FINAL QA VALIDATION CHECKPOINT
 
@@ -135,8 +135,8 @@ The QA validation process follows this selective loading sequence:
 - Minimal Build Test Passed? [YES/NO]
 
 → If all YES: Ready for BUILD mode transition.
-→ If any NO: Fix identified issues and re-run VAN QA.
+→ If any NO: Fix identified issues and re-run INITIALISE QA.
 ```
 
-**Next Step (on PASS):** Trigger BUILD mode (load `van-qa-utils/mode-transitions.mdc`).
-**Next Step (on FAIL):** Address issues (load `van-qa-utils/common-fixes.mdc`) and re-run `VAN QA`. 
+**Next Step (on PASS):** Trigger BUILD mode (load `initialise-qa-utils/mode-transitions.mdc`).
+**Next Step (on FAIL):** Address issues (load `initialise-qa-utils/common-fixes.mdc`) and re-run `INITIALISE QA`. 

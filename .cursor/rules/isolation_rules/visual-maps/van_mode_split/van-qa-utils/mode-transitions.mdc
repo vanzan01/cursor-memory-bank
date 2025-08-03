@@ -1,9 +1,9 @@
 ---
-description: Utility for VAN QA mode transitions
-globs: van-qa-utils/mode-transitions.mdc
+description: Utility for INITIALISE QA mode transitions
+globs: initialise-qa-utils/mode-transitions.mdc
 alwaysApply: false
 ---
-# VAN QA: MODE TRANSITIONS
+# INITIALISE QA: MODE TRANSITIONS
 
 > **TL;DR:** This component handles transitions between modes, particularly the QA validation to BUILD mode transition, and prevents BUILD mode access without successful QA validation.
 
@@ -17,12 +17,12 @@ graph TD
     CheckQA -->|"Yes and Passed"| AllowBuild["Allow BUILD Mode"]
     CheckQA -->|"No or Failed"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
-    Message --> ReturnToVANQA["Prompt: Type VAN QA"]
+    Message --> ReturnToINITIALISEQA["Prompt: Type INITIALISE QA"]
     
     style CheckQA fill:#f6546a,stroke:#c30052,color:white
     style BlockBuild fill:#ff0000,stroke:#990000,color:white,stroke-width:3px
     style Message fill:#ff5555,stroke:#dd3333,color:white
-    style ReturnToVANQA fill:#4da6ff,stroke:#0066cc,color:white
+    style ReturnToINITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white
 ```
 
 ### Implementation Example (PowerShell):
@@ -44,7 +44,7 @@ function Check-QAValidationStatus {
     Write-Output "⛔️ BUILD MODE BLOCKED: QA VALIDATION REQUIRED"
     Write-Output "⛔️ You must complete QA validation before proceeding to BUILD mode"
     Write-Output "`n"
-    Write-Output "Type 'VAN QA' to perform technical validation"
+    Write-Output "Type 'INITIALISE QA' to perform technical validation"
     Write-Output "`n"
     Write-Output "🚫 NO IMPLEMENTATION CAN PROCEED WITHOUT VALIDATION 🚫"
     Write-Output "🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫"
@@ -55,15 +55,15 @@ function Check-QAValidationStatus {
 
 ## 🚨 MODE TRANSITION TRIGGERS
 
-### CREATIVE to VAN QA Transition:
+### CREATIVE to INITIALISE QA Transition:
 After completing the CREATIVE phase, trigger this message to prompt QA validation:
 
 ```
-⏭️ NEXT MODE: VAN QA
-To validate technical requirements before implementation, please type 'VAN QA'
+⏭️ NEXT MODE: INITIALISE QA
+To validate technical requirements before implementation, please type 'INITIALISE QA'
 ```
 
-### VAN QA to BUILD Transition (On Success):
+### INITIALISE QA to BUILD Transition (On Success):
 After successful QA validation, trigger this message to allow BUILD mode:
 
 ```

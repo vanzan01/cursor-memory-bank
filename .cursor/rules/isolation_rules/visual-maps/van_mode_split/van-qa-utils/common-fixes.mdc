@@ -1,9 +1,9 @@
 ---
-description: Utility for VAN QA common validation fixes
-globs: van-qa-utils/common-fixes.mdc
+description: Utility for INITIALISE QA common validation fixes
+globs: initialise-qa-utils/common-fixes.mdc
 alwaysApply: false
 ---
-# VAN QA: COMMON VALIDATION FIXES
+# INITIALISE QA: COMMON VALIDATION FIXES
 
 > **TL;DR:** This component provides common fixes for issues that may arise during the QA validation process.
 

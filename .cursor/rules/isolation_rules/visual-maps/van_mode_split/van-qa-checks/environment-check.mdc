@@ -1,9 +1,9 @@
 ---
-description: Process map for VAN QA environment validation
-globs: van-qa-checks/environment-check.mdc
+description: Process map for INITIALISE QA environment validation
+globs: initialise-qa-checks/environment-check.mdc
 alwaysApply: false
 ---
-# VAN QA: ENVIRONMENT VALIDATION
+# INITIALISE QA: ENVIRONMENT VALIDATION
 
 > **TL;DR:** This component verifies that the build environment is properly set up with required tools and permissions.
 
@@ -100,5 +100,5 @@ function Validate-Environment {
 → If any NO: Fix environment issues before continuing.
 ```
 
-**Next Step (on PASS):** Load `van-qa-checks/build-test.mdc`.
-**Next Step (on FAIL):** Check `van-qa-utils/common-fixes.mdc` for environment fixes. 
+**Next Step (on PASS):** Load `initialise-qa-checks/build-test.mdc`.
+**Next Step (on FAIL):** Check `initialise-qa-utils/common-fixes.mdc` for environment fixes. 

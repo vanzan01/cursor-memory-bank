@@ -23,7 +23,7 @@ graph TD
     end
     
     subgraph "Custom Modes"
-        VAN["VAN<br>Initialization"]
+        INITIALISE["INITIALISE<br>Initialization"]
         PLAN["PLAN<br>Planning"]
         CREATIVE["CREATIVE<br>Design"]
         IMPLEMENT["IMPLEMENT<br>Building"]
@@ -31,12 +31,12 @@ graph TD
         ARCHIVE["ARCHIVE<br>Documentation"]
     end
     
-    Context --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
-    Rules --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
-    FileIO --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
-    Transition --> VAN & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
+    Context --> INITIALISE & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
+    Rules --> INITIALISE & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
+    FileIO --> INITIALISE & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
+    Transition --> INITIALISE & PLAN & CREATIVE & IMPLEMENT & REFLECT & ARCHIVE
     
-    VAN --> PLAN
+    INITIALISE --> PLAN
     PLAN --> CREATIVE
     CREATIVE --> IMPLEMENT
     IMPLEMENT --> REFLECT
@@ -59,10 +59,10 @@ graph TD
     Complexity -->|"Level 3<br>Feature"| L3["5-Phase<br>Comprehensive Process"]
     Complexity -->|"Level 4<br>Enterprise"| L4["6-Phase<br>Governance Process"]
     
-    L1 --> L1_Process["VAN → IMPLEMENT → REFLECT"]
-    L2 --> L2_Process["VAN → PLAN → IMPLEMENT → REFLECT"]
-    L3 --> L3_Process["VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT"]
-    L4 --> L4_Process["VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE"]
+    L1 --> L1_Process["INITIALISE → IMPLEMENT → REFLECT"]
+    L2 --> L2_Process["INITIALISE → PLAN → IMPLEMENT → REFLECT"]
+    L3 --> L3_Process["INITIALISE → PLAN → CREATIVE → IMPLEMENT → REFLECT"]
+    L4 --> L4_Process["INITIALISE → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE"]
     
     style Complexity fill:#d94dbb,stroke:#a3378a,color:white
     style L1 fill:#4dbb5f,stroke:#36873f,color:white
@@ -88,7 +88,7 @@ graph TD
     
     Core --> Phase["Phase-Specific<br>Rules"]
     
-    Phase --> VAN_Rules["VAN Mode<br>Rules"]
+    Phase --> INITIALISE_Rules["INITIALISE Mode<br>Rules"]
     Phase --> PLAN_Rules["PLAN Mode<br>Rules"]
     Phase --> CREATIVE_Rules["CREATIVE Mode<br>Rules"]
     Phase --> IMPLEMENT_Rules["IMPLEMENT Mode<br>Rules"]
@@ -209,7 +209,7 @@ Uses the optimized creative phase template with appropriate documentation depth
 
 Each mode's visual process map is optimized for token efficiency:
 
-- @VAN Mode Map (Optimized)
+- @INITIALISE Mode Map (Optimized)
 - @PLAN Mode Map (Optimized)
 - @CREATIVE Mode Map (Optimized)
 - @IMPLEMENT Mode Map (Optimized)
@@ -230,7 +230,7 @@ Optimizations in this version:
 
 To use the optimized system:
 
-1. Start with the VAN command to initialize and determine complexity
+1. Start with the INITIALISE command to initialize and determine complexity
 2. Follow the complexity-appropriate workflow
 3. Use progressive documentation appropriate to task complexity
 4. Let the system manage rule loading and context preservation

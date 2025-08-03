@@ -37,7 +37,7 @@ graph TD
     Main --> Visual["Visual Process Maps"]
     Main --> Token["Token Optimization"]
     
-    Modes --> VAN["VAN: Initialization"]
+    Modes --> INITIALISE["INITIALISE: Initialization"]
     Modes --> PLAN["PLAN: Task Planning"]
     Modes --> CREATIVE["CREATIVE: Design"]
     Modes --> IMPLEMENT["IMPLEMENT: Building"]
@@ -73,7 +73,7 @@ See the [Memory Bank Optimizations](MEMORY_BANK_OPTIMIZATIONS.md) document for d
 While Cursor's documentation describes custom modes as primarily standalone configurations with basic prompts and tool selections, Memory Bank significantly extends this concept:
 
 - **Graph-Based Mode Integration**: Modes are interconnected nodes in a development workflow rather than isolated tools
-- **Workflow Progression**: Modes are designed to transition from one to another in a logical sequence (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
+- **Workflow Progression**: Modes are designed to transition from one to another in a logical sequence (INITIALISE → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
 - **Shared Memory**: Persistent state maintained across mode transitions via Memory Bank files
 - **Adaptive Behavior**: Each mode adjusts its recommendations based on project complexity
 - **Built-in QA Functions**: QA capabilities can be called from any mode for technical validation
@@ -148,8 +148,8 @@ Note: other documents are not necessary for memory bank operation, they are expl
 
 For each mode, configure as follows (If MCPs are showing, you can keep them on, they probably won't work):
 
-1. **VAN MODE** (Initialization)
-   - **Name**: 🔍 VAN
+1. **INITIALISE MODE** (Initialization)
+   - **Name**: 🔍 INITIALISE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Fetch Rules"
    - **Advanced options**: Paste from `custom_modes/van_instructions.md`
 
@@ -195,15 +195,15 @@ QA is not a separate custom mode but rather a set of validation functions that c
 
 ## Basic Usage
 
-1. **Start with VAN Mode**:
-   - Switch to VAN mode in Cursor
-   - Type "VAN" to initiate the initialization process
-   - VAN will analyze your project structure and determine complexity
+1. **Start with INITIALISE Mode**:
+   - Switch to INITIALISE mode in Cursor
+   - Type "INITIALISE" to initiate the initialization process
+   - INITIALISE will analyze your project structure and determine complexity
 
 2. **Follow the Workflow Based on Complexity**:
-   - **Level 1 tasks**: May proceed directly to IMPLEMENT after VAN
-   - **Level 2 tasks**: Simplified workflow (VAN → PLAN → IMPLEMENT → REFLECT)
-   - **Level 3-4 tasks**: Full workflow (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
+   - **Level 1 tasks**: May proceed directly to IMPLEMENT after INITIALISE
+   - **Level 2 tasks**: Simplified workflow (INITIALISE → PLAN → IMPLEMENT → REFLECT)
+   - **Level 3-4 tasks**: Full workflow (INITIALISE → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
    - **At any point**: Type "QA" to perform technical validation
 
 
@@ -211,7 +211,7 @@ QA is not a separate custom mode but rather a set of validation functions that c
 
 3. **Mode-Specific Commands**:
    ```
-   VAN - Initialize project and determine complexity
+   INITIALISE - Initialize project and determine complexity
    PLAN - Create detailed implementation plan
    CREATIVE - Explore design options for complex components
    IMPLEMENT - Systematically build planned components

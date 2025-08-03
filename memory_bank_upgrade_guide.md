@@ -112,19 +112,19 @@ Cursor custom modes allow you to configure different AI behaviors with specific 
 ```mermaid
 graph LR
     subgraph "Memory Bank Modes"
-        VAN["VAN MODE<br>Initialization"]
+        INITIALISE["INITIALISE MODE<br>Initialization"]
         PLAN["PLAN MODE<br>Task Planning"]
         CREATIVE["CREATIVE MODE<br>Design Decisions"]
         IMPLEMENT["IMPLEMENT MODE<br>Code Implementation"]
         QA["QA MODE<br>Validation"]
     end
     
-    VAN --> PLAN
+    INITIALISE --> PLAN
     PLAN --> CREATIVE
     CREATIVE --> IMPLEMENT
     IMPLEMENT --> QA
     
-    style VAN fill:#80bfff,stroke:#4da6ff,color:black
+    style INITIALISE fill:#80bfff,stroke:#4da6ff,color:black
     style PLAN fill:#80ffaa,stroke:#4dbb5f,color:black
     style CREATIVE fill:#d9b3ff,stroke:#b366ff,color:black
     style IMPLEMENT fill:#ffcc80,stroke:#ffaa33,color:black
@@ -135,7 +135,7 @@ Each mode loads only its required rule set, optimizing context usage and providi
 
 | Mode | Purpose | Key Features |
 |------|---------|-------------|
-| VAN | Initialization | Platform detection, file verification, complexity determination |
+| INITIALISE | Initialization | Platform detection, file verification, complexity determination |
 | PLAN | Task Planning | Requirements analysis, component identification, implementation strategy |
 | CREATIVE | Design Decisions | Multiple options exploration, pros/cons analysis, design recommendations |
 | IMPLEMENT | Code Implementation | Systematic building, command execution, testing |
@@ -165,7 +165,7 @@ graph TD
     end
     
     subgraph "Memory Bank's Approach"
-        MB1["VAN Mode<br>Dynamic Rules"]
+        MB1["INITIALISE Mode<br>Dynamic Rules"]
         MB2["PLAN Mode<br>Dynamic Rules"]
         MB3["CREATIVE Mode<br>Dynamic Rules"]
         MB4["IMPLEMENT Mode<br>Dynamic Rules"]
@@ -204,7 +204,7 @@ Memory Bank transforms custom modes into a comprehensive, interconnected system:
    - Visual process maps guide users through the appropriate sequence
 
 2. **Workflow Integration**: 
-   - Modes form a cohesive development process (VAN → PLAN → CREATIVE → IMPLEMENT → QA)
+   - Modes form a cohesive development process (INITIALISE → PLAN → CREATIVE → IMPLEMENT → QA)
    - Each mode is aware of preceding and subsequent modes
    - Transitions between modes are formalized with specific entry/exit criteria
 
@@ -312,7 +312,7 @@ graph TD
 To activate different modes in the new system:
 
 ```
-VAN - Initialize project and determine complexity
+INITIALISE - Initialize project and determine complexity
 PLAN - Create detailed implementation plan
 CREATIVE - Explore design options for complex components
 IMPLEMENT - Systematically build planned components
@@ -321,14 +321,14 @@ QA - Validate technical implementation
 
 ### Example Workflow
 
-1. Begin with `VAN` to initialize the project and determine complexity
+1. Begin with `INITIALISE` to initialize the project and determine complexity
 2. For Level 2-4 tasks, transition to `PLAN` to create a comprehensive implementation plan
 3. For components requiring design decisions, use `CREATIVE` to explore options
 4. Implement the planned changes with `IMPLEMENT`
 5. Validate the implementation with `QA` before completing
 
-The complexity level (1-4) determined during the VAN mode will significantly influence your path through the workflow:
-- **Level 1 tasks** may proceed directly to IMPLEMENT after VAN
+The complexity level (1-4) determined during the INITIALISE mode will significantly influence your path through the workflow:
+- **Level 1 tasks** may proceed directly to IMPLEMENT after INITIALISE
 - **Level 2-4 tasks** follow the full workflow with increasingly comprehensive planning and documentation
 
 ## Deep Dive: The Technical Architecture
@@ -342,7 +342,7 @@ graph TD
     Main --> ComplexityDT["complexity-decision-tree.mdc<br>Task Classification"]
     
     subgraph "Mode-Specific Maps"
-        VanMap["van-mode-map.mdc"]
+        VanMap["initialise-mode-map.mdc"]
         PlanMap["plan-mode-map.mdc"]
         CreativeMap["creative-mode-map.mdc"]
         ImplementMap["implement-mode-map.mdc"]
@@ -378,7 +378,7 @@ graph LR
         Creative["creative-*.md<br>Design Decisions"]
     end
     
-    VAN["VAN MODE"] -.-> Tasks & Active
+    INITIALISE["INITIALISE MODE"] -.-> Tasks & Active
     PLAN["PLAN MODE"] -.-> Tasks & Active
     CREATIVE["CREATIVE MODE"] -.-> Tasks & Creative
     IMPLEMENT["IMPLEMENT MODE"] -.-> Tasks & Progress
@@ -389,7 +389,7 @@ graph LR
     style Progress fill:#c5e8b7,stroke:#a5c897
     style Creative fill:#f4b8c4,stroke:#d498a4,color:black
     
-    style VAN fill:#80bfff,stroke:#4da6ff,color:black
+    style INITIALISE fill:#80bfff,stroke:#4da6ff,color:black
     style PLAN fill:#80ffaa,stroke:#4dbb5f,color:black
     style CREATIVE fill:#d9b3ff,stroke:#b366ff,color:black
     style IMPLEMENT fill:#ffcc80,stroke:#ffaa33,color:black
@@ -400,7 +400,7 @@ graph LR
 
 Here's how I used the new system to develop a complex Todo application:
 
-1. **VAN Mode**: Analyzed requirements, set up project structure, determined Level 3 complexity
+1. **INITIALISE Mode**: Analyzed requirements, set up project structure, determined Level 3 complexity
 2. **PLAN Mode**: Created comprehensive component hierarchy, identified dependencies, flagged components for creative exploration
 3. **CREATIVE Mode**: Explored multiple options for state management and filtering implementation, documented pros/cons
 4. **IMPLEMENT Mode**: Built components in logical sequence following the plan, with integrated QA validation

@@ -16,14 +16,14 @@ NO process can continue without verifying Memory Bank existence
 ```mermaid
 graph TD
     subgraph Modes["Cursor Custom Modes"]
-        VAN["VAN MODE<br>Initialization"] --> PLAN["PLAN MODE<br>Task Planning"]
+        INITIALISE["INITIALISE MODE<br>Initialization"] --> PLAN["PLAN MODE<br>Task Planning"]
         PLAN --> Creative["CREATIVE MODE<br>Design Decisions"]
         Creative --> Implement["IMPLEMENT MODE<br>Code Implementation"]
         Implement --> Reflect["REFLECT MODE<br>Task Review"]
         Reflect --> Archive["ARCHIVE MODE<br>Documentation"]
     end
     
-    VAN -.->|"Loads"| VANRules["• main.md<br>• platform-awareness.md<br>• file-verification.md<br>• workflow-init.md"]
+    INITIALISE -.->|"Loads"| INITIALISERules["• main.md<br>• platform-awareness.md<br>• file-verification.md<br>• workflow-init.md"]
     PLAN -.->|"Loads"| PLANRules["• main.md<br>• task-tracking.md<br>• planning-process.md"]
     Creative -.->|"Loads"| CreativeRules["• main.md<br>• creative-phase.md<br>• design-patterns.md"]
     Implement -.->|"Loads"| ImplementRules["• main.md<br>• command-execution.md<br>• implementation-guide.md"]
@@ -65,7 +65,7 @@ graph TD
 
 Each mode has its own visual process map:
 
-- @VAN Mode Map
+- @INITIALISE Mode Map
 - @PLAN Mode Map
 - @CREATIVE Mode Map
 - @IMPLEMENT Mode Map
@@ -85,8 +85,8 @@ graph TD
         progress["progress.md<br>Implementation Status"]
     end
     
-    VAN["VAN MODE"] -->|"Creates/Updates"| tasks
-    VAN -->|"Creates/Updates"| active
+    INITIALISE["INITIALISE MODE"] -->|"Creates/Updates"| tasks
+    INITIALISE -->|"Creates/Updates"| active
     
     PLAN["PLAN MODE"] -->|"Reads"| tasks
     PLAN -->|"Reads"| active

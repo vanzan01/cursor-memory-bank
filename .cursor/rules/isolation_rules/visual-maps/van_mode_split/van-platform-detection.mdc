@@ -1,9 +1,9 @@
 ---
-description: Visual process map for VAN mode platform detection
-globs: van-platform-detection.mdc
+description: Visual process map for INITIALISE mode platform detection
+globs: initialise-platform-detection.mdc
 alwaysApply: false
 ---
-# VAN MODE: PLATFORM DETECTION
+# INITIALISE MODE: PLATFORM DETECTION
 
 > **TL;DR:** Detects the OS, determines path separators, and notes command adaptations required.
 
@@ -47,4 +47,4 @@ graph TD
 → If any NO: Resolve before proceeding.
 ```
 
-**Next Step:** Load and process `van-file-verification.mdc`. 
+**Next Step:** Load and process `initialise-file-verification.mdc`. 

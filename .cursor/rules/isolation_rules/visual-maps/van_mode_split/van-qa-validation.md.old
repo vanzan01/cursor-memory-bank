@@ -1,15 +1,15 @@
-# VAN MODE: QA TECHNICAL VALIDATION (Pre-BUILD)
+# INITIALISE MODE: QA TECHNICAL VALIDATION (Pre-BUILD)
 
-> **TL;DR:** This map details the technical validation process executed *after* CREATIVE mode and *before* BUILD mode, triggered by the `VAN QA` command. It ensures dependencies, configuration, environment, and basic build functionality are sound.
+> **TL;DR:** This map details the technical validation process executed *after* CREATIVE mode and *before* BUILD mode, triggered by the `INITIALISE QA` command. It ensures dependencies, configuration, environment, and basic build functionality are sound.
 
-## 🚀 VAN QA MODE ACTIVATION
+## 🚀 INITIALISE QA MODE ACTIVATION
 
-After completing CREATIVE mode, when the user types "VAN QA", respond:
+After completing CREATIVE mode, when the user types "INITIALISE QA", respond:
 
 ```
-User: VAN QA
+User: INITIALISE QA
 
-Response: OK VAN QA - Beginning Technical Validation
+Response: OK INITIALISE QA - Beginning Technical Validation
 Loading QA Validation map...
 ```
 
@@ -40,7 +40,7 @@ graph TD
 ### QA Interruption Rules
 
 1. **Immediate Precedence:** `QA` command interrupts everything.
-2. **Load & Execute:** Load this map (`van-qa-validation.mdc`) and run the full process.
+2. **Load & Execute:** Load this map (`initialise-qa-validation.mdc`) and run the full process.
 3. **Remediation Priority:** Fixes take priority over pending mode switches.
 4. **Resume:** On PASS, resume the previous flow.
 
@@ -57,7 +57,7 @@ Four-point validation process:
 
 ```mermaid
 graph TD
-    VANQA["VAN QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
+    INITIALISEQA["INITIALISE QA MODE"] --> FourChecks["FOUR-POINT VALIDATION"]
     
     FourChecks --> DepCheck["1️⃣ DEPENDENCY VERIFICATION"]
     DepCheck --> ConfigCheck["2️⃣ CONFIGURATION VALIDATION"]
@@ -70,10 +70,10 @@ graph TD
     
     SuccessReport --> BUILD_Transition["Trigger BUILD Mode"]
     FailureReport --> FixIssues["Fix Technical Issues"]
-    FixIssues --> ReValidate["Re-validate (Re-run VAN QA)"]
+    FixIssues --> ReValidate["Re-validate (Re-run INITIALISE QA)"]
     ReValidate --> FourChecks
     
-    style VANQA fill:#4da6ff,stroke:#0066cc,color:white
+    style INITIALISEQA fill:#4da6ff,stroke:#0066cc,color:white
     style FourChecks fill:#f6546a,stroke:#c30052,color:white
     style ValidationResults fill:#f6546a,stroke:#c30052,color:white
     style BUILD_Transition fill:#10b981,stroke:#059669,color:white
@@ -292,7 +292,7 @@ Issues must be resolved before BUILD mode:
 3️⃣ ENVIRONMENT ISSUES: [Details/Fix]
 4️⃣ BUILD TEST ISSUES: [Details/Fix]
 
-⚠️ BUILD MODE BLOCKED. Type 'VAN QA' after fixing to re-validate.
+⚠️ BUILD MODE BLOCKED. Type 'INITIALISE QA' after fixing to re-validate.
 ```
 
 ## 🧪 COMMON QA VALIDATION FIXES
@@ -312,9 +312,9 @@ graph TD
     CheckQA -->|"Yes"| AllowBuild["Allow BUILD Mode"]
     CheckQA -->|"No"| BlockBuild["BLOCK BUILD MODE"]
     BlockBuild --> Message["Display:<br>⚠️ QA VALIDATION REQUIRED"]
-    Message --> ReturnToVANQA["Prompt: Type VAN QA"]
+    Message --> ReturnToINITIALISEQA["Prompt: Type INITIALISE QA"]
     
-    style CheckQA fill:#f6546a; style BlockBuild fill:#ff0000,stroke:#990000; style Message fill:#ff5555; style ReturnToVANQA fill:#4da6ff;
+    style CheckQA fill:#f6546a; style BlockBuild fill:#ff0000,stroke:#990000; style Message fill:#ff5555; style ReturnToINITIALISEQA fill:#4da6ff;
 ```
 
 ### Example Implementation (PowerShell):
@@ -325,20 +325,20 @@ function Check-QAValidationStatus {
     if (Test-Path $qaStatusFile) {
         if ((Get-Content $qaStatusFile -Raw) -match "PASS") { return $true }
     }
-    Write-Output "🚫 BUILD MODE BLOCKED: QA VALIDATION REQUIRED. Type 'VAN QA'. 🚫"
+    Write-Output "🚫 BUILD MODE BLOCKED: QA VALIDATION REQUIRED. Type 'INITIALISE QA'. 🚫"
     return $false
 }
 ```
 
 ## 🚨 MODE TRANSITION TRIGGERS (Relevant to QA)
 
-### CREATIVE to VAN QA Transition:
+### CREATIVE to INITIALISE QA Transition:
 ```
-⏭️ NEXT MODE: VAN QA
-To validate technical requirements before implementation, please type 'VAN QA'
+⏭️ NEXT MODE: INITIALISE QA
+To validate technical requirements before implementation, please type 'INITIALISE QA'
 ```
 
-### VAN QA to BUILD Transition (On Success):
+### INITIALISE QA to BUILD Transition (On Success):
 ```
 ✅ TECHNICAL VALIDATION COMPLETE
 All prerequisites verified successfully
@@ -356,8 +356,8 @@ Type 'BUILD' to begin implementation
 - Minimal Build Test Passed? [YES/NO]
 
 → If all YES: Ready for BUILD mode transition.
-→ If any NO: Fix identified issues and re-run VAN QA.
+→ If any NO: Fix identified issues and re-run INITIALISE QA.
 ```
 
 **Next Step (on PASS):** Trigger BUILD mode.
-**Next Step (on FAIL):** Address issues and re-run `VAN QA`. 
+**Next Step (on FAIL):** Address issues and re-run `INITIALISE QA`. 

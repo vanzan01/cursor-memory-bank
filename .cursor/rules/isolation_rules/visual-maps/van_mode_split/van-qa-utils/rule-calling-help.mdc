@@ -1,11 +1,11 @@
 ---
-description: Utility for remembering how to call VAN QA rules
-globs: van-qa-utils/rule-calling-help.mdc
+description: Utility for remembering how to call INITIALISE QA rules
+globs: initialise-qa-utils/rule-calling-help.mdc
 alwaysApply: false
 ---
-# VAN QA: HOW TO CALL RULES
+# INITIALISE QA: HOW TO CALL RULES
 
-> **TL;DR:** This file provides examples and reminders on how to properly call VAN QA rules using the fetch_rules tool.
+> **TL;DR:** This file provides examples and reminders on how to properly call INITIALISE QA rules using the fetch_rules tool.
 
 ## 🚨 RULE CALLING SYNTAX
 

@@ -42,7 +42,7 @@ graph TD
     UpdateActiveContext --> ArchiveComplete["🏁 ARCHIVING COMPLETE"]
     
     %% Exit
-    ArchiveComplete --> SuggestNext["✅ Task Fully Completed<br>Suggest VAN Mode for Next Task"]
+    ArchiveComplete --> SuggestNext["✅ Task Fully Completed<br>Suggest INITIALISE Mode for Next Task"]
     
     %% Styling
     style Start fill:#d9b3ff,stroke:#b366ff,color:black
@@ -181,20 +181,20 @@ graph TD
 - activeContext.md updated for next task? [YES/NO]
 - Creative phase documents archived (Level 3-4)? [YES/NO/NA]  
 
-→ If all YES: Archiving complete. Suggest VAN Mode for the next task.  
+→ If all YES: Archiving complete. Suggest INITIALISE Mode for the next task.  
 → If any NO: Guide user to complete missing archive elements.  
 
 ### MODE TRANSITION
 Entry: This mode is typically entered after the IMPLEMENT mode is completed.  
 Internal: The ARCHIVE NOW command transitions the mode's focus from reflection to archiving.  
-Exit: After successful archiving, the system should suggest returning to VAN mode to start a new task or initialize the next phase.  
+Exit: After successful archiving, the system should suggest returning to INITIALISE mode to start a new task or initialize the next phase.  
 
 ### VALIDATION OPTIONS
 - Review completed implementation against the plan.
 - Generate reflection.md based on the review.
 - Upon command ARCHIVE NOW, generate the archive document.
 - Show updates to tasks.md, progress.md, and activeContext.md.
-- Demonstrate the final state suggesting VAN mode.
+- Demonstrate the final state suggesting INITIALISE mode.
 
 ### VERIFICATION COMMITMENT
 ```
