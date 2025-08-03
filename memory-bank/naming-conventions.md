@@ -130,6 +130,84 @@ const processedUserData = processValidatedData(validatedUserData);
 
 ## Language-Specific Guidelines
 
+### SQL Best Practices
+
+#### Prefer LEFT JOIN over Simple JOIN
+**Reason:** LEFT JOIN prevents accidental data loss by ensuring all records from the left table are included.
+
+```sql
+-- ✅ Good - LEFT JOIN prevents data loss
+SELECT users.name, orders.order_date
+FROM users
+LEFT JOIN orders USING (user_id)
+WHERE users.is_active = true;
+
+-- ❌ Bad - Simple JOIN might lose users without orders
+SELECT users.name, orders.order_date
+FROM users
+JOIN orders USING (user_id)
+WHERE users.is_active = true;
+```
+
+#### Prefer USING over ON for Joins
+**Reason:** USING is clearer when joining on columns with the same name.
+
+```sql
+-- ✅ Good - USING is clearer for same-named columns
+SELECT users.name, orders.order_date
+FROM users
+LEFT JOIN orders USING (user_id);
+
+-- ❌ Bad - ON is more verbose for same-named columns
+SELECT users.name, orders.order_date
+FROM users
+LEFT JOIN orders ON users.user_id = orders.user_id;
+```
+
+#### Prefer WITH Clause over Subqueries
+**Reason:** WITH clause improves readability and reusability.
+
+```sql
+-- ✅ Good - WITH clause is more readable
+WITH active_users AS (
+    SELECT id, name, email
+    FROM users
+    WHERE is_active = true
+),
+recent_orders AS (
+    SELECT user_id, order_date, total_amount
+    FROM orders
+    WHERE order_date >= '2024-01-01'
+)
+SELECT active_users.name, recent_orders.order_date
+FROM active_users
+LEFT JOIN recent_orders USING (user_id);
+
+-- ❌ Bad - Subqueries are harder to read
+SELECT 
+    users.name,
+    (SELECT order_date FROM orders WHERE user_id = users.id ORDER BY order_date DESC LIMIT 1) AS last_order
+FROM users
+WHERE is_active = true;
+```
+
+#### Avoid Table Aliases
+**Reason:** Full table names are more descriptive and self-documenting.
+
+```sql
+-- ✅ Good - Full table names are clear
+SELECT users.name, orders.order_date, order_items.quantity
+FROM users
+LEFT JOIN orders USING (user_id)
+LEFT JOIN order_items USING (order_id);
+
+-- ❌ Bad - Aliases reduce clarity
+SELECT p.name, o.order_date, oi.quantity
+FROM users AS p
+LEFT JOIN orders AS o USING (user_id)
+LEFT JOIN order_items AS oi USING (order_id);
+```
+
 ### JavaScript/TypeScript
 ```javascript
 // Variables and functions: camelCase
@@ -173,6 +251,39 @@ class User:
     
     def _process_data(self):
         pass
+
+### Python Best Practices
+
+#### Import Statements
+**Reason:** Full names are more descriptive and self-documenting.
+
+```python
+# ✅ Good - Full names are clear
+import pandas
+import numpy
+import datetime
+import matplotlib.pyplot
+
+# ❌ Bad - Unnecessary abbreviations
+import pandas as pd
+import numpy as np
+import datetime as dt
+import matplotlib.pyplot as plt
+```
+
+#### Variable Names
+**Reason:** Descriptive names improve code readability.
+
+```python
+# ✅ Good - Descriptive names
+user_data = pandas.read_csv('users.csv')
+total_count = len(user_data)
+current_date = datetime.datetime.now()
+
+# ❌ Bad - Abbreviated names
+ud = pandas.read_csv('users.csv')
+tc = len(ud)
+cd = datetime.datetime.now()
 ```
 
 ### Java/C#
@@ -261,31 +372,31 @@ active
 ### SQL Query Aliases
 ```sql
 -- ✅ Good - Descriptive table aliases
-SELECT u.name, u.email, o.order_date
-FROM users AS u
-JOIN orders AS o ON u.id = o.user_id
-WHERE u.is_active = true;
+SELECT users.name, users.email, orders.order_date
+FROM users
+JOIN orders ON users.id = orders.user_id
+WHERE users.is_active = true;
 
 -- ✅ Good - Descriptive column aliases
 SELECT 
-    u.name AS user_name,
-    o.order_date AS purchase_date,
-    COUNT(oi.id) AS total_items
-FROM users AS u
-JOIN orders AS o ON u.id = o.user_id
-JOIN order_items AS oi ON o.id = oi.order_id
-GROUP BY u.id, u.name, o.order_date;
+    users.name AS user_name,
+    orders.order_date AS purchase_date,
+    COUNT(order_items.id) AS total_items
+FROM users
+JOIN orders ON users.id = orders.user_id
+JOIN order_items ON orders.id = order_items.order_id
+GROUP BY users.id, users.name, orders.order_date;
 
--- ❌ Bad - Single letter aliases
-SELECT q.name, q.email, q.order_date
-FROM users AS q
-JOIN orders AS q2 ON q.id = q2.user_id;
+-- ❌ Bad - Single letter aliases (p., u., etc.)
+SELECT p.name, p.email, p.order_date
+FROM users AS p
+JOIN orders AS o ON p.id = o.user_id;
 
 -- ❌ Bad - Acronym aliases
 SELECT bneob.blah_blah
 FROM bad_naming_example_orders_table AS bneob;
 
--- ❌ Bad - First letter acronyms
+-- ❌ Bad - Short aliases that reduce clarity
 SELECT u.name, o.date, oi.price
 FROM users AS u
 JOIN orders AS o ON u.id = o.user_id
@@ -294,21 +405,40 @@ JOIN order_items AS oi ON o.id = oi.order_id;
 
 ### SQL Query Structure
 ```sql
--- ✅ Good - Clear, readable structure
+-- ✅ Good - Clear, readable structure with LEFT JOIN and USING
 SELECT 
     users.name AS customer_name,
     orders.order_date AS purchase_date,
     order_items.quantity,
     products.name AS product_name
 FROM users
-JOIN orders ON users.id = orders.user_id
-JOIN order_items ON orders.id = order_items.order_id
-JOIN products ON order_items.product_id = products.id
+LEFT JOIN orders USING (user_id)
+LEFT JOIN order_items USING (order_id)
+LEFT JOIN products USING (product_id)
 WHERE users.is_active = true
   AND orders.order_date >= '2024-01-01'
 ORDER BY orders.order_date DESC;
 
--- ❌ Bad - Poor structure and naming
+-- ✅ Good - Using WITH clause instead of subqueries
+WITH active_users AS (
+    SELECT id, name, email
+    FROM users
+    WHERE is_active = true
+),
+recent_orders AS (
+    SELECT user_id, order_date, total_amount
+    FROM orders
+    WHERE order_date >= '2024-01-01'
+)
+SELECT 
+    active_users.name,
+    recent_orders.order_date,
+    recent_orders.total_amount
+FROM active_users
+LEFT JOIN recent_orders USING (user_id)
+ORDER BY recent_orders.order_date DESC;
+
+-- ❌ Bad - Poor structure with short aliases and simple JOIN
 SELECT u.n, o.d, oi.q, p.n AS pn
 FROM users u
 JOIN orders o ON u.id = o.uid
@@ -316,6 +446,13 @@ JOIN order_items oi ON o.id = oi.oid
 JOIN products p ON oi.pid = p.id
 WHERE u.a = 1 AND o.d >= '2024-01-01'
 ORDER BY o.d DESC;
+
+-- ❌ Bad - Subqueries instead of WITH clause
+SELECT 
+    users.name,
+    (SELECT MAX(order_date) FROM orders WHERE user_id = users.id) AS last_order
+FROM users
+WHERE is_active = true;
 ```
 
 ## API Endpoints
@@ -366,6 +503,11 @@ Before committing any code, ensure:
 - [ ] Database names follow conventions
 - [ ] API endpoints follow RESTful naming
 - [ ] Test names are descriptive and follow patterns
+- [ ] SQL queries use LEFT JOIN instead of simple JOIN to avoid accidental data loss
+- [ ] SQL queries use USING clause instead of ON when possible for clearer logic
+- [ ] SQL queries use WITH clause instead of subqueries for better readability
+- [ ] SQL queries avoid table aliases like p., u., etc. - use full table names
+- [ ] Python imports use full names (pandas, numpy) instead of abbreviations (pd, np)
 
 ## Enforcement
 
