@@ -49,7 +49,25 @@ graph TD
 
 ## 🛠️ How to Use
 
-### Automated Validation (Recommended)
+### 🚀 Complete Workflow Automation (Recommended)
+```bash
+# Run the master workflow script for complete automation
+./scripts/workflow-master.sh
+```
+
+### 🌿 Branch Creation Automation
+```bash
+# Create a new feature branch with interactive prompts
+./scripts/create-feature-branch.sh
+```
+
+### 📝 Commit and Push Automation
+```bash
+# Commit changes and push to remote with auto-generated messages
+./scripts/commit-and-push.sh
+```
+
+### 🔍 Automated Validation
 ```bash
 # Run the branch validation script
 ./scripts/branch-validation.sh
@@ -196,17 +214,66 @@ The branch management rules are now integrated into:
 - **Implementation Mode Map:** Updated to include branch validation step
 - **Custom Implementation Instructions:** Added branch validation as Step 1.5
 - **Core Rules:** New `Core/branch-management.mdc` rule file
-- **Automation:** `scripts/branch-validation.sh` script for automated validation
+- **Automation Scripts:** Complete automation suite for branch management
+
+## 🤖 Automation Scripts
+
+### Master Workflow Script (`workflow-master.sh`)
+Provides a complete interactive menu for all branch management tasks:
+- 🌿 Create new feature branches
+- 📝 Commit and push changes
+- 🔍 Validate current branches
+- 🚀 Complete end-to-end workflow
+- 📋 Show current status
+- ❓ Help and documentation
+
+### Branch Creation Script (`create-feature-branch.sh`)
+Interactive branch creation with:
+- Feature type selection (feature, bugfix, enhancement, docs, refactor)
+- Automatic branch naming conventions
+- Validation and setup
+- Generated commit messages
+- Push instructions
+
+### Commit and Push Script (`commit-and-push.sh`)
+Automated commit and push workflow with:
+- Auto-generated commit messages based on file changes
+- Change validation and review
+- Interactive commit message editing
+- Automatic push to remote
+- Next steps guidance
+
+### Branch Validation Script (`branch-validation.sh`)
+Comprehensive branch validation with:
+- Merged PR detection
+- Domain alignment checking
+- Branch naming convention validation
+- Recommendations and warnings
 
 ## 📚 Related Files
 
 - `.cursor/rules/isolation_rules/Core/branch-management.mdc` - Core branch management rules
 - `.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc` - Updated implementation workflow
 - `custom_modes/implement_instructions.md` - Updated implementation instructions
-- `scripts/branch-validation.sh` - Automated validation script
+- `scripts/workflow-master.sh` - Master workflow automation script
+- `scripts/create-feature-branch.sh` - Branch creation automation script
+- `scripts/commit-and-push.sh` - Commit and push automation script
+- `scripts/branch-validation.sh` - Branch validation automation script
 
 ## 🚀 Getting Started
 
+### Quick Start (Recommended)
+1. **Run the master workflow:** `./scripts/workflow-master.sh`
+2. **Choose option 4:** Complete workflow (create → develop → commit → push)
+3. **Follow the interactive prompts:** The script will guide you through everything
+
+### Manual Workflow
+1. **Create branch:** `./scripts/create-feature-branch.sh`
+2. **Make your changes:** Edit files as needed
+3. **Commit and push:** `./scripts/commit-and-push.sh`
+4. **Validate branch:** `./scripts/branch-validation.sh` (if needed)
+
+### Traditional Workflow
 1. **Before any implementation:** Run `./scripts/branch-validation.sh`
 2. **Review the output:** Check for warnings and recommendations
 3. **Take action:** Switch branches if needed
