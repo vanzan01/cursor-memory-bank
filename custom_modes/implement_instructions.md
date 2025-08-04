@@ -34,8 +34,14 @@ Before completing any implementation:
 graph TD
     Start["🚀 START BUILD MODE"] --> ReadDocs["📚 Read Reference Documents<br>.cursor/rules/isolation_rules/Core/command-execution.mdc"]
     
-    %% Initialization
-    ReadDocs --> CheckLevel{"🧩 Determine<br>Complexity Level<br>from tasks.md"}
+    %% Branch Management
+    ReadDocs --> BranchValidation["🔍 BRANCH VALIDATION<br>.cursor/rules/isolation_rules/Core/branch-management.mdc"]
+    BranchValidation --> ValidationComplete{"✅ Branch<br>Validated?"}
+    
+    ValidationComplete -->|"No"| FixBranch["🔧 Fix Branch Issues<br>Switch/Create New Branch"]
+    FixBranch --> BranchValidation
+    
+    ValidationComplete -->|"Yes"| CheckLevel{"🧩 Determine<br>Complexity Level<br>from tasks.md"}
     
     %% Level 1 Implementation
     CheckLevel -->|"Level 1<br>Quick Bug Fix"| L1Process["🔧 LEVEL 1 PROCESS<br>.cursor/rules/isolation_rules/visual-maps/implement-mode-map.mdc"]
@@ -87,6 +93,9 @@ graph TD
     %% Styling
     style Start fill:#4da6ff,stroke:#0066cc,color:white
     style ReadDocs fill:#80bfff,stroke:#4da6ff,color:black
+    style BranchValidation fill:#ffa64d,stroke:#cc7a30,color:white
+    style ValidationComplete fill:#d94dbb,stroke:#a3378a,color:white
+    style FixBranch fill:#ff5555,stroke:#cc0000,color:white
     style CheckLevel fill:#d94dbb,stroke:#a3378a,color:white
     style L1Process fill:#4dbb5f,stroke:#36873f,color:white
     style L2Process fill:#ffa64d,stroke:#cc7a30,color:white
@@ -105,6 +114,20 @@ read_file({
   should_read_entire_file: true
 })
 ```
+
+### Step 1.5: BRANCH VALIDATION
+```
+read_file({
+  target_file: ".cursor/rules/isolation_rules/Core/branch-management.mdc",
+  should_read_entire_file: true
+})
+```
+
+**CRITICAL:** Before proceeding with any implementation, validate the current branch:
+- Check if branch is related to merged pull request
+- Verify domain/task alignment
+- Switch to main and create new branch if needed
+- Document branch decision in tasks.md
 
 ### Step 2: READ TASKS & IMPLEMENTATION PLAN
 ```
@@ -157,6 +180,58 @@ read_file({
   target_file: ".cursor/rules/isolation_rules/Level4/phased-implementation.mdc",
   should_read_entire_file: true
 })
+```
+
+## BRANCH MANAGEMENT APPROACH
+
+Before beginning any code implementation, you must validate the current branch to ensure you're working on the correct branch and avoid conflicts with merged pull requests.
+
+### Branch Validation Process
+
+1. **Check Current Branch Status**
+   - Verify current branch name and status
+   - Check if branch has been merged via pull request
+   - Review recent commits to understand branch purpose
+
+2. **Validate Against Merged PRs**
+   - Check if current branch name appears in merged PRs
+   - Look for patterns indicating completed features
+   - Verify branch hasn't already been merged
+
+3. **Domain/Task Alignment Check**
+   - Verify current branch is appropriate for the task
+   - Check if code relates to current branch domain
+   - Determine if new branch is needed for different domain
+
+### Branch Management Actions
+
+#### If Branch Already Merged:
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/[new-feature-name]
+```
+
+#### If Different Domain/Task:
+```bash
+git checkout -b feature/[new-domain-name]
+```
+
+#### If Same Domain/Task:
+```bash
+git pull origin main
+# Continue with current branch
+```
+
+### Documentation Requirements
+Update tasks.md with branch validation results:
+```
+## Branch Management
+- [x] Current branch validated
+- [x] Merged PR status checked
+- [x] Domain alignment verified
+- [x] Branch decision: [Continue/New Branch/Switch to Main]
+- [x] Final branch: [branch-name]
 ```
 
 ## BUILD APPROACH

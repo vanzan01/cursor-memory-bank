@@ -1,0 +1,274 @@
+# BRANCH MANAGEMENT FOR IMPLEMENTATION STAGE
+
+> **TL;DR:** This document outlines branch management rules that must be executed before starting any code implementation to ensure you're working on the correct branch and avoid conflicts with merged pull requests.
+
+## 🎯 BRANCH MANAGEMENT OVERVIEW
+
+Before beginning any code implementation, it's critical to verify that you're working on the correct branch and that the branch hasn't already been merged via a pull request. This prevents wasted effort and ensures clean development workflow.
+
+```mermaid
+graph TD
+    Start["🚀 START BRANCH VALIDATION"] --> CheckCurrent["🔍 Check Current Branch"]
+    CheckCurrent --> CheckMerged{"🔍 Check if Branch<br>Related to Merged PR?"}
+    
+    CheckMerged -->|"Yes"| SwitchMain["🔄 Switch to Main Branch"]
+    SwitchMain --> PullMain["📥 Pull Latest Changes"]
+    PullMain --> CreateNew["🌿 Create New Branch"]
+    CreateNew --> ValidateNew["✅ Validate New Branch"]
+    
+    CheckMerged -->|"No"| CheckDomain{"🔍 Check if Code<br>Related to Current<br>Branch Domain?"}
+    
+    CheckDomain -->|"No - Different Domain"| CreateDomain["🌿 Create New Branch<br>for New Domain"]
+    CreateDomain --> ValidateDomain["✅ Validate Domain Branch"]
+    
+    CheckDomain -->|"Yes - Same Domain"| ContinueCurrent["✅ Continue on<br>Current Branch"]
+    
+    ValidateNew & ValidateDomain & ContinueCurrent --> StartImplementation["⚒️ START IMPLEMENTATION"]
+    
+    %% Styling
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style CheckCurrent fill:#80bfff,stroke:#4da6ff,color:black
+    style CheckMerged fill:#d94dbb,stroke:#a3378a,color:white
+    style SwitchMain fill:#ffa64d,stroke:#cc7a30,color:white
+    style PullMain fill:#ffa64d,stroke:#cc7a30,color:white
+    style CreateNew fill:#4dbb5f,stroke:#36873f,color:white
+    style CheckDomain fill:#d94dbb,stroke:#a3378a,color:white
+    style CreateDomain fill:#4dbb5f,stroke:#36873f,color:white
+    style ContinueCurrent fill:#4dbb5f,stroke:#36873f,color:white
+    style StartImplementation fill:#5fd94d,stroke:#3da336,color:white
+```
+
+## 📋 BRANCH VALIDATION CHECKLIST
+
+### Step 1: Check Current Branch Status
+```bash
+# Check current branch
+git branch --show-current
+
+# Check if branch has been merged via pull request
+git log --oneline --graph --all | grep -i "merge\|pull"
+
+# Check recent commits to understand branch purpose
+git log --oneline -10
+```
+
+### Step 2: Validate Branch Against Merged PRs
+```bash
+# Check if current branch name appears in merged PRs
+# Look for patterns like: feature/user-authentication, bugfix/login-issue, etc.
+git log --oneline --all | grep -i "$(git branch --show-current)"
+
+# Check GitHub/GitLab for merged PRs with similar branch names
+# This requires manual verification in the web interface
+```
+
+### Step 3: Domain/Task Validation
+```bash
+# Check what files have been modified in current branch
+git diff main --name-only
+
+# Check commit messages to understand branch purpose
+git log --oneline main..HEAD
+```
+
+## 🔄 BRANCH MANAGEMENT WORKFLOW
+
+### Scenario 1: Branch Already Merged
+If the current branch is related to a merged pull request:
+
+```bash
+# 1. Switch to main branch
+git checkout main
+
+# 2. Pull latest changes
+git pull origin main
+
+# 3. Create new branch for current task
+git checkout -b feature/[new-feature-name]
+
+# 4. Verify new branch is clean
+git status
+git log --oneline -5
+```
+
+### Scenario 2: Different Domain/Task
+If the current branch is for a different domain or task than what you're about to implement:
+
+```bash
+# 1. Check current branch purpose
+git log --oneline -5
+
+# 2. Create new branch for different domain/task
+git checkout -b feature/[new-domain-name]
+
+# 3. Verify clean start
+git status
+```
+
+### Scenario 3: Same Domain/Task
+If the current branch is appropriate for the current implementation:
+
+```bash
+# 1. Verify branch is up to date
+git pull origin main
+
+# 2. Check for conflicts
+git status
+
+# 3. Continue implementation
+```
+
+## 📝 BRANCH NAMING CONVENTIONS
+
+Follow these naming conventions for new branches:
+
+### Feature Branches
+```
+feature/[domain]-[specific-feature]
+Examples:
+- feature/user-authentication
+- feature/payment-processing
+- feature/admin-dashboard
+```
+
+### Bug Fix Branches
+```
+bugfix/[issue-description]
+Examples:
+- bugfix/login-validation-error
+- bugfix/database-connection-timeout
+- bugfix/ui-responsive-layout
+```
+
+### Enhancement Branches
+```
+enhancement/[component]-[improvement]
+Examples:
+- enhancement/api-performance-optimization
+- enhancement/ui-accessibility-improvements
+- enhancement-database-query-optimization
+```
+
+## 🔍 DOMAIN VALIDATION RULES
+
+### What Constitutes a Different Domain?
+- **Different user-facing features** (e.g., authentication vs. payment processing)
+- **Different system components** (e.g., frontend UI vs. backend API)
+- **Different data models** (e.g., user management vs. product catalog)
+- **Different technical concerns** (e.g., performance optimization vs. security features)
+
+### What Constitutes the Same Domain?
+- **Related features within the same component** (e.g., different aspects of user authentication)
+- **Incremental improvements to existing functionality**
+- **Bug fixes within the same feature area**
+- **Refactoring within the same codebase area**
+
+## ⚠️ WARNING SIGNS
+
+Watch for these indicators that suggest branch switching is needed:
+
+### Merged PR Indicators
+- Branch name matches recently merged pull request
+- Recent commits show "Merge pull request" messages
+- Branch has been inactive for extended period
+- Commit history shows completed feature implementation
+
+### Domain Mismatch Indicators
+- Current branch focuses on different user stories
+- Modified files are unrelated to current task
+- Commit messages describe different functionality
+- Branch name doesn't match current task domain
+
+## 📊 BRANCH VALIDATION REPORT
+
+After completing branch validation, document the results:
+
+```
+## Branch Validation Report
+
+### Current Branch: [branch-name]
+### Validation Date: [date]
+
+### Checks Performed:
+- [x] Current branch status verified
+- [x] Merged PR status checked
+- [x] Domain/task alignment verified
+- [x] Branch naming convention followed
+
+### Results:
+- **Merged PR Status**: [Yes/No]
+- **Domain Alignment**: [Same/Different]
+- **Action Taken**: [Continue/New Branch/Switch to Main]
+
+### Final Branch: [final-branch-name]
+### Ready for Implementation: [Yes/No]
+```
+
+## 🔄 INTEGRATION WITH IMPLEMENTATION WORKFLOW
+
+This branch management process should be integrated into the implementation workflow as follows:
+
+```mermaid
+graph TD
+    Start["🚀 START IMPLEMENTATION"] --> BranchValidation["🔍 BRANCH VALIDATION<br>Core/branch-management.mdc"]
+    BranchValidation --> ValidationComplete{"✅ Branch<br>Validated?"}
+    
+    ValidationComplete -->|"Yes"| ContinueImplementation["⚒️ Continue with<br>Implementation"]
+    ValidationComplete -->|"No"| FixBranch["🔧 Fix Branch Issues"]
+    
+    FixBranch --> BranchValidation
+    
+    ContinueImplementation --> NormalImplementation["📋 Normal Implementation<br>Workflow"]
+    
+    style Start fill:#4da6ff,stroke:#0066cc,color:white
+    style BranchValidation fill:#ffa64d,stroke:#cc7a30,color:white
+    style ValidationComplete fill:#d94dbb,stroke:#a3378a,color:white
+    style ContinueImplementation fill:#4dbb5f,stroke:#36873f,color:white
+    style FixBranch fill:#ff5555,stroke:#cc0000,color:white
+    style NormalImplementation fill:#4dbbbb,stroke:#368787,color:white
+```
+
+## 📋 IMPLEMENTATION INTEGRATION STEPS
+
+### Step 1: Add Branch Validation to Implementation Start
+Before beginning any code implementation, execute:
+
+```bash
+# Option 1: Use the automated branch validation script
+./scripts/branch-validation.sh
+
+# Option 2: Manual branch validation commands
+git branch --show-current
+git status
+git log --oneline -5
+```
+
+### Step 2: Document Branch Decision
+Update tasks.md with branch validation results:
+
+```
+## Branch Management
+- [x] Current branch validated
+- [x] Merged PR status checked
+- [x] Domain alignment verified
+- [x] Branch decision: [Continue/New Branch/Switch to Main]
+- [x] Final branch: [branch-name]
+```
+
+### Step 3: Proceed with Implementation
+Only after branch validation is complete, proceed with the normal implementation workflow.
+
+## 🎯 KEY PRINCIPLES
+
+1. **Always validate branch before implementation**
+2. **Check for merged PRs to avoid wasted effort**
+3. **Create new branches for different domains/tasks**
+4. **Follow consistent naming conventions**
+5. **Document branch decisions in tasks.md**
+6. **Ensure clean working directory before starting**
+
+This branch management process ensures efficient development workflow and prevents conflicts with already-merged work.
+description:
+globs:
+alwaysApply: false
+---

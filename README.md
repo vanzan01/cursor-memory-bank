@@ -5,6 +5,7 @@ A structured development workflow system that uses Cursor's custom modes to orga
 *Forked from [vanzan01/cursor-memory-bank](https://github.com/vanzan01/cursor-memory-bank) with custom enhancements:*
 - **Naming conventions** - Enhanced naming standards and best practices
 - **Data transformations** - Specialized workflows for data processing and transformation tasks
+- **Branch management** - Automated branch validation to prevent working on merged PRs
 
 ## What This Does
 
@@ -113,6 +114,43 @@ The system creates these files in your project:
 - `memory-bank/style-guide.md` - Design guidelines
 - `memory-bank/naming-conventions.md` - Code naming rules
 
+## 🔍 Branch Management Features
+
+### Problem Solved
+Ever find yourself working on a branch that's already been merged? Or working on a branch meant for a different feature? The branch management system prevents this automatically.
+
+### How It Works
+Before starting any implementation, the system automatically:
+
+1. **Checks if your branch is related to a merged PR** → Switches to main and creates new branch if needed
+2. **Validates domain/task alignment** → Creates new branch for different domains
+3. **Documents branch decisions** → Updates tasks.md with validation results
+
+### Automated Validation
+```bash
+# Run the branch validation script
+./scripts/branch-validation.sh
+```
+
+### Branch Naming Conventions
+- `feature/[domain]-[specific-feature]` - New features
+- `bugfix/[issue-description]` - Bug fixes  
+- `enhancement/[component]-[improvement]` - Improvements
+
+### What It Prevents
+- ❌ Working on already-merged branches
+- ❌ Mixing different domains in same branch
+- ❌ Confusing branch names
+- ✅ Clean, organized development workflow
+
+### Integration
+The branch validation is automatically integrated into the IMPLEMENT mode workflow. No additional setup required!
+
+### Additional Files Created
+- `scripts/branch-validation.sh` - Automated branch validation script
+- `BRANCH_MANAGEMENT_GUIDE.md` - Complete guide to branch management features
+- Updated implementation rules with branch validation workflow
+
 ## Troubleshooting
 
 **Mode not working?**
@@ -123,6 +161,11 @@ The system creates these files in your project:
 **Rules not loading?**
 - Ensure the `.cursor/rules/` folder is in your project root
 - Check file permissions
+
+**Branch validation not working?**
+- Make sure `scripts/branch-validation.sh` is executable: `chmod +x scripts/branch-validation.sh`
+- Verify you're in a git repository
+- Check that the script file exists in your project root
 
 ## Requirements
 
@@ -138,6 +181,7 @@ Instead of asking AI to "help me code" and getting random suggestions, Memory Ba
 - **Context preservation** - Information flows between modes
 - **Systematic approach** - No more jumping between tasks randomly
 - **Documentation built-in** - Everything gets documented automatically
+- **Branch management** - Prevents working on merged branches automatically
 
 ## Personal Note
 
