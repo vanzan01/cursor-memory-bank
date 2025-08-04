@@ -59,6 +59,12 @@ generate_commit_message() {
     local commit_type="feat"
     local message=""
     
+    # If no files changed, provide a default message
+    if [ -z "$files_changed" ]; then
+        echo "feat: Add new feature"
+        return
+    fi
+    
     # Analyze changes to determine commit type
     if echo "$files_changed" | grep -q "\.md$"; then
         commit_type="docs"
@@ -81,6 +87,11 @@ generate_commit_message() {
     local main_file=$(echo "$files_changed" | head -1 | sed 's/.*\///' | sed 's/\.[^.]*$//')
     if [ ! -z "$main_file" ]; then
         message="${commit_type}: Update ${main_file}"
+    fi
+    
+    # Ensure we always have a message
+    if [ -z "$message" ]; then
+        message="feat: Add new feature"
     fi
     
     echo "$message"

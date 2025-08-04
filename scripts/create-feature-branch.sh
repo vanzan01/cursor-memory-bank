@@ -53,8 +53,19 @@ generate_commit_message() {
     local feature_name=$2
     local description=$3
     
+    # Validate inputs
+    if [ -z "$feature_type" ] || [ -z "$feature_name" ]; then
+        echo "feat: Add new feature"
+        return
+    fi
+    
     # Convert feature name to title case for commit message
     local title_case=$(echo "$feature_name" | sed 's/-/ /g' | sed 's/_/ /g' | sed 's/\b\w/\U&/g')
+    
+    # Ensure title_case is not empty
+    if [ -z "$title_case" ]; then
+        title_case="new feature"
+    fi
     
     # Generate commit message based on type
     case $feature_type in

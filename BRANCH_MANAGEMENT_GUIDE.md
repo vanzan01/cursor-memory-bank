@@ -238,6 +238,7 @@ Interactive branch creation with:
 ### Commit and Push Script (`commit-and-push.sh`)
 Automated commit and push workflow with:
 - Auto-generated commit messages based on file changes
+- **Never generates empty commit messages** - always provides a meaningful message
 - Change validation and review
 - Interactive commit message editing
 - Automatic push to remote
@@ -250,6 +251,13 @@ Comprehensive branch validation with:
 - Branch naming convention validation
 - Recommendations and warnings
 
+### Commit Message Test Script (`test-commit-message.sh`)
+Testing and validation script with:
+- Tests all commit message generation functions
+- Validates that no empty messages are generated
+- Shows commit message best practices
+- Ensures automation reliability
+
 ## 📚 Related Files
 
 - `.cursor/rules/isolation_rules/Core/branch-management.mdc` - Core branch management rules
@@ -259,6 +267,44 @@ Comprehensive branch validation with:
 - `scripts/create-feature-branch.sh` - Branch creation automation script
 - `scripts/commit-and-push.sh` - Commit and push automation script
 - `scripts/branch-validation.sh` - Branch validation automation script
+- `scripts/test-commit-message.sh` - Commit message testing script
+
+## 📝 Commit Message Automation
+
+### Problem Solved
+No more empty or meaningless commit messages! The automation scripts ensure you always have meaningful commit messages.
+
+### How It Works
+The scripts automatically generate commit messages based on:
+- **File types changed** (docs, scripts, config, features)
+- **Feature type** (feature, bugfix, enhancement, docs, refactor)
+- **File names** (uses the most relevant file for context)
+
+### Examples of Auto-Generated Messages
+```bash
+# For documentation changes
+docs: Update README with new features
+
+# For script additions
+feat: Add branch validation script
+
+# For configuration changes
+config: Update package.json dependencies
+
+# For feature additions
+feat: Add user authentication system
+
+# For bug fixes
+fix: Resolve login validation error
+```
+
+### Testing Commit Messages
+Run the test script to verify commit message generation:
+```bash
+./scripts/test-commit-message.sh
+```
+
+This ensures the automation is working correctly and never generates empty messages.
 
 ## 🚀 Getting Started
 
