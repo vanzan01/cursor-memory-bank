@@ -19,13 +19,13 @@ Updates:
 
 ### Step 1: Load Core Rules
 ```
-Load: .cursor/rules/isolation_rules/main.mdc
-Load: .cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
+Load: $HOME/.cursor/rules/isolation_rules/main.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
 ```
 
 ### Step 2: Load REFLECT Mode Map
 ```
-Load: .cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc
+Load: $HOME/.cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc
 ```
 
 ### Step 3: Load Complexity-Specific Reflection Rules
@@ -33,22 +33,22 @@ Based on complexity level from `memory-bank/tasks.md`:
 
 **Level 1:**
 ```
-Load: .cursor/rules/isolation_rules/Level1/quick-documentation.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level1/quick-documentation.mdc
 ```
 
 **Level 2:**
 ```
-Load: .cursor/rules/isolation_rules/Level2/reflection-basic.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level2/reflection-basic.mdc
 ```
 
 **Level 3:**
 ```
-Load: .cursor/rules/isolation_rules/Level3/reflection-intermediate.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level3/reflection-intermediate.mdc
 ```
 
 **Level 4:**
 ```
-Load: .cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc
 ```
 
 ## Workflow

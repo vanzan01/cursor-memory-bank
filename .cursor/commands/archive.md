@@ -22,13 +22,13 @@ Updates:
 
 ### Step 1: Load Core Rules
 ```
-Load: .cursor/rules/isolation_rules/main.mdc
-Load: .cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
+Load: $HOME/.cursor/rules/isolation_rules/main.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
 ```
 
 ### Step 2: Load ARCHIVE Mode Map
 ```
-Load: .cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc
+Load: $HOME/.cursor/rules/isolation_rules/visual-maps/archive-mode-map.mdc
 ```
 
 ### Step 3: Load Complexity-Specific Archive Rules
@@ -36,22 +36,22 @@ Based on complexity level from `memory-bank/tasks.md`:
 
 **Level 1:**
 ```
-Load: .cursor/rules/isolation_rules/Level1/quick-documentation.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level1/quick-documentation.mdc
 ```
 
 **Level 2:**
 ```
-Load: .cursor/rules/isolation_rules/Level2/archive-basic.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level2/archive-basic.mdc
 ```
 
 **Level 3:**
 ```
-Load: .cursor/rules/isolation_rules/Level3/archive-intermediate.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level3/archive-intermediate.mdc
 ```
 
 **Level 4:**
 ```
-Load: .cursor/rules/isolation_rules/Level4/archive-comprehensive.mdc
+Load: $HOME/.cursor/rules/isolation_rules/Level4/archive-comprehensive.mdc
 ```
 
 ## Workflow
