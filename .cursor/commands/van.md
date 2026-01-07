@@ -16,20 +16,20 @@ This command loads rules progressively to optimize context usage:
 
 ### Step 1: Load Core Rules (Always Required)
 ```
-Load: $HOME/.cursor/rules/isolation_rules/main.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Core/platform-awareness.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Core/file-verification.mdc
+Load: .cursor/rules/isolation_rules/main.mdc
+Load: .cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
+Load: .cursor/rules/isolation_rules/Core/platform-awareness.mdc
+Load: .cursor/rules/isolation_rules/Core/file-verification.mdc
 ```
 
 ### Step 2: Load VAN Mode Map
 ```
-Load: $HOME/.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc
+Load: .cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc
 ```
 
 ### Step 3: Load Complexity-Specific Rules (Based on Task Analysis)
 After determining complexity level, load:
-- **Level 1:** `$HOME/.cursor/rules/isolation_rules/Level1/workflow-level1.mdc`
+- **Level 1:** `.cursor/rules/isolation_rules/Level1/workflow-level1.mdc`
 - **Level 2-4:** Load plan mode rules (transition to PLAN command)
 
 ## Workflow

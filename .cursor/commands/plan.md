@@ -16,13 +16,13 @@ Updates:
 
 ### Step 1: Load Core Rules
 ```
-Load: $HOME/.cursor/rules/isolation_rules/main.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
+Load: .cursor/rules/isolation_rules/main.mdc
+Load: .cursor/rules/isolation_rules/Core/memory-bank-paths.mdc
 ```
 
 ### Step 2: Load PLAN Mode Map
 ```
-Load: $HOME/.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc
+Load: .cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc
 ```
 
 ### Step 3: Load Complexity-Specific Planning Rules
@@ -30,22 +30,22 @@ Based on complexity level from `memory-bank/tasks.md`:
 
 **Level 2:**
 ```
-Load: $HOME/.cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Level2/workflow-level2.mdc
+Load: .cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc
+Load: .cursor/rules/isolation_rules/Level2/workflow-level2.mdc
 ```
 
 **Level 3:**
 ```
-Load: $HOME/.cursor/rules/isolation_rules/Level3/task-tracking-intermediate.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Level3/planning-comprehensive.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Level3/workflow-level3.mdc
+Load: .cursor/rules/isolation_rules/Level3/task-tracking-intermediate.mdc
+Load: .cursor/rules/isolation_rules/Level3/planning-comprehensive.mdc
+Load: .cursor/rules/isolation_rules/Level3/workflow-level3.mdc
 ```
 
 **Level 4:**
 ```
-Load: $HOME/.cursor/rules/isolation_rules/Level4/task-tracking-advanced.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Level4/architectural-planning.mdc
-Load: $HOME/.cursor/rules/isolation_rules/Level4/workflow-level4.mdc
+Load: .cursor/rules/isolation_rules/Level4/task-tracking-advanced.mdc
+Load: .cursor/rules/isolation_rules/Level4/architectural-planning.mdc
+Load: .cursor/rules/isolation_rules/Level4/workflow-level4.mdc
 ```
 
 ## Workflow
