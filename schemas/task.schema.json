@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vanzan01/cursor-memory-bank/schemas/task.schema.json",
+  "title": "Memory Bank Tasks File",
+  "description": "Validates memory-bank/tasks.yaml — the registry of all tasks in the project.",
+  "type": "object",
+  "required": ["version", "tasks"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Schema version of this file. Bump only on breaking changes."
+    },
+    "tasks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/task" }
+    }
+  },
+  "$defs": {
+    "taskId": {
+      "type": "string",
+      "pattern": "^TASK-[0-9]{3,}$",
+      "description": "Zero-padded sequential ID, e.g. TASK-001."
+    },
+    "isoDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "complexity": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4],
+      "description": "1 = quick fix, 2 = enhancement, 3 = feature, 4 = system."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["triage", "planning", "design", "build", "reflection", "archived"],
+      "description": "Current phase. The mode that owns each phase is the only mode allowed to advance status into it."
+    },
+    "componentStatus": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "complete", "blocked"]
+    },
+    "validationStatus": {
+      "type": "string",
+      "enum": ["pending", "validated", "rejected"]
+    },
+    "task": {
+      "type": "object",
+      "required": ["id", "title", "complexity", "status", "created_at", "updated_at"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/taskId" },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "description": {
+          "type": "string",
+          "description": "One-paragraph problem statement. Long-form context belongs in artifacts."
+        },
+        "complexity": { "$ref": "#/$defs/complexity" },
+        "status": { "$ref": "#/$defs/status" },
+        "created_at": { "$ref": "#/$defs/isoDateTime" },
+        "updated_at": { "$ref": "#/$defs/isoDateTime" },
+        "parent_task_id": {
+          "anyOf": [
+            { "$ref": "#/$defs/taskId" },
+            { "type": "null" }
+          ],
+          "description": "Set when this task is a sub-task of another."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "uniqueItems": true,
+          "default": []
+        },
+        "plan": {
+          "type": "object",
+          "description": "Populated by /plan. Absent for L1 tasks.",
+          "required": ["summary", "components"],
+          "additionalProperties": false,
+          "properties": {
+            "summary": { "type": "string", "minLength": 1 },
+            "components": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "status"],
+                "additionalProperties": false,
+                "properties": {
+                  "name": { "type": "string", "minLength": 1 },
+                  "description": { "type": "string" },
+                  "status": { "$ref": "#/$defs/componentStatus" },
+                  "creative_required": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "True iff this component needs /creative before /build (L3-4 only)."
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Files this component is expected to touch."
+                  }
+                }
+              }
+            },
+            "technology_validation": {
+              "type": "array",
+              "description": "Tech choices that must be validated before /build (L2+).",
+              "items": {
+                "type": "object",
+                "required": ["item", "status"],
+                "additionalProperties": false,
+                "properties": {
+                  "item": { "type": "string", "minLength": 1 },
+                  "status": { "$ref": "#/$defs/validationStatus" },
+                  "notes": { "type": "string" }
+                }
+              }
+            },
+            "risks": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "creative_refs": {
+          "type": "array",
+          "description": "Filled by /creative. One entry per component that needed design.",
+          "items": {
+            "type": "object",
+            "required": ["component", "doc", "chosen_option"],
+            "additionalProperties": false,
+            "properties": {
+              "component": { "type": "string", "minLength": 1 },
+              "doc": {
+                "type": "string",
+                "pattern": "^memory-bank/creative/TASK-[0-9]{3,}-.+\\.md$"
+              },
+              "chosen_option": { "type": "string", "minLength": 1 },
+              "decided_at": { "$ref": "#/$defs/isoDateTime" }
+            }
+          },
+          "default": []
+        },
+        "build_summary": {
+          "type": "object",
+          "description": "Populated by /build at completion. Detailed log lives in progress.yaml.",
+          "additionalProperties": false,
+          "properties": {
+            "files_changed": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "commands_run": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "tests": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "passed": { "type": "integer", "minimum": 0 },
+                "failed": { "type": "integer", "minimum": 0 },
+                "skipped": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "completed_at": { "$ref": "#/$defs/isoDateTime" }
+          }
+        },
+        "reflection_ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^memory-bank/reflection/TASK-[0-9]{3,}\\.md$"
+            },
+            { "type": "null" }
+          ],
+          "default": null
+        },
+        "archive_ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^memory-bank/archive/TASK-[0-9]{3,}\\.md$"
+            },
+            { "type": "null" }
+          ],
+          "default": null
+        }
+      },
+      "allOf": [
+        {
+          "description": "L1 tasks skip planning and design.",
+          "if": { "properties": { "complexity": { "const": 1 } } },
+          "then": {
+            "properties": {
+              "plan": false,
+              "creative_refs": { "maxItems": 0 }
+            }
+          }
+        },
+        {
+          "description": "L2 tasks have a plan but skip design.",
+          "if": { "properties": { "complexity": { "const": 2 } } },
+          "then": {
+            "properties": {
+              "creative_refs": { "maxItems": 0 }
+            }
+          }
+        },
+        {
+          "description": "A task in reflection must have a reflection_ref by the time it advances to archived.",
+          "if": { "properties": { "status": { "const": "archived" } } },
+          "then": {
+            "required": ["reflection_ref", "archive_ref"],
+            "properties": {
+              "reflection_ref": { "type": "string" },
+              "archive_ref": { "type": "string" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

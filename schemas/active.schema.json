@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vanzan01/cursor-memory-bank/schemas/active.schema.json",
+  "title": "Memory Bank Active State",
+  "description": "Validates memory-bank/active.yaml — the tiny current-state file read at the start of every mode and injected into every turn via the before-submit-prompt hook.",
+  "type": "object",
+  "required": ["version", "current_mode", "last_updated"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "current_task_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^TASK-[0-9]{3,}$"
+        },
+        { "type": "null" }
+      ],
+      "default": null,
+      "description": "The single task any non-/van mode may act on. Null only when no task is active (e.g. immediately after /archive)."
+    },
+    "current_mode": {
+      "type": "string",
+      "enum": ["idle", "van", "plan", "creative", "build", "reflect", "archive"],
+      "description": "The mode that most recently acted. 'idle' means no mode is active — only /van may run next."
+    },
+    "next_action": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "One-line, human-readable description of what the next mode should do. Set by the mode that just finished."
+    },
+    "next_mode": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": ["van", "plan", "creative", "build", "reflect", "archive"]
+        },
+        { "type": "null" }
+      ],
+      "default": null,
+      "description": "The mode expected to run next. Used by the stop hook to suggest the transition."
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional free-text context the previous mode wants the next mode to see. Keep short — for anything substantive, write to the appropriate artifact."
+    }
+  },
+  "allOf": [
+    {
+      "description": "If current_mode is not idle, a task must be active.",
+      "if": {
+        "properties": { "current_mode": { "not": { "const": "idle" } } }
+      },
+      "then": {
+        "required": ["current_task_id"],
+        "properties": {
+          "current_task_id": {
+            "type": "string",
+            "pattern": "^TASK-[0-9]{3,}$"
+          }
+        }
+      }
+    },
+    {
+      "description": "If idle, no next_mode other than van.",
+      "if": {
+        "properties": { "current_mode": { "const": "idle" } }
+      },
+      "then": {
+        "properties": {
+          "next_mode": {
+            "anyOf": [
+              { "const": "van" },
+              { "type": "null" }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
